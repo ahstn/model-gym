@@ -1,0 +1,47 @@
+[tools]
+ruff = "latest"
+uv = "latest"
+
+[tasks.setup]
+description = "Install training and export dependencies"
+run = "uv sync --extra train --extra export"
+
+[tasks.data]
+description = "Build the train/validation/test corpus"
+run = "uv run model-gym build-data"
+
+[tasks.smoke]
+description = "Six-step pipeline smoke test"
+run = "uv run --extra train model-gym train --config configs/smoke.yaml"
+
+[tasks.train]
+description = "Fine-tune ModernBERT-base"
+run = "uv run --extra train model-gym train --config configs/base.yaml"
+
+[tasks.train-large]
+description = "Fine-tune ModernBERT-large"
+run = "uv run --extra train model-gym train --config configs/large.yaml"
+
+[tasks.eval]
+description = "Evaluate the best base checkpoint on the test split"
+run = "uv run --extra train model-gym eval --model runs/modernbert-base/best"
+
+[tasks.export]
+description = "Export the best checkpoint to ONNX and INT8"
+run = "uv run --extra export model-gym export --model runs/modernbert-base/best --precision int8"
+
+[tasks.info]
+description = "Show versions, device, and GPU memory"
+run = "uv run model-gym info"
+
+[tasks.test]
+description = "Run the test suite"
+run = "uv run --extra train --extra export pytest"
+
+[tasks.lint]
+description = "Check formatting and lint"
+run = "uv run ruff check . && uv run ruff format --check ."
+
+[tasks.fmt]
+description = "Format and autofix"
+run = "uv run ruff format . && uv run ruff check --fix ."

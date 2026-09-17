@@ -1,0 +1,39 @@
+# ModernBERT-large full fine-tune on one RTX 3090 (24 GiB).
+#
+# 395M parameters at bf16 with gradient checkpointing. Effective batch size is
+# 16 x 2 = 32, matching configs/base.yaml, so the learning rate carries over.
+#
+#   uv run model-gym train --config configs/large.yaml
+#
+data:
+  sources:
+    - data/seed/seed_commands.jsonl
+  include_synthetic: true
+  ratios: [0.7, 0.15, 0.15]
+
+model:
+  name: answerdotai/ModernBERT-large
+  max_seq_length: 256
+  attn_implementation: sdpa
+
+train:
+  output_dir: runs/modernbert-large
+  epochs: 5
+  learning_rate: 2.0e-5
+  batch_size: 16
+  eval_batch_size: 32
+  gradient_accumulation_steps: 2
+  warmup_ratio: 0.06
+  bf16: true
+  fp16: false
+  # Activations for 395M parameters at sequence length 256 need this on 24 GiB.
+  gradient_checkpointing: true
+  class_weighting: none
+  early_stopping_patience: 2
+  logging_steps: 25
+  save_total_limit: 2
+  dataloader_num_workers: 4
+
+export:
+  precision: int8
+  quant_target: arm64

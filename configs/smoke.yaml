@@ -1,0 +1,24 @@
+# Pipeline smoke test: six optimisation steps, short sequences, no 16-bit math.
+#
+# Runs on CPU or Apple Silicon in about a minute and proves the whole path works:
+# data -> tokenize -> train -> evaluate -> reports -> metadata.
+#
+#   uv run model-gym train --config configs/smoke.yaml
+#
+model:
+  name: answerdotai/ModernBERT-base
+  max_seq_length: 64
+
+train:
+  output_dir: runs/smoke
+  epochs: 1
+  max_steps: 6
+  learning_rate: 5.0e-5
+  batch_size: 4
+  eval_batch_size: 8
+  bf16: false
+  fp16: false
+  dataloader_num_workers: 0
+  logging_steps: 1
+  save_total_limit: 1
+  early_stopping_patience: 0

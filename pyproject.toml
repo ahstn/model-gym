@@ -1,0 +1,49 @@
+[project]
+name = "model-gym"
+version = "0.1.0"
+description = "ModernBERT fine-tuning for 5-level command-risk classification"
+readme = "README.md"
+authors = [
+    { name = "Adam Houston", email = "phazyy9@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.1",
+    "pyyaml>=6.0.2",
+]
+
+# Training-only dependencies. Not needed to build data or inspect configs.
+[project.optional-dependencies]
+train = [
+    "torch>=2.6",
+    "transformers>=4.52",
+    "datasets>=3.5",
+    "accelerate>=1.2",
+    "scikit-learn>=1.5",
+    "safetensors>=0.4",
+]
+# Export-only dependencies: ONNX graph, INT8 quantization, parity check.
+export = [
+    "torch>=2.6",
+    "transformers>=4.52",
+    "optimum[onnxruntime]>=1.24",
+    "onnx>=1.17",
+    "onnxruntime>=1.20",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.11",
+]
+
+[project.scripts]
+model-gym = "model_gym.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

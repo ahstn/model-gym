@@ -1,0 +1,55 @@
+# See: https://docs.astral.sh/ruff/
+# Support Python 3.11+.
+target-version = "py311"
+line-length = 120
+exclude = ["data/", "runs/", "artifacts/"]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[lint]
+extend-select = [
+    "UP",  # pyupgrade
+    "RUF", # ruff
+    "I",   # isort
+    "W",   # pycodestyle warnings
+    "E",   # pycodestyle errors
+    "DTZ", # datetimez
+    "ISC", # implicit str concat
+    "ICN", # community import conventions, e.g. `import numpy as np`
+    "FBT", # boolean trap - https://docs.astral.sh/ruff/rules/#flake8-boolean-trap-fbt
+    "C4",  # comprehensions - https://docs.astral.sh/ruff/rules/#flake8-comprehensions-c4
+    "LOG", # logging - https://docs.astral.sh/ruff/rules/#flake8-logging-format-log
+    "INP", # packages should have __init__.py
+    "Q",   # quotes - https://docs.astral.sh/ruff/rules/#flake8-quotes-q
+    # "B", # bugbear
+
+    "SIM103", # Return boolean condition directly
+    "SIM112", # Use capitalized environment variables
+    "SIM201", # Confusing, double negation
+    "SIM202", # Confusing, double negation
+    "SIM208", # Confusing, double negation
+    "TRY004", # Prefer `TypeError` for type errors
+    "TRY201", # Redundant exception use when re-raising
+    "TRY400", # Use logging.exception() instead of logging.error() + traceback.print_exc()
+    "TRY401", # Redundant exception print in call
+]
+ignore = [
+    "TRY003", # Avoid specifying long messages outside the exception class
+]
+
+[lint.isort]
+detect-same-package = true
+lines-between-types = 1
+combine-as-imports = true
+extra-standard-library = ["path", "collections", "datetime"]
+known-first-party = ["model_gym", "tests"]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
