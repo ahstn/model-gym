@@ -5,7 +5,7 @@
 #
 data:
   sources:
-    - data/seed/seed_commands.jsonl
+    - data/seed
   include_synthetic: true
   ratios: [0.7, 0.15, 0.15]
 
@@ -30,7 +30,7 @@ train:
   bf16: true
   fp16: false
   gradient_checkpointing: false
-  # The bootstrap corpus is only mildly skewed (about 2.5:1). Set sqrt or balanced
+  # The bootstrap corpus is only mildly skewed (1.5:1). Set sqrt or balanced
   # if real traffic is dominated by one level.
   class_weighting: none
   early_stopping_patience: 2

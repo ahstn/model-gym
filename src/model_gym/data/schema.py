@@ -2,11 +2,14 @@
 
 One JSON object per line, one command per record::
 
-    {"command": "rm -rf /srv/application-data/", "level": 2, "group": "rm_recursive:app", ...}
+    {"command": "rm -rf /srv/application-data/", "level": 2, "category": "shell", "group": "rm_recursive:app", ...}
 
 ``group`` names the near-duplicate family a command belongs to (template + scope).
 Splits are made group-wise, so ``rm -r ./build`` and ``rm -rf ./build/`` never land
 in different splits.
+
+The reviewed corpus is stored one file per ``category`` (``data/seed/aws.jsonl``);
+``read_jsonl`` rejects a row whose category contradicts its file name.
 """
 
 from __future__ import annotations
@@ -20,6 +23,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Final
 
+from model_gym.categories import CATEGORIES, DEFAULT_CATEGORY, coerce_category, is_category
 from model_gym.labels import Level, coerce_level
 
 SHELLS: Final[tuple[str, ...]] = ("bash", "sql", "redis", "http", "powershell")
@@ -62,6 +66,7 @@ class RiskRecord:
 
     command: str
     level: Level
+    category: str = DEFAULT_CATEGORY
     group: str = ""
     shell: str = "bash"
     reason: str = ""
@@ -82,6 +87,7 @@ class RiskRecord:
             raise RecordError(f"command looks like a comment: {normalized[:40]!r}")
         object.__setattr__(self, "command", normalized)
         object.__setattr__(self, "level", coerce_level(self.level))
+        object.__setattr__(self, "category", coerce_category(self.category))
         shell = str(self.shell).strip().lower()
         if shell not in SHELLS:
             raise RecordError(f"unknown shell {self.shell!r}; expected one of {list(SHELLS)}")
@@ -109,6 +115,7 @@ class RiskRecord:
             "command": self.command,
             "level": int(self.level),
             "label": self.slug,
+            "category": self.category,
             "group": self.group,
             "shell": self.shell,
             "reason": self.reason,
@@ -131,6 +138,7 @@ class RiskRecord:
             return cls(
                 command=raw["command"],
                 level=raw["level"],
+                category=raw.get("category", DEFAULT_CATEGORY),
                 group=raw.get("group", ""),
                 shell=raw.get("shell", "bash"),
                 reason=raw.get("reason", ""),
@@ -141,8 +149,12 @@ class RiskRecord:
 
 
 def read_jsonl(path: Path | str) -> list[RiskRecord]:
-    """Read a JSONL corpus, reporting the offending line on failure."""
+    """Read a JSONL corpus, reporting the offending line on failure.
+
+    When the file is named after a category, every row must carry that category.
+    """
     path = Path(path)
+    expected_category = path.stem if is_category(path.stem) else None
     records: list[RiskRecord] = []
     with path.open("r", encoding="utf-8") as handle:
         for lineno, line in enumerate(handle, start=1):
@@ -153,7 +165,10 @@ def read_jsonl(path: Path | str) -> list[RiskRecord]:
                 raw = json.loads(line)
             except json.JSONDecodeError as exc:
                 raise RecordError(f"{origin}: invalid JSON: {exc}") from exc
-            records.append(RiskRecord.from_dict(raw, origin=origin))
+            record = RiskRecord.from_dict(raw, origin=origin)
+            if expected_category is not None and record.category != expected_category:
+                raise RecordError(f"{origin}: category {record.category!r} does not match the file name {path.stem!r}")
+            records.append(record)
     return records
 
 
@@ -194,6 +209,14 @@ def level_counts(records: Iterable[RiskRecord]) -> dict[int, int]:
     counts = dict.fromkeys(range(1, len(Level) + 1), 0)
     for record in records:
         counts[int(record.level)] += 1
+    return counts
+
+
+def category_counts(records: Iterable[RiskRecord]) -> dict[str, int]:
+    """Count records per tool category, including categories with no rows."""
+    counts = dict.fromkeys(CATEGORIES, 0)
+    for record in records:
+        counts[record.category] += 1
     return counts
 
 

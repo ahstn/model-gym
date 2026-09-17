@@ -21,7 +21,7 @@ from model_gym.labels import LABELS, NUM_LABELS
 
 pytest.importorskip("optimum")
 
-SEED = Path("data/seed/seed_commands.jsonl")
+SEED = Path("data/seed")
 
 
 @pytest.mark.parametrize(

@@ -10,7 +10,7 @@ Produces a self-contained directory a Rust guardrail can load:
 
 Every export ends with a parity check against the PyTorch checkpoint: argmax
 agreement must be exact, and the mean probability delta must stay under
-``export.parity_max_prob_delta``.
+``export.parity_mean_prob_delta``.
 """
 
 from __future__ import annotations
@@ -154,7 +154,7 @@ def check_parity(
     commands: Sequence[str],
     *,
     max_seq_length: int,
-    max_prob_delta: float,
+    mean_prob_delta: float,
     min_argmax_agreement: float = 1.0,
     tie_epsilon: float = 0.05,
     device: torch.device | None = None,
@@ -217,9 +217,9 @@ def check_parity(
             f"< {min_argmax_agreement:.4f} over {parity['decisive_rows']} decisive rows "
             f"(worst row {parity['max_prob_delta_row']}: {commands[parity['max_prob_delta_row']]!r})"
         )
-    if parity["mean_prob_delta"] > max_prob_delta:
+    if parity["mean_prob_delta"] > mean_prob_delta:
         raise RuntimeError(
-            f"parity check failed: mean probability delta {parity['mean_prob_delta']:.4f} > {max_prob_delta}"
+            f"parity check failed: mean probability delta {parity['mean_prob_delta']:.4f} > {mean_prob_delta}"
         )
     return parity
 
@@ -304,7 +304,7 @@ def export_onnx(
             model_path,
             sample_commands(config, config.export.parity_samples),
             max_seq_length=config.model.max_seq_length,
-            max_prob_delta=config.export.parity_max_prob_delta,
+            mean_prob_delta=config.export.parity_mean_prob_delta,
             min_argmax_agreement=min_argmax_agreement(precision, config.export.parity_min_argmax_agreement),
             tie_epsilon=config.export.parity_tie_epsilon,
         )

@@ -8,9 +8,11 @@ from pathlib import Path
 
 import pytest
 
+from model_gym.categories import CATEGORIES
 from model_gym.data.schema import (
     RecordError,
     RiskRecord,
+    category_counts,
     command_digest,
     dedupe,
     derive_group,
@@ -67,6 +69,33 @@ def test_group_is_derived_when_omitted() -> None:
 def test_invalid_records_are_rejected(command: str, level: int, shell: str) -> None:
     with pytest.raises((RecordError, ValueError, TypeError)):
         RiskRecord(command=command, level=level, group="g", shell=shell)
+
+
+@pytest.mark.parametrize("category", ["kubectl", "seed_commands", "", "scripts"])
+def test_unknown_categories_are_rejected(category: str) -> None:
+    with pytest.raises((RecordError, ValueError, TypeError)):
+        RiskRecord(command="rm -rf /", level=1, category=category)
+
+
+def test_category_defaults_to_shell_and_is_kept_through_jsonl(tmp_path: Path) -> None:
+    default = RiskRecord(command="rm -rf /", level=1)
+    assert default.category == "shell"
+    explicit = RiskRecord(command="DROP TABLE users;", level=1, category="SQL", shell="sql")
+    assert explicit.category == "sql"
+    path = tmp_path / "corpus.jsonl"
+    write_jsonl(path, [default, explicit])
+    loaded = read_jsonl(path)
+    assert [record.category for record in loaded] == ["shell", "sql"]
+    assert category_counts(loaded) == {**dict.fromkeys(CATEGORIES, 0), "shell": 1, "sql": 1}
+
+
+def test_a_category_named_file_rejects_foreign_rows(tmp_path: Path) -> None:
+    path = tmp_path / "aws.jsonl"
+    write_jsonl(path, [RiskRecord(command="aws s3 rb s3://prod-backups", level=1, category="aws")])
+    assert [record.category for record in read_jsonl(path)] == ["aws"]
+    write_jsonl(path, [RiskRecord(command="rm -rf /", level=1, category="shell")])
+    with pytest.raises(RecordError, match="does not match the file name"):
+        read_jsonl(path)
 
 
 def test_jsonl_roundtrip_preserves_records(tmp_path: Path) -> None:

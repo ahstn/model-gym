@@ -11,8 +11,17 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
 
+from model_gym.categories import CATEGORIES
 from model_gym.data import synthetic
-from model_gym.data.schema import RiskRecord, dedupe, iter_paths, level_counts, read_jsonl, write_jsonl
+from model_gym.data.schema import (
+    RiskRecord,
+    category_counts,
+    dedupe,
+    iter_paths,
+    level_counts,
+    read_jsonl,
+    write_jsonl,
+)
 from model_gym.labels import NUM_LABELS
 
 SPLITS: tuple[str, ...] = ("train", "validation", "test")
@@ -21,6 +30,8 @@ SPLITS: tuple[str, ...] = ("train", "validation", "test")
 MIN_ROWS_PER_SPLIT: dict[str, int] = {"train": 40, "validation": 8, "test": 8}
 # Below this many rows for a level in train, the level is effectively unlearnable.
 MIN_ROWS_PER_LEVEL: int = 5
+# Below this many training rows for a tool family, its per-category score is noise.
+MIN_ROWS_PER_CATEGORY: int = 5
 
 
 @dataclass(frozen=True, slots=True)
@@ -30,6 +41,7 @@ class CorpusSummary:
     output_dir: Path
     split_counts: Mapping[str, int]
     split_levels: Mapping[str, Mapping[int, int]]
+    split_categories: Mapping[str, Mapping[str, int]]
     group_counts: Mapping[str, int]
     duplicates_dropped: int
     synthetic_rows: int
@@ -51,6 +63,7 @@ class CorpusSummary:
             },
             "splits": {split: dict(levels) for split, levels in self.split_levels.items()},
             "split_totals": dict(self.split_counts),
+            "categories": {category: _category_row(category, self.split_categories) for category in CATEGORIES},
             "source_files": list(self.source_files),
             "warnings": list(self.warnings),
         }
@@ -64,7 +77,20 @@ class CorpusSummary:
             lines.append("  ".join(f"{cell:>10}" for cell in row))
         totals = ["total"] + [str(self.split_counts[split]) for split in SPLITS] + [str(self.total)]
         lines.append("  ".join(f"{cell:>10}" for cell in totals))
+        lines.append("")
+        lines.append("  ".join(f"{cell:>10}" for cell in ["category", *SPLITS, "total"]))
+        for category in CATEGORIES:
+            row = [category] + [str(self.split_categories[split].get(category, 0)) for split in SPLITS]
+            row.append(str(sum(int(cell) for cell in row[1:])))
+            lines.append("  ".join(f"{cell:>10}" for cell in row))
         return "\n".join(lines)
+
+
+def _category_row(category: str, split_categories: Mapping[str, Mapping[str, int]]) -> dict[str, int]:
+    """Per-split row counts for one category, always with a total."""
+    row = {split: split_categories[split].get(category, 0) for split in SPLITS}
+    row["total"] = sum(row.values())
+    return row
 
 
 def load_records(
@@ -80,6 +106,8 @@ def load_records(
     """
     del seed  # generation is deterministic; kept for signature symmetry
     files = tuple(str(path) for path in iter_paths(sources))
+    if not files:
+        raise ValueError(f"no *.jsonl corpus files found under {list(sources)}")
     records: list[RiskRecord] = []
     for path in files:
         records.extend(read_jsonl(path))
@@ -175,6 +203,7 @@ def build_corpus(
 
     splits = split_records(records, ratios=ratios, seed=seed)
     split_levels = {split: level_counts(rows) for split, rows in splits.items()}
+    split_categories = {split: category_counts(rows) for split, rows in splits.items()}
     group_counts = {split: len({record.group for record in rows}) for split, rows in splits.items()}
 
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -183,11 +212,12 @@ def build_corpus(
         output_dir=output_dir,
         split_counts=split_counts,
         split_levels=split_levels,
+        split_categories=split_categories,
         group_counts=group_counts,
         duplicates_dropped=len(dropped),
         synthetic_rows=sum(1 for record in records if record.source == synthetic.SOURCE),
         source_files=source_files,
-        warnings=_warnings(splits, split_levels),
+        warnings=_warnings(splits, split_levels, split_categories),
     )
     card = output_dir / "dataset_card.json"
     card.write_text(json.dumps(summary.to_dict(), indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -195,7 +225,9 @@ def build_corpus(
 
 
 def _warnings(
-    splits: Mapping[str, Sequence[RiskRecord]], split_levels: Mapping[str, Mapping[int, int]]
+    splits: Mapping[str, Sequence[RiskRecord]],
+    split_levels: Mapping[str, Mapping[int, int]],
+    split_categories: Mapping[str, Mapping[str, int]],
 ) -> tuple[str, ...]:
     messages: list[str] = []
     for split in SPLITS:
@@ -212,4 +244,14 @@ def _warnings(
         missing = [level for level in range(1, NUM_LABELS + 1) if not split_levels[split].get(level)]
         if missing:
             messages.append(f"{split} has no examples for level(s) {missing}; per-level metrics will be 0")
+    present = {category for category in CATEGORIES if sum(row.get(category, 0) for row in split_categories.values())}
+    for category in sorted(present):
+        count = split_categories["train"].get(category, 0)
+        if count < MIN_ROWS_PER_CATEGORY:
+            messages.append(
+                f"category {category} has {count} training rows; its per-category score is not readable yet"
+            )
+    absent = [category for category in CATEGORIES if category not in present]
+    if absent:
+        messages.append(f"no rows for {len(absent)} categories: {', '.join(absent)}")
     return tuple(messages)

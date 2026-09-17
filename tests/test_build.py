@@ -9,11 +9,12 @@ from pathlib import Path
 
 import pytest
 
+from model_gym.categories import CATEGORIES
 from model_gym.data.build import SPLITS, build_corpus, split_records
 from model_gym.data.schema import RiskRecord
 from model_gym.labels import NUM_LABELS
 
-SEED_CORPUS = Path("data/seed/seed_commands.jsonl")
+SEED_DIR = Path("data/seed")
 
 
 def make_records(count: int, *, groups: int = 10, levels: int = 5) -> list[RiskRecord]:
@@ -69,7 +70,7 @@ def test_split_records_rejects_bad_ratios() -> None:
 
 def test_build_corpus_writes_splits_and_card(tmp_path: Path) -> None:
     summary = build_corpus(
-        sources=[SEED_CORPUS],
+        sources=[SEED_DIR],
         output_dir=tmp_path,
         synthetic_output=tmp_path / "synthetic.jsonl",
         seed=13,
@@ -80,25 +81,44 @@ def test_build_corpus_writes_splits_and_card(tmp_path: Path) -> None:
     card = json.loads((tmp_path / "dataset_card.json").read_text(encoding="utf-8"))
     assert card["totals"]["records"] == summary.total
     assert card["split_totals"]["train"] == summary.split_counts["train"]
-    assert set(card["source_files"]) == {str(SEED_CORPUS), "<generated:synthetic:templates-v1>"}
+    seed_files = {str(path) for path in sorted(SEED_DIR.glob("*.jsonl"))}
+    assert set(card["source_files"]) == seed_files | {"<generated:synthetic:templates-v1>"}
     assert summary.synthetic_rows > 0
     assert sum(summary.split_counts.values()) > 200
     for split in SPLITS:
         levels = summary.split_levels[split]
         assert sum(levels.values()) == summary.split_counts[split]
+    assert set(card["categories"]) == set(CATEGORIES)
+    assert sum(row["total"] for row in card["categories"].values()) == summary.total
+    for category in CATEGORIES:
+        expected = sum(summary.split_categories[split][category] for split in SPLITS)
+        assert card["categories"][category]["total"] == expected
+    assert card["categories"]["shell"]["total"] > card["categories"]["azure"]["total"]
+    assert "category" in summary.format()
     assert not summary.warnings, summary.warnings
 
 
-def test_seed_only_corpus_warns_about_missing_levels(tmp_path: Path) -> None:
-    summary = build_corpus(
-        sources=[SEED_CORPUS],
-        output_dir=tmp_path,
-        include_synthetic=False,
-        seed=13,
+def test_thin_corpora_are_reported(tmp_path: Path) -> None:
+    # A corpus with one level and one category must not be reported as ready.
+    corpus = tmp_path / "thin.jsonl"
+    corpus.write_text(
+        "".join(
+            json.dumps({"command": f"kubectl get pod p{index}", "level": 5, "category": "kubernetes"}) + "\n"
+            for index in range(6)
+        ),
+        encoding="utf-8",
     )
-    assert summary.total == 50
+    summary = build_corpus(sources=[corpus], output_dir=tmp_path / "out", include_synthetic=False, seed=13)
+    assert summary.total == 6
     assert summary.synthetic_rows == 0
-    assert any("level 4" in warning and "training rows" in warning for warning in summary.warnings)
-    # The seed set has no level 4 or 5 rows, so unbalanced splits must be reported.
+    assert any("level 1" in warning and "training rows" in warning for warning in summary.warnings)
     assert any("no examples for level" in warning for warning in summary.warnings)
+    assert any(warning.startswith("no rows for") and "azure" in warning for warning in summary.warnings)
     assert all(0 <= summary.split_levels[split][level] for split in SPLITS for level in range(1, NUM_LABELS + 1))
+
+
+def test_empty_sources_are_reported(tmp_path: Path) -> None:
+    empty = tmp_path / "empty"
+    empty.mkdir()
+    with pytest.raises(ValueError, match=r"no \*\.jsonl corpus files found"):
+        build_corpus(sources=[empty], output_dir=tmp_path / "out", include_synthetic=False, seed=13)

@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Training and export artifacts
+runs/
+artifacts/
+*.onnx
+
+# Generated corpora (rebuild with `model-gym build-data`)
+data/processed/
+data/synthetic/
+
+# Hugging Face / datasets caches
+.hf_cache/

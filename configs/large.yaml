@@ -7,7 +7,7 @@
 #
 data:
   sources:
-    - data/seed/seed_commands.jsonl
+    - data/seed
   include_synthetic: true
   ratios: [0.7, 0.15, 0.15]
 

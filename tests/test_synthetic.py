@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from collections import Counter
+from collections import Counter, defaultdict
+from pathlib import Path
 
 import pytest
 
@@ -10,7 +11,12 @@ from model_gym.data import synthetic
 from model_gym.data.schema import RiskRecord, dedupe, read_jsonl
 from model_gym.labels import Level
 
-SEED_CORPUS = "data/seed/seed_commands.jsonl"
+SEED_DIR = Path("data/seed")
+
+
+def seed_records() -> list[RiskRecord]:
+    """Every hand-scored row in the reviewed corpus, across category files."""
+    return [record for path in sorted(SEED_DIR.glob("*.jsonl")) for record in read_jsonl(path)]
 
 
 @pytest.fixture(scope="module")
@@ -84,9 +90,30 @@ def test_pinned_levels(generated: list[RiskRecord], command: str, level: int) ->
     assert by_command[command] == level
 
 
-def test_seed_groups_are_covered_by_the_generator(generated: list[RiskRecord]) -> None:
-    # Seed rows and generated rows for the same operation must share a group, so a
-    # split never separates `rm -rf X` from its variants.
-    seed_groups = {record.group for record in read_jsonl(SEED_CORPUS)}
-    generated_groups = {record.group for record in generated}
-    assert seed_groups <= generated_groups, f"unmatched seed groups: {sorted(seed_groups - generated_groups)}"
+def test_seed_groups_stay_inside_one_category() -> None:
+    # A group is one near-duplicate family; seeing it in two category files means a
+    # row was filed wrong and its near-duplicates may straddle splits.
+    categories_by_group: dict[str, set[str]] = defaultdict(set)
+    for record in seed_records():
+        categories_by_group[record.group].add(record.category)
+    split_groups = {group: sorted(categories) for group, categories in categories_by_group.items()}
+    assert [group for group, categories in split_groups.items() if len(categories) > 1] == []
+
+
+def test_every_seed_category_has_coverage_and_controls() -> None:
+    by_category: dict[str, list[RiskRecord]] = defaultdict(list)
+    for record in seed_records():
+        by_category[record.category].append(record)
+    assert by_category, "the reviewed corpus is empty"
+    for category, rows in sorted(by_category.items()):
+        levels = {int(record.level) for record in rows}
+        assert len(levels) >= 3, f"{category} only has level(s) {sorted(levels)}"
+        assert any(level >= 4 for level in levels), f"{category} has no level 4-5 control rows"
+
+
+def test_seed_rows_agree_with_the_generated_category(generated: list[RiskRecord]) -> None:
+    # Where a hand-scored row shares a group with a generated row, they must agree.
+    by_group = {record.group: record.category for record in generated}
+    for record in seed_records():
+        if record.group in by_group:
+            assert by_group[record.group] == record.category, f"{record.command} is filed under {record.category}"
