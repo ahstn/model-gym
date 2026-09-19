@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bring a finished run back from the training host (checkpoints, reports, metadata).
 #
-#   scripts/fetch_artifacts.sh user@gpu-host runs/modernbert-base [local-dir]
+#   scripts/fetch_artifacts.sh user@gpu-host runs/modernbert-base-v2 [local-dir]
 set -euo pipefail
 
 target="${1:-}"

@@ -3,7 +3,7 @@
 # 395M parameters at bf16 with gradient checkpointing. Effective batch size is
 # 16 x 2 = 32, matching configs/base.yaml, so the learning rate carries over.
 #
-#   uv run model-gym train --config configs/large.yaml
+#   uv run --extra train model-gym train --config configs/large.yaml
 #
 data:
   sources:

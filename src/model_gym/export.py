@@ -8,9 +8,9 @@ Produces a self-contained directory a Rust guardrail can load:
     model.onnx            exported graph (fp32 or fp16)
     model_quantized.onnx  dynamically quantized INT8 graph (precision=int8)
 
-Every export ends with a parity check against the PyTorch checkpoint: argmax
-agreement must be exact, and the mean probability delta must stay under
-``export.parity_mean_prob_delta``.
+Every export ends with a parity check against the PyTorch checkpoint. FP32 and
+FP16 require exact argmax agreement; INT8 uses the configured decisive-row
+agreement. Mean probability delta must stay under ``export.parity_mean_prob_delta``.
 """
 
 from __future__ import annotations
@@ -19,7 +19,6 @@ import hashlib
 import inspect
 import json
 import logging
-import shutil
 
 from collections.abc import Iterator, Sequence
 from contextlib import contextmanager
@@ -30,6 +29,7 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
+import onnx
 import onnxruntime as ort
 import torch
 
@@ -37,11 +37,13 @@ from optimum.exporters.onnx import main_export
 from optimum.onnxruntime import ORTQuantizer
 from optimum.onnxruntime.configuration import AutoQuantizationConfig
 
+from model_gym.calibration import load_calibration, validate_temperature
 from model_gym.config import EXPORT_PRECISIONS, QUANT_TARGETS, Config
 from model_gym.data.schema import read_jsonl
 from model_gym.evaluate import load_checkpoint
-from model_gym.labels import LABELS, NUM_LABELS, bands, label_table
+from model_gym.labels import LABELS, NUM_LABELS, bands, decision_for_score, label_table, risk_score
 from model_gym.modeling import configure_runtime, predict_proba, resolve_device
+from model_gym.policy import POLICY_NAME, DecisionPolicy, load_policy
 
 LOGGER = logging.getLogger("model_gym.export")
 
@@ -124,10 +126,12 @@ def _artifact_files(output_dir: Path) -> list[dict[str, Any]]:
 
 
 def sample_commands(config: Config, count: int) -> list[str]:
-    """Spread the parity sample across the corpus so every level is represented."""
+    """Spread parity rows across validation, without tuning against the held-out test."""
+    if count < 1:
+        raise ValueError("parity sample count must be positive")
     candidates = [
-        Path(config.data.output_dir) / "test.jsonl",
         Path(config.data.output_dir) / "validation.jsonl",
+        Path(config.data.output_dir) / "train.jsonl",
     ]
     candidates.extend(Path(source) for source in config.data.sources)
     records: Sequence[Any] = []
@@ -171,12 +175,19 @@ def check_parity(
     configure_runtime()
     device = device or resolve_device()
     model, tokenizer = load_checkpoint(model_dir, device=device)
-    reference = predict_proba(
-        model, tokenizer, list(commands), max_seq_length=max_seq_length, batch_size=len(commands), device=device
-    )
+    # Compare FP32 arithmetic, not CUDA's lower-precision TF32 approximation.
+    previous_precision = torch.get_float32_matmul_precision()
+    try:
+        torch.set_float32_matmul_precision("highest")
+        reference = predict_proba(
+            model, tokenizer, list(commands), max_seq_length=max_seq_length, batch_size=len(commands), device=device
+        )
+    finally:
+        torch.set_float32_matmul_precision(previous_precision)
     encoded = tokenizer(list(commands), return_tensors="np", truncation=True, max_length=max_seq_length, padding=True)
     session = ort.InferenceSession(str(onnx_path), providers=["CPUExecutionProvider"])
-    feeds = {name: encoded[name].astype(np.int64) for name in ("input_ids", "attention_mask") if name in encoded}
+    input_names = [value.name for value in session.get_inputs()]
+    feeds = {name: encoded[name].astype(np.int64) for name in input_names}
     outputs = session.run(None, feeds)
     logits = np.asarray(outputs[0])
     if logits.ndim == 3:
@@ -190,6 +201,15 @@ def check_parity(
     margin = reference_sorted[:, -1] - reference_sorted[:, -2]
     decisive = margin >= tie_epsilon
     matches = reference.argmax(axis=1) == exported.argmax(axis=1)
+    policy_matches = np.asarray(
+        [
+            decision_for_score(risk_score(left)) == decision_for_score(risk_score(right))
+            for left, right in zip(reference, exported, strict=True)
+        ]
+    )
+    policy_path = Path(model_dir) / POLICY_NAME
+    policy = load_policy(policy_path) if policy_path.exists() else DecisionPolicy()
+    runtime_matches = policy.decide(reference) == policy.decide(exported)
     if not decisive.any():
         raise RuntimeError(
             f"parity check failed: no decisive rows out of {len(commands)} "
@@ -198,7 +218,14 @@ def check_parity(
     decisive_agreement = float(matches[decisive].mean())
     parity = {
         "samples": len(commands),
+        "reference_matmul_precision": "highest",
+        "input_names": input_names,
         "raw_argmax_agreement": float(matches.mean()),
+        "score_decision_agreement": float(policy_matches.mean()),
+        "score_decision_flip_rows": np.flatnonzero(~policy_matches).tolist(),
+        "runtime_decision_agreement": float(runtime_matches.mean()),
+        "runtime_decision_flip_rows": np.flatnonzero(~runtime_matches).tolist(),
+        "decision_policy": policy.to_dict(),
         "decisive_argmax_agreement": decisive_agreement,
         "decisive_rows": int(decisive.sum()),
         "undecided_rows": int((~decisive).sum()),
@@ -211,6 +238,10 @@ def check_parity(
         "max_seq_length": max_seq_length,
         "mean_batch_prob_delta": float(np.abs(reference.mean(axis=0) - exported.mean(axis=0)).mean()),
     }
+    if min_argmax_agreement == 1.0 and not matches.all():
+        raise RuntimeError(f"parity check failed: exact argmax agreement required, got {float(matches.mean()):.4f}")
+    if min_argmax_agreement == 1.0 and not runtime_matches.all():
+        raise RuntimeError("parity check failed: exact runtime action agreement required for floating-point export")
     if decisive_agreement < min_argmax_agreement:
         raise RuntimeError(
             f"parity check failed: decisive argmax agreement {decisive_agreement:.4f} "
@@ -227,6 +258,47 @@ def check_parity(
 def min_argmax_agreement(precision: str, configured: float) -> float:
     """fp32 and fp16 must match exactly; INT8 gets the configured tolerance."""
     return 1.0 if precision in {"fp32", "fp16"} else configured
+
+
+def _bake_temperature(model_path: Path, temperature: float) -> list[str]:
+    """Keep the logits output name while inserting exactly one calibrated division."""
+    temperature = validate_temperature(temperature)
+    model = onnx.load(model_path)
+    if any(entry.key == "model_gym.temperature" for entry in model.metadata_props):
+        raise ValueError("ONNX graph already contains temperature calibration")
+    output = model.graph.output[0]
+    output_name = output.name
+    producers = [node for node in model.graph.node if output_name in node.output]
+    if len(producers) != 1:
+        raise ValueError("expected one producer for the ONNX logits output")
+    dtype = output.type.tensor_type.elem_type
+    if dtype not in (onnx.TensorProto.FLOAT, onnx.TensorProto.FLOAT16, onnx.TensorProto.DOUBLE):
+        raise ValueError("ONNX logits output must have a floating-point type")
+    names = {name for node in model.graph.node for name in (*node.input, *node.output)}
+    names.update(value.name for value in (*model.graph.initializer, *model.graph.input, *model.graph.output))
+    raw_name = "_model_gym_raw_logits"
+    while raw_name in names:
+        raw_name += "_"
+    temperature_name = "_model_gym_temperature"
+    while temperature_name in names:
+        temperature_name += "_"
+    for node in model.graph.node:
+        for index, name in enumerate(node.output):
+            if name == output_name:
+                node.output[index] = raw_name
+        for index, name in enumerate(node.input):
+            if name == output_name:
+                node.input[index] = raw_name
+    for value in model.graph.value_info:
+        if value.name == output_name:
+            value.name = raw_name
+    model.graph.initializer.append(onnx.helper.make_tensor(temperature_name, dtype, [], [temperature]))
+    model.graph.node.append(onnx.helper.make_node("Div", [raw_name, temperature_name], [output_name]))
+    marker = model.metadata_props.add()
+    marker.key, marker.value = "model_gym.temperature", str(temperature)
+    onnx.checker.check_model(model)
+    onnx.save(model, model_path)
+    return [value.name for value in model.graph.input]
 
 
 @contextmanager
@@ -259,10 +331,9 @@ def export_onnx(
     quant_target = quant_target or config.export.quant_target
     if precision not in EXPORT_PRECISIONS:
         raise ValueError(f"unknown precision {precision!r}; expected one of {list(EXPORT_PRECISIONS)}")
+    calibration = load_calibration(model_dir)
     output_dir = Path(output_dir or Path(config.export.output_dir) / f"{model_dir.name}-{precision}")
-    if output_dir.exists():
-        shutil.rmtree(output_dir)
-    output_dir.mkdir(parents=True)
+    output_dir.mkdir(parents=True, exist_ok=False)
 
     LOGGER.info("exporting %s to %s (%s)", model_dir, output_dir, precision)
     export_kwargs: dict[str, Any] = {
@@ -280,6 +351,7 @@ def export_onnx(
     model_path = output_dir / EXPORTED_MODEL_NAME
     if not model_path.is_file():
         raise RuntimeError(f"export produced no {EXPORTED_MODEL_NAME} in {output_dir}")
+    input_names = _bake_temperature(model_path, calibration["temperature"] if calibration is not None else 1.0)
 
     if precision == "int8":
         quantizer = ORTQuantizer.from_pretrained(output_dir)
@@ -321,6 +393,7 @@ def export_onnx(
         quant_target=quant_target,
         model_path=model_path,
         parity=parity,
+        input_names=input_names,
     )
     (output_dir / METADATA_NAME).write_text(json.dumps(metadata, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return ExportResult(
@@ -341,10 +414,16 @@ def build_metadata(
     quant_target: str,
     model_path: Path,
     parity: dict[str, Any] | None,
+    input_names: Sequence[str],
 ) -> dict[str, Any]:
     """Runtime contract for the guardrail: taxonomy, bands, thresholds, hashes."""
     run_metadata = model_dir.parent / "run_metadata.json"
     run = json.loads(run_metadata.read_text(encoding="utf-8")).get("run", {}) if run_metadata.is_file() else {}
+    calibration = load_calibration(model_dir)
+    policy_path = model_dir / POLICY_NAME
+    policy = load_policy(policy_path) if policy_path.exists() else DecisionPolicy()
+    if calibration is not None and calibration.get("decision_policy", {"kind": "score_bands"}) != policy.to_dict():
+        raise ValueError("calibration metrics use a different policy; rerun calibrate before exporting")
     quantization = (
         {
             "mode": "dynamic",
@@ -357,31 +436,48 @@ def build_metadata(
         else None
     )
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "task": "command_risk_5level",
         "exported_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "base_model": config.model.name,
         "source_model_dir": str(model_dir),
         "max_seq_length": config.model.max_seq_length,
         "tokenizer": {"file": "tokenizer.json", "class": "AutoTokenizer"},
-        "inputs": ["input_ids", "attention_mask"],
+        "inputs": list(input_names),
         "output": "logits",
+        "calibration": {
+            "temperature": calibration["temperature"] if calibration is not None else 1.0,
+            "applied_in_graph": True,
+            "fit": calibration,
+        },
         "precision": precision,
         "quantization": quantization,
         "opset": config.export.opset,
         "labels": label_table(),
-        "decision_bands": [{"low": band.low, "high": band.high, "decision": str(band.decision)} for band in bands()],
+        "decision_policy": policy.to_dict(),
+        "decision_bands": [{"low": band.low, "high": band.high, "decision": str(band.decision)} for band in bands()]
+        if policy.kind == "score_bands"
+        else None,
         "risk_score": {
             "definition": "sum(p_level * level); 1.0 is critical, 5.0 is low risk",
             "min": 1.0,
             "max": 5.0,
         },
         "runtime_contract": {
+            "probabilities": "softmax(logits); temperature is already applied in the graph, do not divide again",
             "argmax_index_to_level": "level = index + 1",
-            "decision": "first band whose [low, high) contains the risk score",
+            "decision": (
+                "Apply decision_policy.kind. score_bands: first [low,high) containing E[level]. "
+                "argmax: action of most likely level. risk_thresholds: block if p(L1)>=block_threshold; "
+                "else approve if p(L1)+p(L2)+p(L3)>=approval_threshold; "
+                "else allow if p(L5)>=allow_threshold; else flag. Priority is block, approve, allow, flag."
+            ),
             "tokenize": "truncate to max_seq_length, pad to the longest row in the batch",
         },
-        "metrics": run.get("test") or run.get("validation"),
+        "metrics": calibration.get("validation_metrics")
+        if calibration is not None
+        else run.get("test") or run.get("validation"),
+        "metrics_split": "validation" if calibration is not None or not run.get("test") else "test",
         "parity": parity,
         "files": _artifact_files(output_dir),
     }

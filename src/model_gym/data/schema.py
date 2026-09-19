@@ -186,20 +186,34 @@ def write_jsonl(path: Path | str, records: Iterable[RiskRecord]) -> int:
 
 
 def dedupe(records: Iterable[RiskRecord]) -> tuple[list[RiskRecord], list[RiskRecord]]:
-    """Split records into (unique, dropped), keeping the first occurrence.
+    """Keep the first duplicate only when its annotation agrees.
 
-    Callers should pass curated records before generated ones so that a hand-scored
-    command wins over a templated duplicate.
+    Conflicting labels must be reviewed, not resolved by input order. Group
+    disagreements are also errors: dropping a bridge between two near-duplicate
+    groups would otherwise allow their remaining variants into different splits.
     """
-    seen: set[str] = set()
+    seen: dict[str, RiskRecord] = {}
     unique: list[RiskRecord] = []
     dropped: list[RiskRecord] = []
     for record in records:
         key = normalize_command(record.command)
-        if key in seen:
+        previous = seen.get(key)
+        if previous is not None:
+            conflicts = [
+                field
+                for field in ("level", "group", "category", "shell")
+                if getattr(previous, field) != getattr(record, field)
+            ]
+            if conflicts:
+                details = "; ".join(
+                    f"{field}: {getattr(previous, field)!r} != {getattr(record, field)!r}" for field in conflicts
+                )
+                raise RecordError(
+                    f"conflicting duplicate {key!r} from {previous.source!r} and {record.source!r}: {details}"
+                )
             dropped.append(record)
             continue
-        seen.add(key)
+        seen[key] = record
         unique.append(record)
     return unique, dropped
 

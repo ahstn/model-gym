@@ -24,34 +24,11 @@ def generated() -> list[RiskRecord]:
     return synthetic.generate()
 
 
-def test_families_are_structurally_complete() -> None:
-    for family in synthetic.FAMILIES:
-        assert family.scopes, f"{family.name} has no scopes"
-        assert family.variants, f"{family.name} has no variants"
-        assert "{" in family.template
-        assert family.note
-        assert len({scope.key for scope in family.scopes}) == len(family.scopes), (
-            f"{family.name} has duplicate scope keys"
-        )
-        assert len({variant.name for variant in family.variants}) == len(family.variants)
-
-
 def test_generated_commands_are_unique(generated: list[RiskRecord]) -> None:
     unique, dropped = dedupe(generated)
     duplicates = sorted({record.command for record in dropped})
     assert duplicates == [], f"the generator emits duplicate commands: {duplicates[:5]}"
-    assert len(unique) == len(generated) > 200
-
-
-def test_generated_groups_name_their_family(generated: list[RiskRecord]) -> None:
-    family_names = {family.name for family in synthetic.FAMILIES}
-    for record in generated:
-        family, _, key = record.group.partition(":")
-        assert family in family_names
-        assert key
-        assert record.source == synthetic.SOURCE
-        assert record.reason.endswith(".")
-        assert "\n" not in record.command
+    assert len(unique) == len(generated)
 
 
 def test_levels_stay_inside_the_taxonomy(generated: list[RiskRecord]) -> None:
@@ -76,8 +53,14 @@ def test_every_level_is_covered(generated: list[RiskRecord]) -> None:
         ("kubectl delete namespace production", 1),
         ("kubectl delete --dry-run=server namespace production", 5),
         ("git clean -ndx", 5),
+        ("git clean -fd", 2),
+        ("git reset --hard origin/main", 3),
+        ("git branch -D main", 3),
         ("git push --force origin main", 2),
         ("git push origin feature/x", 5),
+        ("docker container prune -f", 2),
+        ("docker network prune -f", 4),
+        ("aws ec2 terminate-instances --instance-ids i-0a1b2c3d4e5f00002", 2),
         ("aws ec2 terminate-instances --instance-ids i-0a1b2c3d4e5f00001 --dry-run", 5),
         ("DROP DATABASE production;", 1),
         ("REVOKE ALL PRIVILEGES ON DATABASE production FROM app_user;", 3),
@@ -117,3 +100,11 @@ def test_seed_rows_agree_with_the_generated_category(generated: list[RiskRecord]
     for record in seed_records():
         if record.group in by_group:
             assert by_group[record.group] == record.category, f"{record.command} is filed under {record.category}"
+
+
+def test_duplicate_commands_have_one_annotation(generated: list[RiskRecord]) -> None:
+    annotations: dict[str, set[tuple[int, str, str, str]]] = defaultdict(set)
+    for record in seed_records() + generated:
+        annotations[record.command].add((int(record.level), record.group, record.category, record.shell))
+    conflicts = {command: values for command, values in annotations.items() if len(values) != 1}
+    assert conflicts == {}

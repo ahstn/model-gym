@@ -1,4 +1,4 @@
-"""Training entrypoint: full fine-tune of ModernBERT on the command-risk corpus.
+"""Training entrypoint for pretrained command-risk classifiers.
 
 One GPU is enough (the paste's target is an RTX 3090, 24 GiB). Everything that
 matters for that box is configurable: precision, gradient checkpointing, batch
@@ -7,11 +7,13 @@ size, gradient accumulation, optimizer, and attention implementation.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
+import math
 import time
 
-from collections.abc import Sequence
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -20,10 +22,10 @@ import torch
 
 from transformers import EarlyStoppingCallback, Trainer, TrainingArguments, set_seed
 
-from model_gym.config import Config, config_to_dict
-from model_gym.data.build import SPLITS, level_counts
+from model_gym.config import Config, TrainingConfig, config_to_dict
+from model_gym.data.build import level_counts
 from model_gym.env import environment_info
-from model_gym.evaluate import EvaluationResult, evaluate_model, write_report
+from model_gym.evaluate import EvaluationResult, calibrate_checkpoint, evaluate_model, write_report
 from model_gym.labels import NUM_LABELS
 from model_gym.metrics import class_counts
 from model_gym.modeling import (
@@ -31,15 +33,60 @@ from model_gym.modeling import (
     build_compute_metrics,
     build_model,
     configure_runtime,
+    freeze_encoder_layers,
     load_dataset_dict,
     load_split,
     load_tokenizer,
     resolve_device,
 )
+from model_gym.policy import POLICY_NAME, DecisionPolicy, load_policy, save_policy
 
 LOGGER = logging.getLogger("model_gym.train")
 
 BEST_MODEL_DIRNAME = "best"
+
+
+def checkpoint_selection(
+    metrics: Mapping[str, float],
+    config: TrainingConfig,
+    *,
+    policy_kind: str = "score_bands",
+) -> dict[str, Any]:
+    """Rank validation checkpoints without trading safety gates for higher QWK.
+
+    Feasible models rank by QWK. Otherwise minimize the summed excess rates,
+    scaled by the remaining [limit, 1] range; QWK only breaks numerical ties.
+    Missing support cannot satisfy a gate or outrank fully evaluated models.
+    """
+    gates = {
+        "critical_miss_rate": config.max_critical_miss_rate,
+        "unsafe_allow_rate": config.max_unsafe_allow_rate,
+        "unnecessary_intervention_rate": config.max_unnecessary_intervention_rate,
+    }
+    supports = {
+        key: metrics[f"runtime_{key}"] for key in ("critical_support", "requires_approval_support", "benign_support")
+    }
+    rates = {key: float(metrics[f"runtime_{key}"]) for key in gates}
+    violations = {key: max(0.0, rates[key] - limit) for key, limit in gates.items()}
+    supported = all(value > 0 for value in supports.values())
+    eligible = supported and not any(violations.values())
+    qwk = float(metrics["qwk"])
+    quality = (qwk + 1.0) / 2.0 if math.isfinite(qwk) else 0.0
+    if not supported:
+        score = -4.0
+    elif eligible:
+        score = 2.0 + quality
+    else:
+        score = -sum(violations[key] / (1.0 - limit) for key, limit in gates.items()) + quality * 1e-9
+    return {
+        "score": score,
+        "eligible": eligible,
+        "decision_policy": policy_kind,
+        "limits": gates,
+        "rates": rates,
+        "violations": violations,
+        "supports": supports,
+    }
 
 
 def resolve_precision(config: Config, device: torch.device) -> tuple[bool, bool]:
@@ -85,22 +132,41 @@ def class_weights_for(scheme: str, counts: Sequence[int], device: torch.device) 
 
 
 class WeightedTrainer(Trainer):
-    """``Trainer`` with optional class-weighted cross entropy.
+    """``Trainer`` with class-weighted CE and an optional ordinal CDF penalty.
 
     Rare levels matter here: a corpus dominated by destructive commands would
     otherwise make level 5 nearly unlearnable.
     """
 
-    def __init__(self, *args: Any, class_weights: torch.Tensor | None = None, **kwargs: Any) -> None:
+    def __init__(
+        self,
+        *args: Any,
+        class_weights: torch.Tensor | None = None,
+        ordinal_loss_weight: float = 0.0,
+        **kwargs: Any,
+    ) -> None:
+        if not math.isfinite(ordinal_loss_weight) or ordinal_loss_weight < 0:
+            raise ValueError("ordinal_loss_weight must be finite and nonnegative")
         super().__init__(*args, **kwargs)
         self.class_weights = class_weights
+        self.ordinal_loss_weight = ordinal_loss_weight
+        if class_weights is not None or ordinal_loss_weight:
+            # This loss averages each batch; Trainer must scale gradient accumulation.
+            self.model_accepts_loss_kwargs = False
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):  # type: ignore[override]  # noqa: FBT002
-        if self.class_weights is None:
+        if self.class_weights is None and not self.ordinal_loss_weight:
             return super().compute_loss(model, inputs, return_outputs=return_outputs, **kwargs)
         labels = inputs.pop("labels")
         outputs = model(**inputs)
-        loss = torch.nn.functional.cross_entropy(outputs.logits, labels, weight=self.class_weights)
+        logits = outputs.logits.float()
+        weights = self.class_weights.to(logits) if self.class_weights is not None else None
+        loss = torch.nn.functional.cross_entropy(logits, labels, weight=weights)
+        if self.ordinal_loss_weight:
+            predicted_cdf = logits.softmax(dim=-1).cumsum(dim=-1)[:, :-1]
+            boundaries = torch.arange(logits.shape[-1] - 1, device=logits.device)
+            target_cdf = (labels[:, None] <= boundaries).to(logits.dtype)
+            loss = loss + self.ordinal_loss_weight * torch.nn.functional.mse_loss(predicted_cdf, target_cdf)
         return (loss, outputs) if return_outputs else loss
 
 
@@ -155,6 +221,7 @@ def build_training_arguments(config: Config, *, device: torch.device, bf16: bool
         bf16=bf16,
         fp16=fp16,
         gradient_checkpointing=train.gradient_checkpointing,
+        gradient_checkpointing_kwargs={"use_reentrant": False} if train.freeze_encoder_layers else None,
         logging_steps=train.logging_steps,
         logging_dir=str(output_dir / "logs"),
         eval_strategy="steps" if stepped else "epoch",
@@ -163,7 +230,7 @@ def build_training_arguments(config: Config, *, device: torch.device, bf16: bool
         save_steps=eval_steps,
         save_total_limit=train.save_total_limit,
         load_best_model_at_end=True,
-        metric_for_best_model="qwk",
+        metric_for_best_model="selection_score" if train.selection_metric == "safety" else "qwk",
         greater_is_better=True,
         seed=train.seed,
         data_seed=train.seed,
@@ -182,12 +249,22 @@ def run_training(config: Config) -> RunResult:
     bf16, fp16 = resolve_precision(config, device)
 
     output_dir = Path(config.train.output_dir)
+    if output_dir.exists() and any(output_dir.iterdir()) and not config.train.resume_from_checkpoint:
+        raise ValueError(f"training output is not empty: {output_dir}; choose a new train.output_dir or --resume")
+    policy = load_policy(config.train.decision_policy_path) if config.train.decision_policy_path else DecisionPolicy()
+    validation_sha256 = (
+        hashlib.sha256((Path(config.data.output_dir) / "validation.jsonl").read_bytes()).hexdigest()
+        if config.train.calibrate_selection
+        else None
+    )
     tokenizer = load_tokenizer(config.model)
-    datasets = load_dataset_dict(config.data.output_dir, tokenizer, config.model)
+    splits = ("train", "validation", "test") if config.train.evaluate_test else ("train", "validation")
+    datasets = load_dataset_dict(config.data.output_dir, tokenizer, config.model, splits=splits)
     train_records = load_split(config.data.output_dir, "train")
     counts = class_counts([record.label for record in train_records])
     weights = class_weights_for(config.train.class_weighting, counts, device)
     model = build_model(config.model)
+    freeze_encoder_layers(model, config.train.freeze_encoder_layers)
 
     trainable = sum(parameter.numel() for parameter in model.parameters() if parameter.requires_grad)
     total = sum(parameter.numel() for parameter in model.parameters())
@@ -203,15 +280,27 @@ def run_training(config: Config) -> RunResult:
         counts,
     )
 
+    score_predictions = build_compute_metrics(
+        policy=policy,
+        calibrate=config.train.calibrate_selection,
+        validation_sha256=validation_sha256,
+    )
+
+    def score_with_policy(prediction: Any) -> dict[str, float]:
+        metrics = score_predictions(prediction)
+        metrics["selection_score"] = checkpoint_selection(metrics, config.train, policy_kind=policy.kind)["score"]
+        return metrics
+
     trainer_kwargs: dict[str, Any] = {
         "model": model,
         "args": arguments,
         "train_dataset": datasets["train"],
         "eval_dataset": datasets["validation"],
         "data_collator": build_collator(tokenizer),
-        "compute_metrics": build_compute_metrics(),
+        "compute_metrics": score_with_policy,
         "processing_class": tokenizer,
         "class_weights": weights,
+        "ordinal_loss_weight": config.train.ordinal_loss_weight,
     }
     if config.train.early_stopping_patience > 0 and config.train.max_steps <= 0:
         trainer_kwargs["callbacks"] = [
@@ -227,6 +316,15 @@ def run_training(config: Config) -> RunResult:
     trainer.save_model(str(best_model_dir))
     tokenizer.save_pretrained(str(best_model_dir))
     tokenizer.save_pretrained(str(output_dir))
+    save_policy(best_model_dir / POLICY_NAME, policy)
+    if config.train.calibrate_selection:
+        calibrate_checkpoint(
+            best_model_dir,
+            config.data.output_dir,
+            batch_size=config.train.eval_batch_size,
+            max_seq_length=config.model.max_seq_length,
+            device=device,
+        )
 
     validation = evaluate_model(
         best_model_dir,
@@ -247,7 +345,7 @@ def run_training(config: Config) -> RunResult:
             model_config=config.model,
             device=device,
         )
-        if Path(config.data.output_dir, "test.jsonl").is_file()
+        if config.train.evaluate_test
         else None
     )
     report_dir = output_dir / "reports"
@@ -294,8 +392,16 @@ def _write_run_metadata(
             "log_history": trainer.state.log_history,
             "best_model_checkpoint": trainer.state.best_model_checkpoint,
             "best_metric": trainer.state.best_metric,
+            "selection_metric": config.train.selection_metric,
         },
-        "splits": list(SPLITS),
+        "validation_selection": checkpoint_selection(
+            result.validation.metrics.headline(), config.train, policy_kind=result.validation.policy.kind
+        ),
+        "splits": list(datasets),
+        "split_sha256": {
+            split: hashlib.sha256((Path(config.data.output_dir) / f"{split}.jsonl").read_bytes()).hexdigest()
+            for split in datasets
+        },
     }
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "run_metadata.json").write_text(

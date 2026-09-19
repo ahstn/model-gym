@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import math
 
 from collections.abc import Mapping, Sequence
 from dataclasses import asdict, dataclass, field, fields
@@ -58,6 +59,8 @@ class ModelConfig:
     max_seq_length: int = 256
     attn_implementation: str = "sdpa"
     trust_remote_code: bool = False
+    pooling: str = "default"
+    classifier_dropout: float = -1.0
 
     def validate(self) -> None:
         if not self.name:
@@ -67,13 +70,17 @@ class ModelConfig:
         if self.attn_implementation not in ATTENTION_IMPLEMENTATIONS:
             valid = list(ATTENTION_IMPLEMENTATIONS)
             raise ConfigError(f"model.attn_implementation must be one of {valid}, got {self.attn_implementation!r}")
+        if self.pooling not in {"default", "mean", "cls"}:
+            raise ConfigError("model.pooling must be default, mean, or cls")
+        if self.classifier_dropout != -1.0 and not 0 <= self.classifier_dropout < 1:
+            raise ConfigError("model.classifier_dropout must be -1 or in [0, 1)")
 
 
 @dataclass(frozen=True, slots=True)
 class TrainingConfig:
     """Everything the trainer needs. Defaults target one RTX 3090."""
 
-    output_dir: str = "runs/modernbert-base"
+    output_dir: str = "runs/modernbert-base-v2"
     run_name: str = ""
     epochs: float = 4.0
     max_steps: int = -1
@@ -87,7 +94,9 @@ class TrainingConfig:
     bf16: bool = True
     fp16: bool = False
     gradient_checkpointing: bool = False
+    freeze_encoder_layers: int = 0
     class_weighting: str = "none"
+    ordinal_loss_weight: float = 0.0
     optim: str = "auto"
     logging_steps: int = 25
     save_total_limit: int = 2
@@ -97,6 +106,15 @@ class TrainingConfig:
     report_to: tuple[str, ...] = ("none",)
     resume_from_checkpoint: str = ""
     seed: int = 13
+    selection_metric: str = "safety"
+    decision_policy_path: str = ""
+    calibrate_selection: bool = False
+    # Experimental validation gates, not a production safety certification.
+    max_critical_miss_rate: float = 0.05
+    max_unsafe_allow_rate: float = 0.01
+    max_unnecessary_intervention_rate: float = 0.25
+    # Hold test data out of both tokenization and scoring during model tuning.
+    evaluate_test: bool = False
 
     def validate(self) -> None:
         if self.batch_size < 1 or self.eval_batch_size < 1:
@@ -113,6 +131,19 @@ class TrainingConfig:
             raise ConfigError(
                 f"train.class_weighting must be one of {list(CLASS_WEIGHTING_SCHEMES)}, got {self.class_weighting!r}"
             )
+        if (
+            isinstance(self.freeze_encoder_layers, bool)
+            or not isinstance(self.freeze_encoder_layers, int)
+            or self.freeze_encoder_layers < -1
+        ):
+            raise ConfigError("train.freeze_encoder_layers must be -1 or a nonnegative integer")
+        if not math.isfinite(self.ordinal_loss_weight) or self.ordinal_loss_weight < 0:
+            raise ConfigError("train.ordinal_loss_weight must be finite and nonnegative")
+        if self.selection_metric not in {"safety", "qwk"}:
+            raise ConfigError("train.selection_metric must be safety or qwk")
+        for key in ("max_critical_miss_rate", "max_unsafe_allow_rate", "max_unnecessary_intervention_rate"):
+            if not 0 <= getattr(self, key) < 1:
+                raise ConfigError(f"train.{key} must be in [0, 1)")
 
 
 @dataclass(frozen=True, slots=True)
@@ -203,6 +234,8 @@ def _scalar(section: str, key: str, value: Any, target: type) -> Any:
     if target is int:
         if isinstance(value, bool):
             raise TypeError("expected an integer, got a boolean")
+        if isinstance(value, float) and not value.is_integer():
+            raise TypeError("expected an integer, got a fractional or nonfinite number")
         return int(value)
     if target is str:
         return str(value)

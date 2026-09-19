@@ -3,7 +3,7 @@
 # Runs on CPU or Apple Silicon in about a minute and proves the whole path works:
 # data -> tokenize -> train -> evaluate -> reports -> metadata.
 #
-#   uv run model-gym train --config configs/smoke.yaml
+#   uv run --extra train model-gym train --config configs/smoke.yaml
 #
 model:
   name: answerdotai/ModernBERT-base

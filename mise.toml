@@ -24,11 +24,11 @@ run = "uv run --extra train model-gym train --config configs/large.yaml"
 
 [tasks.eval]
 description = "Evaluate the best base checkpoint on the test split"
-run = "uv run --extra train model-gym eval --model runs/modernbert-base/best"
+run = "uv run --extra train model-gym eval --model runs/modernbert-base-v2/best"
 
 [tasks.export]
 description = "Export the best checkpoint to ONNX and INT8"
-run = "uv run --extra export model-gym export --model runs/modernbert-base/best --precision int8"
+run = "uv run --extra export model-gym export --model runs/modernbert-base-v2/best --precision int8"
 
 [tasks.info]
 description = "Show versions, device, and GPU memory"

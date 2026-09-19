@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Sequence
+from collections.abc import Iterator, Sequence
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
@@ -11,6 +11,7 @@ import torch
 
 from datasets import Dataset, DatasetDict
 from transformers import (
+    AutoConfig,
     AutoModelForSequenceClassification,
     AutoTokenizer,
     DataCollatorWithPadding,
@@ -18,6 +19,7 @@ from transformers import (
     PreTrainedTokenizerBase,
 )
 
+from model_gym.calibration import fit_temperature, validate_temperature
 from model_gym.config import ModelConfig
 from model_gym.data.build import SPLITS
 from model_gym.data.schema import RiskRecord, read_jsonl
@@ -25,6 +27,8 @@ from model_gym.labels import ID2LABEL, LABEL2ID, NUM_LABELS
 
 if TYPE_CHECKING:
     from transformers import EvalPrediction
+
+    from model_gym.policy import DecisionPolicy
 
 
 def configure_runtime() -> None:
@@ -105,13 +109,30 @@ def load_dataset_dict(
 
 
 def build_model(config: ModelConfig) -> PreTrainedModel:
-    """Load the base checkpoint with a freshly initialized 5-way classification head."""
+    """Load a pretrained encoder or saved classifier with the five-level label mapping."""
+    config.validate()
+    pretrained = AutoConfig.from_pretrained(
+        config.name,
+        num_labels=NUM_LABELS,
+        id2label=ID2LABEL,
+        label2id=LABEL2ID,
+        trust_remote_code=config.trust_remote_code,
+    )
+    if config.pooling != "default":
+        if pretrained.model_type != "modernbert":
+            raise ValueError(f"pooling overrides are not supported for {pretrained.model_type!r}")
+        pretrained.classifier_pooling = config.pooling
+    if config.classifier_dropout != -1.0:
+        if pretrained.model_type == "modernbert":
+            pretrained.classifier_dropout = config.classifier_dropout
+        elif pretrained.model_type == "deberta-v2":
+            pretrained.cls_dropout = config.classifier_dropout
+        else:
+            raise ValueError(f"classifier dropout overrides are not supported for {pretrained.model_type!r}")
     try:
         model = AutoModelForSequenceClassification.from_pretrained(
             config.name,
-            num_labels=NUM_LABELS,
-            id2label=ID2LABEL,
-            label2id=LABEL2ID,
+            config=pretrained,
             attn_implementation=config.attn_implementation,
             trust_remote_code=config.trust_remote_code,
         )
@@ -125,22 +146,115 @@ def build_model(config: ModelConfig) -> PreTrainedModel:
     return model
 
 
+def freeze_encoder_layers(model: PreTrainedModel, count: int) -> None:
+    """Freeze the encoder, or embeddings and its first ``count`` blocks, not the head."""
+    if isinstance(count, bool) or not isinstance(count, int) or count < -1:
+        raise ValueError("freeze_encoder_layers must be -1 or a nonnegative integer")
+    if count == 0:
+        return
+    if model.config.model_type == "modernbert":
+        encoder = model.model
+        layers = encoder.layers
+    elif model.config.model_type == "deberta-v2":
+        encoder = model.deberta
+        layers = encoder.encoder.layer
+    else:
+        raise ValueError(f"encoder freezing is not supported for {model.config.model_type!r}")
+    if count > len(layers):
+        raise ValueError(f"cannot freeze {count} encoder layers; {model.config.model_type} has {len(layers)}")
+    if count == -1:
+        encoder.requires_grad_(requires_grad=False)
+        return
+    encoder.embeddings.requires_grad_(requires_grad=False)
+    for layer in layers[:count]:
+        layer.requires_grad_(requires_grad=False)
+    if model.config.model_type == "deberta-v2" and encoder.encoder.conv is not None:
+        # DeBERTa's convolution is part of the first block's output.
+        encoder.encoder.conv.requires_grad_(requires_grad=False)
+
+
 def build_collator(tokenizer: PreTrainedTokenizerBase) -> DataCollatorWithPadding:
     """Dynamic padding, which ModernBERT benefits from on short, varied inputs."""
     return DataCollatorWithPadding(tokenizer=tokenizer, pad_to_multiple_of=8)
 
 
-def build_compute_metrics() -> Any:
-    """``Trainer`` callback that scores predictions with the ordinal metrics."""
+def build_compute_metrics(
+    *,
+    policy: DecisionPolicy | None = None,
+    calibrate: bool = False,
+    validation_sha256: str | None = None,
+) -> Any:
+    """Score validation logits with the runtime policy and optional fitted temperature."""
     from model_gym.metrics import compute_metrics as score
+
+    if calibrate and (
+        not isinstance(validation_sha256, str)
+        or len(validation_sha256) != 64
+        or any(char not in "0123456789abcdef" for char in validation_sha256)
+    ):
+        raise ValueError("calibrated selection requires the validation file's SHA-256 digest")
 
     def compute_metrics(eval_prediction: EvalPrediction) -> dict[str, float]:
         logits = np.asarray(eval_prediction.predictions)
         labels = np.asarray(eval_prediction.label_ids).ravel()
-        probabilities = torch.softmax(torch.as_tensor(logits, dtype=torch.float64), dim=-1).numpy()
-        return score(probabilities, labels).headline()
+        temperature = 1.0
+        if calibrate:
+            assert validation_sha256 is not None
+            temperature = fit_temperature(logits, labels, validation_sha256=validation_sha256)["temperature"]
+        probabilities = torch.softmax(torch.as_tensor(logits, dtype=torch.float64) / temperature, dim=-1).numpy()
+        metrics = score(probabilities, labels, policy=policy).headline()
+        if calibrate:
+            metrics["calibration_temperature"] = temperature
+        return metrics
 
     return compute_metrics
+
+
+def _logit_batches(
+    model: PreTrainedModel,
+    tokenizer: PreTrainedTokenizerBase,
+    commands: Sequence[str],
+    *,
+    max_seq_length: int,
+    batch_size: int,
+    device: torch.device | None,
+) -> Iterator[torch.Tensor]:
+    if not commands:
+        raise ValueError("no commands to score")
+    if batch_size < 1:
+        raise ValueError("batch_size must be positive")
+    device = device or next(model.parameters()).device
+    model.eval()
+    for start in range(0, len(commands), batch_size):
+        batch = list(commands[start : start + batch_size])
+        encoded = tokenizer(
+            batch,
+            return_tensors="pt",
+            truncation=True,
+            max_length=max_seq_length,
+            padding=True,
+        ).to(device)
+        yield model(**encoded).logits.float()
+
+
+@torch.no_grad()
+def predict_logits(
+    model: PreTrainedModel,
+    tokenizer: PreTrainedTokenizerBase,
+    commands: Sequence[str],
+    *,
+    max_seq_length: int,
+    batch_size: int = 64,
+    device: torch.device | None = None,
+) -> np.ndarray:
+    """Raw checkpoint logits, deliberately ignoring saved calibration when fitting."""
+    chunks = [
+        logits.cpu().numpy()
+        for logits in _logit_batches(
+            model, tokenizer, commands, max_seq_length=max_seq_length, batch_size=batch_size, device=device
+        )
+    ]
+    return np.concatenate(chunks, axis=0)
 
 
 @torch.no_grad()
@@ -153,25 +267,12 @@ def predict_proba(
     batch_size: int = 64,
     device: torch.device | None = None,
 ) -> np.ndarray:
-    """Probabilities for raw command strings, in input order.
-
-    Uses the same truncation settings as training so reported metrics and runtime
-    behaviour describe the same model.
-    """
-    if not commands:
-        raise ValueError("no commands to score")
-    device = device or next(model.parameters()).device
-    model.eval()
-    chunks: list[np.ndarray] = []
-    for start in range(0, len(commands), batch_size):
-        batch = list(commands[start : start + batch_size])
-        encoded = tokenizer(
-            batch,
-            return_tensors="pt",
-            truncation=True,
-            max_length=max_seq_length,
-            padding=True,
-        ).to(device)
-        logits = model(**encoded).logits
-        chunks.append(torch.softmax(logits.float(), dim=-1).cpu().numpy())
+    """Probabilities in input order, applying the checkpoint's saved temperature once."""
+    temperature = validate_temperature(getattr(model, "_model_gym_temperature", 1.0))
+    chunks = [
+        torch.softmax(logits / temperature, dim=-1).cpu().numpy()
+        for logits in _logit_batches(
+            model, tokenizer, commands, max_seq_length=max_seq_length, batch_size=batch_size, device=device
+        )
+    ]
     return np.concatenate(chunks, axis=0)

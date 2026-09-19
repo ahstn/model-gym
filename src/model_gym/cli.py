@@ -3,6 +3,8 @@
 model-gym build-data            # assemble the corpus into data/processed
 model-gym train                 # fine-tune ModernBERT
 model-gym eval --model DIR      # score a checkpoint and write a report
+model-gym calibrate --model DIR # fit temperature using validation only
+model-gym fit-policy --model DIR --out FILE # fit action thresholds on validation
 model-gym export --model DIR    # ONNX + INT8 for the Rust/ort runtime
 model-gym config --print        # show the defaults for every setting
 model-gym info                  # versions, device, GPU memory
@@ -71,6 +73,17 @@ def build_parser() -> argparse.ArgumentParser:
     evaluate.add_argument("--dump-predictions", type=Path, default=None, help="write per-row predictions as JSONL")
     evaluate.set_defaults(handler=_cmd_eval)
 
+    calibrate = subparsers.add_parser("calibrate", help="fit checkpoint temperature using validation only")
+    _add_config_arguments(calibrate)
+    calibrate.add_argument("--model", type=Path, required=True, help="fine-tuned model directory")
+    calibrate.set_defaults(handler=_cmd_calibrate)
+
+    policy = subparsers.add_parser("fit-policy", help="fit risk thresholds using calibrated validation predictions")
+    _add_config_arguments(policy)
+    policy.add_argument("--model", type=Path, required=True, help="calibrated model directory")
+    policy.add_argument("--out", type=Path, required=True, help="new policy JSON file; existing files are refused")
+    policy.set_defaults(handler=_cmd_fit_policy)
+
     export = subparsers.add_parser("export", help="export ONNX and quantize for the Rust runtime")
     _add_config_arguments(export)
     export.add_argument("--model", type=Path, required=True, help="fine-tuned model directory")
@@ -118,7 +131,7 @@ def _cmd_build_data(args: argparse.Namespace) -> int:
 
 
 def _cmd_train(args: argparse.Namespace) -> int:
-    from model_gym.train import run_training
+    from model_gym.train import checkpoint_selection, run_training
 
     config = _resolve_config(args)
     if args.resume:
@@ -135,10 +148,20 @@ def _cmd_train(args: argparse.Namespace) -> int:
         if evaluation is None:
             continue
         metrics = evaluation.metrics
+        policy = metrics.runtime_policy
         print(
-            f"{label}: accuracy {metrics.accuracy:.4f} | qwk {metrics.qwk:.4f} | mae {metrics.mae:.4f} "
-            f"| severe misses {metrics.severe_miss_rate:.4f} | over blocks {metrics.over_block_rate:.4f}"
+            f"{label}: accuracy {metrics.accuracy:.4f} "
+            f"| {metrics.policy_kind} accuracy {policy['decision_accuracy']:.4f} "
+            f"| qwk {metrics.qwk:.4f} | runtime critical misses {policy['critical_miss_rate']:.4f} "
+            f"| runtime unsafe allows {policy['unsafe_allow_rate']:.4f} "
+            f"| runtime unnecessary interventions {policy['unnecessary_intervention_rate']:.4f}"
         )
+    selection = checkpoint_selection(
+        result.validation.metrics.headline(), config.train, policy_kind=result.validation.policy.kind
+    )
+    print(f"validation safety gates: {'PASS' if selection['eligible'] else 'FAIL'} | score {selection['score']:.6f}")
+    if result.test is None:
+        print("test not scored; use `model-gym eval` only after freezing model selection")
     print(f"reports: {result.output_dir / 'reports'}")
     return 0
 
@@ -195,6 +218,57 @@ def _cmd_export(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_calibrate(args: argparse.Namespace) -> int:
+    import json
+
+    from model_gym.evaluate import calibrate_checkpoint
+
+    config = _resolve_config(args)
+    result = calibrate_checkpoint(
+        args.model,
+        config.data.output_dir,
+        max_seq_length=config.model.max_seq_length,
+        batch_size=config.train.eval_batch_size,
+    )
+    print(json.dumps(result, indent=2, sort_keys=True))
+    print(f"calibration: {args.model / 'calibration.json'}")
+    return 0
+
+
+def _cmd_fit_policy(args: argparse.Namespace) -> int:
+    import hashlib
+    import json
+
+    from model_gym.calibration import load_calibration
+    from model_gym.evaluate import evaluate_model
+    from model_gym.policy import DEFAULT_LIMITS, fit_threshold_policy, save_policy
+
+    config = _resolve_config(args)
+    if args.out.exists():
+        raise FileExistsError(f"policy output already exists: {args.out}")
+    calibration = load_calibration(args.model)
+    validation_path = Path(config.data.output_dir) / "validation.jsonl"
+    digest = hashlib.sha256(validation_path.read_bytes()).hexdigest()
+    if calibration is None or calibration["validation_sha256"] != digest:
+        raise ValueError("run calibrate on this validation split before fitting its policy")
+    result = evaluate_model(
+        args.model,
+        config.data.output_dir,
+        split="validation",
+        batch_size=config.train.eval_batch_size,
+        max_seq_length=config.model.max_seq_length,
+    )
+    limits = {key: getattr(config.train, f"max_{key}") for key in DEFAULT_LIMITS}
+    policy, report = fit_threshold_policy(result.probabilities, result.labels, limits=limits)
+    save_policy(
+        args.out, policy, provenance={"validation_sha256": digest, "temperature": calibration["temperature"], **report}
+    )
+    print(json.dumps({"policy": policy.to_dict(), **report}, indent=2, sort_keys=True))
+    print(f"policy: {args.out}")
+    print("These are fitting-set estimates, not an independent safety certification.")
+    return 0
+
+
 def _cmd_config(args: argparse.Namespace) -> int:
     import json
 
@@ -228,7 +302,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     try:
         return int(args.handler(args))
-    except (ConfigError, ValueError, FileNotFoundError, RuntimeError) as exc:
+    except (ConfigError, ValueError, TypeError, FileNotFoundError, FileExistsError, RuntimeError) as exc:
         if args.verbose:
             raise
         print(f"error: {exc}", file=sys.stderr)

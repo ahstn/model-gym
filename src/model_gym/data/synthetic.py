@@ -7,7 +7,10 @@ the guardrail model:
     risk = destructive operation x scope x irreversibility x bypass flags
 
 Every row's level is an explicit table entry (``scope.level`` plus ``variant.shift``),
-never a heuristic, so the labels stay auditable and diffable. Rows are tagged
+never a heuristic, so the labels stay auditable and diffable. Scope notes explain
+command-visible risk, not verified deployment facts: opaque resource IDs do not
+identify production, and names such as "dev" do not prove data is disposable.
+Rows are tagged
 ``source="synthetic:templates-v1"``; drop them with ``build-data --no-synthetic``
 once real labelled traffic exists.
 
@@ -50,7 +53,7 @@ def _sentence(*parts: str) -> str:
 
 @dataclass(frozen=True, slots=True)
 class Scope:
-    """A single target of an operation, with the severity it implies."""
+    """A target and its severity; targets with the same risk scope share a key."""
 
     key: str
     text: str
@@ -333,7 +336,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
             Scope("nginx", "nginx", 3, "web traffic stops being served"),
             Scope("docker", "docker", 3, "containers on the host stop"),
             Scope("networkd", "systemd-networkd", 2, "host networking configuration is dropped"),
-            Scope("postgres", "postgresql", 3, "the database stops accepting connections"),
+            Scope("postgresql", "postgresql", 3, "the database stops accepting connections"),
         ),
         variants=(
             Variant("disable_now", args="disable --now"),
@@ -342,7 +345,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
         ),
     ),
     Family(
-        name="git_reset_hard",
+        name="git_reset",
         category="git",
         shell="bash",
         template="{prefix}git reset {args} {scope}",
@@ -351,7 +354,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
             Scope("head", "HEAD", 3, "uncommitted tracked changes are discarded"),
             Scope("head_1", "HEAD~1", 3, "the last commit is dropped from the branch"),
             Scope("head_10", "HEAD~10", 3, "ten commits are dropped from the branch"),
-            Scope("remote", "origin/main", 2, "local commits that are not on the remote are dropped"),
+            Scope("origin_main", "origin/main", 3, "local commits leave the branch; no remote ref is changed"),
         ),
         variants=(
             Variant("hard", args="--hard", note="working tree is overwritten"),
@@ -368,7 +371,7 @@ FAMILIES: Final[tuple[Family, ...]] = (
         scopes=(Scope("repo", "", 2, "untracked and ignored files in the working tree"),),
         variants=(
             Variant("forced_ignored", args="-fdx", note="ignored files such as local .env files are deleted too"),
-            Variant("forced", args="-fd", shift=1, note="ignored files are kept"),
+            Variant("forced", args="-fd", note="ignored files are kept, but untracked work has no Git recovery copy"),
             Variant("dry_run", args="-ndx", shift=4, note="dry run, nothing is deleted"),
         ),
     ),
@@ -413,8 +416,8 @@ FAMILIES: Final[tuple[Family, ...]] = (
         template="{prefix}git branch -D {scope}",
         note="Force deleting a local branch",
         scopes=(
-            Scope("main", "main", 2, "commits reachable only from this branch can be lost"),
-            Scope("release", "release/2026.09", 2, "a release branch"),
+            Scope("main", "main", 3, "the local branch and its reflog are deleted, not the remote branch"),
+            Scope("release", "release/2026.09", 3, "a local release branch, not the shared remote ref"),
             Scope("feature", "feature/foo", 3, "a feature branch"),
         ),
     ),
@@ -441,8 +444,13 @@ FAMILIES: Final[tuple[Family, ...]] = (
             Scope("rmi_all", "rmi $(docker images -q)", 2, "every local image is removed"),
             Scope("system_prune", "system prune -a", 3, "unused images and networks are removed"),
             Scope("volume_prune", "volume prune -f", 2, "unused volumes are removed"),
-            Scope("network_prune", "network prune -f", 4, "unused networks are removed"),
-            Scope("container_prune", "container prune -f", 4, "stopped containers are removed"),
+            Scope("network_prune", "network prune -f", 4, "only networks unreferenced by any container are removed"),
+            Scope(
+                "container_prune",
+                "container prune -f",
+                2,
+                "all stopped containers and their writable layers are removed",
+            ),
         ),
     ),
     Family(
@@ -494,21 +502,39 @@ FAMILIES: Final[tuple[Family, ...]] = (
         name="terraform_destroy",
         category="terraform",
         shell="bash",
-        template="{prefix}terraform destroy {scope} {args}",
+        template="{prefix}terraform {scope} {body} {args}",
         note="Destroying terraform managed infrastructure",
         scopes=(
             Scope("prod", "-chdir=environments/production", 2, "the production environment"),
-            Scope("staging", "-chdir=environments/staging", 2, "the staging environment"),
+            Scope("staging", "-chdir=environments/staging", 3, "the explicitly selected staging environment"),
             Scope("sandbox", "-chdir=environments/sandbox", 3, "a sandbox environment"),
         ),
         variants=(
-            Variant("auto_approve", args="-auto-approve", shift=-1, note="the interactive confirmation is skipped"),
-            Variant("plain", note="an interactive confirmation is still required"),
             Variant(
-                "refresh_false", args="-refresh=false -auto-approve", shift=-1, note="state is not refreshed first"
+                "auto_approve",
+                body="destroy",
+                args="-auto-approve",
+                shift=-1,
+                note="the interactive confirmation is skipped",
+            ),
+            Variant("plain", body="destroy", note="an interactive confirmation is still required"),
+            Variant(
+                "refresh_false",
+                body="destroy",
+                args="-refresh=false -auto-approve",
+                shift=-1,
+                note="state is not refreshed first",
             ),
             Variant(
-                "targeted", args="-target=module.database -auto-approve", shift=-1, note="scoped to the database module"
+                "targeted",
+                body="destroy",
+                args="-target=module.database -auto-approve",
+                shift=-1,
+                note="scoped to the database module",
+            ),
+            Variant("plan", body="plan", shift=3, note="a speculative plan does not apply changes"),
+            Variant(
+                "plan_destroy", body="plan", args="-destroy", shift=3, note="previews destruction without applying it"
             ),
         ),
     ),
@@ -519,9 +545,9 @@ FAMILIES: Final[tuple[Family, ...]] = (
         template="{prefix}aws ec2 terminate-instances --instance-ids {scope} {args}",
         note="Terminating a compute instance",
         scopes=(
-            Scope("prod", "i-0a1b2c3d4e5f00001", 2, "a production instance"),
-            Scope("staging", "i-0a1b2c3d4e5f00002", 3, "a staging instance"),
-            Scope("dev", "i-0a1b2c3d4e5f00003", 3, "a development instance"),
+            Scope("instance", "i-0a1b2c3d4e5f00001", 2, "an opaque instance ID; environment and backups are unknown"),
+            Scope("instance", "i-0a1b2c3d4e5f00002", 2, "an opaque instance ID; environment and backups are unknown"),
+            Scope("instance", "i-0a1b2c3d4e5f00003", 2, "an opaque instance ID; environment and backups are unknown"),
         ),
         variants=(
             Variant("plain"),
@@ -815,11 +841,6 @@ FAMILIES: Final[tuple[Family, ...]] = (
             Variant("aws_describe", body="aws ec2 describe-instances", category="aws"),
             Variant("git_status", body="git status", category="git"),
             Variant("df", body="df -h"),
-            Variant(
-                "terraform_plan",
-                body="terraform plan -chdir=environments/production",
-                category="terraform",
-            ),
             Variant("du", body="du -sh /srv/application-data"),
             Variant(
                 "kubectl_secret",
@@ -850,17 +871,24 @@ FAMILIES: Final[tuple[Family, ...]] = (
         shell="sql",
         template="{prefix}{body} {args} {scope}",
         note="Read-only query",
-        scopes=(Scope("db", "", 5, "no rows are modified"),),
-        group_by="variant",
+        scopes=(Scope("read_only", "", 5, "no rows are modified"),),
         variants=(
             Variant("count", body="SELECT count(*) FROM users;"),
             Variant("limit", body="SELECT * FROM users LIMIT 10;"),
             Variant("join", body="SELECT u.id FROM users u JOIN orders o ON o.user_id = u.id LIMIT 50;"),
             Variant("explain", body="EXPLAIN ANALYZE SELECT * FROM orders;"),
-            Variant(
-                "audit_all", body="SELECT * FROM audit_log;", shift=-1, note="an unbounded audit table is read out"
-            ),
-            Variant("copy_out", body="COPY audit_log TO STDOUT;", shift=-1, note="the audit table is exported in bulk"),
+        ),
+    ),
+    Family(
+        name="sql_select_bulk",
+        category="sql",
+        shell="sql",
+        template="{prefix}{body} {args} {scope}",
+        note="Bulk read of audit data",
+        scopes=(Scope("audit_log", "", 4, "the audit trail is printed but not modified"),),
+        variants=(
+            Variant("audit_all", body="SELECT * FROM audit_log;", note="an unbounded audit table is read out"),
+            Variant("copy_out", body="COPY audit_log TO STDOUT;", note="the audit table is exported in bulk"),
         ),
     ),
     Family(
@@ -891,25 +919,25 @@ FAMILIES: Final[tuple[Family, ...]] = (
                 body="op item delete",
                 args="--archive",
                 shift=1,
-                note="moved to the trash, where it stays restorable for 30 days",
+                note="moved to the Archive, not Recently Deleted",
             ),
         ),
     ),
     Family(
-        name="op_item_move",
+        name="op_item_write",
         category="onepassword",
         shell="bash",
         template="{prefix}{body} {args} {scope}",
         note="Moving an item into another vault, which changes who can read it",
         scopes=(
             Scope(
-                "to_shared",
+                "prod_item",
                 '"Production Database" --current-vault Production --destination-vault Shared',
                 1,
                 "access widens to every member of the shared vault",
             ),
             Scope(
-                "to_dev",
+                "prod_item",
                 '"Production Database" --current-vault Production --destination-vault Dev',
                 2,
                 "a production credential is exposed to every developer",
@@ -979,18 +1007,28 @@ FAMILIES: Final[tuple[Family, ...]] = (
             Variant("vault_list", body="op vault list"),
             Variant("item_list", body="op item list", args="--vault Production"),
             Variant("whoami", body="op whoami"),
-            Variant("get_title", body="op item get", args='"Production Database" --fields title,updated_at'),
+        ),
+    ),
+    Family(
+        name="op_item_write",
+        category="onepassword",
+        shell="bash",
+        template="{prefix}{body} {scope} {args}",
+        note="Inspection controls for the same secret-store item",
+        scopes=(Scope("prod_item", '"Production Database"', 5, "the item is not modified"),),
+        variants=(
+            Variant("get_title", body="op item get", args="--fields title,updated_at"),
             Variant(
                 "get_reveal",
                 body="op item get",
-                args='"Production Database" --reveal',
+                args="--reveal",
                 shift=-1,
                 note="the stored value is printed into the session log",
             ),
             Variant(
                 "get_password_field",
                 body="op item get",
-                args='"Production Database" --fields password',
+                args="--fields password",
                 shift=-1,
                 note="the password field is printed, which is the whole secret",
             ),
@@ -1103,7 +1141,6 @@ FAMILIES: Final[tuple[Family, ...]] = (
         template="{prefix}{body} {args} {scope}",
         note="Printing process environment variables",
         scopes=(Scope("process", "", 4, "the credentials of the running process are printed"),),
-        group_by="variant",
         variants=(
             Variant("env", body="env | sort"),
             Variant("printenv", body="printenv"),

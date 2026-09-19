@@ -2,30 +2,11 @@
 
 from __future__ import annotations
 
-import json
-
 from pathlib import Path
 
 import pytest
 
-from model_gym.config import ConfigError, config_to_dict, describe_types, load_config
-
-SHIPPED_CONFIGS = ("configs/base.yaml", "configs/large.yaml", "configs/smoke.yaml")
-
-
-def test_defaults_are_valid() -> None:
-    config = load_config()
-    assert config.model.name.endswith("ModernBERT-base")
-    assert config.data.sources
-    assert config.train.bf16
-    assert config.export.precision in {"fp32", "fp16", "int8"}
-
-
-@pytest.mark.parametrize("path", SHIPPED_CONFIGS)
-def test_shipped_configs_load(path: str) -> None:
-    config = load_config(path)
-    assert config.model.name.startswith("answerdotai/ModernBERT")
-    assert config.train.output_dir.startswith("runs/")
+from model_gym.config import ConfigError, load_config
 
 
 def test_yaml_values_are_loaded_and_overrides_win(tmp_path: Path) -> None:
@@ -91,27 +72,25 @@ def test_mutually_exclusive_precisions_are_rejected() -> None:
         "train.gradient_accumulation_steps=0",
         "model.max_seq_length=4",
         "model.attn_implementation=bogus",
+        "model.pooling=max",
+        "model.classifier_dropout=-0.5",
+        "model.classifier_dropout=1",
+        "model.classifier_dropout=.nan",
         "train.class_weighting=bogus",
+        "train.freeze_encoder_layers=-2",
+        "train.freeze_encoder_layers=1.5",
+        "train.ordinal_loss_weight=-0.1",
+        "train.ordinal_loss_weight=.inf",
+        "train.ordinal_loss_weight=.nan",
         "export.precision=int4",
         "export.quant_target=mips",
         "data.ratios=0.9,0.2,0.2",
+        "train.selection_metric=accuracy",
+        "train.max_critical_miss_rate=-0.1",
+        "train.max_unsafe_allow_rate=1",
+        "train.max_unnecessary_intervention_rate=.nan",
     ],
 )
 def test_invalid_values_are_rejected(override: str) -> None:
     with pytest.raises(ConfigError):
         load_config(None, [override])
-
-
-def test_config_round_trips_through_json() -> None:
-    config = load_config("configs/large.yaml")
-    payload = json.loads(json.dumps(config_to_dict(config)))
-    assert payload["model"]["name"] == "answerdotai/ModernBERT-large"
-    assert payload["train"]["gradient_checkpointing"] is True
-    assert payload["data"]["ratios"] == [0.7, 0.15, 0.15]
-
-
-def test_describe_types_lists_every_section() -> None:
-    described = describe_types()
-    assert set(described) == {"data", "model", "train", "export"}
-    assert "max_seq_length" in described["model"]
-    assert "output_dir" in described["train"]

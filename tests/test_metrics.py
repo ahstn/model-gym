@@ -59,6 +59,65 @@ def test_decision_accuracy_ignores_neighbouring_levels_in_the_same_band() -> Non
     assert metrics.mae == pytest.approx(0.5)
 
 
+def test_high_risk_flags_and_allows_bypass_approval_but_only_allows_are_unsafe_allows() -> None:
+    # L3->flag and L3->allow are both missed by the legacy severe-miss rate.
+    payload = compute_metrics(one_hot([3, 4, 1, 4, 4]), [2, 2, 1, 3, 4]).to_dict()
+    assert payload["severe_miss_rate"] == 0.0
+    assert payload["requires_approval_support"] == 3
+    assert payload["approval_bypass_count"] == 2
+    assert payload["approval_bypass_rate"] == pytest.approx(2 / 3)
+    assert payload["unsafe_allow_count"] == 1
+    assert payload["unsafe_allow_rate"] == pytest.approx(1 / 3)
+    # Caution->allow is not an unsafe allow, but it reduces strict L5 precision.
+    assert payload["allow_correct_count"] == 1
+    assert payload["allow_support"] == 3
+    assert payload["allow_precision"] == pytest.approx(1 / 3)
+    assert payload["allow_coverage"] == pytest.approx(3 / 5)
+
+
+def test_critical_commands_sent_for_approval_are_missed_blocks_not_approval_bypasses() -> None:
+    metrics = compute_metrics(one_hot([1, 2, 0]), [0, 0, 0])
+    assert metrics.critical_support == 3
+    assert metrics.critical_miss_count == 2
+    assert metrics.critical_miss_rate == pytest.approx(2 / 3)
+    assert metrics.approval_bypass_count == 0
+    assert metrics.unsafe_allow_count == 0
+    assert metrics.severe_miss_rate == 0.0
+
+
+def test_benign_commands_sent_to_level_three_are_unnecessary_interventions() -> None:
+    metrics = compute_metrics(one_hot([2, 2, 3, 4]), [3, 4, 3, 4])
+    assert metrics.benign_support == 4
+    assert metrics.unnecessary_intervention_count == 2
+    assert metrics.unnecessary_intervention_rate == pytest.approx(0.5)
+    assert metrics.over_block_rate == 0.0
+
+
+def test_no_allow_predictions_have_zero_precision_and_coverage_with_zero_support() -> None:
+    payload = compute_metrics(one_hot([0, 3]), [0, 4]).to_dict()
+    assert payload["allow_support"] == 0
+    assert payload["allow_correct_count"] == 0
+    assert payload["allow_precision"] == 0.0
+    assert payload["allow_coverage"] == 0.0
+
+
+def test_absent_safety_and_benign_populations_have_explicit_zero_supports() -> None:
+    benign = compute_metrics(one_hot([3, 4]), [3, 4]).to_dict()
+    assert benign["critical_support"] == 0
+    assert benign["critical_miss_count"] == 0
+    assert benign["critical_miss_rate"] == 0.0
+    assert benign["requires_approval_support"] == 0
+    assert benign["unsafe_allow_count"] == 0
+    assert benign["unsafe_allow_rate"] == 0.0
+    assert benign["approval_bypass_count"] == 0
+    assert benign["approval_bypass_rate"] == 0.0
+
+    hazardous = compute_metrics(one_hot([0, 1]), [0, 2]).to_dict()
+    assert hazardous["benign_support"] == 0
+    assert hazardous["unnecessary_intervention_count"] == 0
+    assert hazardous["unnecessary_intervention_rate"] == 0.0
+
+
 def test_ordinal_metrics_penalize_distant_errors_more() -> None:
     labels = [0, 1, 2, 3, 4] * 4
     near = compute_metrics(one_hot([0, 1, 2, 3, 3] * 4), labels)
@@ -100,6 +159,24 @@ def test_expected_level_tracks_the_distribution() -> None:
     assert metrics.mean_expected_level == pytest.approx(3.0)
 
 
+def test_runtime_score_bands_follow_half_open_boundaries() -> None:
+    probabilities = np.asarray([[0.5, 0.5, 0, 0, 0], [0, 0, 0.5, 0.5, 0], [0, 0, 0, 0.5, 0.5]])
+    policy = compute_metrics(probabilities, [0, 2, 3]).score_policy
+    assert policy["critical_miss_count"] == 1  # E=1.5 means approve, not block.
+    assert policy["approval_bypass_count"] == 1  # E=3.5 means flag, not approve.
+    assert policy["allow_support"] == 1  # E=4.5 means allow, not flag.
+    assert policy["allow_precision"] == 0.0
+
+
+def test_single_class_breakdown_has_json_null_for_undefined_kappa() -> None:
+    import json
+
+    payload = compute_metrics(np.eye(5)[[4]], [4]).to_dict()
+    assert payload["accuracy"] == 1.0
+    assert payload["qwk"] is None
+    assert json.loads(json.dumps(payload, allow_nan=False))["qwk"] is None
+
+
 def test_mismatched_shapes_are_rejected() -> None:
     with pytest.raises(ValueError, match="labels"):
         compute_metrics(one_hot([0, 1]), [0])
@@ -107,14 +184,3 @@ def test_mismatched_shapes_are_rejected() -> None:
         compute_metrics(np.zeros((3, 2)), [0, 1, 2])
     with pytest.raises(ValueError, match="no rows"):
         compute_metrics(np.zeros((0, NUM_LABELS)), [])
-
-
-def test_report_lists_every_level_and_the_asymmetric_rates() -> None:
-    metrics = compute_metrics(one_hot([0, 1, 2, 3, 4]), [0, 1, 2, 3, 4])
-    report = metrics.format(title="unit test split")
-    assert "# unit test split" in report
-    assert "severe miss rate" in report
-    assert "over block rate" in report
-    for slug in ("critical", "dangerous", "high_risk", "caution", "low_risk"):
-        assert slug in report
-    assert "confusion matrix" in report

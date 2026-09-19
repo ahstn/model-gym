@@ -35,7 +35,7 @@ else
 fi
 
 echo "== environment =="
-uv run model-gym info
+uv run --extra train --extra export model-gym info
 
 cat <<'EOF'
 
@@ -51,5 +51,5 @@ Pick the CUDA flavour from the driver version printed by nvidia-smi, for example
 
 Next:
     uv run model-gym build-data
-    uv run model-gym train --config configs/base.yaml
+    uv run --extra train model-gym train --config configs/base.yaml
 EOF

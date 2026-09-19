@@ -193,8 +193,8 @@ def decision_for_score(score: float) -> Decision:
     """Map an expected-severity score in [1, 5] to a guardrail decision."""
     if not SCORE_MIN <= score <= SCORE_MAX:
         raise ValueError(f"risk score {score} outside [{SCORE_MIN}, {SCORE_MAX}]")
-    # A band with a half-level of slack on each side always wins; ties (score
-    # exactly on a boundary) resolve to the more severe decision.
+    # Bands are half-open: an exact upper boundary belongs to the next,
+    # less-severe band. Export metadata uses the same [low, high) rule.
     for decision in (Decision.BLOCK, Decision.APPROVE, Decision.FLAG, Decision.ALLOW):
         low, high = SCORE_BANDS[decision]
         if low <= score < high:

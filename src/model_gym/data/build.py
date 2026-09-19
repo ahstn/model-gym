@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import random
 
@@ -32,6 +33,8 @@ MIN_ROWS_PER_SPLIT: dict[str, int] = {"train": 40, "validation": 8, "test": 8}
 MIN_ROWS_PER_LEVEL: int = 5
 # Below this many training rows for a tool family, its per-category score is noise.
 MIN_ROWS_PER_CATEGORY: int = 5
+# Held-out rows from a single group do not establish independent family coverage.
+MIN_HELD_OUT_GROUPS_PER_CATEGORY: int = 2
 
 
 @dataclass(frozen=True, slots=True)
@@ -47,6 +50,12 @@ class CorpusSummary:
     synthetic_rows: int
     source_files: tuple[str, ...]
     warnings: tuple[str, ...]
+    seed: int
+    ratios: tuple[float, ...]
+    split_hashes: Mapping[str, str]
+    split_groups: Mapping[str, Sequence[str]]
+    category_groups: Mapping[str, Mapping[str, int]]
+    sources: Mapping[str, Mapping[str, Mapping[str, int]]]
 
     @property
     def total(self) -> int:
@@ -63,7 +72,12 @@ class CorpusSummary:
             },
             "splits": {split: dict(levels) for split, levels in self.split_levels.items()},
             "split_totals": dict(self.split_counts),
+            "split_sha256": dict(self.split_hashes),
+            "split_policy": {"seed": self.seed, "ratios": list(self.ratios), "unit": "group"},
+            "split_groups": {split: list(groups) for split, groups in self.split_groups.items()},
             "categories": {category: _category_row(category, self.split_categories) for category in CATEGORIES},
+            "category_groups": {category: _category_row(category, self.category_groups) for category in CATEGORIES},
+            "sources": {source: dict(coverage) for source, coverage in self.sources.items()},
             "source_files": list(self.source_files),
             "warnings": list(self.warnings),
         }
@@ -101,7 +115,8 @@ def load_records(
 ) -> tuple[list[RiskRecord], list[RiskRecord], tuple[str, ...]]:
     """Load curated records, append generated ones, and dedupe.
 
-    Curated rows are read first so they win when a generated command collides.
+    Curated rows are read first to retain their rationale and provenance when
+    duplicate annotations agree. Conflicting annotations are rejected.
     Returns ``(records, dropped_duplicates, source_files)``.
     """
     del seed  # generation is deterministic; kept for signature symmetry
@@ -195,8 +210,6 @@ def build_corpus(
 ) -> CorpusSummary:
     """Build the train/validation/test JSONL files and the dataset card."""
     output_dir = Path(output_dir)
-    if include_synthetic and synthetic_output is not None:
-        write_jsonl(synthetic_output, synthetic.generate())
     records, dropped, source_files = load_records(sources, include_synthetic=include_synthetic, seed=seed)
     if not records:
         raise ValueError(f"no records loaded from {list(sources)}")
@@ -204,10 +217,33 @@ def build_corpus(
     splits = split_records(records, ratios=ratios, seed=seed)
     split_levels = {split: level_counts(rows) for split, rows in splits.items()}
     split_categories = {split: category_counts(rows) for split, rows in splits.items()}
-    group_counts = {split: len({record.group for record in rows}) for split, rows in splits.items()}
+    split_groups = {split: sorted({record.group for record in rows}) for split, rows in splits.items()}
+    group_counts = {split: len(groups) for split, groups in split_groups.items()}
+    category_groups = {
+        split: {
+            category: len({record.group for record in rows if record.category == category}) for category in CATEGORIES
+        }
+        for split, rows in splits.items()
+    }
+    sources = {
+        source: {
+            split: {
+                "rows": sum(record.source == source for record in rows),
+                "groups": len({record.group for record in rows if record.source == source}),
+            }
+            for split, rows in splits.items()
+        }
+        for source in sorted({record.source for record in records})
+    }
 
     output_dir.mkdir(parents=True, exist_ok=True)
     split_counts = {split: write_jsonl(output_dir / f"{split}.jsonl", rows) for split, rows in splits.items()}
+    split_hashes = {}
+    for split in SPLITS:
+        with (output_dir / f"{split}.jsonl").open("rb") as handle:
+            split_hashes[split] = hashlib.file_digest(handle, "sha256").hexdigest()
+    if include_synthetic and synthetic_output is not None:
+        write_jsonl(synthetic_output, synthetic.generate())
     summary = CorpusSummary(
         output_dir=output_dir,
         split_counts=split_counts,
@@ -217,7 +253,13 @@ def build_corpus(
         duplicates_dropped=len(dropped),
         synthetic_rows=sum(1 for record in records if record.source == synthetic.SOURCE),
         source_files=source_files,
-        warnings=_warnings(splits, split_levels, split_categories),
+        warnings=_warnings(splits, split_levels, split_categories, category_groups),
+        seed=seed,
+        ratios=tuple(ratios),
+        split_hashes=split_hashes,
+        split_groups=split_groups,
+        category_groups=category_groups,
+        sources=sources,
     )
     card = output_dir / "dataset_card.json"
     card.write_text(json.dumps(summary.to_dict(), indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -228,6 +270,7 @@ def _warnings(
     splits: Mapping[str, Sequence[RiskRecord]],
     split_levels: Mapping[str, Mapping[int, int]],
     split_categories: Mapping[str, Mapping[str, int]],
+    category_groups: Mapping[str, Mapping[str, int]],
 ) -> tuple[str, ...]:
     messages: list[str] = []
     for split in SPLITS:
@@ -251,6 +294,14 @@ def _warnings(
             messages.append(
                 f"category {category} has {count} training rows; its per-category score is not readable yet"
             )
+        for split in ("validation", "test"):
+            count = split_categories[split].get(category, 0)
+            groups = category_groups[split].get(category, 0)
+            if count < MIN_ROWS_PER_CATEGORY or groups < MIN_HELD_OUT_GROUPS_PER_CATEGORY:
+                messages.append(
+                    f"category {category} has thin {split} coverage: {count} rows in {groups} groups; "
+                    f"{MIN_ROWS_PER_CATEGORY}+ rows in {MIN_HELD_OUT_GROUPS_PER_CATEGORY}+ groups recommended"
+                )
     absent = [category for category in CATEGORIES if category not in present]
     if absent:
         messages.append(f"no rows for {len(absent)} categories: {', '.join(absent)}")

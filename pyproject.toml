@@ -20,12 +20,17 @@ train = [
     "datasets>=3.5",
     "accelerate>=1.2",
     "scikit-learn>=1.5",
+    "joblib>=1.4",
+    "sentencepiece>=0.2",
+    "protobuf>=5",
     "safetensors>=0.4",
 ]
 # Export-only dependencies: ONNX graph, INT8 quantization, parity check.
 export = [
     "torch>=2.6",
     "transformers>=4.52",
+    "datasets>=3.5",
+    "scikit-learn>=1.5",
     "optimum[onnxruntime]>=1.24",
     "onnx>=1.17",
     "onnxruntime>=1.20",

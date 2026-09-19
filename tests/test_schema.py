@@ -148,3 +148,26 @@ def test_dedupe_keeps_the_first_occurrence() -> None:
     assert [record.source for record in unique] == ["seed", "unknown"]
     assert [record.source for record in dropped] == ["synthetic"]
     assert normalize_command(generated.command) == normalize_command(curated.command)
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        {"level": 3},
+        {"group": "other_family:app_data"},
+        {"category": "system"},
+        {"shell": "powershell"},
+    ],
+)
+@pytest.mark.parametrize("reverse", [False, True])
+def test_dedupe_rejects_annotation_conflicts_with_both_sources(change: dict[str, object], *, reverse: bool) -> None:
+    first = make_record(source="seed:reviewed")
+    second = make_record(**change, source="synthetic:template")
+    records = [second, first] if reverse else [first, second]
+    with pytest.raises(RecordError) as exc_info:
+        dedupe(records)
+    diagnostic = str(exc_info.value)
+    assert first.command in diagnostic
+    assert first.source in diagnostic
+    assert second.source in diagnostic
+    assert next(iter(change)) in diagnostic
