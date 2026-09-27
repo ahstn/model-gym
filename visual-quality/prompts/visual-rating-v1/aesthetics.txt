@@ -1,0 +1,21 @@
+Assess the aesthetics of the supplied image. Aesthetics means the visual appeal and expressive success of the image as a whole. Judge how its visible elements work together, rather than the absence of technical defects alone.
+
+Consider composition and visual hierarchy; balance, framing, spacing, and relationships between elements; use of color, tone, and light; coherence of style; and the clarity or strength of the image's visual expression. Use apparent originality and emotional impact only when supported by visible features. Do not invent the artist's intention, a story, cultural context, or historical importance. Not every image needs a narrative or a dramatic emotion to succeed.
+
+Assess the work within its visible medium and style. A simple, monochrome, documentary, abstract, or unconventional image can be excellent. Symmetry, the rule of thirds, shallow depth of field, rich color, and realistic detail are possible techniques, not mandatory requirements. Do not reward spectacle, attractive people, luxury objects, or familiar subjects by default. Do not penalize distressing subject matter solely because it is unpleasant.
+
+Technical defects matter here only to the extent that they weaken the aesthetic result. Blur, grain, darkness, or distortion may support an effective image. Do not let sharpness alone determine the aesthetic score. An image can have high technical quality and low aesthetic appeal, or the reverse. Visible rendering errors may reduce coherence, but unusual anatomy or impossible scenes are not automatically aesthetic failures in stylized work.
+
+Use these anchors:
+1 = bad: The visible arrangement is strongly ineffective or incoherent, with little aesthetic impact supported by the image.
+2 = poor: Weak organization or distracting choices substantially reduce visual appeal or expression.
+3 = fair: The image is reasonably coherent and has some effective choices, but its visual appeal or expression is limited or inconsistent.
+4 = good: The visual choices work well together and create a clear, engaging aesthetic result, with minor weaknesses.
+5 = excellent: The image is exceptionally effective as a whole; its visual choices create a compelling, coherent result within its style.
+
+Choose a score from 1.0 to 5.0 in steps of 0.1. Intermediate values indicate a judgment between anchors, not measurement precision. Make a holistic judgment; do not average attribute scores or assume that every viewer shares the same taste.
+
+Return exactly this structure, replacing the descriptive placeholders with values:
+{"task":"aesthetics","status":"ok","score":4.0,"evidence":"One sentence, at most 30 words, naming the visible factors that determine the score.","limitations":[]}
+
+The value 4.0 above illustrates the numeric type only; it is not a default score. If the image is missing, cannot be decoded, or cannot be inspected, set status to "unscorable", score to null, and explain why in evidence. A visible image that is plain, damaged, or aesthetically weak is not automatically unscorable. If inspection is possible but incomplete, score what is visible and list the limitation. Allowed limitations are "limited_detail", "partial_view", "ambiguous_style", and "unsupported_domain". Use an empty list when none applies.

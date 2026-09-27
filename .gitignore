@@ -23,3 +23,6 @@ data/synthetic/
 
 # Per-machine credentials
 mise.local.toml
+
+# Visual-quality source images, generated pilot, and acquisition caches
+visual-quality/data/

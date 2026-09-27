@@ -1,0 +1,14 @@
+{
+  "name": "pilot-10k-v1",
+  "seed": 20260927,
+  "splits": {
+    "train": {"megalith": 5000, "vizwiz": 1000, "plotqa": 400, "clevr": 400, "owned_controls": 200},
+    "development": {"megalith": 200, "vizwiz": 100, "plotqa": 40, "clevr": 40, "owned_controls": 20},
+    "test": {"megalith": 200, "vizwiz": 100, "plotqa": 40, "clevr": 40, "owned_controls": 20}
+  },
+  "distortion_parents": 1000,
+  "variants_per_parent": 3,
+  "spares": {"megalith": 100, "vizwiz": 60, "plotqa": 20, "clevr": 20, "owned_controls": 0},
+  "photo_selection": "seeded_source_sample_pending_quality_audit",
+  "near_duplicate_hamming_distance": 2
+}

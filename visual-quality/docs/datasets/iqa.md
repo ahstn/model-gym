@@ -122,7 +122,7 @@ Verdict:
 - **A model we ship commercially: only AGIQA-20K is clear.** SPAQ and the Q-Align label JSONs are explicit no's. KonIQ, KADID, AVA, and LSVQ need written permission from the owners or legal review.
 - **Rebuild labels ourselves.** Map the original MOS files to the 5 levels with our own code (we plan soft labels anyway). This removes the S-Lab dependency. It does not fix the image terms.
 - **Distillation does not clean data.** [INFERENCE] A student trained on a research model's outputs likely carries the same question as the research model. Get advice before relying on it.
-- **A clean-data track is possible but weaker.** Candidates: AGIQA-20K, TAD66K (Apache-2.0 release), MSC (CC0), UHD-IQA (CC0 images), AU-IQA (MIT), and synthetic distortions we generate ourselves on CC0 images for ranking-only training. [INFERENCE] It will likely score lower than the full mix on the standard tests. Measure the gap before deciding.
+- **A clean-data track needs source-image checks.** Candidates include explicit dataset releases such as SIDD (MIT) and RealBlur (CC BY 4.0), plus our own distortions on verified CC0 photos. MSC offers aesthetic calibration but includes CC BY/CC BY-SA source images; release tags on TAD66K and AU-IQA do not settle all photo rights. See the [low-quality and control study](low-quality-and-controls.md). [INFERENCE] A restricted source mix may score lower than the full research mix. Measure the gap before deciding.
 
 ### 6.2 Exact size of the Q-Align release
 
@@ -147,14 +147,16 @@ Counted on 2026-09-27 from the label JSONs in the [Q-Align repo](https://github.
 
 To rebuild a set of this size with teacher labels, we need about 260K images with a wide quality range. Checked 2026-09-27 (HF tags and cards).
 
+The [low-quality and control study](low-quality-and-controls.md) adds real capture faults, checks pool filtering, and proposes a 10K pilot. Diagram and CG exclusions use a separate photo-suitability label, not an automatic low IQA score.
+
 | Pool | Size | Terms | Quality range | Fit |
 |---|---|---|---|---|
 | [PD12M](https://huggingface.co/datasets/Spawning/PD12M) | 12.4M | Package CDLA-Permissive-2.0; images public domain or CC0 (authors say they cannot guarantee every item) | Curated as "highly aesthetic"; skews high | Good for aesthetics and clean references; few bad photos |
-| [Megalith-CC0](https://huggingface.co/datasets/Spawning/megalith-cc0) / [Megalith-10m](https://huggingface.co/datasets/madebyollin/megalith-10m) | 2.39M (CC0 subset) / ~10M links | Flickr CC0, PD mark, US Gov, Flickr Commons; card MIT | "Unedited photographs"; amateur Flickr spread | Best match for authentic photo quality (KonIQ is also Flickr / YFCC100M) |
-| [CommonCatalog CC-BY](https://huggingface.co/datasets/common-canvas/commoncatalog-cc-by) | ~100M across all license splits (card); CC-BY split size not checked | CC BY per image (attribution needed); YFCC100M source, up to 4K, EXIF and device fields | Amateur photos, wide range | Good; same source family as KonIQ, so dedup against KonIQ and SPAQ tests |
+| [Megalith-CC0](https://huggingface.co/datasets/Spawning/megalith-cc0) / [Megalith-10m](https://huggingface.co/datasets/madebyollin/megalith-10m) | 2,385,784 CC0 metadata rows (HF Viewer, complete) / ~10M links | CC0 subset; broader pool also includes PD mark, US Gov, Flickr Commons. Metadata card MIT. | Parent pool filters edits, watermarks, content, and images below 256×256; low-quality yield unmeasured | Main candidate for diverse photo labels; audit the score histogram |
+| [CommonCatalog CC-BY](https://huggingface.co/datasets/common-canvas/commoncatalog-cc-by) | ~100M across all license splits (card); CC-BY split size not checked | CC BY per image (attribution needed); YFCC100M source, up to 4K, EXIF and device fields | Diverse amateur photos; actual low-quality yield unmeasured | Same source family as KonIQ; dedup against all reserved photo tests |
 | [DataComp-1B](https://huggingface.co/datasets/mlfoundations/datacomp_1b) | ~1.4B URLs | Metadata CC BY 4.0; images keep their own rights | Web images, all qualities | Wide range, but image rights unclear. Research only. |
-| UHD-IQA, MSC, AU-IQA (this file and [iaa.md](iaa.md)) | 6,073; 10,426; 4,800 | UHD-IQA: CC0 images, labels research-only (no formal license). MSC: CC0 data. AU-IQA: MIT. | Rated by humans | Small calibration and test anchors |
-| Self-made distortions (KADIS-style, 25 types x 5 levels) on CC0 references | Any | Ours | Full range by construction | Exact within-reference ranking labels for free; no MOS |
+| UHD-IQA, MSC, AU-IQA (this file and [iaa.md](iaa.md)) | 6,073; 10,426; 4,800 | UHD-IQA: CC0 images, labels research-only. MSC release CC0, source images include CC BY/CC BY-SA. AU-IQA release MIT; check source photos. | Human ratings for different tasks | Calibration within the matching task; MSC is aesthetics, not technical IQA |
+| Self-made distortions (KADIS-style, 25 types x 5 levels) on CC0 references | Any | Retain source and generator terms | Controlled parameter range; perceived quality must be checked | Known transform and severity, no MOS. Validate within-reference ranking; mild edits can improve quality. |
 
 Not usable for training a shipped model: ImageNet and SA-1B (non-commercial terms), COCO (mixed Flickr CC incl. NC), ShareGPT4V (CC BY-NC 4.0 tag).
 
