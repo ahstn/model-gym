@@ -25,6 +25,7 @@ Last verified: 2026-09-27
 
 - **Baseline.** Q-ReAlign Mini/Lite/Pro (Qwen3.5-based). The README lists the mix KonIQ, SPAQ, KADID, AGIQA-20K, AVA, and LSVQ, but the public `onealign.yaml` omits AGIQA-20K. It scores with five quality words and a probability-weighted mean. See the [code audit](evaluation/protocol.md).
 - **Backbones to test first.** Qwen3.5-4B (control) and Gemma 4 E4B (newer architecture). Then MiniCPM-V-4.6 as a small student. No newer backbone has a matched unified ONE-ALIGN win yet.
+- **Speed.** Q-ReAlign Lite and Pro are slower than the original Q-Align, even on a faster GPU. Only Mini is faster. The Q-ReAlign code sets no image-size cap, scores one item per pass, and does not set the attention kernel at inference. Investigate the inference configuration before comparing backbones. See [protocol.md section 9](evaluation/protocol.md#9-efficiency-measurement).
 - **Training changes to test first.** Soft score distributions (DeQA-Score), native-resolution crops (ReLIQS), contiguous frames for video (VQ-Insight), and task-balanced batches (TATAR). Reasoning and RL come later.
 - **Competitors for the first comparison.** DeQA-Score-Mix3, TOPIQ-NR, SigLIP2+AGM (IQA); ArtiMuse-AVA, MUSIQ-AVA (IAA); DOVER, FineVQ-LSVQ (VQA).
 
@@ -39,6 +40,7 @@ Found during the 2026-09-27 checks. Details and links are in each file.
 | IQA-PyTorch (pyiqa) | Code: PolyForm Noncommercial 1.0.0. Hosted weights: CC BY-NC-SA 4.0. | TOPIQ-NR, CLIP-IQA+, LIQE via pyiqa are research-only. |
 | Q-Align, DOVER, Q-Instruct, Co-Instruct, DIVIDE-MaxWell | Repos use S-Lab License 1.0 (non-commercial). HF cards say MIT or Apache-2.0. | The licenses conflict. Treat as non-commercial until the authors clarify. |
 | Datasets | Many are research-only or by request: SPAQ, PARA, PIQ23, DiffIQA, ArtiMuse-10K (full), FineVD, VGA-Bench data (CC BY-NC 4.0), BrightVQ (CC BY-NC-SA 4.0), LongVQUBench (CC BY-NC-SA 4.0). | A model trained on them may inherit use limits. Check before any commercial release. |
+| Q-ReAlign training mix | Only AGIQA-20K is clearly permissive. SPAQ is research-only. The Q-Align label JSONs are S-Lab (non-commercial). KonIQ, KADID, AVA, LSVQ have no formal license. MIT tags on HF mirrors do not relicense the source data. | Fine for research and evaluation. A shipped model needs permission or a clean-data mix. See [datasets/iqa.md section 6.1](datasets/iqa.md#61-license-verdict-for-the-whole-q-realign-training-mix). |
 | Open exceptions | AIGIQA-20K (Apache-2.0 on ModelScope), UHD-IQA images (CC0), MSC (CC0), Waterloo SQoE-III/IV (CC BY 4.0), JPEG AIC2026 (CC BY-SA 4.0). | Still check media rights for each source. |
 
 ## Corrections to the earlier dossiers

@@ -6,6 +6,8 @@ Last verified: 2026-09-27
 
 ## Working hypothesis
 
+- Goal (decided 2026-09-27): own the model and beat the original Q-Align (OneAlign, mPLUG-Owl2, ~8.2B) on cost, throughput, and latency first; on accuracy if possible. Q-ReAlign Lite and Pro are slower than Q-Align ([protocol.md section 9](../evaluation/protocol.md#9-efficiency-measurement)), so the deployed challenger should be ≤2B or use a capped visual-token budget. Larger models are teachers or accuracy references.
+- Order: baseline on the real open mix first. Synthetic data (teacher labels, self-made distortions, [data-mixture-evidence.md section 7.1](data-mixture-evidence.md#71-teacher-synthetic-labels-on-unlabeled-images)) comes after, as its own stage, so its effect is measured against the baseline.
 - The cheapest likely gain is better supervision and better visual input on the same 5-word scorer. A newer backbone is a separate question. Test the two apart.
 - General VLM benchmarks do not show better quality, aesthetics, or video-quality scoring. Only task results count.
 - A new architecture cannot load Q-ReAlign weights. Start from the new VLM, port the scorer, and re-train on the mix. Further tuning of the released Q-ReAlign checkpoint is a separate, cheaper control.
@@ -17,6 +19,7 @@ Last verified: 2026-09-27
 |---|---|---|---|
 | Task mix (README claim) | KonIQ + SPAQ + KADID + AGIQA-20K + AVA + LSVQ | [README](https://github.com/Q-Future/Q-ReAlign#results) | verified |
 | Task mix (public config) | `mix: [koniq, spaq, kadid, ava, lsvq]` (no AGIQA-20K) | [onealign.yaml L67](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/configs/onealign.yaml#L67) | verified |
+| Task mix (ours, decided 2026-09-27) | README mix + TAD66K official train list (52,248). AADB, PARA, FLICKR-AES, ArtiMuse-10K: evaluation only. Add TAD66K as its own step (baseline mix vs baseline + TAD66K) so its effect is measured. | [datasets/iaa.md section 7](../datasets/iaa.md#7-adding-aadb-tad66k-or-artimuse-10k-to-training) | decision |
 | Labels | 5 words (excellent, good, fair, poor, bad), hard bins; score = probability-weighted mean | [protocol audit, rows 1 and 6](../evaluation/protocol.md#8-q-realign-baseline-code-audit) | verified |
 | Training | Full SFT, DeepSpeed ZeRO-2, lr 2e-5, 2 epochs, batch 4, grad accum 2, 2 GPUs, vision tower and projector trainable, cosine schedule, warmup 0.03 | [onealign.yaml L70-L78](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/configs/onealign.yaml#L70-L78), README L290 | verified |
 | Video input | 8 uniform frames, long side 448, JPEG q90 cache | [protocol audit, row 2](../evaluation/protocol.md#8-q-realign-baseline-code-audit) | verified |
@@ -43,7 +46,9 @@ Do not run the full grid of every option. Screen on a fixed, representative subs
 
 | Stage | Run | Controlled change | Question | Gate to go on (proposed) |
 |---|---|---|---|---|
-| 0 | Anchors | Evaluate released Q-ReAlign Mini, Lite, Pro, and the [competitor set](#6-first-competitor-set) with no weight change | Does our pipeline reproduce the expected order on locked manifests? | Manifests, processor settings, label-token check, score direction, and decode/cache path logged. Released Lite/Pro close to README values (after order conversion). |
+| 0 | Anchors | Evaluate Q-Align OneAlign, released Q-ReAlign Mini, Lite, Pro, and the [competitor set](#6-first-competitor-set) with no weight change | Does our pipeline reproduce the expected order on locked manifests? | Manifests, processor settings, label-token check, score direction, and decode/cache path logged. Released Lite/Pro close to README values (after order conversion). |
+| 0 | Efficiency harness | Time the same anchors on one GPU with the [harness rules](../evaluation/protocol.md#harness-rules); sweep the inference settings in [protocol.md section 9](../evaluation/protocol.md#inference-configuration-to-investigate) (pixel cap, attention kernel, batching, last-position logits) | What speed can each model reach at unchanged accuracy? | Accuracy vs images/s table for every anchor, incl. Q-Align on the same GPU. |
+| 1 | R0 small challenger | Qwen3.5-0.8B (Mini base), released recipe on our mix, with 2–3 visual-token caps | Can a ≤1B model match Q-Align on T1 at a lower cost? | On or above the Q-Align accuracy-vs-cost line. |
 | 1 | R1 recipe control | Qwen3.5-4B, released recipe, LoRA pilot budget | What does our stack reach at pilot cost? | Stable loss; no task loader failures; R1 not far below released Lite on validation. |
 | 1 | R3 backbone screen | Gemma 4 E4B, same data, loss, and visual budget | Does the newer model help after task tuning? | Better validation correlation, or equal correlation at clearly lower cost. |
 | 2 | R2 / R4 supervision | Hard bins vs soft distributions + fidelity loss | Does keeping rating spread help without longer output? | Gain on most tasks on locked validation; no task drops outside its bootstrap interval. |
@@ -51,7 +56,7 @@ Do not run the full grid of every option. Screen on a fixed, representative subs
 | 3 | Spatial input | Lossless image path; global view + a few native-resolution crops, some clean | Does preprocessing remove low-level cues? | Gain holds when extra visual tokens are reported or matched. |
 | 3 | Temporal input | 8 uniform frames vs short contiguous clips at the same token budget | Can the scorer catch flicker, stutter, and short defects? | Better LSVQ / cross-set VQA and temporal diagnostics; no aesthetics loss. |
 | 4 | Compact student | MiniCPM-V-4.6 with the best recipe; 4x vs 16x visual compression | Can a 1.3B model keep fine-detail sensitivity? | Holds on blur, noise, compression, and temporal defects, not only semantic content. Compare with Q-ReAlign Mini. |
-| 5 | Data expansion | Add one dataset family at a time (PIPAL, DQ-495K auxiliary, target video slices) | Which data fixes a measured failure? | No overlap with val/test; per-task gains outweigh regressions ([evidence](data-mixture-evidence.md#8-what-this-means-for-a-q-realign-re-train)). |
+| 5 | Data expansion | Add one dataset family at a time: TAD66K first, then PIPAL, DQ-495K auxiliary, target video slices, then synthetic data (self-made distortion ladders, teacher labels on open pools) | Which data fixes a measured failure? | No overlap with val/test; per-task gains outweigh regressions ([evidence](data-mixture-evidence.md#8-what-this-means-for-a-q-realign-re-train)). |
 | 6 | Teacher distillation | Offline teacher (Q-ReAlign Pro or Qwen3.8-27B tuned) gives 5-level distributions; student mixes them with human MOS | Does a teacher distribution help the one-pass scorer (Z-Reward idea)? | Student gains on cross-sets; teacher labels audited on a human-labeled subset. |
 | 7 | RL (optional) | GRPO-style fidelity or ranking reward on the best supervised model | Is RL worth its cost here? | Only if stages 2-6 leave a clear gap. Budget reference: Q-Ponder RL took 3 days on 8 A100 ([paper](https://arxiv.org/abs/2506.05384)). |
 | 8 | Confirmation | Combine only useful parts; 3+ seeds; repeat content splits | Is the combined gain robust? | Paired bootstrap intervals exclude zero on the main tasks; held-out domains reported. |

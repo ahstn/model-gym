@@ -28,6 +28,7 @@ Last verified: 2026-09-27
 | [DiffIQA](https://arxiv.org/abs/2503.11221) | 2025, CVPR | ~180,000 | Full-reference: worse / similar / better than reference | Per-pair labels | Diffusion-enhanced images | Full-reference task. Not for no-reference training as is. | Non-commercial academic research only. No redistribution. Images on request. | Open link (Google Drive) with agreement | No (NC) | [Repo](https://github.com/ChrisDud0257/AFINE) | verified |
 | [JPEG AIC2026](https://arxiv.org/abs/2607.22783) | 2026, arXiv | 9,618 distorted from 70 sources | No human MOS yet. Levels mapped to 0.2–4.0 JND with CVVDP. | n/a | Classic + learned codecs, high-fidelity range | Fine-grained compression test | CC BY-SA 4.0 (DARUS record) | Open download | Yes (attribution, share-alike) | [DARUS](https://doi.org/10.18419/DARUS-6156) | verified |
 | [MCIQA-2K](https://arxiv.org/abs/2609.14495) | 2026, arXiv | 2,000 | 3 dims: color smearing, semantic color misalignment, naturalness | Not stated | Colorization outputs from 5 models | Not stated | Not stated | Authors say public; link not checked | Unclear | [arXiv](https://arxiv.org/abs/2609.14495) | verified (abstract only) |
+| [AU-IQA](https://arxiv.org/abs/2508.05016) | 2025, ACM MM | 4,800 | MOS | Not stated | AI-enhanced UGC: super-resolution, low-light enhancement, denoising, by 9 models | Not stated. Group by source UGC image. | MIT (repo LICENSE, GitHub API) | Open (download link in repo) | Yes (MIT); source photo rights not checked | [Repo](https://github.com/WNNGGU/AU-IQA-Dataset) | verified (license, size) |
 
 ## 2. Authentic (in-the-wild) photos
 
@@ -99,6 +100,63 @@ The MOSAIQ result is in [../training/data-mixture-evidence.md](../training/data-
 | AVA | Aesthetics | ~255,500 | See [iaa.md](iaa.md) | `ava_images` (~34 GB) | Unclear |
 
 LSVQ, the video part, is in [vqa.md](vqa.md). How the recipe mixes these sets is in [../training/methods.md](../training/methods.md) and [../training/experiment-plan.md](../training/experiment-plan.md).
+
+### 6.1 License verdict for the whole Q-ReAlign training mix
+
+Checked 2026-09-27. This is not legal advice. Each row links to the dataset row with the full terms.
+
+| Part | Terms found | Research use | Commercial model |
+|---|---|---|---|
+| KonIQ-10k | "Freely available to the research community." No formal data license. YFCC100M photos with mixed CC licenses. | Yes | Unclear: needs permission |
+| SPAQ | Release readme: education and research only; no commercial product without permission | Yes | No, without permission |
+| KADID-10k | "Freely available to the research community." No formal license. | Yes | Unclear: needs permission |
+| AGIQA-20K | ModelScope record: Apache-2.0 | Yes | Yes per record; generator terms not checked |
+| AVA ([iaa.md](iaa.md)) | No official terms. Photos belong to DPChallenge users. | Yes (common practice) | Unclear: treat as No |
+| LSVQ ([vqa.md](vqa.md)) | LIVE notice (UT Austin 2020); request form | Yes | Unclear: needs permission |
+| Q-Align label JSONs (`training_sft/train_*.json`, `test_jsons/*.json`), used by `onealign.yaml` | Hosted in the [Q-Align repo](https://github.com/Q-Future/Q-Align), which uses S-Lab License 1.0 (non-commercial) | Yes | No. Rebuild labels from the original MOS files instead. |
+| HF mirrors `q-future/q-align-datasets` and `teowu/LSVQ-videos` | Both tagged MIT. They repackage third-party images and videos, including SPAQ and PIQ23 (both NC). | Download convenience only | No. A mirror tag cannot relicense the source data. |
+
+Verdict:
+
+- **Research and evaluation: keep the full mix.** Every part allows research use. We need it to compare with Q-Align and Q-ReAlign on the same data.
+- **A model we ship commercially: only AGIQA-20K is clear.** SPAQ and the Q-Align label JSONs are explicit no's. KonIQ, KADID, AVA, and LSVQ need written permission from the owners or legal review.
+- **Rebuild labels ourselves.** Map the original MOS files to the 5 levels with our own code (we plan soft labels anyway). This removes the S-Lab dependency. It does not fix the image terms.
+- **Distillation does not clean data.** [INFERENCE] A student trained on a research model's outputs likely carries the same question as the research model. Get advice before relying on it.
+- **A clean-data track is possible but weaker.** Candidates: AGIQA-20K, TAD66K (Apache-2.0 release), MSC (CC0), UHD-IQA (CC0 images), AU-IQA (MIT), and synthetic distortions we generate ourselves on CC0 images for ranking-only training. [INFERENCE] It will likely score lower than the full mix on the standard tests. Measure the gap before deciding.
+
+### 6.2 Exact size of the Q-Align release
+
+Counted on 2026-09-27 from the label JSONs in the [Q-Align repo](https://github.com/Q-Future/Q-Align/tree/main/playground/data) (`training_sft/`, `test_jsons/`) and the HF file lists.
+
+| Set | Train items | Test file | Test items |
+|---|---:|---|---:|
+| KonIQ-10k | 7,046 | `test_koniq.json` | 2,010 |
+| SPAQ | 8,897 | `test_spaq.json` | 2,224 |
+| KADID-10k | 8,106 | `test_kadid.json` | 2,000 |
+| AVA | 235,598 | `test_ava.json` | 19,930 |
+| LSVQ (videos) | 28,056 | `test_lsvq.json`, `test_lsvq_1080p.json` | 7,186; 3,573 |
+| **Total** | **259,647 images + 28,056 videos** (`train_all.json` has 287,597 items, 106 fewer than the sum) | | |
+| Cross-dataset tests | – | `agi.json` (AGIQA-3K), `livec.json`, `live.json`, `csiq.json`, `konvid.json`, `maxwell_test.json` | 2,982; 1,169; 982; 750; 1,200; 909 |
+
+- AGIQA-20K is not in the Q-Align release. The Q-ReAlign README adds it (about 14,000 train images per the paper split).
+- The HF mirrors hold about 59.8 GB of images (`q-future/q-align-datasets`, 11 archives; AVA is 34.4 GB) and 73.2 GB of LSVQ video (`teowu/LSVQ-videos`). The image mirror also has sets outside the ONE-ALIGN mix (FLIVE, PIQ23, BID, CSIQ, LIVE, LIVE-C, AGIQA).
+- 91% of the training images are AVA (aesthetics). Only 24,049 are image-quality items.
+- Some test counts differ from the dataset papers (for example LIVE 982 here vs 779 distorted images; CSIQ 750 vs 866). The interval table in [protocol.md section 5](../evaluation/protocol.md#5-confidence-intervals) uses paper sizes. Use the `n` of the file you actually score.
+
+### 6.3 Open image pools for teacher-labeled training
+
+To rebuild a set of this size with teacher labels, we need about 260K images with a wide quality range. Checked 2026-09-27 (HF tags and cards).
+
+| Pool | Size | Terms | Quality range | Fit |
+|---|---|---|---|---|
+| [PD12M](https://huggingface.co/datasets/Spawning/PD12M) | 12.4M | Package CDLA-Permissive-2.0; images public domain or CC0 (authors say they cannot guarantee every item) | Curated as "highly aesthetic"; skews high | Good for aesthetics and clean references; few bad photos |
+| [Megalith-CC0](https://huggingface.co/datasets/Spawning/megalith-cc0) / [Megalith-10m](https://huggingface.co/datasets/madebyollin/megalith-10m) | 2.39M (CC0 subset) / ~10M links | Flickr CC0, PD mark, US Gov, Flickr Commons; card MIT | "Unedited photographs"; amateur Flickr spread | Best match for authentic photo quality (KonIQ is also Flickr / YFCC100M) |
+| [CommonCatalog CC-BY](https://huggingface.co/datasets/common-canvas/commoncatalog-cc-by) | ~100M across all license splits (card); CC-BY split size not checked | CC BY per image (attribution needed); YFCC100M source, up to 4K, EXIF and device fields | Amateur photos, wide range | Good; same source family as KonIQ, so dedup against KonIQ and SPAQ tests |
+| [DataComp-1B](https://huggingface.co/datasets/mlfoundations/datacomp_1b) | ~1.4B URLs | Metadata CC BY 4.0; images keep their own rights | Web images, all qualities | Wide range, but image rights unclear. Research only. |
+| UHD-IQA, MSC, AU-IQA (this file and [iaa.md](iaa.md)) | 6,073; 10,426; 4,800 | UHD-IQA: CC0 images, labels research-only (no formal license). MSC: CC0 data. AU-IQA: MIT. | Rated by humans | Small calibration and test anchors |
+| Self-made distortions (KADIS-style, 25 types x 5 levels) on CC0 references | Any | Ours | Full range by construction | Exact within-reference ranking labels for free; no MOS |
+
+Not usable for training a shipped model: ImageNet and SA-1B (non-commercial terms), COCO (mixed Flickr CC incl. NC), ShareGPT4V (CC BY-NC 4.0 tag).
 
 ## 7. Label files and scales
 

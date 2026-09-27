@@ -166,6 +166,29 @@ RED-20k data construction took 2,220 H200 GPU-hours and about 1.3M API calls (fo
 | Round 1: unlabeled KonIQ images, self-voted pairs | Weighted 8-set mean 0.615 / 0.570 (zero-shot base) to 0.751 / 0.709 | EvoQuality, Qwen2.5-VL-7B GRPO, no MOS or distortion labels used | B | [EvoQuality Table 2](https://arxiv.org/html/2509.25787) |
 | Round 2: + 10 synthetic variants per KonIQ image (10 of 35 types, 5 levels) | 0.751 / 0.709 to 0.770 / 0.726. KADID 0.784 / 0.782 to 0.803 / 0.807; TID2013 0.624 / 0.587 to 0.674 / 0.611. **AGIQA 0.839 / 0.777 to 0.831 / 0.771.** | Same, second round (data and round both change) | B | [EvoQuality Table 2](https://arxiv.org/html/2509.25787) |
 
+### 7.1 Teacher (synthetic) labels on unlabeled images
+
+Question: can labels from a vision-language model replace human MOS? Evidence so far, author-reported:
+
+| Setting | KonIQ | SPAQ | AGIQA-3K | AIGIQA-20K | Source |
+|---|---|---|---|---|---|
+| LEAF, label-free: InternVL3.5-8B teacher (frozen, zero-shot) gives 5-level probabilities and pair preferences on the train images; ConvNeXt-Base student | 0.801 / 0.777 | 0.867 / 0.861 | 0.811 / 0.749 | 0.762 / 0.696 | [LEAF section 4.3](https://arxiv.org/html/2601.20689) |
+| LEAF + 10% of train MOS for calibration | 0.903 / 0.867 | 0.902 / 0.896 | 0.899 / 0.841 | 0.878 / 0.839 | same |
+| LEAF + 30% of train MOS | 0.916 / 0.899 | 0.922 / 0.921 | Not checked | Not checked | [LEAF Table 2](https://arxiv.org/html/2601.20689) |
+| Q-Align, fully supervised (reference) | 0.950 / 0.941 (ONE-ALIGN, [Q-Align Table 7](https://arxiv.org/abs/2312.17090), converted from SRCC / PLCC) | – | 0.881 / 0.852 (as quoted in LEAF Table 1) | 0.889 / 0.874 (as quoted) | as linked |
+
+Teacher size matters a little. On AGIQA-3K with 10% MOS: Qwen3-VL-8B 0.873 / 0.835, Qwen3-VL-32B 0.907 / 0.848, InternVL3.5-38B 0.912 / 0.850 ([LEAF Table 4](https://arxiv.org/html/2601.20689)).
+
+Aesthetics is much weaker zero-shot. GPT-4o, prompted: AVA 0.485 / 0.509, TAD66K 0.282 / 0.278 ([models/iaa.md section 3.1](../models/iaa.md#31-artimuse-paper-arxiv-250714533-table-3)). GPT-4.1: AVA 0.4846 / 0.5594 ([Aes-R1 Table 1](https://arxiv.org/abs/2509.21871)).
+
+What this means:
+
+- Zero-shot teacher labels give about 0.75–0.86 SRCC on image quality. That is well below supervised models (about 0.94 on KonIQ). Synthetic labels alone will not match Q-Align accuracy.
+- The teacher ranks images well but gets the scale wrong. LEAF fixes the scale with a small human-labeled set. We have no private labels, so the calibration set must be an open MOS set, with its own license terms.
+- For aesthetics, a zero-shot teacher is too weak to label a training set.
+- A teacher fine-tuned on the research mix would give better labels. [INFERENCE] Its labels likely carry the same license question as its training data ([datasets/iqa.md section 6.1](../datasets/iqa.md#61-license-verdict-for-the-whole-q-realign-training-mix)).
+- The LEAF student saw unlabeled images from the same datasets as the tests. Labels on a different image pool (for example PD12M) will likely transfer less well [INFERENCE].
+
 ## 8. What this means for a Q-ReAlign re-train
 
 1. Every addition in this file helped its own domain and hurt at least one other set in some study. Plan for regressions and report them.

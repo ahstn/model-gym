@@ -85,6 +85,23 @@ Use a paired bootstrap over independent source units.
 
 Do not bootstrap frames, patches, or distorted versions as if they were independent. That makes intervals too narrow.
 
+Expected interval size. Approximate 95% half-width of one model's SRCC, from the Fisher z method with the Spearman variance factor 1.06. We computed these; they are not from a paper. They assume independent items, so they are too narrow for sets with few references (LIVE, CSIQ, KADID). A paired difference between two models is usually tighter, because both models see the same items.
+
+| Test set | n | Typical SRCC | ± half-width |
+|---|---:|---:|---:|
+| KonIQ test | 2,015 | 0.94 | 0.005 |
+| AVA test | ~19,930 | 0.82 | 0.005 |
+| LSVQ test | 7,182 | 0.88 | 0.005 |
+| LSVQ-1080p | 3,573 | 0.80 | 0.012 |
+| AGIQA-3K | 2,982 | 0.80 | 0.013 |
+| LIVE-C | 1,162 | 0.88 | 0.013 |
+| KoNViD-1k | 1,200 | 0.87 | 0.014 |
+| LIVE | 779 | 0.89 | 0.015 |
+| CSIQ | 866 | 0.85 | 0.019 |
+| LIVE-VQC | 585 | 0.80 | 0.030 |
+
+So a gain of 0.005 on one small cross set means nothing on its own. Pool cross sets per task, and decide on the paired interval.
+
 ## 6. Reporting rules
 
 - Report IQA, IAA, and VQA in separate tables. Aesthetic appeal, technical quality, and video quality are different targets.
@@ -137,6 +154,9 @@ Scope: code at [Q-Future/Q-ReAlign commit f5fd748](https://github.com/Q-Future/Q
 | 11 | Config mix omits AGIQA-20K. `mix: [koniq, spaq, kadid, ava, lsvq]`. The README says all three sizes train on KonIQ + SPAQ + KADID + AGIQA-20K + AVA + LSVQ. The original Q-Align ONE-ALIGN (paper Table 7) also used 5 sets: KonIQ + SPAQ + KADID + AVA + LSVQ. | [onealign.yaml L67](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/configs/onealign.yaml#L67); [README](https://github.com/Q-Future/Q-ReAlign#results); [Q-Align paper](https://arxiv.org/abs/2312.17090) Table 7. | The public config matches the original ONE-ALIGN, not the README's Q-ReAlign recipe. The exact released training manifest is not public. | Treat the README recipe as the claim. Rebuild the 6-set mix yourself and log it. | verified |
 | 12 | README result table labels. Order is SRCC / PLCC. The `AGI` column does not name the dataset (a footnote mentions "AIGC10K"). `LIVE` is the synthetic LIVE set in the config (`dmos: true`). The Q-Align row does not match the ONE-ALIGN row of the Q-Align paper (for example KonIQ SRCC / PLCC 0.942 / 0.944 in the README vs 0.941 / 0.950 in paper Table 7). | [README](https://github.com/Q-Future/Q-ReAlign#results); [Q-Align paper](https://arxiv.org/abs/2312.17090) Table 7. | Test set identity and baseline provenance are Not stated. KonIQ, SPAQ, KADID, AVA, and LSVQ are in-distribution for this recipe. Only LIVE (and AGI if it is not AGIQA-20K) are cross-dataset. | Re-evaluate the released checkpoints and Q-Align yourself on named, pinned test files. | verified |
 | 13 | Author-reported headline: Pro (9B) average PLCC / SRCC 0.900 / 0.896 vs Q-Align 0.873 / 0.869, over 7 sets. | [README](https://github.com/Q-Future/Q-ReAlign#results) (converted from SRCC / PLCC). | Mixed in-distribution and cross-dataset average. Not an independent replication. | Per-dataset rows in [unified models](../models/unified-and-backbones.md). | verified (author-reported) |
+| 14 | No image size limit at inference. `open_image` loads the full image. The config sets no `max_pixels`. The Qwen3.5 processor allows up to 16,777,216 pixels, with 16 px patches merged 2x2 (about one visual token per 32x32 px). | [scorer.py L26-L28](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/qalign/scorer.py#L26-L28); [Qwen3.5-0.8B preprocessor_config.json](https://huggingface.co/Qwen/Qwen3.5-0.8B/blob/main/preprocessor_config.json). | [INFERENCE] A 1024x768 KonIQ image gives about 770 visual tokens, vs 64 in Q-Align. A full-size SPAQ photo could exceed `max_length: 8192`. ms-swift may apply its own pixel cap; not checked. | Log visual tokens per item. Sweep a pixel cap and plot accuracy vs tokens. | verified (token counts inferred) |
+| 15 | Attention kernel is set for training only. `train.py` passes `--attn_impl flash_attn`. `model.load` calls `get_model_processor(path, model_type=...)` without it. `flash-attn` is commented out in `requirements.txt`. | [train.py L102](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/qalign/train.py#L102); [model.py L26-L27](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/qalign/model.py#L26-L27); [requirements.txt](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/requirements.txt). | [INFERENCE] Eval and inference may run on the library default kernel. Qwen3.5 linear-attention layers may also fall back to a slow path if their fast kernels are missing. | Record the attention kernel and any "fast path not available" warning in every timing run. | verified (runtime effect not measured) |
+| 16 | One item per forward pass. `score_record` collates a single input and reads `logits[0, -1]`. It does not use `logits_to_keep`, so the LM head runs on every position. | [scorer.py L109-L112](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/qalign/scorer.py#L109-L112). | The repo code has no batching. The README speed chart shows batch sizes up to 14, so it came from another harness (Not stated). | Build our own batched scorer; compute logits only at the last position. | verified |
 
 ### License status
 
@@ -157,3 +177,46 @@ Correction vs dossier: the dossier said only that no `LICENSE` file exists at th
 5. Use one lossless frame cache for train and eval. Score each test set twice (cold and warm cache) and confirm equal scores.
 6. Assert 5 distinct single-token labels at the answer position for each backbone.
 7. Report raw PLCC, SRCC, KRCC, `n`, and a source-level bootstrap interval for each dataset.
+
+## 9. Efficiency measurement
+
+No shared benchmark exists for scorer cost. Papers use different GPUs, image sets, and input sizes. To claim "cheaper or faster than Q-Align", run every model on one harness.
+
+### Published reference numbers (not comparable to each other)
+
+| Model | Stored params | Visual input | GPU | Peak images/s (batch) | Batch-1 latency | Source |
+|---|---:|---|---|---|---|---|
+| Q-Align (mPLUG-Owl2) | ~8.2B | 448 px; visual abstractor cuts 1,024 tokens to 64 | RTX 3090 | 22.9 (bs 64) | 101 ms | [Q-Align Tables 9–10](https://arxiv.org/html/2312.17090v1) |
+| Q-Align, video | ~8.2B | 1 fps | RTX 3090 | 4.2 five-second videos/s; 1.9 twelve-second videos/s (bs 1) | 236–514 ms | [Q-Align Table 10](https://arxiv.org/html/2312.17090v1) |
+| Q-ReAlign Mini | 1.11B | Qwen3.5 processor (resize policy not stated) | RTX 4090 / H200 | 26.7 (bs 4) / 61.1 (bs 14) | Not stated | [README speed chart](https://github.com/Q-Future/Q-ReAlign/blob/main/assets/Speed.png), measured on SPAQ |
+| Q-ReAlign Lite | 5.17B | As above | RTX 4090 / H200 | 9.6 (bs 2) / 25.7 (bs 4) | Not stated | Same chart |
+| Q-ReAlign Pro | 9.41B | As above | RTX 4090 / H200 | 6.4 (bs 1) / 17.6 (bs 3) | Not stated | Same chart |
+| RALI vs Q-Insight | ~4% of Q-Insight params | CLIP-based | A100 | 3.4% of Q-Insight inference time (bs 16) | – | [RALI](https://arxiv.org/html/2510.11369v2) |
+
+What this shows: on a faster GPU, Q-ReAlign Lite and Pro reach less than half of Q-Align's image throughput. Only Mini is faster. [INFERENCE] The likely cause is the visual-token count: Q-Align sends 64 tokens per image, while the Qwen3.5 processor sends many more for large SPAQ photos. So the visual-token budget is the main cost lever for our model. It also affects accuracy, because native-resolution detail helps quality scoring (ReLIQS).
+
+Key finding: **Q-ReAlign Lite and Pro are slower than the original Q-Align, even on a faster GPU** (RTX 4090 vs RTX 3090). Q-ReAlign gains accuracy at a cost in throughput. For our goal (beat Q-Align on cost and latency first), Lite and Pro are accuracy references, not cost references.
+
+### Inference configuration to investigate
+
+Before we blame the backbone, check how Q-ReAlign runs. Audit rows 14–16 in section 8 show the settings. Test each factor alone, on the harness below, and record accuracy and speed together.
+
+| Factor | Current Q-ReAlign code | What to try |
+|---|---|---|
+| Image size / visual tokens | No cap (row 14) | Pixel caps that give about 64, 256, 576, and 1,024 tokens; also a native-resolution crop policy |
+| Attention kernel | Not set at inference (row 15) | SDPA vs FlashAttention; confirm Qwen3.5 linear-attention fast kernels load |
+| Batching | 1 item per pass (row 16) | Padded batches, sorted by token count |
+| LM head | Full sequence | Last position only |
+| Serving stack | Plain Transformers forward | vLLM or SGLang with prefix caching (the prompt is the same for every item) |
+| Precision | BF16 (assumed) | FP8 or INT8 weights; check the score drift on the T1 sets |
+| Video frames | 8 frames, long side 448 | Fewer frames, or token merging across frames |
+
+Goal: find the best speed each backbone can reach at a fixed accuracy. Then compare backbones.
+
+### Harness rules
+
+- One machine, one GPU type, one software stack (driver, CUDA, PyTorch, attention kernel). Record all of them.
+- Same inputs for all models: a fixed 1,000-image mix (KonIQ, SPAQ full-size, UHD-IQA) and a fixed 200-video mix (LSVQ, LSVQ-1080p). Include decode and preprocessing in the time.
+- Report: visual tokens per item, batch-1 latency (p50 and p95), peak throughput and its batch size, peak VRAM, and cost per 1M images at a stated GPU price.
+- Warm up before timing. Use BF16 unless the model needs another dtype. Record whether you used compiled or served inference (for example vLLM).
+- Put accuracy and cost in the same table. A model is only "better" if it is on or above the accuracy-vs-cost line of Q-Align and Q-ReAlign.

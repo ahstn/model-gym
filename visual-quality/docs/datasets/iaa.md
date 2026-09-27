@@ -24,7 +24,7 @@ Last verified: 2026-09-27
 | [AADB](https://arxiv.org/abs/1606.01621) | 2016, ECCV | 10,000 | Overall score + 11 attributes; 5 raters per image | Per-rater scores (rater IDs used for ranking in paper) | 11 attributes: balancing, color harmony, content, depth of field, light, motion blur, object, repetition, rule of thirds, symmetry, vivid color | Common split 8,500 / 500 / 1,000 (unverified) | "For research purpose only." Photos from Flickr (CC). Repo mentions patent US20170294010A1. | Open (repo links) | No (research only) | [Repo](https://github.com/aimerykong/deepImageAestheticsAnalysis) | verified |
 | [FLICKR-AES](https://openaccess.thecvf.com/content_iccv_2017/html/Ren_Personalized_Image_Aesthetics_ICCV_2017_paper.html) | 2017, ICCV | 40,000 (+ REAL-CUR: 14 personal albums) | 1–5 ratings; 5 AMT workers per image; 210 workers | Yes: per-worker ratings | None beyond worker ID | Split by worker: train 35,263 images / 173 workers; test 4,737 images / 37 workers | "Research purpose only." Photos are Flickr CC. | Open (repo links) | No (research only) | [Repo](https://github.com/alanspike/personalizedImageAesthetics) | verified |
 | [PARA](https://openaccess.thecvf.com/content/CVPR2022/html/Yang_Personalized_Image_Aesthetics_Assessment_With_Rich_Attributes_CVPR_2022_paper.html) | 2022, CVPR | 31,220 | Aesthetic score + 9 objective and 4 subjective attributes; 438 subjects with profile data | Yes: per-subject ratings | Scene and content attributes, rater personality and background | Paper split used for PIAA; check release files | Page footer forbids commercial use and copying without permission. No other license. | Open (Google Drive, Baidu; password on page) | No (NC) | [Page](https://web.xidian.edu.cn/ldli/en/dataset.html) | verified |
-| TAD66K | 2022, IJCAI | ~66,000 | Theme-aware aesthetic scores; >= 1,200 annotations per image | Not stated | 47 themes | Labels grouped by theme in download | HF card and code: Apache-2.0. Photo rights not established. | Open (Google Drive, HF) | Unclear | [Repo](https://github.com/woshidandan/TANet-image-aesthetics-and-quality-assessment) | verified |
+| TAD66K (our training set) | 2022, IJCAI | 66,327 | Theme-aware aesthetic scores; >= 1,200 annotations per image | No: mean score only | 47 themes, one theme per image | Official split in `labels/merge/{train,test}.csv`: 52,248 train / 14,079 test, no shared images. Per-theme files in `labels/unmerge/`. | HF card and code: Apache-2.0. Photo rights not established. | Open (Google Drive, HF) | Unclear | [Repo](https://github.com/woshidandan/TANet-image-aesthetics-and-quality-assessment), [HF](https://huggingface.co/datasets/Shuai1995/TAD66K_for_Image_Aesthetics_Assessment) | verified (split and counts from label files) |
 | ICAA17K | 2023, ICCV | 17,726 | Color aesthetics score; ~1,500 opinions per image | Not stated | 30 color combinations | Not stated | Code: Apache-2.0 badge. Dataset terms Not stated. | Open (repo links) | Unclear | [Repo](https://github.com/woshidandan/Image-Color-Aesthetics-and-Quality-Assessment) | verified |
 | [FGAesthetics](https://arxiv.org/abs/2603.03907) | 2026, CVPR | 32,217 in 10,028 series | Fine-grained, within-series aesthetic comparison | Not stated | Image series (same scene) | Not stated | Not stated | Repo has inference only; data not found | Unclear | [arXiv](https://arxiv.org/abs/2603.03907) | verified (abstract) |
 | [MSC](https://doi.org/10.1038/s41597-026-06816-0) | 2026, Sci Data | 10,426 | 1–5 ratings; 100 ratings per image | Yes: raw rating CSV | Low-semantic objects; includes "ugly" images for full-range coverage | Not stated | OSF data and software: CC0 1.0. Images are public domain, CC0, CC BY, CC BY-SA, or the authors' own. Article text: CC BY-NC-ND. | Open (OSF) | Yes (data CC0; CC BY images need credit) | [OSF](https://doi.org/10.17605/OSF.IO/ZGSVJ) | verified |
@@ -74,6 +74,7 @@ These give pairwise or ranked choices, not MOS. They mix aesthetics, prompt fit 
 |---|---|---|---|
 | AVA | `AVA.txt`: image ID, vote counts for 1–10, 2 semantic tag IDs, challenge ID. Tag and challenge name lists. Style and train/test lists. | 1–10, higher = better. Mean from counts. | verified |
 | AADB | Overall score + 11 attribute scores per image | Overall 1–5 (unverified); attributes signed | verified (fields) |
+| TAD66K | `merge/train.csv`, `merge/test.csv`: `image`, `score` (mean). Same files on HF and in the TANet repo. | Observed range 1.13–9.46, mean 5.43 (1–10 scale); higher = better | verified (label files, 2026-09-27) |
 | FLICKR-AES | Per-worker ratings; mean used as ground truth | 1–5 (paper normalizes to [0.2, 1]) | verified |
 | PARA | Per-subject aesthetic score, attribute scores, subject profile | Not stated here; check release | verified (fields) |
 | MSC | Raw rating CSV (100 ratings per image) | 1–5 | verified |
@@ -87,7 +88,8 @@ These give pairwise or ranked choices, not MOS. They mix aesthetics, prompt fit 
 | Goal | Start with | Why |
 |---|---|---|
 | Reproduce ONE-ALIGN aesthetics | AVA | It is the recipe's only IAA set. It has full vote counts. |
-| Test transfer to other photo taste | AADB, TAD66K, PARA | Different raters, attributes and themes from AVA |
+| Train beyond AVA (our choice) | TAD66K | Apache-2.0 release, 47 themes, official split. See section 7. |
+| Test transfer to other photo taste | AADB, PARA | Different raters and attributes from AVA. Evaluation only for us. |
 | Personalized or rater-aware scores | FLICKR-AES, PARA, LAPIS | Per-rater labels and rater splits |
 | Art and design | BAID, APDDv2, ArtiMuse-10K | Art-only content; ArtiMuse also has 8 dimensions |
 | Open-license training data | MSC | Data under CC0; images under open licenses |
@@ -104,3 +106,31 @@ These give pairwise or ranked choices, not MOS. They mix aesthetics, prompt fit 
 - Only MSC (CC0 data) and a few HF sets with Apache or MIT tags have clear open terms. Most photo sets are research-only or do not state terms. For commercial work, treat AVA, AADB, FLICKR-AES, PARA, BAID, APDDv2, ArtiMuse and PIQ23 ([iqa.md](iqa.md)) as blocked until you get permission.
 - Preference sets mix aesthetics with prompt fit. HPDv3++ splits them into `aes` and `tf` subsets. RichHF-18K gives separate aesthetics and artifact scores. Use these to test if a model confuses taste with defects.
 - Model and backbone choices are in [../models/unified-and-backbones.md](../models/unified-and-backbones.md). The staged plan is in [../training/experiment-plan.md](../training/experiment-plan.md).
+
+## 7. Adding AADB, TAD66K, or ArtiMuse-10K to training
+
+**Decision (2026-09-27): train on TAD66K. Use AADB, ArtiMuse-10K, PARA, and the other aesthetics sets for evaluation only.**
+
+Checked 2026-09-27 against the rows in section 2, the GitHub license API, and the HF dataset tags. This is not legal advice.
+
+| Set | What we can use | Terms found | Fit for internal research training | Fit for a model we ship commercially |
+|---|---|---|---|---|
+| TAD66K | All ~66K images with theme labels | GitHub repo and HF dataset tag: Apache-2.0. The images come from the web; photo rights are not established. | Yes | Best of the three, but not clear: Apache-2.0 on the release does not prove the uploader had rights to each photo. |
+| AADB | 10,000 images (8,500 / 500 / 1,000 common split, unverified) | README: "for research purpose only". Images are Flickr CC. Adobe patent US20170294010A1 "discourages considerations of commercial use". No LICENSE file (GitHub API null). | Yes | No, without permission from the authors |
+| ArtiMuse-10K | Test set only (`test.json`, public on HF). Full set by request form. | HF tag says Apache-2.0, but the README says non-commercial research only and no redistribution. Follow the stricter README. | Only the full set by form, for research | No |
+
+Rules:
+
+- **Do not train on the ArtiMuse-10K test set.** It is our only public cross-domain aesthetics test (photos, paintings, design, AIGC). If we train on it, we lose the check that AVA-trained models fail (0.32–0.40 SRCC, [models/iaa.md section 4](../models/iaa.md#4-protocol-c-cross-dataset-transfer-the-artimuse-finding)).
+- **Keep at least one aesthetics set fully held out.** AADB and the ArtiMuse-10K test stay held out. PARA and FLICKR-AES are extra held-out photo sets.
+- **Scales differ.** AVA is 1–10, TAD66K is 1–10 (observed 1.13–9.46), and AADB is 1–5. Map each set to the 5 levels with its own bins, as Q-Align does per dataset. Do not pool raw scores.
+- **No new conflict with the baseline.** The ONE-ALIGN recipe already trains on AVA, whose terms are Not stated. Adding TAD66K does not make it worse. The mix is still not clean for commercial use, because AVA and the IQA and VQA sets keep their own terms.
+- **Weights inherit the question, not the answer.** Q-ReAlign weights are tagged Apache-2.0 while their training data (KonIQ, AVA, LSVQ, and others) has research terms. Whether trained weights carry the data terms is a legal question. If we ship the model, get advice first, or build a data mix from clearly licensed sets (MSC, AU-IQA, and our own data).
+
+How to use TAD66K:
+
+- **Split.** Train on the official 52,248-image train list. Carve validation from it (for example 5%, stratified by theme). Keep the official 14,079-image test list locked. This keeps our TAD66K numbers comparable with published ones (for example Q-Align 0.531 / 0.501 and ArtiMuse 0.543 / 0.510, [models/iaa.md section 3.1](../models/iaa.md#31-artimuse-paper-arxiv-250714533-table-3)).
+- **Theme-shift check (optional ablation).** Retrain once with a few themes removed from training. Test on those themes. Do not use this for the main model.
+- **Labels.** Only the mean score exists, no vote counts. Map scores to the 5 levels with TAD66K's own bins. Do not reuse AVA's bins, and do not invent a vote spread for soft labels (see [protocol.md section 7](../evaluation/protocol.md#7-calibration)).
+- **Dedup before training.** TAD66K file names look like Flickr user and photo IDs. AADB images also come from Flickr, and AVA and ArtiMuse include web photos. [INFERENCE] Some images may appear in more than one set. Run a perceptual-hash check of TAD66K train against every aesthetics test set, and drop matches from training.
+- **Expected effect.** In ArtiMuse Table 13, a Q-Align model trained on TAD66K alone reached 0.699 / 0.695 on AVA but only 0.304 / 0.317 on ArtiMuse-10K ([models/iaa.md section 4](../models/iaa.md#4-protocol-c-cross-dataset-transfer-the-artimuse-finding)). So TAD66K should help photo themes, but may not help art or design. Measure it as its own step.
