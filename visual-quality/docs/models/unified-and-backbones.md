@@ -178,3 +178,30 @@ No newer backbone (Gemma 4, Qwen3.8, MiniCPM-V-4.6, InternVL3.5, GLM-4.6V) has a
 Suggested first matrix (from dossier): Qwen3.5-4B (cost control) vs Gemma 4 E4B (new architecture), same data, splits, scorer, and visual budget. Then MiniCPM-V-4.6 as a low-cost student. Add Qwen3.8-27B only if smaller models plateau. Details: [../training/experiment-plan.md](../training/experiment-plan.md).
 
 Excluded from the shortlist (from dossier): Qwen3.6-35B-A3B, Gemma 4 26B-A4B, and Qwen3.8-Flash-Next. Their active-parameter counts hide large stored weights.
+
+### 2.6 Other candidates checked (2026-09-27)
+
+**Gemma 4 12B Unified: not a first-round candidate. Possible teacher later.**
+
+- Design: encoder-free. It cuts the image into 48x48 RGB patches and projects them with one 35M-parameter matrix, plus 2D position embeddings. There is no 550M vision encoder as in E4B ([Gemma 4 technical report, section 2](https://arxiv.org/html/2607.02770v2)). 11.96B stored params, Apache-2.0.
+- General vision scores, thinking mode, author-reported ([report Tables 6 and 12](https://arxiv.org/html/2607.02770v2)):
+
+| Benchmark | 12B @1120 tokens | 12B @280 tokens | E4B @1120 | E4B @280 | 31B @1120 |
+|---|---:|---:|---:|---:|---:|
+| MMMU Pro | 69.1 | 67.7 | 52.6 | 51.4 | 76.9 |
+| MATH-Vision | 79.7 | 76.7 | 59.5 | 59.2 | 85.6 |
+| InfographicVQA | 88.4 | 58.7 | 70.0 | 54.8 | 92.0 |
+| OmniDocBench 1.5 (lower is better) | 0.164 | 0.408 | 0.181 | 0.307 | 0.131 |
+
+- What this means for us:
+  - It reasons much better than E4B, but those benchmarks test semantics, not low-level quality. No IQA, IAA, or VQA result exists for it except BrightRate-LM, where it was the **worst** of 7 backbones (SRCC 0.776 vs 0.882 for E2B, section 2.2).
+  - Fine-detail tasks lose far more at 280 tokens for 12B than for E4B (InfographicVQA -29.7 vs -15.2). [INFERENCE] Without a vision encoder, the 12B model needs many tokens to see fine detail. Blur, noise, and compression cues are fine detail. So it fits badly with our plan to cut visual tokens.
+  - It is larger than Q-Align (~8.2B). It cannot meet the cost and latency goal.
+  - Possible role: a teacher for distillation or pseudo-labels, if a pilot shows it scores quality well. Test it only after the small backbones.
+
+**K2 Horizon 7B (IFM / MBZUAI): not a candidate. It has no vision input.**
+
+- The HF card tags it `text-generation`. The config is `K2HorizonForCausalLM` with no vision settings. It is a text-only model for reasoning, code, and agents, with 512K context ([model card](https://huggingface.co/IFM/K2-Horizon-7B), [IFM blog](https://ifm.ai/blog/k2/)). Released 2026-09-03, Apache-2.0.
+- Stored weights are 18.0 GB in BF16 (about 9.0B params, from the safetensors index), not 7B.
+- All K2 Horizon models on the IFM HF page (0.9B to 375B-A23B) are `text-generation`. The only IFM vision model found is `k2-vision-65b` (2024), which is too large.
+- To use it we would have to add a vision encoder and run full multimodal pretraining. That is a new project, not a recipe improvement. Its strength (open training data and intermediate checkpoints) matters less than vision pretraining for this task.

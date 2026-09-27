@@ -105,12 +105,47 @@ Notes:
 
 ## 7. Proposed locked suite for this project
 
-This is a plan, not a result. It keeps each task separate.
+This is a plan, not a result. We have no labelled data of our own, so open sets are the only accuracy measure. The suite has four tiers. Each tier answers a different question. Keep IQA, IAA, and VQA separate.
 
-| Task | In-distribution (report separately) | Cross-dataset (never tuned on) | Diagnostic (separate table) |
+### 7.1 Is the Q-Align table enough?
+
+No. The standard table (section 6) is necessary for comparison with Q-Align and Q-ReAlign, but it is not enough to show that our model is better.
+
+| Gap | Evidence | Effect | Fix |
 |---|---|---|---|
-| IQA | KonIQ-10k test, SPAQ test, KADID-10k test (split by reference image), AGIQA-20K test (split by prompt) | LIVE Challenge, LIVE, CSIQ, PIPAL, AGIQA-3K (after overlap check) | Q-Bench A1, Q-Bench+ pairs, A-Bench P2, 2AFC fine-grained pairs |
-| IAA | AVA test | Out-of-domain aesthetics sets from [IAA datasets](../datasets/iaa.md) (for example the public ArtiMuse-10K test data) | AesBench, UNIAA-Bench in-the-wild split |
-| VQA | LSVQ test, LSVQ 1080p | KoNViD-1k, LIVE-VQC, MaxWell test (only if no DIVIDE-MaxWell training) | Q-Bench-Video, LongVQUBench (access permitting), Artifact-Bench for generated video |
+| In-distribution sets are near their ceiling | KonIQ split-half human agreement is 0.973 SRCC ([KonIQ paper, Fig. 6](https://arxiv.org/abs/1910.06180)). Top models are at 0.94–0.95. | Gains on KonIQ, SPAQ, KADID are small and near noise. | Treat them as regression guards, not as win conditions. |
+| Cross-dataset sets are small | LIVE 779, CSIQ 866, LIVE-C 1,162, KoNViD-1k 1,200, LIVE-VQC 585 items. | 95% intervals are about ±0.013 to ±0.030 SRCC ([protocol.md section 5](protocol.md#5-confidence-intervals)). | Pool several cross sets per task. Use paired bootstrap. |
+| Intra-dataset scores do not predict inter-dataset scores | MOSAIQ-Bench tested 31 IQA methods and found large gaps, most on authentic distortions ([arXiv 2609.20247](https://arxiv.org/abs/2609.20247)). | A model can rank well inside each set but give different absolute scores across sets. | Add an absolute-scale check when MOSAIQ files are released ("after acceptance"). Until then, report per-set only. |
+| Aesthetics has no cross-dataset test | ONE-ALIGN reports AVA only. AVA-trained models drop to 0.32–0.40 SRCC on ArtiMuse-10K ([iaa.md section 4](../models/iaa.md#4-protocol-c-cross-dataset-transfer-the-artimuse-finding)). | An AVA gain can hide a loss of general taste. | Add AADB, TAD66K, and the ArtiMuse-10K test set as cross sets. |
+| Video tests are mostly the LSVQ domain | KoNViD-1k and LSVQ both draw from YFCC100M. High-frame-rate and 4K compression sets stay at 0.3–0.6 SRCC for all models ([vqa.md section 2.4](../models/vqa.md#24-out-of-distribution-sets-lsvq-trained)). | LSVQ gains may not carry over to streaming, gaming, or enhancement. | Add the out-of-distribution video tier (7.2). |
+| New content types are missing | No test for high-resolution photos, AI-enhanced photos, or AI-generated video in the Q-Align table. | Blind spots for 2025–2026 content. | Add UHD-IQA, AU-IQA, and AIGC video sets. |
+| Backbone pretraining may include the test images | VLM makers do not publish full data lists. Q-Instruct and similar data reuse KonIQ and SPAQ images ([datasets/iqa.md](../datasets/iqa.md)). [INFERENCE] A new backbone could have seen some test images. | Zero-shot numbers may be too high. Fine-tuned comparisons are less affected but not free of it. | Weight results on sets released after the backbone data cut-off (for example AU-IQA 2025, TREND-10K 2026). |
+| No efficiency benchmark exists | Papers report throughput on different GPUs and inputs. | We cannot claim "cheaper than Q-Align" from paper numbers. | Measure all models on one harness ([protocol.md section 9](protocol.md#9-efficiency-measurement)). |
+
+### 7.2 Tiered suite
+
+| Tier | Question | IQA | IAA | VQA |
+|---|---|---|---|---|
+| T1 Comparability | Do we match Q-Align / Q-ReAlign on their own table? | KonIQ test, SPAQ test, KADID test (split by reference), AGIQA-20K test (split by prompt) | AVA test | LSVQ test, LSVQ-1080p |
+| T2 Standard cross-dataset | Does it carry over to other human studies? | LIVE-C, LIVE, CSIQ, AGIQA-3K (after overlap check), PIPAL | AADB, TAD66K | KoNViD-1k, LIVE-VQC, YouTube-UGC, MaxWell test (only without DIVIDE-MaxWell training) |
+| T3 New domains | Does it work on content the recipe never saw? | UHD-IQA test (4K), AU-IQA (AI-enhanced), KonIQ++ or HRIQ (high resolution) | ArtiMuse-10K public test | LIVE-YT-Gaming, Waterloo-IVC-4K, VDPVE, KVQ (short-form), AIGVQA-DB or T2VQA-DB (split by prompt), FineVD test |
+| T4 Diagnostics | Does it see the right cues? | Q-Bench A1, 2AFC pairs, A-Bench P2, label-free probes (7.3) | AesBench | Q-Bench-Video, Artifact-Bench |
+
+- A "win" needs: T1 within the interval of Q-Align or better, and a pooled T2 + T3 gain whose paired-bootstrap interval excludes zero. No single set decides the outcome.
+- If we train on a subset of a T2 set (for example TAD66K), move that set to T1 and keep another set held out. See [datasets/iaa.md section 7](../datasets/iaa.md#7-adding-aadb-tad66k-or-artimuse-10k-to-training).
+- The T3 video sets follow the out-of-distribution protocol used by VQAThinker, VersusQ, and the CVPR 2026 weak-to-strong VQA paper ([Cao et al.](https://openaccess.thecvf.com/content/CVPR2026/papers/Cao_Generalizable_Video_Quality_Assessment_via_Weak-to-Strong_Learning_CVPR_2026_paper.pdf)), so published baselines exist.
+- Licenses: most T2 and T3 sets are research-only or have no formal license. Using them only for evaluation is lower risk than training on them, but it does not clear commercial use. See the dataset docs.
+- Candidates not yet used: OA-Bench (open-world aesthetics, [CVPR 2026 Findings](https://openaccess.thecvf.com/content/CVPR2026F/html/Liao_Open_World_Image_Aesthetic_Assessment_CVPRF_2026_paper.html); data release not confirmed), MOSAIQ-Bench (release after acceptance), GameScope (download path not checked).
+
+### 7.3 Label-free probes
+
+These need no human labels. They test rules that any good scorer must follow. They are sanity checks, not accuracy measures.
+
+| Probe | Method | Pass rule |
+|---|---|---|
+| Monotonic distortion | Take high-quality images (for example UHD-IQA or KADIS-700k references). Add one distortion (blur, noise, JPEG, downscale) at 5 levels. | Score falls as the level rises. Report the share of monotonic sequences and Kendall tau per distortion. |
+| Resolution and crop invariance | Score the same image at several display sizes, and score clean crops. | Small change only. KonX shows human MOS moves with resolution (SRCC 0.93 at 4:1), so do not demand zero change. Crops of clean images must not lose score (Vista-Bench warning). |
+| Re-encode stability | Re-save lossless images as PNG and as JPEG quality 95. | Near-equal scores. Also confirms the decode and cache path. |
+| Temporal defects | Insert frame drops, freezes, or flicker in short windows of clean video. | Score falls. Checks the frame-sampling policy. |
 
 For every row, apply the rules in [protocol.md](protocol.md): raw PLCC, SRCC, KRCC, `n`, source-level bootstrap intervals, and at least 3 seeds for claimed gains.
