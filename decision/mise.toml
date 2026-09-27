@@ -1,0 +1,62 @@
+[tools]
+ruff = "latest"
+uv = "latest"
+
+[env]
+POD_HOST = "216.243.220.174"
+POD_PORT = "16541"
+POD_USER = "root"
+POD_KEY = "{{config_root}}/../../runpod.pem"
+POD_DIR = "/root/model-gym/decision"
+
+[tasks.setup]
+description = "Install dependencies"
+run = "uv sync"
+
+[tasks.lint]
+description = "Check formatting and lint"
+run = "uv run ruff check . && uv run ruff format --check ."
+
+[tasks.fmt]
+description = "Format and autofix"
+run = "uv run ruff format . && uv run ruff check --fix ."
+
+[tasks.test]
+description = "Run the test suite"
+run = "uv run pytest"
+
+[tasks.info]
+description = "Show versions, device, and GPU memory"
+run = "uv run decision info"
+
+[tasks.check-readout]
+description = "Check the option-code readout of the tokenizer"
+run = "uv run decision check-readout"
+
+[tasks.data]
+description = "Build the training pool and held-out panels"
+run = "uv run decision build-data --out data --pool-size 200000 --seed 0"
+
+[tasks.pod-sync]
+description = "Copy the code to the pod"
+run = "bash scripts/pod.sh sync"
+
+[tasks.pod-bootstrap]
+description = "Install uv and dependencies on the pod"
+run = "bash scripts/pod.sh bootstrap"
+
+[tasks.pod-status]
+description = "Show GPU and job status on the pod"
+run = "bash scripts/pod.sh status"
+
+[tasks.pod-run]
+description = "Run a named job on the pod: mise run pod-run <name> -- <cmd...>"
+run = "bash scripts/pod.sh run"
+
+[tasks.pod-fetch]
+description = "Fetch a run directory from the pod: mise run pod-fetch <run-name>"
+run = "bash scripts/pod.sh fetch"
+
+[tasks.pod-backup]
+description = "Copy a run and its logs to /workspace/backup on the pod: mise run pod-backup <run-name>"
+run = "bash scripts/pod.sh backup"

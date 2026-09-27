@@ -1,0 +1,28 @@
+name: r16-40k
+model: openbmb/MiniCPM5-2B
+pool: data/pool.jsonl
+n_rows: 40000
+exclude_datasets: []
+dev_panel: data/panels/dev.jsonl
+dev_subset: 3000
+max_seq_tokens: 2048
+batch_tokens: 65536
+max_rows_per_micro: 64
+rows_per_step: 64
+epochs: 1
+lr: 1.0e-4
+weight_decay: 0.0
+warmup_ratio: 0.03
+min_lr_ratio: 0.1
+grad_clip: 1.0
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+shuffle_options: true
+eval_every: 100
+save_every: 0
+seed: 0
+gradient_checkpointing: true
+out_root: runs

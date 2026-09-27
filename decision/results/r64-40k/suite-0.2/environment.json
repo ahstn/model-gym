@@ -1,0 +1,30 @@
+{
+  "engine": "decision.suite:DecisionEngine",
+  "engine_options": {
+    "model": "openbmb/MiniCPM5-2B",
+    "max_tokens": 8192,
+    "batch_tokens": 65536,
+    "adapter": "runs/r64-40k/best",
+    "temperatures": "runs/r64-40k/eval/temperatures.json"
+  },
+  "model_source": {
+    "model": "openbmb/MiniCPM5-2B",
+    "adapter": "runs/r64-40k/best",
+    "temperatures": {
+      "choice": 0.9347851194662712,
+      "score": 0.9766914498351743,
+      "noul": 0.9402167360704188
+    },
+    "max_tokens": 8192,
+    "readout": "shared prompt prefix KV cache per request, one suffix pass per question (questions isolated); softmax over option-code logits at the answer position"
+  },
+  "torch": "2.14.0+cu130",
+  "cuda": "13.0",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "loaded_seconds": 284.17387746000895,
+  "frozen_corpus_sha256": "4f5ebdc5dbf8b3935ee2c45b6936ccd097ff571724794c40b7123a8d423bf94b",
+  "rows_path": "runs/r64-40k/suite-noHLE/shards/rows-0.jsonl",
+  "runner_sha256": "f4c9f36c4c557f537f1d8184db7bf00c5a84d9f4f0aa67f8c06198cead25818d",
+  "latency": "In-process request wall time: prompt rendering, tokenization and one batched backbone pass per request.",
+  "shards": 6
+}

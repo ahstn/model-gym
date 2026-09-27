@@ -1,0 +1,52 @@
+[project]
+name = "decision"
+version = "0.1.0"
+description = "Zero-shot decision models: calibrated option distributions from one forward pass (MiniCPM5-2B LoRA)"
+readme = "README.md"
+authors = [
+    { name = "Adam Houston", email = "phazyy9@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "torch>=2.9",
+    "transformers>=5.6.2,<6",
+    "peft>=0.17",
+    "accelerate>=1.10",
+    "datasets>=4.0",
+    "huggingface_hub>=0.34",
+    "numpy>=2.1",
+    "pyarrow>=18",
+    "pyyaml>=6.0.2",
+    "safetensors>=0.4",
+]
+
+[project.optional-dependencies]
+suite = [
+    "decision-index[rebuild] @ git+https://github.com/apolinario/decision-index@19ad28ec9485493cc4f7fc07d91c178f948e6434",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.11",
+]
+
+[project.scripts]
+decision = "decision.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+# CUDA 13.0 wheels cover both Blackwell (sm_120, pod) and Ampere (sm_86, local 3090).
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu130", marker = "sys_platform == 'linux'" }]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
