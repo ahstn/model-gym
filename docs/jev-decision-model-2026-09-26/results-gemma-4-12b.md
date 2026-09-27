@@ -9,6 +9,8 @@ All dev numbers are on the same dev panel (5,500 rows) with one temperature per 
 - **Stock frontier:** `google/gemma-4-12B-it` is the best stock base on dev (0.722 / 0.779 calibrated agreement / NLL). `gemma-4-26B-A4B-it` is level (0.717 / 0.797), `Qwen3.5-9B` is lower (0.671 / 0.832) and `K2-Horizon-7B` is far lower (0.498 / 0.989).
 - **Clean recipe:** the decontaminated pool without SargeDev beats R3 on the no-SargeDev dev slice (0.790 / 0.511 vs 0.774 / 0.547). The two-view option-order consistency loss adds more (0.805 / 0.486) and lifts permutation agreement from 0.868 to 0.910.
 - **gemma-4-12B-it LoRA** (r32, lr 5e-5, clean pool, consistency loss): dev 0.782 / **0.575** vs R3 0.780 / 0.637 (NLL −9.7%), no-SargeDev **0.851 / 0.380** vs 0.774 / 0.547. It passes the promotion gate. The first try at lr 1e-4 collapsed at step ~210.
+- **Decision Index 0.2 (full suite, our run): 45.70** (R3 29.38, stock 2B 18.91). Better than R3 on 37 of 40 benchmarks. The one large loss is SGD (the gemma base answers `NONE`; SGD is not in 0.2.1).
+- **Live board estimate (0.2.1): ≈48.2**, about rank 13 of 70. Winnow-12B (same base, LoRA r32) has 50.02, JPT-9B 46.89, Decider 4B 40.70. We trail Winnow on retrieval and tools and lead on arts.
 
 ## 1. Stock frontier on dev
 
@@ -94,4 +96,62 @@ By kind (calibrated agreement / NLL), 12B vs R3: choice 0.770 / 0.610 vs 0.720 /
 
 ## 5. Decision Index 0.2 (full suite)
 
-Status: running on the pod since 2026-09-27 15:59 UTC (151,476 rows, 2 shards, `--batch-tokens 32768`, merged adapter).
+One run of the full, hash-verified 0.2 suite with HLE (the same suite as R3: rows sha256 `b2b56d6f…`). Merged adapter, merged-fit temperatures, 2 shards, `--batch-tokens 32768`, max 8,192 tokens per question. 151,020 of 151,034 requests answered; 14 unsupported (too long). Wall time 5 h 11 min (R3: 2 h 10 min with 6 shards). Median latency 102 ms, p95 676 ms per request. Score files: [`decision/results/g12-r32-40k-clean-lr5e5/suite-0.2/`](../../decision/results/g12-r32-40k-clean-lr5e5/suite-0.2/).
+
+| Run | Index 0.2 | Raw index | Knowledge | Language | Retrieval | Tools | Arts |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Stock MiniCPM5-2B (R0) | 18.91 | 39.40 | 11.9 | 14.2 | 25.5 | 29.7 | 13.2 |
+| R3 MiniCPM5-2B LoRA | 29.38 | 47.47 | 17.4 | 30.9 | 32.4 | 49.4 | 16.9 |
+| **gemma-4-12B-it LoRA** | **45.70** | **57.88** | **33.6** | **55.1** | **43.2** | **62.0** | **34.6** |
+
+- +16.3 points over R3. It is better than R3 on 37 of the 40 index benchmarks and worse on 2.
+- Largest gains over R3: BPoMP +46.1, PhishNChips +41.6, Home appliance simulator +39.4, WinoGrande +38.4, CRUXEval +37.9, CLadder +33.7, GSM8K +33.3, RAGTruth +30.7. PhishNChips and GSM8K were R3's two losses against stock.
+- Losses: GPQA Diamond −1.4 (noise level, 196 requests) and **SGD/SGD-X −38.1 (skill 0.0, macro-F1 0.023)**. The model answers `NONE` on 99% of the SGD intent questions (R3: 5%). A 200-request check shows that the stock gemma-4-12B-it does the same (99.5% `NONE`; R3 0%), so this comes from the base, not from our training. [INFERENCE] The base reads "Choose NONE when no service intent is active" as the default. SGD is not in the 0.2.1 board index, so the board estimate below does not include it.
+- No overlap discount is needed: the training pool had the suite 13-gram filter.
+
+### Comparison with the live board (0.2.1)
+
+Board data generated 2026-09-27 16:59 UTC (68 entries + Jev). Same estimate method as for R3 ([method](results-minicpm5-2b-lora.md#comparison-with-the-live-board-021): our 0.2 per-benchmark skill averaged over the 0.2.1 panel per area, area weights .259/.259/.200/.183/.100; mean error −0.41 points on the board's own rows, about ±1–2 points because 0.2.1 rescores five benchmarks).
+
+| Entry | Base | Kind | Params | Index | Knowl. | Lang. | Retr. | Tools | Arts |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| Jev 1.13 | closed | — | — | 57.91 | 51.4 | 62.0 | 55.4 | 75.1 | 37.7 |
+| Surogate Rune 26B-A4B v3 | gemma-4-26B-A4B-it | full FT | 25.8B | 57.44 | 43.4 | 63.1 | 63.5 | 71.2 | 41.9 |
+| AutoJev-27B | Qwen3.8-27B | full FT | 27.8B | 56.40 | 40.9 | 63.5 | 54.9 | 79.3 | 39.4 |
+| Eikos-27B | Qwen3.8-27B | LoRA | 27.8B | 53.13 | 39.9 | 54.3 | 55.9 | 74.4 | 39.8 |
+| Decider chat · Qwen3.6-27B | Qwen3.6-27B | prompt only | 27.8B | 51.35 | 37.0 | 57.1 | 52.2 | 71.4 | 35.1 |
+| Winnow-12B | gemma-4-12B-it | LoRA r32 | 12.0B | 50.02 | 33.8 | 56.0 | 54.0 | 71.0 | 30.0 |
+| JoshuaSP diffusiongemma | diffusiongemma-26B-A4B-it | prompt only | 25.8B | 49.47 | 32.7 | 53.5 | 58.4 | 70.2 | 26.7 |
+| Jevfire | Qwen3.8-27B | prompt only | 27.8B | 49.37 | 30.5 | 53.3 | 56.2 | 72.3 | 32.2 |
+| **Ours: gemma-4-12B-it LoRA (estimate)** | gemma-4-12B-it | LoRA r32 | 12.0B | **≈48.2** | 33.6 | 55.1 | 50.5 | 64.0 | 34.6 |
+| Decider 35B-A3B | Qwen3.5-35B-A3B-Base | full FT | 36.0B | 47.11 | 31.8 | 55.5 | 54.7 | 56.5 | 32.6 |
+| JPT-9B | Qwen3.5-9B-Base | LoRA r16 | 9.7B | 46.89 | 31.7 | 56.7 | 44.6 | 67.0 | 28.6 |
+| Decision 1.0 Lux | Qwen3.5-9B-Base | head / adapter | 9.7B | 43.49 | 30.9 | 48.0 | 50.0 | 57.2 | 26.4 |
+| Decider 4B | Qwen3.5-4B-Base | full FT | 4.7B | 40.70 | 25.7 | 46.0 | 44.7 | 58.6 | 25.0 |
+| Jev-Omni | gemma-4-12B-it | LoRA + head | 12.0B | 40.53 | 25.5 | 50.5 | 35.8 | 60.8 | 26.1 |
+| Ours: R3 MiniCPM5-2B LoRA (estimate) | MiniCPM5-2B | LoRA r64 | 2.5B | ≈29.6 | 17.4 | 30.9 | 31.4 | 50.1 | 16.9 |
+| Decider 2B | Qwen3.5-2B-Base | full FT | 2.3B | 28.97 | 14.9 | 32.6 | 37.3 | 42.4 | 14.6 |
+
+- The 12B LoRA would rank about **13th of 70** (12 entries above it, Jev included; the table leaves out four more 27B entries between 52 and 56). R3 would now rank about 35th (two new entries since the last check).
+- Against Winnow-12B (same base, same LoRA rank): −1.8 points, inside the error of the estimate. Per benchmark we are better on 15 and worse on 20 of 39. We are ahead on arts (+4.6) and level on knowledge and language. We are behind on retrieval (−3.5) and tools (−7.0): BRIGHT −23.1, ToolRet −20.2, Home appliance simulator −10.8, ACOS −10.3, When2Call −9.3. Our best benchmarks against Winnow: BPoMP +17.7, PhishNChips +13.9, ANLI +9.5, API-Bank +7.6, CLadder +7.2.
+- Of the entries with 12.5B or fewer parameters, only Winnow-12B is higher. It is ahead of every 9B entry (JPT-9B 46.89).
+- These are our own runs of the public 0.2 kit, not board submissions.
+
+## 6. Cost and time
+
+| Phase | Wall time |
+|---|---|
+| Stock frontier (4 models, dev + calib) | under 2 h, next to the 2B training |
+| 2B clean and clean-cons training + evals | 47 + 60 min (shared GPU) |
+| 12B lr 1e-4 (stopped at step 440) | about 2 h |
+| 12B lr 5e-5 training + dev evals (unmerged and merged) | 3 h 7 min + 12 min |
+| Full 0.2 suite, 12B merged, 2 shards | 5 h 11 min |
+
+The pod (RTX PRO 6000 96 GB, $2.09/h) ran from 2026-09-26 18:41 UTC. This session (from 08:08 UTC) used about 13.5 h, about $28.
+
+## 7. Next trials
+
+1. Retrieval and tools are the gap to Winnow-12B (BRIGHT, ToolRet: long, many-option ranking requests). Check the option counts and prompt lengths of these requests against our 2,048-token training cap.
+2. Look at the SGD `NONE` default of the gemma base. Check whether a few SGD-like training rows (active intent with a `NONE` option) fix it without loss elsewhere.
+3. Try the consistency weight and the Brier loss as ablations on 12B, and a second seed to measure the noise of one run.
+4. Selective thinking (Rune v3) for low-confidence decisions.
