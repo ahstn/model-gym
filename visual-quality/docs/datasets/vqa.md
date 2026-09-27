@@ -114,6 +114,11 @@ For split and calibration rules see [evaluation/protocol.md](../evaluation/proto
 - Clean external video tests with no training overlap: LIVE-VQC, YouTube-UGC, KonVid-150k-B (after dedupe), LIVE-YT-Gaming.
 - Candidate video additions with fine-grained or perspective labels: FineVD (gated), DIVIDE-MaxWell (license conflict), KVQ (license not stated). For generated video: AIGVQA-DB (license not stated), AIGVE-60K and VideoFeedback2 (Apache-2.0 cards). HDR only after an HDR-preserving input path.
 - NC data (Beyond8Bits videos, BrightVQ, Q-Eval-100K, HVEval, VGA-Bench) can support research runs. Do not ship weights trained on it for commercial use without legal review.
+- Unlabeled video pools for teacher labels (to replace LSVQ's 28,056 training videos) are scarce:
+  - [Pexels-400k](https://huggingface.co/datasets/jovianzm/Pexels-400k) has 400,476 videos. The HF card says MIT, but the videos fall under the Pexels license, which limits redistribution. The content is mostly professional stock, so it skews high quality.
+  - [OpenVid-1M](https://huggingface.co/datasets/nkp37/OpenVid-1M) is tagged CC BY 4.0, but the README says research and non-commercial use and defers to the source sets (Panda-70M and others). It is filtered for high quality.
+  - YouTube-UGC videos are CC BY, but there are only about 1,500.
+  - Rated UGC-style video with a wide quality range remains the gap. [INFERENCE] Self-made compression, blur, and frame-drop ladders on CC0 or CC BY clips are the most practical label-free source.
 - Staged use and compute: see [training/experiment-plan.md](../training/experiment-plan.md). Models trained on these sets: [models/vqa.md](../models/vqa.md), [models/unified-and-backbones.md](../models/unified-and-backbones.md). Video aesthetics also appears in [datasets/iaa.md](./iaa.md).
 
 ## 9. Corrections and open items

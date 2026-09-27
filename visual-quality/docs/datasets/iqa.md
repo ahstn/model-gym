@@ -124,6 +124,40 @@ Verdict:
 - **Distillation does not clean data.** [INFERENCE] A student trained on a research model's outputs likely carries the same question as the research model. Get advice before relying on it.
 - **A clean-data track is possible but weaker.** Candidates: AGIQA-20K, TAD66K (Apache-2.0 release), MSC (CC0), UHD-IQA (CC0 images), AU-IQA (MIT), and synthetic distortions we generate ourselves on CC0 images for ranking-only training. [INFERENCE] It will likely score lower than the full mix on the standard tests. Measure the gap before deciding.
 
+### 6.2 Exact size of the Q-Align release
+
+Counted on 2026-09-27 from the label JSONs in the [Q-Align repo](https://github.com/Q-Future/Q-Align/tree/main/playground/data) (`training_sft/`, `test_jsons/`) and the HF file lists.
+
+| Set | Train items | Test file | Test items |
+|---|---:|---|---:|
+| KonIQ-10k | 7,046 | `test_koniq.json` | 2,010 |
+| SPAQ | 8,897 | `test_spaq.json` | 2,224 |
+| KADID-10k | 8,106 | `test_kadid.json` | 2,000 |
+| AVA | 235,598 | `test_ava.json` | 19,930 |
+| LSVQ (videos) | 28,056 | `test_lsvq.json`, `test_lsvq_1080p.json` | 7,186; 3,573 |
+| **Total** | **259,647 images + 28,056 videos** (`train_all.json` has 287,597 items, 106 fewer than the sum) | | |
+| Cross-dataset tests | – | `agi.json` (AGIQA-3K), `livec.json`, `live.json`, `csiq.json`, `konvid.json`, `maxwell_test.json` | 2,982; 1,169; 982; 750; 1,200; 909 |
+
+- AGIQA-20K is not in the Q-Align release. The Q-ReAlign README adds it (about 14,000 train images per the paper split).
+- The HF mirrors hold about 59.8 GB of images (`q-future/q-align-datasets`, 11 archives; AVA is 34.4 GB) and 73.2 GB of LSVQ video (`teowu/LSVQ-videos`). The image mirror also has sets outside the ONE-ALIGN mix (FLIVE, PIQ23, BID, CSIQ, LIVE, LIVE-C, AGIQA).
+- 91% of the training images are AVA (aesthetics). Only 24,049 are image-quality items.
+- Some test counts differ from the dataset papers (for example LIVE 982 here vs 779 distorted images; CSIQ 750 vs 866). The interval table in [protocol.md section 5](../evaluation/protocol.md#5-confidence-intervals) uses paper sizes. Use the `n` of the file you actually score.
+
+### 6.3 Open image pools for teacher-labeled training
+
+To rebuild a set of this size with teacher labels, we need about 260K images with a wide quality range. Checked 2026-09-27 (HF tags and cards).
+
+| Pool | Size | Terms | Quality range | Fit |
+|---|---|---|---|---|
+| [PD12M](https://huggingface.co/datasets/Spawning/PD12M) | 12.4M | Package CDLA-Permissive-2.0; images public domain or CC0 (authors say they cannot guarantee every item) | Curated as "highly aesthetic"; skews high | Good for aesthetics and clean references; few bad photos |
+| [Megalith-CC0](https://huggingface.co/datasets/Spawning/megalith-cc0) / [Megalith-10m](https://huggingface.co/datasets/madebyollin/megalith-10m) | 2.39M (CC0 subset) / ~10M links | Flickr CC0, PD mark, US Gov, Flickr Commons; card MIT | "Unedited photographs"; amateur Flickr spread | Best match for authentic photo quality (KonIQ is also Flickr / YFCC100M) |
+| [CommonCatalog CC-BY](https://huggingface.co/datasets/common-canvas/commoncatalog-cc-by) | ~100M across all license splits (card); CC-BY split size not checked | CC BY per image (attribution needed); YFCC100M source, up to 4K, EXIF and device fields | Amateur photos, wide range | Good; same source family as KonIQ, so dedup against KonIQ and SPAQ tests |
+| [DataComp-1B](https://huggingface.co/datasets/mlfoundations/datacomp_1b) | ~1.4B URLs | Metadata CC BY 4.0; images keep their own rights | Web images, all qualities | Wide range, but image rights unclear. Research only. |
+| UHD-IQA, MSC, AU-IQA (this file and [iaa.md](iaa.md)) | 6,073; 10,426; 4,800 | UHD-IQA: CC0 images, labels research-only (no formal license). MSC: CC0 data. AU-IQA: MIT. | Rated by humans | Small calibration and test anchors |
+| Self-made distortions (KADIS-style, 25 types x 5 levels) on CC0 references | Any | Ours | Full range by construction | Exact within-reference ranking labels for free; no MOS |
+
+Not usable for training a shipped model: ImageNet and SA-1B (non-commercial terms), COCO (mixed Flickr CC incl. NC), ShareGPT4V (CC BY-NC 4.0 tag).
+
 ## 7. Label files and scales
 
 Check these before you write a loader. A wrong score direction silently flips the correlation sign.
