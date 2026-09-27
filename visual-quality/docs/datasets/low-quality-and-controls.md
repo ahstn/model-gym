@@ -1,6 +1,6 @@
 # Low-quality photos and non-photo controls
 
-Checked: 2026-09-27. Status: source research and proposed sampling plan. No images were downloaded or scored.
+Checked: 2026-09-27. This research pass defined the source shortlist and sampling plan. The subsequent [pilot builder](../../README.md) implements acquisition and assembly; quality scores remain unset until review and labeling.
 
 The source note, *2026-09-27 Synth Data Generation*, identifies the main gap: large photo pools do not ensure a useful quality spread. **Use authentic capture faults as well as controlled distortions. Add diagrams and rendered images as a separate photo-suitability task.** This extends the [mixture evidence](../training/data-mixture-evidence.md) and the [quality and aesthetics prompt pack](../training/synthetic-label-prompts.md).
 
@@ -137,4 +137,4 @@ Research used Exa and Hugging Face in discovery, primary-source verification, an
 
 Hugging Face `dataset_search` was disabled by server configuration. Repository inspection worked over multiple rounds; public Hub queries and cards supplied further checks. Original releases took precedence when mirror rows, license tags, or counts disagreed. The complete Megalith-CC0 metadata count was checked with the HF Dataset Viewer API. It does not prove that all image URLs are reachable.
 
-No bulk image downloads, access-form submissions, paid model inference, dataset uploads, or training runs occurred. Sizes and labels above come from publisher releases unless stated otherwise. Archive contents, per-file rights records, duplicate rates, and obtainable low-quality fractions still need validation during ingestion.
+The research pass did not download image archives, submit access forms, call paid models, upload datasets, or train a model. Sizes and labels above come from publisher releases unless stated otherwise. The later [builder](../../README.md) records acquired counts, source evidence, and duplicate checks separately. Its source sample still needs a quality and eligibility audit.

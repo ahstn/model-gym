@@ -4,6 +4,8 @@ This folder stores research notes for image quality (IQA), image aesthetics (IAA
 
 Last verified: 2026-09-27
 
+The [pilot builder](../README.md) now provides acquisition, assembly, and verification commands for the proposed image mix. Its outputs retain source labels and leave teacher scores unset.
+
 ## Index
 
 | Area | File | Contents |
@@ -14,6 +16,7 @@ Last verified: 2026-09-27
 | Models | [models/unified-and-backbones.md](models/unified-and-backbones.md) | Unified LMM assessors (Q-Align, Q-ReAlign, UniPercept) and VLM backbones to fine-tune. |
 | Datasets | [datasets/iqa.md](datasets/iqa.md) | IQA datasets: synthetic, authentic, AIGC, instruction data. |
 | Datasets | [datasets/low-quality-and-controls.md](datasets/low-quality-and-controls.md) | Authentic faults, controlled damage, diagram/CG controls, and proposed 10K/250K sampling plans. |
+| Datasets | [datasets/pilot-10k-assembly.md](datasets/pilot-10k-assembly.md) | Completed local pilot: source snapshots, image counts, manifest hashes, verification, and pending label work. |
 | Datasets | [datasets/iaa.md](datasets/iaa.md) | Aesthetics and preference datasets. |
 | Datasets | [datasets/vqa.md](datasets/vqa.md) | Video quality datasets: UGC, streaming, HDR, AIGC video. |
 | Training | [training/methods.md](training/methods.md) | Training-method papers and what to borrow. |

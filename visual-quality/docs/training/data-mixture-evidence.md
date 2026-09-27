@@ -203,6 +203,8 @@ The [low-quality and control dataset study](../datasets/low-quality-and-controls
 
 The proposed 10K pilot uses 50% diverse photos, 30% controlled variants, 10% authentic faults, and 10% domain controls. These proportions are an experiment, not established evidence of better IQA. The 250K plan preserves those shares, but the 25K authentic-fault target requires extra mined photos beyond the eligible VI-UGC training pool. Keep originals and derivatives in one split, and reserve current IQA tests.
 
+The [pilot builder](../../README.md) implements that allocation using Megalith-CC0, human defect votes from public VizWiz training images, PlotQA, CLEVR, and owned controls. It adds separate development and test reserves. The broad-photo component is initially a seeded source sample; reviewed quality bands and teacher labels remain pending. Assembly is not evidence of improved model accuracy.
+
 Two corrections matter for the labels. Distortion severity is not an exact perceived-quality rank; mild edits can improve an image. A clean diagram or render can also have high quality and aesthetics. Assign zero to its photo-selection target when the product excludes that domain, while keeping quality ratings separate. MSC helps test low aesthetics, not technical IQA, and its source images include CC BY/CC BY-SA despite the CC0 release label.
 
 ## 8. What this means for a Q-ReAlign re-train

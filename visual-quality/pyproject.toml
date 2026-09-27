@@ -1,0 +1,29 @@
+[project]
+name = "visual-quality"
+version = "0.1.0"
+description = "Reproducible acquisition and assembly of the visual quality pilot"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.1,<3",
+    "pillow>=11,<13",
+    "requests>=2.32,<3",
+    "pyarrow>=19,<24",
+    "remotezip>=0.12,<0.13",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.3", "ruff>=0.11"]
+
+[project.scripts]
+visual-pilot = "visual_quality.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12,<0.13"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
