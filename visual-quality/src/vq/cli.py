@@ -1,0 +1,137 @@
+"""vq command line: labels, build, frames, eval, train, info."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+import urllib.request
+
+from pathlib import Path
+
+from vq.data import LABEL_BASE, SOURCES, T1, T2, TRAIN_MIX, build, read_manifest
+
+GROUPS = {"t1": T1, "t2": T2, "train": TRAIN_MIX, "all": tuple(SOURCES)}
+
+
+def _sets(names: list[str]) -> list[str]:
+    out: list[str] = []
+    for n in names:
+        for s in GROUPS.get(n.lower(), (n,)):
+            if s not in SOURCES:
+                raise SystemExit(f"unknown set {s!r}; known: {sorted(SOURCES)} or groups {sorted(GROUPS)}")
+            if s not in out:
+                out.append(s)
+    return out
+
+
+def cmd_labels(a: argparse.Namespace) -> None:
+    dest = a.root / "labels"
+    dest.mkdir(parents=True, exist_ok=True)
+    for src in SOURCES.values():
+        path = dest / Path(src.label_file).name
+        if not path.exists():
+            urllib.request.urlretrieve(f"{LABEL_BASE}/{src.label_file}", path)
+        print(src.name, path.stat().st_size)
+
+
+def cmd_build(a: argparse.Namespace) -> None:
+    report = build(a.root, _sets(a.sets))
+    (a.root / "manifests").mkdir(exist_ok=True)
+    (a.root / "manifests" / "report.json").write_text(json.dumps(report, indent=2))
+    for k, v in report.items():
+        print(f"{k:18s} labels={v['labels']:7d} kept={v['kept']:7d} missing={v['missing']:6d}")
+
+
+def cmd_frames(a: argparse.Namespace) -> None:
+    from vq.data import frame_paths
+    from vq.frames import extract_many
+
+    rels: list[str] = []
+    for name in _sets(a.sets):
+        src = SOURCES[name]
+        raw = json.loads((a.root / "labels" / Path(src.label_file).name).read_text())
+        for r in raw:
+            rel = r.get("image") or r.get("img_path")
+            rels.append(f"{src.media_dir}/{rel}" if src.media_dir else rel)
+    failures = extract_many(a.root, rels, a.workers, delete=a.delete)
+    done = sum((a.root / frame_paths(r)[-1]).exists() for r in rels)
+    print(json.dumps({"videos": len(rels), "with_frames": done, "failures": len(failures)}))
+    for k, v in list(failures.items())[:20]:
+        print("FAIL", k, v, file=sys.stderr)
+
+
+def cmd_eval(a: argparse.Namespace) -> None:
+    from vq.evaluate import run
+    from vq.scorer import ScorerConfig
+
+    cfg = ScorerConfig(
+        model=a.model,
+        max_pixels=a.max_pixels,
+        attn=a.attn,
+        batch_size=a.batch_size,
+        last_logits_only=not a.full_logits,
+        workers=a.workers,
+    )
+    run(cfg, a.root, _sets(a.sets), a.out, limit=a.limit, boot=a.boot)
+
+
+def cmd_train(a: argparse.Namespace) -> None:
+    from vq.train import run
+
+    run(a.config)
+
+
+def cmd_info(a: argparse.Namespace) -> None:
+    from vq.evaluate import environment
+
+    print(json.dumps(environment(), indent=2))
+    for name in _sets(a.sets):
+        p = a.root / "manifests" / f"{name}.jsonl"
+        print(name, len(read_manifest(p)) if p.exists() else "no manifest")
+
+
+def main(argv: list[str] | None = None) -> None:
+    p = argparse.ArgumentParser(prog="vq")
+    p.add_argument("--root", type=Path, default=Path("data"))
+    sub = p.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("labels", help="download the Q-Align label JSONs").set_defaults(fn=cmd_labels)
+
+    b = sub.add_parser("build", help="write locked manifests")
+    b.add_argument("sets", nargs="*", default=["all"])
+    b.set_defaults(fn=cmd_build)
+
+    f = sub.add_parser("frames", help="extract 8 frames per video")
+    f.add_argument("sets", nargs="+")
+    f.add_argument("--workers", type=int, default=12)
+    f.add_argument("--delete", action="store_true", help="remove each video after its frames are written")
+    f.set_defaults(fn=cmd_frames)
+
+    e = sub.add_parser("eval", help="score sets and write metrics")
+    e.add_argument("--model", required=True)
+    e.add_argument("--out", type=Path, required=True)
+    e.add_argument("sets", nargs="+")
+    e.add_argument("--max-pixels", type=int, default=None)
+    e.add_argument("--attn", default="sdpa")
+    e.add_argument("--batch-size", type=int, default=16)
+    e.add_argument("--full-logits", action="store_true", help="compute logits for every position (Q-ReAlign scorer)")
+    e.add_argument("--workers", type=int, default=8)
+    e.add_argument("--limit", type=int, default=0, help="evenly spaced subset per set; 0 = all")
+    e.add_argument("--boot", type=int, default=1000)
+    e.set_defaults(fn=cmd_eval)
+
+    t = sub.add_parser("train", help="supervised fine-tuning from a YAML config")
+    t.add_argument("config", type=Path)
+    t.set_defaults(fn=cmd_train)
+
+    i = sub.add_parser("info", help="environment and manifest counts")
+    i.add_argument("sets", nargs="*", default=["all"])
+    i.set_defaults(fn=cmd_info)
+
+    a = p.parse_args(argv)
+    a.fn(a)
+
+
+if __name__ == "__main__":
+    main()
