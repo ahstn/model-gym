@@ -104,6 +104,12 @@ def cmd_train(a: argparse.Namespace) -> None:
     run(a.config)
 
 
+def cmd_report(a: argparse.Namespace) -> None:
+    from vq.report import table
+
+    print(table(a.runs, _sets(a.sets), ref=a.ref, boot=a.boot))
+
+
 def cmd_info(a: argparse.Namespace) -> None:
     from vq.evaluate import environment
 
@@ -145,6 +151,13 @@ def main(argv: list[str] | None = None) -> None:
     t = sub.add_parser("train", help="supervised fine-tuning from a YAML config")
     t.add_argument("config", type=Path)
     t.set_defaults(fn=cmd_train)
+
+    rp = sub.add_parser("report", help="markdown table of eval runs; optional paired SRCC gaps to --ref")
+    rp.add_argument("runs", type=Path, nargs="+")
+    rp.add_argument("--sets", nargs="+", default=["t1", "t2"])
+    rp.add_argument("--ref", type=Path)
+    rp.add_argument("--boot", type=int, default=1000)
+    rp.set_defaults(fn=cmd_report)
 
     i = sub.add_parser("info", help="environment and manifest counts")
     i.add_argument("sets", nargs="*", default=["all"])

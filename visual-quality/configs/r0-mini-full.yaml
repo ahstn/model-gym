@@ -14,6 +14,8 @@ max_grad_norm: 1.0
 micro_batch: 8
 grad_accum: 2
 freeze_vision: false
-gradient_checkpointing: true
+# Q-ReAlign/ms-swift default is on. It does not change the maths, and on this model it cut step
+# throughput about 5x (6.6 vs 33.3 samples/s at micro 8, fp32 master, sdpa). Peak VRAM without it: ~37 GB.
+gradient_checkpointing: false
 workers: 10
 seed: 0

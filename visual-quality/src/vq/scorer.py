@@ -17,9 +17,12 @@ from typing import Any
 
 import numpy as np
 
-from PIL import Image
+from PIL import Image, ImageFile
 
 from vq.levels import LEVELS, STEMS, WEIGHTS
+
+# Some AVA JPEGs are truncated; Q-Align sets this in its AVA eval and training scripts.
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 # Qwen2-VL-style processors: pixels per merged visual token.
 QWEN_PATCH = 16

@@ -25,13 +25,15 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from PIL import Image
+from PIL import Image, ImageFile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from vq.bench import BATCH_SIZES, IMAGE_MIX, LATENCY_ITEMS, VIDEO_MIX, bench_rows
 from vq.data import read_manifest
 from vq.evaluate import subset
 from vq.metrics import bootstrap, correlations
+
+ImageFile.LOAD_TRUNCATED_IMAGES = True  # truncated AVA JPEGs, as in Q-Align's own eval
 
 TASK = {"iqa": ("quality", "image"), "iaa": ("aesthetics", "image"), "vqa": ("quality", "video")}
 VISUAL_TOKENS_PER_IMAGE = 64  # visual abstractor output

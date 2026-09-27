@@ -95,6 +95,10 @@ class _Rows:
         labels = ids.clone()
         labels[: len(ids) - len(ans)] = -100
         out = {k: v for k, v in enc.items() if k not in ("input_ids", "attention_mask")}
+        # Per-token outputs (such as mm_token_type_ids) are padded in the collate; drop their batch dim here.
+        for k, v in out.items():
+            if v.ndim == 2 and v.shape == enc["input_ids"].shape:
+                out[k] = v[0]
         out["input_ids"], out["labels"] = ids, labels
         return out
 
@@ -112,7 +116,14 @@ def _collate(pad_id: int):
             ids[i, :k], labels[i, :k], mask[i, :k] = x["input_ids"], x["labels"], 1
         batch = {"input_ids": ids, "labels": labels, "attention_mask": mask}
         for key in items[0]:
-            if key not in batch:
+            if key in batch:
+                continue
+            if items[0][key].ndim == 1 and len(items[0][key]) == len(items[0]["input_ids"]):  # per-token
+                t = torch.zeros((len(items), n), dtype=items[0][key].dtype)
+                for i, x in enumerate(items):
+                    t[i, : len(x[key])] = x[key]
+                batch[key] = t
+            else:
                 batch[key] = torch.cat([x[key] for x in items], dim=0)
         return batch
 
@@ -196,7 +207,7 @@ def run(config_path: Path) -> Path:
         for _ in range(steps_per_epoch):
             micro = [next(it) for _ in range(cfg.grad_accum)]
             n_label = sum(int((m["labels"][:, 1:] != -100).sum()) for m in micro)
-            loss_sum = 0.0
+            loss_sum = torch.zeros((), device="cuda")
             for m in micro:
                 m = {k: v.to("cuda", non_blocking=True) for k, v in m.items()}
                 labels = m.pop("labels")
@@ -209,7 +220,7 @@ def run(config_path: Path) -> Path:
                 # token-mean over the whole global batch (as HF Trainer with num_items_in_batch)
                 loss = torch.nn.functional.cross_entropy(logits.float(), target[sel], reduction="sum") / n_label
                 loss.backward()
-                loss_sum += float(loss)
+                loss_sum += loss.detach()
                 seen += labels.size(0)
                 tokens += int(m["attention_mask"].sum())
             gnorm = float(torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.max_grad_norm))
@@ -223,7 +234,7 @@ def run(config_path: Path) -> Path:
                 rec = {
                     "step": step,
                     "epoch": epoch,
-                    "loss": round(loss_sum, 5),
+                    "loss": round(float(loss_sum), 5),
                     "grad_norm": round(gnorm, 4),
                     "lr": opt.param_groups[0]["lr"],
                     "samples": seen,

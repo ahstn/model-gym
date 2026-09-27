@@ -41,6 +41,12 @@ def run(cfg: ScorerConfig, root: Path, sets: list[str], out: Path, *, limit: int
     (out / "preds").mkdir(exist_ok=True)
     scorer = Scorer(cfg)
     metrics: dict[str, Any] = {"config": cfg.asdict(), "limit": limit, "env": environment(), "sets": {}}
+    # Add sets to an earlier run of the same config (for example video sets after their frames exist).
+    prev = out / "metrics.json"
+    if prev.exists():
+        old = json.loads(prev.read_text())
+        if old["config"] == metrics["config"] and old["limit"] == limit:
+            metrics["sets"] = old["sets"]
     # Warm up kernels and allocator on a few items so the first set's timing is not penalised.
     first = subset(read_manifest(root / "manifests" / f"{sets[0]}.jsonl"), min(cfg.batch_size, 8) * 2)
     score_rows(scorer, root, first)
