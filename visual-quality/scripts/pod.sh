@@ -66,8 +66,8 @@ sync)
     rsync -az --delete --human-readable \
         -e "${rsync_ssh}" \
         --exclude '.venv/' \
-        --exclude 'data/' \
-        --exclude 'runs/' \
+        --exclude '/data' \
+        --exclude '/runs' \
         --exclude '__pycache__/' \
         --exclude '.ruff_cache/' \
         --exclude '.pytest_cache/' \

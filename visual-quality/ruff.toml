@@ -1,4 +1,7 @@
 extend = "../ruff.toml"
 
 [lint.isort]
-known-first-party = ["decision", "tests"]
+known-first-party = ["vq", "tests"]
+
+[lint.per-file-ignores]
+"scripts/*" = ["INP001"]

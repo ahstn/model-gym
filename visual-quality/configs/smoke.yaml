@@ -1,0 +1,10 @@
+# Pipeline smoke test: a few hundred rows per set, one epoch. Checks loss masking, video rows, saving.
+name: smoke
+model: Qwen/Qwen3.5-0.8B
+mix: [koniq, spaq, kadid, ava, lsvq]
+limit_per_set: {koniq: 64, spaq: 64, kadid: 64, ava: 128, lsvq: 64}
+epochs: 1
+micro_batch: 8
+grad_accum: 2
+workers: 6
+log_every: 2

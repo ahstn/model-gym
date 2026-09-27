@@ -171,9 +171,11 @@ def score_rows(scorer: Scorer, root: Path, rows: list[dict[str, Any]]) -> dict[s
     preds = np.zeros(len(rows), dtype=np.float64)
     probs = np.zeros((len(rows), len(LEVELS)), dtype=np.float32)
     torch.cuda.reset_peak_memory_stats()
-    torch.cuda.synchronize()
-    t0 = time.perf_counter()
+    t0 = None  # timing starts when the first batch arrives (excludes worker start-up)
     for idx, batch in loader:
+        if t0 is None:
+            torch.cuda.synchronize()
+            t0 = time.perf_counter()
         s, p = scorer.forward(batch)
         preds[idx] = s
         probs[idx] = p
