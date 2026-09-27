@@ -11,6 +11,7 @@ import logging
 import math
 import platform
 import random
+import re
 import shutil
 import time
 
@@ -71,6 +72,7 @@ class TrainConfig:
     grad_clip: float = 1.0
     lora: LoraSettings = field(default_factory=LoraSettings)
     shuffle_options: bool = True
+    consistency_weight: float = 0.0
     eval_every: int = 100
     save_every: int = 0
     seed: int = 0
@@ -88,7 +90,7 @@ class TrainConfig:
         for key in positive:
             if getattr(self, key) <= 0:
                 raise ValueError(f"{key} must be positive")
-        for key in ("dev_subset", "eval_every", "save_every", "weight_decay"):
+        for key in ("dev_subset", "eval_every", "save_every", "weight_decay", "consistency_weight"):
             if getattr(self, key) < 0:
                 raise ValueError(f"{key} must be >= 0")
         if self.batch_tokens < self.max_seq_tokens:
@@ -133,6 +135,22 @@ def soft_cross_entropy(logits: torch.Tensor, targets: torch.Tensor) -> torch.Ten
     return -terms.sum(dim=-1)
 
 
+def symmetric_kl(
+    logits_a: torch.Tensor, logits_b: torch.Tensor, inv_a: torch.Tensor, inv_b: torch.Tensor, num_options: torch.Tensor
+) -> torch.Tensor:
+    """Half of KL(p||q) + KL(q||p) between two option orders of the same rows, compared per original option.
+
+    ``inv_x[r, o]`` is the slot of original option ``o`` in view x (padded past ``num_options[r]``). Returns [B].
+    """
+    valid = torch.arange(logits_a.shape[1], device=logits_a.device).unsqueeze(0) < num_options.unsqueeze(1)
+    lp_a = torch.log_softmax(logits_a.float(), dim=-1).gather(1, inv_a)
+    lp_b = torch.log_softmax(logits_b.float(), dim=-1).gather(1, inv_b)
+    lp_a = torch.where(valid, lp_a, torch.zeros_like(lp_a))
+    lp_b = torch.where(valid, lp_b, torch.zeros_like(lp_b))
+    terms = (lp_a.exp() - lp_b.exp()) * (lp_a - lp_b)
+    return 0.5 * torch.where(valid, terms, torch.zeros_like(terms)).sum(dim=-1)
+
+
 def lr_factor(step: int, *, total: int, warmup: int, min_ratio: float) -> float:
     """Linear warmup then cosine decay from 1 to `min_ratio` at `total`."""
     if step < warmup:
@@ -157,19 +175,24 @@ def stratified_subset(rows: list[Decision], n: int, *, seed: int) -> list[Decisi
     return out
 
 
-def _encode(
-    tokenizer: Any, readout: Readout, rows: list[Decision], max_tokens: int
-) -> tuple[list[list[int]], list[Decision], int]:
-    """Batched equivalent of `Readout.encode(max_tokens=...)`; returns kept ids, kept rows, dropped count."""
+def _encode_all(tokenizer: Any, readout: Readout, rows: list[Decision], max_tokens: int) -> list[list[int] | None]:
+    """Batched `Readout.encode(max_tokens=...)`: ids per row, None where the prompt is longer than max_tokens."""
     texts = [readout.render(d) for d in rows]
     ids_all: list[list[int]] = []
     for start in range(0, len(texts), 1024):
         ids_all.extend(tokenizer(texts[start : start + 1024], add_special_tokens=False)["input_ids"])
+    return [ids if len(ids) <= max_tokens else None for ids in ids_all]
+
+
+def _encode(
+    tokenizer: Any, readout: Readout, rows: list[Decision], max_tokens: int
+) -> tuple[list[list[int]], list[Decision], int]:
+    """Kept ids, kept rows and the dropped count."""
     encoded: list[list[int]] = []
     kept: list[Decision] = []
     dropped = 0
-    for ids, d in zip(ids_all, rows, strict=True):
-        if len(ids) > max_tokens:
+    for ids, d in zip(_encode_all(tokenizer, readout, rows, max_tokens), rows, strict=True):
+        if ids is None:
             dropped += 1
             continue
         encoded.append(ids)
@@ -177,17 +200,33 @@ def _encode(
     return encoded, kept, dropped
 
 
-def _permute(rows: list[Decision], rng: random.Random) -> list[Decision]:
-    """Shuffle option order of choice rows only: score levels are ordered and noul is always ("No", "Yes")."""
-    out = []
+def _permute(rows: list[Decision], rng: random.Random) -> tuple[list[Decision], list[list[int] | None]]:
+    """Shuffle option order of choice rows only: score levels are ordered and noul is always ("No", "Yes").
+
+    Returns the rows and, per row, the order used (``new[p] = old[order[p]]``) or None when unchanged.
+    """
+    out: list[Decision] = []
+    orders: list[list[int] | None] = []
     for d in rows:
         if d.kind != "choice":
             out.append(d)
+            orders.append(None)
             continue
         order = list(range(len(d.options)))
         rng.shuffle(order)
         out.append(d.permuted(order))
-    return out
+        orders.append(order)
+    return out, orders
+
+
+def _inverse(order: list[int] | None, n: int) -> list[int]:
+    """Slot of each original option in a view built with ``order`` (identity when None)."""
+    if order is None:
+        return list(range(n))
+    inv = [0] * n
+    for pos, orig in enumerate(order):
+        inv[orig] = pos
+    return inv
 
 
 def _load_pool(cfg: TrainConfig) -> list[Decision]:
@@ -204,22 +243,85 @@ def _load_pool(cfg: TrainConfig) -> list[Decision]:
     return rows
 
 
+def lora_targets(model: Any, names: tuple[str, ...]) -> str:
+    """PEFT regex for the named projections inside the text decoder only (skips vision/audio towers)."""
+    decoder = model.get_decoder()
+    prefix = next(n for n, m in model.named_modules() if m is decoder)
+    alternatives = "|".join(re.escape(n) for n in names)
+    return rf"{re.escape(prefix)}\..*\.({alternatives})" if prefix else rf".*\.({alternatives})"
+
+
 @dataclass(slots=True)
 class _Epoch:
     encoded: list[list[int]]
     rows: list[Decision]
     steps: list[list[list[int]]]  # optimizer steps -> micro-batches -> row indices
+    # Consistency pairs: partner[i] is the second option order of row i (-1 if none); inv[i] maps original option
+    # -> slot in row i. Partners sit after the first views and never appear in `steps` themselves.
+    partner: list[int] = field(default_factory=list)
+    inv: list[list[int]] = field(default_factory=list)
+
+    def with_partners(self, idx: list[int]) -> list[int]:
+        return idx + [self.partner[i] for i in idx if self.partner and self.partner[i] >= 0]
+
+    @property
+    def first_rows(self) -> list[Decision]:
+        return self.rows[: len(self.partner)] if self.partner else self.rows
 
 
 def _plan_epoch(
     cfg: TrainConfig, tokenizer: Any, readout: Readout, base: list[Decision], epoch: int
 ) -> tuple[_Epoch, int]:
-    rows = _permute(base, random.Random(cfg.seed * 1000 + epoch)) if cfg.shuffle_options else base
-    encoded, kept, dropped = _encode(tokenizer, readout, rows, cfg.max_seq_tokens)
+    rng = random.Random(cfg.seed * 1000 + epoch)
+    rows, orders = _permute(base, rng) if cfg.shuffle_options else (base, [None] * len(base))
+    ids_all = _encode_all(tokenizer, readout, rows, cfg.max_seq_tokens)
+    keep = [i for i, ids in enumerate(ids_all) if ids is not None]
+    dropped = len(rows) - len(keep)
+    encoded = [ids_all[i] for i in keep]
+    kept = [rows[i] for i in keep]
+    partner: list[int] = []
+    inv: list[list[int]] = []
+    lengths = [len(x) for x in encoded]
+    max_tokens, max_rows = cfg.batch_tokens, cfg.max_rows_per_micro
+    if cfg.consistency_weight > 0:
+        inv = [_inverse(orders[i], len(rows[i].options)) for i in keep]
+        partner = [-1] * len(keep)
+        second_rows: list[Decision] = []
+        second_orders: list[list[int]] = []
+        firsts: list[int] = []
+        for j, i in enumerate(keep):
+            d = base[i]
+            if d.kind != "choice" or len(d.options) < 2:
+                continue
+            first = orders[i] or list(range(len(d.options)))
+            order = list(range(len(d.options)))
+            while True:
+                rng.shuffle(order)
+                if order != first:
+                    break
+            second_rows.append(d.permuted(order))
+            second_orders.append(list(order))
+            firsts.append(j)
+        for j, order, d, ids in zip(
+            firsts,
+            second_orders,
+            second_rows,
+            _encode_all(tokenizer, readout, second_rows, cfg.max_seq_tokens),
+            strict=True,
+        ):
+            if ids is None:
+                continue
+            partner[j] = len(encoded)
+            lengths[j] = max(lengths[j], len(ids))
+            encoded.append(ids)
+            kept.append(d)
+            inv.append(_inverse(order, len(d.options)))
+        # A micro-batch holds up to two views per row: halve the budgets so its padded size stays the same.
+        max_tokens, max_rows = max(cfg.max_seq_tokens, cfg.batch_tokens // 2), max(1, cfg.max_rows_per_micro // 2)
     micros = token_budget_batches(
-        [len(x) for x in encoded],
-        max_tokens=cfg.batch_tokens,
-        max_rows=cfg.max_rows_per_micro,
+        lengths,
+        max_tokens=max_tokens,
+        max_rows=max_rows,
         shuffle=True,
         seed=cfg.seed + epoch,
     )
@@ -234,7 +336,7 @@ def _plan_epoch(
             current, count = [], 0
     if current:
         steps.append(current)
-    return _Epoch(encoded, kept, steps), dropped
+    return _Epoch(encoded, kept, steps, partner, inv), dropped
 
 
 class _Trainer:
@@ -248,15 +350,41 @@ class _Trainer:
     def _batch(self, encoded: list[list[int]], rows: list[Decision], idx: list[int]) -> Batch:
         return collate([encoded[i] for i in idx], [rows[i] for i in idx], pad_id=self.pad_id).to("cuda")
 
-    def _backward(self, encoded: list[list[int]], rows: list[Decision], idx: list[int], denom: int) -> float:
-        batch = self._batch(encoded, rows, idx)
+    def _backward(self, ep: _Epoch, idx: list[int], denom: int) -> float:
+        """Loss per first-view row: soft CE, or with a partner view the mean CE of both views plus
+        ``consistency_weight`` * symmetric KL between them (compared per original option)."""
+        full = ep.with_partners(idx)
+        batch = self._batch(ep.encoded, ep.rows, full)
         with torch.autocast("cuda", dtype=torch.bfloat16):
             logits = code_logits(self.model, batch, self.code_ids)
-        loss = soft_cross_entropy(logits, batch.targets).sum()
+        ce = soft_cross_entropy(logits, batch.targets)
+        n_first = len(idx)
+        if len(full) == n_first:
+            loss = ce.sum()
+        else:
+            paired = [k for k, i in enumerate(idx) if ep.partner[i] >= 0]
+            pos_a = torch.tensor(paired, dtype=torch.long, device=logits.device)
+            pos_b = torch.arange(n_first, len(full), device=logits.device)
+
+            def inv(indices: list[int]) -> torch.Tensor:
+                out = torch.zeros((len(indices), logits.shape[1]), dtype=torch.long)
+                for r, i in enumerate(indices):
+                    out[r, : len(ep.inv[i])] = torch.tensor(ep.inv[i], dtype=torch.long)
+                return out.to(logits.device)
+
+            kl = symmetric_kl(
+                logits[pos_a],
+                logits[pos_b],
+                inv([idx[k] for k in paired]),
+                inv(full[n_first:]),
+                batch.num_options[pos_a],
+            )
+            single = ce[:n_first].sum() - ce[pos_a].sum()
+            loss = single + (0.5 * (ce[pos_a] + ce[pos_b]) + self.cfg.consistency_weight * kl).sum()
         (loss / denom).backward()
         return float(loss.detach())
 
-    def accumulate(self, encoded: list[list[int]], rows: list[Decision], micros: list[list[int]], denom: int) -> float:
+    def accumulate(self, ep: _Epoch, micros: list[list[int]], denom: int) -> float:
         """Accumulate grads for one optimizer step, loss scaled by 1/denom. Returns loss sum.
 
         On OOM, grads are cleared and the whole step is redone with every piece halved, so each row
@@ -265,7 +393,7 @@ class _Trainer:
         pieces = micros
         while True:
             try:
-                return sum(self._backward(encoded, rows, p, denom) for p in pieces)
+                return sum(self._backward(ep, p, denom) for p in pieces)
             except torch.cuda.OutOfMemoryError:
                 self.model.zero_grad(set_to_none=True)
                 torch.cuda.empty_cache()
@@ -351,7 +479,7 @@ def run(config_path: Path) -> Path:
     dev_rows = stratified_subset(list(read_jsonl(Path(cfg.dev_panel))), cfg.dev_subset, seed=cfg.seed)
     dev_encoded, dev_kept, dev_dropped = _encode(tokenizer, readout, dev_rows, cfg.max_seq_tokens)
     total_steps = sum(len(e.steps) for e in epochs)
-    logger.info("rows=%d dropped=%d steps=%d dev=%d", len(epochs[0].rows), dropped, total_steps, len(dev_kept))
+    logger.info("rows=%d dropped=%d steps=%d dev=%d", len(epochs[0].first_rows), dropped, total_steps, len(dev_kept))
 
     model = AutoModelForCausalLM.from_pretrained(cfg.model, dtype=torch.bfloat16, attn_implementation="sdpa")
     model.to("cuda")
@@ -364,7 +492,7 @@ def run(config_path: Path) -> Path:
         r=cfg.lora.r,
         lora_alpha=cfg.lora.alpha,
         lora_dropout=cfg.lora.dropout,
-        target_modules=list(cfg.lora.target_modules),
+        target_modules=lora_targets(model, cfg.lora.target_modules),
     )
     model = get_peft_model(model, lora)
     model.train()
@@ -397,8 +525,8 @@ def run(config_path: Path) -> Path:
     for ep in epochs:
         for micros in ep.steps:
             denom = sum(len(m) for m in micros)
-            loss_sum = trainer.accumulate(ep.encoded, ep.rows, micros, denom)
-            tokens_seen += sum(len(ep.encoded[i]) for micro in micros for i in micro)
+            loss_sum = trainer.accumulate(ep, micros, denom)
+            tokens_seen += sum(len(ep.encoded[i]) for micro in micros for i in ep.with_partners(micro))
             grad_norm = float(torch.nn.utils.clip_grad_norm_(trainable, cfg.grad_clip))
             lr = optimizer.param_groups[0]["lr"]
             optimizer.step()
@@ -437,12 +565,13 @@ def run(config_path: Path) -> Path:
     model.save_pretrained(run_dir / "adapter")
     wall = time.perf_counter() - start
 
-    counts = Counter(f"{d.dataset}/{d.kind}" for d in epochs[0].rows)
+    counts = Counter(f"{d.dataset}/{d.kind}" for d in epochs[0].first_rows)
     summary = {
         "config": dataclasses.asdict(cfg),
         "base_model": cfg.model,
         "counts": {
-            "rows_used": len(epochs[0].rows),
+            "rows_used": len(epochs[0].first_rows),
+            "consistency_pairs": sum(p >= 0 for p in epochs[0].partner),
             "by_dataset_kind": dict(sorted(counts.items())),
             "dropped_too_long": dropped,
             "dev_rows": len(dev_kept),

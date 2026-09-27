@@ -253,3 +253,5 @@ Compute time was 18:41 to 02:14 UTC plus 06:48 to 07:17 UTC. The pod also stayed
 3. Scale: all 200k rows, r64, and a larger `batch_tokens` (only 29 of 96 GB is in use).
 4. Look at the PhishNChips and GSM8K losses. Check the base rate and answer distribution per option before changing the data.
 5. Run the same recipe on a 4B or 12B base (strategy trial 5) to measure the size frontier. See [base candidates and 12B fit](base-candidates-2026-09-27.md).
+
+Follow-up (done): [stock frontier, clean recipe and gemma-4-12B-it LoRA](results-gemma-4-12b.md).

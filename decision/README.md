@@ -30,6 +30,21 @@ This is a separate uv project, because MiniCPM5 needs `transformers>=5.6.2` and 
 
 Other commands: `uv run decision train --config configs/X.yaml` and
 `uv run decision eval --adapter runs/X/best --panel data/panels/dev.jsonl --calib data/panels/calib.jsonl --out runs/X/eval`.
+Add `--model <id>` for another base, and `--trust-remote-code` for models with custom code (for example
+`IFM/K2-Horizon-7B`). `scripts/stock-frontier.sh` runs the stock (no adapter) dev evals of the candidate bases.
+
+`uv run decision filter-pool --out data/pool-clean.jsonl --suite-rows data/suite-0.2/selected-rows.jsonl.gz
+data/suite-0.2/added-rows.jsonl.gz --exclude sargedev` copies `data/pool.jsonl` without the rows that share a
+13-gram with a suite row and without the excluded datasets. It keeps the row order and writes
+`<out>.manifest.json`.
+
+Training options to note (`configs/*.yaml`):
+
+- `consistency_weight`: when > 0, every choice row gets a second option order in the same micro-batch. The loss is
+  the mean soft cross-entropy of both views plus this weight times the symmetric KL between the two distributions,
+  compared per original option.
+- LoRA targets only the projections inside the text decoder (`model.get_decoder()`), so the vision tower of
+  multimodal bases such as gemma-4-12B-it is not adapted.
 
 ## Readout design
 
@@ -40,7 +55,8 @@ Other commands: `uv run decision train --config configs/X.yaml` and
 4. `Readout` accepts a code only when it is exactly one new, unique token after `Answer:`. It keeps 255 codes:
    `A`..`Z`, then two-letter codes.
 5. `code_logits` runs the backbone only and multiplies the last hidden state by the code rows of `lm_head`.
-   It does not compute the full-vocabulary logits. Codes past the number of options get `-inf`.
+   It does not compute the full-vocabulary logits. Codes past the number of options get `-inf`. If the model config
+   has `final_logit_softcapping` (Gemma), the code logits get the same `tanh` soft-cap.
 6. A softmax over the valid codes gives the distribution. A temperature for each kind calibrates it.
 
 ## Run on the pod
@@ -78,11 +94,16 @@ uv run decision suite score --run runs/X/suite-noHLE
 - `--shards N` runs N engine processes on one GPU and then merges and scores their results. Each shard can resume.
   Six shards of the 2B model use about 76 GB on a 96 GB card. Do not start other GPU jobs at the same time: an
   out-of-memory error stops the shard, and you must re-run to resume.
-- The LoRA is not merged into the base weights. We tried a bf16 merge on a 500-request sample: it was about 22%
-  faster, but it changed 1.5% of the argmax answers (mean TV 0.0098), and the temperatures were fit unmerged.
+- By default the LoRA is not merged into the base weights. On a 500-request sample a bf16 merge was about 22%
+  faster, but it changed 1.5% of the argmax answers (mean TV 0.0098). `--merge` (on `suite run` and on `eval`)
+  merges it; then fit the temperatures with `eval --merge` too, so that they match the merged weights.
 - The engine encodes the shared prompt prefix once for each request and then runs one short pass for each
   question. Each question sees only the prefix and its own suffix.
 
 See [results](../docs/jev-decision-model-2026-09-26/results-minicpm5-2b-lora.md) for the first trained runs.
+See [12B results](../docs/jev-decision-model-2026-09-26/results-gemma-4-12b.md) for the stock frontier, the clean
+recipe and the gemma-4-12B-it LoRA.
 `results/<run>/` keeps the small score files of each run: config, train summary, dev metrics, temperatures and suite scores.
+The 12B runs also keep their training log (`metrics.jsonl`), and `results/pool-clean.manifest.json` describes the
+decontaminated pool.
 The weights, predictions and suite rows stay in `runs/` (git-ignored) and on the pod.

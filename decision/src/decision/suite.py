@@ -146,7 +146,7 @@ def load_temperatures(path: str | Path | None) -> dict[str, float]:
 class DecisionEngine(Engine):
     """Kit engine over our LoRA decision model.
 
-    Options: model, adapter, temperatures, max_tokens, batch_tokens, device.
+    Options: model, adapter, merge, temperatures, max_tokens, batch_tokens, device.
     """
 
     name = "decision"
@@ -157,6 +157,7 @@ class DecisionEngine(Engine):
         *,
         model: str | None = None,
         adapter: str | None = None,
+        merge: bool = False,
         temperatures: str | None = None,
         max_tokens: int = DEFAULT_MAX_TOKENS,
         batch_tokens: int = DEFAULT_BATCH_TOKENS,
@@ -167,20 +168,21 @@ class DecisionEngine(Engine):
         from decision.prompt import Readout
 
         super().__init__(
-            model=model, adapter=adapter, temperatures=temperatures, max_tokens=max_tokens, batch_tokens=batch_tokens,
-            device=device, **options,
+            model=model, adapter=adapter, merge=merge, temperatures=temperatures, max_tokens=max_tokens,
+            batch_tokens=batch_tokens, device=device, **options,
         )  # fmt: skip
         self.model_id = model or DEFAULT_MODEL
         self.max_tokens = int(max_tokens)
         self.batch_tokens = int(batch_tokens)
         self.device = device
         self.temperatures = load_temperatures(temperatures)
-        self.model, self.tokenizer = load_model(self.model_id, adapter=adapter, device=device)
+        self.model, self.tokenizer = load_model(self.model_id, adapter=adapter, device=device, merge=merge)
         self.readout = Readout(self.tokenizer)
         self.code_ids = torch.tensor(self.readout.code_token_ids, dtype=torch.long, device=device)
         self.provenance = {
             "model": self.model_id,
             "adapter": str(adapter) if adapter else None,
+            "adapter_merged": bool(adapter) and merge,
             "temperatures": self.temperatures,
             "max_tokens": self.max_tokens,
             "readout": (
@@ -369,6 +371,8 @@ def _cmd_run(args: argparse.Namespace) -> dict[str, Any]:
     }
     if args.adapter:
         options["adapter"] = str(args.adapter)
+        if args.merge:
+            options["merge"] = True
     if args.temperatures:
         options["temperatures"] = str(args.temperatures)
     if args.sample:
@@ -428,6 +432,8 @@ def _run_sharded(args: argparse.Namespace, rows: Any, keep: Any, corpus: Any) ->
                "--suite-dir", str(args.suite_dir)]  # fmt: skip
         if args.adapter:
             cmd += ["--adapter", str(args.adapter)]
+        if args.merge:
+            cmd.append("--merge")
         if args.temperatures:
             cmd += ["--temperatures", str(args.temperatures)]
         if args.fresh:
@@ -484,6 +490,9 @@ def main(argv: list[str]) -> int:
     p = sub.add_parser("run", help="run our engine over the suite (or a sample) and score it")
     p.add_argument("--model", required=True)
     p.add_argument("--adapter", type=Path)
+    p.add_argument(
+        "--merge", action="store_true", help="merge the adapter into the bf16 weights (fit temperatures merged too)"
+    )
     p.add_argument("--temperatures", type=Path)
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--sample", type=Path)

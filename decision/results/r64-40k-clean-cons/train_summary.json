@@ -1,0 +1,129 @@
+{
+  "config": {
+    "name": "r64-40k-clean-cons",
+    "lr": 0.0001,
+    "model": "openbmb/MiniCPM5-2B",
+    "pool": "data/pool-clean.jsonl",
+    "n_rows": 40000,
+    "exclude_datasets": [
+      "sargedev"
+    ],
+    "dev_panel": "data/panels/dev.jsonl",
+    "dev_subset": 3000,
+    "max_seq_tokens": 2048,
+    "batch_tokens": 65536,
+    "max_rows_per_micro": 64,
+    "rows_per_step": 64,
+    "epochs": 1,
+    "weight_decay": 0.0,
+    "warmup_ratio": 0.03,
+    "min_lr_ratio": 0.1,
+    "grad_clip": 1.0,
+    "lora": {
+      "r": 64,
+      "alpha": 128,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "shuffle_options": true,
+    "consistency_weight": 1.0,
+    "eval_every": 100,
+    "save_every": 0,
+    "seed": 0,
+    "gradient_checkpointing": true,
+    "out_root": "runs"
+  },
+  "base_model": "openbmb/MiniCPM5-2B",
+  "counts": {
+    "rows_used": 39781,
+    "consistency_pairs": 28938,
+    "by_dataset_kind": {
+      "openjev/choice": 7967,
+      "openjev/noul": 4350,
+      "openjev/score": 1995,
+      "tasksource/choice": 20971,
+      "tasksource/noul": 2433,
+      "tasksource/score": 2065
+    },
+    "dropped_too_long": 219,
+    "dev_rows": 2996,
+    "dev_dropped_too_long": 4
+  },
+  "trainable_params": 100466688,
+  "steps": 601,
+  "rows_seen": 39781,
+  "total_tokens": 22082273,
+  "wall_time_s": 3584.7953046680195,
+  "tokens_per_s": 6159.9815674956635,
+  "rows_per_s": 11.097146871454083,
+  "peak_mem_gib": 28.97591781616211,
+  "oom_retries": 0,
+  "best": {
+    "step": 601,
+    "n": 2996,
+    "nll": 0.6624081404767473,
+    "top1": 0.7239652870493992,
+    "groups": {
+      "openjev/choice": {
+        "n": 547,
+        "nll": 0.5062741089586813,
+        "top1": 0.7915904936014625
+      },
+      "openjev/noul": {
+        "n": 686,
+        "nll": 0.13020908576019843,
+        "top1": 0.9489795918367347
+      },
+      "openjev/score": {
+        "n": 131,
+        "nll": 0.4610919371302389,
+        "top1": 0.8320610687022901
+      },
+      "sargedev/choice": {
+        "n": 268,
+        "nll": 1.1223157029320945,
+        "top1": 0.5783582089552238
+      },
+      "sargedev/noul": {
+        "n": 275,
+        "nll": 0.6336851442943919,
+        "top1": 0.7345454545454545
+      },
+      "sargedev/score": {
+        "n": 275,
+        "nll": 1.7774345296079461,
+        "top1": 0.24363636363636362
+      },
+      "tasksource/choice": {
+        "n": 630,
+        "nll": 0.7566517814139222,
+        "top1": 0.6746031746031746
+      },
+      "tasksource/noul": {
+        "n": 131,
+        "nll": 0.4658800622746917,
+        "top1": 0.7480916030534351
+      },
+      "tasksource/score": {
+        "n": 53,
+        "nll": 1.063338594616584,
+        "top1": 0.5471698113207547
+      }
+    }
+  },
+  "versions": {
+    "python": "3.13.8",
+    "torch": "2.14.0+cu130",
+    "transformers": "5.17.0",
+    "peft": "0.21.0"
+  },
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+}
