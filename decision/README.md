@@ -76,10 +76,14 @@ mise run pod-backup NAME               # copy runs/NAME to /workspace/backup on 
 `pod-sync` deletes files on the pod that are not in the local copy. It keeps only `.venv/`, `data/` and `runs/`.
 Put generated files (suite folders, samples) under `data/`.
 
-## Decision Index 0.2 suite
+## Decision Index 0.2.1 suite
 
 You need the `suite` extra (`uv sync --extra suite`). HLE (catalog 45) is gated on Hugging Face. Accept its terms at
 <https://huggingface.co/datasets/cais/hle> before you do a full rebuild.
+
+The kit is pinned to 0.2.1 (`87d4650`). 0.2.1 uses the same suite files as 0.2 in `data/suite-0.2`. It only drops
+rows at read time (unanswerable ToolRet/BRIGHT queries, duplicate Home appliances rows) and changes the weights. So a
+complete 0.2 run is also a complete 0.2.1 run. `suite score --edition 0.2 --out DIR` gives the old 0.2 index.
 
 ```sh
 uv run decision suite rebuild --suite-dir data/suite-0.2                 # full suite; needs HLE access
@@ -88,9 +92,10 @@ uv run decision suite sample --n 500 --out data/sample-500.jsonl.gz --suite-dir 
 uv run decision suite run --model openbmb/MiniCPM5-2B --adapter runs/X/best \
     --temperatures runs/X/eval/temperatures.json --suite-dir data/suite-0.2-noHLE --out runs/X/suite-noHLE --shards 6
 uv run decision suite score --run runs/X/suite-noHLE
+uv run decision suite score --run runs/X/suite-0.2 --out runs/X/suite-0.2/score-0.2.1   # rescore an old run
 ```
 
-- A suite with `PARTIAL.json` is not an official 0.2 suite. Its index is not comparable to the public board.
+- A suite with `PARTIAL.json` is not an official suite. Its index is not comparable to the public board.
 - `--shards N` runs N engine processes on one GPU and then merges and scores their results. Each shard can resume.
   Six shards of the 2B model use about 76 GB on a 96 GB card. Do not start other GPU jobs at the same time: an
   out-of-memory error stops the shard, and you must re-run to resume.

@@ -9,6 +9,7 @@ Date: 2026-09-26/27. Code: [`decision/`](../../decision/README.md). Strategy: [s
 - Without SargeDev rows (R4), the model is as good as R3 on the other two datasets, but it loses a lot on SargeDev (NLL +0.27). SargeDev-style data does not help the other datasets.
 - Decision Index 0.2 on the full, hash-verified suite with HLE: stock 18.91, R3 LoRA **29.38**. The LoRA gains on 33 of the 40 index benchmarks and loses on 6. If the benchmarks with text overlap get no credit for their gain, R3 is at 27.41. This is our own run of the public kit, not a board submission.
 - Estimated on the live 0.2.1 board: R3 ≈29.6, about rank 33 of 68. That is level with Decider 2B (28.97), the best entry of 2.5B or less. The 4–12B entries score 40–50 (see [board comparison](#comparison-with-the-live-board-021)).
+- Update 2026-09-28: with the kit pinned to 0.2.1 (`87d4650`), the exact rescore of the same runs is R3 **31.49** and stock 19.32 (rank 34 and 45 of 70); see [results-gemma-4-12b.md §5.1](results-gemma-4-12b.md#51-decision-index-021-current-board-edition).
 - Permutation robustness is far from the strategy target. Agreement is 0.894 (target ≥0.99), and TV is 0.082 (target ≤0.01).
 
 ## Setup
@@ -184,7 +185,7 @@ Not in the index (shown only): MMLU .460 → .485, ARC-Easy .859 → .879, ARC-C
 
 ### Comparison with the live board (0.2.1)
 
-Source: board data `multimodalart-jev-decision-index.static.hf.space/data/index.json`, generated 2026-09-27 03:42 UTC, edition release-v2.1, 67 entries. The 0.2.1 scorer is not public, so we estimate our 0.2.1 index:
+Source: board data `multimodalart-jev-decision-index.static.hf.space/data/index.json`, generated 2026-09-27 03:42 UTC, edition release-v2.1, 67 entries. Our kit was still pinned to 0.2 at the time, so we estimated our 0.2.1 index (the exact rescore is 31.49, see the update in the summary):
 
 - Take our per-benchmark 0.2 skill, average it over the board's 0.2.1 panel for each area (knowledge 10, language 10, retrieval 6, tools 5, arts 7 benchmarks), then weight the areas with weights fitted on all 67 board rows (least squares: .259 / .259 / .200 / .183 / .100).
 - Check: the same method on the board's own per-benchmark numbers gives the board index with a mean error of −0.41 points (sd 0.33, max 1.10).

@@ -443,7 +443,7 @@ dev = [
 requires-dist = [
     { name = "accelerate", specifier = ">=1.10" },
     { name = "datasets", specifier = ">=4.0" },
-    { name = "decision-index", extras = ["rebuild"], marker = "extra == 'suite'", git = "https://github.com/apolinario/decision-index?rev=19ad28ec9485493cc4f7fc07d91c178f948e6434" },
+    { name = "decision-index", extras = ["rebuild"], marker = "extra == 'suite'", git = "https://github.com/apolinario/decision-index?rev=87d4650b42b377c0291a89c1f1a879f9b31082bf" },
     { name = "huggingface-hub", specifier = ">=0.34" },
     { name = "numpy", specifier = ">=2.1" },
     { name = "peft", specifier = ">=0.17" },
@@ -464,8 +464,8 @@ dev = [
 
 [[package]]
 name = "decision-index"
-version = "0.2.0"
-source = { git = "https://github.com/apolinario/decision-index?rev=19ad28ec9485493cc4f7fc07d91c178f948e6434#19ad28ec9485493cc4f7fc07d91c178f948e6434" }
+version = "0.2.1"
+source = { git = "https://github.com/apolinario/decision-index?rev=87d4650b42b377c0291a89c1f1a879f9b31082bf#87d4650b42b377c0291a89c1f1a879f9b31082bf" }
 dependencies = [
     { name = "httpx" },
     { name = "huggingface-hub" },

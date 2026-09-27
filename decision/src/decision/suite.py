@@ -1,4 +1,8 @@
-"""Decision Index 0.2 adapter: score our model with the public kit (apolinario/decision-index @19ad28e).
+"""Decision Index 0.2.1 adapter: score our model with the public kit (apolinario/decision-index @87d4650).
+
+0.2.1 rescores the 0.2 suite files (same hashes, same ``data/suite-0.2/``) with three more read-time subsets
+(ToolRet/BRIGHT answerable queries, deduplicated Home appliances), so a complete 0.2 run is a complete 0.2.1 run.
+``suite score --edition 0.2`` still reproduces the 0.2 index.
 
 The kit calls an engine once per suite request with ``(state, questions)``. Questions are ``choice`` (``criteria`` maps
 option key -> description, 2..255 options) or ``noul`` (yes/no, answered with ``p_yes``); the kit has no ordered-level
@@ -30,7 +34,7 @@ into ``<work>/hub/`` and passes them explicitly.
 
 Without HLE access, ``rebuild --skip-hle`` builds every other catalog id, cuts v2 by hand and imports it unverified
 with a ``PARTIAL.json`` marker; ``run`` then skips strict verification and every score carries ``"partial"``. This is
-NOT an official 0.2 suite (the index excludes HLE):
+NOT an official 0.2.1 suite (the index excludes HLE):
 
     uv run decision suite rebuild --skip-hle --suite-dir data/suite-0.2-noHLE
     uv run decision suite run --model ... --suite-dir data/suite-0.2-noHLE --out runs/X/suite
@@ -73,15 +77,16 @@ from decision.schema import NOUL_OPTIONS, Decision, Kind
 logger = logging.getLogger(__name__)
 
 ENGINE = "decision.suite:DecisionEngine"
-EDITION = "0.2"
+EDITION = "0.2.1"
+EDITIONS = ("0.2.1", "0.2")
 DEFAULT_SUITE_DIR = "data/suite-0.2"  # under data/: gitignored and never touched by pod.sh sync
 DEFAULT_MAX_TOKENS = 8192
 DEFAULT_BATCH_TOKENS = 65536
 HLE_REPO = "cais/hle"
 HLE_CATALOG_ID = 45
-KIT_COMMIT = "19ad28ec9485493cc4f7fc07d91c178f948e6434"
+KIT_COMMIT = "87d4650b42b377c0291a89c1f1a879f9b31082bf"
 HUB_URL = f"https://raw.githubusercontent.com/apolinario/decision-index/{KIT_COMMIT}/hub/"
-HUB_FILES = {"exclusions": "excluded-questions.json", "manifest": "0.2/manifest.json", "manifest_v1": "manifest.json"}
+HUB_FILES = {"exclusions": "excluded-questions.json", "manifest": "0.2.1/manifest.json", "manifest_v1": "manifest.json"}
 PARTIAL_FILE = "PARTIAL.json"
 
 
@@ -273,11 +278,11 @@ def _brief(scores: Mapping[str, Any], partial: Any = None) -> dict[str, Any]:
     }
 
 
-def _score(suite_dir: Path, run_dir: Path) -> dict[str, Any]:
+def _score(suite_dir: Path, run_dir: Path, edition: str = EDITION, out: Path | None = None) -> dict[str, Any]:
     from decision_index.pipeline import score_run
     from decision_index.suite.io import Suite
 
-    scores = score_run(Suite(suite_dir, EDITION), run_dir / "results.jsonl", "decision", run_dir)
+    scores = score_run(Suite(suite_dir, edition), run_dir / "results.jsonl", "decision", out or run_dir)
     return _brief(scores, _partial(suite_dir))
 
 
@@ -346,7 +351,7 @@ def _rebuild_without_hle(args: argparse.Namespace) -> dict[str, Any]:
     partial = {
         "missing": [f"HLE (catalog {HLE_CATALOG_ID})"],
         "kit_commit": KIT_COMMIT,
-        "note": "not an official Decision Index 0.2 suite; index excludes HLE",
+        "note": "not an official Decision Index 0.2.1 suite; index excludes HLE",
     }
     (Path(args.suite_dir) / PARTIAL_FILE).write_text(json.dumps(partial, indent=2) + "\n")
     return {"rebuild": result, "import": imported, "partial": partial}
@@ -471,10 +476,10 @@ def _run_sharded(args: argparse.Namespace, rows: Any, keep: Any, corpus: Any) ->
 
 def main(argv: list[str]) -> int:
     os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
-    ap = argparse.ArgumentParser(prog="decision suite", description="Decision Index 0.2 with our model")
+    ap = argparse.ArgumentParser(prog="decision suite", description="Decision Index 0.2.1 with our model")
     sub = ap.add_subparsers(dest="command", required=True)
 
-    p = sub.add_parser("rebuild", help="rebuild the 0.2 suite from pinned sources and import it")
+    p = sub.add_parser("rebuild", help="rebuild the 0.2 suite files (also 0.2.1) from pinned sources and import them")
     p.add_argument("--work", type=Path, default=Path("data/suite-work"))
     p.add_argument("--suite-dir", type=Path, default=Path(DEFAULT_SUITE_DIR))
     p.add_argument("--skip-hle", action="store_true", help="rebuild without HLE (catalog 45); marks the suite PARTIAL")
@@ -504,10 +509,14 @@ def main(argv: list[str]) -> int:
     p.add_argument("--no-score", action="store_true", help=argparse.SUPPRESS)
     p.set_defaults(func=_cmd_run)
 
-    p = sub.add_parser("score", help="print the 0.2 index, areas and per-benchmark skills of a run")
+    p = sub.add_parser("score", help="print the index, areas and per-benchmark skills of a run")
     p.add_argument("--run", type=Path, required=True)
     p.add_argument("--suite-dir", type=Path, default=Path(DEFAULT_SUITE_DIR))
-    p.set_defaults(func=lambda a: _score(a.suite_dir, a.run))
+    p.add_argument(
+        "--edition", choices=EDITIONS, default=EDITION, help="scoring edition (0.2 and 0.2.1 share the files)"
+    )
+    p.add_argument("--out", type=Path, help="write the score files here instead of into --run")
+    p.set_defaults(func=lambda a: _score(a.suite_dir, a.run, a.edition, a.out))
 
     args = ap.parse_args(argv)
     print(json.dumps(args.func(args), indent=2, default=str))
