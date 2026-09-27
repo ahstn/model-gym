@@ -197,6 +197,14 @@ The [teacher benchmark and cost study](synthetic-label-teachers.md) compares the
 
 Proposed first test: Gemini 3.8 Flash for bulk labels, Claude Opus 5.5 for a second opinion, and Astra plus Luna as accuracy and cost controls. Select on a human-rated development set before generating the full dataset. Under the study's central token assumptions, 250K Gemini labels plus a 10% Opus audit cost about $1,007 batch before retries. Keep aesthetics separate, and do not equate a generated JSON distribution with Q-Align label-token probabilities.
 
+### 7.3 Filling the low-quality range and adding domain controls
+
+The [low-quality and control dataset study](../datasets/low-quality-and-controls.md) checks real capture faults, distortion sources, and diagram/CG controls through multiple Exa and Hugging Face research rounds. The strongest new sources are LIVE-Meta VI-UGC/VizWiz, RealBlur, and SIDD. PlotQA train, CLEVR train, and owned diagrams/renders supply non-photo controls.
+
+The proposed 10K pilot uses 50% diverse photos, 30% controlled variants, 10% authentic faults, and 10% domain controls. These proportions are an experiment, not established evidence of better IQA. The 250K plan preserves those shares, but the 25K authentic-fault target requires extra mined photos beyond the eligible VI-UGC training pool. Keep originals and derivatives in one split, and reserve current IQA tests.
+
+Two corrections matter for the labels. Distortion severity is not an exact perceived-quality rank; mild edits can improve an image. A clean diagram or render can also have high quality and aesthetics. Assign zero to its photo-selection target when the product excludes that domain, while keeping quality ratings separate. MSC helps test low aesthetics, not technical IQA, and its source images include CC BY/CC BY-SA despite the CC0 release label.
+
 ## 8. What this means for a Q-ReAlign re-train
 
 1. Every addition in this file helped its own domain and hurt at least one other set in some study. Plan for regressions and report them.

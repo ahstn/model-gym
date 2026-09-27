@@ -13,6 +13,7 @@ Last verified: 2026-09-27
 | Models | [models/vqa.md](models/vqa.md) | Video quality models: natural UGC, AI-generated video, HDR. |
 | Models | [models/unified-and-backbones.md](models/unified-and-backbones.md) | Unified LMM assessors (Q-Align, Q-ReAlign, UniPercept) and VLM backbones to fine-tune. |
 | Datasets | [datasets/iqa.md](datasets/iqa.md) | IQA datasets: synthetic, authentic, AIGC, instruction data. |
+| Datasets | [datasets/low-quality-and-controls.md](datasets/low-quality-and-controls.md) | Authentic faults, controlled damage, diagram/CG controls, and proposed 10K/250K sampling plans. |
 | Datasets | [datasets/iaa.md](datasets/iaa.md) | Aesthetics and preference datasets. |
 | Datasets | [datasets/vqa.md](datasets/vqa.md) | Video quality datasets: UGC, streaming, HDR, AIGC video. |
 | Training | [training/methods.md](training/methods.md) | Training-method papers and what to borrow. |
@@ -43,7 +44,7 @@ Found during the 2026-09-27 checks. Details and links are in each file.
 | Q-Align, DOVER, Q-Instruct, Co-Instruct, DIVIDE-MaxWell | Repos use S-Lab License 1.0 (non-commercial). HF cards say MIT or Apache-2.0. | The licenses conflict. Treat as non-commercial until the authors clarify. |
 | Datasets | Many are research-only or by request: SPAQ, PARA, PIQ23, DiffIQA, ArtiMuse-10K (full), FineVD, VGA-Bench data (CC BY-NC 4.0), BrightVQ (CC BY-NC-SA 4.0), LongVQUBench (CC BY-NC-SA 4.0). | A model trained on them may inherit use limits. Check before any commercial release. |
 | Q-ReAlign training mix | Only AGIQA-20K is clearly permissive. SPAQ is research-only. The Q-Align label JSONs are S-Lab (non-commercial). KonIQ, KADID, AVA, LSVQ have no formal license. MIT tags on HF mirrors do not relicense the source data. | Fine for research and evaluation. A shipped model needs permission or a clean-data mix. See [datasets/iqa.md section 6.1](datasets/iqa.md#61-license-verdict-for-the-whole-q-realign-training-mix). |
-| Open exceptions | AIGIQA-20K (Apache-2.0 on ModelScope), UHD-IQA images (CC0), MSC (CC0), Waterloo SQoE-III/IV (CC BY 4.0), JPEG AIC2026 (CC BY-SA 4.0). | Still check media rights for each source. |
+| Open exceptions | AIGIQA-20K (Apache-2.0 on ModelScope), UHD-IQA images (CC0), MSC release (CC0, but images include CC BY/CC BY-SA), Waterloo SQoE-III/IV (CC BY 4.0), JPEG AIC2026 (CC BY-SA 4.0). | Keep source-image terms. The [low-quality and control study](datasets/low-quality-and-controls.md) adds SIDD, RealBlur, PlotQA, and CLEVR with explicit dataset terms. |
 
 ## Corrections to the earlier dossiers
 
