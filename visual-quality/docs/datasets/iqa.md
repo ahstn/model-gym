@@ -101,6 +101,29 @@ The MOSAIQ result is in [../training/data-mixture-evidence.md](../training/data-
 
 LSVQ, the video part, is in [vqa.md](vqa.md). How the recipe mixes these sets is in [../training/methods.md](../training/methods.md) and [../training/experiment-plan.md](../training/experiment-plan.md).
 
+### 6.1 License verdict for the whole Q-ReAlign training mix
+
+Checked 2026-09-27. This is not legal advice. Each row links to the dataset row with the full terms.
+
+| Part | Terms found | Research use | Commercial model |
+|---|---|---|---|
+| KonIQ-10k | "Freely available to the research community." No formal data license. YFCC100M photos with mixed CC licenses. | Yes | Unclear: needs permission |
+| SPAQ | Release readme: education and research only; no commercial product without permission | Yes | No, without permission |
+| KADID-10k | "Freely available to the research community." No formal license. | Yes | Unclear: needs permission |
+| AGIQA-20K | ModelScope record: Apache-2.0 | Yes | Yes per record; generator terms not checked |
+| AVA ([iaa.md](iaa.md)) | No official terms. Photos belong to DPChallenge users. | Yes (common practice) | Unclear: treat as No |
+| LSVQ ([vqa.md](vqa.md)) | LIVE notice (UT Austin 2020); request form | Yes | Unclear: needs permission |
+| Q-Align label JSONs (`training_sft/train_*.json`, `test_jsons/*.json`), used by `onealign.yaml` | Hosted in the [Q-Align repo](https://github.com/Q-Future/Q-Align), which uses S-Lab License 1.0 (non-commercial) | Yes | No. Rebuild labels from the original MOS files instead. |
+| HF mirrors `q-future/q-align-datasets` and `teowu/LSVQ-videos` | Both tagged MIT. They repackage third-party images and videos, including SPAQ and PIQ23 (both NC). | Download convenience only | No. A mirror tag cannot relicense the source data. |
+
+Verdict:
+
+- **Research and evaluation: keep the full mix.** Every part allows research use. We need it to compare with Q-Align and Q-ReAlign on the same data.
+- **A model we ship commercially: only AGIQA-20K is clear.** SPAQ and the Q-Align label JSONs are explicit no's. KonIQ, KADID, AVA, and LSVQ need written permission from the owners or legal review.
+- **Rebuild labels ourselves.** Map the original MOS files to the 5 levels with our own code (we plan soft labels anyway). This removes the S-Lab dependency. It does not fix the image terms.
+- **Distillation does not clean data.** [INFERENCE] A student trained on a research model's outputs likely carries the same question as the research model. Get advice before relying on it.
+- **A clean-data track is possible but weaker.** Candidates: AGIQA-20K, TAD66K (Apache-2.0 release), MSC (CC0), UHD-IQA (CC0 images), AU-IQA (MIT), and synthetic distortions we generate ourselves on CC0 images for ranking-only training. [INFERENCE] It will likely score lower than the full mix on the standard tests. Measure the gap before deciding.
+
 ## 7. Label files and scales
 
 Check these before you write a loader. A wrong score direction silently flips the correlation sign.
