@@ -105,6 +105,23 @@ uv run decision suite score --run runs/X/suite-0.2 --out runs/X/suite-0.2/score-
 - The engine encodes the shared prompt prefix once for each request and then runs one short pass for each
   question. Each question sees only the prefix and its own suffix.
 
+## Results (Decision Index 0.2.1)
+
+Our own runs of the public kit on the full suite, not board submissions. The rank is against the live board
+(2026-09-27 16:59 UTC, 68 entries plus Jev, 70 with ours). The stock gemma row is an estimate from a paired
+15,000-request sample (about ±1 point); the other rows are exact 0.2.1 scores.
+
+| Run | Index 0.2.1 | Knowl. | Lang. | Retr. | Tools | Arts | Rank /70 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Stock MiniCPM5-2B (R0) | 19.32 | 12.3 | 12.7 | 28.0 | 32.6 | 12.8 | 45 |
+| R3 MiniCPM5-2B LoRA | 31.49 | 17.6 | 30.0 | 36.7 | 55.6 | 16.8 | 34 |
+| Stock gemma-4-12B-it (estimate) | ≈49.2 | 32.0 | 51.5 | 58.8 | 68.3 | 33.2 | 13 |
+| **gemma-4-12B-it LoRA** (`g12-r32-40k-clean-lr5e5`) | **50.44** | 33.4 | 56.2 | 55.8 | 69.3 | 34.4 | **10** |
+| Winnow-12B (board, same base) | 50.02 | 33.8 | 56.0 | 54.0 | 71.0 | 30.0 | 11 |
+
+Details, the sample method and the per-benchmark comparison are in
+[12B results §5.1](../docs/jev-decision-model-2026-09-26/results-gemma-4-12b.md#51-decision-index-021-current-board-edition).
+
 See [results](../docs/jev-decision-model-2026-09-26/results-minicpm5-2b-lora.md) for the first trained runs.
 See [12B results](../docs/jev-decision-model-2026-09-26/results-gemma-4-12b.md) for the stock frontier, the clean
 recipe and the gemma-4-12B-it LoRA.
