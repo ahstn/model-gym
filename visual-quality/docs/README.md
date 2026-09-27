@@ -17,6 +17,8 @@ Last verified: 2026-09-27
 | Datasets | [datasets/vqa.md](datasets/vqa.md) | Video quality datasets: UGC, streaming, HDR, AIGC video. |
 | Training | [training/methods.md](training/methods.md) | Training-method papers and what to borrow. |
 | Training | [training/data-mixture-evidence.md](training/data-mixture-evidence.md) | Controlled evidence that adding or choosing data helps or hurts. |
+| Training | [training/synthetic-label-teachers.md](training/synthetic-label-teachers.md) | Visual benchmark shortlist, API pricing, and synthetic-label costs for 1K, 10K, and 250K images. |
+| Training | [training/synthetic-label-prompts.md](training/synthetic-label-prompts.md) | Source-backed quality and aesthetics rubrics, prompt files, response schema, and pilot checks. |
 | Training | [training/experiment-plan.md](training/experiment-plan.md) | Staged experiment plan and compute assumptions. |
 | Evaluation | [evaluation/protocol.md](evaluation/protocol.md) | Metrics, split rules, calibration, and the Q-ReAlign code audit. |
 | Evaluation | [evaluation/benchmarks.md](evaluation/benchmarks.md) | Diagnostic benchmarks and the standard held-out test suite. |

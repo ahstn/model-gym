@@ -189,6 +189,14 @@ What this means:
 - A teacher fine-tuned on the research mix would give better labels. [INFERENCE] Its labels likely carry the same license question as its training data ([datasets/iqa.md section 6.1](../datasets/iqa.md#61-license-verdict-for-the-whole-q-realign-training-mix)).
 - The LEAF student saw unlabeled images from the same datasets as the tests. Labels on a different image pool (for example PD12M) will likely transfer less well [INFERENCE].
 
+### 7.2 Current API teacher candidates and label costs
+
+The [prompt pack](synthetic-label-prompts.md) defines separate technical-quality and aesthetics ratings, with a joint-call variant for a cost ablation. It documents how these proposed teacher judgments differ from Q-Align's learned label probabilities.
+
+The [teacher benchmark and cost study](synthetic-label-teachers.md) compares the five leading distinct models in the checked MMMU-Pro results, with GPT-6 Luna as an extra low-cost control. It includes verified provider prices and estimates for 1K, 10K, and 250K images. These are general visual-reasoning results and planning estimates, not controlled IQA evidence.
+
+Proposed first test: Gemini 3.8 Flash for bulk labels, Claude Opus 5.5 for a second opinion, and Astra plus Luna as accuracy and cost controls. Select on a human-rated development set before generating the full dataset. Under the study's central token assumptions, 250K Gemini labels plus a 10% Opus audit cost about $1,007 batch before retries. Keep aesthetics separate, and do not equate a generated JSON distribution with Q-Align label-token probabilities.
+
 ## 8. What this means for a Q-ReAlign re-train
 
 1. Every addition in this file helped its own domain and hurt at least one other set in some study. Plan for regressions and report them.
