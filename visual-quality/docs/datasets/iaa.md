@@ -104,3 +104,21 @@ These give pairwise or ranked choices, not MOS. They mix aesthetics, prompt fit 
 - Only MSC (CC0 data) and a few HF sets with Apache or MIT tags have clear open terms. Most photo sets are research-only or do not state terms. For commercial work, treat AVA, AADB, FLICKR-AES, PARA, BAID, APDDv2, ArtiMuse and PIQ23 ([iqa.md](iqa.md)) as blocked until you get permission.
 - Preference sets mix aesthetics with prompt fit. HPDv3++ splits them into `aes` and `tf` subsets. RichHF-18K gives separate aesthetics and artifact scores. Use these to test if a model confuses taste with defects.
 - Model and backbone choices are in [../models/unified-and-backbones.md](../models/unified-and-backbones.md). The staged plan is in [../training/experiment-plan.md](../training/experiment-plan.md).
+
+## 7. Adding AADB, TAD66K, or ArtiMuse-10K to training
+
+Checked 2026-09-27 against the rows in section 2, the GitHub license API, and the HF dataset tags. This is not legal advice.
+
+| Set | What we can use | Terms found | Fit for internal research training | Fit for a model we ship commercially |
+|---|---|---|---|---|
+| TAD66K | All ~66K images with theme labels | GitHub repo and HF dataset tag: Apache-2.0. The images come from the web; photo rights are not established. | Yes | Best of the three, but not clear: Apache-2.0 on the release does not prove the uploader had rights to each photo. |
+| AADB | 10,000 images (8,500 / 500 / 1,000 common split, unverified) | README: "for research purpose only". Images are Flickr CC. Adobe patent US20170294010A1 "discourages considerations of commercial use". No LICENSE file (GitHub API null). | Yes | No, without permission from the authors |
+| ArtiMuse-10K | Test set only (`test.json`, public on HF). Full set by request form. | HF tag says Apache-2.0, but the README says non-commercial research only and no redistribution. Follow the stricter README. | Only the full set by form, for research | No |
+
+Rules:
+
+- **Do not train on the ArtiMuse-10K test set.** It is our only public cross-domain aesthetics test (photos, paintings, design, AIGC). If we train on it, we lose the check that AVA-trained models fail (0.32–0.40 SRCC, [models/iaa.md section 4](../models/iaa.md#4-protocol-c-cross-dataset-transfer-the-artimuse-finding)).
+- **Keep at least one aesthetics set fully held out.** Recommended split: train on AVA + a TAD66K subset (split by image, keep some themes out as a theme-shift test). Keep AADB and the ArtiMuse-10K test as held-out tests. As a second check, swap roles (train on AADB, test on TAD66K), a leave-one-dataset-out run.
+- **Scales differ.** AVA is 1–10, AADB is 1–5, and the TAD66K scale must be read from the release files. Map each set to the 5 levels with its own bins, as Q-Align does per dataset. Do not pool raw scores.
+- **No new conflict with the baseline.** The ONE-ALIGN recipe already trains on AVA, whose terms are Not stated. Adding AADB keeps the same research-only status. Adding TAD66K does not make it worse. None of these sets makes the model clean for commercial use.
+- **Weights inherit the question, not the answer.** Q-ReAlign weights are tagged Apache-2.0 while their training data (KonIQ, AVA, LSVQ, and others) has research terms. Whether trained weights carry the data terms is a legal question. If we ship the model, get advice first, or build a data mix from clearly licensed sets (MSC, AU-IQA, and our own data).
