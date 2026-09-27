@@ -1,0 +1,135 @@
+visual-quality/src/visual_quality/controls.py
+  s_1c39eca6a8bf5f::t_a3deee63e27bc4 151-157,174-177,208-223,238-246,285-287,290-291,293-310,320,366-369,374-379,388-390,396
+  s_1c39eca6a8bf5f::t_506c9928aa0b8b 16
+  s_1c39eca6a8bf5f::t_308852274c39f1 15,253
+  s_1c39eca6a8bf5f::t_14b592244d501d 1-9,14,17-147,166,192-207,224-236,248-251,254-284,288-289,292,311-314,354-365,370-373,380-386,404-409
+  s_1c39eca6a8bf5f::t_d8cfdfb707e3f3 10,12-13,315-319,321-353,387,392-395,397-403
+  s_1c39eca6a8bf5f::t_ab5270abb72361 11,148-150,158-165,167-173,178-191,237,247,252
+  s_1c39eca6a8bf5f::t_1d2a4994770857 391
+visual-quality/README.md
+  s_1c39eca6a8bf5f::t_c28a0d42716752 1-4,7-46,49-67,69-72,74-92
+  s_1c39eca6a8bf5f::t_e121a385340bec 47-48
+  s_1c39eca6a8bf5f::t_9ba35542fa618f 68,73
+  s_1c39eca6a8bf5f::t_324f4dc34670df 5-6
+visual-quality/docs/README.md
+  s_1c39eca6a8bf5f::t_3bbf3854814e69 7-8
+  s_1c39eca6a8bf5f::t_324f4dc34670df 19
+visual-quality/tests/test_megalith.py
+  s_1c39eca6a8bf5f::t_654d2919d929a3 4-20
+  s_1c39eca6a8bf5f::t_48f4c700f24458 134,138,140-146
+  s_1c39eca6a8bf5f::t_f334638ff72b00 93-101
+  s_1c39eca6a8bf5f::t_5132c2d29e1ef5 107-112,122-133,135-137,139,147-148
+  s_1c39eca6a8bf5f::t_10e8e6dcddb7c0 1-3,149-158,167-172
+  s_1c39eca6a8bf5f::t_75bd00c772238d 159-166
+  s_1c39eca6a8bf5f::t_71205b24ec67f2 49-51,58-60
+  s_1c39eca6a8bf5f::t_248838550e4ab7 21-40,53-57,61-63,105-106
+  s_1c39eca6a8bf5f::t_529cd616c15d62 41-48,52,64-92,102-104
+  s_1c39eca6a8bf5f::t_a5a913f19fe732 113-121
+visual-quality/src/visual_quality/validation.py
+  s_1c39eca6a8bf5f::t_096453ca6886a8 75-89,110-120,124-127,224-225,228-229
+  s_1c39eca6a8bf5f::t_e1ecea3103c770 237-239
+  s_1c39eca6a8bf5f::t_db33e55dcf8e19 251-253
+  s_1c39eca6a8bf5f::t_3d55b07e3e7742 1-5,7-13,15-61,67,74,90-102,105-109,121-123,128-215,220-223,226-227,230,267
+  s_1c39eca6a8bf5f::t_2408d7928f648a 6,62-66,216-219,231-236,240-250,254-266
+  s_1c39eca6a8bf5f::t_85d5931cc6973d 68-73
+  s_1c39eca6a8bf5f::t_9fe2cd565340bd 14,103-104
+visual-quality/tests/test_pipeline.py
+  s_1c39eca6a8bf5f::t_7d2b08cb648771 1-2,10-11,168-191,193-212
+  s_1c39eca6a8bf5f::t_c28a0d42716752 149-150,161-165
+  s_1c39eca6a8bf5f::t_096453ca6886a8 24-34,65-69,98-104,111-112,147,151-160
+  s_1c39eca6a8bf5f::t_db33e55dcf8e19 192
+  s_1c39eca6a8bf5f::t_f18cb99d49a087 268-274
+  s_1c39eca6a8bf5f::t_85d5931cc6973d 12-18
+  s_1c39eca6a8bf5f::t_9fe2cd565340bd 3-5,8-9,19-23,35-64,70-95,97,105-110,113-146,148,166-167
+  s_1c39eca6a8bf5f::t_d1f51bf9ab50b3 96,257-267,275-278
+  s_1c39eca6a8bf5f::t_686b689bc24526 6,213-216,221,226-232,236,245-256
+  s_1c39eca6a8bf5f::t_5b0f395d685d36 7,217-220,222-225,233-235,237-244
+visual-quality/docs/training/data-mixture-evidence.md
+  s_1c39eca6a8bf5f::t_9f2a133230bc7e 206-207
+visual-quality/configs/pilot-10k.json
+  s_1c39eca6a8bf5f::t_3d55b07e3e7742 1-10,12-14
+  s_1c39eca6a8bf5f::t_ea0ba9d4624fd7 11
+visual-quality/tests/test_generate.py
+  s_1c39eca6a8bf5f::t_de9c381f049b85 1-2,4-11,13-20,42-62,66-88,93-102,144-158,160-170
+  s_1c39eca6a8bf5f::t_14b9b44d0f553e 3
+  s_1c39eca6a8bf5f::t_04b3f33867106f 29,63,103-118
+  s_1c39eca6a8bf5f::t_d76025ab0e4dbe 159,171-172,176-228
+  s_1c39eca6a8bf5f::t_71f3d03157e72f 173-175
+  s_1c39eca6a8bf5f::t_265ed77732394f 12,64-65,119-143
+  s_1c39eca6a8bf5f::t_e9644c570a8aed 21-28,30-41,89-92
+visual-quality/src/visual_quality/cli.py
+  s_1c39eca6a8bf5f::t_ea0ba9d4624fd7 1-7,9-24,26-32
+  s_1c39eca6a8bf5f::t_2408d7928f648a 8,25
+visual-quality/tests/test_controls.py
+  s_1c39eca6a8bf5f::t_a3deee63e27bc4 21-24,33-42,58-60,82-85,94-99,106-108
+  s_1c39eca6a8bf5f::t_308852274c39f1 1,3-20,25-32,43-57,61-81,86-93,100-105,109-114
+  s_1c39eca6a8bf5f::t_d8cfdfb707e3f3 2,115-127
+.gitignore
+  s_1c39eca6a8bf5f::t_09371176186779 26-28
+visual-quality/src/visual_quality/generate.py
+  s_1c39eca6a8bf5f::t_265ed77732394f 24,119,134,181
+  s_1c39eca6a8bf5f::t_d76025ab0e4dbe 10,20,78-114,120-121,130-133,135-139,147,159-167,177,188,353
+  s_1c39eca6a8bf5f::t_e9644c570a8aed 28-37,58-60,168-176,178-180,182-187,189-191,223-226,232-236,275-277,302-310,343-345,347-351,354,356-360,363-368,370-374
+  s_1c39eca6a8bf5f::t_de9c381f049b85 1-9,11-16,19,21-23,25-27,38-57,61-77,115-118,122-129,140-146,192,196-203,211-214,217-220,227-231,237-243,249,252-257,261-266,268,278-283,287-301,311-342,346,352,355,361-362,369,375-380
+  s_1c39eca6a8bf5f::t_71f3d03157e72f 148-158,193-195
+  s_1c39eca6a8bf5f::t_04b3f33867106f 17-18,204-210,215-216,221-222,244-248,250-251,258-260,267,269-274,284-286
+visual-quality/tests/test_vizwiz.py
+  s_1c39eca6a8bf5f::t_2343e717aaed45 2,5,7-43
+  s_1c39eca6a8bf5f::t_2fed994609ea8c 1,3-4,6,44-87
+visual-quality/src/visual_quality/assemble.py
+  s_1c39eca6a8bf5f::t_2408d7928f648a 148
+  s_1c39eca6a8bf5f::t_f18cb99d49a087 97-99
+  s_1c39eca6a8bf5f::t_9ba35542fa618f 7,9,141-143,211-212,233
+  s_1c39eca6a8bf5f::t_096453ca6886a8 24,126-130,167,189-191,224-232,234-240
+  s_1c39eca6a8bf5f::t_e2aced308d7452 213-223
+  s_1c39eca6a8bf5f::t_e1ecea3103c770 241-243
+  s_1c39eca6a8bf5f::t_d1f51bf9ab50b3 85,88-91,102-103,108
+  s_1c39eca6a8bf5f::t_7d2b08cb648771 115,118-121,180,244
+  s_1c39eca6a8bf5f::t_ea0ba9d4624fd7 1-6,8,10-23,25-84,86-87,92-96,100-101,104-107,109-114,116-117,122-125,131-140,144-147,149-166,168-179,181-188,192-210,245
+visual-quality/src/visual_quality/megalith.py
+  s_1c39eca6a8bf5f::t_10e8e6dcddb7c0 1-5,7,9-13,15-25,47-80,84-101,104-125,142-148,152,154-155,157,171-172,177-182,184,187,195,223,226,228-232,234-240,246-250,253-256,259,261-265,273-274,279-281,287-290,292-295
+  s_1c39eca6a8bf5f::t_45a83280aa94cb 6,26-46,159,162,166-168,170,173-174,227
+  s_1c39eca6a8bf5f::t_72b10edd92d843 153,156,158,175-176,205
+  s_1c39eca6a8bf5f::t_9507e635fa5231 160
+  s_1c39eca6a8bf5f::t_8e387726272659 161,163-165,169,185-186,210
+  s_1c39eca6a8bf5f::t_81bcd86bb2436d 233,282-286,291
+  s_1c39eca6a8bf5f::t_2272781e83cc80 241-245,251-252
+  s_1c39eca6a8bf5f::t_75bd00c772238d 8,14,81-83,127-141,188-194,196-204,206-209,211-222,224-225,266-272,275-278
+  s_1c39eca6a8bf5f::t_ea44945ede2818 149-151,183
+  s_1c39eca6a8bf5f::t_1b68d2b17b9a9d 257-258,260
+  s_1c39eca6a8bf5f::t_1cc6ac604772c7 102-103,126
+visual-quality/docs/datasets/low-quality-and-controls.md
+  s_1c39eca6a8bf5f::t_9f2a133230bc7e 3,140
+visual-quality/docs/datasets/pilot-10k-assembly.md
+  s_1c39eca6a8bf5f::t_324f4dc34670df 1-53
+visual-quality/src/visual_quality/vizwiz.py
+  s_1c39eca6a8bf5f::t_2343e717aaed45 1-13,16-17,19,21-22,24-155,176-195,201,204,207-217,225-245,250-263,276-277,279
+  s_1c39eca6a8bf5f::t_91ee8b91222518 14-15,18,20,23,156-175,196-200,202-203,205-206,218-224,246-249,264-275
+  s_1c39eca6a8bf5f::t_2fed994609ea8c 278
+visual-quality/src/visual_quality/__init__.py
+  s_1c39eca6a8bf5f::t_87e3a7ac190af4 1
+visual-quality/pyproject.toml
+  s_1c39eca6a8bf5f::t_d19349f6d2983d 2
+  s_1c39eca6a8bf5f::t_87e3a7ac190af4 1,3-29
+visual-quality/src/visual_quality/storage.py
+  s_1c39eca6a8bf5f::t_096453ca6886a8 10,12,79
+  s_1c39eca6a8bf5f::t_87e3a7ac190af4 1-9,11,13-78,80-82
+visual-quality/uv.lock
+  s_1c39eca6a8bf5f::t_9383bea71e2d60 1-451
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e9f1b86077694b92bc549919ef05166252d9eaf9",
+  "prompts": {},
+  "sessions": {
+    "s_1c39eca6a8bf5f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0e39a-93c5-7f21-b398-3a83ab99f84f",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
