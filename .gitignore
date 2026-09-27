@@ -20,3 +20,6 @@ data/synthetic/
 
 # Hugging Face / datasets caches
 .hf_cache/
+
+# Per-machine credentials
+mise.local.toml

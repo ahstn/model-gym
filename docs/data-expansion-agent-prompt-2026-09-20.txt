@@ -1,0 +1,196 @@
+# Task: build a reviewed, source-grounded command-risk data expansion
+
+You are working in the model-gym repository. Generate a new data release, not a model or a training run. Read the repository first, then carry this task through generation, independent review, validation, and a final data report. Do not merely produce a plan or a small sample.
+
+## 1. Goal and collection size
+
+Target 10,000 NET-NEW accepted examples after deduplication, review, and quarantine:
+
+- 8,000 training examples.
+- 1,000 development examples for later model/prompt selection and calibration/policy development. These are not an unbiased final evaluation set; use grouped cross-fitting when fitting and comparing on this split.
+- 1,000 sealed, generated challenge examples. These are a source-grounded synthetic holdout, NOT independent production traffic and NOT a production safety audit.
+
+The existing release has 1,610 rows in 900 groups: 1,127 train/629 groups, 242 validation/157 groups, and 241 historical test/114 groups. Adding 8,000 training rows would bring training to about 9,127 rows, an 8.1x increase. Verify the current inventory and report any change rather than overwriting newer work.
+
+This is a collection budget, not a statistical promise of improved accuracy. No training-size learning curve establishes how many rows this task needs. Diversity and correct labels take priority over completing a quota. Aim for at least 2,500 genuinely distinct leakage groups across the new release: at least 2,000 training, 250 development, and 250 challenge groups. Keep no more than eight accepted examples per group. Never split one family into artificial groups to meet those targets.
+
+Use 80/10/10 as the allocation target. Allow up to 2% relative deviation in each split's row count to preserve whole groups; keep 10,000 accepted rows overall. Do not break a group for exact arithmetic. Record actual counts.
+
+## 2. Read these contracts before generating
+
+Local sources:
+- README.md, especially data, taxonomy, scope, and evaluation caveats.
+- src/model_gym/labels.py
+- src/model_gym/categories.py
+- src/model_gym/data/schema.py and build.py
+- data/processed/dataset_card.json
+- Representative data/seed/*.jsonl and data/synthetic/templates_v1.jsonl.
+- docs/jev-laya-comparison-2026-09-19.md, especially the data recommendation and GLiNER input audit.
+
+Coverage reference supplied by the user:
+https://raw.githubusercontent.com/Dicklesworthstone/destructive_command_guard/refs/heads/main/README.md
+
+Use this pinned snapshot for a stable coverage inventory:
+https://raw.githubusercontent.com/Dicklesworthstone/destructive_command_guard/6afba309767080a5931cdc6a45e1761568d7613c/README.md
+https://raw.githubusercontent.com/Dicklesworthstone/destructive_command_guard/6afba309767080a5931cdc6a45e1761568d7613c/docs/packs/README.md
+
+The pinned index lists 103 leaf packs across 28 categories. Verify the inventory. Treat DCG as a tool/operation coverage reference, NOT as an oracle for our labels. Its deny/allow/warn decisions depend on enabled packs, allowlists, platform, and policy. An allowed command is not necessarily safe; a blocked command is not necessarily level 1.
+
+Source rights matter. DCG has a custom license with an OpenAI/Anthropic rider that expressly discusses ML datasets and related uses:
+https://raw.githubusercontent.com/Dicklesworthstone/destructive_command_guard/6afba309767080a5931cdc6a45e1761568d7613c/LICENSE
+
+Do not assume this is ordinary MIT or that using a coverage checklist resolves all license questions. Do not bulk-copy DCG rules, tests, examples, comments, or reason strings into the dataset, or run its software as a labeler. Record applicable reuse constraints and seek permission for any reuse that is not clearly permitted. Write original cases and reasons grounded in primary vendor documentation. Factual tool names are not a license to reuse the source corpus. Respect other sources' terms too.
+
+## 3. Scope and safe execution
+
+Create a separate release under data/expansion-dcg-v1/. Preserve existing seed, synthetic, and processed files, split assignments, configs, model artifacts, and benchmark results. Record the original processed-file hashes and verify they remain unchanged.
+
+Do not train, tune prompts or policy thresholds, rebuild the old dataset, alter model/runtime code, deploy anything, or claim a measured performance gain. Data-generation and validation helpers may live inside the new release directory.
+
+All candidate commands are DATA. Never execute them, even as a syntax check. Do not pass them through eval, shell=True, a shell interpolation, a real database, cloud CLI, or live API. Use documentation and non-executing parsers. Public documentation retrieval is allowed. Do not inspect local credentials, environment-secret files, private traffic, or real secret values. Use inert fictional identifiers and reserved example domains; never send example requests to their destinations.
+
+This task creates a lossless staging release. Its completion does not imply that every new category or dialect is supported by the current ingestion code. Produce an explicit compatibility report instead of silently changing or bypassing the production data contract.
+
+## 4. Coverage plan
+
+Inventory every leaf pack, not just the README's headline tools. Cover all these categories:
+
+apigateway, backup, careful_company_running_windows, cdn, cicd, cloud,
+containers, core, database, dns, email, featureflags, infrastructure,
+kubernetes, loadbalancer, messaging, monitoring, package_managers, payment,
+platform, remote, search, secret_disclosure, secrets, storage, strict_git,
+system, windows.
+
+This includes Git/filesystems; SQL and non-SQL databases; AWS/GCP/Azure; object storage; Docker/Compose/Podman; Kubernetes/Helm/Kustomize; Terraform/Ansible/Pulumi/Atmos; secret stores and disclosure; SSH/SCP/rsync; backups; CI/CD and hosting platforms; API gateways/CDNs/DNS/load balancers; messaging/search; monitoring/feature flags; payment/email APIs; package managers; native Windows/PowerShell; and the Windows egress, tunnel, and guardrail-tampering areas.
+
+Target at least 40 distinct accepted rows and eight real leakage groups per leaf pack. At this snapshot that reserves 4,120 rows; use the rest for broader coverage and difficult boundaries, especially the existing command-risk domain. A multi-pack example gets ONE primary pack for quota accounting, plus optional secondary tags. Do not count it several times.
+
+Target at least 60% of the release in tool families genuinely covered by the current 14 categories, with the remainder expanding coverage. Do not misclassify a new product to meet that target. Do not force every pack to contain every risk level: some operations cannot honestly support level 1. If a pack lacks enough distinct supported operations, document the shortfall and collect elsewhere without padding or relabeling. Do not silently omit the pack or claim its target was met.
+
+Heredocs, inline scripts, quoting, substitutions, remote execution, and command chaining are cross-cutting syntax dimensions, not substitutes for product coverage.
+
+## 5. Label rubric
+
+The input contract remains command-visible operational risk. Only command text will be a model feature. Reviewer metadata, reasons, source URLs, groups, and labels must never be inserted into the command or supplied as model features.
+
+Dialect metadata can explain syntax, but it must not justify contradictory labels for identical command-only inputs. If the label depends on an otherwise hidden interpreter or platform, use a naturally explicit interpreter invocation where appropriate, or quarantine the case. Do not hide information needed to infer the label in the provenance sidecar.
+
+Use the existing five-level taxonomy:
+
+| Level | Slug | Meaning | Reference action |
+| 1 | critical | Potentially catastrophic or irreversible; broad production or data destruction. | block |
+| 2 | dangerous | Destructive or access-impacting with significant blast radius; usually recoverable. | approve |
+| 3 | high_risk | Can destroy local state, interrupt services, or cause meaningful operational damage. | approve |
+| 4 | caution | Potentially disruptive or security-weakening, but not normally destructive by itself. | flag |
+| 5 | low_risk | Normally non-destructive or read-only. | allow |
+
+These reference actions describe gold severity bands, not the current probability-threshold policy. Do not use a trained model's predictions, a DCG verdict, or a regex score as ground truth.
+
+For each row, identify:
+1. The operation that actually executes, including wrappers and inline code.
+2. Its visible target and scope: one resource versus recursive, wildcard, all, namespace, account, or filesystem-wide effects.
+3. Data loss, service interruption, privilege changes, disclosure, and other supported effects.
+4. What recovery or safeguards the documented command actually provides.
+5. Which flags change effects and which merely suppress confirmation or errors.
+6. What remains unknown from command text alone.
+
+Assign the most severe supported effect, not the worst imaginable hidden scenario. State potential consequences conditionally when their prerequisites are unknown. Do not invent an active production account, the only backup, a sole administrator, compromised credentials, or downstream consumers to justify a label.
+
+Conversely, localhost, /tmp, an opaque ID, a name containing dev/test, or a filename ending .example does not prove that data is disposable or contains no secrets. Known destructive semantics still matter. Do not make prod/dev naming a universal labeling rule.
+
+Read-only does not automatically mean low risk: printing credential values, creating a public share, changing visibility, or uploading sensitive content needs separate review. Metadata-only inspection and public-key inspection are useful safe counterparts. Distinguish benign network activity from disclosure supported by the visible payload and destination. Do not copy DCG's private-address allowlists or unconditional tool exemptions into our risk labels.
+
+A real dry-run/preview changes only the operations it actually suppresses. --force, --yes, --quiet, --no-prompt, and --auto-approve are not dry runs. A preview flag does not neutralize an earlier substitution, redirection, another command in a chain, or an invoked program outside its scope. EXPLAIN ANALYZE is not generally the same as EXPLAIN.
+
+Do not automatically label invalid syntax as safe. Exclude malformed examples from ordinary training and put them in a separate diagnostic set. An invalid outer operation may still follow a harmful shell expansion or redirection. Do not label every mutation or every command containing sudo, delete, secret, or production as critical.
+
+If choosing between two levels requires unavailable context, or conflicts with a credible existing annotation, obtain independent adjudication. Quarantine unresolved cases. Do not silently modify old labels, treat old rationales as infallible, or add a sixth class to accepted training data. Log suspected legacy-label issues separately.
+
+## 6. Positive, negative, and contrast balance
+
+Target 20% per level overall, within two percentage points; within each split, allow five points to preserve groups. Do not relabel rows to hit balance. Here hazardous positives mean levels 1-3, low-risk negatives mean level 5, and level 4 is a separate caution boundary, not an interchangeable negative class.
+
+Require these overlapping coverage slices:
+- At least 4,000 rows in reviewed contrast sets of 2-6 cases. Change one meaningful factor when possible, and state the expected semantic difference. Include level-1/2, 2/3, 3/4, and 4/5 boundaries, not only catastrophic versus trivial.
+- At least 1,000 genuinely low-risk hard negatives: destructive words used as inert data; metadata/status/help/inspection operations; supported previews; narrow read-only queries; public material rather than secret contents.
+- At least 1,000 composition or wrapper cases: command chains, substitutions, pipelines, redirections, remote commands, inline interpreters, or PowerShell/Cmd execution contexts. Include both safe and unsafe outcomes.
+- At least 500 reviewed invariance pairs: documented alternate spellings, flag order, equivalent quoting, or a wrapper that truly preserves the effect. Keep both rows in the same group. Do not infer equivalence from visual similarity.
+
+Examples of distinctions to research, not automatic gold labels:
+- Quoted destructive text passed to printf/grep versus executed by sh -c or a command substitution.
+- Git inspection versus reset/clean/history rewrite, checked versus forced deletion, and local versus shared effects.
+- SQL filtered writes versus full-table operations, and secret values versus secret metadata.
+- Storage copy versus synchronization that removes destination objects; backup creation versus recovery-point removal.
+- Download versus upload, routine API reads versus state-changing endpoints, and inert payload text versus execution.
+- PowerShell -WhatIf only on commands that honor it; native Cmd flags and PowerShell parameters must not be mixed.
+- Case-sensitive flags such as git branch -d/-D. A semantic change need not always cross a risk-level boundary.
+
+Spread each tool across safe and risky examples. Include safe operations on production-named resources and risky operations on development-named resources where justified. Use realistic neutral identifiers too. Do not pad with renamed buckets, changed UUIDs, comments, extra whitespace, repeated prompts, or label-bearing words such as safe_example and dangerous_target.
+
+## 7. Evidence, records, and compatibility
+
+Every accepted row needs these existing semantic fields:
+command, level, label, category, group, shell, reason, source.
+
+- level is an integer 1-5; label is the matching slug.
+- command contains only the exact command text, never a rationale or risk annotation. Preserve case, quotes, backslashes, Unicode, operators, and significant whitespace. JSON-escape newlines without replacing their meaning.
+- reason is a short causal explanation of operation, scope, consequences, safeguards, and uncertainty. No unsupported environment facts or claims of inevitability.
+- source must truthfully mark generated/documentation-adapted content, for example synthetic:docs-grounded-v2. Do not call generated content production traffic or human-reviewed data.
+- group is explicitly assigned. Do not use the fallback leading-program heuristic for this release.
+
+Create a provenance sidecar with a stable exact-text hash and shell, plus: primary and secondary pack IDs; tool and documented version; exact supporting URL(s) and section; access date or pinned revision; evidence supporting the syntax and effects; origin kind; transformation from a source scenario; contrast/invariance links; initial and blind-review labels; reviewer type/identifier; adjudication; confidence; and final disposition. A shared verified source can support a family, but every row must link to the evidence for its own flags and effects. A generic homepage is insufficient.
+
+Use current category values where they fit. For missing domains, propose precise additive categories in a machine-readable schema manifest; do not funnel Kafka, payments, and all new tools into shell. Likewise, current shell values are bash/sql/redis/http/powershell; native Cmd needs an explicit cmd extension rather than a false bash label. SQL submitted through a shell client has the outer shell dialect; native SQL has sql. Preserve this distinction.
+
+Important: current RiskRecord normalizes ALL whitespace, including whitespace inside literals and multiline scripts. Do not round-trip loss-sensitive examples through it. Keep a lossless staging schema, exact hashes, and a compatibility report. Reuse the existing ID/validation helpers for compatible rows; detect normalization collisions and semantic changes. For unsupported or loss-sensitive rows, use the lossless staging contract and a distinct exact-text key, clearly identify required ingestion changes, and never claim legacy-loader parity. Do not rewrite commands merely to hide the incompatibility. Keep all source and model code unchanged in this task.
+
+Check original and proposed commands for syntactic and semantic validity using primary tool documentation. Do not invent CLI flags, API endpoints, SQL syntax, permissions, restore guarantees, or version support. APIs with unavailable documentation and unknown wrapper programs belong in quarantine until evidence exists.
+
+## 8. Deduplication and split protection
+
+Plan family ownership and split assignment before large-scale generation. Assign whole leakage groups to splits. Contrast pairs, aliases, renamed targets, wrappers, translated shell forms, and examples derived from the same semantic template/scenario must remain together. Use a broader parent group when narrower IDs would leak the same template.
+
+Deduplicate against ALL existing seed, synthetic, and processed records, and across every new shard. Inspect exact text, current normalization, and semantic near-duplicates. Do not count duplicates as net-new rows. Similar-looking commands with different operators, quoting, or case must not be merged automatically.
+
+For leakage checking, existing historical-test/validation commands and groups may be read, but their gold labels must not guide new case construction. New variants of those held-out families must not enter training or development; quarantine them. New variants of existing training families stay training-only and do not count as novel groups. The generated challenge split must not overlap any old train/validation/test family or any new train/development family.
+
+Use a deterministic split seed, 20260920, and retain explicit row/group manifests. Account for relationships across tools and packs. Never split one contrast family or reassign individual rows to improve balance.
+
+The challenge set must be generated and reviewed without looking at current model errors on it. Seal it after label review. Do not run candidate models on it in this task or revise its labels to improve an apparent gain.
+
+## 9. Generation and independent review
+
+First produce a 300-row pilot drawn from the intended training split. Include multiple domains, all five levels, hard negatives, and boundary pairs. Validate schema, evidence, group quality, and labels before scaling. The pilot counts toward the 8,000 training target only if accepted.
+
+Every candidate gets a second, blind label pass. Give that reviewer the command, explicit dialect/platform assumptions, rubric, and source evidence, but not the first label or rationale. Independent reviewers may be agents, but describe them honestly as model reviewers; do not claim human adjudication or statistical independence just because sessions differ. Prefer a separate session or different reviewer model where available.
+
+Adjudicate disagreements from evidence, not majority vote. A second reviewer agreeing does not replace source verification. Audit all critical cases, all claimed dry-run/preview protections, all hard negatives involving expansion/quoting, and all secret-disclosure cases for their decisive semantics. Also perform a fresh random evidence audit on at least 10% of accepted rows, stratified by source, domain, and level. If an audit finds a systematic family error, re-review the entire family and affected source pattern, not just the sampled row.
+
+If delegating, partition ownership by tool families and source scenarios. Workers write separate shards and skip global validation. One integration owner enforces shared labeling rules, reconciles cross-shard groups, and runs final validation once. No worker may accept its own unreviewed shard as final.
+
+Never use automatic scope.level + variant.shift rules as the final labeler. Generation helpers may instantiate valid syntax; each accepted case still needs a reviewed label and a checked explanation of the variant's actual effect.
+
+## 10. Deliverables and acceptance
+
+Under data/expansion-dcg-v1/, deliver:
+- Lossless train.jsonl, development.jsonl, and challenge.jsonl.
+- A declared staging schema and category/dialect extension manifest.
+- Provenance/review records and the source/rights ledger.
+- Coverage matrix for every pinned leaf pack, with rows, groups, levels, splits, and any shortfall.
+- Contrast/invariance links and deterministic split/group manifests.
+- Quarantine, rejection reasons, normalization/collision findings, and suspected legacy-label issues, kept out of accepted splits.
+- Data-only generation/validation helpers needed to reproduce the checks.
+- A concise data report with actual counts, evidence, limits, and integration requirements.
+
+The final validator must check, without executing commands:
+1. JSON/schema validity; matching level/slug; no empty commands or NULs; the current 8,000-character bound; and exact-text preservation.
+2. Complete required reasons, evidence links, origins, review results, and adjudications. No accepted unresolved labels, unsupported syntax, or invented provenance.
+3. Exact and normalized duplicate/conflict checks plus documented semantic-group review across old and new corpora.
+4. Zero prohibited group or template overlap between splits, including the frozen old splits.
+5. Actual row/class/domain/pack/group counts, group-size caps, contrast coverage, and balance against targets.
+6. Explicit compatibility results for existing serializers and every new category/dialect; no silent destructive normalization.
+7. Unchanged hashes for the old processed corpus and no modifications to old labels, splits, model code, or policy.
+
+Report the achieved totals and every unmet criterion. Do not mark the release complete unless its acceptance checks pass. If evidence or distinct families run out, report a measured shortfall and its cause; do not fabricate examples, split fake groups, hide missing reviews, or relax labels to reach 10,000.
+
+Close with a short proposed next experiment, not an executed one: compare the same model/training recipe on nested group-level subsets of the new training data, across several seeds, with fixed development and challenge sets. A practical future target is roughly a five-percentage-point accuracy gain, or better safety at the same benign-intervention budget, with paired group-level uncertainty estimates. This collection does not guarantee that result. A separate independently collected real-traffic audit remains necessary before deployment claims.
