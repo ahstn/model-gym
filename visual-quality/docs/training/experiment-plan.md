@@ -17,6 +17,7 @@ Last verified: 2026-09-27
 |---|---|---|---|
 | Task mix (README claim) | KonIQ + SPAQ + KADID + AGIQA-20K + AVA + LSVQ | [README](https://github.com/Q-Future/Q-ReAlign#results) | verified |
 | Task mix (public config) | `mix: [koniq, spaq, kadid, ava, lsvq]` (no AGIQA-20K) | [onealign.yaml L67](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/configs/onealign.yaml#L67) | verified |
+| Task mix (ours, decided 2026-09-27) | README mix + TAD66K official train list (52,248). AADB, PARA, FLICKR-AES, ArtiMuse-10K: evaluation only. Add TAD66K as its own step (baseline mix vs baseline + TAD66K) so its effect is measured. | [datasets/iaa.md section 7](../datasets/iaa.md#7-adding-aadb-tad66k-or-artimuse-10k-to-training) | decision |
 | Labels | 5 words (excellent, good, fair, poor, bad), hard bins; score = probability-weighted mean | [protocol audit, rows 1 and 6](../evaluation/protocol.md#8-q-realign-baseline-code-audit) | verified |
 | Training | Full SFT, DeepSpeed ZeRO-2, lr 2e-5, 2 epochs, batch 4, grad accum 2, 2 GPUs, vision tower and projector trainable, cosine schedule, warmup 0.03 | [onealign.yaml L70-L78](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/configs/onealign.yaml#L70-L78), README L290 | verified |
 | Video input | 8 uniform frames, long side 448, JPEG q90 cache | [protocol audit, row 2](../evaluation/protocol.md#8-q-realign-baseline-code-audit) | verified |
