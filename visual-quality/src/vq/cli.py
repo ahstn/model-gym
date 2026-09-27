@@ -61,19 +61,41 @@ def cmd_frames(a: argparse.Namespace) -> None:
         print("FAIL", k, v, file=sys.stderr)
 
 
-def cmd_eval(a: argparse.Namespace) -> None:
-    from vq.evaluate import run
+def _scorer_cfg(a: argparse.Namespace):
     from vq.scorer import ScorerConfig
 
-    cfg = ScorerConfig(
+    return ScorerConfig(
         model=a.model,
         max_pixels=a.max_pixels,
         attn=a.attn,
+        use_kernels=a.use_kernels,
         batch_size=a.batch_size,
         last_logits_only=not a.full_logits,
         workers=a.workers,
     )
-    run(cfg, a.root, _sets(a.sets), a.out, limit=a.limit, boot=a.boot)
+
+
+def cmd_eval(a: argparse.Namespace) -> None:
+    from vq.evaluate import run
+
+    run(_scorer_cfg(a), a.root, _sets(a.sets), a.out, limit=a.limit, boot=a.boot)
+
+
+def cmd_bench(a: argparse.Namespace) -> None:
+    from vq.bench import BATCH_SIZES, run
+
+    run(_scorer_cfg(a), a.root, a.out, batch_sizes=tuple(a.batch_sizes or BATCH_SIZES))
+
+
+def _add_scorer_args(p: argparse.ArgumentParser) -> None:
+    p.add_argument("--model", required=True)
+    p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--max-pixels", type=int, default=None)
+    p.add_argument("--attn", default="sdpa")
+    p.add_argument("--use-kernels", action="store_true", help="load HF hub kernels (causal-conv1d, fla)")
+    p.add_argument("--batch-size", type=int, default=16)
+    p.add_argument("--full-logits", action="store_true", help="compute logits for every position (Q-ReAlign scorer)")
+    p.add_argument("--workers", type=int, default=8)
 
 
 def cmd_train(a: argparse.Namespace) -> None:
@@ -109,17 +131,16 @@ def main(argv: list[str] | None = None) -> None:
     f.set_defaults(fn=cmd_frames)
 
     e = sub.add_parser("eval", help="score sets and write metrics")
-    e.add_argument("--model", required=True)
-    e.add_argument("--out", type=Path, required=True)
+    _add_scorer_args(e)
     e.add_argument("sets", nargs="+")
-    e.add_argument("--max-pixels", type=int, default=None)
-    e.add_argument("--attn", default="sdpa")
-    e.add_argument("--batch-size", type=int, default=16)
-    e.add_argument("--full-logits", action="store_true", help="compute logits for every position (Q-ReAlign scorer)")
-    e.add_argument("--workers", type=int, default=8)
     e.add_argument("--limit", type=int, default=0, help="evenly spaced subset per set; 0 = all")
     e.add_argument("--boot", type=int, default=1000)
     e.set_defaults(fn=cmd_eval)
+
+    bn = sub.add_parser("bench", help="speed harness: batch-1 latency and throughput per batch size")
+    _add_scorer_args(bn)
+    bn.add_argument("--batch-sizes", type=int, nargs="*")
+    bn.set_defaults(fn=cmd_bench)
 
     t = sub.add_parser("train", help="supervised fine-tuning from a YAML config")
     t.add_argument("config", type=Path)

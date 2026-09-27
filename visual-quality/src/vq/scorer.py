@@ -30,7 +30,8 @@ QWEN_MERGE = 2
 class ScorerConfig:
     model: str
     max_pixels: int | None = None  # per image/frame; None = processor default (Q-ReAlign: no cap)
-    attn: str = "sdpa"
+    attn: str = "sdpa"  # sdpa | eager | a hub kernel repo such as kernels-community/flash-attn2
+    use_kernels: bool = False  # HF hub kernels (causal-conv1d, fla) instead of the torch fallbacks
     dtype: str = "bfloat16"
     batch_size: int = 16
     last_logits_only: bool = True  # logits_to_keep=1; False = full-sequence logits (Q-ReAlign scorer)
@@ -98,7 +99,9 @@ class Scorer:
         set_pixel_cap(self.processor, cfg.max_pixels)
         dtype = getattr(torch, cfg.dtype)
         self.model = (
-            AutoModelForImageTextToText.from_pretrained(cfg.model, dtype=dtype, attn_implementation=cfg.attn)
+            AutoModelForImageTextToText.from_pretrained(
+                cfg.model, dtype=dtype, attn_implementation=cfg.attn, use_kernels=cfg.use_kernels
+            )
             .to(device)
             .eval()
         )
