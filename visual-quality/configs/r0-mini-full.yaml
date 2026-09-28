@@ -1,0 +1,21 @@
+# R0: Qwen3.5-0.8B (the Q-ReAlign Mini base) on the ONE-ALIGN mix with the released recipe.
+# One GPU: micro-batch 8 x grad-accum 2 = global batch 16 (Q-ReAlign: 2 GPUs x 4 x 2).
+# No pixel cap (Q-ReAlign default). Final weights are the result; no checkpoint selection.
+name: r0-mini-full
+model: Qwen/Qwen3.5-0.8B
+mix: [koniq, spaq, kadid, ava, lsvq]
+max_pixels: null
+epochs: 2
+lr: 2.0e-5
+warmup_ratio: 0.03
+weight_decay: 0.1
+betas: [0.9, 0.95]
+max_grad_norm: 1.0
+micro_batch: 8
+grad_accum: 2
+freeze_vision: false
+# Q-ReAlign/ms-swift default is on. It does not change the maths, and on this model it cut step
+# throughput about 5x (6.6 vs 33.3 samples/s at micro 8, fp32 master, sdpa). Peak VRAM without it: ~37 GB.
+gradient_checkpointing: false
+workers: 10
+seed: 0

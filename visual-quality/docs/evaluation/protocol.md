@@ -197,6 +197,8 @@ What this shows: on a faster GPU, Q-ReAlign Lite and Pro reach less than half of
 
 Key finding: **Q-ReAlign Lite and Pro are slower than the original Q-Align, even on a faster GPU** (RTX 4090 vs RTX 3090). Q-ReAlign gains accuracy at a cost in throughput. For our goal (beat Q-Align on cost and latency first), Lite and Pro are accuracy references, not cost references.
 
+Our own measurements on one GPU, with the harness below, are in [results/](../../results/README.md#stage-0-speed-harness). They confirm this finding for images and show that the 0.8B model is 5 times faster than OneAlign on video.
+
 ### Inference configuration to investigate
 
 Before we blame the backbone, check how Q-ReAlign runs. Audit rows 14–16 in section 8 show the settings. Test each factor alone, on the harness below, and record accuracy and speed together.

@@ -1,0 +1,41 @@
+{
+  "rows": 287702,
+  "steps": 35962,
+  "warmup": 1079,
+  "config": {
+    "name": "r0-mini-full",
+    "model": "Qwen/Qwen3.5-0.8B",
+    "mix": [
+      "koniq",
+      "spaq",
+      "kadid",
+      "ava",
+      "lsvq"
+    ],
+    "data_root": "data",
+    "out_root": "runs",
+    "max_pixels": null,
+    "epochs": 2,
+    "lr": 2e-05,
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.1,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "max_grad_norm": 1.0,
+    "micro_batch": 8,
+    "grad_accum": 2,
+    "freeze_vision": false,
+    "gradient_checkpointing": false,
+    "attn": "sdpa",
+    "workers": 10,
+    "seed": 0,
+    "limit_per_set": {},
+    "log_every": 10
+  },
+  "samples": 575392,
+  "tokens": 249245620,
+  "wall_h": 9.121278089718334,
+  "peak_vram_gb": 66.146759168
+}

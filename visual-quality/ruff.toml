@@ -1,0 +1,7 @@
+extend = "../ruff.toml"
+
+[lint.isort]
+known-first-party = ["vq", "tests"]
+
+[lint.per-file-ignores]
+"scripts/*" = ["INP001"]

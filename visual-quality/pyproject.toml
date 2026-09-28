@@ -1,0 +1,55 @@
+[project]
+name = "vq"
+version = "0.1.0"
+description = "Visual quality and aesthetics scoring: Q-Align-style level-token scorers, locked evals, speed harness, SFT"
+readme = "README.md"
+authors = [
+    { name = "Adam Houston", email = "phazyy9@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.1",
+    "scipy>=1.14",
+    "pillow>=11",
+    "pyyaml>=6.0.2",
+]
+
+[project.optional-dependencies]
+# GPU runtime (pod). The OneAlign anchor runs in its own venv (scripts/onealign_env.sh).
+gpu = [
+    "torch>=2.9",
+    "torchvision>=0.24",
+    "transformers>=5.3,<6",
+    "accelerate>=1.10",
+    "safetensors>=0.4",
+    "huggingface_hub>=0.34",
+    "av>=14",
+    "flash-linear-attention>=0.5",
+    "kernels>=0.16,<0.17",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.11",
+]
+
+[project.scripts]
+vq = "vq.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.9,<0.13.0"]
+build-backend = "uv_build"
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu130", marker = "sys_platform == 'linux'" }]
+torchvision = [{ index = "pytorch-cu130", marker = "sys_platform == 'linux'" }]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
