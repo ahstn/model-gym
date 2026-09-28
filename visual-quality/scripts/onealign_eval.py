@@ -164,10 +164,21 @@ def cmd_eval(a: argparse.Namespace, oa: OneAlign) -> None:
         "env": _env(),
         "sets": {},
     }
-    oa.score_rows(subset(read_manifest(a.root / "manifests" / f"{a.sets[0]}.jsonl"), 2 * a.batch_size), a.batch_size)
+    prev = a.out / "metrics.json"  # add sets to an earlier run of the same config, as `vq eval` does
+    if prev.exists():
+        old = json.loads(prev.read_text())
+        if old["config"] == metrics["config"] and old["limit"] == a.limit:
+            metrics["sets"] = old["sets"]
+
+    def batch_size(rows: list[dict]) -> int:
+        # --batch-size counts images; a video row is 8 frames (eager attention runs out of memory otherwise)
+        return max(1, a.batch_size // len(rows[0]["media"]))
+
+    warm = read_manifest(a.root / "manifests" / f"{a.sets[0]}.jsonl")
+    oa.score_rows(subset(warm, 2 * batch_size(warm)), batch_size(warm))
     for name in a.sets:
         rows = subset(read_manifest(a.root / "manifests" / f"{name}.jsonl"), a.limit)
-        res = oa.score_rows(rows, a.batch_size)
+        res = oa.score_rows(rows, batch_size(rows))
         mos = np.array([r["mos"] for r in rows], dtype=np.float64)
         hb = rows[0]["higher_better"]
         m = correlations(res["preds"], mos, higher_better=hb)

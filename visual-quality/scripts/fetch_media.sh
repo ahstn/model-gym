@@ -46,6 +46,9 @@ maxwell)
     curl -sfL "${auth[@]}" -o "$data/video/maxwell.zip" "$(hf_url teowu/DIVIDE-MaxWell videos.zip)"
     python3 -m zipfile -e "$data/video/maxwell.zip" "$data/video/maxwell"
     rm "$data/video/maxwell.zip"
+    # The zip holds videos/NNNN.mp4 (plus a stray .ipynb_checkpoints); the labels name NNNN.mp4.
+    find "$data/video/maxwell/videos" -name '*.mp4' -exec mv -t "$data/video/maxwell" {} +
+    rm -r "$data/video/maxwell/videos"
     uv run vq frames maxwell_test --workers 12 --delete
     ;;
 *)
