@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import platform
 
 from pathlib import Path
@@ -23,6 +24,17 @@ def subset(rows: list[dict[str, Any]], limit: int) -> list[dict[str, Any]]:
     return [rows[i] for i in idx]
 
 
+def cpu_limit() -> float:
+    """Usable CPUs: the cgroup v2 quota if set (containers), else the affinity mask."""
+    try:
+        quota, period = Path("/sys/fs/cgroup/cpu.max").read_text().split()
+        if quota != "max":
+            return round(int(quota) / int(period), 2)
+    except (OSError, ValueError):
+        pass
+    return float(len(os.sched_getaffinity(0)))
+
+
 def environment() -> dict[str, Any]:
     import torch
     import transformers
@@ -33,6 +45,7 @@ def environment() -> dict[str, Any]:
         "cuda": torch.version.cuda,
         "transformers": transformers.__version__,
         "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
+        "cpus": cpu_limit(),
     }
 
 

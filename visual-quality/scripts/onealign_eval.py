@@ -14,7 +14,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import platform
 import sys
 import time
@@ -30,7 +29,7 @@ from PIL import Image, ImageFile
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from vq.bench import BATCH_SIZES, IMAGE_MIX, LATENCY_ITEMS, VIDEO_MIX, bench_rows
 from vq.data import read_manifest
-from vq.evaluate import subset
+from vq.evaluate import cpu_limit, subset
 from vq.metrics import bootstrap, correlations
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True  # truncated AVA JPEGs, as in Q-Align's own eval
@@ -152,7 +151,7 @@ def _env() -> dict:
         "cuda": torch.version.cuda,
         "transformers": transformers.__version__,
         "gpu": torch.cuda.get_device_name(0),
-        "cpus": len(os.sched_getaffinity(0)),
+        "cpus": cpu_limit(),
     }
 
 

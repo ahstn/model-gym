@@ -12,7 +12,6 @@ The run also records visual tokens per item, the software stack, and the CPU cou
 from __future__ import annotations
 
 import json
-import os
 import time
 
 from pathlib import Path
@@ -52,7 +51,7 @@ def run(cfg, root: Path, out: Path, *, batch_sizes: tuple[int, ...] = BATCH_SIZE
     merge = getattr(scorer.processor.image_processor, "merge_size", 2)
     result: dict[str, Any] = {
         "config": cfg.asdict(),
-        "env": environment() | {"cpus": len(os.sched_getaffinity(0))},
+        "env": environment(),
         "modes": {},
     }
     for mode, mix in (("image", IMAGE_MIX), ("video", VIDEO_MIX)):
