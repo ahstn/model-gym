@@ -1,0 +1,96 @@
+{
+  "config": {
+    "model": "q-future/Q-ReAlign-Mini-0.8B",
+    "max_pixels": 1048576,
+    "attn": "sdpa",
+    "use_kernels": false,
+    "dtype": "bfloat16",
+    "batch_size": 16,
+    "last_logits_only": true,
+    "workers": 8
+  },
+  "env": {
+    "python": "3.12.11",
+    "torch": "2.14.0+cu130",
+    "cuda": "13.0",
+    "transformers": "5.17.0",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "cpus": 13.6
+  },
+  "modes": {
+    "image": {
+      "items": 1000,
+      "visual_tokens_mean": 768.34,
+      "latency_ms_p50": 34.52908850158565,
+      "latency_ms_p95": 41.85972424747888,
+      "throughput": {
+        "1": {
+          "items_per_s": 35.35570503120841,
+          "peak_vram_gb": 1.893168128
+        },
+        "4": {
+          "items_per_s": 59.79910793006132,
+          "peak_vram_gb": 2.35401216
+        },
+        "8": {
+          "items_per_s": 56.78945125081448,
+          "peak_vram_gb": 2.968472064
+        },
+        "16": {
+          "items_per_s": 50.97316231457911,
+          "peak_vram_gb": 4.197390336
+        },
+        "32": {
+          "items_per_s": 47.83596730245718,
+          "peak_vram_gb": 6.655227392
+        },
+        "64": {
+          "items_per_s": 44.64958917464191,
+          "peak_vram_gb": 10.24727808
+        }
+      },
+      "peak": {
+        "batch_size": 4,
+        "items_per_s": 59.79910793006132,
+        "peak_vram_gb": 2.35401216
+      }
+    },
+    "video": {
+      "items": 200,
+      "visual_tokens_mean": 923.84,
+      "latency_ms_p50": 41.64933250285685,
+      "latency_ms_p95": 65.55476340581663,
+      "throughput": {
+        "1": {
+          "items_per_s": 29.861546320776508,
+          "peak_vram_gb": 1.934269952
+        },
+        "4": {
+          "items_per_s": 47.068440763251076,
+          "peak_vram_gb": 2.466039808
+        },
+        "8": {
+          "items_per_s": 44.01395834461184,
+          "peak_vram_gb": 3.175066112
+        },
+        "16": {
+          "items_per_s": 44.09847415757354,
+          "peak_vram_gb": 4.571943936
+        },
+        "32": {
+          "items_per_s": 44.109402333420356,
+          "peak_vram_gb": 7.072572416
+        },
+        "64": {
+          "items_per_s": 41.343628108104205,
+          "peak_vram_gb": 11.619836928
+        }
+      },
+      "peak": {
+        "batch_size": 4,
+        "items_per_s": 47.068440763251076,
+        "peak_vram_gb": 2.466039808
+      }
+    }
+  }
+}

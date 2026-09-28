@@ -105,9 +105,12 @@ def cmd_train(a: argparse.Namespace) -> None:
 
 
 def cmd_report(a: argparse.Namespace) -> None:
-    from vq.report import table
+    from vq.report import bench_table, table
 
-    print(table(a.runs, _sets(a.sets), ref=a.ref, boot=a.boot))
+    if a.bench:
+        print(bench_table(a.runs, usd_per_hour=a.usd_per_hour))
+    else:
+        print(table(a.runs, _sets(a.sets), ref=a.ref, boot=a.boot))
 
 
 def cmd_info(a: argparse.Namespace) -> None:
@@ -157,6 +160,8 @@ def main(argv: list[str] | None = None) -> None:
     rp.add_argument("--sets", nargs="+", default=["t1", "t2"])
     rp.add_argument("--ref", type=Path)
     rp.add_argument("--boot", type=int, default=1000)
+    rp.add_argument("--bench", action="store_true", help="speed-harness table from bench.json files")
+    rp.add_argument("--usd-per-hour", type=float, default=2.09, help="GPU price for the cost column")
     rp.set_defaults(fn=cmd_report)
 
     i = sub.add_parser("info", help="environment and manifest counts")
