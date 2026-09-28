@@ -1,6 +1,6 @@
 # Experiment plan for a Q-ReAlign re-train
 
-This file gives a staged plan to re-train or improve Q-ReAlign and to compare it with other assessors. It lists the runs, controls, gates, compute assumptions, and the first competitor set. It is a plan, not a result: no run in this file has been done.
+This file gives a staged plan to re-train or improve Q-ReAlign and to compare it with other assessors. It lists the runs, controls, gates, compute assumptions, and the first competitor set. It is a plan. Results of the runs done so far (Stage 0 accuracy anchors, R0) are in [results/](../../results/README.md).
 
 Last verified: 2026-09-27
 
