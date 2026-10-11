@@ -1,0 +1,789 @@
+{
+  "assessor": "Codex primary agent, direct visual inspection",
+  "created_at": "2026-10-11T15:35:30.409256+00:00",
+  "status": "Uncalibrated model-reference judgments, not human labels or forensic proof. Source labels and model outcomes hidden during inspection; panel class balance and source design known.",
+  "view": "Six images per neutral-ID sheet, native delivered512px size",
+  "frozen_before": "All expanded heldout API requests",
+  "samples": [
+    {
+      "id": "ai-000",
+      "delivered_sha256": "8e206d671ed357dd0ba95beb7c229f5f8b1cf7666f931c8a980246439ae7748e",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Natural leaf variation, fence grain and hard sunlight form a coherent garden record.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-001",
+      "delivered_sha256": "bebd846971d98c2101b9397be110f3a2492567184be0ecd49618a47cbc77b09a",
+      "ai_probability": 0.35,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.09999999999999998,
+        0.6
+      ],
+      "evidence": "Coherent portrait and wall perspective; very polished color and fabric detail are weak origin cues.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-002",
+      "delivered_sha256": "5bc6931729f985b5c8948e23d0835b6c106975009e7db53648d3580bf586a008",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Layered reflections, shop objects and window geometry contain coherent incidental detail.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-003",
+      "delivered_sha256": "6d54b7eb47b755a0afe25e1814727196c616014f3cdcc8d6d015b4726bd4e296",
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.33
+      ],
+      "evidence": "Rabbit anatomy and irregular surrounding twigs look coherent despite coarse texture.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-004",
+      "delivered_sha256": "48d339cd5a890f5fa60be4d322c86bcde5360b20e214c07e542ee06a2f339b58",
+      "ai_probability": 0.65,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.4,
+        0.9
+      ],
+      "evidence": "Very smooth facial rendering and tidy styling raise suspicion; studio retouching remains plausible.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-005",
+      "delivered_sha256": "7d0e98542313465c28d8abe199794a86a23b82f241afb46e7832912877859220",
+      "ai_probability": 0.65,
+      "medium": "graphic",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.4,
+        0.9
+      ],
+      "evidence": "Painterly fantasy scene has dense ambiguous hand and armor details; illustration alone cannot establish origin.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-006",
+      "delivered_sha256": "2d580e16f57bad38988e8ee9c61e7c5e0fe45766bc32ba19ee96c23ad052d9b3",
+      "ai_probability": 0.8,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0.55,
+        1
+      ],
+      "evidence": "The dog appears to hold a burger in an unlikely paw pose; a staged or edited photograph remains possible.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-007",
+      "delivered_sha256": "fcf01e2bc492660f3405a6f05e513ae61f316e89759af04d6c514fdbb040bd00",
+      "ai_probability": 0.35,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.09999999999999998,
+        0.6
+      ],
+      "evidence": "Soft seaside still life has coherent depth and reflections; strong color grading is not origin evidence.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-008",
+      "delivered_sha256": "f4c5c6f40306a1067e9fcd355830d15c61c38c877e13387f31e90bb35f0a8dfd",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Fire-escape geometry and mixed facade detail remain consistent across the frame.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-009",
+      "delivered_sha256": "bce7456aa197d31c2dee5f00737768a3b21b550528a3a12318eddd3edc698b15",
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.33
+      ],
+      "evidence": "Camouflaged insect, ground debris and sunlight look physically consistent.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-010",
+      "delivered_sha256": "43f4af92d991a6a1e8d93c93b4cae3661dce78f04516acc20cd7c0f0a9b1871d",
+      "ai_probability": 0.75,
+      "medium": "render",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.5,
+        1
+      ],
+      "evidence": "Dense fantasy armor and decorative crystal detail contain uncertain joins; conventional fan art is a plausible alternative.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-011",
+      "delivered_sha256": "fc99cd91ab42b8542aea43ba1696653a94edfd28ea4261a8a8c5ae349efd7bed",
+      "ai_probability": 0.07,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.32
+      ],
+      "evidence": "Ball scuffs, glasses and irregular mulch support a coherent staged camera scene.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-012",
+      "delivered_sha256": "2e5560f9c38afd6dd9297f6c2f2f3cd377d7f6a3f7dd1f278a30d2acf0114c0a",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Rock fractures, brush and hard shadows have varied coherent detail.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-013",
+      "delivered_sha256": "6c1e81d14f9cf7c4caa2dd0521adefb6aba7295cde7c68e418106a5c10342f36",
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.33
+      ],
+      "evidence": "Puppy fur, worn toy, floor grain and straps look mutually consistent.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-014",
+      "delivered_sha256": "70be54e16b639a81a32c4e1c387a17581aafaac9cc3c1edd84ae68025f902a4e",
+      "ai_probability": 0.7,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.44999999999999996,
+        0.95
+      ],
+      "evidence": "Crowd faces and raised objects contain strained local detail, though a staged historical scene is plausible.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-015",
+      "delivered_sha256": "005c2c8575bbd361f741bd8311d67c7ce06926c7b31440c195384ecf34ad6465",
+      "ai_probability": 0.5,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.25,
+        0.75
+      ],
+      "evidence": "A silhouette against a circular digital display could be a composite or camera scene; origin cues are weak.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-016",
+      "delivered_sha256": "e7cc788523007afd6d0f184563d576c1997872eec97d8d5f864bb47412475e36",
+      "ai_probability": 0.1,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.35
+      ],
+      "evidence": "Dark performance space has coherent projection surfaces, rigging and water reflections.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-017",
+      "delivered_sha256": "a945e30159deae436fb0a34c48a39fa26e152fff8f5bb801c6b53d3b09d73f97",
+      "ai_probability": 0.7,
+      "medium": "render",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.44999999999999996,
+        0.95
+      ],
+      "evidence": "Stylized bird has patterned feather transitions and exaggerated anatomy; polished rendering alone is insufficient.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-018",
+      "delivered_sha256": "28eb3378a249ee544d014e76d75e8745016274659545642e862d8c5c15ac6c06",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Road, guardrail joints and distant vehicles show consistent camera perspective and incidental detail.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-019",
+      "delivered_sha256": "fae25fb44fd030cdc67be5b773a9db468c6941c4d05212211c4519e0823951c9",
+      "ai_probability": 0.45,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.2,
+        0.7
+      ],
+      "evidence": "Stock-style office portrait is plausible; fingers and skin are polished but not decisive.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-020",
+      "delivered_sha256": "3f13fc85e0cae739ca8e1963db471de0cdf5cccc257517cccadd85d89de68956",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Table hardware, sagging net, uneven ground and background objects form a coherent camera scene.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-021",
+      "delivered_sha256": "e4dc6327bc5c9c616d8b2aa44859f881b758949f961285e4e2c3ad433cece696",
+      "ai_probability": 0.4,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.15000000000000002,
+        0.65
+      ],
+      "evidence": "Sushi and tray lighting are plausible; highly selective focus hides detail and limits origin evidence.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-022",
+      "delivered_sha256": "9948f07c34c53d681d35fda506991de40363a17545de6b67f404bd21ba28f1f7",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Graffiti, weathered pipe and overlapping leaves have coherent surface detail.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-023",
+      "delivered_sha256": "12737e65229a1bb921a6be0823307e8ce7e77842526853838915ec275c6a6a2f",
+      "ai_probability": 0.07,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.32
+      ],
+      "evidence": "Legible road sign, signal hardware and tree silhouettes support camera capture.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-024",
+      "delivered_sha256": "4d375b502a230edf9f27840f5adf714fe112a6bd945a3e6e5255f6c5e8851de1",
+      "ai_probability": 0.6,
+      "medium": "graphic",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.35,
+        0.85
+      ],
+      "evidence": "Fantasy wizard has coherent broad structure but ambiguous finger and fabric detail; painted concept art remains plausible.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-025",
+      "delivered_sha256": "451b3332d3a47e4375d660c4362d515f87dd51f09097c1165edcd671c7b56512",
+      "ai_probability": 0.45,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.2,
+        0.7
+      ],
+      "evidence": "Sports action looks plausible; repeated jersey numbers and soft background figures give weak suspicion.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-026",
+      "delivered_sha256": "d9671842ed8fdcc6f7851fb8331958443caa54254485f9bf8edab153bea6d187",
+      "ai_probability": 0.65,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.4,
+        0.9
+      ],
+      "evidence": "Smooth face and highly uniform decorative detail raise suspicion, while edited portrait photography remains plausible.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-027",
+      "delivered_sha256": "8c0520aa434b6237182137d1dcbed19665a9aaa7a18e4a5d7c46a36e7bf24c30",
+      "ai_probability": 0.07,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.32
+      ],
+      "evidence": "Insect legs, concrete grain and shallow depth appear physically consistent.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-028",
+      "delivered_sha256": "d99010d13ae8108fcc71131097dbae3a2353884ba65e6d0ef5cf37015222b7c9",
+      "ai_probability": 0.7,
+      "medium": "graphic",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.44999999999999996,
+        0.95
+      ],
+      "evidence": "Anime rider and large wolf are clearly illustrated; fine architectural and limb joins are ambiguous.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-029",
+      "delivered_sha256": "1bd04bf98d56b79f136bc2492a68605c10578fe712c2163893b419583c09ff3c",
+      "ai_probability": 0.75,
+      "medium": "graphic",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.5,
+        1
+      ],
+      "evidence": "Dense ornate portal detail has fluid, hard-to-resolve connections, but surreal painting is a possible source.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-030",
+      "delivered_sha256": "266f8c8433ed884e8d2be2c4a00f8873f73381b403c4ecb71df970bb5cc6c6ff",
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.33
+      ],
+      "evidence": "Racket shadow follows a worn wall with coherent lighting and material texture.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-031",
+      "delivered_sha256": "c1839f920695865582acd24b70117b862e1db251a8aca0c97e366029f7e9b335",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Painted portrait, stickers and mortar lines remain aligned on a weathered wall.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-032",
+      "delivered_sha256": "48ac250a0944922a7a503517fd243aef6456a89281fd8b8928d88e6f35b7433d",
+      "ai_probability": 0.07,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.32
+      ],
+      "evidence": "Partly eaten cake, crumbs and irregular table reflections support a camera scene.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-033",
+      "delivered_sha256": "c4d8b1e1fe80fb3d764092953aef4b2f38703a8823cb01f9b3e7371d84e697f3",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Palm fronds, clouds and chain-link fence have consistent ordinary detail.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-034",
+      "delivered_sha256": "0af6f114b19ea870fc6440be6be0df1d832eb0e58f02f3e18e76f80c75cf0a6d",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Convex mirror reflection matches the street perspective and surrounding buildings.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-035",
+      "delivered_sha256": "8f85bc9006f0c2c680ea2882f87997de970e1914368f83ceb5ba4466e0eb60e7",
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.33
+      ],
+      "evidence": "Freight car texture and graffiti are coherent despite blur and reduced detail.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-036",
+      "delivered_sha256": "2c45102592136a02e576c14cc1512db7bdf5263b0a198feea2cae9b572ae8039",
+      "ai_probability": 0.06,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.31
+      ],
+      "evidence": "Lamp wiring, wood panel grain and mounted objects have coherent incidental detail.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-037",
+      "delivered_sha256": "26e6839173f7b08ba23512c25d6c695ef96d0450e3d3031ad06fd98c2bfcd532",
+      "ai_probability": 0.85,
+      "medium": "graphic",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0.6,
+        1
+      ],
+      "evidence": "Magazine cover has malformed repeated headline text and uncertain hand detail; edited collage remains possible.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-038",
+      "delivered_sha256": "82569629fd989133fede622f527c1719661c45a141c02aeb7ed7685ba3256d53",
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.33
+      ],
+      "evidence": "Sculpture has consistent outdoor wear, cast shadows and surrounding foliage.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-039",
+      "delivered_sha256": "18e23455f4f1e906572463978a6e65d6d4156823ce76450f4c8fccbb7f5b084a",
+      "ai_probability": 0.8,
+      "medium": "render",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.55,
+        1
+      ],
+      "evidence": "Stylized figure and motorcycle contain dense ambiguous mechanical joins and surface detail.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-040",
+      "delivered_sha256": "e89021b76589ff999698e01e1c8122818e7b88aaaa2d256bb6a64bcaf192b73f",
+      "ai_probability": 0.1,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.35
+      ],
+      "evidence": "Blurred motorcycles and parking lines remain structurally plausible; limited detail reduces certainty.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-041",
+      "delivered_sha256": "890740559dd6885fc041ebb4d06d842d342671ec3ce9bb63a137dbf1a91a10e5",
+      "ai_probability": 0.85,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0.6,
+        1
+      ],
+      "evidence": "Banner contains multiple malformed words and small figures have ambiguous anatomy, supporting synthesis suspicion.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-042",
+      "delivered_sha256": "cbd810f6d2ea2ccac15a2dd4de67b545dd43610ae00e123fc2ac7dfd4ba244aa",
+      "ai_probability": 0.25,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0,
+        0.5
+      ],
+      "evidence": "Natural portrait texture and knit detail are plausible; no decisive synthesis defect is visible.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-043",
+      "delivered_sha256": "09c9eac39ede6c9ded5a6ab9d8dd1b98dc4c74d7a2062d461562c20a58ff83a0",
+      "ai_probability": 0.8,
+      "medium": "render",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0.55,
+        1
+      ],
+      "evidence": "Mouse crane scene has improbable hybrid mechanics and highly polished surfaces; a crafted miniature is still possible.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-044",
+      "delivered_sha256": "3bdfbe0e7381a976d49fe99840fed193c771a38de9b70b0e19845976ab312cff",
+      "ai_probability": 0.07,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.32
+      ],
+      "evidence": "Finger, hidden lizard and weathered wood form a coherent close camera view.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-045",
+      "delivered_sha256": "2b319e4a5d418c546f2a44ca74b209492715a230cec09e0449608c0e739bb78f",
+      "ai_probability": 0.75,
+      "medium": "graphic",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.5,
+        1
+      ],
+      "evidence": "Illustrated water scene has fluid contour and hand details; fantasy content alone does not establish AI origin.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-046",
+      "delivered_sha256": "5225703191aad6829e826fb34ab36b33484537b58874ec158dd442e7c99adb97",
+      "ai_probability": 0.35,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.09999999999999998,
+        0.6
+      ],
+      "evidence": "Cafe scene has plausible light and pose, with some indistinct hand details but no decisive origin cue.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-047",
+      "delivered_sha256": "c629224252dfad8b1918a72a19817575b368888a540cee38d405bd9bb3e56320",
+      "ai_probability": 0.7,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.44999999999999996,
+        0.95
+      ],
+      "evidence": "Repeated race numbers and unusual small limb details raise suspicion, though staged sports imagery is possible.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-048",
+      "delivered_sha256": "56cd8fda88d5a0d417764d0d1af5fd2d2586bec6c20f25c27daed203f451345d",
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.33
+      ],
+      "evidence": "Bird silhouette and cloud edges look coherent; minimal subject detail limits origin evidence.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-049",
+      "delivered_sha256": "03241cb3b529a8c5f5247c916a53e12f579e9500fc0a7e6113790efa396229b5",
+      "ai_probability": 0.6,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.35,
+        0.85
+      ],
+      "evidence": "Calendar and drink still life has very uniform staged surfaces and uncertain tiny marks; product photography remains possible.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-050",
+      "delivered_sha256": "21ec8bceaff9f240b47fac200c527cdd6b0910aaf20479222cc1865f0d5f8dbb",
+      "ai_probability": 0.65,
+      "medium": "render",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.4,
+        0.9
+      ],
+      "evidence": "Cartoon donkey has plausible designed geometry; dense clothing detail gives only weak generative cues.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-051",
+      "delivered_sha256": "ead134175e48e8a201e9878b110acca79bc6a42d9e5a6096e49b2ccb7087f643",
+      "ai_probability": 0.95,
+      "medium": "graphic",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0.7,
+        1
+      ],
+      "evidence": "Promotional graphic contains repeated malformed text and inconsistent lettering, a strong synthesis cue.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-052",
+      "delivered_sha256": "ec2fc44ae49855ae1148bbe97f7c35959a540ce8304f0ecb55302cadd4e225d4",
+      "ai_probability": 0.7,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.44999999999999996,
+        0.95
+      ],
+      "evidence": "Red eye and flames show implausible local structure, but an edited macro photograph could explain them.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-053",
+      "delivered_sha256": "5bbec69d9c2b43764010438de6fc8f6a201ffa7baaaddc0c32d91b85a50a5e29",
+      "ai_probability": 0.06,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.31
+      ],
+      "evidence": "Paint wear, shields, tools and sand shadows form a coherent camera scene.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-054",
+      "delivered_sha256": "5f3b1c37aec5bbfbb8da8ae9ff5447b6e8d8abd2ddd8bd745a516d023d403aad",
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.33
+      ],
+      "evidence": "Store-window reflections and clothing details align naturally; flower heads appear to be physical display props.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-055",
+      "delivered_sha256": "3cc9347424e4b06ab65617432f45cfb49c47d29e03f51b75912169f6cac60f79",
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.33
+      ],
+      "evidence": "Goat anatomy, ground texture and overlapping bodies appear coherent despite crowding.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-056",
+      "delivered_sha256": "d6b351ccc4c611fe2778d7e6a3d59d47a019621d3e0d47a390fea9ab63e77a77",
+      "ai_probability": 0.1,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.35
+      ],
+      "evidence": "Underwater viewing structure, fish and reflections support a plausible aquarium photograph.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-057",
+      "delivered_sha256": "2e2429e749a316ef9ebf6f1803eb8ec650c9da57244fd6479fffbcca924bee47",
+      "ai_probability": 0.45,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.2,
+        0.7
+      ],
+      "evidence": "Classic car and panned background could be a photograph or synthesis; small trim details are unclear.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-058",
+      "delivered_sha256": "23f7f9f3ad3d3b03c65ff4489cdc072f7e2dbd03707c4838a95d34dcecf2e6a7",
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "uncertainty": "medium",
+      "ai_probability_interval": [
+        0,
+        0.3
+      ],
+      "evidence": "Petal veins, soil and irregular leaves contain consistent natural variation.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "ai-059",
+      "delivered_sha256": "783a554ce6dd3c724fecf5ce921ce3172129adefd616306d8330816c88dceedd",
+      "ai_probability": 0.75,
+      "medium": "photo",
+      "uncertainty": "high",
+      "ai_probability_interval": [
+        0.5,
+        1
+      ],
+      "evidence": "Several signs contain malformed letters and some small limb details are uncertain, supporting synthesis suspicion.",
+      "development_partition": "heldout"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+[project]
+name = "visual-triage"
+version = "0.1.0"
+description = "Bounded image triage experiments with OpenRouter decision models"
+requires-python = ">=3.13"
+dependencies = [
+    "pillow>=11,<13",
+    "remotezip==0.12.6",
+    "requests>=2.32,<3",
+]
+[dependency-groups]
+dev = ["pytest>=8.3", "ruff>=0.11"]
+optimisation = ["gepa==0.1.4"]
+[tool.ruff]
+line-length = 110

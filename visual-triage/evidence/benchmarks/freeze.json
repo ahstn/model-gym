@@ -1,0 +1,30 @@
+{
+  "frozen_at": "2026-10-11T15:32:43.127325+00:00",
+  "heldout_images_seen": false,
+  "heldout_model_calls": 0,
+  "selected_prompts": {
+    "quality": "quality-r2",
+    "ai": "ai-r4"
+  },
+  "reasoning": {
+    "gemini": "low",
+    "luna": "low",
+    "decider": "not exposed by Decisions API"
+  },
+  "quality_reason": "r3 check group MAE0.2907 is lowest; r2 at0.3096 falls within0.05 and is shorter, so the frozen tie-break selects r2. r1/r4 fall outside that band.",
+  "ai_reason": "r4 has lowest tune visual-suspicion MAE0.1208 versus r1 .1337. Check MAE .0508 is close to r2 .0474 and lower than r1 .0547. No positive check labels support recall tuning; keep predeclared general r4.",
+  "effort_reason": "Medium did not improve quality+aesthetics ordinary MAE by0.10 for either model; low also has lower AI visual-suspicion MAE. Use low for both tasks and report medium pilot separately.",
+  "no_further_tuning": "Prompts, thresholds and effort frozen before opening either new panel. New images are for assessment and evaluation only.",
+  "prompt_hashes": {
+    "quality": "0f6f9b4640bf26d534636448882a2d5c028d77a8dec31246601547110a0ffc81",
+    "ai": "25e5e76cd573e2c5b15cdf6e2a676441f399d11270f4dcc0ca9a29203041f532"
+  },
+  "max_output_tokens": 4096,
+  "ai_threshold": 0.5,
+  "ai_review_band": [
+    0.2,
+    0.8
+  ],
+  "delivery": "full frame maxedge512 JPEG92 subsampling0",
+  "final_execution": "One sequential loop per task, alternating model order by image; two task loops may overlap. No automatic retries."
+}
