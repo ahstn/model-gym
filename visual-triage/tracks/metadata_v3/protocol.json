@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "study": "native-exif-c2pa-decider-v3",
+  "frozen_at": "2026-10-12T00:17:14.847240+00:00",
+  "dataset_sha256": "3a1fe8dc41a7aff4d803a98ddf09f6aac5b1aa851b356ccda328e329756169de",
+  "controls_sha256": "342e7e94b31f37fba7d8d8f99d6c3358128e6d0b0c60495121cf89f8484b4693",
+  "baseline_prompt_path": "tracks/metadata_v3/baseline.json",
+  "baseline_prompt_sha256": "e125e63f38c4a0871a94435ca8a5ccaa110ed8ee9f51f107d68bbfa7f00fe464",
+  "hash_conventions": "This protocol hashes dataset, controls and code as raw files. Prompts, features, requests, controls.base_dataset_sha256 and optimisation run.dataset_sha256 use bench_protocol.digest canonical JSON",
+  "code_sha256": {
+    "bench_protocol.py": "be6ed1dbb8ccdc979312af1447766759f9036f26f7a2914223164459211f2bb9",
+    "bench_runner.py": "d65c6d68fd6d8f74f279f60140d9ca50aa6834d198f82e770cc9c3172bce1fd3",
+    "bench_analyze.py": "408fa78062b08923cdd685ed005e215229a51e123bc7e55d08d20f3109f8d5cb",
+    "tracks/image_context.py": "26af566d54a5f5617123606702901037edb4b8a521988cfd0bce9943eb39d7e8",
+    "tracks/metrics.py": "e43ad60188fc7e67ab932ab60279c13dc4561f7840187a2bf920651457375d3a",
+    "tracks/run.py": "8aadf0579a8462b3d23453694df3a47efd2057f5a3d80877304fdf3b2a7f68a2",
+    "tracks/optimise.py": "8a72e5f0957679a77ff0caf0a2c74a04bcea3dc294ff9d980338b5775b66bddf",
+    "tracks/metadata_v3/features.py": "6c5705b286e72759cc664be12c6a9c63d629fe541f97bc02180c1f33b11d1338",
+    "tracks/metadata_v3/provenance.py": "1023b617e5b2692e1552a0f7bd99df87f1bfc1d6c7b9193e14bbf49ac08867c7",
+    "tracks/metadata_v3/runtime.py": "28c608561fbfad33cb73543a6aa186668d9fd69e131a1977bbbac382921a5184",
+    "tracks/metadata_v3/optimise.py": "4cbd8c2d7b57151f34473614cfb0dd873a987b42878f7458d42b076ffe20152e",
+    "tracks/metadata_v3/build_dataset.py": "e50b2a801b3b9897eb04690b5f1a5942ac856143032d4d5fd24a7609a750009b",
+    "tracks/metadata_v3/build_controls.py": "9190dd335bec50b842303116e458211c77b5b474b5c000ef9d2ed714ff4ce759",
+    "tracks/metadata_v3/acquire_ai.py": "d6dba0c56a3e4045736f5132c1fbedaf2f54b73df6476feacc809ff779f04b7e",
+    "tracks/metadata_v3/acquire_real.py": "29377100a30abb11ff14e10148aeb1be7ecbfa76266710aa57eae06e78009096",
+    "tracks/metadata_v3/study.py": "c9233a1ff727694ffdf3e5e5005248d86d494f74d561837c70da55b416980f84",
+    "uv.lock": "836d6321a524cdc35cb75f005764f13a0fd9d908b135e909093f2c1a17141058"
+  },
+  "arms": [
+    "image_only",
+    "resolution",
+    "camera",
+    "tone",
+    "texture",
+    "provenance",
+    "all_context"
+  ],
+  "model": "perplexity/pplx-decider-v1.1-27b",
+  "reflection_model": "openai/gpt-6-luna",
+  "reflection_reasoning": "low",
+  "reflection_max_images": 4,
+  "seed": 20261012,
+  "max_proposals": 20,
+  "minimum_dev_reward_gain": 0.005,
+  "objective": "Mean 1-Brier reward over equal eight-image, single-class source groups",
+  "ai_threshold": 0.5,
+  "test_used_for_selection": false,
+  "global_budget_usd": 5.0,
+  "arm_budget_usd": 0.65,
+  "max_task_calls_per_arm": 5000,
+  "reserve_per_inflight_usd": 0.01,
+  "concurrency": 4,
+  "trust_policy": "c2pa-python-0.38.0-rs-0.91.0-default-anchors-offline",
+  "c2pa_settings": {
+    "core": {
+      "allowed_network_hosts": []
+    },
+    "verify": {
+      "remote_manifest_fetch": false,
+      "ocsp_fetch": false,
+      "verify_after_reading": true,
+      "verify_trust": true,
+      "verify_timestamp_trust": true
+    }
+  },
+  "native_coverage": "Class-balanced images; naturally imbalanced EXIF and C2PA availability. Observational cohort, not balanced provenance proof.",
+  "controls": "Context stripping and donor swaps are experimental. C2PA byte controls use fresh validator results. Control cases are excluded from native accuracy.",
+  "selection_rule": "Freeze all seven GEPA dev selections before any test or control calls. Retain baseline unless dev reward improves by at least 0.005.",
+  "final_order": "Each forty-image batch runs all arms in fixed order, baseline then selected; unchanged prompts reuse baseline calls. Native evaluation precedes controls.",
+  "limitations": [
+    "Source collection can confound labels",
+    "No wholly unseen generator family",
+    "Phone model names differ across splits but hardware families and scenes may overlap",
+    "Untrusted EXIF and signed claims do not prove scene truth"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "version": 2,
+  "frozen_at": "2026-10-12T00:37:22.162847+00:00",
+  "review_reason": "Reviewed sandbox DNS failure evidence; preserve all unknown actual charges and failed rows, reallocate unused $0.45 global headroom to image_only guard $1.10, keep other guards $0.65 and global $5, stop new connection-failure batches for manual network review.",
+  "first_amendment_path": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/cost-recovery-amendment.json",
+  "first_amendment_sha256": "9091c8c18c3073ce378d3d37c40eafd46a5adf0d76826da8a8c10fe07b3caef0",
+  "original_protocol_sha256": "d7b505fe004141e7ea41d5af756f80209bf5ff18dfa0303a192c33f3e8d02080",
+  "runs_root": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/data/metadata-v3/runs",
+  "global_budget_usd": 5.0,
+  "original_run_receipt_arm_usd": 0.65,
+  "guard_budget_by_arm": {
+    "image_only": 1.1,
+    "resolution": 0.65,
+    "camera": 0.65,
+    "tone": 0.65,
+    "texture": 0.65,
+    "provenance": 0.65,
+    "all_context": 0.65
+  },
+  "reallocated_unused_global_headroom_usd": 0.45,
+  "allowance_usd": 0.05,
+  "no_retry": true,
+  "new_unknown_batch_action": "Record approved allowances and stop; check network before manual resume",
+  "initial_ledger_prefixes": {
+    "image_only/candidates/27d44941884859a0a019a306e689557f077c117013dec167138303497c57d106/train.jsonl": {
+      "prefix_bytes": 170793,
+      "prefix_sha256": "e1e523bd5adc6977bbc7b6a43fb1a0799ca4b12195bf481689c1e9972f1faae5"
+    },
+    "image_only/candidates/30aac61a9ec2068f313042faa38988fe9f46fcfdf8587bfdecfa4631a7876854/dev.jsonl": {
+      "prefix_bytes": 213434,
+      "prefix_sha256": "d4ec3928d9c0e40e9784d429bff27ac58d8724b90b0ef3a2bcd095ea8c1a2d0c"
+    },
+    "image_only/candidates/30aac61a9ec2068f313042faa38988fe9f46fcfdf8587bfdecfa4631a7876854/train.jsonl": {
+      "prefix_bytes": 213405,
+      "prefix_sha256": "4fd97f530ae4fe712e0a8670baf79e52364d38b9c8a6ddcbd66b185bc260b971"
+    },
+    "image_only/candidates/3f3df63089c1bc59eeb674f16e8a5be48ce561cd6c0906a195937062c1039c5c/dev.jsonl": {
+      "prefix_bytes": 215278,
+      "prefix_sha256": "a28f4b1d588f70d32556a1f34c0645483b0c502f44eadf8873b07a88b1dc6d0e"
+    },
+    "image_only/candidates/3f3df63089c1bc59eeb674f16e8a5be48ce561cd6c0906a195937062c1039c5c/train.jsonl": {
+      "prefix_bytes": 215600,
+      "prefix_sha256": "bd4e4dd0747418fd5c512877dad07a5b5edbfe5211971f30e4089cb7684b37e1"
+    },
+    "image_only/candidates/66f88669bb8259cad7c4b5c43dcb695e971941ba8816bebd1dfdeade52cf7387/dev.jsonl": {
+      "prefix_bytes": 213875,
+      "prefix_sha256": "49e647596c725d83e0e645348bf9264027330f132bd7c30737eeb15d7db8d2f4"
+    },
+    "image_only/candidates/66f88669bb8259cad7c4b5c43dcb695e971941ba8816bebd1dfdeade52cf7387/train.jsonl": {
+      "prefix_bytes": 192569,
+      "prefix_sha256": "58e7ef020b66d7f6b4642988be9c13585d946df4116e24f90caee9f72394971b"
+    },
+    "image_only/candidates/c5965f14b5e9b40bf74a388fcb9ed39443229599e7584d4cee8d26b03ab63d99/dev.jsonl": {
+      "prefix_bytes": 41907,
+      "prefix_sha256": "d3eba45118912674ab54e4f5501ea983f56d22571dc7de75a35f1ed77be4084a"
+    },
+    "image_only/candidates/c5965f14b5e9b40bf74a388fcb9ed39443229599e7584d4cee8d26b03ab63d99/train.jsonl": {
+      "prefix_bytes": 127593,
+      "prefix_sha256": "5f09977e711d86932e07b6415042236533edaf14a8989074d1549ef57ec12eda"
+    },
+    "image_only/reflection.jsonl": {
+      "prefix_bytes": 32689,
+      "prefix_sha256": "0a0a4d50100e1648524779fb148b10e9e275241566720102cbfadb103c38ab70"
+    }
+  },
+  "initial_failure_receipts": {
+    "recovery-receipts/212106a414acc2e7307168850f9270b0b373728dbd915f412cf5d12385a7edd6.json": "aea9a6ef0af3d64ebb7f55e5e6ebe57bcadaa1fe34a7d4a346ac782125d0e414",
+    "recovery-receipts/39b6a611e58109cd6d932113ce46c051ef223d2c898afddbb0ec03817abeaf8b.json": "c5eb0c9d107937e44dab2a852c3a96e3608dbd8382dc6f31e73a20e98d17c4a8",
+    "recovery-receipts/469082d20f244085b0f3a146b3948aa98ac5199a3addb5545f58ae955aa642cc.json": "46cc1c6a4ae586bcf495f91139be434ab495ef7dd3f52206c2953dd2ae4fb50c",
+    "recovery-receipts/52e88f0f4f7d4b1299727d0b56563582f3c4dc42a1f3e98cbdf1e324c6baf41a.json": "8b8a6f9c774063a4e3e87e3736be2c2679f246531e5008fd571b9b97c0574820",
+    "recovery-receipts/61d7e8ba4eb0d2f056eb34677fc21e6d66a42b8aa0988b8b53f1a3d9f5f3306a.json": "369bcda4730b9c0d5e6ce5262d3af2c14c9f4f2d00a3ecf8757b44e025d3b0ea",
+    "recovery-receipts/66bdd8cc4113a49647a74ce5951aa79b732816aedb9e61a18c82781378d62533.json": "5670853dcafd00a31429e2a94b3669239a985b46858128b3d80dc906e845048e",
+    "recovery-receipts/7f836a1e09d94be6769575ec5f452aa592a07952ca7b351865399e984daad6f0.json": "02e5401288eb027be641065e062f11b5da27313c201b3a2a694fd678badbed55",
+    "recovery-receipts/b5266c3ecb3b81856f079d24a7a7e45ee13e84597ba034928c65aff70e25d298.json": "b19c0c955e3a39cee7385508d6aa849196656bc9a7f3febdae53d3ac8eb6922a",
+    "recovery-receipts/b92a957e28e9fdca6f895b90739e3a5008b0ae3b3d738aa5fb83b715570ab2c7.json": "a68b6718a0b53a7a1a8018c6ee544fd0277994bf41da162222be65fcbe623a90",
+    "recovery-receipts/de099ce0307c0fa284e91fe9c39b8852d0ed452eebf4114f01be3386c744b8ce.json": "05d93d9602861f9dbe08cbbf6612ca91e3e922b3befb706f4e47ac7981de7c08",
+    "recovery-receipts/f133590726d9dc7a5d1f70fb65e4a8084143ab5f3531b21f98ef69b6c7a5e0f6.json": "77143dd08b2fd877fd4ddf7085a39b04c24a84a23c3ee9650b406c886793f120",
+    "recovery-receipts/fb4451df1897ccef02711b7d928abdad15cf5eca1eea119a0e58972bf31f9ecf.json": "a3b93b8e9ce41d2bbd8e8c51b90e48c0f1ea3d01ce4310e581ce076353345cf8"
+  },
+  "reallocation_code_sha256": {
+    "budget_reallocation.py": "91196c5f00882a1fe96b21a2a7e0b09194ff7047d3277966a03d2d8a07f0b856",
+    "resume_reallocated.py": "18de374bf70e6ec8dd22f83b5c037def40319c8d7f5b708c3e01b89c5f1e7d02"
+  }
+}

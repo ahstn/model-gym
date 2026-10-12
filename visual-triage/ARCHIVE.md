@@ -1,8 +1,16 @@
 # Evidence storage and restore
 
-Git retains the code, dependency lock, frozen datasets and protocols, selected prompts, source notes and short reports. The [compact results](summaries/) retain 1,600 per-image rows, aggregate metrics, costs, latency and all 43 candidate prompts. Each row records the source ledger and record hash. These exports support comparison; they do not replace raw responses for an audit or a resumed run.
+Git retains code, dependency locks, protocols, selected prompts, source notes and compact results. Raw responses and image files stay outside Git. The earlier [compact results](summaries/) retain 1,600 per-image rows, aggregate metrics, costs, latency and all 43 candidate prompts. These exports support comparison; they do not replace raw responses for an audit or a resumed run.
 
-The cleanup reduces the tracked directory from 456 files and 35.0 MB to 154 files and 5.4 MB. The local evidence files remain present and ignored.
+## Native metadata trial
+
+The [metadata report](tracks/metadata_v3/report.md) and [per-image results](tracks/metadata_v3/results/cases.csv) are tracked. Its full dataset, control manifest and summary remain ignored, with raw calls and source captures in a local checksummed archive. The [receipt](tracks/metadata_v3/evidence-bundle.json) pins the archive and index. This archive is unpublished; a fresh clone must obtain both files from local storage before restoration. Image bytes are excluded and need the separate image cache.
+
+Follow the [metadata restore commands](tracks/metadata_v3/README.md#run-and-verify). Evidence-only restoration preserves current code and reports. Full snapshot restoration needs an empty directory. Frozen receipts retain their original absolute paths, so another checkout can inspect the evidence but cannot assume that all historical commands will run unchanged.
+
+## Earlier benchmark archive
+
+The earlier cleanup reduced the tracked directory from 456 files and 35.0 MB to 154 files and 5.4 MB. The local evidence files remain present and ignored.
 
 The [versioned release](https://github.com/ahstn/model-gym/releases/tag/visual-triage-evidence-2026-10-11) preserves all 456 original files from commit `b70ecfdfa5f09d2de92e214d910ad2696b2f7834`. This includes the original code, source captures, raw API attempts, reflection records and full reports. The archive is 5,133,104 bytes. Its SHA-256 is:
 

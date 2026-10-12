@@ -34,3 +34,9 @@ data/
 !/research/expansion-2026-10-11/evidence/final-audit.py
 !/research/expansion-2026-10-11/evidence/final-audit-baseline.json
 !/research/expansion-2026-10-11/evidence/final-audit-summary.json
+
+# Native metadata evidence is preserved in the local checksummed bundle.
+# Keep code, protocols, prompts, concise reports and per-image outcomes in Git.
+/tracks/metadata_v3/dataset.json
+/tracks/metadata_v3/controls.json
+/tracks/metadata_v3/results/summary.json

@@ -1,10 +1,20 @@
 # Visual triage
 
-**The extended Decider trial improved quality scores and AI probability estimates. Neither track is ready for automatic rejection.** On 100 new KonIQ images, the quality prompt reduced mean score error from 0.568 to 0.443 and raised accuracy from 76% to 84%. AI detection still missed most generated Imagen 3 photos.
+**The metadata trial is complete. C2PA helped where it was present, but covered only a quarter of the AI test images.** All 3,480 native and control requests succeeded. Each feature group used 20 GEPA proposals before evaluation on 160 held-out images.
 
-Both tracks completed 20 GEPA proposals on new, separate datasets. Training supplied image feedback, development selected each prompt, and 260 fresh final images tested the result. A frozen diagnostic then tested the same prompts with pixel statistics. The reports retain per-image predictions, costs, latency and source limits.
+| Selected prompt | Accuracy | AI detected | Brier loss | Cost / 160 images | Median latency |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Image-only | 76.9% | 43/80 | 0.1595 | $0.006410 | 0.738 s |
+| All context | 78.1% | 45/80 | 0.1418 | $0.012371 | 0.738 s |
 
-- [Extended validation](EXTENDED-VALIDATION.md): current results, metadata tests and next steps.
+All context combines EXIF, C2PA and pixel measurements. It nearly doubled cost for two extra detections; both prompts had zero false positives among 80 real photos. Keep image-only as the cost baseline. The remaining 35 missed AI images and source-specific metadata coverage limit automatic rejection.
+
+Only 20 of 80 AI images had signed AI claims that passed signature and image-binding checks, all from Firefly. The 60 DALL-E 2, DALL-E 3 and Midjourney v5 files had no C2PA manifest. The fixed trust check marked all 20 Firefly claims untrusted. A valid signature and a trusted signer are separate checks; neither proves that the scene is true.
+
+In separate controls on those Firefly images, removing C2PA reduced detections from 15/20 to 3/20 for the provenance prompt, and from 10/20 to 4/20 for all context. This supports C2PA as useful evidence when present. Missing credentials do not prove camera origin. Camera-value swaps also increased probability error; controls remain separate from native results.
+
+- [Native metadata trial](tracks/metadata_v3/report.md): seven feature groups, GEPA, EXIF/C2PA controls, costs and latency; [per-image results](tracks/metadata_v3/results/cases.csv) and [request audit](tracks/metadata_v3/results/request-audit.json).
+- [Extended validation](EXTENDED-VALIDATION.md): earlier quality and AI results, pixel-statistic tests and next steps.
 - [Dataset and method research](research/expansion-2026-10-11/README.md): new sources, the Awesome IQA catalogue, licences and research leads.
 - [Separate tracks](tracks/README.md): datasets, objectives, saved evidence and run commands.
 - [Earlier validation](VALIDATION.md): Decider quality and Luna AI detection with three GEPA proposals.
@@ -13,7 +23,7 @@ Both tracks completed 20 GEPA proposals on new, separate datasets. Training supp
 - [Initial report](REPORT.md): the original 30-image screen and limited sexual-content checks.
 - [Evidence archive and restore](ARCHIVE.md): checksummed raw responses, full reports and source captures; [compact results](summaries/) stay in Git.
 
-The current trial uses human KonIQ quality ratings and provenance-labelled SynthCLIC and Synthbuster photos. Earlier datasets and results remain separate. These panels cannot rank the current Decider prompt against the earlier Luna run. Human aesthetic ratings and confirmed NSFW-positive validation remain absent.
+The earlier quality trial used human KonIQ ratings. On 100 new images, GEPA reduced mean score error from 0.568 to 0.443 and raised accuracy from 76% to 84%. Its separate AI track used SynthCLIC and Synthbuster photos and still missed most generated Imagen 3 images. These panels cannot rank current Decider prompts against the earlier Luna run. Human aesthetic ratings and confirmed NSFW-positive validation remain absent.
 
 ## Reproduce the initial comparison
 
