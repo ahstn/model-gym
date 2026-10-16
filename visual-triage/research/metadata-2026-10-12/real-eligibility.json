@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "reviewed_original_count": 160,
+  "eligible_camera_photograph_count": 160,
+  "clear_nonphotographic_exclusion_count": 0,
+  "visual_reviewers": 2,
+  "method": "Both reviewers viewed all160 originals in four contact sheets and all26 first-round replacements; originals inspected for distinctive matching details. No detector outputs used. Low quality and plain surfaces remain eligible. Physical books, art or signs remain eligible when scene or object geometry is visible; full-frame flat art/screens/text-designs are excluded symmetrically across classes.",
+  "original_manifest_sha256": "60c9e86cbc006d8856b2f93ec306943022fc9e515b7ced26f7331c3d749b9dfc",
+  "flag_count": 46,
+  "flags": [
+    {
+      "id": "vision-D05_I_nat_0342",
+      "decision": "replace_shared_scene",
+      "reason": "Modern yellow residential block shared with train D32_I_nat_0081/0101/0128/0066; different light and viewpoints do not give an independent scene."
+    },
+    {
+      "id": "vision-D05_I_nat_0123",
+      "decision": "replace_shared_scene",
+      "reason": "Modern yellow residential block shared with train D32_I_nat_0081/0101/0128/0066; different light and viewpoints do not give an independent scene."
+    },
+    {
+      "id": "vision-D05_I_nat_0164",
+      "decision": "replace_shared_scene",
+      "reason": "Same red/beige campus block, street crossing and face mural as train D07_I_nat_0106 and D27_I_nat_0122."
+    },
+    {
+      "id": "vision-D05_I_nat_0228",
+      "decision": "replace_shared_scene",
+      "reason": "Same curved shopping-centre facade and roof as train D07_I_nat_0113."
+    },
+    {
+      "id": "vision-D09_I_nat_0090",
+      "decision": "replace_shared_scene",
+      "reason": "Same curved shopping-centre facade, white rails, green columns and Old Wild West sign as train D07_I_nat_0113."
+    },
+    {
+      "id": "vision-D09_I_nat_0194",
+      "decision": "replace_shared_scene",
+      "reason": "White/green apartment complex matches the background of train D32_I_nat_0066; group its adjoining facade and passage views together."
+    },
+    {
+      "id": "vision-D09_I_nat_0143",
+      "decision": "replace_shared_scene",
+      "reason": "White/green apartment complex matches the background of train D32_I_nat_0066; group its adjoining facade and passage views together."
+    },
+    {
+      "id": "vision-D09_I_nat_0119",
+      "decision": "replace_shared_scene",
+      "reason": "White/green apartment complex matches the background of train D32_I_nat_0066; group its adjoining facade and passage views together."
+    },
+    {
+      "id": "vision-D09_I_nat_0014",
+      "decision": "replace_shared_scene",
+      "reason": "White/green apartment complex matches the background of train D32_I_nat_0066; group its adjoining facade and passage views together."
+    },
+    {
+      "id": "vision-D09_I_nat_0214",
+      "decision": "replace_shared_scene",
+      "reason": "White/green apartment complex matches the background of train D32_I_nat_0066; group its adjoining facade and passage views together."
+    },
+    {
+      "id": "vision-D02_I_nat_0019",
+      "decision": "replace_shared_scene",
+      "reason": "Same old yellow institutional courtyard and entrance as train D03_I_nat_0018/0129/0231/0202."
+    },
+    {
+      "id": "vision-D25_I_nat_0043",
+      "decision": "replace_shared_scene",
+      "reason": "Same red/beige campus block and plaza as train D27_I_nat_0237/0122/0161/0250/0248 and D07_I_nat_0106; bicycle/blue-pole close views belong to that location."
+    },
+    {
+      "id": "vision-D25_I_nat_0100",
+      "decision": "replace_shared_scene",
+      "reason": "Same red/beige campus block and plaza as train D27_I_nat_0237/0122/0161/0250/0248 and D07_I_nat_0106; bicycle/blue-pole close views belong to that location."
+    },
+    {
+      "id": "vision-D25_I_nat_0112",
+      "decision": "replace_shared_scene",
+      "reason": "Same red/beige campus block and plaza as train D27_I_nat_0237/0122/0161/0250/0248 and D07_I_nat_0106; bicycle/blue-pole close views belong to that location."
+    },
+    {
+      "id": "vision-D25_I_nat_0286",
+      "decision": "replace_shared_scene",
+      "reason": "Same red/beige campus block and plaza as train D27_I_nat_0237/0122/0161/0250/0248 and D07_I_nat_0106; bicycle/blue-pole close views belong to that location."
+    },
+    {
+      "id": "vision-D25_I_nat_0019",
+      "decision": "replace_shared_scene",
+      "reason": "Same modern yellow/green residential block as train D32_I_nat_0081/0101/0128/0066."
+    },
+    {
+      "id": "vision-D25_I_nat_0132",
+      "decision": "replace_shared_scene",
+      "reason": "Same modern yellow/green residential block as train D32_I_nat_0081/0101/0128/0066."
+    },
+    {
+      "id": "vision-D25_I_nat_0238",
+      "decision": "replace_shared_scene",
+      "reason": "Probable adjoining campus plaza within the repeated train D07/D27 red/beige block; conservative location exclusion."
+    },
+    {
+      "id": "vision-D25_I_nat_0220",
+      "decision": "replace_shared_scene",
+      "reason": "Paving-only view has unresolved location and matches surfaces beside D25_I_nat_0112/0286; conservative exclusion with the known shared campus location."
+    },
+    {
+      "id": "vision-D04_I_nat_0021",
+      "decision": "replace_shared_scene",
+      "reason": "Same old yellow institutional courtyard, cedar trees, external AC units and parked cars as train D03_I_nat_0018/0129/0231/0202."
+    },
+    {
+      "id": "vision-D04_I_nat_0216",
+      "decision": "replace_shared_scene",
+      "reason": "Same old yellow institutional courtyard, cedar trees, external AC units and parked cars as train D03_I_nat_0018/0129/0231/0202."
+    },
+    {
+      "id": "vision-D04_I_nat_0170",
+      "decision": "replace_shared_scene",
+      "reason": "Same old yellow institutional courtyard, cedar trees, external AC units and parked cars as train D03_I_nat_0018/0129/0231/0202."
+    },
+    {
+      "id": "vision-D04_I_nat_0129",
+      "decision": "replace_shared_scene",
+      "reason": "Same old yellow institutional courtyard, cedar trees, external AC units and parked cars as train D03_I_nat_0018/0129/0231/0202."
+    },
+    {
+      "id": "vision-D15_I_nat_0026",
+      "decision": "replace_shared_scene",
+      "reason": "Same cedar trees and old yellow institutional courtyard as train D03_I_nat_0129."
+    },
+    {
+      "id": "vision-D15_I_nat_0093",
+      "decision": "replace_shared_scene",
+      "reason": "Same cedar trees and old yellow institutional courtyard as train D03_I_nat_0129."
+    },
+    {
+      "id": "vision-D21_I_nat_0085",
+      "decision": "replace_shared_scene",
+      "reason": "Same old yellow institutional courtyard, arched windows and cedar trees as train D03_I_nat_0018/0129/0231/0202."
+    },
+    {
+      "id": "vision-D09_I_nat_0205",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known yellow/white apartment complex or its arcade represented in training D32."
+    },
+    {
+      "id": "vision-D09_I_nat_0039",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known yellow/white apartment complex or its arcade represented in training D32."
+    },
+    {
+      "id": "vision-D09_I_nat_0117",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known yellow/white apartment complex or its arcade represented in training D32."
+    },
+    {
+      "id": "vision-D09_I_nat_0134",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known yellow/white apartment complex or its arcade represented in training D32."
+    },
+    {
+      "id": "vision-D09_I_nat_0131",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known yellow/white apartment complex or its arcade represented in training D32."
+    },
+    {
+      "id": "vision-D05_I_nat_0100",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement shows the known yellow/white apartment complex represented in training D32."
+    },
+    {
+      "id": "vision-D05_I_nat_0185",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement shows the curved shopping-centre facade from train D07_I_nat_0113."
+    },
+    {
+      "id": "vision-D25_I_nat_0041",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known yellow residential complex represented in training D32."
+    },
+    {
+      "id": "vision-D25_I_nat_0144",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known yellow residential complex represented in training D32."
+    },
+    {
+      "id": "vision-D25_I_nat_0243",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known yellow residential complex represented in training D32."
+    },
+    {
+      "id": "vision-D25_I_nat_0056",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known campus buildings or plaza represented in training D27/D07; the tree view retains distinctive poles and shop fronts."
+    },
+    {
+      "id": "vision-D25_I_nat_0074",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known campus buildings or plaza represented in training D27/D07; the tree view retains distinctive poles and shop fronts."
+    },
+    {
+      "id": "vision-D25_I_nat_0266",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known campus buildings or plaza represented in training D27/D07; the tree view retains distinctive poles and shop fronts."
+    },
+    {
+      "id": "vision-D25_I_nat_0084",
+      "decision": "replace_shared_scene",
+      "reason": "Replacement still shows the known campus buildings or plaza represented in training D27/D07; the tree view retains distinctive poles and shop fronts."
+    },
+    {
+      "id": "vision-D31_I_nat_0070",
+      "decision": "replace_domain",
+      "reason": "Full-frame flat Christmas illustration pattern with no visible physical scene or object boundary; excluded under the same scene-domain rule as AI images."
+    },
+    {
+      "id": "vision-D17_I_nat_0075",
+      "decision": "replace_domain",
+      "reason": "Full-frame painting lacks visible frame, object boundary or surrounding physical scene; symmetric domain exclusion."
+    },
+    {
+      "id": "vision-D05_I_nat_0292",
+      "decision": "replace_shared_scene",
+      "reason": "Additional view of the known training campus/shopfront or STAFF CAFFE apartment complex; lighting and blur do not give a new location."
+    },
+    {
+      "id": "vision-D05_I_nat_0232",
+      "decision": "replace_shared_scene",
+      "reason": "Additional view of the known training campus/shopfront or STAFF CAFFE apartment complex; lighting and blur do not give a new location."
+    },
+    {
+      "id": "vision-D05_I_nat_0282",
+      "decision": "replace_shared_scene",
+      "reason": "Additional view of the known training campus/shopfront or STAFF CAFFE apartment complex; lighting and blur do not give a new location."
+    },
+    {
+      "id": "vision-D05_I_nat_0346",
+      "decision": "replace_shared_scene",
+      "reason": "Additional view of the known training campus/shopfront or STAFF CAFFE apartment complex; lighting and blur do not give a new location."
+    }
+  ],
+  "replacement_round1_reviewed_count": 26,
+  "scene_domain_excluded_count": 2,
+  "eligible_under_scene_rule_original_count": 159,
+  "unused_device_probe_reviewed_count": 72,
+  "final_extra_reviewed_count": 4,
+  "final_D05_probe_reviewed_count": 5,
+  "total_unique_candidates_reviewed": 267,
+  "final_retained_reviewed_count": 160,
+  "final_review_statement": "Known distinctive cross-split location views were excluded. Generic indoor surfaces and similar vegetation cannot establish location identity; this review does not prove geographic or scene independence."
+}

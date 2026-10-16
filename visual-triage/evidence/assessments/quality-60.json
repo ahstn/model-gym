@@ -1,0 +1,550 @@
+{
+  "assessor": "Codex primary agent, direct visual inspection",
+  "created_at": "2026-10-11T15:39:00.514905+00:00",
+  "status": "Model-reference judgments, not human gold. Per-image humanMOS and model outcomes hidden while notes were written. Dataset and decile-selection design known.",
+  "view": "Six images per neutral-ID sheet, native delivered512px size",
+  "scale": "Technical quality and aesthetics on1..5, separate from image medium and source",
+  "frozen_before": "All quality heldout API requests",
+  "samples": [
+    {
+      "id": "quality-000",
+      "delivered_sha256": "0a6f328ecf4d947a40a9c3c61d6bafa48b897cb14d6579f408a0b75e32e7cf55",
+      "technical_quality": 3.8,
+      "aesthetics": 4.4,
+      "confidence": "medium",
+      "evidence": "Layered sunset hills have a strong tonal rhythm; clipped bright cloud edges and heavy saturation reduce fidelity.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-001",
+      "delivered_sha256": "b6663915eb42bc068d95ac0ea3d41bed2ed17a3a4d51dc949bdc6d9ad15a829a",
+      "technical_quality": 4.1,
+      "aesthetics": 4.0,
+      "confidence": "high",
+      "evidence": "Stonework remains clear with controlled tones; the road leads well toward the castle.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-002",
+      "delivered_sha256": "891686c93f8735385ba6b3d0c1b5e7aca218c5e62d4f0f7fdd1cf6692367405d",
+      "technical_quality": 4.3,
+      "aesthetics": 4.1,
+      "confidence": "medium",
+      "evidence": "Whale and cloud composite has clean visible detail and a coherent dramatic arrangement.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-003",
+      "delivered_sha256": "460737c320a35439db11efe07b8a04957960212db0e5c30fffb9d02fcacfcfd6",
+      "technical_quality": 4.1,
+      "aesthetics": 4.0,
+      "confidence": "high",
+      "evidence": "Watch face and nearby sand are clear; selective focus and the chain guide attention effectively.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-004",
+      "delivered_sha256": "0431f9a71bdf589e29871ff2f35a2195b2d77d86df707e8ed72801ad59a6c434",
+      "technical_quality": 4.0,
+      "aesthetics": 3.8,
+      "confidence": "high",
+      "evidence": "Pancake and fruit detail remains useful, though bright whites and edge crops slightly weaken the presentation.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-005",
+      "delivered_sha256": "257b35823922754409f37d6202882d81c4c0c05e864bc486f415af71785848e8",
+      "technical_quality": 4.6,
+      "aesthetics": 3.4,
+      "confidence": "high",
+      "evidence": "Cracked-earth texture is crisp and evenly exposed; the repeated pattern is coherent but has little focal emphasis.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-006",
+      "delivered_sha256": "365794b276b902cdde44cb7efaf005339c08ff867b8992dc1f6c41597f135941",
+      "technical_quality": 3.6,
+      "aesthetics": 3.9,
+      "confidence": "medium",
+      "evidence": "Swan highlights lose some detail and subjects are slightly soft; the bridge and reflections frame them well.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-007",
+      "delivered_sha256": "3d6361e30cdf8bfaf652c3f208608d36ed9af6e7cc1512b6676e2345bff53c0b",
+      "technical_quality": 3.5,
+      "aesthetics": 4.0,
+      "confidence": "medium",
+      "evidence": "Sun flare and clipped highlights obscure part of the grapes; warm backlight gives the frame a clear visual effect.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-008",
+      "delivered_sha256": "b4ff1b0bc935a2c913a6024cc9793155027509505bce418294aae41ff4e4a34f",
+      "technical_quality": 4.4,
+      "aesthetics": 4.3,
+      "confidence": "high",
+      "evidence": "The front strawberry is crisp against controlled blur; color and receding placement are well balanced.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-009",
+      "delivered_sha256": "04bb8c9e9d4d2c4e48038390148a66b570a5e44b1fe258c53279181f56aec42f",
+      "technical_quality": 4.1,
+      "aesthetics": 4.5,
+      "confidence": "high",
+      "evidence": "Mountain layers retain coherent edges and smooth tones; restrained color and spacing create a strong composition.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-010",
+      "delivered_sha256": "a600e2e7f4bc3a80bab72855c7976ed7a81c894c8b4d12c8b9f9a370733be8b4",
+      "technical_quality": 3.9,
+      "aesthetics": 3.5,
+      "confidence": "medium",
+      "evidence": "Crystal facets are mostly clear with some bright washed detail; the tight crop gives a functional close view.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-011",
+      "delivered_sha256": "6a323af53fcae138547a2e931e458c1e5619077d87e3e046e184d28791e02a7b",
+      "technical_quality": 4.2,
+      "aesthetics": 4.0,
+      "confidence": "high",
+      "evidence": "Chocolate surfaces are clean and focused; heart shape, flowers and warm colors form a deliberate arrangement.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-012",
+      "delivered_sha256": "9c73a216dd985074f3233d283bf04e5ac32331bbe51d1729c25ea1179cd33201",
+      "technical_quality": 4.4,
+      "aesthetics": 3.9,
+      "confidence": "medium",
+      "evidence": "Fine blue surface ridges remain clear; vivid color and sweeping lines make an effective abstract texture.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-013",
+      "delivered_sha256": "cdcfd6e0967a8330f351af6f652b9b56f02346adaac6603fc8a4db0a412eb792",
+      "technical_quality": 4.2,
+      "aesthetics": 4.3,
+      "confidence": "high",
+      "evidence": "Boat, trees and clouds retain useful detail; shoreline curves and warm greens give a balanced landscape.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-014",
+      "delivered_sha256": "22a500af85b9d9e0c44b76bd837d6d1f2264737ac0c73b2206b6ac2a25885d5d",
+      "technical_quality": 2.6,
+      "aesthetics": 3.2,
+      "confidence": "medium",
+      "evidence": "Haze, low contrast and softness obscure fish detail; paired faces still give the frame some focus.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-015",
+      "delivered_sha256": "abea5a2265bbfe48a7e027388c03d53bfed015d3d7abdc7de870b09c35afa852",
+      "technical_quality": 3.7,
+      "aesthetics": 4.0,
+      "confidence": "medium",
+      "evidence": "Splash edges are crisp in places while fruit is very dark; isolated motion against black is visually effective.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-016",
+      "delivered_sha256": "97a257249f93a7aa13dc416cc455722950bb0a94fadb2a9e6e06a034859ad841",
+      "technical_quality": 3.8,
+      "aesthetics": 3.7,
+      "confidence": "high",
+      "evidence": "Desk objects are legible with mild grain and faded contrast; the workspace is orderly and coherent.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-017",
+      "delivered_sha256": "a8cc3b6aaa485e2185d6da24807b70cdae2010c30757ff10154c8b8924659710",
+      "technical_quality": 3.6,
+      "aesthetics": 3.6,
+      "confidence": "medium",
+      "evidence": "Drawer texture looks coarse and strongly processed; the repeated grid gives a clear graphic rhythm.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-018",
+      "delivered_sha256": "4c514727273f7ef3ac436655930251752f61eb25a641e7acce75e9243b66ee40",
+      "technical_quality": 4.2,
+      "aesthetics": 4.2,
+      "confidence": "high",
+      "evidence": "Walls and windows are detailed with some dark foreground loss; the lane and warm light create strong depth.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-019",
+      "delivered_sha256": "26c77bd4b5f971f7116ba91e0600768f4b31be2ed34572df2cbf4f1436f47eb9",
+      "technical_quality": 3.7,
+      "aesthetics": 4.2,
+      "confidence": "medium",
+      "evidence": "Dark mountain panorama has limited visible detail at this small height; broad weather and terrain patterns remain compelling.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-020",
+      "delivered_sha256": "b49bf2ced2400cdc2edb9fbb4f7c5b03ca9e3e26d539fd6bf4739abbdf183fa1",
+      "technical_quality": 4.6,
+      "aesthetics": 4.5,
+      "confidence": "high",
+      "evidence": "City edges and lights are clean, with controlled reflections and a balanced skyline.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-021",
+      "delivered_sha256": "f92c5a67764561dd73ddc4e26ca7c5221cd40f8f25cef31e272bb1919898665b",
+      "technical_quality": 3.3,
+      "aesthetics": 4.2,
+      "confidence": "medium",
+      "evidence": "Crushed foreground and heavy contrast remove detail; the ship silhouette and glowing sky form a strong dramatic image.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-022",
+      "delivered_sha256": "d3e8de392bdda6ae944f21e37b4def5434ca6640c32f2c3a0586c14b5c79f1b0",
+      "technical_quality": 4.2,
+      "aesthetics": 4.1,
+      "confidence": "high",
+      "evidence": "Rock and railing textures are clear; the stairs lead effectively through the gorge despite a pale sky.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-023",
+      "delivered_sha256": "0731455b22debc4b7a9f00dfe426a52f6e972d176504415f26fd81cc1cd7053a",
+      "technical_quality": 4.5,
+      "aesthetics": 4.5,
+      "confidence": "high",
+      "evidence": "Rocks are sharp against intentional water blur; foreground shape, horizon and sky color work well together.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-024",
+      "delivered_sha256": "e2cda38b894c8a8cc8a76d43199e8fa076dbb63c9d8cc3ccda34a7423c1217d5",
+      "technical_quality": 3.7,
+      "aesthetics": 4.3,
+      "confidence": "medium",
+      "evidence": "Building detail is lost in silhouette and sunset tones are intense; recognizable shapes and sky rhythm remain strong.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-025",
+      "delivered_sha256": "3c2ad2be46d00923950a52d6e60bebcfcc0ecde57ee1630a44adffe5bb4bc632",
+      "technical_quality": 4.1,
+      "aesthetics": 3.7,
+      "confidence": "high",
+      "evidence": "Sculpture and grass retain useful detail; hard sunlight and a plain setting give a competent record image.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-026",
+      "delivered_sha256": "b1cb0fb22caeb8b091022ea3b7725bca53b5c7efdde5a4b29a5056e21b31624a",
+      "technical_quality": 3.7,
+      "aesthetics": 4.0,
+      "confidence": "medium",
+      "evidence": "Bridge edges are readable through intentional fog; repeated arches and open space make a calm composition.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-027",
+      "delivered_sha256": "276b4b9a7798b806deb5dd82e896668281fd43b59e1b474ae0cd4a838563259b",
+      "technical_quality": 4.2,
+      "aesthetics": 3.9,
+      "confidence": "high",
+      "evidence": "Central jars are clear with controlled focus falloff; repeating warm colors form a pleasing shelf arrangement.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-028",
+      "delivered_sha256": "ca165ce5141f340d480f92e9417d913749cd668a35ee7942986292a5e92843d4",
+      "technical_quality": 4.5,
+      "aesthetics": 3.2,
+      "confidence": "high",
+      "evidence": "Paper creases have clean texture and even tones; the image works mainly as a neutral background.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-029",
+      "delivered_sha256": "fbd197ab331b81f7c4acbeb25c18e07b60ca142805b94de0ac6ec436d4d857f7",
+      "technical_quality": 2.9,
+      "aesthetics": 3.2,
+      "confidence": "medium",
+      "evidence": "Underwater haze and low contrast conceal most fine detail; light rays retain a simple atmospheric effect.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-030",
+      "delivered_sha256": "fe51bd1ca993718800f8981cb0c9583d0b2e9bc23a598341bf6d196a7116fd16",
+      "technical_quality": 4.0,
+      "aesthetics": 4.2,
+      "confidence": "medium",
+      "evidence": "Architecture remains detailed while deep shadows lose information; warm lights contrast well with the blue sky.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-031",
+      "delivered_sha256": "850f38a98c590c0fbe52667727ac31efe9377793a5499e18e1e359ab90cc951d",
+      "technical_quality": 4.0,
+      "aesthetics": 3.8,
+      "confidence": "high",
+      "evidence": "Whale tail and spray are clear enough with slight distance softness; the action is well separated from the sea.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-032",
+      "delivered_sha256": "15348618e8b6f45c9a263525c3ae560bbcbc25aecafd34d2b4a050cf64c54e90",
+      "technical_quality": 4.6,
+      "aesthetics": 4.4,
+      "confidence": "high",
+      "evidence": "Teapot relief and wood texture are clean; controlled side light and object spacing give a strong still life.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-033",
+      "delivered_sha256": "34222af5a6cc7d21cafc34711e822872f5c630f65f8aafc851cf9b094234005f",
+      "technical_quality": 4.3,
+      "aesthetics": 4.1,
+      "confidence": "high",
+      "evidence": "Rock detail is clear around intentional water blur; dark upper framing and warm leaves support the waterfall.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-034",
+      "delivered_sha256": "5d041cd9e505dc77742396d0e996ee61a51d108f8ccda8e4ece265c9ef6de3dd",
+      "technical_quality": 4.4,
+      "aesthetics": 4.1,
+      "confidence": "high",
+      "evidence": "Desk objects and text are cleanly rendered; restrained colors and open space create a coherent workspace image.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-035",
+      "delivered_sha256": "6ab2861e56bf517b2c0208715b959fb01fa43f580da14fb757e26210a024c421",
+      "technical_quality": 4.2,
+      "aesthetics": 4.2,
+      "confidence": "high",
+      "evidence": "Road texture is crisp despite a clipped sun; central perspective and cloud patterns produce a strong landscape.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-036",
+      "delivered_sha256": "bee0d49112aa0f4d9c108412becc67d24033ec04e05aacbc4286faa78d08bb62",
+      "technical_quality": 3.9,
+      "aesthetics": 4.1,
+      "confidence": "medium",
+      "evidence": "Skull and books have useful texture while dark background objects lose detail; the still life has coherent light and placement.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-037",
+      "delivered_sha256": "6ba68a11938b27ea85fc4dbe56c834db88c4f6b48270957657f0631b798f2b32",
+      "technical_quality": 3.5,
+      "aesthetics": 3.5,
+      "confidence": "medium",
+      "evidence": "Haze and distance limit wave detail; restrained color and broad sea bands convey the weather clearly.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-038",
+      "delivered_sha256": "444679d1abf71d83c60fef313ab9b4b3105b67b8011e5b02db93fc7f64c88f0c",
+      "technical_quality": 4.4,
+      "aesthetics": 4.6,
+      "confidence": "high",
+      "evidence": "Moss and rock remain detailed around a bright sun; strong foreground paths and reflections create depth.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-039",
+      "delivered_sha256": "4fdefa6ac8917b4d12def7e6c06380bb98e4be0c545b596f25b31cbee8efa56b",
+      "technical_quality": 2.6,
+      "aesthetics": 3.5,
+      "confidence": "medium",
+      "evidence": "Almost the whole frame is black and the doorway clips; the small silhouette still creates a deliberate dramatic focal point.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-040",
+      "delivered_sha256": "a8f9d058847df582d070574204d102dcd27ffcad611ba9edcc4eda5d432991d7",
+      "technical_quality": 4.2,
+      "aesthetics": 3.8,
+      "confidence": "high",
+      "evidence": "Wood wear and metal latch are clear; the close crop and texture give a coherent detail study.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-041",
+      "delivered_sha256": "0bbb1ccbc2a2f71f731d5e70ff7f6d94a765e2c54da670b02bb415add579b450",
+      "technical_quality": 4.2,
+      "aesthetics": 4.0,
+      "confidence": "high",
+      "evidence": "Face, clothing and umbrella are clear against blur; the red shape balances the subject effectively.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-042",
+      "delivered_sha256": "8f3c98fd721ec08c29bf3ed801c69a5107d6399ef0b273b0566fa1e0d9ff2397",
+      "technical_quality": 4.4,
+      "aesthetics": 4.3,
+      "confidence": "high",
+      "evidence": "Landscape textures remain clean with controlled cloud detail; varied light and repeated trees organize the scene.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-043",
+      "delivered_sha256": "eedc7815504f1fb850dc7958a45b9b9358c49a100ecc4a42d51a252e143ac4ba",
+      "technical_quality": 4.5,
+      "aesthetics": 4.3,
+      "confidence": "high",
+      "evidence": "Mushroom texture is crisp and well separated; framing ferns and soft green light support the subject.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-044",
+      "delivered_sha256": "7b6fc6c885509e226687c37c39680b0c52e2bd61c943ac73b890326faeeeff00",
+      "technical_quality": 4.3,
+      "aesthetics": 4.2,
+      "confidence": "high",
+      "evidence": "Squirrel face and fur are clear with some bright highlights; pose and open background give good separation.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-045",
+      "delivered_sha256": "84a7feb12dfb6d6d9ccd49fa027ca170d2199bc66fb99021af0a70934186c96d",
+      "technical_quality": 4.4,
+      "aesthetics": 4.0,
+      "confidence": "high",
+      "evidence": "Brush fibers and central paint are focused; diagonal placement and bright color blocks make a coherent close view.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-046",
+      "delivered_sha256": "6206c84c67f9a3547a45ce4fcd177046c2b28b7d2442fc3d1770574b6ab72035",
+      "technical_quality": 4.4,
+      "aesthetics": 3.1,
+      "confidence": "high",
+      "evidence": "Wood grain is evenly exposed and clear; the image functions as a quiet texture with little expressive emphasis.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-047",
+      "delivered_sha256": "3b1e94e7e4c4fac8f7e4ba87f5722e57e92fedfd0876f6320161c3c91045e2b3",
+      "technical_quality": 4.0,
+      "aesthetics": 3.9,
+      "confidence": "high",
+      "evidence": "Warehouse surfaces retain detail with deep shadow loss; repeating beams lead the eye through the scene.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-048",
+      "delivered_sha256": "eb004c8ebd574e318aa691aa3de3ff3c390dabea416496acbb08d80d5900bac2",
+      "technical_quality": 3.4,
+      "aesthetics": 4.0,
+      "confidence": "medium",
+      "evidence": "Faded contrast and softness reduce boat detail; the tilted hulls and warm shoreline still form a strong scene.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-049",
+      "delivered_sha256": "2f93978f8413bdaebb8ac424ebfe5fa2c4b9d1477a67e590ca3c13ca9f76ac7d",
+      "technical_quality": 4.0,
+      "aesthetics": 4.0,
+      "confidence": "high",
+      "evidence": "Mug and cookie details are clear with bright background whites; repeated reds create a coherent festive arrangement.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-050",
+      "delivered_sha256": "20924ba9643a90a4d3898105e6e1bdb2d02e26a3b9e626cdf5ca9fa7e215e370",
+      "technical_quality": 3.8,
+      "aesthetics": 4.1,
+      "confidence": "medium",
+      "evidence": "Night buildings have some light smearing and small-detail softness; reflected colors and skyline remain engaging.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-051",
+      "delivered_sha256": "5471495bf2013332000a653b37b647ae86b16cd225a0637223abb3535f1873ae",
+      "technical_quality": 4.1,
+      "aesthetics": 3.7,
+      "confidence": "high",
+      "evidence": "Signal icon and hardware are clear with dark surface loss; blurred foliage isolates the unusual focal point.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-052",
+      "delivered_sha256": "7b1aa315de2a72f09af28414b69394eaab4fff9b162415561f99d77e1f5d2af7",
+      "technical_quality": 4.4,
+      "aesthetics": 4.1,
+      "confidence": "high",
+      "evidence": "Feather strands and eye patterns are detailed; vivid repeated colors create a strong decorative texture.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-053",
+      "delivered_sha256": "1296981a184d0181720a52ef5fe20228ff0d535039a9713a1b577ade3d8ef897",
+      "technical_quality": 4.0,
+      "aesthetics": 3.8,
+      "confidence": "high",
+      "evidence": "Birdhouse and branch are clear while nearby leaves soften; placement beneath the branch gives a coherent frame.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-054",
+      "delivered_sha256": "fface2b5a0e728d6163a7d4ed5ad1f4b242324c08a2c31d86bd48dc0df34c6cb",
+      "technical_quality": 3.7,
+      "aesthetics": 3.9,
+      "confidence": "medium",
+      "evidence": "Figure and field are slightly soft with bright sky loss; warm light and the walking pose give the scene direction.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-055",
+      "delivered_sha256": "065bbd90610e5d673a59b95bdd0903a7fb173cc6aa1f52ddf5a5885b8d6b419a",
+      "technical_quality": 4.5,
+      "aesthetics": 3.5,
+      "confidence": "high",
+      "evidence": "Frame, toys and shadows are cleanly rendered; broad blank space makes a useful but visually simple layout.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-056",
+      "delivered_sha256": "f9512d58fe9b2f4ea756ea7048454b0ae0d7f9562e4265e0cc0ed96028d59bbb",
+      "technical_quality": 4.3,
+      "aesthetics": 4.4,
+      "confidence": "high",
+      "evidence": "Grass and tree detail remain clear beneath textured clouds; the path and sweeping coast give strong depth.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-057",
+      "delivered_sha256": "2027ce026fb401151cda2fede369b2dbc1fd0bc8a3c0c82814f902d9de376756",
+      "technical_quality": 3.8,
+      "aesthetics": 3.8,
+      "confidence": "medium",
+      "evidence": "Compass detail is readable with some warm haze and focus falloff; placement over the map is coherent.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-058",
+      "delivered_sha256": "19436401dd8d7bf8592080b4ada4fd437694a9c60fbf5ae86818c60870cee5dd",
+      "technical_quality": 3.6,
+      "aesthetics": 4.1,
+      "confidence": "medium",
+      "evidence": "Dark foreground and strong tint hide some detail; mountain layers and illuminated fields create a clear visual rhythm.",
+      "development_partition": "heldout"
+    },
+    {
+      "id": "quality-059",
+      "delivered_sha256": "92530f82d3b51079c6b94c2f75584e0e18578e4733318d7ad8ffd10e7288f71f",
+      "technical_quality": 4.1,
+      "aesthetics": 3.4,
+      "confidence": "medium",
+      "evidence": "Rendered bar edges are clear with coarse reflective texture; the pile is readable but composition is mainly functional.",
+      "development_partition": "heldout"
+    }
+  ]
+}

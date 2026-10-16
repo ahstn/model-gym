@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "track": "ai_detection_v2",
+  "selected_at": "2026-10-11T20:35:32.457613+00:00",
+  "protocol_sha256": "8ecdcf6b0b06bcd4af10c8f3acd007d4263c6532865bebb57c486a2a9aa26fc9",
+  "selection_split": "dev",
+  "baseline_prompt_sha256": "25e5e76cd573e2c5b15cdf6e2a676441f399d11270f4dcc0ca9a29203041f532",
+  "selected": "candidate",
+  "selected_prompt_path": "tracks/ai_detection_v2/prompts/selected.json",
+  "selected_prompt_sha256": "18b1cf2bab4f913d88944ce1fbf4eb47c8342c135078e3e3449c36efde63d6d8",
+  "minimum_gain": 0.005,
+  "candidate_gain": 0.07948087202357024,
+  "evaluations": {
+    "baseline": {
+      "prompt_path": "tracks/ai_detection_v2/prompts/baseline.json",
+      "prompt_sha256": "25e5e76cd573e2c5b15cdf6e2a676441f399d11270f4dcc0ca9a29203041f532",
+      "ledger_path": "tracks/ai_detection_v2/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/dev.jsonl",
+      "ledger_sha256": "9217378e643ce02abf5c75c2883d6daea5f63ed845623eabf8a2b7c20e696c9d",
+      "score": 0.7212007721270142
+    },
+    "candidate": {
+      "prompt_path": "tracks/ai_detection_v2/prompts/selected.json",
+      "prompt_sha256": "18b1cf2bab4f913d88944ce1fbf4eb47c8342c135078e3e3449c36efde63d6d8",
+      "ledger_path": "tracks/ai_detection_v2/optimisation/candidates/259863bb1f451d3ab7abb5fcc61f49811bf7e1aacb8ace1359fb56e9023c5145/dev.jsonl",
+      "ledger_sha256": "c9612abd7894b39c13d75f9438d179e2f87af854caa188a51a71eaaf75a32b43",
+      "score": 0.8006816441505844
+    }
+  }
+}

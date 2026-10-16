@@ -1,0 +1,9 @@
+{
+  "track": "ai_detection_v2",
+  "max_calls": 4000,
+  "budget_usd": 4.5,
+  "max_proposals": 20,
+  "protocol_sha256": "8ecdcf6b0b06bcd4af10c8f3acd007d4263c6532865bebb57c486a2a9aa26fc9",
+  "dataset_sha256": "4cf72dc0cf465e267d507401ae3de893ec6f32aa37b71e284454117ae9754039",
+  "baseline_prompt_sha256": "25e5e76cd573e2c5b15cdf6e2a676441f399d11270f4dcc0ca9a29203041f532"
+}
