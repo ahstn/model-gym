@@ -4,6 +4,10 @@ This folder stores research notes for image quality (IQA), image aesthetics (IAA
 
 Last verified: 2026-09-27
 
+Latest targeted review: [2026-09-29 pilot preflight](training/pilot-preflight-2026-09-29.md). This adds method and evaluation gaps, corrects label-contract details, and records the current training gates; it is not a full re-verification of every table below.
+
+Dataset follow-up: [2026-10-15 candidate review](datasets/candidate-review-2026-10-15.md) ranks the requested sources against the acquired pilot and checks each component of the IQA-Dataset collection. The [paper library](papers.md) records selected papers under unique identifiers.
+
 The [pilot builder](../README.md) now provides acquisition, assembly, and verification commands for the proposed image mix. Its outputs retain source labels and leave teacher scores unset.
 
 ## Index
@@ -15,17 +19,21 @@ The [pilot builder](../README.md) now provides acquisition, assembly, and verifi
 | Models | [models/vqa.md](models/vqa.md) | Video quality models: natural UGC, AI-generated video, HDR. |
 | Models | [models/unified-and-backbones.md](models/unified-and-backbones.md) | Unified LMM assessors (Q-Align, Q-ReAlign, UniPercept) and VLM backbones to fine-tune. |
 | Datasets | [datasets/iqa.md](datasets/iqa.md) | IQA datasets: synthetic, authentic, AIGC, instruction data. |
+| Datasets | [datasets/candidate-review-2026-10-15.md](datasets/candidate-review-2026-10-15.md) | Candidate ranking, Kaggle release checks, UHD/AU refresh, and component coverage audit. |
+| Datasets | [datasets/iqa-collection-coverage-2026-10-15.md](datasets/iqa-collection-coverage-2026-10-15.md) | All 31 supported collection entries, prior catalogue gaps, source terms, and task-specific priorities. |
 | Datasets | [datasets/low-quality-and-controls.md](datasets/low-quality-and-controls.md) | Authentic faults, controlled damage, diagram/CG controls, and proposed 10K/250K sampling plans. |
 | Datasets | [datasets/pilot-10k-assembly.md](datasets/pilot-10k-assembly.md) | Completed local pilot: source snapshots, image counts, manifest hashes, verification, and pending label work. |
 | Datasets | [datasets/iaa.md](datasets/iaa.md) | Aesthetics and preference datasets. |
 | Datasets | [datasets/vqa.md](datasets/vqa.md) | Video quality datasets: UGC, streaming, HDR, AIGC video. |
 | Training | [training/methods.md](training/methods.md) | Training-method papers and what to borrow. |
+| Training | [training/pilot-preflight-2026-09-29.md](training/pilot-preflight-2026-09-29.md) | Exa and ultra-agent audit: compact students, actual label/split gaps, added evaluation probes, and the first-run gate. |
 | Training | [training/data-mixture-evidence.md](training/data-mixture-evidence.md) | Controlled evidence that adding or choosing data helps or hurts. |
 | Training | [training/synthetic-label-teachers.md](training/synthetic-label-teachers.md) | Visual benchmark shortlist, API pricing, and synthetic-label costs for 1K, 10K, and 250K images. |
 | Training | [training/synthetic-label-prompts.md](training/synthetic-label-prompts.md) | Source-backed quality and aesthetics rubrics, prompt files, response schema, and pilot checks. |
 | Training | [training/experiment-plan.md](training/experiment-plan.md) | Staged experiment plan and compute assumptions. |
 | Evaluation | [evaluation/protocol.md](evaluation/protocol.md) | Metrics, split rules, calibration, and the Q-ReAlign code audit. |
 | Evaluation | [evaluation/benchmarks.md](evaluation/benchmarks.md) | Diagnostic benchmarks and the standard held-out test suite. |
+| Library | [papers.md](papers.md) | Papers of interest, source identifiers, reading notes, and relevance to the pilot. |
 
 ## Quick summary
 

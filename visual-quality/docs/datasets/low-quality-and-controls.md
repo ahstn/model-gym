@@ -2,6 +2,10 @@
 
 Checked: 2026-09-27. This research pass defined the source shortlist and sampling plan. The subsequent [pilot builder](../../README.md) implements acquisition and assembly; quality scores remain unset until review and labeling.
 
+The [2026-09-29 preflight](../training/pilot-preflight-2026-09-29.md) compares this plan with the acquired data. It adds a required review of the concentrated test group, measures the missing label coverage, and keeps extra source downloads conditional on an observed gap.
+
+The [2026-10-15 candidate review](candidate-review-2026-10-15.md) assesses BIQ2021, two other Kaggle releases, UHD-IQA, AU-IQA, and the components of IQA-Dataset. It separates human-rated additions from class labels and URL lists, with priorities relative to the local pilot.
+
 The source note, *2026-09-27 Synth Data Generation*, identifies the main gap: large photo pools do not ensure a useful quality spread. **Use authentic capture faults as well as controlled distortions. Add diagrams and rendered images as a separate photo-suitability task.** This extends the [mixture evidence](../training/data-mixture-evidence.md) and the [quality and aesthetics prompt pack](../training/synthetic-label-prompts.md).
 
 The strongest additions are LIVE-Meta VI-UGC and VizWiz for real faults, RealBlur and SIDD for specific capture defects, and PlotQA plus CLEVR for non-photo controls. Keep Megalith-CC0 as the large source pool. Its low-quality yield still needs measurement.

@@ -100,7 +100,7 @@ Expected interval size. Approximate 95% half-width of one model's SRCC, from the
 | CSIQ | 866 | 0.85 | 0.019 |
 | LIVE-VQC | 585 | 0.80 | 0.030 |
 
-So a gain of 0.005 on one small cross set means nothing on its own. Pool cross sets per task, and decide on the paired interval.
+A gain of 0.005 on one small cross set does not establish a useful improvement by itself. Compute metrics within each dataset, then combine their paired differences using fixed per-task weights. Resample source families within each dataset; never pool incompatible MOS values into one correlation. Predeclare an acceptable loss margin for non-inferiority and a minimum useful gain. An interval that crosses the decision boundary is inconclusive, not evidence of equivalence.
 
 ## 6. Reporting rules
 
