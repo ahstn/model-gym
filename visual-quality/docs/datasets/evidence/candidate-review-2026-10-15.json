@@ -1,0 +1,234 @@
+{
+  "checked_on": "2026-10-15",
+  "scope": "Research records, public metadata and three verification images. No candidate ingested into the frozen pilot.",
+  "collection": {
+    "url": "https://github.com/icbcbicc/IQA-Dataset",
+    "commit": "bfc87eeb6b6a9862c13da2a2d765ea7c136f6789",
+    "supported_entries": 31,
+    "distinct_media_datasets": 30,
+    "initial_inventory_own_rows": 14,
+    "initial_inventory_mention_only": 1,
+    "initial_inventory_missing_entries": 16,
+    "initial_inventory_missing_distinct_datasets": 15,
+    "excluded_struck_out": [
+      "KADIS-700k",
+      "IVC"
+    ]
+  },
+  "kaggle_versions": {
+    "pochihwu/low-quality-image-dataset": {
+      "version": 1,
+      "dataset_id": 7424982,
+      "reported_file_bytes": 11118780660,
+      "file_inventory_complete": false
+    },
+    "chuneeb/deepfake-detection-dataset-2026": {
+      "version": 1,
+      "dataset_id": 10337999,
+      "csv_bytes": 1549679,
+      "file_inventory_complete": true
+    },
+    "nisarahmedrana/biq2021": {
+      "version": 4,
+      "dataset_id": 3333027,
+      "file_bytes": 430126664,
+      "file_count": 12001,
+      "file_inventory_complete": true
+    }
+  },
+  "biq_original_commit": "62c7b40c036b68ee280626409699aa5c1a37fe57",
+  "biq_matched_images": [
+    {
+      "kaggle_file": "Images (1).jpg",
+      "original_path": "Images/ss01 (1882).jpg",
+      "git_blob_sha1": "1851745120f2ff583d1b67348ab9516538536b3f",
+      "sha256": "2cdde43a99c586386451fd0b681905dfd12daacf910badc04988e5f74d37b9f4",
+      "bytes": 16303,
+      "kaggle_mos": 0.138204682,
+      "original_mos": 0.7361
+    },
+    {
+      "kaggle_file": "Images (5000).jpg",
+      "original_path": "Images/ss03 (1732).jpg",
+      "git_blob_sha1": "ca2f516943838a4192e023232acb53f294b7660a",
+      "sha256": "05e43654e01fc23c54a9919162cbcbff090a07559dce1fe13f9e6a2340a034cc",
+      "bytes": 32386,
+      "kaggle_mos": 0.602092935,
+      "original_mos": 0.7307
+    },
+    {
+      "kaggle_file": "Images (10000).jpg",
+      "original_path": "Images/ss03 (6037).jpg",
+      "git_blob_sha1": "658631cdc87c6ac2192928ab4f852411758d3b1d",
+      "sha256": "ff8a1e7cb0d4cd3bab574cc4794c64c4d1aae1f65da1819d2f5333f5ac80fad8",
+      "bytes": 32921,
+      "kaggle_mos": 0.681037925,
+      "original_mos": 0.7464
+    }
+  ],
+  "biq_conclusion": "Three conflicts and one pairwise order reversal; no determination of which release is correct. No full-image mapping.",
+  "deepfake_csv_checks": {
+    "rows": 6557,
+    "labels": {
+      "REAL": 2790,
+      "FAKE": 3767
+    },
+    "hosts": {
+      "images.unsplash.com": 2790,
+      "randomuser.me": 198,
+      "i.pravatar.cc": 70,
+      "api.dicebear.com": 2499,
+      "api.multiavatar.com": 1000
+    },
+    "splits": {
+      "train": 4593,
+      "test": 1323,
+      "val": 641
+    },
+    "quality": {
+      "High": 4350,
+      "Medium": 2207
+    },
+    "real_unique_url_paths": 2349,
+    "real_repeated_url_path_groups": 397,
+    "real_cross_split_groups": 194,
+    "all_fake_claim_stylegan3": true
+  },
+  "local_artifacts": [
+    {
+      "path": "data/sources/candidate-review-2026-10-15/FINAL_DATASET.csv",
+      "bytes": 1549679,
+      "sha256": "e39ea631a619d147c610a6f087ec78c61ff0b4281b5e3a633b509ba61406dcae"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/biq2021-Test.csv",
+      "bytes": 45439,
+      "sha256": "2f8579d5e9647015c9d516613dfd91ec651d74a390a5c6a47a7bbb2e189d157d"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/biq2021-Train.csv",
+      "bytes": 247272,
+      "sha256": "1f0c28a28d78903c9064190af8882e03643c9a240bb05ce4f4a4bbe7950ac87e"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/biq2021-github_tree.json",
+      "bytes": 2842650,
+      "sha256": "17065506fe006f11748641c9e331ef671e1727c9f505a876fa5d63ad76b0a7cd"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/biq2021-kaggle-file-list.json",
+      "bytes": 4392890,
+      "sha256": "1839551357484d6a561f5bfba0b7978557241568738d581b4184f3595ea9939d"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/biq2021-kaggle_csv",
+      "bytes": 514096,
+      "sha256": "e741e3a235bad3ee1ff4ec4f4e01b365fdfa2d4a353a46498cfd920b80561832"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/biq2021-kaggle_view.json",
+      "bytes": 7965,
+      "sha256": "2f487474ad4c3aaf8d57e0ebe6bf331bee49c06d8ba46c065440261e6923e0b7"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/biq2021-sample-1.jpg",
+      "bytes": 16303,
+      "sha256": "2cdde43a99c586386451fd0b681905dfd12daacf910badc04988e5f74d37b9f4"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/biq2021-sample-10000.jpg",
+      "bytes": 32921,
+      "sha256": "ff8a1e7cb0d4cd3bab574cc4794c64c4d1aae1f65da1819d2f5333f5ac80fad8"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/biq2021-sample-5000.jpg",
+      "bytes": 32386,
+      "sha256": "05e43654e01fc23c54a9919162cbcbff090a07559dce1fe13f9e6a2340a034cc"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/chuneeb__deepfake-detection-dataset-2026-list.json",
+      "bytes": 608,
+      "sha256": "3400d6762ec191c06a30a78b512c72b473683e484322a17e7b0ce9723f7fab61"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/chuneeb__deepfake-detection-dataset-2026-view.json",
+      "bytes": 8686,
+      "sha256": "dd1ec14d58099712ff0791222bc9c714f6e797e9c1722c1c127d23f6402d7255"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/deepfake-csv-analysis.json",
+      "bytes": 1813,
+      "sha256": "1bb55d6a4a39a7e9255f2d6db88339ef2fdfe27337bbe9598a73961bdbb5dc17"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/deepfake-url-head-probe.json",
+      "bytes": 695,
+      "sha256": "2c8a4f2cd5309a54af41d769085b4c6dc0fbaffe3bb9015d239a09eac75b69ea"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/pochihwu__low-quality-image-dataset-list.json",
+      "bytes": 12739,
+      "sha256": "a547beba59295aa65401eda1273b10232c690dcb798fde9884fd340dd47c3450"
+    },
+    {
+      "path": "data/sources/candidate-review-2026-10-15/pochihwu__low-quality-image-dataset-view.json",
+      "bytes": 8595,
+      "sha256": "44d5fef52b53cb3546d57d0f13adaaef11a731988c21a8c731d5efbfa5442f15"
+    }
+  ],
+  "ranking_basis": "Marginal usefulness for next pilot steps, including current release validity; not measured model accuracy.",
+  "requested_candidates": [
+    {
+      "rank": 1,
+      "id": "uhd-iqa",
+      "status": "conditional_evaluation",
+      "url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "paper": "https://arxiv.org/html/2406.17472v2",
+      "media_acquired_for_pilot": false,
+      "reported_images": 6073,
+      "reported_splits": [
+        4269,
+        904,
+        900
+      ],
+      "archive_delivery": "Metadata HTTPS request failed certificate validation; no archive inspected."
+    },
+    {
+      "rank": 2,
+      "id": "au-iqa",
+      "status": "conditional_restoration_diagnostic",
+      "url": "https://github.com/WNNGGU/AU-IQA-Dataset",
+      "commit": "dc6ac7feb96304b99a11767f49263d9be98b84fc",
+      "paper": "https://arxiv.org/html/2508.05016v2",
+      "reported_outputs": 4800,
+      "reported_koniq_parents": 400,
+      "media_acquired_for_pilot": false,
+      "archive_delivery": "Drive landing resolved; archive not inspected."
+    },
+    {
+      "rank": 3,
+      "id": "pochihwu/low-quality-image-dataset",
+      "status": "recipe_reference_only",
+      "url": "https://www.kaggle.com/datasets/pochihwu/low-quality-image-dataset",
+      "reported_outputs": 100000,
+      "reported_coco_parents": 5000,
+      "media_acquired_for_pilot": false
+    },
+    {
+      "rank": 4,
+      "id": "nisarahmedrana/biq2021",
+      "status": "hold_gold_labels_mapping_conflict",
+      "url": "https://www.kaggle.com/datasets/nisarahmedrana/biq2021",
+      "media_acquired_for_pilot": false,
+      "verification_jpegs_downloaded": 3
+    },
+    {
+      "rank": 5,
+      "id": "chuneeb/deepfake-detection-dataset-2026",
+      "status": "exclude_release",
+      "url": "https://www.kaggle.com/datasets/chuneeb/deepfake-detection-dataset-2026",
+      "media_acquired_for_pilot": false,
+      "csv_only": true
+    }
+  ]
+}
