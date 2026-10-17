@@ -13,7 +13,7 @@ Write correlation pairs as `PLCC / SRCC`, in that order, with 3 decimals (keep 4
 | Metric | Definition (short) | What it shows | Notes |
 |---|---|---|---|
 | PLCC | Pearson linear correlation between predicted scores and MOS. | Linear agreement. | Sensitive to scale and outliers. State if it is raw or mapped (see section 2). |
-| SRCC (SROCC) | Pearson correlation of the ranks. | Rank (monotonic) agreement. | Not changed by any monotonic mapping. Main ranking metric. |
+| SRCC (SROCC) | Pearson correlation of the ranks. | Rank (monotonic) agreement. | Unchanged by strictly increasing mappings. Rounding or binning can create ties and change it. Main ranking metric. |
 | KRCC (KROCC) | Kendall tau: (concordant pairs - discordant pairs) / all pairs. Use tau-b when ties exist. | Pairwise order agreement. | Lower in value than SRCC. Easy to read as pair probability: P(correct order) is about (1 + tau) / 2 when there are no ties. |
 | RMSE | Root mean square error between predictions and MOS on one stated scale. | Absolute error. | Only valid after you map predictions to the MOS scale. Say which scale and which mapping. |
 | MAE | Mean absolute error on one stated scale. | Absolute error, less outlier weight. | Same rules as RMSE. |
@@ -46,7 +46,7 @@ Rules:
 2. If you also report mapped PLCC, label it `mapped (test-fit)` or `mapped (val-fit)`. Name the function. Fit one mapping per dataset.
 3. A test-fit mapping uses test labels. It is a reporting convention, not a deployable model. A deployable mapping must be fitted on train or validation data only.
 4. Never compare a raw PLCC from one paper with a mapped PLCC from another paper in one ranking.
-5. SRCC and KRCC do not change under a monotonic mapping. Use them when papers differ on mapping.
+5. SRCC and KRCC do not change under a strictly increasing mapping. Rounding, clipping, or binning can create ties and change them. Use rank metrics when papers differ on strictly increasing score mappings.
 6. Record fit failures. A logistic fit that does not converge gives a wrong PLCC. Keep the start values and the solver in the log.
 
 ## 3. Split rules

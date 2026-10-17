@@ -1,5 +1,7 @@
 # Prompts for synthetic visual ratings
 
+Current recommendation: the [2026-10-16 label specification](label-specification-2026-10-16.md) keeps this v1 format as a candidate for a small annotation trial. Technical quality is the primary target. Aesthetics has a separate validation gate and is not a default second bulk request. Keep human votes, teacher scalars, and model probabilities distinct; use the equal-width bins below only as a named Q-ReAlign compatibility adapter.
+
 Version: `visual-rating-v1`. Research checked on 2026-09-27. Status: proposed prompts, ready for a pilot; scoring accuracy has not been measured.
 
 For each image, generate two distinct targets: **technical quality** and **aesthetics**. Store both on a 1–5 scale, where a larger value is better. Use separate requests in the pilot to reduce the risk that one judgment influences the other. Test the joint prompt as a cheaper alternative before using it at scale.
