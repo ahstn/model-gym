@@ -1,0 +1,23 @@
+{
+  "valid_results": 378,
+  "planned_results": 378,
+  "unknown_cost_attempts": 0,
+  "reported_cost_usd": 0.030726569999999998,
+  "client_and_rounding_tests_passed": 91,
+  "historical_report_tests_passed": 54,
+  "checks": [
+    "frozen source and image hashes",
+    "all request hashes equal previous Jev requests",
+    "raw-response parsing and reported-cost reconciliation",
+    "exact CSV coverage",
+    "pinned model revision",
+    "independent baseline metric reproduction",
+    "Ruff",
+    "git diff --check",
+    "raw artifacts ignored"
+  ],
+  "bounded_rounding_corrections": 10,
+  "report_sha256": "c99d9e41f806d7411bacfb285531de51595239ae4fc3c1bf0722e8d726380e97",
+  "summary_sha256": "dc966b1fb4c419c1840da1d0fbb037b5f6d3f287dad9c3c9de55543657af5990",
+  "notes": "Automatic approval review initially blocked unverified image payloads. Public-source and exact prior-request checks were then completed; the approved retry and full run succeeded. No failed inference call resulted from that pre-execution block."
+}

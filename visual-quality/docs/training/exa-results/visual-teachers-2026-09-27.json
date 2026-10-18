@@ -1,0 +1,2082 @@
+{
+  "checked_on": "2026-09-27",
+  "benchmark": "MMMU-Pro",
+  "evaluator": "Artificial Analysis",
+  "source_url": "https://artificialanalysis.ai/models/gemini-3-7-flash",
+  "source_html_sha256": "aa8688e939839e72223681a9ffdf1a4174ec62a2f1fc0b4949f00ce158ebb40c",
+  "rank_method": "Best score per distinct release; includes evaluator-deprecated entries; no cross-benchmark average",
+  "configuration_count": 279,
+  "text_input_tokens": 300,
+  "answer_tokens": 100,
+  "reasoning_tokens_central": 1000,
+  "reasoning_scenarios": [
+    0,
+    1000,
+    4000
+  ],
+  "models": [
+    {
+      "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+      "slug": "claude-opus-5-5",
+      "mmmuPro": 0.876878612716763,
+      "deprecated": false,
+      "releaseDate": "2026-09-22",
+      "image_tokens": 1369,
+      "image_tokens_assumed": false,
+      "standard_input_usd_per_million": "4",
+      "standard_output_usd_per_million": "20",
+      "estimated_standard_usd": {
+        "1000": "28.68",
+        "10000": "286.76",
+        "250000": "7169.00"
+      },
+      "estimated_batch_250000_usd": "3584.50"
+    },
+    {
+      "name": "GPT-6 Astra (max)",
+      "slug": "gpt-6-astra",
+      "mmmuPro": 0.86878612716763,
+      "deprecated": false,
+      "releaseDate": "2026-09-03",
+      "image_tokens": 1229,
+      "image_tokens_assumed": false,
+      "standard_input_usd_per_million": "10",
+      "standard_output_usd_per_million": "50",
+      "estimated_standard_usd": {
+        "1000": "70.29",
+        "10000": "702.90",
+        "250000": "17572.50"
+      },
+      "estimated_batch_250000_usd": "8786.25"
+    },
+    {
+      "name": "Gemini 3.8 Flash (high)",
+      "slug": "gemini-3-8-flash",
+      "mmmuPro": 0.85606936416185,
+      "deprecated": false,
+      "releaseDate": "2026-09-02",
+      "image_tokens": 1120,
+      "image_tokens_assumed": false,
+      "standard_input_usd_per_million": ".75",
+      "standard_output_usd_per_million": "3.75",
+      "estimated_standard_usd": {
+        "1000": "5.19",
+        "10000": "51.90",
+        "250000": "1297.50"
+      },
+      "estimated_batch_250000_usd": "648.75"
+    },
+    {
+      "name": "Gemini 3.7 Flash (high)",
+      "slug": "gemini-3-7-flash",
+      "mmmuPro": 0.854913294797688,
+      "deprecated": true,
+      "releaseDate": "2026-08-13",
+      "image_tokens": 1120,
+      "image_tokens_assumed": false,
+      "standard_input_usd_per_million": ".75",
+      "standard_output_usd_per_million": "3.75",
+      "estimated_standard_usd": {
+        "1000": "5.19",
+        "10000": "51.90",
+        "250000": "1297.50"
+      },
+      "estimated_batch_250000_usd": "648.75"
+    },
+    {
+      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+      "slug": "claude-opus-5",
+      "mmmuPro": 0.847398843930636,
+      "deprecated": true,
+      "releaseDate": "2026-07-24",
+      "image_tokens": 1369,
+      "image_tokens_assumed": false,
+      "standard_input_usd_per_million": "5",
+      "standard_output_usd_per_million": "25",
+      "estimated_standard_usd": {
+        "1000": "35.85",
+        "10000": "358.45",
+        "250000": "8961.25"
+      },
+      "estimated_batch_250000_usd": "4480.63"
+    },
+    {
+      "name": "GPT-6 Luna (max)",
+      "slug": "gpt-6-luna",
+      "mmmuPro": 0.755491329479769,
+      "deprecated": false,
+      "releaseDate": "2026-09-22",
+      "image_tokens": 1229,
+      "image_tokens_assumed": true,
+      "standard_input_usd_per_million": ".1",
+      "standard_output_usd_per_million": ".5",
+      "estimated_standard_usd": {
+        "1000": "0.70",
+        "10000": "7.03",
+        "250000": "175.73"
+      },
+      "estimated_batch_250000_usd": "87.86"
+    }
+  ],
+  "pricing_sources": [
+    "https://developers.openai.com/api/docs/pricing",
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+    "https://platform.claude.com/docs/en/about-claude/pricing"
+  ],
+  "full_benchmark_rows": [
+    {
+      "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+      "slug": "claude-opus-5-5",
+      "mmmuPro": 0.876878612716763,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "GPT-6 Astra (max)",
+      "slug": "gpt-6-astra",
+      "mmmuPro": 0.86878612716763,
+      "deprecated": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "name": "Claude Opus 5.5 (Adaptive Reasoning, Xhigh Effort, Default Fallback)",
+      "slug": "claude-opus-5-5-xhigh",
+      "mmmuPro": 0.865895953757225,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "GPT-6 Astra (high)",
+      "slug": "gpt-6-astra-high",
+      "mmmuPro": 0.864161849710983,
+      "deprecated": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "name": "GPT-6 Astra (xhigh)",
+      "slug": "gpt-6-astra-xhigh",
+      "mmmuPro": 0.86242774566474,
+      "deprecated": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "name": "Claude Opus 5.5 (Adaptive Reasoning, High Effort, Default Fallback)",
+      "slug": "claude-opus-5-5-high",
+      "mmmuPro": 0.858381502890173,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Claude Opus 5.5 (Adaptive Reasoning, Medium Effort, Default Fallback)",
+      "slug": "claude-opus-5-5-medium",
+      "mmmuPro": 0.857225433526012,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Gemini 3.8 Flash (high)",
+      "slug": "gemini-3-8-flash",
+      "mmmuPro": 0.85606936416185,
+      "deprecated": false,
+      "releaseDate": "2026-09-02"
+    },
+    {
+      "name": "Gemini 3.7 Flash (high)",
+      "slug": "gemini-3-7-flash",
+      "mmmuPro": 0.854913294797688,
+      "deprecated": true,
+      "releaseDate": "2026-08-13"
+    },
+    {
+      "name": "GPT-6 Astra (medium)",
+      "slug": "gpt-6-astra-medium",
+      "mmmuPro": 0.850867052023121,
+      "deprecated": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "name": "Gemini 3.7 Flash (low)",
+      "slug": "gemini-3-7-flash-low",
+      "mmmuPro": 0.848554913294798,
+      "deprecated": true,
+      "releaseDate": "2026-08-13"
+    },
+    {
+      "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+      "slug": "claude-opus-5",
+      "mmmuPro": 0.847398843930636,
+      "deprecated": true,
+      "releaseDate": "2026-07-24"
+    },
+    {
+      "name": "Gemini 3.7 Flash (medium)",
+      "slug": "gemini-3-7-flash-medium",
+      "mmmuPro": 0.847398843930636,
+      "deprecated": true,
+      "releaseDate": "2026-08-13"
+    },
+    {
+      "name": "Claude Opus 5.5 (Adaptive Reasoning, Low Effort, Default Fallback)",
+      "slug": "claude-opus-5-5-low",
+      "mmmuPro": 0.846820809248555,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "GPT-6 Astra (low)",
+      "slug": "gpt-6-astra-low",
+      "mmmuPro": 0.846242774566474,
+      "deprecated": false,
+      "releaseDate": "2026-09-03"
+    },
+    {
+      "name": "Gemini 3.8 Flash (low)",
+      "slug": "gemini-3-8-flash-low",
+      "mmmuPro": 0.845086705202312,
+      "deprecated": false,
+      "releaseDate": "2026-09-02"
+    },
+    {
+      "name": "Gemini 3.5 Flash (high)",
+      "slug": "gemini-3-5-flash",
+      "mmmuPro": 0.842774566473988,
+      "deprecated": true,
+      "releaseDate": "2026-05-19"
+    },
+    {
+      "name": "Gemini 3.8 Flash (medium)",
+      "slug": "gemini-3-8-flash-medium",
+      "mmmuPro": 0.842196531791908,
+      "deprecated": false,
+      "releaseDate": "2026-09-02"
+    },
+    {
+      "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)",
+      "slug": "claude-opus-5-xhigh",
+      "mmmuPro": 0.839884393063584,
+      "deprecated": true,
+      "releaseDate": "2026-07-24"
+    },
+    {
+      "name": "Gemini 3.5 Flash (medium)",
+      "slug": "gemini-3-5-flash-medium",
+      "mmmuPro": 0.838728323699422,
+      "deprecated": true,
+      "releaseDate": "2026-05-19"
+    },
+    {
+      "name": "GPT-5.6 Sol (max)",
+      "slug": "gpt-5-6-sol",
+      "mmmuPro": 0.834104046242775,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "GPT-6 Sol (max)",
+      "slug": "gpt-6-sol",
+      "mmmuPro": 0.832947976878613,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Gemini 3.6 Flash (high)",
+      "slug": "gemini-3-6-flash",
+      "mmmuPro": 0.832369942196532,
+      "deprecated": true,
+      "releaseDate": "2026-07-21"
+    },
+    {
+      "name": "Qwen3.8 Max (0902)",
+      "slug": "qwen3-8-max",
+      "mmmuPro": 0.827745664739884,
+      "deprecated": false,
+      "releaseDate": "2026-09-02"
+    },
+    {
+      "name": "GPT-5.6 Sol (xhigh)",
+      "slug": "gpt-5-6-sol-xhigh",
+      "mmmuPro": 0.826589595375723,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Claude Opus 5 (Adaptive Reasoning, High Effort)",
+      "slug": "claude-opus-5-high",
+      "mmmuPro": 0.824277456647399,
+      "deprecated": true,
+      "releaseDate": "2026-07-24"
+    },
+    {
+      "name": "Gemini 3.1 Pro Preview",
+      "slug": "gemini-3-1-pro-preview",
+      "mmmuPro": 0.824277456647399,
+      "deprecated": false,
+      "releaseDate": "2026-02-19"
+    },
+    {
+      "name": "GPT-6 Sol (xhigh)",
+      "slug": "gpt-6-sol-xhigh",
+      "mmmuPro": 0.824277456647399,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Qwen3.8 Max",
+      "slug": "qwen3-8-max-0803",
+      "mmmuPro": 0.823121387283237,
+      "deprecated": true,
+      "releaseDate": "2026-08-03"
+    },
+    {
+      "name": "Muse Spark 1.3 (xhigh)",
+      "slug": "muse-spark-1-3-xhigh",
+      "mmmuPro": 0.820231213872832,
+      "deprecated": false,
+      "releaseDate": "2026-09-02"
+    },
+    {
+      "name": "GPT-5.6 Sol (high)",
+      "slug": "gpt-5-6-sol-high",
+      "mmmuPro": 0.81849710982659,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Claude Opus 5 (Adaptive Reasoning, Medium Effort)",
+      "slug": "claude-opus-5-medium",
+      "mmmuPro": 0.816184971098266,
+      "deprecated": true,
+      "releaseDate": "2026-07-24"
+    },
+    {
+      "name": "GPT-5.6 Sol (medium)",
+      "slug": "gpt-5-6-sol-medium",
+      "mmmuPro": 0.813872832369942,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "GPT-6 Sol (high)",
+      "slug": "gpt-6-sol-high",
+      "mmmuPro": 0.812138728323699,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "GPT-5.5 (medium)",
+      "slug": "gpt-5-5-medium",
+      "mmmuPro": 0.811560693641619,
+      "deprecated": true,
+      "releaseDate": "2026-04-23"
+    },
+    {
+      "name": "GPT-5.5 (high)",
+      "slug": "gpt-5-5-high",
+      "mmmuPro": 0.810982658959538,
+      "deprecated": true,
+      "releaseDate": "2026-04-23"
+    },
+    {
+      "name": "GPT-5.6 Sol (low)",
+      "slug": "gpt-5-6-sol-low",
+      "mmmuPro": 0.809826589595376,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "GPT-5.6 Terra (max)",
+      "slug": "gpt-5-6-terra",
+      "mmmuPro": 0.806936416184971,
+      "deprecated": false,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "GPT-6 Sol (medium)",
+      "slug": "gpt-6-sol-medium",
+      "mmmuPro": 0.80635838150289,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Muse Spark",
+      "slug": "muse-spark",
+      "mmmuPro": 0.805202312138728,
+      "deprecated": true,
+      "releaseDate": "2026-04-08"
+    },
+    {
+      "name": "Kimi K3 (max)",
+      "slug": "kimi-k3",
+      "mmmuPro": 0.805202312138728,
+      "deprecated": false,
+      "releaseDate": "2026-07-16"
+    },
+    {
+      "name": "Qwen3.7 Plus",
+      "slug": "qwen3-7-plus",
+      "mmmuPro": 0.804624277456647,
+      "deprecated": false,
+      "releaseDate": "2026-06-01"
+    },
+    {
+      "name": "Grok 4.5 (high)",
+      "slug": "grok-4-5",
+      "mmmuPro": 0.804046242774566,
+      "deprecated": true,
+      "releaseDate": "2026-07-08"
+    },
+    {
+      "name": "Gemini 3 Pro Preview (high)",
+      "slug": "gemini-3-pro",
+      "mmmuPro": 0.801734104046243,
+      "deprecated": true,
+      "releaseDate": "2025-11-18"
+    },
+    {
+      "name": "Gemini 3.5 Flash (minimal)",
+      "slug": "gemini-3-5-flash-minimal",
+      "mmmuPro": 0.801156069364162,
+      "deprecated": true,
+      "releaseDate": "2026-05-19"
+    },
+    {
+      "name": "Gemini 3 Flash Preview (Reasoning)",
+      "slug": "gemini-3-flash-reasoning",
+      "mmmuPro": 0.799421965317919,
+      "deprecated": true,
+      "releaseDate": "2025-12-17"
+    },
+    {
+      "name": "GPT-5.5 (xhigh)",
+      "slug": "gpt-5-5",
+      "mmmuPro": 0.798843930635838,
+      "deprecated": true,
+      "releaseDate": "2026-04-23"
+    },
+    {
+      "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)",
+      "slug": "claude-opus-5-low",
+      "mmmuPro": 0.798265895953757,
+      "deprecated": true,
+      "releaseDate": "2026-07-24"
+    },
+    {
+      "name": "Qwen3.8-Flash-Next",
+      "slug": "qwen3-8-flash-next",
+      "mmmuPro": 0.797687861271676,
+      "deprecated": false,
+      "releaseDate": "2026-08-26"
+    },
+    {
+      "name": "GPT-5.6 Terra (xhigh)",
+      "slug": "gpt-5-6-terra-xhigh",
+      "mmmuPro": 0.794797687861272,
+      "deprecated": false,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Kimi K2.6",
+      "slug": "kimi-k2-6",
+      "mmmuPro": 0.79364161849711,
+      "deprecated": true,
+      "releaseDate": "2026-04-20"
+    },
+    {
+      "name": "Apodex 1.1",
+      "slug": "apodex-1-1",
+      "mmmuPro": 0.791907514450867,
+      "deprecated": false,
+      "releaseDate": "2026-08-30"
+    },
+    {
+      "name": "GPT-5.6 Terra (high)",
+      "slug": "gpt-5-6-terra-high",
+      "mmmuPro": 0.790751445086705,
+      "deprecated": false,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Gemini 3.5 Flash-Lite",
+      "slug": "gemini-3-5-flash-lite",
+      "mmmuPro": 0.790173410404624,
+      "deprecated": false,
+      "releaseDate": "2026-07-21"
+    },
+    {
+      "name": "GPT-5.5 (low)",
+      "slug": "gpt-5-5-low",
+      "mmmuPro": 0.790173410404624,
+      "deprecated": true,
+      "releaseDate": "2026-04-23"
+    },
+    {
+      "name": "Ling-3.0-flash-VL",
+      "slug": "ling-3-0-flash-vl",
+      "mmmuPro": 0.789595375722543,
+      "deprecated": false,
+      "releaseDate": "2026-09-10"
+    },
+    {
+      "name": "GPT-6 Sol (low)",
+      "slug": "gpt-6-sol-low",
+      "mmmuPro": 0.788439306358382,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
+      "slug": "claude-opus-4-7",
+      "mmmuPro": 0.788439306358382,
+      "deprecated": true,
+      "releaseDate": "2026-04-16"
+    },
+    {
+      "name": "MiniMax-M3",
+      "slug": "minimax-m3",
+      "mmmuPro": 0.785549132947977,
+      "deprecated": false,
+      "releaseDate": "2026-06-01"
+    },
+    {
+      "name": "GPT-5.6 Luna (max)",
+      "slug": "gpt-5-6-luna",
+      "mmmuPro": 0.785549132947977,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Gemini 3 Flash Preview (Non-reasoning)",
+      "slug": "gemini-3-flash",
+      "mmmuPro": 0.785549132947977,
+      "deprecated": true,
+      "releaseDate": "2025-12-17"
+    },
+    {
+      "name": "GPT-5.6 Luna (xhigh)",
+      "slug": "gpt-5-6-luna-xhigh",
+      "mmmuPro": 0.785549132947977,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Kimi K3 (low)",
+      "slug": "kimi-k3-low",
+      "mmmuPro": 0.784971098265896,
+      "deprecated": false,
+      "releaseDate": "2026-07-16"
+    },
+    {
+      "name": "GPT-5.3 Codex (xhigh)",
+      "slug": "gpt-5-3-codex",
+      "mmmuPro": 0.784971098265896,
+      "deprecated": false,
+      "releaseDate": "2026-02-05"
+    },
+    {
+      "name": "GPT-5.4 (xhigh)",
+      "slug": "gpt-5-4",
+      "mmmuPro": 0.784393063583815,
+      "deprecated": true,
+      "releaseDate": "2026-03-05"
+    },
+    {
+      "name": "Grok 4.3 (high)",
+      "slug": "grok-4-3",
+      "mmmuPro": 0.78092485549133,
+      "deprecated": true,
+      "releaseDate": "2026-04-30"
+    },
+    {
+      "name": "GPT-5.4 (low)",
+      "slug": "gpt-5-4-low",
+      "mmmuPro": 0.779768786127168,
+      "deprecated": true,
+      "releaseDate": "2026-03-05"
+    },
+    {
+      "name": "Qwen3.6 Plus",
+      "slug": "qwen3-6-plus",
+      "mmmuPro": 0.779768786127168,
+      "deprecated": true,
+      "releaseDate": "2026-04-02"
+    },
+    {
+      "name": "GPT-5.6 Luna (high)",
+      "slug": "gpt-5-6-luna-high",
+      "mmmuPro": 0.775722543352601,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Qwen3.5 397B A17B (Reasoning)",
+      "slug": "qwen3-5-397b-a17b",
+      "mmmuPro": 0.772832369942197,
+      "deprecated": false,
+      "releaseDate": "2026-02-16"
+    },
+    {
+      "name": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
+      "slug": "claude-sonnet-5",
+      "mmmuPro": 0.772832369942197,
+      "deprecated": false,
+      "releaseDate": "2026-06-30"
+    },
+    {
+      "name": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
+      "slug": "deepseek-v4-1-flash",
+      "mmmuPro": 0.769942196531792,
+      "deprecated": false,
+      "releaseDate": "2026-09-10"
+    },
+    {
+      "name": "GPT-5.6 Terra (medium)",
+      "slug": "gpt-5-6-terra-medium",
+      "mmmuPro": 0.767630057803468,
+      "deprecated": false,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Grok Build 0.1 0616",
+      "slug": "grok-build-0-1-06-16",
+      "mmmuPro": 0.765317919075144,
+      "deprecated": true,
+      "releaseDate": "2026-06-16"
+    },
+    {
+      "name": "Step 5 Preview",
+      "slug": "step-5",
+      "mmmuPro": 0.763583815028902,
+      "deprecated": false,
+      "releaseDate": "2026-09-18"
+    },
+    {
+      "name": "Claude Opus 4.7 (Non-reasoning, High Effort)",
+      "slug": "claude-opus-4-7-non-reasoning",
+      "mmmuPro": 0.763583815028902,
+      "deprecated": true,
+      "releaseDate": "2026-04-16"
+    },
+    {
+      "name": "GPT-5.2 Codex (xhigh)",
+      "slug": "gpt-5-2-codex",
+      "mmmuPro": 0.763005780346821,
+      "deprecated": true,
+      "releaseDate": "2025-12-11"
+    },
+    {
+      "name": "Qwen3.8 27B (xhigh)",
+      "slug": "qwen3-8-27b",
+      "mmmuPro": 0.763005780346821,
+      "deprecated": false,
+      "releaseDate": "2026-08-14"
+    },
+    {
+      "name": "GPT-5.6 Terra (low)",
+      "slug": "gpt-5-6-terra-low",
+      "mmmuPro": 0.761271676300578,
+      "deprecated": false,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "GPT-5.6 Luna (medium)",
+      "slug": "gpt-5-6-luna-medium",
+      "mmmuPro": 0.758381502890173,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Grok 4.3 (medium)",
+      "slug": "grok-4-3-medium",
+      "mmmuPro": 0.758381502890173,
+      "deprecated": true,
+      "releaseDate": "2026-04-30"
+    },
+    {
+      "name": "Gemini 3.1 Flash-Lite",
+      "slug": "gemini-3-1-flash-lite-preview",
+      "mmmuPro": 0.755491329479769,
+      "deprecated": true,
+      "releaseDate": "2026-03-03"
+    },
+    {
+      "name": "GPT-6 Luna (max)",
+      "slug": "gpt-6-luna",
+      "mmmuPro": 0.755491329479769,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "GPT-5.1 (high)",
+      "slug": "gpt-5-1",
+      "mmmuPro": 0.754913294797688,
+      "deprecated": true,
+      "releaseDate": "2025-11-13"
+    },
+    {
+      "name": "MiMo-V2.5",
+      "slug": "mimo-v2-5-0424",
+      "mmmuPro": 0.754335260115607,
+      "deprecated": false,
+      "releaseDate": "2026-04-22"
+    },
+    {
+      "name": "Claude Opus 4.6 (Adaptive Reasoning, Max Effort)",
+      "slug": "claude-opus-4-6-adaptive",
+      "mmmuPro": 0.754335260115607,
+      "deprecated": true,
+      "releaseDate": "2026-02-05"
+    },
+    {
+      "name": "Kimi K2.5 (Reasoning)",
+      "slug": "kimi-k2-5",
+      "mmmuPro": 0.753757225433526,
+      "deprecated": true,
+      "releaseDate": "2026-01-27"
+    },
+    {
+      "name": "Step 3.7 Flash",
+      "slug": "step-3-7-flash",
+      "mmmuPro": 0.753179190751445,
+      "deprecated": false,
+      "releaseDate": "2026-05-29"
+    },
+    {
+      "name": "GPT-6 Luna (xhigh)",
+      "slug": "gpt-6-luna-xhigh",
+      "mmmuPro": 0.752601156069364,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Qwen3.5 27B (Reasoning)",
+      "slug": "qwen3-5-27b",
+      "mmmuPro": 0.75028901734104,
+      "deprecated": true,
+      "releaseDate": "2026-02-24"
+    },
+    {
+      "name": "Qwen3.6 35B A3B (Reasoning)",
+      "slug": "qwen3-6-35b-a3b",
+      "mmmuPro": 0.75028901734104,
+      "deprecated": false,
+      "releaseDate": "2026-04-16"
+    },
+    {
+      "name": "Qwen3.5 122B A10B (Reasoning)",
+      "slug": "qwen3-5-122b-a10b",
+      "mmmuPro": 0.74971098265896,
+      "deprecated": false,
+      "releaseDate": "2026-02-24"
+    },
+    {
+      "name": "Gemini 2.5 Pro",
+      "slug": "gemini-2-5-pro",
+      "mmmuPro": 0.749132947976879,
+      "deprecated": true,
+      "releaseDate": "2025-06-05"
+    },
+    {
+      "name": "DeepSeek V4 Flash Vision (Reasoning, Max Effort)",
+      "slug": "deepseek-v4-flash-vision",
+      "mmmuPro": 0.747976878612717,
+      "deprecated": false,
+      "releaseDate": "2026-08-21"
+    },
+    {
+      "name": "Qwen3.6 27B (Reasoning)",
+      "slug": "qwen3-6-27b",
+      "mmmuPro": 0.746242774566474,
+      "deprecated": true,
+      "releaseDate": "2026-04-22"
+    },
+    {
+      "name": "GPT-5.2 (medium)",
+      "slug": "gpt-5-2-medium",
+      "mmmuPro": 0.745664739884393,
+      "deprecated": true,
+      "releaseDate": "2025-12-11"
+    },
+    {
+      "name": "Grok 4.20 0309 v2 (Reasoning)",
+      "slug": "grok-4-20",
+      "mmmuPro": 0.745664739884393,
+      "deprecated": true,
+      "releaseDate": "2026-04-07"
+    },
+    {
+      "name": "GPT-6 Luna (high)",
+      "slug": "gpt-6-luna-high",
+      "mmmuPro": 0.74393063583815,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Muse Glimmer (high)",
+      "slug": "muse-glimmer",
+      "mmmuPro": 0.743352601156069,
+      "deprecated": false,
+      "releaseDate": "2026-08-10"
+    },
+    {
+      "name": "GPT-5 (medium)",
+      "slug": "gpt-5-medium",
+      "mmmuPro": 0.743352601156069,
+      "deprecated": true,
+      "releaseDate": "2025-08-07"
+    },
+    {
+      "name": "GPT-5 (high)",
+      "slug": "gpt-5",
+      "mmmuPro": 0.742196531791907,
+      "deprecated": true,
+      "releaseDate": "2025-08-07"
+    },
+    {
+      "name": "Qwen3.8 27B (medium)",
+      "slug": "qwen3-8-27b-medium",
+      "mmmuPro": 0.741618497109827,
+      "deprecated": false,
+      "releaseDate": "2026-08-14"
+    },
+    {
+      "name": "Claude Opus 4.5 (Reasoning)",
+      "slug": "claude-opus-4-5-thinking",
+      "mmmuPro": 0.740462427745665,
+      "deprecated": true,
+      "releaseDate": "2025-11-24"
+    },
+    {
+      "name": "Inkling Small",
+      "slug": "inkling-small",
+      "mmmuPro": 0.740462427745665,
+      "deprecated": false,
+      "releaseDate": "2026-07-30"
+    },
+    {
+      "name": "GPT-5.6 Luna (low)",
+      "slug": "gpt-5-6-luna-low",
+      "mmmuPro": 0.739884393063584,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "MiMo-V2-Omni-0327",
+      "slug": "mimo-v2-omni-0327",
+      "mmmuPro": 0.739306358381503,
+      "deprecated": true,
+      "releaseDate": "2026-03-27"
+    },
+    {
+      "name": "GPT-5 Codex (high)",
+      "slug": "gpt-5-codex",
+      "mmmuPro": 0.738150289017341,
+      "deprecated": true,
+      "releaseDate": "2025-09-23"
+    },
+    {
+      "name": "Qwen3.8 27B (low)",
+      "slug": "qwen3-8-27b-low",
+      "mmmuPro": 0.73757225433526,
+      "deprecated": false,
+      "releaseDate": "2026-08-14"
+    },
+    {
+      "name": "GPT-5 (low)",
+      "slug": "gpt-5-low",
+      "mmmuPro": 0.73757225433526,
+      "deprecated": true,
+      "releaseDate": "2025-08-07"
+    },
+    {
+      "name": "Inkling (xhigh)",
+      "slug": "inkling",
+      "mmmuPro": 0.734682080924856,
+      "deprecated": false,
+      "releaseDate": "2026-07-15"
+    },
+    {
+      "name": "Gemma 4 31B (Reasoning)",
+      "slug": "gemma-4-31b",
+      "mmmuPro": 0.734104046242775,
+      "deprecated": false,
+      "releaseDate": "2026-04-02"
+    },
+    {
+      "name": "GPT-5.4 mini (xhigh)",
+      "slug": "gpt-5-4-mini",
+      "mmmuPro": 0.732947976878613,
+      "deprecated": true,
+      "releaseDate": "2026-03-17"
+    },
+    {
+      "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
+      "slug": "claude-sonnet-4-6-adaptive",
+      "mmmuPro": 0.732947976878613,
+      "deprecated": true,
+      "releaseDate": "2026-02-17"
+    },
+    {
+      "name": "Grok 4.20 0309 (Reasoning)",
+      "slug": "grok-4-20-0309",
+      "mmmuPro": 0.731791907514451,
+      "deprecated": true,
+      "releaseDate": "2026-03-10"
+    },
+    {
+      "name": "Gemini 2.5 Flash Preview (Sep '25) (Reasoning)",
+      "slug": "gemini-2-5-flash-preview-09-2025-reasoning",
+      "mmmuPro": 0.73121387283237,
+      "deprecated": true,
+      "releaseDate": "2025-09-25"
+    },
+    {
+      "name": "MiMo-V2.6-Flash",
+      "slug": "mimo-v2-6-flash",
+      "mmmuPro": 0.730635838150289,
+      "deprecated": false,
+      "releaseDate": "2026-09-21"
+    },
+    {
+      "name": "Kimi K2.5 (Non-reasoning)",
+      "slug": "kimi-k2-5-non-reasoning",
+      "mmmuPro": 0.730635838150289,
+      "deprecated": true,
+      "releaseDate": "2026-01-27"
+    },
+    {
+      "name": "GPT-6 Luna (medium)",
+      "slug": "gpt-6-luna-medium",
+      "mmmuPro": 0.730057803468208,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "GLM 5V Turbo (Reasoning)",
+      "slug": "glm-5v-turbo",
+      "mmmuPro": 0.727745664739884,
+      "deprecated": true,
+      "releaseDate": "2026-04-01"
+    },
+    {
+      "name": "Grok 4.3 (low)",
+      "slug": "grok-4-3-low",
+      "mmmuPro": 0.727745664739884,
+      "deprecated": true,
+      "releaseDate": "2026-04-30"
+    },
+    {
+      "name": "Qwen3.5 35B A3B (Reasoning)",
+      "slug": "qwen3-5-35b-a3b",
+      "mmmuPro": 0.726589595375723,
+      "deprecated": true,
+      "releaseDate": "2026-02-24"
+    },
+    {
+      "name": "Claude Opus 4.6 (Non-reasoning, High Effort)",
+      "slug": "claude-opus-4-6",
+      "mmmuPro": 0.725433526011561,
+      "deprecated": true,
+      "releaseDate": "2026-02-05"
+    },
+    {
+      "name": "GPT-5.1 Codex (high)",
+      "slug": "gpt-5-1-codex",
+      "mmmuPro": 0.72485549132948,
+      "deprecated": true,
+      "releaseDate": "2025-11-13"
+    },
+    {
+      "name": "GPT-5.6 Sol (Non-reasoning)",
+      "slug": "gpt-5-6-sol-non-reasoning",
+      "mmmuPro": 0.71907514450867,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Claude Sonnet 5 (Non-reasoning, High Effort)",
+      "slug": "claude-sonnet-5-non-reasoning",
+      "mmmuPro": 0.71907514450867,
+      "deprecated": false,
+      "releaseDate": "2026-06-30"
+    },
+    {
+      "name": "Qwen3.6 27B (Non-reasoning)",
+      "slug": "qwen3-6-27b-non-reasoning",
+      "mmmuPro": 0.717341040462428,
+      "deprecated": true,
+      "releaseDate": "2026-04-22"
+    },
+    {
+      "name": "GPT-5.5 (Non-reasoning)",
+      "slug": "gpt-5-5-non-reasoning",
+      "mmmuPro": 0.713872832369942,
+      "deprecated": true,
+      "releaseDate": "2026-04-23"
+    },
+    {
+      "name": "Claude Opus 4.5 (Non-reasoning)",
+      "slug": "claude-opus-4-5",
+      "mmmuPro": 0.712138728323699,
+      "deprecated": true,
+      "releaseDate": "2025-11-24"
+    },
+    {
+      "name": "GPT-5.4 mini (medium)",
+      "slug": "gpt-5-4-mini-medium",
+      "mmmuPro": 0.711560693641618,
+      "deprecated": true,
+      "releaseDate": "2026-03-17"
+    },
+    {
+      "name": "Qwen3.6 35B A3B (Non-reasoning)",
+      "slug": "qwen3-6-35b-a3b-non-reasoning",
+      "mmmuPro": 0.710404624277457,
+      "deprecated": false,
+      "releaseDate": "2026-04-16"
+    },
+    {
+      "name": "Claude Sonnet 4.6 (Non-reasoning, High Effort)",
+      "slug": "claude-sonnet-4-6",
+      "mmmuPro": 0.705780346820809,
+      "deprecated": true,
+      "releaseDate": "2026-02-17"
+    },
+    {
+      "name": "GPT-5.4 (Non-reasoning)",
+      "slug": "gpt-5-4-non-reasoning",
+      "mmmuPro": 0.705780346820809,
+      "deprecated": true,
+      "releaseDate": "2026-03-05"
+    },
+    {
+      "name": "Qwen3.5 Omni Plus",
+      "slug": "qwen3-5-omni-plus",
+      "mmmuPro": 0.705202312138728,
+      "deprecated": false,
+      "releaseDate": "2026-03-30"
+    },
+    {
+      "name": "GPT-6 Luna (low)",
+      "slug": "gpt-6-luna-low",
+      "mmmuPro": 0.703468208092486,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Gemma 4 31B (Non-reasoning)",
+      "slug": "gemma-4-31b-non-reasoning",
+      "mmmuPro": 0.703468208092486,
+      "deprecated": false,
+      "releaseDate": "2026-04-02"
+    },
+    {
+      "name": "Qwen3.5 122B A10B (Non-reasoning)",
+      "slug": "qwen3-5-122b-a10b-non-reasoning",
+      "mmmuPro": 0.702890173410405,
+      "deprecated": false,
+      "releaseDate": "2026-02-24"
+    },
+    {
+      "name": "Gemini 2.5 Flash Preview (Sep '25) (Non-reasoning)",
+      "slug": "gemini-2-5-flash-preview-09-2025",
+      "mmmuPro": 0.702312138728324,
+      "deprecated": true,
+      "releaseDate": "2025-09-25"
+    },
+    {
+      "name": "o3",
+      "slug": "o3",
+      "mmmuPro": 0.700578034682081,
+      "deprecated": false,
+      "releaseDate": "2025-04-16"
+    },
+    {
+      "name": "GPT-5 mini (high)",
+      "slug": "gpt-5-mini",
+      "mmmuPro": 0.700578034682081,
+      "deprecated": true,
+      "releaseDate": "2025-08-07"
+    },
+    {
+      "name": "Qwen3.5 27B (Non-reasoning)",
+      "slug": "qwen3-5-27b-non-reasoning",
+      "mmmuPro": 0.7,
+      "deprecated": true,
+      "releaseDate": "2026-02-24"
+    },
+    {
+      "name": "Qwen3.8 27B (Non-reasoning)",
+      "slug": "qwen3-8-27b-non-reasoning",
+      "mmmuPro": 0.699421965317919,
+      "deprecated": false,
+      "releaseDate": "2026-08-14"
+    },
+    {
+      "name": "MiMo-V2-Omni",
+      "slug": "mimo-v2-omni",
+      "mmmuPro": 0.698843930635838,
+      "deprecated": true,
+      "releaseDate": "2026-03-19"
+    },
+    {
+      "name": "Gemma 4 12B (Reasoning)",
+      "slug": "gemma-4-12b",
+      "mmmuPro": 0.696531791907514,
+      "deprecated": false,
+      "releaseDate": "2026-06-03"
+    },
+    {
+      "name": "Qwen3.5 9B (Reasoning)",
+      "slug": "qwen3-5-9b",
+      "mmmuPro": 0.692485549132948,
+      "deprecated": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "name": "Gemma 4 26B A4B (Reasoning)",
+      "slug": "gemma-4-26b-a4b",
+      "mmmuPro": 0.692485549132948,
+      "deprecated": false,
+      "releaseDate": "2026-04-02"
+    },
+    {
+      "name": "o4-mini (high)",
+      "slug": "o4-mini",
+      "mmmuPro": 0.692485549132948,
+      "deprecated": true,
+      "releaseDate": "2025-04-16"
+    },
+    {
+      "name": "Qwen3.5 35B A3B (Non-reasoning)",
+      "slug": "qwen3-5-35b-a3b-non-reasoning",
+      "mmmuPro": 0.691907514450867,
+      "deprecated": true,
+      "releaseDate": "2026-02-24"
+    },
+    {
+      "name": "Claude Sonnet 4.6 (Non-reasoning, Low Effort)",
+      "slug": "claude-sonnet-4-6-non-reasoning-low-effort",
+      "mmmuPro": 0.691907514450867,
+      "deprecated": true,
+      "releaseDate": "2026-02-17"
+    },
+    {
+      "name": "Gemini 2.5 Flash (Reasoning)",
+      "slug": "gemini-2-5-flash-reasoning",
+      "mmmuPro": 0.690751445086705,
+      "deprecated": true,
+      "releaseDate": "2025-05-20"
+    },
+    {
+      "name": "GPT-5.1 Codex mini (high)",
+      "slug": "gpt-5-1-codex-mini",
+      "mmmuPro": 0.690173410404624,
+      "deprecated": true,
+      "releaseDate": "2025-11-13"
+    },
+    {
+      "name": "Grok 4",
+      "slug": "grok-4",
+      "mmmuPro": 0.688439306358381,
+      "deprecated": true,
+      "releaseDate": "2025-07-10"
+    },
+    {
+      "name": "GPT-5 mini (medium)",
+      "slug": "gpt-5-mini-medium",
+      "mmmuPro": 0.688439306358381,
+      "deprecated": true,
+      "releaseDate": "2025-08-07"
+    },
+    {
+      "name": "Claude 4.5 Sonnet (Reasoning)",
+      "slug": "claude-4-5-sonnet-thinking",
+      "mmmuPro": 0.68728323699422,
+      "deprecated": true,
+      "releaseDate": "2025-09-29"
+    },
+    {
+      "name": "Qwen3 VL 235B A22B (Reasoning)",
+      "slug": "qwen3-vl-235b-a22b-reasoning",
+      "mmmuPro": 0.68728323699422,
+      "deprecated": true,
+      "releaseDate": "2025-09-23"
+    },
+    {
+      "name": "GPT-6 Sol (Non-reasoning)",
+      "slug": "gpt-6-sol-non-reasoning",
+      "mmmuPro": 0.68150289017341,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Doubao Seed Code",
+      "slug": "doubao-seed-code",
+      "mmmuPro": 0.68092485549133,
+      "deprecated": false,
+      "releaseDate": "2025-11-11"
+    },
+    {
+      "name": "Claude 4.1 Opus (Reasoning)",
+      "slug": "claude-4-1-opus-thinking",
+      "mmmuPro": 0.679190751445087,
+      "deprecated": true,
+      "releaseDate": "2025-08-05"
+    },
+    {
+      "name": "Qwen3 VL 235B A22B Instruct",
+      "slug": "qwen3-vl-235b-a22b-instruct",
+      "mmmuPro": 0.675722543352601,
+      "deprecated": true,
+      "releaseDate": "2025-09-23"
+    },
+    {
+      "name": "EXAONE 4.5 33B",
+      "slug": "exaone-4-5-33b",
+      "mmmuPro": 0.673410404624277,
+      "deprecated": false,
+      "releaseDate": "2026-04-09"
+    },
+    {
+      "name": "Qwen3.5 9B (Non-reasoning)",
+      "slug": "qwen3-5-9b-non-reasoning",
+      "mmmuPro": 0.667630057803468,
+      "deprecated": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "name": "Gemma 4 26B A4B (Non-reasoning)",
+      "slug": "gemma-4-26b-a4b-non-reasoning",
+      "mmmuPro": 0.667052023121387,
+      "deprecated": false,
+      "releaseDate": "2026-04-02"
+    },
+    {
+      "name": "GPT-5.6 Terra (Non-reasoning)",
+      "slug": "gpt-5-6-terra-non-reasoning",
+      "mmmuPro": 0.667052023121387,
+      "deprecated": false,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "DiffusionGemma 26B A4B",
+      "slug": "diffusiongemma-26b-a4b",
+      "mmmuPro": 0.665317919075144,
+      "deprecated": false,
+      "releaseDate": "2026-06-10"
+    },
+    {
+      "name": "GPT-5.2 (Non-reasoning)",
+      "slug": "gpt-5-2-non-reasoning",
+      "mmmuPro": 0.658381502890173,
+      "deprecated": true,
+      "releaseDate": "2025-12-11"
+    },
+    {
+      "name": "DeepSeek V4.1 Flash (Non-Reasoning)",
+      "slug": "deepseek-v4-1-flash-non-reasoning",
+      "mmmuPro": 0.65606936416185,
+      "deprecated": false,
+      "releaseDate": "2026-09-10"
+    },
+    {
+      "name": "Gemini 2.5 Flash (Non-reasoning)",
+      "slug": "gemini-2-5-flash",
+      "mmmuPro": 0.654913294797688,
+      "deprecated": true,
+      "releaseDate": "2025-05-20"
+    },
+    {
+      "name": "Qwen3.5 4B (Reasoning)",
+      "slug": "qwen3-5-4b",
+      "mmmuPro": 0.653757225433526,
+      "deprecated": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "name": "GPT-5.4 nano (xhigh)",
+      "slug": "gpt-5-4-nano",
+      "mmmuPro": 0.653757225433526,
+      "deprecated": true,
+      "releaseDate": "2026-03-17"
+    },
+    {
+      "name": "Claude 4.5 Sonnet (Non-reasoning)",
+      "slug": "claude-4-5-sonnet",
+      "mmmuPro": 0.652023121387283,
+      "deprecated": true,
+      "releaseDate": "2025-09-29"
+    },
+    {
+      "name": "Gemini 2.5 Flash-Lite Preview (Sep '25) (Reasoning)",
+      "slug": "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+      "mmmuPro": 0.64971098265896,
+      "deprecated": true,
+      "releaseDate": "2025-09-25"
+    },
+    {
+      "name": "Grok 4.20 0309 v2 (Non-reasoning)",
+      "slug": "grok-4-20-non-reasoning",
+      "mmmuPro": 0.649132947976879,
+      "deprecated": true,
+      "releaseDate": "2026-04-07"
+    },
+    {
+      "name": "Mistral Medium 3.5",
+      "slug": "mistral-medium-3-5",
+      "mmmuPro": 0.648554913294798,
+      "deprecated": false,
+      "releaseDate": "2026-04-29"
+    },
+    {
+      "name": "Grok 4.3 (Non-reasoning)",
+      "slug": "grok-4-3-non-reasoning",
+      "mmmuPro": 0.647976878612717,
+      "deprecated": true,
+      "releaseDate": "2026-04-30"
+    },
+    {
+      "name": "Qwen3.5 Omni Flash",
+      "slug": "qwen3-5-omni-flash",
+      "mmmuPro": 0.647398843930636,
+      "deprecated": false,
+      "releaseDate": "2026-03-30"
+    },
+    {
+      "name": "ERNIE 5.0 Thinking Preview",
+      "slug": "ernie-5-0-thinking-preview",
+      "mmmuPro": 0.645664739884393,
+      "deprecated": false,
+      "releaseDate": "2025-11-13"
+    },
+    {
+      "name": "Nova 2.0 Pro Preview (medium)",
+      "slug": "nova-2-0-pro-reasoning-medium",
+      "mmmuPro": 0.645086705202312,
+      "deprecated": false,
+      "releaseDate": "2025-11-27"
+    },
+    {
+      "name": "Qwen3 VL 32B Instruct",
+      "slug": "qwen3-vl-32b-instruct",
+      "mmmuPro": 0.642774566473988,
+      "deprecated": true,
+      "releaseDate": "2025-10-21"
+    },
+    {
+      "name": "JT-4.1 Flash 236B A21B",
+      "slug": "jt-4-1-flash-236b-a21b",
+      "mmmuPro": 0.641040462427746,
+      "deprecated": false,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Grok 4.20 0309 (Non-reasoning)",
+      "slug": "grok-4-20-0309-non-reasoning",
+      "mmmuPro": 0.640462427745665,
+      "deprecated": true,
+      "releaseDate": "2026-03-10"
+    },
+    {
+      "name": "Step3 VL 10B",
+      "slug": "step-3-vl-10b",
+      "mmmuPro": 0.639884393063584,
+      "deprecated": false,
+      "releaseDate": "2026-01-20"
+    },
+    {
+      "name": "Nova 2.0 Lite (high)",
+      "slug": "nova-2-0-lite-reasoning",
+      "mmmuPro": 0.63757225433526,
+      "deprecated": false,
+      "releaseDate": "2025-10-29"
+    },
+    {
+      "name": "Gemini 2.5 Flash-Lite Preview (Sep '25) (Non-reasoning)",
+      "slug": "gemini-2-5-flash-lite-preview-09-2025",
+      "mmmuPro": 0.634104046242775,
+      "deprecated": true,
+      "releaseDate": "2025-09-25"
+    },
+    {
+      "name": "Qwen3 VL 32B (Reasoning)",
+      "slug": "qwen3-vl-32b-reasoning",
+      "mmmuPro": 0.634104046242775,
+      "deprecated": true,
+      "releaseDate": "2025-10-21"
+    },
+    {
+      "name": "Grok 4.1 Fast (Reasoning)",
+      "slug": "grok-4-1-fast-reasoning",
+      "mmmuPro": 0.632947976878613,
+      "deprecated": true,
+      "releaseDate": "2025-11-19"
+    },
+    {
+      "name": "Command A+",
+      "slug": "command-a-plus",
+      "mmmuPro": 0.632369942196532,
+      "deprecated": false,
+      "releaseDate": "2026-05-20"
+    },
+    {
+      "name": "Nova 2.0 Pro Preview (low)",
+      "slug": "nova-2-0-pro-reasoning-low",
+      "mmmuPro": 0.627167630057804,
+      "deprecated": false,
+      "releaseDate": "2025-11-27"
+    },
+    {
+      "name": "Nova 2.0 Lite (medium)",
+      "slug": "nova-2-0-lite-reasoning-medium",
+      "mmmuPro": 0.625433526011561,
+      "deprecated": false,
+      "releaseDate": "2025-10-29"
+    },
+    {
+      "name": "Claude 4 Sonnet (Non-reasoning)",
+      "slug": "claude-4-sonnet",
+      "mmmuPro": 0.623699421965318,
+      "deprecated": true,
+      "releaseDate": "2025-05-22"
+    },
+    {
+      "name": "GPT-5.1 (Non-reasoning)",
+      "slug": "gpt-5-1-non-reasoning",
+      "mmmuPro": 0.623699421965318,
+      "deprecated": true,
+      "releaseDate": "2025-11-13"
+    },
+    {
+      "name": "Qwen3 VL 30B A3B Instruct",
+      "slug": "qwen3-vl-30b-a3b-instruct",
+      "mmmuPro": 0.621387283236994,
+      "deprecated": true,
+      "releaseDate": "2025-10-03"
+    },
+    {
+      "name": "Llama 4 Maverick",
+      "slug": "llama-4-maverick",
+      "mmmuPro": 0.621387283236994,
+      "deprecated": false,
+      "releaseDate": "2025-04-05"
+    },
+    {
+      "name": "Qwen3.5 4B (Non-reasoning)",
+      "slug": "qwen3-5-4b-non-reasoning",
+      "mmmuPro": 0.620809248554913,
+      "deprecated": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "name": "GPT-5 (minimal)",
+      "slug": "gpt-5-minimal",
+      "mmmuPro": 0.620809248554913,
+      "deprecated": true,
+      "releaseDate": "2025-08-07"
+    },
+    {
+      "name": "Gemma 4 12B (Non-reasoning)",
+      "slug": "gemma-4-12b-non-reasoning",
+      "mmmuPro": 0.619653179190751,
+      "deprecated": false,
+      "releaseDate": "2026-06-03"
+    },
+    {
+      "name": "Gemini 2.5 Flash Preview (Non-reasoning)",
+      "slug": "gemini-2-5-flash-04-2025",
+      "mmmuPro": 0.619653179190751,
+      "deprecated": true,
+      "releaseDate": "2025-04-17"
+    },
+    {
+      "name": "Nova 2.0 Omni (medium)",
+      "slug": "nova-2-0-omni-reasoning-medium",
+      "mmmuPro": 0.619075144508671,
+      "deprecated": false,
+      "releaseDate": "2025-11-26"
+    },
+    {
+      "name": "Qwen3 VL 30B A3B (Reasoning)",
+      "slug": "qwen3-vl-30b-a3b-reasoning",
+      "mmmuPro": 0.61849710982659,
+      "deprecated": true,
+      "releaseDate": "2025-10-03"
+    },
+    {
+      "name": "Grok 4 Fast (Reasoning)",
+      "slug": "grok-4-fast-reasoning",
+      "mmmuPro": 0.617919075144509,
+      "deprecated": true,
+      "releaseDate": "2025-09-19"
+    },
+    {
+      "name": "Claude 4 Sonnet (Reasoning)",
+      "slug": "claude-4-sonnet-thinking",
+      "mmmuPro": 0.617919075144509,
+      "deprecated": true,
+      "releaseDate": "2025-05-22"
+    },
+    {
+      "name": "GPT-4.1",
+      "slug": "gpt-4-1",
+      "mmmuPro": 0.612138728323699,
+      "deprecated": true,
+      "releaseDate": "2025-04-14"
+    },
+    {
+      "name": "GPT-5 nano (high)",
+      "slug": "gpt-5-nano",
+      "mmmuPro": 0.609826589595376,
+      "deprecated": true,
+      "releaseDate": "2025-08-07"
+    },
+    {
+      "name": "GPT-5.4 mini (Non-Reasoning)",
+      "slug": "gpt-5-4-mini-non-reasoning",
+      "mmmuPro": 0.604624277456647,
+      "deprecated": true,
+      "releaseDate": "2026-03-17"
+    },
+    {
+      "name": "GPT-5.6 Luna (Non-reasoning)",
+      "slug": "gpt-5-6-luna-non-reasoning",
+      "mmmuPro": 0.603468208092486,
+      "deprecated": true,
+      "releaseDate": "2026-07-09"
+    },
+    {
+      "name": "Qwen3 Omni 30B A3B (Reasoning)",
+      "slug": "qwen3-omni-30b-a3b-reasoning",
+      "mmmuPro": 0.602312138728324,
+      "deprecated": false,
+      "releaseDate": "2025-09-22"
+    },
+    {
+      "name": "Claude 3.7 Sonnet (Non-reasoning)",
+      "slug": "claude-3-7-sonnet",
+      "mmmuPro": 0.600578034682081,
+      "deprecated": true,
+      "releaseDate": "2025-02-24"
+    },
+    {
+      "name": "Nova 2.0 Omni (low)",
+      "slug": "nova-2-0-omni-reasoning-low",
+      "mmmuPro": 0.598265895953757,
+      "deprecated": false,
+      "releaseDate": "2025-11-26"
+    },
+    {
+      "name": "Magistral Medium 1.2",
+      "slug": "magistral-medium-2509",
+      "mmmuPro": 0.596531791907514,
+      "deprecated": false,
+      "releaseDate": "2025-09-18"
+    },
+    {
+      "name": "GPT-5.4 nano (medium)",
+      "slug": "gpt-5-4-nano-medium",
+      "mmmuPro": 0.595375722543353,
+      "deprecated": true,
+      "releaseDate": "2026-03-17"
+    },
+    {
+      "name": "GPT-4.1 mini",
+      "slug": "gpt-4-1-mini",
+      "mmmuPro": 0.58728323699422,
+      "deprecated": true,
+      "releaseDate": "2025-04-14"
+    },
+    {
+      "name": "Claude 4.5 Haiku (Reasoning)",
+      "slug": "claude-4-5-haiku-reasoning",
+      "mmmuPro": 0.585549132947977,
+      "deprecated": false,
+      "releaseDate": "2025-10-15"
+    },
+    {
+      "name": "GPT-5 mini (minimal)",
+      "slug": "gpt-5-mini-minimal",
+      "mmmuPro": 0.583815028901734,
+      "deprecated": true,
+      "releaseDate": "2025-08-07"
+    },
+    {
+      "name": "GPT-5 nano (medium)",
+      "slug": "gpt-5-nano-medium",
+      "mmmuPro": 0.582080924855491,
+      "deprecated": true,
+      "releaseDate": "2025-08-07"
+    },
+    {
+      "name": "Gemini 2.5 Flash-Lite (Reasoning)",
+      "slug": "gemini-2-5-flash-lite-reasoning",
+      "mmmuPro": 0.582080924855491,
+      "deprecated": true,
+      "releaseDate": "2025-06-17"
+    },
+    {
+      "name": "Nova 2.0 Lite (low)",
+      "slug": "nova-2-0-lite-reasoning-low",
+      "mmmuPro": 0.579768786127168,
+      "deprecated": false,
+      "releaseDate": "2025-10-29"
+    },
+    {
+      "name": "Apriel-v1.5-15B-Thinker",
+      "slug": "apriel-v1-5-15b-thinker",
+      "mmmuPro": 0.570520231213873,
+      "deprecated": true,
+      "releaseDate": "2025-09-30"
+    },
+    {
+      "name": "Mistral Small 4 (Reasoning)",
+      "slug": "mistral-small-4",
+      "mmmuPro": 0.568208092485549,
+      "deprecated": false,
+      "releaseDate": "2026-03-16"
+    },
+    {
+      "name": "Qwen3 VL 8B (Reasoning)",
+      "slug": "qwen3-vl-8b-reasoning",
+      "mmmuPro": 0.566473988439306,
+      "deprecated": true,
+      "releaseDate": "2025-10-14"
+    },
+    {
+      "name": "GPT-4o (Aug '24)",
+      "slug": "gpt-4o-2024-08-06",
+      "mmmuPro": 0.563005780346821,
+      "deprecated": true,
+      "releaseDate": "2024-08-06"
+    },
+    {
+      "name": "Mistral Large 3",
+      "slug": "mistral-large-3",
+      "mmmuPro": 0.556647398843931,
+      "deprecated": false,
+      "releaseDate": "2025-12-02"
+    },
+    {
+      "name": "Qwen3 Omni 30B A3B Instruct",
+      "slug": "qwen3-omni-30b-a3b-instruct",
+      "mmmuPro": 0.554913294797688,
+      "deprecated": false,
+      "releaseDate": "2025-09-22"
+    },
+    {
+      "name": "Magistral Small 1.2",
+      "slug": "magistral-small-2509",
+      "mmmuPro": 0.554913294797688,
+      "deprecated": false,
+      "releaseDate": "2025-09-17"
+    },
+    {
+      "name": "Claude 4.5 Haiku (Non-reasoning)",
+      "slug": "claude-4-5-haiku",
+      "mmmuPro": 0.551445086705202,
+      "deprecated": false,
+      "releaseDate": "2025-10-15"
+    },
+    {
+      "name": "Gemini 1.5 Pro (Sep '24)",
+      "slug": "gemini-1-5-pro",
+      "mmmuPro": 0.55028901734104,
+      "deprecated": true,
+      "releaseDate": "2024-09-24"
+    },
+    {
+      "name": "Mistral Medium 3.1",
+      "slug": "mistral-medium-3-1",
+      "mmmuPro": 0.541618497109827,
+      "deprecated": true,
+      "releaseDate": "2025-08-12"
+    },
+    {
+      "name": "Gemini 2.5 Flash-Lite (Non-reasoning)",
+      "slug": "gemini-2-5-flash-lite",
+      "mmmuPro": 0.539884393063584,
+      "deprecated": true,
+      "releaseDate": "2025-06-17"
+    },
+    {
+      "name": "GPT-6 Luna (Non-reasoning)",
+      "slug": "gpt-6-luna-non-reasoning",
+      "mmmuPro": 0.532369942196532,
+      "deprecated": false,
+      "releaseDate": "2026-09-22"
+    },
+    {
+      "name": "Nemotron 3 Nano Omni 30B A3B Reasoning",
+      "slug": "nemotron-3-nano-omni-30b-a3b",
+      "mmmuPro": 0.531791907514451,
+      "deprecated": false,
+      "releaseDate": "2026-04-29"
+    },
+    {
+      "name": "Mistral Medium 3",
+      "slug": "mistral-medium-3",
+      "mmmuPro": 0.530057803468208,
+      "deprecated": true,
+      "releaseDate": "2025-05-07"
+    },
+    {
+      "name": "Llama 4 Scout",
+      "slug": "llama-4-scout",
+      "mmmuPro": 0.529479768786127,
+      "deprecated": false,
+      "releaseDate": "2025-04-05"
+    },
+    {
+      "name": "NVIDIA Nemotron Nano 12B v2 VL (Reasoning)",
+      "slug": "nvidia-nemotron-nano-12b-v2-vl-reasoning",
+      "mmmuPro": 0.528901734104046,
+      "deprecated": false,
+      "releaseDate": "2025-10-28"
+    },
+    {
+      "name": "Qwen3.5 397B A17B (Non-reasoning)",
+      "slug": "qwen3-5-397b-a17b-non-reasoning",
+      "mmmuPro": 0.526589595375723,
+      "deprecated": false,
+      "releaseDate": "2026-02-16"
+    },
+    {
+      "name": "Qwen3 VL 4B (Reasoning)",
+      "slug": "qwen3-vl-4b-reasoning",
+      "mmmuPro": 0.520231213872832,
+      "deprecated": true,
+      "releaseDate": "2025-10-14"
+    },
+    {
+      "name": "Gemma 4 E4B (Reasoning)",
+      "slug": "gemma-4-e4b",
+      "mmmuPro": 0.513872832369942,
+      "deprecated": false,
+      "releaseDate": "2026-04-03"
+    },
+    {
+      "name": "Gemma 4 E4B (Non-reasoning)",
+      "slug": "gemma-4-e4b-non-reasoning",
+      "mmmuPro": 0.512138728323699,
+      "deprecated": false,
+      "releaseDate": "2026-04-03"
+    },
+    {
+      "name": "Pixtral Large",
+      "slug": "pixtral-large-2411",
+      "mmmuPro": 0.505780346820809,
+      "deprecated": true,
+      "releaseDate": "2024-11-18"
+    },
+    {
+      "name": "GLM-4.5V (Reasoning)",
+      "slug": "glm-4-5v-reasoning",
+      "mmmuPro": 0.504624277456647,
+      "deprecated": true,
+      "releaseDate": "2025-08-11"
+    },
+    {
+      "name": "Nova 2.0 Omni (Non-reasoning)",
+      "slug": "nova-2-0-omni",
+      "mmmuPro": 0.498843930635838,
+      "deprecated": false,
+      "releaseDate": "2025-11-26"
+    },
+    {
+      "name": "Ministral 3 14B",
+      "slug": "ministral-3-14b",
+      "mmmuPro": 0.498265895953757,
+      "deprecated": false,
+      "releaseDate": "2025-12-02"
+    },
+    {
+      "name": "Nova 2.0 Lite (Non-reasoning)",
+      "slug": "nova-2-0-lite",
+      "mmmuPro": 0.490173410404624,
+      "deprecated": false,
+      "releaseDate": "2025-10-29"
+    },
+    {
+      "name": "GLM-4.6V (Reasoning)",
+      "slug": "glm-4-6v-reasoning",
+      "mmmuPro": 0.485549132947977,
+      "deprecated": true,
+      "releaseDate": "2025-12-08"
+    },
+    {
+      "name": "Grok 4.1 Fast (Non-reasoning)",
+      "slug": "grok-4-1-fast",
+      "mmmuPro": 0.484393063583815,
+      "deprecated": true,
+      "releaseDate": "2025-11-19"
+    },
+    {
+      "name": "Gemini 1.5 Flash (Sep '24)",
+      "slug": "gemini-1-5-flash",
+      "mmmuPro": 0.483815028901734,
+      "deprecated": true,
+      "releaseDate": "2024-09-24"
+    },
+    {
+      "name": "Grok 4 Fast (Non-reasoning)",
+      "slug": "grok-4-fast",
+      "mmmuPro": 0.480924855491329,
+      "deprecated": true,
+      "releaseDate": "2025-09-19"
+    },
+    {
+      "name": "Gemma 3 27B Instruct",
+      "slug": "gemma-3-27b",
+      "mmmuPro": 0.480346820809249,
+      "deprecated": true,
+      "releaseDate": "2025-03-12"
+    },
+    {
+      "name": "Mistral Small 3.2",
+      "slug": "mistral-small-3-2",
+      "mmmuPro": 0.479768786127168,
+      "deprecated": true,
+      "releaseDate": "2025-06-20"
+    },
+    {
+      "name": "Qwen3 VL 8B Instruct",
+      "slug": "qwen3-vl-8b-instruct",
+      "mmmuPro": 0.473410404624277,
+      "deprecated": true,
+      "releaseDate": "2025-10-14"
+    },
+    {
+      "name": "Mistral Small 4 (Non-reasoning)",
+      "slug": "mistral-small-4-non-reasoning",
+      "mmmuPro": 0.464739884393064,
+      "deprecated": false,
+      "releaseDate": "2026-03-16"
+    },
+    {
+      "name": "Ministral 3 8B",
+      "slug": "ministral-3-8b",
+      "mmmuPro": 0.459537572254335,
+      "deprecated": false,
+      "releaseDate": "2025-12-02"
+    },
+    {
+      "name": "Claude 3.5 Haiku",
+      "slug": "claude-3-5-haiku",
+      "mmmuPro": 0.45606936416185,
+      "deprecated": true,
+      "releaseDate": "2024-10-22"
+    },
+    {
+      "name": "Devstral Small 2",
+      "slug": "devstral-small-2",
+      "mmmuPro": 0.446242774566474,
+      "deprecated": true,
+      "releaseDate": "2025-12-09"
+    },
+    {
+      "name": "Gemma 4 E2B (Reasoning)",
+      "slug": "gemma-4-e2b",
+      "mmmuPro": 0.445664739884393,
+      "deprecated": false,
+      "releaseDate": "2026-04-02"
+    },
+    {
+      "name": "NVIDIA Nemotron Nano 12B v2 VL (Non-reasoning)",
+      "slug": "nvidia-nemotron-nano-12b-v2-vl",
+      "mmmuPro": 0.445086705202312,
+      "deprecated": false,
+      "releaseDate": "2025-10-28"
+    },
+    {
+      "name": "Nova Pro",
+      "slug": "nova-pro",
+      "mmmuPro": 0.443352601156069,
+      "deprecated": true,
+      "releaseDate": "2024-12-03"
+    },
+    {
+      "name": "Qwen3 VL 4B Instruct",
+      "slug": "qwen3-vl-4b-instruct",
+      "mmmuPro": 0.438728323699422,
+      "deprecated": true,
+      "releaseDate": "2025-10-14"
+    },
+    {
+      "name": "GPT-5.4 nano (Non-Reasoning)",
+      "slug": "gpt-5-4-nano-non-reasoning",
+      "mmmuPro": 0.43757225433526,
+      "deprecated": true,
+      "releaseDate": "2026-03-17"
+    },
+    {
+      "name": "Qwen3.5 2B (Reasoning)",
+      "slug": "qwen3-5-2b",
+      "mmmuPro": 0.430057803468208,
+      "deprecated": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "name": "GLM-4.5V (Non-reasoning)",
+      "slug": "glm-4-5v",
+      "mmmuPro": 0.427745664739884,
+      "deprecated": true,
+      "releaseDate": "2025-08-11"
+    },
+    {
+      "name": "Qwen3.5 2B (Non-reasoning)",
+      "slug": "qwen3-5-2b-non-reasoning",
+      "mmmuPro": 0.426589595375723,
+      "deprecated": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "name": "GLM-4.6V (Non-reasoning)",
+      "slug": "glm-4-6v",
+      "mmmuPro": 0.421965317919075,
+      "deprecated": true,
+      "releaseDate": "2025-12-08"
+    },
+    {
+      "name": "Gemma 4 E2B (Non-reasoning)",
+      "slug": "gemma-4-e2b-non-reasoning",
+      "mmmuPro": 0.417919075144509,
+      "deprecated": false,
+      "releaseDate": "2026-04-02"
+    },
+    {
+      "name": "GPT-4o mini",
+      "slug": "gpt-4o-mini",
+      "mmmuPro": 0.415028901734104,
+      "deprecated": true,
+      "releaseDate": "2024-07-18"
+    },
+    {
+      "name": "GPT-4.1 nano",
+      "slug": "gpt-4-1-nano",
+      "mmmuPro": 0.401156069364162,
+      "deprecated": true,
+      "releaseDate": "2025-04-14"
+    },
+    {
+      "name": "Llama 3.2 Instruct 90B (Vision)",
+      "slug": "llama-3-2-instruct-90b-vision",
+      "mmmuPro": 0.394797687861272,
+      "deprecated": false,
+      "releaseDate": "2024-09-25"
+    },
+    {
+      "name": "Ministral 3 3B",
+      "slug": "ministral-3-3b",
+      "mmmuPro": 0.380924855491329,
+      "deprecated": false,
+      "releaseDate": "2025-12-02"
+    },
+    {
+      "name": "MiniCPM-V 4.6 1.3B",
+      "slug": "minicpm-v4-6-1-3b",
+      "mmmuPro": 0.379190751445087,
+      "deprecated": false,
+      "releaseDate": "2026-05-11"
+    },
+    {
+      "name": "Nova Lite",
+      "slug": "nova-lite",
+      "mmmuPro": 0.378034682080925,
+      "deprecated": true,
+      "releaseDate": "2024-12-03"
+    },
+    {
+      "name": "Gemma 3 12B Instruct",
+      "slug": "gemma-3-12b",
+      "mmmuPro": 0.37514450867052,
+      "deprecated": true,
+      "releaseDate": "2025-03-12"
+    },
+    {
+      "name": "Molmo2-8B",
+      "slug": "molmo2-8b",
+      "mmmuPro": 0.374566473988439,
+      "deprecated": false,
+      "releaseDate": "2025-12-11"
+    },
+    {
+      "name": "Gemini 1.5 Flash-8B",
+      "slug": "gemini-1-5-flash-8b",
+      "mmmuPro": 0.365317919075144,
+      "deprecated": true,
+      "releaseDate": "2024-10-03"
+    },
+    {
+      "name": "GPT-5 nano (minimal)",
+      "slug": "gpt-5-nano-minimal",
+      "mmmuPro": 0.317919075144509,
+      "deprecated": true,
+      "releaseDate": "2025-08-07"
+    },
+    {
+      "name": "Claude 3 Haiku",
+      "slug": "claude-3-haiku",
+      "mmmuPro": 0.308092485549133,
+      "deprecated": true,
+      "releaseDate": "2024-03-04"
+    },
+    {
+      "name": "Gemma 3 4B Instruct",
+      "slug": "gemma-3-4b",
+      "mmmuPro": 0.299421965317919,
+      "deprecated": true,
+      "releaseDate": "2025-03-12"
+    },
+    {
+      "name": "Llama 3.2 Instruct 11B (Vision)",
+      "slug": "llama-3-2-instruct-11b-vision",
+      "mmmuPro": 0.293063583815029,
+      "deprecated": false,
+      "releaseDate": "2024-09-25"
+    },
+    {
+      "name": "LFM2.5-VL-1.6B",
+      "slug": "lfm2-5-vl-1-6b",
+      "mmmuPro": 0.265317919075145,
+      "deprecated": false,
+      "releaseDate": "2026-01-05"
+    },
+    {
+      "name": "Gemma 3n E4B Instruct",
+      "slug": "gemma-3n-e4b",
+      "mmmuPro": 0.26242774566474,
+      "deprecated": true,
+      "releaseDate": "2025-06-26"
+    },
+    {
+      "name": "Qwen3.5 0.8B (Reasoning)",
+      "slug": "qwen3-5-0-8b",
+      "mmmuPro": 0.258381502890173,
+      "deprecated": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "name": "Qwen3.5 0.8B (Non-reasoning)",
+      "slug": "qwen3-5-0-8b-non-reasoning",
+      "mmmuPro": 0.256647398843931,
+      "deprecated": false,
+      "releaseDate": "2026-03-02"
+    },
+    {
+      "name": "Molmo 7B-D",
+      "slug": "molmo-7b-d",
+      "mmmuPro": 0.245086705202312,
+      "deprecated": false,
+      "releaseDate": "2024-09-25"
+    },
+    {
+      "name": "Phi-4 Multimodal Instruct",
+      "slug": "phi-4-multimodal",
+      "mmmuPro": 0.145086705202312,
+      "deprecated": false,
+      "releaseDate": "2025-02-26"
+    }
+  ]
+}

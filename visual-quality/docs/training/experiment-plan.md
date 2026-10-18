@@ -4,10 +4,12 @@ This file gives a staged plan to re-train or improve Q-ReAlign and to compare it
 
 Last verified: 2026-09-27
 
+Pilot preflight updated: 2026-09-29. The [preflight audit](pilot-preflight-2026-09-29.md) defines the next image-only feasibility experiment and its label/evaluation gates. The broader research-mix experiments below remain separate.
+
 ## Working hypothesis
 
 - Goal (decided 2026-09-27): own the model and beat the original Q-Align (OneAlign, mPLUG-Owl2, ~8.2B) on cost, throughput, and latency first; on accuracy if possible. Q-ReAlign Lite and Pro are slower than Q-Align ([protocol.md section 9](../evaluation/protocol.md#9-efficiency-measurement)), so the deployed challenger should be ≤2B or use a capped visual-token budget. Larger models are teachers or accuracy references.
-- Order: baseline on the real open mix first. Synthetic data (teacher labels, self-made distortions, [data-mixture-evidence.md section 7.1](data-mixture-evidence.md#71-teacher-synthetic-labels-on-unlabeled-images)) comes after, as its own stage, so its effect is measured against the baseline.
+- Research-mix order: establish the human-rated baseline first, then add synthetic data as a separate stage so its effect is measured. The assembled CC0/VizWiz/control pilot is a separate feasibility arm; it has no IQA/IAA targets yet and cannot stand in for that baseline. See the [label evidence](data-mixture-evidence.md#71-teacher-synthetic-labels-on-unlabeled-images).
 - The cheapest likely gain is better supervision and better visual input on the same 5-word scorer. A newer backbone is a separate question. Test the two apart.
 - General VLM benchmarks do not show better quality, aesthetics, or video-quality scoring. Only task results count.
 - A new architecture cannot load Q-ReAlign weights. Start from the new VLM, port the scorer, and re-train on the mix. Further tuning of the released Q-ReAlign checkpoint is a separate, cheaper control.
@@ -29,7 +31,7 @@ Two config items must change before any run we report. The example config select
 
 ## 2. Separate "backbone" from "recipe"
 
-Run a 2 x 2 grid before anything else. Keep data, steps, visual-token budget, and eval fixed.
+Run this 2 x 2 grid only if the compact-student screen leaves a measured gap and the required human-rated targets are available. It is a later backbone study, not the first 10K pilot. Keep data, steps, visual-token budget, and eval fixed.
 
 | | Recipe A: Q-ReAlign as released (hard 5-bin labels) | Recipe B: soft 5-level distribution + in-dataset fidelity loss (DeQA-style) |
 |---|---|---|
@@ -43,6 +45,8 @@ Run a 2 x 2 grid before anything else. Keep data, steps, visual-token budget, an
 ## 3. Staged runs
 
 Do not run the full grid of every option. Screen on a fixed, representative subset. Keep the best settings. Spend repeat seeds only on the confirmation stage.
+
+For the current image pilot, first complete [preflight steps 1–4](pilot-preflight-2026-09-29.md#4-minimum-first-run-plan): review the split concentration, establish labels and domain positives, freeze the delivered views, and define independent evaluation. Then screen Q-Align and compact released assessors, train one frozen-encoder scalar head, and test limited adaptation of the same encoder. Add pairwise or defect supervision one change at a time. A small VLM and the grid below are later comparisons. This order is a proposed cost-first experiment; no training result is claimed.
 
 | Stage | Run | Controlled change | Question | Gate to go on (proposed) |
 |---|---|---|---|---|
