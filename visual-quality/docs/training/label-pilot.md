@@ -6,6 +6,8 @@ The [18 October run record](label-pilot-2026-10-18.md) reports the first 12-imag
 
 The [visual validation audit](label-pilot-validation-2026-10-18.md) holds further expansion because some explanations conflict with the visible defects and the rubric. The commands below describe the runner; they do not approve more scoring or training.
 
+The [reviewed score record](label-pilot-corrections-2026-10-18.md) contains seven score corrections and three evidence-only corrections. These assistant judgments remain pending human review and preserve the original teacher output.
+
 ## Label values
 
 The machine-readable contract is [label-observation-v1.schema.json](../../src/visual_quality/schemas/label-observation-v1.schema.json). The local validator enforces the schema and exact decimal steps without floating-point rounding.
@@ -79,6 +81,34 @@ An HTTP error, refusal, invalid rating, unexpected returned model, truncated ans
 Inspect the raw attempt and provider usage before starting a replacement run. A new output directory can incur a second charge for the same image; it is not an automatic recovery method. There is no retry override in this version. An unscorable but valid reply can be retained with a null score. It is never replaced with zero, one, or the midpoint.
 
 `verify-labels` is read-only and requires no API key. It checks the source and view hashes, run integrity, request hashes, observation schema, and exact agreement between exported observations and stored responses. It can verify the valid subset of a blocked run; verification does not claim that the run completed or that its scores are accurate.
+
+## Apply and verify reviewed corrections
+
+The review workflow requires a `label-review-plan-v1` file with the frozen observation, view-manifest, and prompt hashes. Each entry identifies the exact image and view, repeats the original score, and supplies the reviewed rating, reason, plausible interval, and independent assistant assessment. The plan must cover every valid source observation exactly once. It can cover the valid subset of a blocked source run; it cannot create a label for a failed request.
+
+The checked-in [pilot correction plan](evidence/label-pilot-corrections-2026-10-18.json) contains the reviewed values. Apply it from `visual-quality/` without an API key:
+
+```sh
+uv run visual-pilot apply-review --review-plan docs/training/evidence/label-pilot-corrections-2026-10-18.json
+uv run visual-pilot verify-review --review-plan docs/training/evidence/label-pilot-corrections-2026-10-18.json
+```
+
+Both commands accept `--views`, `--source-run`, and `--review-output`. The default source is `data/label-pilot-12/deepseek/`; the default review output is `data/label-pilot-12/review-v1/`. Output must be separate from the source run, fixed views, and review plan. These commands make no provider calls and do not modify the source files.
+
+`apply-review` checks the original run against its saved responses before publishing two files atomically: `reviewed-observations.jsonl` and `report.json`. Repeating the same command verifies and reuses the files. A changed plan, source, or output fails verification; use a new review version and directory for a later correction. `verify-review` reconstructs the expected export and compares the stored records without writing them.
+
+| Reviewed field | Contract |
+|---|---|
+| `schema_version` | `label-review-v1` |
+| `label_kind` | `assistant_review` |
+| `technical_quality` | Same status, 1–5 score, decimal step, evidence, and limitation rules as the original label |
+| `source_observation` | Complete original teacher record, including its provenance and score |
+| `review` | Review identity, timestamp, assistant method, plan hash, source hash, reason, interval, independent assessment, and decision |
+| `review_status` | `pending_human_review` |
+| `task_masks` | All false; a correction cannot enable training |
+| `aesthetics` and `photo_domain_eligible` | Aesthetics remains unrequested; eligibility retains the source value |
+
+Intervals are subjective review ranges, not statistical confidence intervals. Assistant corrections are not human MOS, and a corrected cohort does not establish teacher accuracy. The report therefore keeps `training_ready=false`.
 
 ## Required before training
 

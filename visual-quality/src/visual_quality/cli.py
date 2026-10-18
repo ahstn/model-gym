@@ -12,7 +12,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "command",
-        choices=["acquire", "assemble", "build", "verify", "prepare-views", "label", "verify-labels"],
+        choices=[
+            "acquire",
+            "assemble",
+            "build",
+            "verify",
+            "prepare-views",
+            "label",
+            "verify-labels",
+            "apply-review",
+            "verify-review",
+        ],
     )
     parser.add_argument("--config", type=Path, default=Path("configs/pilot-10k.json"))
     parser.add_argument("--root", type=Path, default=Path("data"))
@@ -21,6 +31,9 @@ def main() -> int:
     parser.add_argument("--dataset", type=Path, default=Path("data/pilot-10k-v1"))
     parser.add_argument("--views", type=Path, default=Path("data/label-pilot-12/views"))
     parser.add_argument("--output", type=Path, default=Path("data/label-pilot-12/deepseek"))
+    parser.add_argument("--source-run", type=Path, default=Path("data/label-pilot-12/deepseek"))
+    parser.add_argument("--review-plan", type=Path)
+    parser.add_argument("--review-output", type=Path, default=Path("data/label-pilot-12/review-v1"))
     parser.add_argument("--limit", type=int, default=12)
     parser.add_argument("--seed", type=int, default=20261018)
     parser.add_argument("--max-edge", type=int, default=1536)
@@ -30,6 +43,8 @@ def main() -> int:
     parser.add_argument("--max-cost-usd", default="1.00")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
+    if args.command in {"apply-review", "verify-review"}:
+        return _reviews(args, parser)
     if args.command in {"prepare-views", "label", "verify-labels"}:
         return _labels(args, parser)
     config = load_config(args.config)
@@ -69,6 +84,20 @@ def _labels(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
         parser.exit(2, f"Pilot error: {error}\n")
     print(json.dumps(report, indent=2))
     return int(report.get("status") in {"blocked", "budget_stopped"})
+
+
+def _reviews(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
+    from visual_quality.reviews import build_reviewed_labels, verify_reviewed_labels
+
+    if args.review_plan is None:
+        parser.error("--review-plan is required for apply-review and verify-review")
+    operation = build_reviewed_labels if args.command == "apply-review" else verify_reviewed_labels
+    try:
+        report = operation(args.views, args.source_run, args.review_plan, args.review_output)
+    except (ValueError, TypeError, OSError) as error:
+        parser.exit(2, f"Review error: {error}\n")
+    print(json.dumps(report, indent=2))
+    return 0
 
 
 if __name__ == "__main__":

@@ -2,6 +2,8 @@
 
 **Decision: hold the requested 100-image expansion.** The 12 observations pass schema and provenance checks, but the visual review found enough rubric and evidence problems that we cannot validate the teacher for the next batch. No additional paid requests were made. The original observations remain unchanged and pending review.
 
+**Follow-up:** The user later requested score corrections. A fresh review produced a [separate versioned correction artifact](label-pilot-corrections-2026-10-18.md), with seven revised scores and three evidence-only corrections. The original records and this audit remain evidence of the teacher's output; expansion is still on hold.
+
 ## Checks and limits
 
 `verify-labels` passed for all 12 records. Source files, prepared views, request hashes, and exported observations match the stored responses. Each score is finite and falls within 1–5 in exact 0.1 steps. All training masks remain false. The three source manifest hashes and the frozen runner code hashes are unchanged.
@@ -27,4 +29,4 @@ The sample also has limited coverage. All four generated images happen to use Ga
 
 The [machine-readable audit](evidence/label-pilot-validation-2026-10-18.json) records all 12 blind assessments, teacher outputs, view hashes, source annotations, flagged cases, and the decision to hold expansion. The [original run record](label-pilot-2026-10-18.md) retains the exact request count and reported cost of $0.001243306.
 
-The next useful test is a comparison with another approved teacher on the same frozen views, plus targeted selective-focus, obstruction, blur, noise, and JPEG examples. Resolve these failure cases and collect human anchor ratings before accepting training labels. Do not replace the stored scores with the assistant review intervals or apply a numeric correction based on this small audit.
+The next useful test is a comparison with another approved teacher on the same frozen views, plus targeted selective-focus, obstruction, blur, noise, and JPEG examples. Resolve these failure cases and collect human anchor ratings before accepting training labels. Preserve the stored teacher scores and do not apply a general numeric adjustment based on this small audit. The follow-up corrections are individual assistant judgments in a separate artifact, not fitted calibration or accepted training targets.
