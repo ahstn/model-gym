@@ -1,0 +1,48 @@
+visual-quality/experiments/jev14-2026-10-18/confidence-analysis.md
+  s_af5e869a7baba5::t_eb1827c50cdfd0 1-62
+visual-quality/experiments/jev14-2026-10-18/results/cases.csv
+  s_af5e869a7baba5::t_02e0df4d65d7f7 1-379
+visual-quality/experiments/jev14-2026-10-18/results/README.md
+  s_af5e869a7baba5::t_02e0df4d65d7f7 1-66
+visual-quality/experiments/jev14-2026-10-18/payload-audit.json
+  s_af5e869a7baba5::t_63d3c722c0263a 1-3052
+visual-quality/experiments/jev14-2026-10-18/README.md
+  s_af5e869a7baba5::t_1817c6026fee93 1-4,9-16,18-34
+  s_af5e869a7baba5::t_a1e2cd12ae31e7 17
+  s_af5e869a7baba5::t_b0e5fa24704b9a 5-8
+visual-quality/experiments/jev14-2026-10-18/protocol.json
+  s_af5e869a7baba5::t_2769435a75bcce 1-161
+visual-quality/experiments/jev14-2026-10-18/report.py
+  s_af5e869a7baba5::t_8f263e3dc70d50 64-106,146-262,264-379
+  s_af5e869a7baba5::t_24a678ee637b40 52-57
+  s_af5e869a7baba5::t_f8868874868a74 111-115
+  s_af5e869a7baba5::t_5abd971a032ae8 263
+  s_af5e869a7baba5::t_dd97f502c87f0a 1-51,58-63,107-110,116-145,380-383
+visual-quality/experiments/jev14-2026-10-18/run.py
+  s_af5e869a7baba5::t_2ce317023ea433 1-14,16,21-38,41-44,50-51,54-55,58,60,63,65,70,78,92,96,125-128,134,139,142-143,145,147,162,175-178,180-181,183,193,199,203,205,219-222,249-250,252,255,263
+  s_af5e869a7baba5::t_c0b596d266e021 15,17-20,39-40,45-49,52-53,56-57,59,61-62,64,66-69,71-77,79-91,93-95,97-124,129-133,135-138,140-141,144,146,148-161,163-174,179,182,184-192,194-198,200-202,204,206-218,223-248,251,253-254,256-262
+visual-quality/experiments/jev14-2026-10-18/validation.json
+  s_af5e869a7baba5::t_2fcdc278e503fb 1-23
+visual-quality/experiments/jev14-2026-10-18/manifest.json
+  s_af5e869a7baba5::t_2769435a75bcce 1-7848
+visual-quality/experiments/jev14-2026-10-18/confidence-analysis.json
+  s_af5e869a7baba5::t_5d1e10d5e284f3 1-498
+visual-quality/experiments/jev14-2026-10-18/results/summary.json
+  s_af5e869a7baba5::t_02e0df4d65d7f7 1-2175
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6a5d00d636e73dfa6738787b6bad18df3def73fa",
+  "prompts": {},
+  "sessions": {
+    "s_af5e869a7baba5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14f85-5716-7da2-8e30-760886a4c624",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
