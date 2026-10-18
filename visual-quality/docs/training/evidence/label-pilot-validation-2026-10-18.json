@@ -1,0 +1,464 @@
+{
+  "additional_images_scored": 0,
+  "additional_paid_requests": 0,
+  "artifact_hashes": {
+    "data/label-pilot-12/deepseek/observations.jsonl": "153a1e5df5317ed890e49e0435d769f2eaac35480a66d6b8aacbfc5df6a950d4",
+    "data/label-pilot-12/deepseek/report.json": "2b84ed1cad5059b844e2cd9869416003881f411adc7cae8fe8dfe24a75b8b744",
+    "data/label-pilot-12/deepseek/run.json": "6ea96d2c5da6790523131b73eeb6c6fa8c693afafb3c38b77cec6f50943b7cc8",
+    "data/label-pilot-12/views/preparation.json": "5d5b162c3583eb7dc0c77bca6fc15229fa7e526ce45178395b9daaeb3ad19939",
+    "data/label-pilot-12/views/views.jsonl": "1514b1167207a0ab6b319ed9e83351d971091f911da1a8f6468468453c43cb9a"
+  },
+  "checked_at": "2026-10-18T15:29:05.705922+00:00",
+  "coverage": {
+    "generated_operators": {
+      "gaussian_noise": 4
+    },
+    "limitation": "All four selected distortions are Gaussian noise; this cohort does not test controlled added blur or JPEG compression."
+  },
+  "decision": "hold_100_image_expansion",
+  "labels_rewritten": false,
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "next_required_check": "Compare an alternative approved teacher on this same frozen cohort and targeted selective-focus, obstruction, blur, noise and JPEG examples; obtain human anchor ratings before training approval.",
+  "records": [
+    {
+      "ambiguity_or_style": "",
+      "audit_flags": [],
+      "can_judge": true,
+      "image_id": "megalith-70e149d91bcd8e4c000d8499ba49859f",
+      "index": 0,
+      "review_interval": [
+        4.2,
+        4.8
+      ],
+      "reviewer": "blind_image_check_a",
+      "teacher_quality": {
+        "evidence": "Building facade and stonework are clear and well exposed, with crisp window and roof detail; slight softness and mild noise in shadowed areas and distant figures.",
+        "limitations": [],
+        "score": 4.2,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": true,
+      "view_id": "8017aa646261a0a0cffb22606102ec60ffcb6bb81db9c7203ca122d7ad4ac266",
+      "view_sha256": "5524b55d6470b8e471d053a28598f6c388537b6eeaf17dc1292d58dbe60431c5",
+      "visible_evidence": "Stonework, roof tiles, and fine architectural edges are clear. Deep entrance shadows lose some detail; slight sky texture has little effect."
+    },
+    {
+      "ambiguity_or_style": "",
+      "audit_flags": [],
+      "can_judge": true,
+      "image_id": "vizwiz:VizWiz_train_00007963.jpg",
+      "index": 1,
+      "review_interval": [
+        1.9,
+        2.6
+      ],
+      "reviewer": "blind_image_check_a",
+      "source_flaw_annotations": {
+        "annotation_license": "MIT (official repository)",
+        "human_flaw_votes": {
+          "BLR": 1,
+          "BRT": 0,
+          "DRK": 0,
+          "FRM": 1,
+          "NON": 1,
+          "OBS": 0,
+          "OTH": 0,
+          "ROT": 3
+        },
+        "human_unrecognizable_votes": 0,
+        "raters": 5,
+        "selection": "At least 3/5 votes for one named defect, with fewer than 3/5 no-flaw votes; balanced dominant defects."
+      },
+      "teacher_quality": {
+        "evidence": "Soft focus and heavy blur across the card and text, with smeared edges and washed-out detail; content remains interpretable but fidelity is substantially reduced.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": 2.6,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": true,
+      "view_id": "96ff9a68ec751cb6abe91a10029be0e9445648bd59c83efefd0544f675970b4f",
+      "view_sha256": "db5de2101ad82782f81aed1a0981dd7fe1ee164183f5cfe06f61042a2ede4654",
+      "visible_evidence": "Widespread blur weakens card text and outlines. A bright white glare patch removes central illustration detail; dark areas show visible noise."
+    },
+    {
+      "ambiguity_or_style": "",
+      "audit_flags": [
+        "dominant_noise_not_reported"
+      ],
+      "can_judge": true,
+      "image_id": "distortion-542567c413acde8ac0bb6f4b",
+      "index": 2,
+      "review_interval": [
+        2.4,
+        3.2
+      ],
+      "reviewer": "blind_image_check_a",
+      "source_transform": {
+        "operator": "gaussian_noise",
+        "parameters": {
+          "sigma_8bit": 15.0
+        },
+        "seed": 17278275658481284204,
+        "severity_index": 2,
+        "software": {
+          "numpy": "2.5.3",
+          "pillow": "12.3.0"
+        },
+        "version": "photo-distortions-v1"
+      },
+      "teacher_quality": {
+        "evidence": "Heavy compression artifacts, smeared foliage texture, and broken branch edges throughout; overall softness and blockiness reduce fidelity, though the forest scene remains interpretable.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": 2.6,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": true,
+      "view_id": "022ebae68d59f729dcd52ce87c6c2f869e6e2ad523726cf2514de68e94085179",
+      "view_sha256": "24a2966f2c2747727d4b2b4ff9b28f80a28be0685e70f38e292182c921ad204b",
+      "visible_evidence": "Dense grain covers the forest and reduces fine leaf and bark detail. Some outlines are soft, although trunks and woodland structure remain clear."
+    },
+    {
+      "ambiguity_or_style": "The background is defocused while the sign is sharp; background softness alone does not establish a technical defect.",
+      "audit_flags": [
+        "possible_selective_focus_penalized",
+        "unsupported_compression_claim"
+      ],
+      "can_judge": true,
+      "image_id": "megalith-e6733c0f36a006f834acfe5fb66dc1a6",
+      "index": 3,
+      "review_interval": [
+        4.3,
+        5.0
+      ],
+      "reviewer": "blind_image_check_a",
+      "teacher_quality": {
+        "evidence": "Foreground sign text is legible, but the image shows heavy smearing and broken textures in foliage and stone, plus soft focus and visible compression artifacts.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": 3.6,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": false,
+      "view_id": "064e28a5332c34f9b9f1c0b0f3a1a898e4139d8190db01074420cfb5c699ca61",
+      "view_sha256": "8b4b7d7311eeae12498757365b3453605526cdb5b3595cecab966e6f254aa49b",
+      "visible_evidence": "The foreground sign has sharp text and clean edges. Wood texture remains visible in shadow, with no meaningful noise or compression defects."
+    },
+    {
+      "ambiguity_or_style": "Severe darkness supports a low score; it does not make the decoded image unscorable.",
+      "audit_flags": [],
+      "can_judge": true,
+      "image_id": "vizwiz:VizWiz_train_00022266.jpg",
+      "index": 4,
+      "review_interval": [
+        1.0,
+        1.2
+      ],
+      "reviewer": "blind_image_check_a",
+      "source_flaw_annotations": {
+        "annotation_license": "MIT (official repository)",
+        "human_flaw_votes": {
+          "BLR": 0,
+          "BRT": 0,
+          "DRK": 3,
+          "FRM": 0,
+          "NON": 2,
+          "OBS": 0,
+          "OTH": 0,
+          "ROT": 0
+        },
+        "human_unrecognizable_votes": 3,
+        "raters": 5,
+        "selection": "At least 3/5 votes for one named defect, with fewer than 3/5 no-flaw votes; balanced dominant defects."
+      },
+      "teacher_quality": {
+        "evidence": "Image is almost entirely near-black with only faint, barely visible texture; important content is nearly impossible to discern.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": 1.5,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": false,
+      "view_id": "ed51f0ca7daebe2576e755176ab84a1db8267f9042738dad346bc907dc910dab",
+      "view_sha256": "bb0651677698a1d2095dd5333f788d23e04a7b68fc952c9fd7ed052a18471f63",
+      "visible_evidence": "The delivered image is almost entirely black. Faint noise is visible, but no meaningful subject detail can be inspected."
+    },
+    {
+      "ambiguity_or_style": "",
+      "audit_flags": [
+        "dominant_noise_not_reported"
+      ],
+      "can_judge": true,
+      "image_id": "distortion-4f0618145dc1b3f104a581a3",
+      "index": 5,
+      "review_interval": [
+        2.5,
+        3.3
+      ],
+      "reviewer": "blind_image_check_a",
+      "source_transform": {
+        "operator": "gaussian_noise",
+        "parameters": {
+          "sigma_8bit": 15.0
+        },
+        "seed": 2878197857586011878,
+        "severity_index": 2,
+        "software": {
+          "numpy": "2.5.3",
+          "pillow": "12.3.0"
+        },
+        "version": "photo-distortions-v1"
+      },
+      "teacher_quality": {
+        "evidence": "Building facade and window detail are legible, but the image shows visible compression artifacts, smeared texture in the tower and trees, and slightly harsh contrast.",
+        "limitations": [],
+        "score": 3.6,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": false,
+      "view_id": "772e9cbe2b2811250689e8ac14032f27000fc41e00d513935879f663f68a297e",
+      "view_sha256": "4a5e4fa139f4d2e275ccddefee0f2c436bff597c2e1da5cf75441796dd2d0e77",
+      "visible_evidence": "Strong colored grain covers sky, buildings, and vehicles. Fine surfaces lose fidelity, although crane lines, window frames, and vehicle contours remain inspectable."
+    },
+    {
+      "ambiguity_or_style": "Bright lamps clip locally, but this causes little loss of important content.",
+      "audit_flags": [],
+      "can_judge": true,
+      "image_id": "megalith-3337c957d237835fbe055a9a545f8efb",
+      "index": 6,
+      "review_interval": [
+        3.5,
+        4.2
+      ],
+      "reviewer": "blind_image_check_b",
+      "teacher_quality": {
+        "evidence": "Faces and clothing are soft and slightly smeared with visible noise in dark areas; bright boat surfaces show some clipping, but main subjects remain clear.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": 3.2,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": false,
+      "view_id": "cd109e65b0b8c36652653b106cf1646566c4e677d34c4b74a9baa5aa97454102",
+      "view_sha256": "ef7c501ececc64b50630395ac50629ea3e0d3da293d226230fc92df37f40a15f",
+      "visible_evidence": "Mild softness reduces facial detail; fine noise is visible in dark areas. Clothing and main subject edges remain clear."
+    },
+    {
+      "ambiguity_or_style": "The subject cannot be identified, but the visible defects can be scored.",
+      "audit_flags": [],
+      "can_judge": true,
+      "image_id": "vizwiz:VizWiz_train_00022541.jpg",
+      "index": 7,
+      "review_interval": [
+        1.0,
+        1.3
+      ],
+      "reviewer": "blind_image_check_b",
+      "source_flaw_annotations": {
+        "annotation_license": "MIT (official repository)",
+        "human_flaw_votes": {
+          "BLR": 4,
+          "BRT": 5,
+          "DRK": 0,
+          "FRM": 5,
+          "NON": 0,
+          "OBS": 1,
+          "OTH": 0,
+          "ROT": 0
+        },
+        "human_unrecognizable_votes": 4,
+        "raters": 5,
+        "selection": "At least 3/5 votes for one named defect, with fewer than 3/5 no-flaw votes; balanced dominant defects."
+      },
+      "teacher_quality": {
+        "evidence": "Extremely low-contrast, washed-out pale image with faint smeared text-like marks; important content is barely legible.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": 1.5,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": false,
+      "view_id": "5f9b240dacd0da80859b0430eb495904428c0bf704affaf67b28c68e6139bd0e",
+      "view_sha256": "9e97018c1e49d50262eb04b7bf302d4e1c797b996709e5e9bd4834fb2ddbae56",
+      "visible_evidence": "Severe white clipping and extreme blur remove nearly all useful detail. Only broad color regions remain visible."
+    },
+    {
+      "ambiguity_or_style": "",
+      "audit_flags": [],
+      "can_judge": true,
+      "image_id": "distortion-481a54a721957b276a26852b",
+      "index": 8,
+      "review_interval": [
+        1.9,
+        2.6
+      ],
+      "reviewer": "blind_image_check_b",
+      "source_transform": {
+        "operator": "gaussian_noise",
+        "parameters": {
+          "sigma_8bit": 35.0
+        },
+        "seed": 13384713726675310765,
+        "severity_index": 3,
+        "software": {
+          "numpy": "2.5.3",
+          "pillow": "12.3.0"
+        },
+        "version": "photo-distortions-v1"
+      },
+      "teacher_quality": {
+        "evidence": "Faces and clothing show heavy smearing, blur, and noisy texture; contours and fine detail are degraded, though the subjects remain interpretable.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": 2.6,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": true,
+      "view_id": "e9daab5f2533b8d834345464e587f319c31ebfe7f1b98eb57b94c38a7d508a35",
+      "view_sha256": "250b439fbf063c5a1bc72a77a9b42b38605e6e1d9277135d2925e9be1af8bea0",
+      "visible_evidence": "Dense colored noise covers the frame and damages skin and clothing textures. Faces and larger shapes remain interpretable."
+    },
+    {
+      "ambiguity_or_style": "Background blur is consistent with selective focus and is not itself a defect.",
+      "audit_flags": [
+        "possible_selective_focus_confounded_with_subject_blur"
+      ],
+      "can_judge": true,
+      "image_id": "megalith-8254d303f6d1cd6142205c4e4f054f79",
+      "index": 9,
+      "review_interval": [
+        2.9,
+        3.6
+      ],
+      "reviewer": "blind_image_check_b",
+      "teacher_quality": {
+        "evidence": "Heavy blur and smeared texture obscure the subject; faint low-contrast detail and soft edges reduce fidelity, though the overall form remains interpretable.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": 2.2,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": false,
+      "view_id": "4ebb59eb924bfd71c6a1972496fdee6ef98920cf3cf753c9b97c1027ff7eb7bc",
+      "view_sha256": "eebc8d0242c4d60f5baaabd84a64b74f7c9c187358e77e14fc820ab5fb72fae1",
+      "visible_evidence": "Visible grain, low local contrast, and softness reduce surface detail. The central carved ridges and mouth remain clear enough to inspect."
+    },
+    {
+      "ambiguity_or_style": "The intended subject is unclear. The interval reflects uncertainty about how much weight to give the detailed fabric.",
+      "audit_flags": [
+        "major_obstruction_not_reported"
+      ],
+      "can_judge": true,
+      "image_id": "vizwiz:VizWiz_train_00021283.jpg",
+      "index": 10,
+      "review_interval": [
+        1.8,
+        2.7
+      ],
+      "reviewer": "blind_image_check_b",
+      "source_flaw_annotations": {
+        "annotation_license": "MIT (official repository)",
+        "human_flaw_votes": {
+          "BLR": 3,
+          "BRT": 0,
+          "DRK": 0,
+          "FRM": 2,
+          "NON": 0,
+          "OBS": 4,
+          "OTH": 0,
+          "ROT": 0
+        },
+        "human_unrecognizable_votes": 2,
+        "raters": 5,
+        "selection": "At least 3/5 votes for one named defect, with fewer than 3/5 no-flaw votes; balanced dominant defects."
+      },
+      "teacher_quality": {
+        "evidence": "Soft, low-contrast image with faint blue grid lines and mottled pinkish tones; detail is limited and edges are indistinct, though no severe artifacts dominate.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": 3.2,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": false,
+      "view_id": "24bcdf27dae0f802b30bf19157d7a8436733f9b0f4d6bdd718c8c4bda7c42d8f",
+      "view_sha256": "e7425f1074bdc5fcdb553f915970397d1a663aa56e9f8ea1fbf9d957a04340d3",
+      "visible_evidence": "A broad, severely defocused region fills most of the frame. Lower fabric retains weave detail, with some softness and noise."
+    },
+    {
+      "ambiguity_or_style": "Strong sunlight explains some contrast; the image alone cannot establish how much contrast comes from processing.",
+      "audit_flags": [
+        "dominant_noise_not_reported",
+        "heavy_blockiness_not_supported_by_review"
+      ],
+      "can_judge": true,
+      "image_id": "distortion-7dd40d7bfe2f4f4cbf2909b7",
+      "index": 11,
+      "review_interval": [
+        3.1,
+        3.9
+      ],
+      "reviewer": "blind_image_check_b",
+      "source_transform": {
+        "operator": "gaussian_noise",
+        "parameters": {
+          "sigma_8bit": 5.0
+        },
+        "seed": 8054868744744698560,
+        "severity_index": 1,
+        "software": {
+          "numpy": "2.5.3",
+          "pillow": "12.3.0"
+        },
+        "version": "photo-distortions-v1"
+      },
+      "teacher_quality": {
+        "evidence": "Foliage and trunks show heavy smearing and blocky compression artifacts, with soft detail throughout; exposure and color remain clear and interpretable.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": 3.2,
+        "status": "ok"
+      },
+      "teacher_score_inside_interval": true,
+      "view_id": "4d24d4aa0a8a43b4aed54ae0bd2b6843e74ac34ea90266584e38de46406d900b",
+      "view_sha256": "bffba708205b5b786aa453d80605863e7a3fb63a04acf1ec0e2ac95ff0391e92",
+      "visible_evidence": "Fine noise, harsh bright edges, and deep shadows reduce subtle foliage and bark detail. Most trunks and branches remain well resolved."
+    }
+  ],
+  "run_id": "08d02f26720b16eb16419f4fbedb3f460f8128db13fc8f0e813f98c1ab2d2ceb",
+  "schema_version": "label-plausibility-audit-v1",
+  "source_manifests": {
+    "development": "131329cc408e05bca16c67a20a21ab3e67807cd060c1032be6bbf0cd1582809b",
+    "test": "fd49c03efc574c19be6c413885225a83223bd5ab3e175fb97f8dc7e6f7159c2c",
+    "train": "c8bc9fa7b796239739b2f7a00cd99e2051342c382ec179867658d1b702246a53"
+  },
+  "structural_validation": {
+    "frozen_implementation_hashes": "unchanged",
+    "image_view_joins": "passed",
+    "observations": 12,
+    "raw_response_reconstruction": "passed",
+    "source_and_view_hashes": "passed",
+    "training_masks": "all false",
+    "valid": 12
+  },
+  "training_ready": false,
+  "visual_review": {
+    "all_images_inspected": 12,
+    "can_estimate_teacher_accuracy": false,
+    "human_gold": false,
+    "interpretation": "Intervals are model-assisted plausibility ranges, not human target values or acceptance thresholds. Expansion is held because of concrete rubric/evidence concerns, not a threshold on interval agreement.",
+    "method": "Two separate context-isolated assistant reviewers inspected disjoint groups of six full images at original detail before seeing teacher scores or evidence; primary assistant inspected flagged examples against the rubric and source metadata.",
+    "reviewer_model": "Inherited assistant model; exact identifier not exposed by delegation tool",
+    "scores_inside_review_intervals": 5
+  }
+}

@@ -1,6 +1,6 @@
 # Visual-quality pilot builder
 
-This package acquires public training images and assembles the [proposed visual-quality pilot](docs/datasets/low-quality-and-controls.md). It preserves source records, creates blur/noise/JPEG variants, and writes separate training, development, and test manifests. It does not call a teacher model or assign quality scores.
+This package acquires public training images and assembles the [proposed visual-quality pilot](docs/datasets/low-quality-and-controls.md). It preserves source records, creates blur/noise/JPEG variants, and writes separate training, development, and test manifests. A separate [label pilot](docs/training/label-pilot.md) prepares fixed image views and collects pending 1–5 technical-quality scores through OpenRouter.
 
 The [2026-09-27 assembly record](docs/datasets/pilot-10k-assembly.md) contains the completed 10,800-image build counts, source revisions, manifest hashes, and verification results.
 
@@ -27,6 +27,17 @@ uv run visual-pilot acquire --source plotqa --source clevr --root data
 uv run visual-pilot acquire --source owned_controls --root data
 uv run visual-pilot assemble --root data
 ```
+
+For the small label pilot, load `OPENROUTER_API_KEY` through your environment, then run:
+
+```sh
+uv run visual-pilot prepare-views --limit 12
+uv run visual-pilot label --dry-run
+uv run visual-pilot label --max-cost-usd 1.00
+uv run visual-pilot verify-labels
+```
+
+The default model is `deepseek/deepseek-v4.1-flash-1017`. The sample uses training images only. Source manifests remain unchanged; teacher observations go into `data/label-pilot-12/deepseek/`. Scores remain pending review and cannot enable training masks. See the [run guide](docs/training/label-pilot.md) for frozen settings, budget checks, and recovery rules.
 
 `assemble` needs the completed source records written by `acquire`. It validates images, excludes exact duplicates, joins near-duplicate photo families, assigns splits, generates variants, and publishes manifests only when the quotas and split checks pass. Download failures are reported by each source adapter; they are never replaced with placeholder images.
 

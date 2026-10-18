@@ -10,7 +10,7 @@ Label decision review: [2026-10-16 proposed specification](training/label-specif
 
 Dataset follow-up: [2026-10-15 candidate review](datasets/candidate-review-2026-10-15.md) ranks the requested sources against the acquired pilot and checks each component of the IQA-Dataset collection. The [paper library](papers.md) records selected papers under unique identifiers.
 
-The [pilot builder](../README.md) now provides acquisition, assembly, and verification commands for the proposed image mix. Its outputs retain source labels and leave teacher scores unset.
+The [pilot builder](../README.md) provides acquisition, assembly, and verification commands for the proposed image mix. Its source manifests retain source labels and leave teacher scores unset. The [small label runner](training/label-pilot.md) stores pending teacher observations in separate, versioned files.
 
 ## Index
 
@@ -33,6 +33,9 @@ The [pilot builder](../README.md) now provides acquisition, assembly, and verifi
 | Training | [training/synthetic-label-teachers.md](training/synthetic-label-teachers.md) | Visual benchmark shortlist, API pricing, and synthetic-label costs for 1K, 10K, and 250K images. |
 | Training | [training/synthetic-label-prompts.md](training/synthetic-label-prompts.md) | Source-backed quality and aesthetics rubrics, prompt files, response schema, and pilot checks. |
 | Training | [training/label-specification-2026-10-16.md](training/label-specification-2026-10-16.md) | Proposed label meanings and values, human votes versus teacher predictions, source-scale rules, and validation gates. |
+| Training | [training/label-pilot.md](training/label-pilot.md) | Versioned observations, fixed-view preparation, OpenRouter runner, and recovery rules for a small technical-quality pilot. |
+| Training | [training/label-pilot-2026-10-18.md](training/label-pilot-2026-10-18.md) | First live run: 12 pending scores, actual costs, artifact hashes, and verification results. |
+| Training | [training/label-pilot-validation-2026-10-18.md](training/label-pilot-validation-2026-10-18.md) | Blind visual checks, source defect evidence, and the decision to hold the 100-image expansion. |
 | Training | [training/experiment-plan.md](training/experiment-plan.md) | Staged experiment plan and compute assumptions. |
 | Evaluation | [evaluation/protocol.md](evaluation/protocol.md) | Metrics, split rules, calibration, and the Q-ReAlign code audit. |
 | Evaluation | [evaluation/benchmarks.md](evaluation/benchmarks.md) | Diagnostic benchmarks and the standard held-out test suite. |
