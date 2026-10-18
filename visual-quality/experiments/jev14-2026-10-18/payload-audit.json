@@ -1,0 +1,3052 @@
+{
+  "purpose": "Requested repeat of public-dataset benchmark through OpenRouter",
+  "verified_cases": 378,
+  "outbound_fields": [
+    "model",
+    "state: fixed benchmark rubric and public dataset image bytes",
+    "questions: fixed score or classification rubrics"
+  ],
+  "excluded_from_payload": [
+    "source metadata",
+    "reference labels",
+    "local paths",
+    "private notes",
+    "repository contents",
+    "shell configuration"
+  ],
+  "destination": "https://openrouter.ai/api/alpha/decisions",
+  "authentication": "OPENROUTER_API_KEY used only in Authorization header; never stored",
+  "dataset_counts": {
+    "ComplexDataLab/OpenFake": 60,
+    "UHD-IQA": 58,
+    "VISION": 80,
+    "KonIQ-10k": 100,
+    "Synthbuster": 80
+  },
+  "cases": [
+    {
+      "row_id": "shared/primary/ai/ai-000",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "8e206d671ed357dd0ba95beb7c229f5f8b1cf7666f931c8a980246439ae7748e",
+      "request_sha256": "3b022fba733b8bd325887cb8c1f5c116d7a2b47f4fd6fd76b5bac9fabb122b38",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-001",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "bebd846971d98c2101b9397be110f3a2492567184be0ecd49618a47cbc77b09a",
+      "request_sha256": "c69be3dee7fd54f815067c74a5592fd11f7f089e6bf0f4595976a89a7e8ba68e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-001",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "b6663915eb42bc068d95ac0ea3d41bed2ed17a3a4d51dc949bdc6d9ad15a829a",
+      "request_sha256": "78578071fe84bb5a54b2bc36ad77f81c4331d5c38b156c7bcdcc2b0717b57273",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-002",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "5bc6931729f985b5c8948e23d0835b6c106975009e7db53648d3580bf586a008",
+      "request_sha256": "9827999c17a50738ed3bcdabbd226c4c96b37ad0d60924ca051a096c97e7f2cb",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-002",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "891686c93f8735385ba6b3d0c1b5e7aca218c5e62d4f0f7fdd1cf6692367405d",
+      "request_sha256": "aaf861c3f7bf3a90dfba69e2e384063ae8aed1ae62d44c3031535da238bfb1b0",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-003",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "6d54b7eb47b755a0afe25e1814727196c616014f3cdcc8d6d015b4726bd4e296",
+      "request_sha256": "ffdccadb61a5eafda2a70fd13500c4e06aa289ce872fe05de6f4dd29d038f6dd",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-003",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "460737c320a35439db11efe07b8a04957960212db0e5c30fffb9d02fcacfcfd6",
+      "request_sha256": "4f3a8d585c6c0f6c8a08b9d933209062e62d042c0ffd1892165f61cdfff30048",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-004",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "48d339cd5a890f5fa60be4d322c86bcde5360b20e214c07e542ee06a2f339b58",
+      "request_sha256": "b42822ec4a6202ea61a33960e057abd5f8c9d5bfa8686cea93c2ae285c3e52de",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-004",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "0431f9a71bdf589e29871ff2f35a2195b2d77d86df707e8ed72801ad59a6c434",
+      "request_sha256": "8118daec4eebc548b0f69bd60a6689bce8e9f17f05132c9a5af36a0720d33503",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-005",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "7d0e98542313465c28d8abe199794a86a23b82f241afb46e7832912877859220",
+      "request_sha256": "fac10bd78ae223e42769259cea40d9f3a531f4ddcc2fb6eec493f4fff7922d4a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-005",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "257b35823922754409f37d6202882d81c4c0c05e864bc486f415af71785848e8",
+      "request_sha256": "26f5842da9544736141ea8c497c308abbb1440d74e0e8595c94ffd880623bcd4",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-006",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "2d580e16f57bad38988e8ee9c61e7c5e0fe45766bc32ba19ee96c23ad052d9b3",
+      "request_sha256": "155769fba0725535e332a6fde4c6c870006036dcdc75d44bb679e8728b75e3be",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-006",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "365794b276b902cdde44cb7efaf005339c08ff867b8992dc1f6c41597f135941",
+      "request_sha256": "f763f9b6b4da1ced27b96acf4cd0e075ad2687bf105ba865e60d2a043c852b40",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-007",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "fcf01e2bc492660f3405a6f05e513ae61f316e89759af04d6c514fdbb040bd00",
+      "request_sha256": "6c12ee568b0a8839ca7545886d1c2f9a453180bc789f0201f34b2b94a36fe128",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-007",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "3d6361e30cdf8bfaf652c3f208608d36ed9af6e7cc1512b6676e2345bff53c0b",
+      "request_sha256": "416295f2c1e2e15fd89f1506a99c571f2a5999b3a5f8ef60c42504c758bf207f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-008",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "f4c5c6f40306a1067e9fcd355830d15c61c38c877e13387f31e90bb35f0a8dfd",
+      "request_sha256": "ca1402824ecbe0cb50642a6ca4a0528b12348c5c64b4744be9bb8c6be0b0d025",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-008",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "b4ff1b0bc935a2c913a6024cc9793155027509505bce418294aae41ff4e4a34f",
+      "request_sha256": "f4df11145c4fdef894053592b9ab919e2184ec7dd597d8e6229fc7580826ccfb",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-009",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "bce7456aa197d31c2dee5f00737768a3b21b550528a3a12318eddd3edc698b15",
+      "request_sha256": "9e2638f70f10b6b346389dee9fa59347811ca784d068ffa6863697e687f1f2ad",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-009",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "04bb8c9e9d4d2c4e48038390148a66b570a5e44b1fe258c53279181f56aec42f",
+      "request_sha256": "2744b0de32e9a4f127ae26ee286b740dc6bf841a223c83981832269e2d34c992",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-010",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "43f4af92d991a6a1e8d93c93b4cae3661dce78f04516acc20cd7c0f0a9b1871d",
+      "request_sha256": "9fc9df143f887403444e835f79ef4097c7bd9fb7eeaf312302992c3aded524d9",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-010",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "a600e2e7f4bc3a80bab72855c7976ed7a81c894c8b4d12c8b9f9a370733be8b4",
+      "request_sha256": "d93aed13d45ace0006d3e8a3b2c9b227d0b40a8c956f3a5d7733e4d22f2ebd34",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-011",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "fc99cd91ab42b8542aea43ba1696653a94edfd28ea4261a8a8c5ae349efd7bed",
+      "request_sha256": "7937c12a2efad7e47975ef4830105fd897f46d62da289aad574f1a02368b8559",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-011",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "6a323af53fcae138547a2e931e458c1e5619077d87e3e046e184d28791e02a7b",
+      "request_sha256": "f691e433d3f91b800e50e24bc2eb8624aa9c029c2f8a465be8fca373be49d3ec",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-012",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "2e5560f9c38afd6dd9297f6c2f2f3cd377d7f6a3f7dd1f278a30d2acf0114c0a",
+      "request_sha256": "095131bd745d92ece3f22941ecbdcd3b4902a199eee0f973fa75a5b789f66086",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-012",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "9c73a216dd985074f3233d283bf04e5ac32331bbe51d1729c25ea1179cd33201",
+      "request_sha256": "597e0b491c403a45c48799a34b216dcffc9892e45145f5dbbd69fb6538559164",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-013",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "6c1e81d14f9cf7c4caa2dd0521adefb6aba7295cde7c68e418106a5c10342f36",
+      "request_sha256": "75d004ba82b26dd1cd4d98ffca3934b6e322f9fb4778ad6bc91879be65f6d1a1",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-013",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "cdcfd6e0967a8330f351af6f652b9b56f02346adaac6603fc8a4db0a412eb792",
+      "request_sha256": "dafcc948083cd36dc6392edbf3e236e82d091d4df354bfbf1028b40f531c8c8f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-014",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "70be54e16b639a81a32c4e1c387a17581aafaac9cc3c1edd84ae68025f902a4e",
+      "request_sha256": "11d1811972789b44a5a7a0f7263a32d8a6b0415adb84c2b4ffa0b13dadd58a14",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-014",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "22a500af85b9d9e0c44b76bd837d6d1f2264737ac0c73b2206b6ac2a25885d5d",
+      "request_sha256": "2aa1a1c0a9a2877130e4c594ff18a37b19921ad9870309bca6951562f6325d5f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-015",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "005c2c8575bbd361f741bd8311d67c7ce06926c7b31440c195384ecf34ad6465",
+      "request_sha256": "4e5909d4cf1dbe2d6dfc4ca8c86f7761b3ed13c7cb67e549c31529d0dd8a684b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-015",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "abea5a2265bbfe48a7e027388c03d53bfed015d3d7abdc7de870b09c35afa852",
+      "request_sha256": "a5abfae0b6899a689aa657d57c533f85190789fab8bc454955377a505f8dda30",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-016",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "e7cc788523007afd6d0f184563d576c1997872eec97d8d5f864bb47412475e36",
+      "request_sha256": "e3f3481488d694d0da676a6db16808e8c62a8f802cd1c766cc1f418e930ea6a0",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-016",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "97a257249f93a7aa13dc416cc455722950bb0a94fadb2a9e6e06a034859ad841",
+      "request_sha256": "2e99dd8405d8fe454c6eba221af1209c64a3613efe2a62eedb6929c116c1d9dd",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-017",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "a945e30159deae436fb0a34c48a39fa26e152fff8f5bb801c6b53d3b09d73f97",
+      "request_sha256": "d8dc005ed65477e31b92eed1fbb31d6f13b0a335b1edbe85df4845e7b6a79619",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-017",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "a8cc3b6aaa485e2185d6da24807b70cdae2010c30757ff10154c8b8924659710",
+      "request_sha256": "08f8dbe9723c33915d008f0f426409f7ec003a24f8dcb9f06e3f4333104e7b3e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-018",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "28eb3378a249ee544d014e76d75e8745016274659545642e862d8c5c15ac6c06",
+      "request_sha256": "91902c6016a1fb0150db341b147c04829374c834a23694f79a235eb914c0fc6d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-018",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "4c514727273f7ef3ac436655930251752f61eb25a641e7acce75e9243b66ee40",
+      "request_sha256": "b6afe06eab0625d692dc1560abff679c5ec68e8cfc97eb9a24d048dd01a3fb86",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-019",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "fae25fb44fd030cdc67be5b773a9db468c6941c4d05212211c4519e0823951c9",
+      "request_sha256": "311dbca767f58aa7d24647eadbcc93f254261f93f10f50ec51034cac64212ecf",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-020",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "3f13fc85e0cae739ca8e1963db471de0cdf5cccc257517cccadd85d89de68956",
+      "request_sha256": "1759d226834bdc657d6c4f48e448dc2fbf1a1b625adee841b402be96b52f5c16",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-020",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "b49bf2ced2400cdc2edb9fbb4f7c5b03ca9e3e26d539fd6bf4739abbdf183fa1",
+      "request_sha256": "a14a5d3bfc585b59267fdf490bf065dfb9a07409c4f97af4df9d70ceebc5ffe8",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-021",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "e4dc6327bc5c9c616d8b2aa44859f881b758949f961285e4e2c3ad433cece696",
+      "request_sha256": "66f7d972e0ffe700f90f1c9baac4402467f6147d629f2cee6f33e0d7fc61766b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-021",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "f92c5a67764561dd73ddc4e26ca7c5221cd40f8f25cef31e272bb1919898665b",
+      "request_sha256": "692e96ee85f475fa81771cdb695f2c53b6c66dc37e1605e7cd45589de85fb622",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-022",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "9948f07c34c53d681d35fda506991de40363a17545de6b67f404bd21ba28f1f7",
+      "request_sha256": "c50d3fc8f3ba28230697a49a0de516ad9018f9558fa56614325dd17b5f62d5d3",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-022",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "d3e8de392bdda6ae944f21e37b4def5434ca6640c32f2c3a0586c14b5c79f1b0",
+      "request_sha256": "0405704802c4107b95e31acaa91ebe244b0744b214752f5c3f29fd559d4a5e84",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-023",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "12737e65229a1bb921a6be0823307e8ce7e77842526853838915ec275c6a6a2f",
+      "request_sha256": "ca1e70e3d99df00d4bab1f5fab17f5c9e946984871bc2bc78f4baa4a6960f953",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-023",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "0731455b22debc4b7a9f00dfe426a52f6e972d176504415f26fd81cc1cd7053a",
+      "request_sha256": "5ce6f6316aacc15bc5346025ec08113f29a260c08dddfeab962ed20f66688fa3",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-024",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "4d375b502a230edf9f27840f5adf714fe112a6bd945a3e6e5255f6c5e8851de1",
+      "request_sha256": "30d635e8123030ab63343105d527f0e26234d3bdfae5c2600fbb411836f4ce88",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-024",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "e2cda38b894c8a8cc8a76d43199e8fa076dbb63c9d8cc3ccda34a7423c1217d5",
+      "request_sha256": "9172f22d71aac7ac9970117ed4f61a97e6113291f2f9459fc1c918785fe32833",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-025",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "451b3332d3a47e4375d660c4362d515f87dd51f09097c1165edcd671c7b56512",
+      "request_sha256": "421eb7f82a00e1802a184b4248a28020551a8fe542da4993f03b648fb33bf203",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-025",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "3c2ad2be46d00923950a52d6e60bebcfcc0ecde57ee1630a44adffe5bb4bc632",
+      "request_sha256": "31a14d489a1b5701336c39107ea0b8d569e52ad73720e5613cd9213ac934c812",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-026",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "d9671842ed8fdcc6f7851fb8331958443caa54254485f9bf8edab153bea6d187",
+      "request_sha256": "0b1ec6b0362f2ba0bde667395b1dacdd540a4de306970c158c34e741de0bbffe",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-026",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "b1cb0fb22caeb8b091022ea3b7725bca53b5c7efdde5a4b29a5056e21b31624a",
+      "request_sha256": "bf61c1b1cb219b5569ba57f837b3beef1bf2f8f4c071fb5f511a6be5a9a6490b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-027",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "8c0520aa434b6237182137d1dcbed19665a9aaa7a18e4a5d7c46a36e7bf24c30",
+      "request_sha256": "07a4f8ecc769725e55fb481f16983bff8edb8d8fdce38a5a3ccf7dff236ac563",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-027",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "276b4b9a7798b806deb5dd82e896668281fd43b59e1b474ae0cd4a838563259b",
+      "request_sha256": "6388b3fba1538168c2d2c0030c3abc95ad75700b4799fa0c5784f53edaf67be6",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-028",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "d99010d13ae8108fcc71131097dbae3a2353884ba65e6d0ef5cf37015222b7c9",
+      "request_sha256": "cd185e614c96486c5a6b537e6335b18f954287fb6fcbcc04b17452d0cd79f317",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-028",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "ca165ce5141f340d480f92e9417d913749cd668a35ee7942986292a5e92843d4",
+      "request_sha256": "d507297a810df73ee4051aa489b40904cf700647cfb5c37f5e12004800fe3f5e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-029",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "1bd04bf98d56b79f136bc2492a68605c10578fe712c2163893b419583c09ff3c",
+      "request_sha256": "ca938600cb144943e9d8a4915046ce30c369866d0e64fe54b2886d98e5d79533",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-029",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "fbd197ab331b81f7c4acbeb25c18e07b60ca142805b94de0ac6ec436d4d857f7",
+      "request_sha256": "5ad652531801c0eed5b99fe9a5d6285ddf4fff7c99848d0c744a1a3573661260",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-030",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "266f8c8433ed884e8d2be2c4a00f8873f73381b403c4ecb71df970bb5cc6c6ff",
+      "request_sha256": "99d95192978dce91d94f091fe911e2fbcb5f8cd29d3dd0a033a158880786799f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-030",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "fe51bd1ca993718800f8981cb0c9583d0b2e9bc23a598341bf6d196a7116fd16",
+      "request_sha256": "d527abd68ceb593f905e3803f2252ef06071da8cd7118da91c719fbc632a204a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-031",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "c1839f920695865582acd24b70117b862e1db251a8aca0c97e366029f7e9b335",
+      "request_sha256": "275ec98c0825eba0282126c464b3868ef09b211d97f05358160a08825b952e4c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-031",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "850f38a98c590c0fbe52667727ac31efe9377793a5499e18e1e359ab90cc951d",
+      "request_sha256": "96c436f41385473b846ef7b1119307ebbf06e28921fde526a9ab9798708aba29",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-032",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "48ac250a0944922a7a503517fd243aef6456a89281fd8b8928d88e6f35b7433d",
+      "request_sha256": "a0830f07e01f60df3f69289588f9ee1104fbfdd9813e223bdae415fdf10cced8",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-032",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "15348618e8b6f45c9a263525c3ae560bbcbc25aecafd34d2b4a050cf64c54e90",
+      "request_sha256": "02b17dc825fc2b61b9be550c7b7fd27cbaf0f1844ee1b0c47d490e716f5ff7c8",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-033",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "c4d8b1e1fe80fb3d764092953aef4b2f38703a8823cb01f9b3e7371d84e697f3",
+      "request_sha256": "77309c6a0a18a1492c4f46952c908080c6f5f7688bf104641f8111bb5d901012",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-033",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "34222af5a6cc7d21cafc34711e822872f5c630f65f8aafc851cf9b094234005f",
+      "request_sha256": "969536cdf0fc72bebb3bd103b1809c1d30c1c720b6010f5f0b5fdc382eb57a93",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-034",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "0af6f114b19ea870fc6440be6be0df1d832eb0e58f02f3e18e76f80c75cf0a6d",
+      "request_sha256": "daa8bf20d70e37fe695fb173922593fe3c5f2d1645a0e6baad67235a27821c4a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-034",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "5d041cd9e505dc77742396d0e996ee61a51d108f8ccda8e4ece265c9ef6de3dd",
+      "request_sha256": "730412e1ace358d6cb1c13dbe110fd5e2870cd32422d8c315293bf5e7394f8e6",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-035",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "8f85bc9006f0c2c680ea2882f87997de970e1914368f83ceb5ba4466e0eb60e7",
+      "request_sha256": "cab54f546280827fc7e19d9d341b239f7797d359da417238e1b3d7c001f7a9fe",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-035",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "6ab2861e56bf517b2c0208715b959fb01fa43f580da14fb757e26210a024c421",
+      "request_sha256": "87b415e67eea6317d5726c0dd678490237b288a4b25acf24c88ca7448e83fe5f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-036",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "2c45102592136a02e576c14cc1512db7bdf5263b0a198feea2cae9b572ae8039",
+      "request_sha256": "5fbe2dcb3c78910de51a0fe5617e901af15759544ce597f24c7ed3867d0cece5",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-036",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "bee0d49112aa0f4d9c108412becc67d24033ec04e05aacbc4286faa78d08bb62",
+      "request_sha256": "229a23f8cdfa801129987463947d53878d671982eebed4eb8c71360029d6a4f1",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-037",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "26e6839173f7b08ba23512c25d6c695ef96d0450e3d3031ad06fd98c2bfcd532",
+      "request_sha256": "e8073df18996f9fc4c5f9d6ac779db0e30ad17735c0380eb978dd73135a60693",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-037",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "6ba68a11938b27ea85fc4dbe56c834db88c4f6b48270957657f0631b798f2b32",
+      "request_sha256": "a9f5bbb5a201666454130e40ef272036da9388bc2be51a673ba63ce1ec20a440",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-038",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "82569629fd989133fede622f527c1719661c45a141c02aeb7ed7685ba3256d53",
+      "request_sha256": "44af25d888f7df0bef268945231ea840a44ac5b9504851715172bd4cce060fc1",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-038",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "444679d1abf71d83c60fef313ab9b4b3105b67b8011e5b02db93fc7f64c88f0c",
+      "request_sha256": "8f91ce1cfe033e8bbd4e843093d4017c38351ff1a96249c4acd4dbc46691a14d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-039",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "18e23455f4f1e906572463978a6e65d6d4156823ce76450f4c8fccbb7f5b084a",
+      "request_sha256": "6baab4c0d54fe29d030ca79d7d3a31f6f9559e4db26047eaf05fa69bb7c46743",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-039",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "4fdefa6ac8917b4d12def7e6c06380bb98e4be0c545b596f25b31cbee8efa56b",
+      "request_sha256": "f922968fb48e49a49e9345e2a17d9553c64f31ed136e9cb74aea7981bb9eae3d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-040",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "e89021b76589ff999698e01e1c8122818e7b88aaaa2d256bb6a64bcaf192b73f",
+      "request_sha256": "310edc4b58ef003c5975cf0bcb30e35d1a326e77f12a16bdb2e3235c7732a184",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-040",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "a8f9d058847df582d070574204d102dcd27ffcad611ba9edcc4eda5d432991d7",
+      "request_sha256": "c88e5c0454975373e1b40ebe120407a94df64ab35dadcfe7f3522cea72a2fc3d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-041",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "890740559dd6885fc041ebb4d06d842d342671ec3ce9bb63a137dbf1a91a10e5",
+      "request_sha256": "e6b7dc880077d5223a1c16a31ecdbb7c92ad7e5985139af1320dbf7ef97952fb",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-041",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "0bbb1ccbc2a2f71f731d5e70ff7f6d94a765e2c54da670b02bb415add579b450",
+      "request_sha256": "6f8af8856505ba7056994ffd2ad2284dfb85f30283b84b161b7f539b457fa533",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-042",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "cbd810f6d2ea2ccac15a2dd4de67b545dd43610ae00e123fc2ac7dfd4ba244aa",
+      "request_sha256": "296ef7c49019c44d180f8d446e840232bb4e5f623d7ee7ca192dc10f33a21c8b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-042",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "8f3c98fd721ec08c29bf3ed801c69a5107d6399ef0b273b0566fa1e0d9ff2397",
+      "request_sha256": "7eeb9c0f2616de0264feed771cbf0d7cef78c331c4f3c3e017821f6972350e57",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-043",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "09c9eac39ede6c9ded5a6ab9d8dd1b98dc4c74d7a2062d461562c20a58ff83a0",
+      "request_sha256": "c8169680f2ad57e311455ec60a26d818f067af3b02bcaae00a817bdc03159d22",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-043",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "eedc7815504f1fb850dc7958a45b9b9358c49a100ecc4a42d51a252e143ac4ba",
+      "request_sha256": "6db6ff800637bcbd37b918e3e2b234e4e141ea37412f29ac4426f75dac34b452",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-044",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "3bdfbe0e7381a976d49fe99840fed193c771a38de9b70b0e19845976ab312cff",
+      "request_sha256": "b3a702af2e8aedd3b9fa875488f4dc5206fc47b8ee108bb5fe0af5fd5c82794e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-044",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "7b6fc6c885509e226687c37c39680b0c52e2bd61c943ac73b890326faeeeff00",
+      "request_sha256": "9b43abd48b5eee197cb7b7a059a4985331c9ba0f5b931c39dda055ad1182147b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-045",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "2b319e4a5d418c546f2a44ca74b209492715a230cec09e0449608c0e739bb78f",
+      "request_sha256": "63d118fda8c92e1dee12fafbf5ad10639b105996ebeb0b8c7da822d318b909d8",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-045",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "84a7feb12dfb6d6d9ccd49fa027ca170d2199bc66fb99021af0a70934186c96d",
+      "request_sha256": "eb069f1da49ffe8848adf1efddfa6c5a578440543cb0785d57929d9fa4206d74",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-046",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "5225703191aad6829e826fb34ab36b33484537b58874ec158dd442e7c99adb97",
+      "request_sha256": "b6ea5ed31acae45bb666e74aeaca3b3eb91bb2d2148019f5a035c32d08357568",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-046",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "6206c84c67f9a3547a45ce4fcd177046c2b28b7d2442fc3d1770574b6ab72035",
+      "request_sha256": "b2975ec90f535eff6cd4711ef5ac0e8e2a1e0a21ba82db09e4fd8a09250c22fb",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-047",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "c629224252dfad8b1918a72a19817575b368888a540cee38d405bd9bb3e56320",
+      "request_sha256": "3a29bb2899e19f7050ee3bc18dc835c7ed5d5b58e2a9dc1b7c538406047b145c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-047",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "3b1e94e7e4c4fac8f7e4ba87f5722e57e92fedfd0876f6320161c3c91045e2b3",
+      "request_sha256": "bd0f8b913ef3fdeb3457d59dde600820d47812760b827330e60366325a273ee7",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-048",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "56cd8fda88d5a0d417764d0d1af5fd2d2586bec6c20f25c27daed203f451345d",
+      "request_sha256": "42216ee38fdd043f3d3f22e868eb76e9cafd6862c7eec8faa7a4b5fa84384f65",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-048",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "eb004c8ebd574e318aa691aa3de3ff3c390dabea416496acbb08d80d5900bac2",
+      "request_sha256": "c561b13f3a7d4dbd82c1ae9afc032d939378e577bd14e04058891635d78ccb18",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-049",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "03241cb3b529a8c5f5247c916a53e12f579e9500fc0a7e6113790efa396229b5",
+      "request_sha256": "c0dc4c7b1992355303f55716de93d1a1a1cfa67a397e29a14ec8cfdd6899cefa",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-049",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "2f93978f8413bdaebb8ac424ebfe5fa2c4b9d1477a67e590ca3c13ca9f76ac7d",
+      "request_sha256": "0f85b38e96556315265ab292e8f8557809f523351d9b208e0c6f1c02ef66d235",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-050",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "21ec8bceaff9f240b47fac200c527cdd6b0910aaf20479222cc1865f0d5f8dbb",
+      "request_sha256": "6988f084cb0e099e2bcfbcdbce858c5cec20bf63d647c466bc0d52e783a3256f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-050",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "20924ba9643a90a4d3898105e6e1bdb2d02e26a3b9e626cdf5ca9fa7e215e370",
+      "request_sha256": "2f0f9ce4fcc465977b2137e73d673184856bee5a859354a0ccf0331c1c3bab32",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-051",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "ead134175e48e8a201e9878b110acca79bc6a42d9e5a6096e49b2ccb7087f643",
+      "request_sha256": "22b7efc5ec1792f8ed3ed7aca1c2c35dbd7d2db64ab79087065659d79cbe2412",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-051",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "5471495bf2013332000a653b37b647ae86b16cd225a0637223abb3535f1873ae",
+      "request_sha256": "aa0e8cd7aa94b4a6826407eea055dba1778aeae712cf1e04a7988ddd28192534",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-052",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "ec2fc44ae49855ae1148bbe97f7c35959a540ce8304f0ecb55302cadd4e225d4",
+      "request_sha256": "0db1c3fb8dc9f417aa8d0b1c244e4d1db8d41854000caaefc60776911c60343f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-052",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "7b1aa315de2a72f09af28414b69394eaab4fff9b162415561f99d77e1f5d2af7",
+      "request_sha256": "16dff0f446f66a5f05059b8311aa687275b5d81d33cb70663753e0684d66ec3c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-053",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "5bbec69d9c2b43764010438de6fc8f6a201ffa7baaaddc0c32d91b85a50a5e29",
+      "request_sha256": "8769ce5199c9a4a256ea066cf84fa6fab0012166c498a928134a412b66de843d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-053",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "1296981a184d0181720a52ef5fe20228ff0d535039a9713a1b577ade3d8ef897",
+      "request_sha256": "0de86ef9fc63604ec4614ba74f06873c77d68235f97d3ce1c935584aeaafa073",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-054",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "5f3b1c37aec5bbfbb8da8ae9ff5447b6e8d8abd2ddd8bd745a516d023d403aad",
+      "request_sha256": "a8c5ce4f74b204993a982ceb3c61ac610ba690944bb5bbe0e507afed5ea2138c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-054",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "fface2b5a0e728d6163a7d4ed5ad1f4b242324c08a2c31d86bd48dc0df34c6cb",
+      "request_sha256": "0a22673c1a82e16036fb7043ff08b85ff88a1d7b0e656115b4825035d48a1903",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-055",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "3cc9347424e4b06ab65617432f45cfb49c47d29e03f51b75912169f6cac60f79",
+      "request_sha256": "94811bed925aba89c11a1f1d3b1bdb0ee0c5d20b53a220281ac4d532236e1b97",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-055",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "065bbd90610e5d673a59b95bdd0903a7fb173cc6aa1f52ddf5a5885b8d6b419a",
+      "request_sha256": "094a77cf05236cbc5b1083adbe11931f0efc9ab3df5efab2c79f17015a22bb6f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-056",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "d6b351ccc4c611fe2778d7e6a3d59d47a019621d3e0d47a390fea9ab63e77a77",
+      "request_sha256": "8ace189293861b7325a6ca52e801e96b1bc6fe57c537253346f8cb83b45ad1ca",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-056",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "f9512d58fe9b2f4ea756ea7048454b0ae0d7f9562e4265e0cc0ed96028d59bbb",
+      "request_sha256": "0fd164c15d9e5610279666ee91b585f4e1155b2c59aef2248216f5ffd629e22f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-057",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "2e2429e749a316ef9ebf6f1803eb8ec650c9da57244fd6479fffbcca924bee47",
+      "request_sha256": "b3b8613141d7acf7e71560c7bc71dccb8340574f560925ea7e0ae54943e52f71",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-057",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "2027ce026fb401151cda2fede369b2dbc1fd0bc8a3c0c82814f902d9de376756",
+      "request_sha256": "250b940093837a35eb0183bc9944258cdef813553f16f09d0e82365b47c95a45",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-058",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "23f7f9f3ad3d3b03c65ff4489cdc072f7e2dbd03707c4838a95d34dcecf2e6a7",
+      "request_sha256": "e4ce327a1efebb79739eec40df4100af12966e96d84ca70b27eb6d177eeaf0c8",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-058",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "19436401dd8d7bf8592080b4ada4fd437694a9c60fbf5ae86818c60870cee5dd",
+      "request_sha256": "fe3e79cf4e4cdb4a7692b3959a073b3eb5273ee9c3fd02005cf6e80050ed0ee5",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/ai/ai-059",
+      "dataset": "ComplexDataLab/OpenFake",
+      "public_source": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+      "image_sha256": "783a554ce6dd3c724fecf5ce921ce3172129adefd616306d8330816c88dceedd",
+      "request_sha256": "2101a2d5b43714148487899fe2b0eb31951f97db7dea66cc5d55cf1262558b6b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "shared/primary/quality/quality-059",
+      "dataset": "UHD-IQA",
+      "public_source": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "image_sha256": "92530f82d3b51079c6b94c2f75584e0e18578e4733318d7ad8ffd10e7288f71f",
+      "request_sha256": "dfd989280e0756b978552c48be3c5df6c31357cdd8e0351356f6c61e65bb64a4",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D15_I_nat_0067",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D15_Apple_iPhone6/images/nat/D15_I_nat_0067.jpg",
+      "image_sha256": "92a28d6458a94c93cffeff762c59a45cb3fdee70ed9583d249717340aa1b92c1",
+      "request_sha256": "3d04c35098d076a2c7ee0a246b2bf6169748480e97cef5aeeb5f595f8f60332c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-168",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "acea6ec476065001739d45fb4604a8c0ab3416026df5c14116d2be600f71a710",
+      "request_sha256": "db76534d8a6f6d98d9b5d6b43107df6db4324adf9c0727dcc6708ad132a42be7",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r00444b95t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "9ed6bfb83e3e61fe16e7b675acd749a8f4f9dc5fd59d2fa91e7fab0ebd463f87",
+      "request_sha256": "58d0d19fd513b631178229af007df3d25c3695e0b1ee68f0c448e30267e92b34",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-135",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "ceacbcb0425387797760b194bcc0bbc5748effc53e2f0b61df453ca8bc5c94d6",
+      "request_sha256": "f7b5a6d239e76864183f96b7d94d6d5808332deb40b6b24386eeee528851d203",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D01_I_nat_0042",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D01_Samsung_GalaxyS3Mini/images/nat/D01_I_nat_0042.jpg",
+      "image_sha256": "1b67b8e2be446681fbc0e0585c657de1fd1cdc4f5e4a118eaa767308037f6668",
+      "request_sha256": "7af2cf1d5d9769b514435a5e347ea5d06e7375a335691ab9cc384c95bdc4c3a7",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-214",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "21d226fbfe057e4e5b941edf6173f56c653b4cba4adb5fda08fe5a2d2e4e859d",
+      "request_sha256": "42e6645093bb686d1bdbe1403610e701153506e66f960f7972979ce4831b1461",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D08_I_nat_0027",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D08_Samsung_GalaxyTab3/images/nat/D08_I_nat_0027.jpg",
+      "image_sha256": "d0218f74030323826f67b4f9bef795e507c75ee4cfb85cba9389b86ccf030103",
+      "request_sha256": "8908f1b7a6490cb074b557e4d50cb5073c3da54b6a02b9d668908f236958d7ae",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r027a692ft",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "f6b9a76b56c816f095fb44c58016b5b253aed9cb6491fb10c9f80f972a1947e1",
+      "request_sha256": "9af6ee7a45cef13b895289353c8f4843b910c3af2c5aab738c242d8470f82aba",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-060",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "97f22d4a135f3ec71677cee01b31648de0044d82e66b7e8756a2ea51ea55e383",
+      "request_sha256": "2b09036a85873f7db361e1ff9a9aeabbf0b711d5d5d62f3adb40f6850f0c9ec7",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-216",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "3f82c7fc61ee99509b400c8c7e153e16649472717cd71b4d732859c6aa045d9f",
+      "request_sha256": "9bf489fa6482d17ad89e186c289e41838471cb690bf3a2b80f8eabc5ba36ead7",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-087",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "81d56a7e7bf8366b56fbeddf0c0d888166b4a9a3021a87fbaa5605cc53904f4f",
+      "request_sha256": "11418b2cbe9ae4c61ec42e2bae4068241c53cf91748a02b80f662984206a6a99",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r1e5c27c1t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "e8c36de773312ba52946745727403fdd59fa99ddfcd649f8e187400c3d921c7f",
+      "request_sha256": "f67e5cfbc9462b8ed2144ce538a1f5d041ab22afc68e56ea471a30bf001a9047",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D31_I_nat_0046",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D31_Samsung_GalaxyS4Mini/images/nat/D31_I_nat_0046.jpg",
+      "image_sha256": "00e860e077cf0b255119794911f432ff8805726cb4cb72fca9db6ae0a13f2185",
+      "request_sha256": "2e8abf407a8c7cf81e1ca12a88dee93f26485d95dee48887e50b56a38d63a8a0",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D08_I_nat_0145",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D08_Samsung_GalaxyTab3/images/nat/D08_I_nat_0145.jpg",
+      "image_sha256": "351466a0d283f43a232e37b9b8ea2567eb9ca51fc8f442b60f78b7b5c7885b04",
+      "request_sha256": "e06970a9dd5910d9eec2f1cbcfb6b62d623a5634ac8182fbbe66d97b20e047c2",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r16ea6386t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "8c1ae37c661848b46ebdd8d29bd0b2f8c59494acea9b1b3cae2b020125914deb",
+      "request_sha256": "7cde1e37810365c89d8d2acc15a4112d5559ff6e03c64a629fe3070839faec23",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r1e5c27c1t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "2e3d78c563d8ca0bbe22f46c7dad36f97f1f2edcfe36b86a9fddbdbe4a840ddd",
+      "request_sha256": "0b4994efad80dfa76ff292d545f5497dcbd8a1fb5bf066c2fe0229884a9d5dec",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-052",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "205981ff1a95a3cc24b8105bf9cc82e61c6a5899e9fb65b4e84816a63147210e",
+      "request_sha256": "153fa8aac212b170de5f13020205c3a682e3a19f13b52e70387e421a884b9403",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-345",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "8bd795d27242dd130e47006c00886addc55830d62b1aaa349d725cb7ed5e6ed1",
+      "request_sha256": "cb5c1909da8a5272fec6c2e789ec83ef9ac3b0df7d7fae3e64b96b718df6a497",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D21_I_nat_0224",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D21_Wiko_Ridge4G/images/nat/D21_I_nat_0224.jpg",
+      "image_sha256": "9e6cc586d6c4bfb2df5eeacdb6718f85d2d0ccf72b9be1bfd53b6de32502ce33",
+      "request_sha256": "a17f4f93377f863bfedde2cb4605ae942554812a59f993d883462d868f10b554",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D12_I_nat_0108",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D12_Sony_XperiaZ1Compact/images/nat/D12_I_nat_0108.jpg",
+      "image_sha256": "edd0bf3e34dbd0c13a9e2b68ad8df06399ff4d10bace2257ffbb521eef7609e5",
+      "request_sha256": "8bc7154c028511b60939e198018b51c6068b38c34124161bf52dc52dc90dc8df",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r1db5be20t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "aad83db8c481cf6fd4f6a20598bd01dadf66d99d698ad4cd753183e49267588e",
+      "request_sha256": "26aabe47387112009b47e641923ce84a827602f3ce3aa37e4f69c691562d9555",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-186",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "8608a9122964d12af1420c3610eefb7bf9cbae0b8021a97ba55f58f50fc11dda",
+      "request_sha256": "793f876f15428bbdb68d812e168602afdae8eafa6fbba8da04985969ae83a429",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r087a13a6t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "16ac6b2e9212a512ee2400d7c07812a6d29b3fd403d4e6465baab6a5972bca55",
+      "request_sha256": "fb8c7f0d320b0979e94fa62cc6ea3561352fe3f7faa8fbfaf5de1b1791538eb4",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-175",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "39f92c878ec2591dcb1ac152f4c4547f773165918203bf41f07cbc3ae44398d9",
+      "request_sha256": "d4b9415cff7bdc483017882f6dd618890442d3b680e72e8540e42781b31ebae0",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D01_I_nat_0118",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D01_Samsung_GalaxyS3Mini/images/nat/D01_I_nat_0118.jpg",
+      "image_sha256": "670380c4631675f43db607fc6a114ecf3c1209958ef4e503ab7efa9985c293ee",
+      "request_sha256": "7f6b96e58a15c678a593185b1176ce93c732c936230b17b7e98654816d9f6c42",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-076",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "61da8ec692b855754f31bba4b6f152bee9adc07db98282cab991c9ffa37cef14",
+      "request_sha256": "7810aa21cfb847096a28bbe0e01f95837db665e5c67e8327b21c6a5019b95337",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D04_I_nat_0148",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D04_LG_D290/images/nat/D04_I_nat_0148.jpg",
+      "image_sha256": "54bae8c1d47c0a5921418c8c9998c1d73decc7087337d5e77508ae04696f8cba",
+      "request_sha256": "b7c3173ceefd720d7679148ab2caf5e8aefd858ab817da9585c80e6cf16989d2",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-203",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "31b7ad7411b9ffb8ef380f4126ca71d468b1256e9427d27759d982af6db552f8",
+      "request_sha256": "8baaefb0a697ae5adc4c9329cbe32d737ce3f4b84813dec2f6000bbb9cbc788a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r065a0da9t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "01df84c36e9d21271884e0e81c42645e9b0f126768bdb290ac299f3bbcd468f1",
+      "request_sha256": "bc814f24b2ffc5e9061dc6ec922a0d3fda61d7d948c4bf5f0fe5b6b38ee97ff4",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D04_I_nat_0028",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D04_LG_D290/images/nat/D04_I_nat_0028.jpg",
+      "image_sha256": "7416a53573660c5f655a465e1789343e679556f7c872ed1196a4eed46882fcbf",
+      "request_sha256": "62435bee4a1a7d191ea4fe671ce62a8776f66ce55174614d069a35e67848e94a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-211",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "47ccd6b0af0065ed652b7504a4f75da719624cab19b66c8ae40aeadd2519cd5a",
+      "request_sha256": "2a36ab00a36cbe7a31e4befedd1a59572b74d4ce19a138380809f942bd1af1e9",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-156",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "c8134117d54203cb7d74e2d716cc1d4d960023a219df342f56c79330cff5faf6",
+      "request_sha256": "a7af59aaa6811f5b9758c175fde8e3a165c49c9ee71753d1225e031eee9a5ef1",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-236",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "f10b96029fe7d53f5822f39316a537fcfe78a238d0bb55118495a0120d4f1b5b",
+      "request_sha256": "1113d1bdb231d52859c815e39d1cfd59624d1fab962e253bb29eaf58f94ce88e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r1dea56e5t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "ff08594a13849dba45b6585c9f4b0b0dc1cde630e052883e754edaa7c50b13fc",
+      "request_sha256": "400c20d2b708b2643da25c809a705075dff59050b1b0c04b34be40d427330adc",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-043",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "43269c4b4a4fc4ecab061cf62c2c2652ae9e65a7ee5538dddc9e57d70270ac8f",
+      "request_sha256": "f7965c3599d81e99b55fec41ee396846b523310667783badbcbf696f766b951b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-200",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "77220e51de691108e649952e7f973dffe07790db6147b645f53713ed4c59c788",
+      "request_sha256": "3fa182230562f699e163ac7ec9f7783ddf72b9dee38ec66820acde5c6eea5496",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-159",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "55b804ba65a75cf911c64bede6ee5f67564c2062e230a4c259288c6f5b186b0f",
+      "request_sha256": "f63cbc717c9f2a01732986b7adbe83aa9d569e35d639e99e3de0b64c55518083",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r0487f5cet",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "3aeaca44b07fea5f193a70e3fcbd127bf1ffffeec2493054309fed42505c1eb2",
+      "request_sha256": "fcd68e0836a5ed587ad4cf7e12b620e76938a3809bac9eecbadf1f57c3c2a38c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r113ee9edt",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "d2ea18b2e1f9be4625d946e47ec9b01741e6023918b8115a73961734cb41d3aa",
+      "request_sha256": "05705a7a24a60293a7f0bd35c7ef3b8e1d459f00b10a0ba974b8534d46fa78d6",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D20_I_nat_0012",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D20_Apple_iPadMini/images/nat/D20_I_nat_0012.jpg",
+      "image_sha256": "88698f7c80f40284f0984cd0c76bf56f5b1b67b5e85bd7eee512f95ad02128ec",
+      "request_sha256": "9111de2ca1509f67473d4bd878b2caf112bbe522e5369ea2c75b147668908351",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r1db5be20t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "df08c78cb0deca52f139fa461376fc783fd726c0bcda959e11174ff6c94bd63e",
+      "request_sha256": "fc614d3405a289c0ea6f2664ee90b2df497165dc6a3ad7ef472a9d6a01cf53a0",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r1df374c1t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "b272528944b4d22cd7fd1ca9f8091da672cddb569d010785e0c0ab398a973a4e",
+      "request_sha256": "e98557f633a19865b92cab4fc6256ef3d4bdbc38d6df479a6bab186d7cf92d6f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-177",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "bf0fba5207bf832892752abd878d96efe2220e459491fc254825ae6fdb1b889d",
+      "request_sha256": "bb9c46e58d531d22fcab1fc5f531857cc33097ef272425fb23c54735baba8eff",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D33_I_nat_0085",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D33_Huawei_Ascend/images/nat/D33_I_nat_0085.jpg",
+      "image_sha256": "485ce6ba7e3afc922143fb81cf2b0a6ce653aaafc494ecfefd4eb3b3fc42b678",
+      "request_sha256": "b5606d4ebcf84a3678bb328da995f79e2969ce756815fd9aef6fb3359c9bc7da",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D13_I_nat_0083",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D13_Apple_iPad2/images/nat/D13_I_nat_0083.jpg",
+      "image_sha256": "05bee8f3e6976e1b66801d9511d75594213d623b4a109afb4cd77d0f719c2acd",
+      "request_sha256": "2539067bcf097e5429562161650f5e572c4aa7db473d8576995d1a7c5a50b6fc",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D21_I_nat_0249",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D21_Wiko_Ridge4G/images/nat/D21_I_nat_0249.jpg",
+      "image_sha256": "2102d88c91374937c6179c746520c8948b39de3b4956a846de764753ece48034",
+      "request_sha256": "92d284134563c3cc6d0d681339fd437d302c914288c054b6503260d4c487bb48",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-068",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "62751ebfdfb0ae71deb246d9f1f2a48cff7b774042d1629e671cae82d1509fef",
+      "request_sha256": "a6cdca24daa0862b0aa71f821a617a1fe1ade5bff1a27dbbe6f8850765cc4dd0",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-062",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "d901da9403391cba822252eae27fa747a9eb006c29c0837f3c104c593b5ffe5b",
+      "request_sha256": "ef8f3631c56aea266b4610c4edea9e7b4a7e2b20e33629fb4b5c54f993e8dccc",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r065a0da9t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "3818974939e0c826d084d47f89c28808d58268dc12c813dc5d1587610a6f5fc5",
+      "request_sha256": "cb0de24459e404964e5fbcb315335a9dc5d24164177c4f2e52749dec5b2bc37d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r0465565ct",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "3c5be1a52118a0cee7e05180544eae3fddd0e4f6cb5f66f1081fe8e118416100",
+      "request_sha256": "17acb4a05c17ad6a393de9fa59c03d471a242c65aad12ae36e5fb8f0ea9f457e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D13_I_nat_0022",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D13_Apple_iPad2/images/nat/D13_I_nat_0022.jpg",
+      "image_sha256": "66f00656944b80e2193b99d5c12e2143a996e25ca300d875c5bc3d856a3122dc",
+      "request_sha256": "e52364d2d2505037dbbfb7c0e0a38400b4ee09d65d7797dc67f8b1fb762a3040",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-229",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "37357252d932a775bdc1f263523dca6ae2be5c72e18420b3e322eef76fc41d63",
+      "request_sha256": "ac3cca807a1ecfada3ddcf93a7319afbd165d91b9d71635942c023713e70f512",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r113ee9edt",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "048496f9abb131f66b0bb216d897ec5ec07913987ceba446c14b853361caad5a",
+      "request_sha256": "3c02bc3e335f732f96da736974e5af13ce5d0c8b84ab1ffeb044fb7657b1cf34",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D01_I_nat_0043",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D01_Samsung_GalaxyS3Mini/images/nat/D01_I_nat_0043.jpg",
+      "image_sha256": "2cd677ce429302cba226eb63525ad078e1adc9797da0988fda1fb1ddfa682bb1",
+      "request_sha256": "8868f08ff70ea022482957034e5acea679831ee44debb050f472d006cd22c3b6",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D15_I_nat_0085",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D15_Apple_iPhone6/images/nat/D15_I_nat_0085.jpg",
+      "image_sha256": "1501b22b4e01ef993ebf12c158db91ca53e6906276132fbadbfcee5cf96f5247",
+      "request_sha256": "255f98c49a22a0a21d8727a6dcf2178b54c18514c22b85ff5cccb5047dfb5345",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D33_I_nat_0025",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D33_Huawei_Ascend/images/nat/D33_I_nat_0025.jpg",
+      "image_sha256": "c06acba08836651c42ba573a9d2f907d50e87527b677a14c25fb37c75fdaa771",
+      "request_sha256": "136b38c028cf9d794a12ce36c9c298d01763fda52557b8c20f3ad904fc9c2ddc",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r092b4511t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "acb3afc2c9a83e5214273afc6e71e5d136d5db07c245840f5b798b19cd78fc41",
+      "request_sha256": "31ba4ee28ef2e920ea27d94149b5f4530a0af259a21b325fbab69f3f7e4c1fe3",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D04_I_nat_0186",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D04_LG_D290/images/nat/D04_I_nat_0186.jpg",
+      "image_sha256": "897569cda747b0669099aa3545b2000b9c516d9f1849c51b1398e5fdc9acc925",
+      "request_sha256": "23634806b4a33e9b29d34c8788cd3f0410687bdf407fc54ca830e1e89bab2fc8",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D04_I_nat_0197",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D04_LG_D290/images/nat/D04_I_nat_0197.jpg",
+      "image_sha256": "2b6d97f89d71d186cbaee27bb174668938fb1f33f03e3711801cd86f7ed2e898",
+      "request_sha256": "534ff1fa5f4104c32f8153a82a550316ddd2738ae4f2e251e2f3e70091b5c27a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-273",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "264dc5c5a6fa655dcfeeec04711208c9598f4f76a98bd585c15448680592b418",
+      "request_sha256": "995c9b13d7c15cd40a2c942e4e449a68db4bd7aab6a609264919c0dcf5d3c50e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r038422cft",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "86117eb2c74d85d82e0d0746f43a8b8abf69259e7287e865f9d9b1ae98aea950",
+      "request_sha256": "acfbc39b6a8bdd45b3bf447e0cb7f79fbae7d8d074a8b2dda29c0385d8dbd933",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r16ea6386t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "dd03dfef6367bd1283f8a100fe5c532c278ad1167fbae9833c1711d0532a6f4a",
+      "request_sha256": "4e6c6e4473eca8304beb81a7625283b6dbe3a1774df6cf0796bb5b26a9a8eceb",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-162",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "a0596552bbe01091a89e72684ffcb312590649019008c9ed7724c6c7b6aa0ff8",
+      "request_sha256": "b83cc131180c26a5c39ecc7a50e258b3a12064a55a14d62e4c8e23ce6c93882b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r14a595b6t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "848769e0f07097699363ec1de71645e6dbd5efe4be84021ce962bed1fe5e8cfe",
+      "request_sha256": "595739ed555edf12138b5b514f9afd1af01a1953409bf50c9d334fe9bcdeebcf",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-007",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "8e7ebb74d6b0f87f142da420746b413d8a2fde87d6f0b3958294357dad5ee507",
+      "request_sha256": "622acb95433c3a2ff3e7988b4433f31000df99c34b649fd143262d6a80fa0112",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r092b4511t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "64980d67866cc5a1d03ddc9ee2c5ab16f7e3c3d277ca0634abebf0406d81f43f",
+      "request_sha256": "a05d784fffa6b9f50a1b79921d545514a26ab815b8e7077ce43b9e199bca3ae3",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-348",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "1c8069b45a4c872bb7a0abb56f5d672aacd58077e13de9cfefdb7f3d6d86c836",
+      "request_sha256": "e2bbec607842a0e38b26442383d06024bc4268deb640f6f87096942e167dca6d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D15_I_nat_0204",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D15_Apple_iPhone6/images/nat/D15_I_nat_0204.jpg",
+      "image_sha256": "c90db9a52cae5880fc5e2e3032656464606823da3b7cb686934b79ae080311bc",
+      "request_sha256": "94d7366036fd44dedf2f436a404bef1e007794b98ca9c3cf62f16c40417ba157",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D01_I_nat_0107",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D01_Samsung_GalaxyS3Mini/images/nat/D01_I_nat_0107.jpg",
+      "image_sha256": "d34cc7c1a29cdff6b64fbb898ec0e1e27d04a1f007e4e1f4a78bf23b29dc4d99",
+      "request_sha256": "76f662d59c1e1157e69bd76fb27b85f8acc5d7e59cae1235a782bb18497ecbf6",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-061",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "c5bcdeb25706db207016973e06361f62724296e666d19280f3195ec898294450",
+      "request_sha256": "0a21bad01883cd7ae7f039ad4ba1fb34bb748b7e7cdebd36bb2812c9ea623fde",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r0985dc6ct",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "19646d28b201f6fb4cef857906acf89424211ce4a57caa3a793393a7f3a0fa8c",
+      "request_sha256": "e1d133106aa22439903035a0509ce4ab4e2f5a411669d1c8eedfe3d613214fa5",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D01_I_nat_0183",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D01_Samsung_GalaxyS3Mini/images/nat/D01_I_nat_0183.jpg",
+      "image_sha256": "7c4aa5690ae884a7d429c920b31a36fc630b9b8e407e9c745c4df92abd9dc30d",
+      "request_sha256": "6fc87413b5e9fac1cca91bc08c20aa5f1a8f502688fde53b2fab8cfb7661838a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r09696ba3t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "c0332cf342c6c5f1c65637eda06df21d411b3b85addc5b636df69575478124e2",
+      "request_sha256": "99476f53f20cade0daf9405b0e6950899b53dd5c86162623ad7eaba504b87572",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r18fafe10t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "716d8a3c61f2cfc811e1acdca609d9aa730507f08162a28b97957cd8afcd3c74",
+      "request_sha256": "a822c841d8fb99a6884345b9570ea09185b3707a76aa3ed82e7c507dace86a88",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r0465565ct",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "b42e258111e9cf6b2b63d5f310ae5037d63a21c6db0b5420ae3e08fb399354b5",
+      "request_sha256": "1345bbc3be70b49229ba09386c7ddbfbf7dc649c4f450752de0b7c5a873914dd",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r14a595b6t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "69a18291d1421230b46bfe52b8bd1af97c83650fa1f4f3e6bab72c560f8d7797",
+      "request_sha256": "e9c6e21864dedeac07796ab3a313619b61fb01642fb05e00efd7480c6f71065a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D21_I_nat_0041",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D21_Wiko_Ridge4G/images/nat/D21_I_nat_0041.jpg",
+      "image_sha256": "d3326ebded8f01cd61e2e3d1ba6439694f176b35443015983b1f54b495251bd7",
+      "request_sha256": "ee39cc1355bb21c32fc029d19358ab6b0137936b50ac07bc9d6ee4dc127db9ca",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-066",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "7bf5b90ab39d00d61bbfb6afdedd1551ffb7fbada21feba367845d931989c280",
+      "request_sha256": "b720fe0441b18af1b39585f412c65f69a8400948ec55a3c7d14c8476fe00fe00",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r16ea6386t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "a0b763c931407fcdf5899166ab99f1003ae4227bfa940dbb20584e20d2737d1e",
+      "request_sha256": "83f92a148dd86b18615c78145f6d602137b35977ad5b68f8a5c665837a14c768",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-088",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "295308c852c0fb0e5e90b9d54605bc27b29fffd802d6fca917e6e088398769da",
+      "request_sha256": "176e5b67be79afe90f0921cac619c9c350d08a6f22498395e97394fb2e2465fa",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-167",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "9eb238f55e682cf63db60f604ad36ae8d61e3fdb1672d05aad5631d91b9835c4",
+      "request_sha256": "344d2edb948ae964448f3b7fd04400c1fbb8cc0717cc74b01bbb4c09ae12081e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r01a5f38at",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "74dff0eb052404ece2c8ac3c1bcf50a236d3546d3a030a828b8adbac0034660d",
+      "request_sha256": "f86e7a017f1c8523fdc4eb53de72b0d4261eecd19c5626d0bfc74b8c4f13d12b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-039",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "ea146737a7215b56da7bd8a605958c1787242deaddb48d48d66295472ebe7f44",
+      "request_sha256": "da98c9c0e4550a68e57fbe4d5302e197ea099edc020cf42611ee998b2f775754",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-238",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "f28c970cbde31d72d3b43ee70ed911d58aece3447280f9aa10a20854e2c7261d",
+      "request_sha256": "2c9399d09810047050242e3900407140316d7fab2087906948259b429028ca86",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D33_I_nat_0102",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D33_Huawei_Ascend/images/nat/D33_I_nat_0102.jpg",
+      "image_sha256": "3e1aa5787ec7109ffa1f8da1eead9612f9c027969eac28904dc0273bc1782e9f",
+      "request_sha256": "8aed856c15fbef97642c0c674532733bbdda776e836582681363c26d5c19ebf1",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-163",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "ba4bfa773f81bea1ab6742ab2682b451307a1903f7f855a19104305aee57a6e0",
+      "request_sha256": "7945b2d6163b8f6c4fcde9e0e90fa8e368161f416ddee34b401acc4a2e7726f8",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D21_I_nat_0211",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D21_Wiko_Ridge4G/images/nat/D21_I_nat_0211.jpg",
+      "image_sha256": "ab771dda98cccc43b91c2e99aca1747c6c1309f5a347e7ef4aaec3caaa4c3ece",
+      "request_sha256": "52584f116ea667b6d586d72fcf0e43748fd005baf5bf3ae8c25c52994210134d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-042",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "06850441d81de6fc68ab242cac9fd5584f9a9ed98033e53b377a8294c93e30a2",
+      "request_sha256": "e8508e62d31b9bf99a309debcbc7306d1e0761deb9674202d0d105bbd25bbed5",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-058",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "7f0f2b0f9782e0f60d5865e5c8015d0fdaa0ec6726795784b96f0b0128856e7e",
+      "request_sha256": "1fb00607dbe1881f505fda00779db26a88c4aa969bca200557c5df5553718873",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r14556dabt",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "d4599637717b28e03079d726469698d61df8b27af8c43d8345b06cbbbcd70f0b",
+      "request_sha256": "7086d833827499073d0d64123113d12fdc29bad67f1993698bacaa8a288b2663",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-107",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "886702be4eec9cb66e1a4e603ab06ad39b69d9d411b08105e936cd4ebe9dd37e",
+      "request_sha256": "318589606f0354c5728aaad93978a6f15cff74696de8a81e6e8fd49b36d16ad3",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-033",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "92a7a75fe48d06edbe96d01be87b51fa3dce937a096cb9ea9d43eae764c71315",
+      "request_sha256": "fabc915bd23c72d2fc8739bb90754eedd652f60519e48addac5f575301af4239",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-164",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "0e102b0bf1615e298bbae082d8db0f3cc2b8b8759e9f08c4fc22a42f8a0b5e93",
+      "request_sha256": "18e4caf950b95f69d25496d92ba4a8c6bc93187d70f5784b5a8f2c039c5c0984",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D08_I_nat_0135",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D08_Samsung_GalaxyTab3/images/nat/D08_I_nat_0135.jpg",
+      "image_sha256": "60bb86719948d46897325da01eceb5a890304f18e76b2cd0042b856e9653ac4b",
+      "request_sha256": "127fa499ffdce266934835e9e18483d8b10c87cd5d98718d4dd9ff43263c58ab",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D31_I_nat_0019",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D31_Samsung_GalaxyS4Mini/images/nat/D31_I_nat_0019.jpg",
+      "image_sha256": "4569b5505b07bde6426f7a2ab990fe820860c5d132af34de8868cb815a1197a6",
+      "request_sha256": "9df2c2dc6ecb683908cdc5f0f58a7d32df9264cc0d3b2b754df8334a8d893b7d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r092b4511t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "4445ca609d8aebf2b8fd1ff30f5be41514a4284f37a987ebaa8052dccd13b084",
+      "request_sha256": "4868ed4ee0b24e8c7fe1135188119d0c4fc5787d2d153b537cf83dbcc5f2bf2d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-026",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "eca87ad99d6d3e30fd779c7eee446d9b3f9bc2655d021b4db1a082c536bc92c5",
+      "request_sha256": "e6948a9431deb1d042cdbfd3a4e292e422d79d36bb8814668fa1064c86aa4385",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D15_I_nat_0063",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D15_Apple_iPhone6/images/nat/D15_I_nat_0063.jpg",
+      "image_sha256": "3407dc2b19c2d1be19561ec69e312a6189004f9c360aa161f89d6ef2e0e93cc6",
+      "request_sha256": "97cfe251299c7cee1b556ab12c5de217910719a312c2b0a55346669cd8d882bb",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-192",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "f6edc9a8464592b2a2f8eac462176568d6a44382c969a9ae5c2920eda94841b5",
+      "request_sha256": "3487bfe0dbcec1e92e43b841da556cc75932ba12fffc1b91cd540b871acbf7bf",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r113ee9edt",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "cc2878e51921c0f18edea0966e382385b7d12b1e2a19ae0ac1027f3e25f283db",
+      "request_sha256": "db290ea6cba3b76788d7f9154df70773c03ee61a8f8840bc57535cc33eb45920",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D21_I_nat_0095",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D21_Wiko_Ridge4G/images/nat/D21_I_nat_0095.jpg",
+      "image_sha256": "8dc84021ba37731e65b8e85e7a44347e691a9b4f47bdb7ce1fe5fcce469f261c",
+      "request_sha256": "efc8d8d537778c8bccd75a8eb7b823e8ab9d17b843610f92303dcfc2743c23a6",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D15_I_nat_0070",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D15_Apple_iPhone6/images/nat/D15_I_nat_0070.jpg",
+      "image_sha256": "2a8a0cbcaf85b19604c909049ad789854ef0bc62133f94d3974cff367e8774ed",
+      "request_sha256": "c1539c0d105170f90c0bc1d971225dfdb8610d7d5a6b0d6a6372b9980f538978",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D31_I_nat_0054",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D31_Samsung_GalaxyS4Mini/images/nat/D31_I_nat_0054.jpg",
+      "image_sha256": "80171843d87365fed867e60fe9636b6ba5d408e332fd2d93ce8ef52456b20a85",
+      "request_sha256": "ee96ffb6c17e67c5134e712614fac43176414d50273cd86dec411e72d08367a9",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-067",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "b0f35aac52c17123ae1a88d920542fbd9a3f3368bb900f9fa2fd2f2c877c7ef2",
+      "request_sha256": "ab982f3b2bb63824a11fec56bb4307cd4b26e355ae8eb203740c26be8484650f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-325",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "eb29d9533f393dee000daf53a3c85ee95d53605b235f04622c2e53e19260a122",
+      "request_sha256": "0deabcdc8eae9af3fbebaaebe2b1c7d4576cbc586660a5daaf91717fd33506da",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D01_I_nat_0162",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D01_Samsung_GalaxyS3Mini/images/nat/D01_I_nat_0162.jpg",
+      "image_sha256": "d38d74bc79f59389b97888cc3632edd1815395566c24b591b85eb233d0c435bf",
+      "request_sha256": "1122c00758b3c86230a1e25c2b126e978e748488c641f37c6f2bc48a2d68e8fe",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-277",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "ca3980ed1743576bdaf174751c5e7e3d127646137741dd3465d86758bcee6843",
+      "request_sha256": "273d766e0538c70cb513bc24084bd1e4ee8cd5fd3943b818e2db67029a1b099f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-281",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "b75f5c48b370266993d3cc6299a1856278b56b42b06c2804e27e4216d9503a34",
+      "request_sha256": "60b7481d8e657a4d71a0659e1d32b4aeb9c1fa65be48087ea736df401b21ba77",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r14a595b6t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "ddd441544b235771820e41d6cfe2bc9baaf09bd8d49d8f85dbd36d9eda7fbade",
+      "request_sha256": "163d55b10fed312180f1ec30fdf1d342450bdc1b088626a26ea067e4f18b5c25",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-069",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "7e9aa9178e50b782734864ec21a415cf436d861bd9e72e988a5b6cab6401f1a2",
+      "request_sha256": "539a7ed7ea7dc851f167768c1ab9f00e226d7a2745d613eb3201eeab28818461",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D20_I_nat_0023",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D20_Apple_iPadMini/images/nat/D20_I_nat_0023.jpg",
+      "image_sha256": "3c7fd95d43c26e03ec89f745c92a2f627836edd9ed8e1e629d21337cec5cab83",
+      "request_sha256": "e30be161118593778c6991555a40a53f3edebe22b77c50608b551f7ffee8bc60",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D31_I_nat_0212",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D31_Samsung_GalaxyS4Mini/images/nat/D31_I_nat_0212.jpg",
+      "image_sha256": "bcedd52a44bb14a8158e5b3868675110a94c36b661176ec1d13951d508e5e54e",
+      "request_sha256": "f065ac31415c3ba3ba40adb10edb3bb94d9af1ec94e1e912d635edf75d591a21",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D12_I_nat_0141",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D12_Sony_XperiaZ1Compact/images/nat/D12_I_nat_0141.jpg",
+      "image_sha256": "36343f94f16871d8b530a601d934ca2b44f33c41da93256d1f19bbc9fd5f705a",
+      "request_sha256": "ddbd4f16b878c77845bc64813f679e1ebd869e77b53b9733b4a90a077921f793",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D13_I_nat_0115",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D13_Apple_iPad2/images/nat/D13_I_nat_0115.jpg",
+      "image_sha256": "947d770bf684c8cf5966431c90ce74000f38294c03f372a15550883526f05001",
+      "request_sha256": "35920ea464f92b8aff54cbe687005d20e73f03b821982c75c5fd96c984993e9b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-153",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "1b372afcde975d50b1b5f0ab0efb98348fb56406ea10c6f8b10f700b26a60187",
+      "request_sha256": "b9db5681eaea6aa217a25489ea164ff92a91a53b20c618210c61ccba6c847cfa",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-086",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "1f5c04af8d6d55953ea87460706c486f0a29b184479dcd5ed1a47859d0ab5726",
+      "request_sha256": "6e25ae1a4ed79b2e468a73d8e701abe4029d30c97104a36fb2ac4ccceba47abe",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D31_I_nat_0024",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D31_Samsung_GalaxyS4Mini/images/nat/D31_I_nat_0024.jpg",
+      "image_sha256": "0f57a7359c07a94509b9d3a3bcaa21ba44e2ee7688b8295757fdbe5793883824",
+      "request_sha256": "775216ec63a9fd56ad7d53dc1bf47cdd2bdb159465738fddab8a4be590a987eb",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r087a13a6t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "88da2ec05fe6419bc7e0a73b9db56e70e445ae4c6a41c6f7bd6e39f70f939113",
+      "request_sha256": "693a444e30fad83b1864ba471b289bf279de7dda3498409f77371ef9919318e5",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r1df374c1t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "dc999e711179325ba0e97b77366d09de773b0c51311c62f0647e7d1dcc470419",
+      "request_sha256": "95a58b60c34473ee480b0e32bcccb09f69c6c8594fa2f1b0df5c29b63a997e02",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D21_I_nat_0188",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D21_Wiko_Ridge4G/images/nat/D21_I_nat_0188.jpg",
+      "image_sha256": "2ffb693f9853f337dd1cea29f4effa9ec6470e5d5ca49fa731749d4b614b16c8",
+      "request_sha256": "873773ba55fa59aea85225f638aa6c760c49024a4697c8bce71ad65745b89ca7",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-279",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "517d8020063380e4a4e13cf81b093ef379c612f43e788ae6d4bfa19ded82b8cb",
+      "request_sha256": "b1ae2938a7ba2339f54d7f28d76e734d575e8ae87fb651d267c19943d9c88a1e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-152",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "2ef7e42935657470b0ebb7db2fb238bed0ee7f7098b38cb4954376adef37192e",
+      "request_sha256": "47c6beef59e1a6561e303026e2ddd8ea68759650a5ae8b07da3cb193e2cfcc48",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r0487f5cet",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "c96543185af01debda0f9bc19d805a4fd7b67d9334fe2d6ce959867128a40900",
+      "request_sha256": "2fca01cd4e1ea571f77b9f9b6f9863843142f8c6ad41685e435f52adff24323c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D04_I_nat_0174",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D04_LG_D290/images/nat/D04_I_nat_0174.jpg",
+      "image_sha256": "7c17bb4ce70f1b6c11b8dcc73f73fbe6106f9d42864ae3eaa957571ab1cb3d37",
+      "request_sha256": "32da8390eb661a4486c09d1814a17e4531911d71219e069ab9fe81f1a088f1eb",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r1dea56e5t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "3c05d6fd578e95d59a2997f9908aca933eed8b8ba296336990d1339542348494",
+      "request_sha256": "c1a23168012e87667e9e7f616b3f5283e3594214b30b4ccf5b928912cdc428fe",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r0985dc6ct",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "eeba27fadf19983655932a8809b8ffff39100594f59c00418ce4143cc9fef9b8",
+      "request_sha256": "8a5a1ff6a05b9f6478c29e2fe44ed1fb0cd30ea26ab770d805bf7f92f6183b0c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-142",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "bc0ab01163a23f9b66ab60419dd2e004e2ab412eff2840f05d8647cc553a676a",
+      "request_sha256": "6660c35422ea4e3bb32e5b8adda6f0febdb5043b5f7c9089bdc42c7c8138d656",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D33_I_nat_0100",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D33_Huawei_Ascend/images/nat/D33_I_nat_0100.jpg",
+      "image_sha256": "d1bca575dfa7e70f4a4566a7ba8e1142930fb36c496014dec1a266d3e3b1387a",
+      "request_sha256": "2bcd2f24bbb0796f8064ef13118c6f5fe4650e15b2ef86670e94861f2099162f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r01a5f38at",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "92455019b4f5c45bfb0fff3c475b090ab17d168f63eee0c84ee10522f3582117",
+      "request_sha256": "bbf9be25dc838d3b11eb24b81dfa689ed30fe4f71966ea21423ab665c35b0297",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D31_I_nat_0214",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D31_Samsung_GalaxyS4Mini/images/nat/D31_I_nat_0214.jpg",
+      "image_sha256": "703da00053ff04a0fad1435f3388e9fa20fa261e11dd2e0e1933e013ef9b03a3",
+      "request_sha256": "e5d60fa110200b079b93a9ddca6a2ecca12a28aaa4ca8120ff134de2b243ca40",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r0465565ct",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "0c9eb589ab80946503a3c8500fa539e03e84577610a6b3e1e9d768fe3f2a099b",
+      "request_sha256": "b4bb82776e19fa6ba5fcd6a152e996f1a60779f4e92732ecbbea48edafe4ac52",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D08_I_nat_0084",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D08_Samsung_GalaxyTab3/images/nat/D08_I_nat_0084.jpg",
+      "image_sha256": "3d76f6252c67e101f29c0a33decf43913b4e1377389f6e1d97f34db2fe645f4a",
+      "request_sha256": "b5daf60d66672297d637d69ab7317b7cb211bb83257cf69677522c42be19f390",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D20_I_nat_0102",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D20_Apple_iPadMini/images/nat/D20_I_nat_0102.jpg",
+      "image_sha256": "79fb43b9367321e9f4c598a632a4a3c7502782d6dc5fac5be5c50016173597aa",
+      "request_sha256": "08a230b4f909cb73baefaccbc9d1316d99f952d2d24e2790cdd41aa67ea234aa",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r065a0da9t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "50908b243abaa0733f71999a7feac043dabaf7760abd8a28982e990bf1de8bb0",
+      "request_sha256": "996a0ae629515dfe993556df2f8f81be68a06b21ceec207dfd270055c686f35a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r1db5be20t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "4b22a3cfa0160241552f894a52513725714cf0b5604d0224b8cdb2f641ef2c0d",
+      "request_sha256": "676fa5fdcba7edbbaceb39c6b697bdea740bcf2ce671eafcb64d506e9d07c5e6",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-194",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "033a627613bd76df1c9e701084927f594f11d4d63aee77e89b33021b10623eff",
+      "request_sha256": "aaf22d95fd2a3fd171f3d490e8bfdaa66ae053f0afc0b2a7bb8b4648cb4d42d5",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r18fafe10t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "d4b69d8f46b6af83f88a7c00f15f0007643f69d445e55a3078a230d29aa974db",
+      "request_sha256": "f8d469f7d6af527fe79ac1a9de8b84123e68455c10feed21a1afe56283b3196d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r1df374c1t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "82f0a943258ddb74f8a7dde9f7b6d3f7b5085a9927ae48a8a50b30e5842a3591",
+      "request_sha256": "cc2ec54df067e4dace41f517b85027a0e6c5eb1eae64a7be90fd6177a9923485",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D13_I_nat_0095",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D13_Apple_iPad2/images/nat/D13_I_nat_0095.jpg",
+      "image_sha256": "f497eec0cb4b974edf18f9c5948f6a5b86f60f01279e35456ce658ebe4c861e2",
+      "request_sha256": "dfb0841360b1af00de7e39d1e37be38b0f4219f7ee108f108055d11e849bd79a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-027",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "8f5c57f4528186716916d440ae2bc66c8880a7ba6a15d8ac9abee1a04eab383b",
+      "request_sha256": "fefe59baf0125f8e4d1de4e58e7a63db00661d3fe8f4a1671e1fb40972b09bbf",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r027a692ft",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "692f707882b043b94eeb097f7905c33f9c4ba3c6a9f3832055b04935dd311340",
+      "request_sha256": "e5558d9b565c56ebf444e18cc6cf5c3ee16fda59aad3e218e7ae2a5816a974c5",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D15_I_nat_0027",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D15_Apple_iPhone6/images/nat/D15_I_nat_0027.jpg",
+      "image_sha256": "7c72fb7a0e50434659e0338883141ed971263dedbb965c63f6326aef095b214e",
+      "request_sha256": "5be23283ed3dcdda636f8a2a2557e5cb299f0b7aa87615c96b183c2b4f7e2fb8",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r113ee9edt",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "43bde23322497d1ea4711313880b491816a5ecb5b249b36aebc2a98b10ac79e7",
+      "request_sha256": "06b582a86171267f1202198cc5bc1995021e32a8cfdc4ee188a7db84f5c13dca",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-151",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "0f77e7cbb8638b914a12b3e3c931f6e553b9b959b57eb32fabbf55d71c85138d",
+      "request_sha256": "53e930044382845ca64d8bfa523f142614c1092715a4d2b6f6ab0e023689931f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r14a595b6t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "1e76fa6a98eeb0f02f34368ca081425ed48798bdcdce4708aab1c2091962a666",
+      "request_sha256": "4667db5a5e9656b2407b87ec1f8738fb2a271e72f573ee29ff5f8882c88adbb3",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D12_I_nat_0183",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D12_Sony_XperiaZ1Compact/images/nat/D12_I_nat_0183.jpg",
+      "image_sha256": "cb759433bbf020d08af4be4ed33d7c2bdb1a70eb0925826596a57af6d722ea48",
+      "request_sha256": "06c7889d879e762b55ccad9861eaaefb377fa76f36929ad4d2d250ba88e3116e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-294",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "69182af6ae8d2aca955de995d92a254c3debe60c512daf54a441e47979f866ed",
+      "request_sha256": "019cbc8f33ec97f9073b3006356ac721ff573b6490d25ff6afd2647ed2f75b62",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-330",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "fa786a75534ae5adc81e2eb5686b816e867444cbbc5e8a4fc3dac4e238514fd7",
+      "request_sha256": "28e5f04293065b0276a423ada3797b70e91f2aae034383751b58b8c6431727e2",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D15_I_nat_0141",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D15_Apple_iPhone6/images/nat/D15_I_nat_0141.jpg",
+      "image_sha256": "f9a13cd49906a541e8e7b4cfe11ad6363c227c2ed0e10f3bd4776df0adc09c68",
+      "request_sha256": "afa9d2c3d7fa3c6b29f64f3a758e9569e1b0a0b73921891d2e8308b8ad4c48be",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-096",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "8d3644443cb7ebd3321b09aedb7e1c38876974985d10613b6d62a634d6148273",
+      "request_sha256": "fe0311d378d709f87f8ffd1bd48a99e88960595a33a2f4a51cff506014df9d01",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D08_I_nat_0059",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D08_Samsung_GalaxyTab3/images/nat/D08_I_nat_0059.jpg",
+      "image_sha256": "51baeda046297a9c49d3d4c54fb8e32209dca77bad2d1dc36c3d1100ac3d6d77",
+      "request_sha256": "59474b657714910fa7eef099ec0f19de822eaa788042a7e3f06bf06947fd4c0b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r14556dabt",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "111f609dae4b3217d0a217a909adaa1c8b5a7f2d7fa473f7f0b16bd2b22143cc",
+      "request_sha256": "bd00c030a37e8b51f4cf8a7e59a72a8421b0f817e22d038a82b510b861981013",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-309",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "4bf8ec5b031130af38c45c5708b50f3e066c87722cf4d572165994b6c2905ab4",
+      "request_sha256": "dd77eaffa35327d08a8dd7cf1cdb28f602792587d3f75ebf24c545e3390c9f55",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-081",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "ae99f9ab6a59ac0433d2c2ab86d7654f204dd8fac392d2263c602f23dcc8bb40",
+      "request_sha256": "238eb3d5829f792da91ec6edd83a261f88ff5e3c37a26650791132c33d46009d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D08_I_nat_0021",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D08_Samsung_GalaxyTab3/images/nat/D08_I_nat_0021.jpg",
+      "image_sha256": "5cfeaf217e67f83e6de50998a58775245b1384a6bbd21cf2bb4119f2468a6b79",
+      "request_sha256": "43dafd46b37b895f108bbcb4fee48626660abb59b01ee75b852c143b7b1263bb",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r0985dc6ct",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "0eeb643142f0f0704c6e22590d139bf11849a0b4fe070b01e57a2707422f59c5",
+      "request_sha256": "825dcaa008f16bbc5a001c9a492a6ec0aad469546a5905f42d4b28dc8364a35e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r0985dc6ct",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "7034d4d8944219e183bf2145ae792c7355ef4ce3503469dcde8f3e8e234e21c5",
+      "request_sha256": "99cf721eb211c0dc7f637f53e87769341d345d8759c0ee80a2f6a2ecbbd26933",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r09696ba3t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "86e50cd858a59012f9d4044ffb446ad2721da4ea75abfdcf5464af4b7ee37a09",
+      "request_sha256": "bbfe7b2d5e348c1e2202ddd95ac6d661b987eb1b02ed697ab661fb9480e222fe",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D12_I_nat_0137",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D12_Sony_XperiaZ1Compact/images/nat/D12_I_nat_0137.jpg",
+      "image_sha256": "cd233b8358a721d3fd2aa39e00ff0ef85a37d99ce081d6e4c05ec1a3e7c795be",
+      "request_sha256": "7fb586be426268a08340831660717681e31e8393285c9a006056c4239930ed18",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r14556dabt",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "879e05afb3a2ee8df7a9dab9c2d336891e4fe012b0e67788e40595e781289b32",
+      "request_sha256": "1a1f563a87151e6e5ecf6af548d35dc2f224640471fb0e49dbc11713d51819ab",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D04_I_nat_0146",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D04_LG_D290/images/nat/D04_I_nat_0146.jpg",
+      "image_sha256": "7378e1ef0ac56114bb96ab1ffd14160796a7bf78af56182ebe15786a84dbf2ad",
+      "request_sha256": "6395a2a1659b443c1b490ca61a2c65ee4467b0936e9b6bb174e8de172c81210f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-034",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "889b0923f2c469dd5d36e12ca019b054e7b87e6b7f9a038aa56bfff03c3c9b3e",
+      "request_sha256": "397c392bfbc0988e0f19b93bce9510834d250b2e59419d698c557b0f3d72b77b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D12_I_nat_0200",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D12_Sony_XperiaZ1Compact/images/nat/D12_I_nat_0200.jpg",
+      "image_sha256": "1dcace30ac64437fa6aaac0a3a42595d4b61226fce2c1554102fa8cbeda9800f",
+      "request_sha256": "4155bfcbeccf41cf6a32fc633b3fd2aff8de2650da0318f2e7174b0d94135b88",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r1df374c1t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "3f978247b6149bcd0ed69097c448409e8065bd559a4e0789fa98514516a1cbd3",
+      "request_sha256": "5f6e251aaade69e5db6e215ab331ec820ce8dd50371d428aff2ff8a07872064c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r09696ba3t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "b125b35b8e9238a79deb7b85eaca1cb35d706141acbdecbdeabc9776fd080b02",
+      "request_sha256": "59159a9b5778b6e68be2ac1a10b6107f95b75b9ba5d28dec04f5ea4fb44cadaf",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-019",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "5cfc96077417878fe8585a57283e98b21b1933791d302bd1bffd10aeaa44ee8c",
+      "request_sha256": "888cb1655868cd98b918a12c1a38f7f25918f5990eb67499844269659eb4093e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D33_I_nat_0107",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D33_Huawei_Ascend/images/nat/D33_I_nat_0107.jpg",
+      "image_sha256": "d3dc672caffa364fff8372fe930136305ffc42cec5ff8e8830a0ee5a383bd957",
+      "request_sha256": "3a88007bc947016c87e8d72463027b4feb4b862ce6964b33afb5a2634c23d1f0",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r00444b95t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "e21a14af9101edec25229ac0c8a06c1e03c129b6f3d9cc5fc4b3d380b53986b9",
+      "request_sha256": "999bf29ce22ea7aaa00b272ed731b9f75999f430fa229d227e3f6b87d5dc28f7",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-187",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "c30f2c5ab5b405d21eaf8d1ef7d7f72fecac834e2f93d56c65ff75061e390c3e",
+      "request_sha256": "29d7411e09df2808f644d955f395286e94fa60f7e5be074339a66cea7cb16319",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-006",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "73cdaadce20f8316b08d52f10bbb24c775e50d8b4d3da59ff6f5a07007a6ff17",
+      "request_sha256": "57686bf4f9dde6a62b68ba0edb5c3f9d7c66acd49928e46b71e78f2697eb1d80",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r0465565ct",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "50d362308a1aeb691081c8094b258076db82c333330aa12169813887b33902d5",
+      "request_sha256": "ce8b35389698722239dbba85930b49611a2847bf36bf23d010fa1de205f9f2a9",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-035",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "b118511e4959c5ce2e851923c410beac55316b5e660ed9761a805d660f79c89e",
+      "request_sha256": "1c0a8450bd1337bb6f95e2f4b323b792cf990a9311e54e9d577eca2a7872559c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r1db5be20t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "132acb50b08dd02a11269e137079f47b1ba5065f74b417ead49c05174d1415c4",
+      "request_sha256": "2e5f7ff96094a0eb24bd65bbd980891e682ae3381dae2198cc1386efed0f1257",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r09696ba3t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "3ae741e810bbd98e60cb8dd9ef147fa8f28b683549a4a5f3aabba868b82f3d5e",
+      "request_sha256": "41a09a15d4787c950f964dcdecda2c38de5d61a17bdfd8252578e2794915f225",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-256",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "9d61b7313bdbd7b9fa44b35e503e21335b985aab4c68ab9ad5fc30956c6ed2d0",
+      "request_sha256": "734a48f618ba0ca9586e2a244a754ec7f864a910077f808fd5c8b8756e09e913",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-206",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "dd3cbe1d966befc9fe7b65f0f8e770dbef2f3d359c4592ca64ea7f858556049f",
+      "request_sha256": "d9d1c28f4dec356dbcb6d0af1cbd96a569f956ef220989392616451198080376",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-106",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "595d67ed841c33a0f22f4a4fdff8415670774efc32901d25d383c0a276e3e9de",
+      "request_sha256": "b3a778970a5fecf7f35cd4b6deb65a27d8d77e1c29ad5e5a151cb2a463b58968",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r027a692ft",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "0a5f5fcf2b127b87cc22ac68bc1f7355346b5138acb996b41ea147908d14b52f",
+      "request_sha256": "0b94c8272f66b197009fae8407f07d918e22a80f83488b60c7d08749bd1b39ef",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D21_I_nat_0096",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D21_Wiko_Ridge4G/images/nat/D21_I_nat_0096.jpg",
+      "image_sha256": "1418ba51cccc24912496f3673420aae99dc72f62d4dcc0722dadba5902d5d1d1",
+      "request_sha256": "58b9e48587de619644c34ee7021c82566538a2e8ecd5595bd4e199e4d8242ec4",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D13_I_nat_0090",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D13_Apple_iPad2/images/nat/D13_I_nat_0090.jpg",
+      "image_sha256": "00f3b1e8594deaf0b8f08831ba8b95b4fd300122b96f5b9f5324755e23bf3250",
+      "request_sha256": "9422b1e0e20f0ac41c156b7e29c6d68238bf848e8b44be2117c7d4c058a7ff5b",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D13_I_nat_0059",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D13_Apple_iPad2/images/nat/D13_I_nat_0059.jpg",
+      "image_sha256": "a9115196230dea68e867cbf725eb7f678d4b26247e353e756e838f31a98ec66c",
+      "request_sha256": "b2ba4ad528bc8480cad0c545e9af0afec5513b501698bba95c14010fe9d44f45",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-036",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "ef161f627147a1352ffbe4ad3bebae2f5459e8657449e799c4bafc36da6b7909",
+      "request_sha256": "1a37b5fd632791396f5bba1d9a66af0dfd66ed84d7e1ec83ca8a0658268f4233",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r0487f5cet",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "0ba6ebe388fb9cefc8ea31a4fe36a46bbe7eb058760086616fe63728f38eccec",
+      "request_sha256": "ddcd8e7a78acbd79594a44b824d569b03ffbc408ac03fc623235eb227b1f81e1",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D20_I_nat_0026",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D20_Apple_iPadMini/images/nat/D20_I_nat_0026.jpg",
+      "image_sha256": "190e529fc09ff32422fc0e692c00bc14201a628a177f01bab7f2ba4614f4fe8e",
+      "request_sha256": "120e30a26b9dd91808620ea6d30780fd7eefce7a32d7fdde4e756bcde6e23109",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D20_I_nat_0045",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D20_Apple_iPadMini/images/nat/D20_I_nat_0045.jpg",
+      "image_sha256": "7c75411000058b85d2e9d19ee90631d64e01589beea66a56493965c784acc36f",
+      "request_sha256": "114ff19f4967990ed5ad7182df2af539e919f1f9a696f1c7ba302c38129519bf",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r038422cft",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "f12b27a0ec3c532593d4a13587adc0e3633cafc965c916ba0405aa951c72fb00",
+      "request_sha256": "01b9a95a48a3d984ba3abaf70a16545d7a486ce1f6aa3ff972ee9a2cdda7bd16",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-262",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "1e6fdf1c62ee566a61a646c633b7fae597ea5f7c584c1607987b5716798dd05e",
+      "request_sha256": "9d031b5cf78026c38d8d89b1b109d643b097f58eeb4058b249d427e0bb8b5b24",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D04_I_nat_0054",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D04_LG_D290/images/nat/D04_I_nat_0054.jpg",
+      "image_sha256": "cf5a33e97b3415e44f73430a06cf7b70c8c1bcde6fc15a77de9d7e516b401229",
+      "request_sha256": "925267a5fa61e49fedc15a1cf770c818ac65f3f97d8ad7541f441dccaf2cf3ac",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-041",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "c870d5e6747e00283bb7bec3cce67488d48e6e7976ce38c56dca43ddbc4c16c3",
+      "request_sha256": "efadbc84785f23b6f7fdb489ddf7c3dcb75b096da609cb3ecd865a1722096a92",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D20_I_nat_0115",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D20_Apple_iPadMini/images/nat/D20_I_nat_0115.jpg",
+      "image_sha256": "906d1a7096191e65cc8711ad09a7d245e40803b6b18ec449174913bf95dde372",
+      "request_sha256": "5752a3b9aa770720eb9f0be6dfc22112999e470d416d42df7d61fbdc5e197aaa",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D08_I_nat_0157",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D08_Samsung_GalaxyTab3/images/nat/D08_I_nat_0157.jpg",
+      "image_sha256": "df4e893631589f6c3f3cf72ee5fa61ca9a41f51778998b30cff5bed338473555",
+      "request_sha256": "4a6a3e1e2053fee3f1a5728b27ef8b27107ebe041f8e45adf7d7eaef36e3f68c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r038422cft",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "3bf14d2b2d35e08a2871e96cf9df1b1e906cccfcb34dfe1d653b47ff5975d7f7",
+      "request_sha256": "110db5504cabd147282bad4c1f567afad5d9f01ae79435d94ada93e5e1748352",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D21_I_nat_0158",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D21_Wiko_Ridge4G/images/nat/D21_I_nat_0158.jpg",
+      "image_sha256": "418e16657d96e0fa74ab453da7a4f25a96b7581e3f47e3b95c31c27b1cf78982",
+      "request_sha256": "06ea2686c98c61cb565acb8ec86e59ac9738637dc8d34c5bda189a4a915084e5",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r065a0da9t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "b9c7eec3fed62d58b60ee137b46c846c3a4c61da893589bf8334098edd2f3679",
+      "request_sha256": "5d04933887c6d01113fec9f065909877103a75b33db6cc97943ae958abe1493e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-104",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "490f2f2defa0325fb41a278b1ff732faaa9de4fe21049b713584aeaf9a51d8f1",
+      "request_sha256": "5f94cf93d31919477350a39fbfd96a8dcde5312848da8e74e8eb2872d6d9f041",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-075",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "396841c99601d3c31f20cab84333af71e3cb7bc6511a30b117a4e335154a89ac",
+      "request_sha256": "a7f1222b9659c806419e27a539e340e13cd55751ff317605f547fb5c641e37bd",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r00444b95t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "da25fc5e39aa282358feddfb12689740b010ddd5cb63c80702cb99971c2a6a41",
+      "request_sha256": "37c13f44dfa764177c8f4c6b9ea56dbdfba04536b27917266db5265b10e786ae",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-308",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "c0c9ef24513b556e76101d0094432c0f685de6a40eed96ff13c50d24d541b85e",
+      "request_sha256": "ee304b4889ee9bd7c70f28caf0a5c285ba1855ad07974ad7ea3fb83cc798bee0",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D20_I_nat_0111",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D20_Apple_iPadMini/images/nat/D20_I_nat_0111.jpg",
+      "image_sha256": "84be3fb66b9733c6b2d0def203afb5185fce5c4a4aa048c931cd34df268f716d",
+      "request_sha256": "1447f60257566cb9a50da4d0fc6fde310d6bc85c909cd4e021e08af91682b956",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D01_I_nat_0098",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D01_Samsung_GalaxyS3Mini/images/nat/D01_I_nat_0098.jpg",
+      "image_sha256": "791e7f22a8858d3374fb6484bebd3f14e5397090afb9c0f34e5e27a549567076",
+      "request_sha256": "0c8ec7a5052b793161aa8701532baf1e778c57f909e35de419dd16997125e83f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r16ea6386t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "54273aaf48db5cfa0b5ab3b7b0f7f333ce9629a3db310f068f483b3b09280530",
+      "request_sha256": "7626b0b54fb3ade7c9e32779a91483437c4456bed15fcffab63f74f4be20345a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r027a692ft",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "c620dd838eae868c6ce0ba76bcc0b62865e1fc0d5ccb72401ce102f42b764760",
+      "request_sha256": "cfbcc8018621c3e203627f46b63f97349fe78f7cfd83053c421810bec3a78672",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r1e5c27c1t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "f5d581fb47f085166a4528692f5575e7b67431a7b87114979dbca823ae890581",
+      "request_sha256": "dc8183aae0aa4cd8588fd7f35f33daca9182241f7537e145bd302619c959b860",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-314",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "57d6347e2c697dee01324bb703f2d623505411aed38f455ec87336762c85f1c9",
+      "request_sha256": "2f43b461b78f733c9516377229b87b31cfe8e14dc19612071187b5f706936145",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-015",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "21058090d152743f91cf33994b09e82d29a2a62add029160741674ef85dc4351",
+      "request_sha256": "70678bfabd5d33768321c1a8920142ed43b82e81d60e7a58fea927c310f87575",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-116",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "342dcca3962e84a8ca6b84cba47cca4e6df80b3f5b54cbc490d1cf266cf5f186",
+      "request_sha256": "9dc9733438fe36b653ee14ccd3afc6c5dab4d6c0153a8e2ad18795f5fde038a3",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D08_I_nat_0065",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D08_Samsung_GalaxyTab3/images/nat/D08_I_nat_0065.jpg",
+      "image_sha256": "4837e20a4b28a3df0a94c459c85b938c1c2b660251a97eb766c06b8deaab6c95",
+      "request_sha256": "71a1bdbfb9c03d2415b39dce810c94fb195e5bd63c098db5252ac2c000747fab",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-004",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "b30b26907ec441c2c739157e9895207dbc67fd399b499d77e40eb7527e45de2d",
+      "request_sha256": "41c5a874e075ae2ca26284a82efd724eb144bc257308cfb2341beaad32b1742d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-198",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "20faedf7ee82215622715b007c39f3a3175e8c52b10de125825633cee170cc20",
+      "request_sha256": "57182f5807526b9228630f353ebf8fc63e108db129d73486ce57a8ef5ba97353",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r18fafe10t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "e4d38814033c5f895f867144751c706c29ab3fd47a4411ccfe15655cdee85c0c",
+      "request_sha256": "37b1bd1ea77f96866ed312f7be8724b3876c3caf53ce971f2d0c5a88734b64bc",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r1e5c27c1t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "5bad708eca7cd73f2a0bfbb336787802065d2721622c599bb6421e5ae0f9f42f",
+      "request_sha256": "670539f37358162c0d0c52d26a5e753811b91ca20f016e32d0e11c8c09b074db",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-260",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "26733d97e638f9193f9b6287ebc76f91b7032fcb75bd6fd270fda19b30917f9f",
+      "request_sha256": "c3c0bbc2f999bc5689b9663583d3c005d259341bf84653e7bcb529c34eb7badd",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-149",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "2194e99ffc9497a396cb5cc184eefdaee3a0af6517b437077903a428c8fe48a9",
+      "request_sha256": "4f91dc22f6538cab0b20b285c92d92ed39d8d127cafd287100fc1264b7b7ad8f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-000",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "9dde8c4be8f4ccbf5d11b3e39716d95073a2d35412b480e8dd2c90a6a1e318e4",
+      "request_sha256": "7aa139f555488dbfd8364351deaff35f90976054d945893d5b1a8f16566e29a6",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-305",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "a5f9fc5e9826ec5962f8fa666f87246735d243b9a5158d67677f68cd1dbd24bc",
+      "request_sha256": "a1e622ce71a24404c307c2bc50bb1f9c051cc32e41f3ba031810e552836638c5",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r00444b95t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "8f5d12eba4b846df733d840ed144a07be2e30c93342309adc9ee5422cfbc854b",
+      "request_sha256": "01bca40e7f7c64e88be289a5d3a4586dba30f064f74b997a0c0fd671a6e61a56",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D20_I_nat_0124",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D20_Apple_iPadMini/images/nat/D20_I_nat_0124.jpg",
+      "image_sha256": "8595ad58a60462678eeec0e8228489acb0d0ac5154b53346c880804a03335ae3",
+      "request_sha256": "7aa66596dbea0fd61a40e98aa884bc99c431f14e8a8cc883eb27962cfa072f86",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r1dea56e5t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "7f429ae9375c1a77a23a2301f5500e34270866f2ed0c4826d82b7b73b3830bd3",
+      "request_sha256": "4c1e2e85c2bf97a94fad19401db22ae6049b8cee3d69e8b329dd1b049e111c1d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-284",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "920eeadd916d5f4140313010f21725334587b2481c3b7d92040deae63101a81e",
+      "request_sha256": "2f5ed6d60fe33ae4668a3410c83dd1d01c4ef3e002adcb63df109383e36c5f23",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r14556dabt",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "8d064a36c1a4e85fbf1b59a87a9162718d4f0ec375f99908719fc3ef4c820cb1",
+      "request_sha256": "b7064a574c20602eebfe9c2179ecad1c9dcbe6fc42b3ceb8c99f33f040bd72ee",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D33_I_nat_0046",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D33_Huawei_Ascend/images/nat/D33_I_nat_0046.jpg",
+      "image_sha256": "b9d684a11c3c4ffe22d75d95de78505e59f1371830824dc39111bb6726f1b9fe",
+      "request_sha256": "c7405a3efaae3aa153ecc5615685910331c2b5d09f35ebcf28565e1efef84c50",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r087a13a6t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "11c10db4f1d22963dc0e0048fd19944136d4da1dd13d78ffd1f68ebc45453cb3",
+      "request_sha256": "29d4eb75335c34fe7b95f0f495edba84b23d9171681deac33c78fe0905b1b52d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-339",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "abc097cba9ef6b731b93ac5e28e82126725e7b6e23de2cdc34ed935693e994f9",
+      "request_sha256": "38b0a2ed44888c9bfd1086400d615ee4d362586e8bf2191194daea57c71df46c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r01a5f38at",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "b64f65bb6e85fb11f3d906b3ba1f43c0d26910751e813145ca6c5382e7a38dbb",
+      "request_sha256": "f29eb3f708436224de4bf25250c22f77605802e4d7a25a56662a023d36071c0e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-326",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "c761f2ecac178631950a2f299c332aa291130d2e9aa58efc35285f65cd48386a",
+      "request_sha256": "50f1b3f3872e809ed783c91d5c452dacda2a90c90166e02ce304a056a61cd09c",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D01_I_nat_0128",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D01_Samsung_GalaxyS3Mini/images/nat/D01_I_nat_0128.jpg",
+      "image_sha256": "a127de395631f10bbc3d40bd669623b66d31542cb2f2089f9433109285b0465f",
+      "request_sha256": "ccf3537593ea9372a0b7fc74e681f35794ccb91572568b1809fc49f6907534db",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D33_I_nat_0076",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D33_Huawei_Ascend/images/nat/D33_I_nat_0076.jpg",
+      "image_sha256": "0dd9ffd082c596002a7ea7631ca6acf7ac8086744d0225b21ed8085740cb301c",
+      "request_sha256": "fa6538b2d1ebdcc47b98d8944cdcd2c34d3ac78f64a8dcb73ffee4277af4bde3",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D04_I_nat_0005",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D04_LG_D290/images/nat/D04_I_nat_0005.jpg",
+      "image_sha256": "f8e48b6cfb1e888e2979b6858a660bd8de839532da8a7f7328617e4f3c75241c",
+      "request_sha256": "ce2a4eb9b9be31083e3d6411da966185faee77d5e78162eae5d437897a798e10",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-017",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "0d4ebfdeaeab86a44cb4a5aae07e86b862c10041076bbf82d7f83b1c91c380b2",
+      "request_sha256": "2131c82f640a2613fe2d8232d8deb63ccb48577dd5887f4e0987c213a7538e10",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D12_I_nat_0074",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D12_Sony_XperiaZ1Compact/images/nat/D12_I_nat_0074.jpg",
+      "image_sha256": "fa6d9bb4648bf987fee3a99c6f675a2baa50ec9e70c97d4aa2682f7e526ba550",
+      "request_sha256": "a78048ee80c8d3e91a9c75c0d1f1440a9d6fed146eaddbd0136b4799d6bed312",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D13_I_nat_0044",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D13_Apple_iPad2/images/nat/D13_I_nat_0044.jpg",
+      "image_sha256": "8c34ab1bdd6a3f1e8a8e8eef9e696e4ea362399cbda803bc0f3d8c8ac9a88c4f",
+      "request_sha256": "a7f05ab43240518877c65ca7eab8123b7a3c544c15dce8bb7c63110cc2b8af24",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D31_I_nat_0126",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D31_Samsung_GalaxyS4Mini/images/nat/D31_I_nat_0126.jpg",
+      "image_sha256": "71a96486ca8acb198ac4fa582611dd981fb5707f099556cd915f38834692f989",
+      "request_sha256": "70322c43d8632da656788b97e54016ca495fa351ce64b3c43fb2dbe55a5dc51e",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-071",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "f0f6eb967015e268d977c104182fb888fc20f1a3f219a790115908abd0c0c214",
+      "request_sha256": "08935bb9b5842f38cde982107aa928a8fb4e9f746cad701820d05767fcf4471a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-276",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "81a45ca851012e962cc1ce4ff9cc615d3749006a5dddc857554c64b5930d122c",
+      "request_sha256": "3a047b3593f31395318121e95b0a9d925f228a06f6e5b89420ed9ca9a2c892c1",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-255",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "ff9555b066692a33385b9b504ad79731b2494495dd9f2856cccd025f29e29ff8",
+      "request_sha256": "3f4af796943579f288a16b8ff0239aed3fd3a2d63a988607efa660e725b67c89",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-313",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "00706f61bd9adf4b2f49b31fd30eef007b633ce0d961f40f70d4cebd2ae1d66f",
+      "request_sha256": "0f7d6589690d81fb20d7c7f01bb6c7a9ec9e66eef54a6fd439fbc99d114e2636",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-268",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "5154441a9d95d2d140146df6bc76f039675665cb0cca312c89a8480c02de0e2d",
+      "request_sha256": "8831812f873763a67fd984502c73cb0d472980e899d621a5af88c10c943386b8",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D33_I_nat_0082",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D33_Huawei_Ascend/images/nat/D33_I_nat_0082.jpg",
+      "image_sha256": "47666183d34a7e41da6681278764b725918d21c1e4bb333d2a556797e4255fd1",
+      "request_sha256": "1dce2ad90f29acc4d7ff8be9a3ce99f8ba25a9028df31eda030849dfe88d9a37",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-146",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "ae88a8a0c7c8bda5c155baa376d9efb3ca52f4703aa228ad66556f6c1968542c",
+      "request_sha256": "29f7b12f56ded54b1bff32da85e150d0d859dbc93c235fca700c047ca732f2c7",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r038422cft",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "4174e413dd79ca76aaf3a3d9cca10bb3877625bb21dde6c8f7009b6a47561c07",
+      "request_sha256": "fb3acc2ed9129692b6a6fe6d8b9d5c34401c4689ca37dfc49644305a1d18674a",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-182",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "ebeecaba9b39b0d1ea1ac273b300e97246f07b92a20da9acd92a9506302105ff",
+      "request_sha256": "87768c05de4904ac6529e5341753653b08895d42d55a35989117cc912eb65c91",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D13_I_nat_0120",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D13_Apple_iPad2/images/nat/D13_I_nat_0120.jpg",
+      "image_sha256": "00d87c968801e1265d4146bcea3f0fc7c7ee7685a77815b932d970e552e21fbe",
+      "request_sha256": "9a466aa099e0d4988771d6c873ac9d01bb0248398bcef432063d591a61e06b18",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r092b4511t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "2176a9ae7e0dbb7da62e29c3098115c5f27c9e0588b3dc5ea91b58b8bb95cee1",
+      "request_sha256": "e976c2a08f25e44114783d2b13f7d032b61bab701f735624df611754bb11c28d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-209",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "0dae66b77782371b86527ad0fa03d39e060bc7b38b94fa949ffba9204c495d5c",
+      "request_sha256": "4d6446a014b6fcb0fc3830673a1bcbc708ab4e4799e5da724a0ac785302025d4",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D15_I_nat_0201",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D15_Apple_iPhone6/images/nat/D15_I_nat_0201.jpg",
+      "image_sha256": "ac53263d4a7aef22d96cbec6b7950377eff43b11905e2a965dabf8e60c6dca41",
+      "request_sha256": "51f9f3f9990b857c28df33acdc691c974aa833daa78d541a283ccd9050741101",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-171",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "66acb670c559c532bf9ab437148aa15d4fbba48d7b87eaa28e26a6644ba0457a",
+      "request_sha256": "19cabcd95ff556a25d07e1d12a5ee6587a8c2a0ce59b3bc99e790bd1363fce3f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D12_I_nat_0158",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D12_Sony_XperiaZ1Compact/images/nat/D12_I_nat_0158.jpg",
+      "image_sha256": "45d64644d2e3f2ced16efdeb27a77bfbe58fa1a99c371daeb4c775ca61a1c5c9",
+      "request_sha256": "fb2da5bb679a549b240e0c6cd90a8f77a0bacef23e29374ddfa18238de00602f",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-172",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "625b2c2f08ada9a95ee98be30104ff426bdb99d885560d79ebcd8fd2deabe632",
+      "request_sha256": "d85258a0fc3772ff4b2254d89eb16211f67914b9a88b7ba9ac5217db516d9896",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D31_I_nat_0078",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D31_Samsung_GalaxyS4Mini/images/nat/D31_I_nat_0078.jpg",
+      "image_sha256": "deac41ec8d9c2607f4478a096eb9db4a10146bf29940e5db0752e70e525245d9",
+      "request_sha256": "67b3662ee4089055f0e21b42f873f927eba25a2ac460bee02c38da9a55299430",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-midjourney-v5-r0487f5cet",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "ca1c83c43ef092a0dd49167a5cae087f860189be1feb5f9219ba786a97732da1",
+      "request_sha256": "aa34257651eac7be4842ba11d3daaa0d9935a82ebc2ad0f086fc9ee8d2ce492d",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-199",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "c278e52bc71f51f15abc6614c0b76244f71542b2aa0b47cf4ffc922a55d90b93",
+      "request_sha256": "a5c8dea1ec3d8ba35a611f51430d36d92162da9aa466a41cdc6b5c9d5fff1c70",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-295",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "a677adad84f3dad4c5c0db7f8d158dcba0638ddb6651e85b1c5067e5d71ad372",
+      "request_sha256": "d7cff80c7940d2848dd9b5bb6d3fa4fc5531d2e2c98655b401f878655a132b85",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-190",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "a35ec1d001d15a67f2b50d04dd3a97df64b999eae9b0851c63f3a8a810e67905",
+      "request_sha256": "d62de2f47a3fa1e6e4589df01d4d6584321b84b52b5e15f271999a7cbf075369",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r1dea56e5t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "edcd763c82deb02b6f933f5cc07ff4f803b5cdc898c65a0099cfab011ab78681",
+      "request_sha256": "bd0746de197801de88cab095e90c44b9da7b98240e5df134c2a733f5e6d4d6dc",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-110",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "653433499a407b05acb826a70c6bfff7d1523e083cfc0e738ee9c60297a73b03",
+      "request_sha256": "74a1d9c92646821ff7a8c2b38082c1f6d6fc7ea32b98d183e9c71f80fcc75176",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/vision-D12_I_nat_0207",
+      "dataset": "VISION",
+      "public_source": "https://lesc.dinfo.unifi.it/VISION/dataset/D12_Sony_XperiaZ1Compact/images/nat/D12_I_nat_0207.jpg",
+      "image_sha256": "6d05070079eeeb1f34842bcba412a75da7e1361a21f440cd383a4f9b7e407e6c",
+      "request_sha256": "f32060c2b659a6730eb834758f576d05e0406c6e733273f3115301ca6e4c89a0",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle2-r18fafe10t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "e99835e0e4acae80c5d6c0d2d93a5e5fd39499613a18c296518576884c0cf692",
+      "request_sha256": "a8f19333ab67debbdda530904086ab9331e90bbeb3bf17b664d63ce3dcd07e47",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-dalle3-r01a5f38at",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "5c27a7febfe1c7a8710888474d051ed71098e443dad6c07df1439f30d684d000",
+      "request_sha256": "9d4298205eb0e69ac03cc33e7f50bcfe9a76c0b6c77aee95997ddcf5c14a6944",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/quality/koniq-v2-224",
+      "dataset": "KonIQ-10k",
+      "public_source": "https://doi.org/10.18419/darus-2435",
+      "image_sha256": "9841d508820e014ed7f9b8b3450d143e9cd86685e83e535008114edcceb487f2",
+      "request_sha256": "31d02d03e6063ec4e93e70af799603d3b5347f3a8c0fac2861efe6f6464e6a97",
+      "matches_previous_openrouter_request": true
+    },
+    {
+      "row_id": "latest/primary/ai/ai-firefly-r087a13a6t",
+      "dataset": "Synthbuster",
+      "public_source": "https://zenodo.org/api/records/10066460/files/synthbuster.zip/content",
+      "image_sha256": "c7d5c96dbbbfeb806becdc86d1ef8941abd77eb0c47b73a6620045cae45bd1d2",
+      "request_sha256": "c03ae38631b33307b1794bc5ef9daad3201119358ce06ea9fda7d641b17f3013",
+      "matches_previous_openrouter_request": true
+    }
+  ]
+}

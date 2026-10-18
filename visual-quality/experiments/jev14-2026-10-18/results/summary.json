@@ -1,0 +1,2175 @@
+{
+  "generated_at": "2026-10-18T15:28:07.885921+00:00",
+  "status": "complete",
+  "expected": 378,
+  "operations": {
+    "attempted": 378,
+    "valid": 378,
+    "invalid": 0,
+    "valid_fraction": 1.0,
+    "reported_cost_usd": 0.030726569999999998,
+    "openrouter_charged_cost_usd": 0.030726569999999998,
+    "openrouter_cost_complete": true,
+    "effective_provider_inference_cost_usd": 0.030726569999999998,
+    "known_effective_provider_inference_cost_usd": 0.030726569999999998,
+    "cost_complete": true,
+    "unknown_cost_count": 0,
+    "cost_per_attempt_usd": 8.128722222222221e-05,
+    "cost_per_valid_result_usd": 8.128722222222221e-05,
+    "cost_basis_counts": {
+      "openrouter_usage_cost": 378
+    },
+    "latency_count": 378,
+    "latency_p50_seconds": 0.6012784164631739,
+    "latency_p95_seconds": 1.0505189169198275
+  },
+  "unattempted": 0,
+  "protocol_sha256": "99ca2c4c72b5682896a998c5337db25c9ab0851a5e397263bf58e82ffb011b65",
+  "manifest_sha256": "803dcf3df6827a72f554ee7fc35cb96b1ec1ea5ef496682daa6d2782a47c26ee",
+  "ledger_sha256": "821f5deef725af4910b5ec50276a2b4b90addd2b455cb71df4a368a4430bc5d5",
+  "report_code_sha256": "0b4a73c637caa0550a72247296030273d18aef64ce6a64cd4d95b6cb9dcb0da8",
+  "model": "typesafe/jev-1.14",
+  "expected_revision": "typesafe/jev-1.14-20261014",
+  "shared": {
+    "quality": {
+      "expected": 58,
+      "jev14": {
+        "expected": 58,
+        "unattempted": 0,
+        "operations": {
+          "attempted": 58,
+          "valid": 58,
+          "invalid": 0,
+          "valid_fraction": 1.0,
+          "reported_cost_usd": 0.003007704,
+          "openrouter_charged_cost_usd": 0.003007704,
+          "openrouter_cost_complete": true,
+          "effective_provider_inference_cost_usd": 0.003007704,
+          "known_effective_provider_inference_cost_usd": 0.003007704,
+          "cost_complete": true,
+          "unknown_cost_count": 0,
+          "cost_per_attempt_usd": 5.185696551724138e-05,
+          "cost_per_valid_result_usd": 5.185696551724138e-05,
+          "cost_basis_counts": {
+            "openrouter_usage_cost": 58
+          },
+          "latency_count": 58,
+          "latency_p50_seconds": 0.4791355000343174,
+          "latency_p95_seconds": 0.7303447090089321
+        },
+        "metrics": {
+          "assistant_reference": {
+            "technical_quality": {
+              "referenced": 58,
+              "valid_referenced": 58,
+              "mae_valid": 0.49206896551724133,
+              "mae_invalid_penalty_4": 0.49206896551724133,
+              "group_balanced_mae_invalid_penalty_4": 0.49206896551724133,
+              "reference_groups": 58,
+              "n": 58,
+              "pearson": 0.7447370152717692,
+              "spearman": 0.6019859865284536
+            },
+            "aesthetics": {
+              "referenced": 58,
+              "valid_referenced": 58,
+              "mae_valid": 0.21758620689655167,
+              "mae_invalid_penalty_4": 0.21758620689655167,
+              "group_balanced_mae_invalid_penalty_4": 0.21758620689655167,
+              "reference_groups": 58,
+              "n": 58,
+              "pearson": 0.8763437578461142,
+              "spearman": 0.8596624963769447
+            },
+            "mean_axis_mae_valid": 0.3548275862068965,
+            "mean_axis_group_balanced_mae_invalid_penalty_4": 0.3548275862068965
+          },
+          "human_reference": {
+            "technical_quality": {
+              "referenced": 58,
+              "valid_referenced": 58,
+              "mae_valid": 0.32526994078718213,
+              "mae_invalid_penalty_4": 0.32526994078718213,
+              "group_balanced_mae_invalid_penalty_4": 0.32526994078718213,
+              "reference_groups": 58,
+              "n": 58,
+              "pearson": 0.5684515434686366,
+              "spearman": 0.46662975327788153
+            },
+            "aesthetics": {
+              "referenced": 0,
+              "valid_referenced": 0,
+              "mae_valid": null,
+              "mae_invalid_penalty_4": null,
+              "group_balanced_mae_invalid_penalty_4": null,
+              "reference_groups": 0,
+              "n": 0,
+              "pearson": null,
+              "spearman": null
+            },
+            "mean_axis_mae_valid": null,
+            "mean_axis_group_balanced_mae_invalid_penalty_4": null
+          },
+          "human_raw_correlations": {
+            "technical_quality": {
+              "n": 58,
+              "pearson": 0.5684515434686366,
+              "spearman": 0.46662975327788153
+            },
+            "aesthetics": {
+              "n": 0,
+              "pearson": null,
+              "spearman": null
+            }
+          }
+        }
+      },
+      "baselines": {
+        "decider": {
+          "expected": 58,
+          "unattempted": 0,
+          "operations": {
+            "attempted": 58,
+            "valid": 58,
+            "invalid": 0,
+            "valid_fraction": 1.0,
+            "reported_cost_usd": 0.00116172,
+            "openrouter_charged_cost_usd": 0.00116172,
+            "openrouter_cost_complete": true,
+            "effective_provider_inference_cost_usd": 0.00116172,
+            "known_effective_provider_inference_cost_usd": 0.00116172,
+            "cost_complete": true,
+            "unknown_cost_count": 0,
+            "cost_per_attempt_usd": 2.0029655172413793e-05,
+            "cost_per_valid_result_usd": 2.0029655172413793e-05,
+            "cost_basis_counts": {
+              "openrouter_usage_cost": 58
+            },
+            "latency_count": 58,
+            "latency_p50_seconds": 0.6075582921039313,
+            "latency_p95_seconds": 1.0146848750300705
+          },
+          "metrics": {
+            "assistant_reference": {
+              "technical_quality": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.2094850391570215,
+                "mae_invalid_penalty_4": 0.2094850391570215,
+                "group_balanced_mae_invalid_penalty_4": 0.2094850391570215,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.78445384103564,
+                "spearman": 0.6664464703773518
+              },
+              "aesthetics": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.20356239937770929,
+                "mae_invalid_penalty_4": 0.20356239937770929,
+                "group_balanced_mae_invalid_penalty_4": 0.20356239937770929,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.8003023264126341,
+                "spearman": 0.8131258555592332
+              },
+              "mean_axis_mae_valid": 0.2065237192673654,
+              "mean_axis_group_balanced_mae_invalid_penalty_4": 0.2065237192673654
+            },
+            "human_reference": {
+              "technical_quality": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.2944459190279986,
+                "mae_invalid_penalty_4": 0.2944459190279986,
+                "group_balanced_mae_invalid_penalty_4": 0.2944459190279986,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.7378943855677834,
+                "spearman": 0.6872567876269836
+              },
+              "aesthetics": {
+                "referenced": 0,
+                "valid_referenced": 0,
+                "mae_valid": null,
+                "mae_invalid_penalty_4": null,
+                "group_balanced_mae_invalid_penalty_4": null,
+                "reference_groups": 0,
+                "n": 0,
+                "pearson": null,
+                "spearman": null
+              },
+              "mean_axis_mae_valid": null,
+              "mean_axis_group_balanced_mae_invalid_penalty_4": null
+            },
+            "human_raw_correlations": {
+              "technical_quality": {
+                "n": 58,
+                "pearson": 0.7378943855677835,
+                "spearman": 0.6872567876269836
+              },
+              "aesthetics": {
+                "n": 0,
+                "pearson": null,
+                "spearman": null
+              }
+            }
+          }
+        },
+        "luna": {
+          "expected": 58,
+          "unattempted": 0,
+          "operations": {
+            "attempted": 58,
+            "valid": 58,
+            "invalid": 0,
+            "valid_fraction": 1.0,
+            "reported_cost_usd": 0,
+            "openrouter_charged_cost_usd": 0,
+            "openrouter_cost_complete": true,
+            "effective_provider_inference_cost_usd": 0.0072236999999999996,
+            "known_effective_provider_inference_cost_usd": 0.0072236999999999996,
+            "cost_complete": true,
+            "unknown_cost_count": 0,
+            "cost_per_attempt_usd": 0.00012454655172413793,
+            "cost_per_valid_result_usd": 0.00012454655172413793,
+            "cost_basis_counts": {
+              "byok_upstream_inference": 58
+            },
+            "latency_count": 58,
+            "latency_p50_seconds": 1.833710833452642,
+            "latency_p95_seconds": 3.1802328750491142
+          },
+          "metrics": {
+            "assistant_reference": {
+              "technical_quality": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.3155172413793103,
+                "mae_invalid_penalty_4": 0.3155172413793103,
+                "group_balanced_mae_invalid_penalty_4": 0.3155172413793103,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.3838370283109102,
+                "spearman": 0.45030056491850734
+              },
+              "aesthetics": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.23965517241379308,
+                "mae_invalid_penalty_4": 0.23965517241379308,
+                "group_balanced_mae_invalid_penalty_4": 0.23965517241379308,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.5641338907695921,
+                "spearman": 0.5497485233666168
+              },
+              "mean_axis_mae_valid": 0.27758620689655167,
+              "mean_axis_group_balanced_mae_invalid_penalty_4": 0.27758620689655167
+            },
+            "human_reference": {
+              "technical_quality": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.3536224312086382,
+                "mae_invalid_penalty_4": 0.3536224312086382,
+                "group_balanced_mae_invalid_penalty_4": 0.3536224312086382,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.41244061586803377,
+                "spearman": 0.348950235413583
+              },
+              "aesthetics": {
+                "referenced": 0,
+                "valid_referenced": 0,
+                "mae_valid": null,
+                "mae_invalid_penalty_4": null,
+                "group_balanced_mae_invalid_penalty_4": null,
+                "reference_groups": 0,
+                "n": 0,
+                "pearson": null,
+                "spearman": null
+              },
+              "mean_axis_mae_valid": null,
+              "mean_axis_group_balanced_mae_invalid_penalty_4": null
+            },
+            "human_raw_correlations": {
+              "technical_quality": {
+                "n": 58,
+                "pearson": 0.4124406158680338,
+                "spearman": 0.348950235413583
+              },
+              "aesthetics": {
+                "n": 0,
+                "pearson": null,
+                "spearman": null
+              }
+            }
+          }
+        }
+      },
+      "paired_valid_ids": [
+        "quality-001",
+        "quality-002",
+        "quality-003",
+        "quality-004",
+        "quality-005",
+        "quality-006",
+        "quality-007",
+        "quality-008",
+        "quality-009",
+        "quality-010",
+        "quality-011",
+        "quality-012",
+        "quality-013",
+        "quality-014",
+        "quality-015",
+        "quality-016",
+        "quality-017",
+        "quality-018",
+        "quality-020",
+        "quality-021",
+        "quality-022",
+        "quality-023",
+        "quality-024",
+        "quality-025",
+        "quality-026",
+        "quality-027",
+        "quality-028",
+        "quality-029",
+        "quality-030",
+        "quality-031",
+        "quality-032",
+        "quality-033",
+        "quality-034",
+        "quality-035",
+        "quality-036",
+        "quality-037",
+        "quality-038",
+        "quality-039",
+        "quality-040",
+        "quality-041",
+        "quality-042",
+        "quality-043",
+        "quality-044",
+        "quality-045",
+        "quality-046",
+        "quality-047",
+        "quality-048",
+        "quality-049",
+        "quality-050",
+        "quality-051",
+        "quality-052",
+        "quality-053",
+        "quality-054",
+        "quality-055",
+        "quality-056",
+        "quality-057",
+        "quality-058",
+        "quality-059"
+      ],
+      "paired_valid_baselines": {
+        "decider": {
+          "expected": 58,
+          "unattempted": 0,
+          "operations": {
+            "attempted": 58,
+            "valid": 58,
+            "invalid": 0,
+            "valid_fraction": 1.0,
+            "reported_cost_usd": 0.00116172,
+            "openrouter_charged_cost_usd": 0.00116172,
+            "openrouter_cost_complete": true,
+            "effective_provider_inference_cost_usd": 0.00116172,
+            "known_effective_provider_inference_cost_usd": 0.00116172,
+            "cost_complete": true,
+            "unknown_cost_count": 0,
+            "cost_per_attempt_usd": 2.0029655172413793e-05,
+            "cost_per_valid_result_usd": 2.0029655172413793e-05,
+            "cost_basis_counts": {
+              "openrouter_usage_cost": 58
+            },
+            "latency_count": 58,
+            "latency_p50_seconds": 0.6075582921039313,
+            "latency_p95_seconds": 1.0146848750300705
+          },
+          "metrics": {
+            "assistant_reference": {
+              "technical_quality": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.2094850391570215,
+                "mae_invalid_penalty_4": 0.2094850391570215,
+                "group_balanced_mae_invalid_penalty_4": 0.2094850391570215,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.78445384103564,
+                "spearman": 0.6664464703773518
+              },
+              "aesthetics": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.20356239937770929,
+                "mae_invalid_penalty_4": 0.20356239937770929,
+                "group_balanced_mae_invalid_penalty_4": 0.20356239937770929,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.8003023264126341,
+                "spearman": 0.8131258555592332
+              },
+              "mean_axis_mae_valid": 0.2065237192673654,
+              "mean_axis_group_balanced_mae_invalid_penalty_4": 0.2065237192673654
+            },
+            "human_reference": {
+              "technical_quality": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.2944459190279986,
+                "mae_invalid_penalty_4": 0.2944459190279986,
+                "group_balanced_mae_invalid_penalty_4": 0.2944459190279986,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.7378943855677834,
+                "spearman": 0.6872567876269836
+              },
+              "aesthetics": {
+                "referenced": 0,
+                "valid_referenced": 0,
+                "mae_valid": null,
+                "mae_invalid_penalty_4": null,
+                "group_balanced_mae_invalid_penalty_4": null,
+                "reference_groups": 0,
+                "n": 0,
+                "pearson": null,
+                "spearman": null
+              },
+              "mean_axis_mae_valid": null,
+              "mean_axis_group_balanced_mae_invalid_penalty_4": null
+            },
+            "human_raw_correlations": {
+              "technical_quality": {
+                "n": 58,
+                "pearson": 0.7378943855677835,
+                "spearman": 0.6872567876269836
+              },
+              "aesthetics": {
+                "n": 0,
+                "pearson": null,
+                "spearman": null
+              }
+            }
+          }
+        },
+        "luna": {
+          "expected": 58,
+          "unattempted": 0,
+          "operations": {
+            "attempted": 58,
+            "valid": 58,
+            "invalid": 0,
+            "valid_fraction": 1.0,
+            "reported_cost_usd": 0,
+            "openrouter_charged_cost_usd": 0,
+            "openrouter_cost_complete": true,
+            "effective_provider_inference_cost_usd": 0.0072236999999999996,
+            "known_effective_provider_inference_cost_usd": 0.0072236999999999996,
+            "cost_complete": true,
+            "unknown_cost_count": 0,
+            "cost_per_attempt_usd": 0.00012454655172413793,
+            "cost_per_valid_result_usd": 0.00012454655172413793,
+            "cost_basis_counts": {
+              "byok_upstream_inference": 58
+            },
+            "latency_count": 58,
+            "latency_p50_seconds": 1.833710833452642,
+            "latency_p95_seconds": 3.1802328750491142
+          },
+          "metrics": {
+            "assistant_reference": {
+              "technical_quality": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.3155172413793103,
+                "mae_invalid_penalty_4": 0.3155172413793103,
+                "group_balanced_mae_invalid_penalty_4": 0.3155172413793103,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.3838370283109102,
+                "spearman": 0.45030056491850734
+              },
+              "aesthetics": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.23965517241379308,
+                "mae_invalid_penalty_4": 0.23965517241379308,
+                "group_balanced_mae_invalid_penalty_4": 0.23965517241379308,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.5641338907695921,
+                "spearman": 0.5497485233666168
+              },
+              "mean_axis_mae_valid": 0.27758620689655167,
+              "mean_axis_group_balanced_mae_invalid_penalty_4": 0.27758620689655167
+            },
+            "human_reference": {
+              "technical_quality": {
+                "referenced": 58,
+                "valid_referenced": 58,
+                "mae_valid": 0.3536224312086382,
+                "mae_invalid_penalty_4": 0.3536224312086382,
+                "group_balanced_mae_invalid_penalty_4": 0.3536224312086382,
+                "reference_groups": 58,
+                "n": 58,
+                "pearson": 0.41244061586803377,
+                "spearman": 0.348950235413583
+              },
+              "aesthetics": {
+                "referenced": 0,
+                "valid_referenced": 0,
+                "mae_valid": null,
+                "mae_invalid_penalty_4": null,
+                "group_balanced_mae_invalid_penalty_4": null,
+                "reference_groups": 0,
+                "n": 0,
+                "pearson": null,
+                "spearman": null
+              },
+              "mean_axis_mae_valid": null,
+              "mean_axis_group_balanced_mae_invalid_penalty_4": null
+            },
+            "human_raw_correlations": {
+              "technical_quality": {
+                "n": 58,
+                "pearson": 0.4124406158680338,
+                "spearman": 0.348950235413583
+              },
+              "aesthetics": {
+                "n": 0,
+                "pearson": null,
+                "spearman": null
+              }
+            }
+          }
+        }
+      },
+      "baseline_metadata": {
+        "decider": {
+          "resolved_models": {
+            "perplexity/pplx-decider-v1.1-27b-20261006": 60
+          },
+          "requested_reasoning": {
+            "null": 60
+          },
+          "first_timestamp": "2026-10-11T15:39:05.121390+00:00",
+          "last_timestamp": "2026-10-11T15:47:15.593257+00:00",
+          "cost_basis": "Reported inference cost includes BYOK upstream charges where present"
+        },
+        "luna": {
+          "resolved_models": {
+            "openai/gpt-6-luna": 60
+          },
+          "requested_reasoning": {
+            "{\"effort\": \"low\"}": 60
+          },
+          "first_timestamp": "2026-10-11T15:39:11.935404+00:00",
+          "last_timestamp": "2026-10-11T15:47:14.864419+00:00",
+          "cost_basis": "Reported inference cost includes BYOK upstream charges where present"
+        }
+      }
+    },
+    "ai": {
+      "expected": 60,
+      "jev14": {
+        "expected": 60,
+        "unattempted": 0,
+        "operations": {
+          "attempted": 60,
+          "valid": 60,
+          "invalid": 0,
+          "valid_fraction": 1.0,
+          "reported_cost_usd": 0.003170832,
+          "openrouter_charged_cost_usd": 0.003170832,
+          "openrouter_cost_complete": true,
+          "effective_provider_inference_cost_usd": 0.003170832,
+          "known_effective_provider_inference_cost_usd": 0.003170832,
+          "cost_complete": true,
+          "unknown_cost_count": 0,
+          "cost_per_attempt_usd": 5.2847200000000005e-05,
+          "cost_per_valid_result_usd": 5.2847200000000005e-05,
+          "cost_basis_counts": {
+            "openrouter_usage_cost": 60
+          },
+          "latency_count": 60,
+          "latency_p50_seconds": 0.5422795829363167,
+          "latency_p95_seconds": 0.7535542920231819
+        },
+        "metrics": {
+          "labeled": 60,
+          "valid_labeled": 60,
+          "invalid_labeled": 0,
+          "unlabeled": 0,
+          "threshold": 0.5,
+          "confusion_valid_only": {
+            "tp": 30,
+            "tn": 27,
+            "fp": 3,
+            "fn": 0
+          },
+          "ai_recall_valid_only": 1.0,
+          "ai_recall_wilson95_valid_only": [
+            0.8864866068260312,
+            0.9999999999999999
+          ],
+          "false_positive_rate_valid_only": 0.09999999999999998,
+          "false_positive_rate_wilson95_valid_only": [
+            0.03459988874733419,
+            0.25621082579184085
+          ],
+          "balanced_accuracy_valid_only": 0.95,
+          "accuracy_valid_only": 0.95,
+          "accuracy_wilson95_valid_only": [
+            0.8629948352365147,
+            0.9828504978356043
+          ],
+          "accuracy_all_labeled_invalid_as_wrong": 0.95,
+          "brier_valid_only": 0.10075833333333334,
+          "auroc_valid_only": 0.9888888888888889,
+          "review_interval_open": [
+            0.2,
+            0.8
+          ],
+          "review_count_valid": 44,
+          "review_fraction_valid": 0.7333333333333333,
+          "automatic_coverage_all_attempts": 0.26666666666666666,
+          "assistant_probability_mae_valid": 0.2305,
+          "assistant_probability_pairs": 60,
+          "brier_all_expected_invalid_penalty1": 0.10075833333333332
+        }
+      },
+      "baselines": {
+        "decider": {
+          "expected": 60,
+          "unattempted": 0,
+          "operations": {
+            "attempted": 60,
+            "valid": 60,
+            "invalid": 0,
+            "valid_fraction": 1.0,
+            "reported_cost_usd": 0.00148356,
+            "openrouter_charged_cost_usd": 0.00148356,
+            "openrouter_cost_complete": true,
+            "effective_provider_inference_cost_usd": 0.00148356,
+            "known_effective_provider_inference_cost_usd": 0.00148356,
+            "cost_complete": true,
+            "unknown_cost_count": 0,
+            "cost_per_attempt_usd": 2.4726e-05,
+            "cost_per_valid_result_usd": 2.4726e-05,
+            "cost_basis_counts": {
+              "openrouter_usage_cost": 60
+            },
+            "latency_count": 60,
+            "latency_p50_seconds": 0.6481772919651121,
+            "latency_p95_seconds": 0.9983904999680817
+          },
+          "metrics": {
+            "labeled": 60,
+            "valid_labeled": 60,
+            "invalid_labeled": 0,
+            "unlabeled": 0,
+            "threshold": 0.5,
+            "confusion_valid_only": {
+              "tp": 16,
+              "tn": 30,
+              "fp": 0,
+              "fn": 14
+            },
+            "ai_recall_valid_only": 0.5333333333333333,
+            "ai_recall_wilson95_valid_only": [
+              0.36142299619873297,
+              0.6976761109230025
+            ],
+            "false_positive_rate_valid_only": 0.0,
+            "false_positive_rate_wilson95_valid_only": [
+              0.0,
+              0.11351339317396876
+            ],
+            "balanced_accuracy_valid_only": 0.7666666666666666,
+            "accuracy_valid_only": 0.7666666666666667,
+            "accuracy_wilson95_valid_only": [
+              0.6456372962239805,
+              0.8556043826335717
+            ],
+            "accuracy_all_labeled_invalid_as_wrong": 0.7666666666666667,
+            "brier_valid_only": 0.1592303838679253,
+            "auroc_valid_only": 0.9822222222222222,
+            "review_interval_open": [
+              0.2,
+              0.8
+            ],
+            "review_count_valid": 11,
+            "review_fraction_valid": 0.18333333333333332,
+            "automatic_coverage_all_attempts": 0.8166666666666667,
+            "assistant_probability_mae_valid": 0.1590792933416581,
+            "assistant_probability_pairs": 60,
+            "brier_all_expected_invalid_penalty1": 0.15923038386792532
+          }
+        },
+        "luna": {
+          "expected": 60,
+          "unattempted": 0,
+          "operations": {
+            "attempted": 60,
+            "valid": 60,
+            "invalid": 0,
+            "valid_fraction": 1.0,
+            "reported_cost_usd": 0,
+            "openrouter_charged_cost_usd": 0,
+            "openrouter_cost_complete": true,
+            "effective_provider_inference_cost_usd": 0.0093766,
+            "known_effective_provider_inference_cost_usd": 0.0093766,
+            "cost_complete": true,
+            "unknown_cost_count": 0,
+            "cost_per_attempt_usd": 0.00015627666666666667,
+            "cost_per_valid_result_usd": 0.00015627666666666667,
+            "cost_basis_counts": {
+              "byok_upstream_inference": 60
+            },
+            "latency_count": 60,
+            "latency_p50_seconds": 3.014461396029219,
+            "latency_p95_seconds": 4.7473864171188325
+          },
+          "metrics": {
+            "labeled": 60,
+            "valid_labeled": 60,
+            "invalid_labeled": 0,
+            "unlabeled": 0,
+            "threshold": 0.5,
+            "confusion_valid_only": {
+              "tp": 20,
+              "tn": 30,
+              "fp": 0,
+              "fn": 10
+            },
+            "ai_recall_valid_only": 0.6666666666666666,
+            "ai_recall_wilson95_valid_only": [
+              0.4878005164454384,
+              0.8076950191632386
+            ],
+            "false_positive_rate_valid_only": 0.0,
+            "false_positive_rate_wilson95_valid_only": [
+              0.0,
+              0.11351339317396876
+            ],
+            "balanced_accuracy_valid_only": 0.8333333333333333,
+            "accuracy_valid_only": 0.8333333333333334,
+            "accuracy_wilson95_valid_only": [
+              0.7196838683638547,
+              0.9068682302080855
+            ],
+            "accuracy_all_labeled_invalid_as_wrong": 0.8333333333333334,
+            "brier_valid_only": 0.13002666666666668,
+            "auroc_valid_only": 0.9338888888888889,
+            "review_interval_open": [
+              0.2,
+              0.8
+            ],
+            "review_count_valid": 12,
+            "review_fraction_valid": 0.2,
+            "automatic_coverage_all_attempts": 0.8,
+            "assistant_probability_mae_valid": 0.13233333333333333,
+            "assistant_probability_pairs": 60,
+            "brier_all_expected_invalid_penalty1": 0.13002666666666665
+          }
+        }
+      },
+      "paired_valid_ids": [
+        "ai-000",
+        "ai-001",
+        "ai-002",
+        "ai-003",
+        "ai-004",
+        "ai-005",
+        "ai-006",
+        "ai-007",
+        "ai-008",
+        "ai-009",
+        "ai-010",
+        "ai-011",
+        "ai-012",
+        "ai-013",
+        "ai-014",
+        "ai-015",
+        "ai-016",
+        "ai-017",
+        "ai-018",
+        "ai-019",
+        "ai-020",
+        "ai-021",
+        "ai-022",
+        "ai-023",
+        "ai-024",
+        "ai-025",
+        "ai-026",
+        "ai-027",
+        "ai-028",
+        "ai-029",
+        "ai-030",
+        "ai-031",
+        "ai-032",
+        "ai-033",
+        "ai-034",
+        "ai-035",
+        "ai-036",
+        "ai-037",
+        "ai-038",
+        "ai-039",
+        "ai-040",
+        "ai-041",
+        "ai-042",
+        "ai-043",
+        "ai-044",
+        "ai-045",
+        "ai-046",
+        "ai-047",
+        "ai-048",
+        "ai-049",
+        "ai-050",
+        "ai-051",
+        "ai-052",
+        "ai-053",
+        "ai-054",
+        "ai-055",
+        "ai-056",
+        "ai-057",
+        "ai-058",
+        "ai-059"
+      ],
+      "paired_valid_baselines": {
+        "decider": {
+          "expected": 60,
+          "unattempted": 0,
+          "operations": {
+            "attempted": 60,
+            "valid": 60,
+            "invalid": 0,
+            "valid_fraction": 1.0,
+            "reported_cost_usd": 0.00148356,
+            "openrouter_charged_cost_usd": 0.00148356,
+            "openrouter_cost_complete": true,
+            "effective_provider_inference_cost_usd": 0.00148356,
+            "known_effective_provider_inference_cost_usd": 0.00148356,
+            "cost_complete": true,
+            "unknown_cost_count": 0,
+            "cost_per_attempt_usd": 2.4726e-05,
+            "cost_per_valid_result_usd": 2.4726e-05,
+            "cost_basis_counts": {
+              "openrouter_usage_cost": 60
+            },
+            "latency_count": 60,
+            "latency_p50_seconds": 0.6481772919651121,
+            "latency_p95_seconds": 0.9983904999680817
+          },
+          "metrics": {
+            "labeled": 60,
+            "valid_labeled": 60,
+            "invalid_labeled": 0,
+            "unlabeled": 0,
+            "threshold": 0.5,
+            "confusion_valid_only": {
+              "tp": 16,
+              "tn": 30,
+              "fp": 0,
+              "fn": 14
+            },
+            "ai_recall_valid_only": 0.5333333333333333,
+            "ai_recall_wilson95_valid_only": [
+              0.36142299619873297,
+              0.6976761109230025
+            ],
+            "false_positive_rate_valid_only": 0.0,
+            "false_positive_rate_wilson95_valid_only": [
+              0.0,
+              0.11351339317396876
+            ],
+            "balanced_accuracy_valid_only": 0.7666666666666666,
+            "accuracy_valid_only": 0.7666666666666667,
+            "accuracy_wilson95_valid_only": [
+              0.6456372962239805,
+              0.8556043826335717
+            ],
+            "accuracy_all_labeled_invalid_as_wrong": 0.7666666666666667,
+            "brier_valid_only": 0.1592303838679253,
+            "auroc_valid_only": 0.9822222222222222,
+            "review_interval_open": [
+              0.2,
+              0.8
+            ],
+            "review_count_valid": 11,
+            "review_fraction_valid": 0.18333333333333332,
+            "automatic_coverage_all_attempts": 0.8166666666666667,
+            "assistant_probability_mae_valid": 0.1590792933416581,
+            "assistant_probability_pairs": 60,
+            "brier_all_expected_invalid_penalty1": 0.15923038386792532
+          }
+        },
+        "luna": {
+          "expected": 60,
+          "unattempted": 0,
+          "operations": {
+            "attempted": 60,
+            "valid": 60,
+            "invalid": 0,
+            "valid_fraction": 1.0,
+            "reported_cost_usd": 0,
+            "openrouter_charged_cost_usd": 0,
+            "openrouter_cost_complete": true,
+            "effective_provider_inference_cost_usd": 0.0093766,
+            "known_effective_provider_inference_cost_usd": 0.0093766,
+            "cost_complete": true,
+            "unknown_cost_count": 0,
+            "cost_per_attempt_usd": 0.00015627666666666667,
+            "cost_per_valid_result_usd": 0.00015627666666666667,
+            "cost_basis_counts": {
+              "byok_upstream_inference": 60
+            },
+            "latency_count": 60,
+            "latency_p50_seconds": 3.014461396029219,
+            "latency_p95_seconds": 4.7473864171188325
+          },
+          "metrics": {
+            "labeled": 60,
+            "valid_labeled": 60,
+            "invalid_labeled": 0,
+            "unlabeled": 0,
+            "threshold": 0.5,
+            "confusion_valid_only": {
+              "tp": 20,
+              "tn": 30,
+              "fp": 0,
+              "fn": 10
+            },
+            "ai_recall_valid_only": 0.6666666666666666,
+            "ai_recall_wilson95_valid_only": [
+              0.4878005164454384,
+              0.8076950191632386
+            ],
+            "false_positive_rate_valid_only": 0.0,
+            "false_positive_rate_wilson95_valid_only": [
+              0.0,
+              0.11351339317396876
+            ],
+            "balanced_accuracy_valid_only": 0.8333333333333333,
+            "accuracy_valid_only": 0.8333333333333334,
+            "accuracy_wilson95_valid_only": [
+              0.7196838683638547,
+              0.9068682302080855
+            ],
+            "accuracy_all_labeled_invalid_as_wrong": 0.8333333333333334,
+            "brier_valid_only": 0.13002666666666668,
+            "auroc_valid_only": 0.9338888888888889,
+            "review_interval_open": [
+              0.2,
+              0.8
+            ],
+            "review_count_valid": 12,
+            "review_fraction_valid": 0.2,
+            "automatic_coverage_all_attempts": 0.8,
+            "assistant_probability_mae_valid": 0.13233333333333333,
+            "assistant_probability_pairs": 60,
+            "brier_all_expected_invalid_penalty1": 0.13002666666666665
+          }
+        }
+      },
+      "baseline_metadata": {
+        "decider": {
+          "resolved_models": {
+            "perplexity/pplx-decider-v1.1-27b-20261006": 60
+          },
+          "requested_reasoning": {
+            "null": 60
+          },
+          "first_timestamp": "2026-10-11T15:35:37.225792+00:00",
+          "last_timestamp": "2026-10-11T15:44:01.996796+00:00",
+          "cost_basis": "Reported inference cost includes BYOK upstream charges where present"
+        },
+        "luna": {
+          "resolved_models": {
+            "openai/gpt-6-luna": 60
+          },
+          "requested_reasoning": {
+            "{\"effort\": \"low\"}": 60
+          },
+          "first_timestamp": "2026-10-11T15:36:41.835549+00:00",
+          "last_timestamp": "2026-10-11T15:44:01.316066+00:00",
+          "cost_basis": "Reported inference cost includes BYOK upstream charges where present"
+        }
+      }
+    }
+  },
+  "latest": {
+    "quality": {
+      "jev14": {
+        "track": "quality_v2",
+        "expected": 100,
+        "groups": 100,
+        "unattempted": 0,
+        "operations": {
+          "attempted": 100,
+          "valid": 100,
+          "invalid": 0,
+          "valid_fraction": 1.0,
+          "reported_cost_usd": 0.013460286,
+          "openrouter_charged_cost_usd": 0.013460286,
+          "openrouter_cost_complete": true,
+          "effective_provider_inference_cost_usd": 0.013460286,
+          "known_effective_provider_inference_cost_usd": 0.013460286,
+          "cost_complete": true,
+          "unknown_cost_count": 0,
+          "cost_per_attempt_usd": 0.00013460286,
+          "cost_per_valid_result_usd": 0.00013460286,
+          "cost_basis_counts": {
+            "openrouter_usage_cost": 100
+          },
+          "latency_count": 100,
+          "latency_p50_seconds": 0.7802168130874634,
+          "latency_p95_seconds": 1.1679165409877896
+        },
+        "objective": {
+          "name": "group_balanced_mean_reward",
+          "score": 0.9404004785535441,
+          "reward": "1 - absolute quality error / 4",
+          "invalid_or_unattempted_reward": 0
+        },
+        "metrics": {
+          "n_expected": 100,
+          "n_valid": 100,
+          "mae_valid": 0.2383980857858234,
+          "rmse_valid": 0.29780683148162107,
+          "spearman_valid": 0.9431829103523769,
+          "mae_invalid_or_unattempted_penalty4": 0.2383980857858234,
+          "bad_detection": {
+            "rule": "quality < 2.6",
+            "positive_class": "low_quality",
+            "valid_only": {
+              "confusion": {
+                "tp": 42,
+                "tn": 48,
+                "fp": 2,
+                "fn": 8
+              },
+              "accuracy": 0.9,
+              "balanced_accuracy": 0.8999999999999999,
+              "precision": 0.9545454545454546,
+              "recall": 0.84,
+              "specificity": 0.96,
+              "false_positive_rate": 0.04,
+              "accuracy_wilson95_naive_independent_images": [
+                0.8256343384950865,
+                0.9447708629393249
+              ],
+              "recall_wilson95": [
+                0.7148578393696501,
+                0.916625793219666
+              ],
+              "false_positive_rate_wilson95": [
+                0.011038884327619805,
+                0.1346009068750702
+              ],
+              "interval_note": "Accuracy Wilson interval is naive and assumes independent images; use whole-group bootstrap for grouped accuracy. Recall/FPR Wilson intervals assume independent observations within each class; sampling and source bias remain"
+            },
+            "accuracy_all_expected_invalid_as_wrong": 0.9
+          },
+          "native_mos_bins": {
+            "bad": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.25374796333404315
+            },
+            "poor": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.1987215675911192
+            },
+            "fair": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.2629045663351672
+            },
+            "good": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.238218245882964
+            },
+            "excellent": {
+              "n": 0,
+              "valid": 0,
+              "mae_valid": null
+            }
+          },
+          "aesthetics": {
+            "scored_against_gold": false,
+            "reason": "No human aesthetic labels"
+          }
+        },
+        "group_bootstrap": {
+          "group_count": 100,
+          "replicates": 2000,
+          "seed": 20261011,
+          "method": "Resample whole source groups or matched pairs; intervals do not model source bias",
+          "intervals": {
+            "group_balanced_reward": {
+              "percentile95": [
+                0.9312565538858536,
+                0.9492594326251123
+              ],
+              "valid_replicates": 2000
+            },
+            "accuracy_valid": {
+              "percentile95": [
+                0.84,
+                0.96
+              ],
+              "valid_replicates": 2000
+            },
+            "balanced_accuracy_valid": {
+              "percentile95": [
+                0.8377616747181964,
+                0.9565217391304348
+              ],
+              "valid_replicates": 2000
+            },
+            "mae_valid": {
+              "percentile95": [
+                0.2029622694995512,
+                0.27497378445658555
+              ],
+              "valid_replicates": 2000
+            },
+            "spearman_valid": {
+              "percentile95": [
+                0.9129510677372163,
+                0.9590269756475097
+              ],
+              "valid_replicates": 2000
+            }
+          }
+        }
+      },
+      "decider": {
+        "track": "quality_v2",
+        "expected": 100,
+        "groups": 100,
+        "unattempted": 0,
+        "operations": {
+          "attempted": 100,
+          "valid": 100,
+          "invalid": 0,
+          "valid_fraction": 1.0,
+          "reported_cost_usd": 0.005706,
+          "openrouter_charged_cost_usd": 0.005706,
+          "openrouter_cost_complete": true,
+          "effective_provider_inference_cost_usd": 0.005706,
+          "known_effective_provider_inference_cost_usd": 0.005706,
+          "cost_complete": true,
+          "unknown_cost_count": 0,
+          "cost_per_attempt_usd": 5.706e-05,
+          "cost_per_valid_result_usd": 5.706e-05,
+          "cost_basis_counts": {
+            "openrouter_usage_cost": 100
+          },
+          "latency_count": 100,
+          "latency_p50_seconds": 1.0541433333419263,
+          "latency_p95_seconds": 1.3909890830982476
+        },
+        "objective": {
+          "name": "group_balanced_mean_reward",
+          "score": 0.8892664742214494,
+          "reward": "1 - absolute quality error / 4",
+          "invalid_or_unattempted_reward": 0
+        },
+        "metrics": {
+          "n_expected": 100,
+          "n_valid": 100,
+          "mae_valid": 0.4429341031142022,
+          "rmse_valid": 0.5158379916277334,
+          "spearman_valid": 0.9481665056666695,
+          "mae_invalid_or_unattempted_penalty4": 0.4429341031142022,
+          "bad_detection": {
+            "rule": "quality < 2.6",
+            "positive_class": "low_quality",
+            "valid_only": {
+              "confusion": {
+                "tp": 34,
+                "tn": 50,
+                "fp": 0,
+                "fn": 16
+              },
+              "accuracy": 0.84,
+              "balanced_accuracy": 0.8400000000000001,
+              "precision": 1.0,
+              "recall": 0.68,
+              "specificity": 1.0,
+              "false_positive_rate": 0.0,
+              "accuracy_wilson95_naive_independent_images": [
+                0.7557973061072976,
+                0.8990471151119521
+              ],
+              "recall_wilson95": [
+                0.5418970269185592,
+                0.7924178373934316
+              ],
+              "false_positive_rate_wilson95": [
+                6.938893903907228e-18,
+                0.07134759913335872
+              ],
+              "interval_note": "Accuracy Wilson interval is naive and assumes independent images; use whole-group bootstrap for grouped accuracy. Recall/FPR Wilson intervals assume independent observations within each class; sampling and source bias remain"
+            },
+            "accuracy_all_expected_invalid_as_wrong": 0.84
+          },
+          "native_mos_bins": {
+            "bad": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.36901200144331636
+            },
+            "poor": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.45904322911216205
+            },
+            "fair": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.45525635603599757
+            },
+            "good": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.48842482586533303
+            },
+            "excellent": {
+              "n": 0,
+              "valid": 0,
+              "mae_valid": null
+            }
+          },
+          "aesthetics": {
+            "scored_against_gold": false,
+            "reason": "No human aesthetic labels"
+          }
+        },
+        "group_bootstrap": {
+          "group_count": 100,
+          "replicates": 2000,
+          "seed": 20261011,
+          "method": "Resample whole source groups or matched pairs; intervals do not model source bias",
+          "intervals": {
+            "group_balanced_reward": {
+              "percentile95": [
+                0.875690460619646,
+                0.9022176121356492
+              ],
+              "valid_replicates": 2000
+            },
+            "accuracy_valid": {
+              "percentile95": [
+                0.76,
+                0.91
+              ],
+              "valid_replicates": 2000
+            },
+            "balanced_accuracy_valid": {
+              "percentile95": [
+                0.7719298245614035,
+                0.9019607843137255
+              ],
+              "valid_replicates": 2000
+            },
+            "mae_valid": {
+              "percentile95": [
+                0.39112955145740336,
+                0.49723815752141604
+              ],
+              "valid_replicates": 2000
+            },
+            "spearman_valid": {
+              "percentile95": [
+                0.9234153662961716,
+                0.9608276885738957
+              ],
+              "valid_replicates": 2000
+            }
+          }
+        }
+      },
+      "paired_valid_decider": {
+        "track": "quality_v2",
+        "expected": 100,
+        "groups": 100,
+        "unattempted": 0,
+        "operations": {
+          "attempted": 100,
+          "valid": 100,
+          "invalid": 0,
+          "valid_fraction": 1.0,
+          "reported_cost_usd": 0.005706,
+          "openrouter_charged_cost_usd": 0.005706,
+          "openrouter_cost_complete": true,
+          "effective_provider_inference_cost_usd": 0.005706,
+          "known_effective_provider_inference_cost_usd": 0.005706,
+          "cost_complete": true,
+          "unknown_cost_count": 0,
+          "cost_per_attempt_usd": 5.706e-05,
+          "cost_per_valid_result_usd": 5.706e-05,
+          "cost_basis_counts": {
+            "openrouter_usage_cost": 100
+          },
+          "latency_count": 100,
+          "latency_p50_seconds": 1.0541433333419263,
+          "latency_p95_seconds": 1.3909890830982476
+        },
+        "objective": {
+          "name": "group_balanced_mean_reward",
+          "score": 0.8892664742214494,
+          "reward": "1 - absolute quality error / 4",
+          "invalid_or_unattempted_reward": 0
+        },
+        "metrics": {
+          "n_expected": 100,
+          "n_valid": 100,
+          "mae_valid": 0.4429341031142022,
+          "rmse_valid": 0.5158379916277334,
+          "spearman_valid": 0.9481665056666695,
+          "mae_invalid_or_unattempted_penalty4": 0.4429341031142022,
+          "bad_detection": {
+            "rule": "quality < 2.6",
+            "positive_class": "low_quality",
+            "valid_only": {
+              "confusion": {
+                "tp": 34,
+                "tn": 50,
+                "fp": 0,
+                "fn": 16
+              },
+              "accuracy": 0.84,
+              "balanced_accuracy": 0.8400000000000001,
+              "precision": 1.0,
+              "recall": 0.68,
+              "specificity": 1.0,
+              "false_positive_rate": 0.0,
+              "accuracy_wilson95_naive_independent_images": [
+                0.7557973061072976,
+                0.8990471151119521
+              ],
+              "recall_wilson95": [
+                0.5418970269185592,
+                0.7924178373934316
+              ],
+              "false_positive_rate_wilson95": [
+                6.938893903907228e-18,
+                0.07134759913335872
+              ],
+              "interval_note": "Accuracy Wilson interval is naive and assumes independent images; use whole-group bootstrap for grouped accuracy. Recall/FPR Wilson intervals assume independent observations within each class; sampling and source bias remain"
+            },
+            "accuracy_all_expected_invalid_as_wrong": 0.84
+          },
+          "native_mos_bins": {
+            "bad": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.36901200144331636
+            },
+            "poor": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.45904322911216205
+            },
+            "fair": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.45525635603599757
+            },
+            "good": {
+              "n": 25,
+              "valid": 25,
+              "mae_valid": 0.48842482586533303
+            },
+            "excellent": {
+              "n": 0,
+              "valid": 0,
+              "mae_valid": null
+            }
+          },
+          "aesthetics": {
+            "scored_against_gold": false,
+            "reason": "No human aesthetic labels"
+          }
+        },
+        "group_bootstrap": {
+          "group_count": 100,
+          "replicates": 0,
+          "intervals": {}
+        }
+      },
+      "paired_valid_ids": [
+        "koniq-v2-000",
+        "koniq-v2-004",
+        "koniq-v2-006",
+        "koniq-v2-007",
+        "koniq-v2-015",
+        "koniq-v2-017",
+        "koniq-v2-019",
+        "koniq-v2-026",
+        "koniq-v2-027",
+        "koniq-v2-033",
+        "koniq-v2-034",
+        "koniq-v2-035",
+        "koniq-v2-036",
+        "koniq-v2-039",
+        "koniq-v2-041",
+        "koniq-v2-042",
+        "koniq-v2-043",
+        "koniq-v2-052",
+        "koniq-v2-058",
+        "koniq-v2-060",
+        "koniq-v2-061",
+        "koniq-v2-062",
+        "koniq-v2-066",
+        "koniq-v2-067",
+        "koniq-v2-068",
+        "koniq-v2-069",
+        "koniq-v2-071",
+        "koniq-v2-075",
+        "koniq-v2-076",
+        "koniq-v2-081",
+        "koniq-v2-086",
+        "koniq-v2-087",
+        "koniq-v2-088",
+        "koniq-v2-096",
+        "koniq-v2-104",
+        "koniq-v2-106",
+        "koniq-v2-107",
+        "koniq-v2-110",
+        "koniq-v2-116",
+        "koniq-v2-135",
+        "koniq-v2-142",
+        "koniq-v2-146",
+        "koniq-v2-149",
+        "koniq-v2-151",
+        "koniq-v2-152",
+        "koniq-v2-153",
+        "koniq-v2-156",
+        "koniq-v2-159",
+        "koniq-v2-162",
+        "koniq-v2-163",
+        "koniq-v2-164",
+        "koniq-v2-167",
+        "koniq-v2-168",
+        "koniq-v2-171",
+        "koniq-v2-172",
+        "koniq-v2-175",
+        "koniq-v2-177",
+        "koniq-v2-182",
+        "koniq-v2-186",
+        "koniq-v2-187",
+        "koniq-v2-190",
+        "koniq-v2-192",
+        "koniq-v2-194",
+        "koniq-v2-198",
+        "koniq-v2-199",
+        "koniq-v2-200",
+        "koniq-v2-203",
+        "koniq-v2-206",
+        "koniq-v2-209",
+        "koniq-v2-211",
+        "koniq-v2-214",
+        "koniq-v2-216",
+        "koniq-v2-224",
+        "koniq-v2-229",
+        "koniq-v2-236",
+        "koniq-v2-238",
+        "koniq-v2-255",
+        "koniq-v2-256",
+        "koniq-v2-260",
+        "koniq-v2-262",
+        "koniq-v2-268",
+        "koniq-v2-273",
+        "koniq-v2-276",
+        "koniq-v2-277",
+        "koniq-v2-279",
+        "koniq-v2-281",
+        "koniq-v2-284",
+        "koniq-v2-294",
+        "koniq-v2-295",
+        "koniq-v2-305",
+        "koniq-v2-308",
+        "koniq-v2-309",
+        "koniq-v2-313",
+        "koniq-v2-314",
+        "koniq-v2-325",
+        "koniq-v2-326",
+        "koniq-v2-330",
+        "koniq-v2-339",
+        "koniq-v2-345",
+        "koniq-v2-348"
+      ],
+      "paired_reward_delta": {
+        "n_images": 100,
+        "n_groups": 100,
+        "baseline_reward": 0.8892664742214494,
+        "selected_reward": 0.9404004785535441,
+        "selected_minus_baseline": 0.05113400433209471,
+        "paired_group_bootstrap95": [
+          0.038832058586735385,
+          0.06305712929577113
+        ],
+        "replicates": 2000,
+        "seed": 20261011,
+        "note": "The 0.005 development selection margin is not a test of statistical significance; bootstrap intervals do not cover source bias"
+      },
+      "baseline_metadata": {
+        "resolved_models": {
+          "perplexity/pplx-decider-v1.1-27b-20261006": 100
+        },
+        "requested_reasoning": {
+          "null": 100
+        },
+        "first_timestamp": "2026-10-11T20:39:36.149211+00:00",
+        "last_timestamp": "2026-10-11T20:44:12.633654+00:00",
+        "cost_basis": "Reported inference cost includes BYOK upstream charges where present"
+      }
+    },
+    "ai": {
+      "jev14": {
+        "track": "ai_detection_v2",
+        "expected": 160,
+        "groups": 20,
+        "unattempted": 0,
+        "operations": {
+          "attempted": 160,
+          "valid": 160,
+          "invalid": 0,
+          "valid_fraction": 1.0,
+          "reported_cost_usd": 0.011087748,
+          "openrouter_charged_cost_usd": 0.011087748,
+          "openrouter_cost_complete": true,
+          "effective_provider_inference_cost_usd": 0.011087748,
+          "known_effective_provider_inference_cost_usd": 0.011087748,
+          "cost_complete": true,
+          "unknown_cost_count": 0,
+          "cost_per_attempt_usd": 6.9298425e-05,
+          "cost_per_valid_result_usd": 6.9298425e-05,
+          "cost_basis_counts": {
+            "openrouter_usage_cost": 160
+          },
+          "latency_count": 160,
+          "latency_p50_seconds": 0.5863350828876719,
+          "latency_p95_seconds": 0.8881830000318587
+        },
+        "objective": {
+          "name": "group_balanced_mean_reward",
+          "score": 0.87621,
+          "reward": "1 - Brier loss",
+          "invalid_or_unattempted_reward": 0
+        },
+        "metrics": {
+          "n_expected": 160,
+          "n_valid": 160,
+          "threshold": 0.5,
+          "valid_only": {
+            "confusion": {
+              "tp": 64,
+              "tn": 77,
+              "fp": 3,
+              "fn": 16
+            },
+            "accuracy": 0.88125,
+            "balanced_accuracy": 0.8812500000000001,
+            "precision": 0.9552238805970149,
+            "recall": 0.8,
+            "specificity": 0.9625,
+            "false_positive_rate": 0.0375,
+            "accuracy_wilson95_naive_independent_images": [
+              0.8219771441876508,
+              0.9226451319940766
+            ],
+            "recall_wilson95": [
+              0.6995375627182917,
+              0.8729715595603921
+            ],
+            "false_positive_rate_wilson95": [
+              0.012834568919911402,
+              0.10454720090045115
+            ],
+            "interval_note": "Accuracy Wilson interval is naive and assumes independent images; use whole-group bootstrap for grouped accuracy. Recall/FPR Wilson intervals assume independent observations within each class; sampling and source bias remain"
+          },
+          "accuracy_all_expected_invalid_as_wrong": 0.88125,
+          "auroc_valid": 0.948203125,
+          "brier_valid": 0.12379,
+          "brier_invalid_or_unattempted_penalty1": 0.12379,
+          "review_band_open": [
+            0.2,
+            0.8
+          ],
+          "review_count_valid": 133,
+          "review_fraction_valid": 0.83125,
+          "automatic_coverage_all_expected": 0.16875,
+          "pairs": {
+            "expected": 0,
+            "valid": 0,
+            "both_correct": 0,
+            "both_correct_fraction_valid": null,
+            "both_correct_wilson95": null,
+            "ai_probability_higher_than_real": 0,
+            "ordering_fraction_valid": null
+          }
+        },
+        "group_bootstrap": {
+          "group_count": 20,
+          "replicates": 2000,
+          "seed": 20261011,
+          "method": "Resample whole source groups or matched pairs; intervals do not model source bias",
+          "intervals": {
+            "group_balanced_reward": {
+              "percentile95": [
+                0.85848125,
+                0.891129375
+              ],
+              "valid_replicates": 2000
+            },
+            "accuracy_valid": {
+              "percentile95": [
+                0.825,
+                0.93125
+              ],
+              "valid_replicates": 2000
+            },
+            "balanced_accuracy_valid": {
+              "percentile95": [
+                0.8390151515151515,
+                0.9211309523809523
+              ],
+              "valid_replicates": 2000
+            },
+            "brier_valid": {
+              "percentile95": [
+                0.108870625,
+                0.14151875
+              ],
+              "valid_replicates": 2000
+            },
+            "auroc_valid": {
+              "percentile95": [
+                0.898515625,
+                0.9809027777777778
+              ],
+              "valid_replicates": 2000
+            }
+          }
+        }
+      },
+      "decider": {
+        "track": "ai_detection_v2",
+        "expected": 160,
+        "groups": 20,
+        "unattempted": 0,
+        "operations": {
+          "attempted": 160,
+          "valid": 160,
+          "invalid": 0,
+          "valid_fraction": 1.0,
+          "reported_cost_usd": 0.0064096,
+          "openrouter_charged_cost_usd": 0.0064096,
+          "openrouter_cost_complete": true,
+          "effective_provider_inference_cost_usd": 0.0064096,
+          "known_effective_provider_inference_cost_usd": 0.0064096,
+          "cost_complete": true,
+          "unknown_cost_count": 0,
+          "cost_per_attempt_usd": 4.006e-05,
+          "cost_per_valid_result_usd": 4.006e-05,
+          "cost_basis_counts": {
+            "openrouter_usage_cost": 160
+          },
+          "latency_count": 160,
+          "latency_p50_seconds": 0.7376821460202336,
+          "latency_p95_seconds": 1.1364162499085069
+        },
+        "objective": {
+          "name": "group_balanced_mean_reward",
+          "score": 0.8404969988812718,
+          "reward": "1 - Brier loss",
+          "invalid_or_unattempted_reward": 0
+        },
+        "metrics": {
+          "n_expected": 160,
+          "n_valid": 160,
+          "threshold": 0.5,
+          "valid_only": {
+            "confusion": {
+              "tp": 43,
+              "tn": 80,
+              "fp": 0,
+              "fn": 37
+            },
+            "accuracy": 0.76875,
+            "balanced_accuracy": 0.76875,
+            "precision": 1.0,
+            "recall": 0.5375,
+            "specificity": 1.0,
+            "false_positive_rate": 0.0,
+            "accuracy_wilson95_naive_independent_images": [
+              0.6975811590318565,
+              0.8273165110634596
+            ],
+            "recall_wilson95": [
+              0.42904357591268794,
+              0.6425200643721475
+            ],
+            "false_positive_rate_wilson95": [
+              0.0,
+              0.0458181295355271
+            ],
+            "interval_note": "Accuracy Wilson interval is naive and assumes independent images; use whole-group bootstrap for grouped accuracy. Recall/FPR Wilson intervals assume independent observations within each class; sampling and source bias remain"
+          },
+          "accuracy_all_expected_invalid_as_wrong": 0.76875,
+          "auroc_valid": 0.94703125,
+          "brier_valid": 0.15950300111872823,
+          "brier_invalid_or_unattempted_penalty1": 0.15950300111872823,
+          "review_band_open": [
+            0.2,
+            0.8
+          ],
+          "review_count_valid": 47,
+          "review_fraction_valid": 0.29375,
+          "automatic_coverage_all_expected": 0.70625,
+          "pairs": {
+            "expected": 0,
+            "valid": 0,
+            "both_correct": 0,
+            "both_correct_fraction_valid": null,
+            "both_correct_wilson95": null,
+            "ai_probability_higher_than_real": 0,
+            "ordering_fraction_valid": null
+          }
+        },
+        "group_bootstrap": {
+          "group_count": 20,
+          "replicates": 2000,
+          "seed": 20261011,
+          "method": "Resample whole source groups or matched pairs; intervals do not model source bias",
+          "intervals": {
+            "group_balanced_reward": {
+              "percentile95": [
+                0.764286789787492,
+                0.9093814346297064
+              ],
+              "valid_replicates": 2000
+            },
+            "accuracy_valid": {
+              "percentile95": [
+                0.64375,
+                0.88125
+              ],
+              "valid_replicates": 2000
+            },
+            "balanced_accuracy_valid": {
+              "percentile95": [
+                0.7222222222222222,
+                0.825
+              ],
+              "valid_replicates": 2000
+            },
+            "brier_valid": {
+              "percentile95": [
+                0.09061856537029356,
+                0.23571321021250802
+              ],
+              "valid_replicates": 2000
+            },
+            "auroc_valid": {
+              "percentile95": [
+                0.9207356770833334,
+                0.9702953296703297
+              ],
+              "valid_replicates": 2000
+            }
+          }
+        }
+      },
+      "paired_valid_decider": {
+        "track": "ai_detection_v2",
+        "expected": 160,
+        "groups": 20,
+        "unattempted": 0,
+        "operations": {
+          "attempted": 160,
+          "valid": 160,
+          "invalid": 0,
+          "valid_fraction": 1.0,
+          "reported_cost_usd": 0.0064096,
+          "openrouter_charged_cost_usd": 0.0064096,
+          "openrouter_cost_complete": true,
+          "effective_provider_inference_cost_usd": 0.0064096,
+          "known_effective_provider_inference_cost_usd": 0.0064096,
+          "cost_complete": true,
+          "unknown_cost_count": 0,
+          "cost_per_attempt_usd": 4.006e-05,
+          "cost_per_valid_result_usd": 4.006e-05,
+          "cost_basis_counts": {
+            "openrouter_usage_cost": 160
+          },
+          "latency_count": 160,
+          "latency_p50_seconds": 0.7376821460202336,
+          "latency_p95_seconds": 1.1364162499085069
+        },
+        "objective": {
+          "name": "group_balanced_mean_reward",
+          "score": 0.8404969988812718,
+          "reward": "1 - Brier loss",
+          "invalid_or_unattempted_reward": 0
+        },
+        "metrics": {
+          "n_expected": 160,
+          "n_valid": 160,
+          "threshold": 0.5,
+          "valid_only": {
+            "confusion": {
+              "tp": 43,
+              "tn": 80,
+              "fp": 0,
+              "fn": 37
+            },
+            "accuracy": 0.76875,
+            "balanced_accuracy": 0.76875,
+            "precision": 1.0,
+            "recall": 0.5375,
+            "specificity": 1.0,
+            "false_positive_rate": 0.0,
+            "accuracy_wilson95_naive_independent_images": [
+              0.6975811590318565,
+              0.8273165110634596
+            ],
+            "recall_wilson95": [
+              0.42904357591268794,
+              0.6425200643721475
+            ],
+            "false_positive_rate_wilson95": [
+              0.0,
+              0.0458181295355271
+            ],
+            "interval_note": "Accuracy Wilson interval is naive and assumes independent images; use whole-group bootstrap for grouped accuracy. Recall/FPR Wilson intervals assume independent observations within each class; sampling and source bias remain"
+          },
+          "accuracy_all_expected_invalid_as_wrong": 0.76875,
+          "auroc_valid": 0.94703125,
+          "brier_valid": 0.15950300111872823,
+          "brier_invalid_or_unattempted_penalty1": 0.15950300111872823,
+          "review_band_open": [
+            0.2,
+            0.8
+          ],
+          "review_count_valid": 47,
+          "review_fraction_valid": 0.29375,
+          "automatic_coverage_all_expected": 0.70625,
+          "pairs": {
+            "expected": 0,
+            "valid": 0,
+            "both_correct": 0,
+            "both_correct_fraction_valid": null,
+            "both_correct_wilson95": null,
+            "ai_probability_higher_than_real": 0,
+            "ordering_fraction_valid": null
+          }
+        },
+        "group_bootstrap": {
+          "group_count": 20,
+          "replicates": 0,
+          "intervals": {}
+        }
+      },
+      "paired_valid_ids": [
+        "ai-dalle2-r00444b95t",
+        "ai-dalle2-r01a5f38at",
+        "ai-dalle2-r027a692ft",
+        "ai-dalle2-r038422cft",
+        "ai-dalle2-r0465565ct",
+        "ai-dalle2-r0487f5cet",
+        "ai-dalle2-r065a0da9t",
+        "ai-dalle2-r087a13a6t",
+        "ai-dalle2-r092b4511t",
+        "ai-dalle2-r09696ba3t",
+        "ai-dalle2-r0985dc6ct",
+        "ai-dalle2-r113ee9edt",
+        "ai-dalle2-r14556dabt",
+        "ai-dalle2-r14a595b6t",
+        "ai-dalle2-r16ea6386t",
+        "ai-dalle2-r18fafe10t",
+        "ai-dalle2-r1db5be20t",
+        "ai-dalle2-r1dea56e5t",
+        "ai-dalle2-r1df374c1t",
+        "ai-dalle2-r1e5c27c1t",
+        "ai-dalle3-r00444b95t",
+        "ai-dalle3-r01a5f38at",
+        "ai-dalle3-r027a692ft",
+        "ai-dalle3-r038422cft",
+        "ai-dalle3-r0465565ct",
+        "ai-dalle3-r0487f5cet",
+        "ai-dalle3-r065a0da9t",
+        "ai-dalle3-r087a13a6t",
+        "ai-dalle3-r092b4511t",
+        "ai-dalle3-r09696ba3t",
+        "ai-dalle3-r0985dc6ct",
+        "ai-dalle3-r113ee9edt",
+        "ai-dalle3-r14556dabt",
+        "ai-dalle3-r14a595b6t",
+        "ai-dalle3-r16ea6386t",
+        "ai-dalle3-r18fafe10t",
+        "ai-dalle3-r1db5be20t",
+        "ai-dalle3-r1dea56e5t",
+        "ai-dalle3-r1df374c1t",
+        "ai-dalle3-r1e5c27c1t",
+        "ai-firefly-r00444b95t",
+        "ai-firefly-r01a5f38at",
+        "ai-firefly-r027a692ft",
+        "ai-firefly-r038422cft",
+        "ai-firefly-r0465565ct",
+        "ai-firefly-r0487f5cet",
+        "ai-firefly-r065a0da9t",
+        "ai-firefly-r087a13a6t",
+        "ai-firefly-r092b4511t",
+        "ai-firefly-r09696ba3t",
+        "ai-firefly-r0985dc6ct",
+        "ai-firefly-r113ee9edt",
+        "ai-firefly-r14556dabt",
+        "ai-firefly-r14a595b6t",
+        "ai-firefly-r16ea6386t",
+        "ai-firefly-r18fafe10t",
+        "ai-firefly-r1db5be20t",
+        "ai-firefly-r1dea56e5t",
+        "ai-firefly-r1df374c1t",
+        "ai-firefly-r1e5c27c1t",
+        "ai-midjourney-v5-r00444b95t",
+        "ai-midjourney-v5-r01a5f38at",
+        "ai-midjourney-v5-r027a692ft",
+        "ai-midjourney-v5-r038422cft",
+        "ai-midjourney-v5-r0465565ct",
+        "ai-midjourney-v5-r0487f5cet",
+        "ai-midjourney-v5-r065a0da9t",
+        "ai-midjourney-v5-r087a13a6t",
+        "ai-midjourney-v5-r092b4511t",
+        "ai-midjourney-v5-r09696ba3t",
+        "ai-midjourney-v5-r0985dc6ct",
+        "ai-midjourney-v5-r113ee9edt",
+        "ai-midjourney-v5-r14556dabt",
+        "ai-midjourney-v5-r14a595b6t",
+        "ai-midjourney-v5-r16ea6386t",
+        "ai-midjourney-v5-r18fafe10t",
+        "ai-midjourney-v5-r1db5be20t",
+        "ai-midjourney-v5-r1dea56e5t",
+        "ai-midjourney-v5-r1df374c1t",
+        "ai-midjourney-v5-r1e5c27c1t",
+        "vision-D01_I_nat_0042",
+        "vision-D01_I_nat_0043",
+        "vision-D01_I_nat_0098",
+        "vision-D01_I_nat_0107",
+        "vision-D01_I_nat_0118",
+        "vision-D01_I_nat_0128",
+        "vision-D01_I_nat_0162",
+        "vision-D01_I_nat_0183",
+        "vision-D04_I_nat_0005",
+        "vision-D04_I_nat_0028",
+        "vision-D04_I_nat_0054",
+        "vision-D04_I_nat_0146",
+        "vision-D04_I_nat_0148",
+        "vision-D04_I_nat_0174",
+        "vision-D04_I_nat_0186",
+        "vision-D04_I_nat_0197",
+        "vision-D08_I_nat_0021",
+        "vision-D08_I_nat_0027",
+        "vision-D08_I_nat_0059",
+        "vision-D08_I_nat_0065",
+        "vision-D08_I_nat_0084",
+        "vision-D08_I_nat_0135",
+        "vision-D08_I_nat_0145",
+        "vision-D08_I_nat_0157",
+        "vision-D12_I_nat_0074",
+        "vision-D12_I_nat_0108",
+        "vision-D12_I_nat_0137",
+        "vision-D12_I_nat_0141",
+        "vision-D12_I_nat_0158",
+        "vision-D12_I_nat_0183",
+        "vision-D12_I_nat_0200",
+        "vision-D12_I_nat_0207",
+        "vision-D13_I_nat_0022",
+        "vision-D13_I_nat_0044",
+        "vision-D13_I_nat_0059",
+        "vision-D13_I_nat_0083",
+        "vision-D13_I_nat_0090",
+        "vision-D13_I_nat_0095",
+        "vision-D13_I_nat_0115",
+        "vision-D13_I_nat_0120",
+        "vision-D15_I_nat_0027",
+        "vision-D15_I_nat_0063",
+        "vision-D15_I_nat_0067",
+        "vision-D15_I_nat_0070",
+        "vision-D15_I_nat_0085",
+        "vision-D15_I_nat_0141",
+        "vision-D15_I_nat_0201",
+        "vision-D15_I_nat_0204",
+        "vision-D20_I_nat_0012",
+        "vision-D20_I_nat_0023",
+        "vision-D20_I_nat_0026",
+        "vision-D20_I_nat_0045",
+        "vision-D20_I_nat_0102",
+        "vision-D20_I_nat_0111",
+        "vision-D20_I_nat_0115",
+        "vision-D20_I_nat_0124",
+        "vision-D21_I_nat_0041",
+        "vision-D21_I_nat_0095",
+        "vision-D21_I_nat_0096",
+        "vision-D21_I_nat_0158",
+        "vision-D21_I_nat_0188",
+        "vision-D21_I_nat_0211",
+        "vision-D21_I_nat_0224",
+        "vision-D21_I_nat_0249",
+        "vision-D31_I_nat_0019",
+        "vision-D31_I_nat_0024",
+        "vision-D31_I_nat_0046",
+        "vision-D31_I_nat_0054",
+        "vision-D31_I_nat_0078",
+        "vision-D31_I_nat_0126",
+        "vision-D31_I_nat_0212",
+        "vision-D31_I_nat_0214",
+        "vision-D33_I_nat_0025",
+        "vision-D33_I_nat_0046",
+        "vision-D33_I_nat_0076",
+        "vision-D33_I_nat_0082",
+        "vision-D33_I_nat_0085",
+        "vision-D33_I_nat_0100",
+        "vision-D33_I_nat_0102",
+        "vision-D33_I_nat_0107"
+      ],
+      "paired_reward_delta": {
+        "n_images": 160,
+        "n_groups": 20,
+        "baseline_reward": 0.8404969988812718,
+        "selected_reward": 0.87621,
+        "selected_minus_baseline": 0.03571300111872821,
+        "paired_group_bootstrap95": [
+          -0.02617823815269975,
+          0.10258266992384582
+        ],
+        "replicates": 2000,
+        "seed": 20261011,
+        "note": "The 0.005 development selection margin is not a test of statistical significance; bootstrap intervals do not cover source bias"
+      },
+      "baseline_metadata": {
+        "resolved_models": {
+          "perplexity/pplx-decider-v1.1-27b-20261006": 160
+        },
+        "requested_reasoning": {
+          "null": 160
+        },
+        "first_timestamp": "2026-10-12T08:47:15.248707+00:00",
+        "last_timestamp": "2026-10-12T08:53:34.718541+00:00",
+        "cost_basis": "Reported inference cost includes BYOK upstream charges where present"
+      }
+    }
+  },
+  "fixed_gates": {
+    "shared": {
+      "jev14": {
+        "accept": {
+          "real": 0,
+          "ai": 0
+        },
+        "review": {
+          "real": 30,
+          "ai": 14
+        },
+        "reject": {
+          "real": 0,
+          "ai": 16
+        },
+        "invalid": {
+          "real": 0,
+          "ai": 0
+        }
+      },
+      "decider": {
+        "accept": {
+          "real": 29,
+          "ai": 8
+        },
+        "review": {
+          "real": 1,
+          "ai": 10
+        },
+        "reject": {
+          "real": 0,
+          "ai": 12
+        },
+        "invalid": {
+          "real": 0,
+          "ai": 0
+        }
+      },
+      "luna": {
+        "accept": {
+          "real": 30,
+          "ai": 6
+        },
+        "review": {
+          "real": 0,
+          "ai": 12
+        },
+        "reject": {
+          "real": 0,
+          "ai": 12
+        },
+        "invalid": {
+          "real": 0,
+          "ai": 0
+        }
+      }
+    },
+    "latest": {
+      "jev14": {
+        "accept": {
+          "real": 5,
+          "ai": 0
+        },
+        "review": {
+          "real": 75,
+          "ai": 58
+        },
+        "reject": {
+          "real": 0,
+          "ai": 22
+        },
+        "invalid": {
+          "real": 0,
+          "ai": 0
+        }
+      },
+      "decider": {
+        "accept": {
+          "real": 76,
+          "ai": 14
+        },
+        "review": {
+          "real": 4,
+          "ai": 43
+        },
+        "reject": {
+          "real": 0,
+          "ai": 23
+        },
+        "invalid": {
+          "real": 0,
+          "ai": 0
+        }
+      }
+    }
+  },
+  "failures": []
+}

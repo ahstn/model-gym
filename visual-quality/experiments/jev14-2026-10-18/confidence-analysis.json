@@ -1,0 +1,498 @@
+{
+  "analysis_date": "2026-10-18",
+  "analysis_type": "post_hoc_descriptive_confidence_audit",
+  "model": "typesafe/jev-1.14-20261014",
+  "ledger_path": "visual-quality/data/jev14-2026-10-18/attempts.jsonl",
+  "ledger_sha256": "821f5deef725af4910b5ec50276a2b4b90addd2b455cb71df4a368a4430bc5d5",
+  "sources": [
+    {
+      "url": "https://docs.typesafe.ai/confidence",
+      "scope": "Native confidence is derived from the answer distribution, not a separate probability of correctness."
+    },
+    {
+      "url": "https://docs.typesafe.ai/primitives/noul",
+      "scope": "Noul returns a probability, with no separate native confidence field."
+    }
+  ],
+  "semantics": {
+    "ai_probability": "The model estimate of generative AI origin; not verified provenance and not a calibrated correctness guarantee.",
+    "native_choice_confidence": "Confidence in the selected choice for that question, derived from its option probabilities. High confidence in uncertainty=high means strong support for being uncertain.",
+    "uncertainty": "A separately requested origin-uncertainty choice: low, medium, or high.",
+    "optional_noul_confidence": "The transform abs(2*p-1) can be derived from p, but was not returned and adds no independent information.",
+    "routing": "Flag candidates require review. Removing a flag does not establish real origin; filtered cases remain unresolved for review."
+  },
+  "limitations": [
+    "These are observed counts on the evaluated sets, not a validated operating threshold or a held-out calibration result.",
+    "The 0.8 probability threshold was already specified in the run report; the uncertainty combinations are post-hoc descriptive checks.",
+    "Zero false flags in 80 or 30 real photos does not establish a zero population false-positive rate.",
+    "The shared and latest panels are separate evaluations; do not pool their rates or assume source independence.",
+    "No new model calls, prompt changes, calibration, or threshold fitting were performed."
+  ],
+  "panels": {
+    "latest": {
+      "valid_responses": 160,
+      "gold_counts": {
+        "ai": 80,
+        "real": 80
+      },
+      "raw_field_coverage": {
+        "ai_probability": {
+          "responses": 160,
+          "native_confidence_present": 0,
+          "probabilities_present": 0
+        },
+        "medium": {
+          "responses": 160,
+          "native_confidence_present": 160,
+          "probabilities_present": 160
+        },
+        "uncertainty": {
+          "responses": 160,
+          "native_confidence_present": 160,
+          "probabilities_present": 160
+        }
+      },
+      "uncertainty_counts": {
+        "high": 132,
+        "low": 21,
+        "medium": 7
+      },
+      "false_positives_at_0_5": [
+        {
+          "row_id": "latest/primary/ai/vision-D21_I_nat_0041",
+          "sample": "vision-D21_I_nat_0041",
+          "gold_ai_generated": false,
+          "answers": {
+            "ai_probability": {
+              "type": "noul",
+              "noul": 0.59
+            },
+            "medium": {
+              "type": "choice",
+              "choice": "photo",
+              "probabilities": {
+                "photo": 0.72,
+                "render": 0.26,
+                "graphic": 0,
+                "unknown": 0.02
+              },
+              "confidence": 0.63
+            },
+            "uncertainty": {
+              "type": "choice",
+              "choice": "high",
+              "probabilities": {
+                "low": 0.13,
+                "medium": 0.33,
+                "high": 0.54
+              },
+              "confidence": 0.31
+            }
+          }
+        },
+        {
+          "row_id": "latest/primary/ai/vision-D12_I_nat_0141",
+          "sample": "vision-D12_I_nat_0141",
+          "gold_ai_generated": false,
+          "answers": {
+            "ai_probability": {
+              "type": "noul",
+              "noul": 0.58
+            },
+            "medium": {
+              "type": "choice",
+              "choice": "photo",
+              "probabilities": {
+                "photo": 0.7,
+                "render": 0.18,
+                "graphic": 0.02,
+                "unknown": 0.1
+              },
+              "confidence": 0.6
+            },
+            "uncertainty": {
+              "type": "choice",
+              "choice": "high",
+              "probabilities": {
+                "low": 0.06,
+                "medium": 0.26,
+                "high": 0.68
+              },
+              "confidence": 0.52
+            }
+          }
+        },
+        {
+          "row_id": "latest/primary/ai/vision-D04_I_nat_0005",
+          "sample": "vision-D04_I_nat_0005",
+          "gold_ai_generated": false,
+          "answers": {
+            "ai_probability": {
+              "type": "noul",
+              "noul": 0.56
+            },
+            "medium": {
+              "type": "choice",
+              "choice": "photo",
+              "probabilities": {
+                "photo": 0.82,
+                "render": 0.17,
+                "graphic": 0,
+                "unknown": 0.01
+              },
+              "confidence": 0.76
+            },
+            "uncertainty": {
+              "type": "choice",
+              "choice": "high",
+              "probabilities": {
+                "low": 0.11,
+                "medium": 0.36,
+                "high": 0.53
+              },
+              "confidence": 0.3
+            }
+          }
+        }
+      ],
+      "descriptive_rules": [
+        {
+          "id": "binary_threshold_0_5",
+          "rule": "AI probability >= 0.5",
+          "ai_flag_candidates": 64,
+          "real_false_flag_candidates": 3,
+          "ai_total": 80,
+          "real_total": 80,
+          "ai_recall": 0.8,
+          "real_false_positive_rate": 0.0375,
+          "flag_candidates_total": 67,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 0,
+            "real": 0
+          }
+        },
+        {
+          "id": "fixed_threshold_0_8",
+          "rule": "AI probability >= 0.8",
+          "ai_flag_candidates": 22,
+          "real_false_flag_candidates": 0,
+          "ai_total": 80,
+          "real_total": 80,
+          "ai_recall": 0.275,
+          "real_false_positive_rate": 0.0,
+          "flag_candidates_total": 22,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 42,
+            "real": 3
+          }
+        },
+        {
+          "id": "threshold_0_5_without_high_uncertainty",
+          "rule": "AI probability >= 0.5 and uncertainty is not high",
+          "ai_flag_candidates": 28,
+          "real_false_flag_candidates": 0,
+          "ai_total": 80,
+          "real_total": 80,
+          "ai_recall": 0.35,
+          "real_false_positive_rate": 0.0,
+          "flag_candidates_total": 28,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 36,
+            "real": 3
+          }
+        },
+        {
+          "id": "threshold_0_5_low_uncertainty",
+          "rule": "AI probability >= 0.5 and uncertainty is low",
+          "ai_flag_candidates": 21,
+          "real_false_flag_candidates": 0,
+          "ai_total": 80,
+          "real_total": 80,
+          "ai_recall": 0.2625,
+          "real_false_positive_rate": 0.0,
+          "flag_candidates_total": 21,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 43,
+            "real": 3
+          }
+        },
+        {
+          "id": "threshold_0_8_without_high_uncertainty",
+          "rule": "AI probability >= 0.8 and uncertainty is not high",
+          "ai_flag_candidates": 19,
+          "real_false_flag_candidates": 0,
+          "ai_total": 80,
+          "real_total": 80,
+          "ai_recall": 0.2375,
+          "real_false_positive_rate": 0.0,
+          "flag_candidates_total": 19,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 45,
+            "real": 3
+          }
+        },
+        {
+          "id": "threshold_0_8_low_uncertainty",
+          "rule": "AI probability >= 0.8 and uncertainty is low",
+          "ai_flag_candidates": 18,
+          "real_false_flag_candidates": 0,
+          "ai_total": 80,
+          "real_total": 80,
+          "ai_recall": 0.225,
+          "real_false_positive_rate": 0.0,
+          "flag_candidates_total": 18,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 46,
+            "real": 3
+          }
+        }
+      ],
+      "existing_probability_gates": {
+        "accept": {
+          "ai": 0,
+          "real": 5
+        },
+        "review": {
+          "ai": 58,
+          "real": 75
+        },
+        "reject": {
+          "ai": 22,
+          "real": 0
+        }
+      }
+    },
+    "shared": {
+      "valid_responses": 60,
+      "gold_counts": {
+        "ai": 30,
+        "real": 30
+      },
+      "raw_field_coverage": {
+        "ai_probability": {
+          "responses": 60,
+          "native_confidence_present": 0,
+          "probabilities_present": 0
+        },
+        "medium": {
+          "responses": 60,
+          "native_confidence_present": 60,
+          "probabilities_present": 60
+        },
+        "uncertainty": {
+          "responses": 60,
+          "native_confidence_present": 60,
+          "probabilities_present": 60
+        }
+      },
+      "uncertainty_counts": {
+        "high": 57,
+        "medium": 3
+      },
+      "false_positives_at_0_5": [
+        {
+          "row_id": "shared/primary/ai/ai-018",
+          "sample": "ai-018",
+          "gold_ai_generated": false,
+          "answers": {
+            "ai_probability": {
+              "type": "noul",
+              "noul": 0.51
+            },
+            "medium": {
+              "type": "choice",
+              "choice": "photo",
+              "probabilities": {
+                "photo": 0.8,
+                "render": 0.2,
+                "graphic": 0,
+                "unknown": 0
+              },
+              "confidence": 0.73
+            },
+            "uncertainty": {
+              "type": "choice",
+              "choice": "high",
+              "probabilities": {
+                "low": 0.03,
+                "medium": 0.31,
+                "high": 0.66
+              },
+              "confidence": 0.49
+            }
+          }
+        },
+        {
+          "row_id": "shared/primary/ai/ai-040",
+          "sample": "ai-040",
+          "gold_ai_generated": false,
+          "answers": {
+            "ai_probability": {
+              "type": "noul",
+              "noul": 0.54
+            },
+            "medium": {
+              "type": "choice",
+              "choice": "photo",
+              "probabilities": {
+                "photo": 0.9,
+                "render": 0.09,
+                "graphic": 0,
+                "unknown": 0.01
+              },
+              "confidence": 0.87
+            },
+            "uncertainty": {
+              "type": "choice",
+              "choice": "high",
+              "probabilities": {
+                "low": 0.02,
+                "medium": 0.27,
+                "high": 0.71
+              },
+              "confidence": 0.56
+            }
+          }
+        },
+        {
+          "row_id": "shared/primary/ai/ai-054",
+          "sample": "ai-054",
+          "gold_ai_generated": false,
+          "answers": {
+            "ai_probability": {
+              "type": "noul",
+              "noul": 0.6
+            },
+            "medium": {
+              "type": "choice",
+              "choice": "photo",
+              "probabilities": {
+                "photo": 0.93,
+                "render": 0.07,
+                "graphic": 0,
+                "unknown": 0
+              },
+              "confidence": 0.91
+            },
+            "uncertainty": {
+              "type": "choice",
+              "choice": "high",
+              "probabilities": {
+                "low": 0.1,
+                "medium": 0.41,
+                "high": 0.49
+              },
+              "confidence": 0.23
+            }
+          }
+        }
+      ],
+      "descriptive_rules": [
+        {
+          "id": "binary_threshold_0_5",
+          "rule": "AI probability >= 0.5",
+          "ai_flag_candidates": 30,
+          "real_false_flag_candidates": 3,
+          "ai_total": 30,
+          "real_total": 30,
+          "ai_recall": 1.0,
+          "real_false_positive_rate": 0.1,
+          "flag_candidates_total": 33,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 0,
+            "real": 0
+          }
+        },
+        {
+          "id": "fixed_threshold_0_8",
+          "rule": "AI probability >= 0.8",
+          "ai_flag_candidates": 16,
+          "real_false_flag_candidates": 0,
+          "ai_total": 30,
+          "real_total": 30,
+          "ai_recall": 0.5333333333333333,
+          "real_false_positive_rate": 0.0,
+          "flag_candidates_total": 16,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 14,
+            "real": 3
+          }
+        },
+        {
+          "id": "threshold_0_5_without_high_uncertainty",
+          "rule": "AI probability >= 0.5 and uncertainty is not high",
+          "ai_flag_candidates": 3,
+          "real_false_flag_candidates": 0,
+          "ai_total": 30,
+          "real_total": 30,
+          "ai_recall": 0.1,
+          "real_false_positive_rate": 0.0,
+          "flag_candidates_total": 3,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 27,
+            "real": 3
+          }
+        },
+        {
+          "id": "threshold_0_5_low_uncertainty",
+          "rule": "AI probability >= 0.5 and uncertainty is low",
+          "ai_flag_candidates": 0,
+          "real_false_flag_candidates": 0,
+          "ai_total": 30,
+          "real_total": 30,
+          "ai_recall": 0.0,
+          "real_false_positive_rate": 0.0,
+          "flag_candidates_total": 0,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 30,
+            "real": 3
+          }
+        },
+        {
+          "id": "threshold_0_8_without_high_uncertainty",
+          "rule": "AI probability >= 0.8 and uncertainty is not high",
+          "ai_flag_candidates": 2,
+          "real_false_flag_candidates": 0,
+          "ai_total": 30,
+          "real_total": 30,
+          "ai_recall": 0.06666666666666667,
+          "real_false_positive_rate": 0.0,
+          "flag_candidates_total": 2,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 28,
+            "real": 3
+          }
+        },
+        {
+          "id": "threshold_0_8_low_uncertainty",
+          "rule": "AI probability >= 0.8 and uncertainty is low",
+          "ai_flag_candidates": 0,
+          "real_false_flag_candidates": 0,
+          "ai_total": 30,
+          "real_total": 30,
+          "ai_recall": 0.0,
+          "real_false_positive_rate": 0.0,
+          "flag_candidates_total": 0,
+          "removed_from_0_5_flags_for_review": {
+            "ai": 30,
+            "real": 3
+          }
+        }
+      ],
+      "existing_probability_gates": {
+        "accept": {
+          "ai": 0,
+          "real": 0
+        },
+        "review": {
+          "ai": 14,
+          "real": 30
+        },
+        "reject": {
+          "ai": 16,
+          "real": 0
+        }
+      }
+    }
+  }
+}
