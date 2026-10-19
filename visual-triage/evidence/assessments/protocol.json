@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-11",
+  "status": "Frozen before expanded model calls",
+  "development_reference": "original-30.json",
+  "tune_ids": ["sample-000","sample-001","sample-002","sample-003","sample-004","sample-005","sample-006","sample-007","sample-012","sample-013","sample-015","sample-016","sample-018","sample-020","sample-022","sample-024","sample-025","sample-026","sample-027","sample-028","sample-029"],
+  "check_ids": ["sample-008","sample-009","sample-010","sample-011","sample-014","sample-017","sample-019","sample-021","sample-023"],
+  "effort_pilot_ids": ["sample-000","sample-003","sample-004","sample-007","sample-012","sample-015","sample-018","sample-020","sample-024","sample-025","sample-027","sample-029"],
+  "prompt_rounds": 4,
+  "prompt_scope": "General rubric changes only. No names, example scores, generator identifiers or held-out labels in prompts.",
+  "quality_selection": "After all four tune rounds, evaluate unchanged prompts on check9. Minimize group-balanced mean MAE across quality and aesthetics; invalid scalars cost4. Within0.05 choose shorter prompt, then lower cost.",
+  "ai_selection": "Report all four rounds against own visual suspicion; no recall tuning on six shared-prompt positives. Freeze general round4 unless development evidence shows a clear regression. No heldout threshold fitting.",
+  "effort_selection": "Compare low and medium on the12 fixed development images for each task/model, alternating effort order by image. Select low unless medium improves quality+aesthetics MAE by at least0.10 without worse valid coverage. Inspect AI error tradeoffs as guard, not independent provenance accuracy.",
+  "heldout": "60 different quality/aesthetics images plus60 separate AI-origin images. All three models receive same bytes. Freeze prompts and effort before opening heldout model outcomes.",
+  "delivery": "Full frame, EXIF orientation, RGB, maxedge512, no upscaling, JPEG92 subsampling0.",
+  "ai_threshold": 0.5,
+  "ai_review_band": [0.2,0.8],
+  "limitations": "Own original assessments were not blind to prior session predictions. Check9 has noAI positives. New model-reference labels are not human gold. Similar effort names do not imply equal compute. Source-pretraining overlap cannot be ruled out."
+}

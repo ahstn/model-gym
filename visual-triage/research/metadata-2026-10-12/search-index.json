@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-12",
+  "sources_reviewed": 130,
+  "count_definition": "Sum of requested Exa numResults across searches; not a count of unique or verified sources. Fetches excluded.",
+  "workstreams": [
+    {
+      "name": "native real data",
+      "requested_result_slots": 40,
+      "note": "real-sources.md"
+    },
+    {
+      "name": "native generated data",
+      "requested_result_slots": 40,
+      "note": "ai-sources.md"
+    },
+    {
+      "name": "C2PA validation",
+      "requested_result_slots": 25,
+      "note": "c2pa-sources.md"
+    },
+    {
+      "name": "AIDE paper and design",
+      "requested_result_slots": 15,
+      "note": "paper-and-design.md"
+    },
+    {
+      "name": "parent native credential discovery",
+      "requested_result_slots": 5,
+      "note": "C2PA vendor samples and TrustMyContent corroboration"
+    },
+    {
+      "name": "transport charge reconciliation",
+      "requested_result_slots": 5,
+      "note": "Primary OpenRouter generation lookup requires generation ID; daily activity API requires management key and does not identify the failed request."
+    }
+  ],
+  "hugging_face": {
+    "repository_details": "Available and used",
+    "dataset_search": "Connector unavailable; official public Hub API fallback used",
+    "paper_metadata": "Official HF paper API used"
+  },
+  "raw_evidence": "data/metadata-v3/research/ (ignored)",
+  "no_gated_access_terms_accepted": true
+}

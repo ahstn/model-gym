@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "created_at": "2026-10-11T16:46:22.696573+00:00",
+  "track": "quality",
+  "dataset_path": "tracks/quality/dataset.json",
+  "dataset_sha256": "0e99ab11bd939e35aab7e33a7f1ad87221950a03e5d669192068e28f439fa5f3",
+  "baseline_prompt_path": "tracks/quality/prompts/baseline.json",
+  "baseline_prompt_sha256": "0f6f9b4640bf26d534636448882a2d5c028d77a8dec31246601547110a0ffc81",
+  "task": "quality",
+  "model_alias": "decider",
+  "model_id": "perplexity/pplx-decider-v1.1-27b",
+  "reasoning_effort": "not exposed",
+  "max_output_tokens": 4096,
+  "split_counts": {
+    "test": 80,
+    "dev": 40,
+    "train": 40
+  },
+  "quality_bad_rule": "quality < 2.6",
+  "ai_rule": "ai_probability >= 0.5",
+  "review_band_open": [
+    0.2,
+    0.8
+  ],
+  "selection": "Best dev group-balanced mean reward; require gain >= 0.005 over baseline, otherwise retain baseline",
+  "minimum_gain": 0.005,
+  "context_only_mutation": true,
+  "limits": "Local run budget at most $2; parent controls the overall experiment budget"
+}

@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "created_at": "2026-10-11T20:03:49.270068+00:00",
+  "track": "quality_v2",
+  "dataset_path": "tracks/quality_v2/dataset.json",
+  "dataset_sha256": "5f249c036ce445ea0b91ffa472176b66cfee64644b6fc071129da41afbfa4d9f",
+  "baseline_prompt_path": "tracks/quality_v2/prompts/baseline.json",
+  "baseline_prompt_sha256": "0f6f9b4640bf26d534636448882a2d5c028d77a8dec31246601547110a0ffc81",
+  "task": "quality",
+  "model_alias": "decider",
+  "model_id": "perplexity/pplx-decider-v1.1-27b",
+  "reasoning_effort": "not exposed",
+  "max_output_tokens": 4096,
+  "split_counts": {
+    "test": 100,
+    "dev": 100,
+    "train": 150
+  },
+  "quality_bad_rule": "quality < 2.6",
+  "ai_rule": "ai_probability >= 0.5",
+  "review_band_open": [
+    0.2,
+    0.8
+  ],
+  "selection": "Best dev group-balanced mean reward; require gain >= 0.005 over baseline, otherwise retain baseline",
+  "minimum_gain": 0.005,
+  "context_only_mutation": false,
+  "limits": "Track total at most $5, including optimisation, reflection and final calls",
+  "track_budget_usd": 5.0,
+  "context_mode": "image_only",
+  "label_direction": "higher quality is better; AI probability means generated origin",
+  "max_proposals": 20
+}

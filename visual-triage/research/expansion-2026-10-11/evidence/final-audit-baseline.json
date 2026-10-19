@@ -1,0 +1,14 @@
+{
+  "tracks/quality/report/per-image.md": "387c48430fb48cf5e37610c35673acd4cb2f056ebad4f2657858111f589d6981",
+  "tracks/quality/report/report.json": "c7a0f4c526224195cc52485da235562c704a74a03956be44beffe27e8ed83937",
+  "tracks/quality/report/README.md": "b959f42f585af592f198ddd968c4a242b28c11a052c1bf29de21ccac62712a9b",
+  "tracks/ai_detection/report/per-image.md": "59142099595bc79f525651ead34e5041568d4cd69b98cd2727d58a2b53a80a4d",
+  "tracks/ai_detection/report/report.json": "dbcf827f76cc3c82dd2aa17f669ce59cedcba75bd04482b577e7ffdf67a51249",
+  "tracks/ai_detection/report/README.md": "085d14772fa851418dafd7795650ee2e8c5c756545e7dab36d50ab1e529c6354",
+  "tracks/quality_v2/protocol.json": "c9e8ddb793186d5a6126de26c210afc394e28a623bbaaf7777f8770b2266361c",
+  "tracks/quality_v2/ablation-plan.json": "25a9e92ebed83fd0c865fdd650cae44144a706c95057ffd51b2679a1c5ea1d5e",
+  "tracks/quality_v2/optimisation/run.json": "663ddfbe38bfd07ea412678798f5d1dff0082b11af522ddf74557a06e850aa3a",
+  "tracks/ai_detection_v2/protocol.json": "8ecdcf6b0b06bcd4af10c8f3acd007d4263c6532865bebb57c486a2a9aa26fc9",
+  "tracks/ai_detection_v2/ablation-plan.json": "873bf0cd8b84602cd44998d664d60a7c156814aa8f5920169eb9b214c17a8fa8",
+  "tracks/ai_detection_v2/optimisation/run.json": "e54c1ae4ac537b4d97cdb367710817642ef511083dbd01237d0e8c250a5de144"
+}
