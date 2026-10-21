@@ -1,6 +1,8 @@
 # Visual triage
 
-**The metadata trial is complete. C2PA helped where it was present, but covered only a quarter of the AI test images.** All 3,480 native and control requests succeeded. Each feature group used 20 GEPA proposals before evaluation on 160 held-out images.
+**Jev 1.14 completed the latest 100 quality and 160 AI cases.** With the same images and selected prompts as Decider, its human quality error fell from 0.443 to 0.236, and AI accuracy rose from 76.9% to 89.4%. It detected 67/80 AI images but falsely flagged 4/80 real photos. The run cost $0.02455; median latency was 0.792 s for quality and 0.563 s for AI. Read the [comparison and per-image results](tracks/jev14/latest-results-2026-10-15/README.md). Human aesthetic labels remain absent.
+
+The previous metadata trial is also complete. C2PA helped where it was present, but covered only a quarter of the AI test images. All 3,480 native and control requests succeeded. Each feature group used 20 GEPA proposals before evaluation on 160 held-out images.
 
 | Selected prompt | Accuracy | AI detected | Brier loss | Cost / 160 images | Median latency |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -13,7 +15,9 @@ Only 20 of 80 AI images had signed AI claims that passed signature and image-bin
 
 In separate controls on those Firefly images, removing C2PA reduced detections from 15/20 to 3/20 for the provenance prompt, and from 10/20 to 4/20 for all context. This supports C2PA as useful evidence when present. Missing credentials do not prove camera origin. Camera-value swaps also increased probability error; controls remain separate from native results.
 
+- [Jev 1.14 image trial](tracks/jev14/README.md): latest 260-case comparison, separate Luna/Gemini panel, size probes and run commands.
 - [Native metadata trial](tracks/metadata_v3/report.md): seven feature groups, GEPA, EXIF/C2PA controls, costs and latency; [per-image results](tracks/metadata_v3/results/cases.csv) and [request audit](tracks/metadata_v3/results/request-audit.json).
+- [OpenAI provenance check](tracks/openai_provenance/partial-2026-10-12/report.md): 15 valid native-image checks, then a rate-limit stop. No supported OpenAI signals were found; two Firefly files retained valid Adobe C2PA. This partial run cannot rank general AI detectors.
 - [Extended validation](EXTENDED-VALIDATION.md): earlier quality and AI results, pixel-statistic tests and next steps.
 - [Dataset and method research](research/expansion-2026-10-11/README.md): new sources, the Awesome IQA catalogue, licences and research leads.
 - [Separate tracks](tracks/README.md): datasets, objectives, saved evidence and run commands.

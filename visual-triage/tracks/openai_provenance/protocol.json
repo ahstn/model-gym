@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "study": "openai-native-provenance-v1",
+  "frozen_at": "2026-10-12T14:17:30.795091+00:00",
+  "endpoint": "https://api.openai.com/v1/content_provenance_checks",
+  "source_protocol_sha256": "d7b505fe004141e7ea41d5af756f80209bf5ff18dfa0303a192c33f3e8d02080",
+  "source_dataset_sha256": "3a1fe8dc41a7aff4d803a98ddf09f6aac5b1aa851b356ccda328e329756169de",
+  "manifest_sha256": "8f0998ecbac57cc5dde5f2bef98c95b490c3a52b6bd36678993172527bfecf48",
+  "guide_sha256": "2f162e3896438a3850aceaffbea965c618ae4491f75350b59ab74d265b560b20",
+  "execution_sha256": {
+    "tracks/openai_provenance/client.py": "ae256fdf18f219fad23cb55a6cf0a0b0504ab69eb2cd5fc25cc7f90dbc38bf66",
+    "tracks/openai_provenance/study.py": "4732b041996aa9623176e349dfe217504d09edd3ac5d77091c7a51edceb10c87"
+  },
+  "cases": 160,
+  "source_counts": {
+    "dalle3": 20,
+    "real": 80,
+    "dalle2": 20,
+    "firefly": 20,
+    "midjourney-v5": 20
+  },
+  "view": "Original native bytes; generic multipart filename; no prompt or class labels",
+  "comparison": "Same identities as Decider; Decider used 512px JPEG crops and optional text",
+  "order": "Twenty blocks of dalle3, real, dalle2, real, firefly, real, midjourney-v5, real",
+  "minimum_interval_seconds": 6.2,
+  "maximum_attempts": 160,
+  "retries": "None; stop on any failed request and retain its record",
+  "interpretation": "not_detected is no supported OpenAI signal, never a real-image label",
+  "cost": "No price or per-request charge in the fetched developer guide; retain null costs",
+  "limitations": [
+    "No current GPT-image positive controls",
+    "Older DALL-E 2/3 exports",
+    "Third-party generation lies outside the API attribution target",
+    "Native input differs from Decider's delivered view"
+  ]
+}

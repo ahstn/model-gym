@@ -4,6 +4,8 @@ This folder stores research notes for image quality (IQA), image aesthetics (IAA
 
 Last verified: 2026-09-27
 
+Latest targeted review: [2026-09-29 pilot preflight](training/pilot-preflight-2026-09-29.md). This adds method and evaluation gaps, corrects label-contract details, and records the current training gates; it is not a full re-verification of every table below.
+
 The [pilot builder](../README.md) now provides acquisition, assembly, and verification commands for the proposed image mix. Its outputs retain source labels and leave teacher scores unset.
 
 ## Index
@@ -20,6 +22,7 @@ The [pilot builder](../README.md) now provides acquisition, assembly, and verifi
 | Datasets | [datasets/iaa.md](datasets/iaa.md) | Aesthetics and preference datasets. |
 | Datasets | [datasets/vqa.md](datasets/vqa.md) | Video quality datasets: UGC, streaming, HDR, AIGC video. |
 | Training | [training/methods.md](training/methods.md) | Training-method papers and what to borrow. |
+| Training | [training/pilot-preflight-2026-09-29.md](training/pilot-preflight-2026-09-29.md) | Exa and ultra-agent audit: compact students, actual label/split gaps, added evaluation probes, and the first-run gate. |
 | Training | [training/data-mixture-evidence.md](training/data-mixture-evidence.md) | Controlled evidence that adding or choosing data helps or hurts. |
 | Training | [training/synthetic-label-teachers.md](training/synthetic-label-teachers.md) | Visual benchmark shortlist, API pricing, and synthetic-label costs for 1K, 10K, and 250K images. |
 | Training | [training/synthetic-label-prompts.md](training/synthetic-label-prompts.md) | Source-backed quality and aesthetics rubrics, prompt files, response schema, and pilot checks. |

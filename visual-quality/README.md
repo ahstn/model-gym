@@ -4,6 +4,8 @@ This package acquires public training images and assembles the [proposed visual-
 
 The [2026-09-27 assembly record](docs/datasets/pilot-10k-assembly.md) contains the completed 10,800-image build counts, source revisions, manifest hashes, and verification results.
 
+Before training, use the [2026-09-29 preflight](docs/training/pilot-preflight-2026-09-29.md). It identifies the missing labels, positive domain examples, and test-group review needed to turn this assembled candidate pool into a training experiment. The audit preserved the original images and manifests.
+
 ## Run
 
 Run commands from this directory. Python 3.13 and `uv` are required.

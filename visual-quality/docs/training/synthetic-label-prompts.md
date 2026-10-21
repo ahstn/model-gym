@@ -77,17 +77,19 @@ For a scalar score `s` in [1,5], derive `score_0_1 = (s - 1) / 4`. If a display 
 
 For complete label probabilities `p` in the order bad, poor, fair, good, excellent, compute `score_1_5 = sum(p[i] * (i + 1))`. Q-Align's repository scorer uses the equivalent 0–1 weights. Its paper describes the 1–5 form. Record the actual wrapper and weights when collecting reference predictions.
 
-Q-Align training uses equal-width bins over each source score range. If we apply that convention to our fixed [1,5] teacher scale, use:
+Q-Align training uses equal-width bins over each source score range. For our fixed [1,5] teacher scale, use the boundary convention in the [pinned Q-ReAlign mapper](https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/qalign/levels.py#L44-L60): exact interior boundaries enter the higher bin. This corrects the earlier table on 2026-09-29.
 
 | Teacher score | Student level |
 |---|---|
-| [1.0, 1.8] | bad |
-| (1.8, 2.6] | poor |
-| (2.6, 3.4] | fair |
-| (3.4, 4.2] | good |
-| (4.2, 5.0] | excellent |
+| [1.0, 1.8) | bad |
+| [1.8, 2.6) | poor |
+| [2.6, 3.4) | fair |
+| [3.4, 4.2) | good |
+| [4.2, 5.0] | excellent |
 
 This is the proposed conversion for this synthetic source. It is not nearest-anchor rounding. Keep the raw teacher rating so later calibration does not require regeneration. Do not normalize each batch by its observed minimum and maximum. A batch of good images must remain good. Do not turn a single scalar into a claimed human distribution by assigning an arbitrary Gaussian variance.
+
+Version the conversion as `equal_width_left_closed_v1`. For a validated score in tenths, let integer `q = 10 * s`; the ascending bin index is `min(4, (q - 10) // 8)`. Parse decimal values exactly before this conversion. Check 1.0, 1.8, 2.6, 3.4, 4.2, and 5.0 explicitly in the label importer. The application does not yet implement that importer. These derived bins are separate from the teacher's raw scalar and from any elicited weights.
 
 Student supervision can retain Q-Align's short task question and the matching quality or aesthetics answer stem, followed by the selected level word. Keep the teacher's longer rubric and audit text outside the student's score-only target unless an explanation task is being tested explicitly.
 

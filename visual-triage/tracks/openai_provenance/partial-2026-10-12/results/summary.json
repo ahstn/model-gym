@@ -1,0 +1,539 @@
+{
+  "version": 1,
+  "protocol_sha256": "81c07524e4168d40ea3f0642d0ddb27ce7c620f5fe678c546f0357fbb6570dee",
+  "ledger_sha256": "1c37162408be079b570a79f1bd28cff95863e9e0cf879bd7f78b8b8f163075ca",
+  "amendment_sha256": "fa884908c1a5a699249e06313eadb05c6c6b470afdb6a3424ed28f01905ca663",
+  "retry_ledger_sha256": null,
+  "decider_results_sha256": "512a10b4aec495721d30e9193fd87548457e7377ed525dc1b248cb647b416024",
+  "status": "partial",
+  "expected": 160,
+  "attempted": 17,
+  "attempted_cases": 17,
+  "success": 15,
+  "failed": 2,
+  "failed_cases": 2,
+  "retry_attempts": 0,
+  "recovered_cases": 0,
+  "failure_records": [
+    {
+      "case": "vision-D01_I_nat_0183",
+      "attempt": 16,
+      "http_status": 502,
+      "error_kind": "non_json_response",
+      "error_code": null,
+      "server_cooldown_seconds": null,
+      "cooldown_source": null,
+      "retry_after_header_present": false
+    },
+    {
+      "case": "ai-dalle3-r027a692ft",
+      "attempt": 17,
+      "http_status": 429,
+      "error_kind": "http_error",
+      "error_code": "rate_limit_exceeded",
+      "server_cooldown_seconds": 2932.782,
+      "cooldown_source": "error_message",
+      "retry_after_header_present": false
+    }
+  ],
+  "failed_http_status_counts": {
+    "502": 1,
+    "429": 1
+  },
+  "unattempted": 143,
+  "by_source": {
+    "real": {
+      "images": 80,
+      "attempted": 8,
+      "success": 7,
+      "openai_signals": 0,
+      "unresolved": 7,
+      "failed_cases": 1,
+      "unattempted": 72,
+      "c2pa_states": {
+        "not_present": 7
+      }
+    },
+    "dalle2": {
+      "images": 20,
+      "attempted": 2,
+      "success": 2,
+      "openai_signals": 0,
+      "unresolved": 2,
+      "failed_cases": 0,
+      "unattempted": 18,
+      "c2pa_states": {
+        "not_present": 2
+      }
+    },
+    "dalle3": {
+      "images": 20,
+      "attempted": 3,
+      "success": 2,
+      "openai_signals": 0,
+      "unresolved": 2,
+      "failed_cases": 1,
+      "unattempted": 17,
+      "c2pa_states": {
+        "not_present": 2
+      }
+    },
+    "firefly": {
+      "images": 20,
+      "attempted": 2,
+      "success": 2,
+      "openai_signals": 0,
+      "unresolved": 2,
+      "failed_cases": 0,
+      "unattempted": 18,
+      "c2pa_states": {
+        "valid": 2
+      }
+    },
+    "midjourney-v5": {
+      "images": 20,
+      "attempted": 2,
+      "success": 2,
+      "openai_signals": 0,
+      "unresolved": 2,
+      "failed_cases": 0,
+      "unattempted": 18,
+      "c2pa_states": {
+        "not_present": 2
+      }
+    }
+  },
+  "openai_origin_images": 40,
+  "openai_origin_successes": 4,
+  "openai_origin_detections": 0,
+  "real_false_attributions": 0,
+  "real_successes": 7,
+  "other_ai_false_attributions": 0,
+  "other_ai_successes": 4,
+  "successful_latency": {
+    "count": 15,
+    "p50_seconds": 2.3472274171654135,
+    "p95_seconds": 7.171380608691834
+  },
+  "failed_latency": {
+    "count": 2,
+    "p50_seconds": 0.6507173959398642,
+    "p95_seconds": 0.7319656645297072
+  },
+  "successful_server_processing": {
+    "count": 15,
+    "p50_seconds": 1.688,
+    "p95_seconds": 6.4809
+  },
+  "known_cost_usd": null,
+  "unknown_cost_attempts": 17,
+  "total_cost_usd": null,
+  "decider": {
+    "image_only": {
+      "images": 160,
+      "valid": 160,
+      "ai_images": 80,
+      "real_images": 80,
+      "correct": 123,
+      "ai_detected": 43,
+      "real_false_flags": 0,
+      "brier": 0.15950300111872817,
+      "cost_usd": 0.0064096,
+      "latency": {
+        "count": 160,
+        "p50_seconds": 0.7376821460202336,
+        "p95_seconds": 1.1366348561714403
+      },
+      "source_slices": {
+        "real": {
+          "images": 80,
+          "valid": 80,
+          "ai_images": 0,
+          "real_images": 80,
+          "correct": 80,
+          "ai_detected": 0,
+          "real_false_flags": 0,
+          "brier": 0.014371283437317217,
+          "cost_usd": 0.0032048,
+          "latency": {
+            "count": 80,
+            "p50_seconds": 0.7350502710323781,
+            "p95_seconds": 1.0229661519289945
+          }
+        },
+        "dalle2": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 5,
+          "ai_detected": 5,
+          "real_false_flags": 0,
+          "brier": 0.5014420210515478,
+          "cost_usd": 0.0008012,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.7428547084564343,
+            "p95_seconds": 1.1927073103608572
+          }
+        },
+        "dalle3": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 20,
+          "ai_detected": 20,
+          "real_false_flags": 0,
+          "brier": 0.00849117166544353,
+          "cost_usd": 0.0008012,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.7978941875044256,
+            "p95_seconds": 2.0787577353650706
+          }
+        },
+        "firefly": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 5,
+          "ai_detected": 5,
+          "real_false_flags": 0,
+          "brier": 0.4544421063229123,
+          "cost_usd": 0.0008012,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.7279399376129732,
+            "p95_seconds": 1.140996529359836
+          }
+        },
+        "midjourney-v5": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 13,
+          "ai_detected": 13,
+          "real_false_flags": 0,
+          "brier": 0.2541635761606532,
+          "cost_usd": 0.0008012,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.6976331459591165,
+            "p95_seconds": 0.9923227224149742
+          }
+        }
+      }
+    },
+    "provenance": {
+      "images": 160,
+      "valid": 160,
+      "ai_images": 80,
+      "real_images": 80,
+      "correct": 123,
+      "ai_detected": 43,
+      "real_false_flags": 0,
+      "brier": 0.15017241947971752,
+      "cost_usd": 0.0080992,
+      "latency": {
+        "count": 160,
+        "p50_seconds": 0.735331729054451,
+        "p95_seconds": 1.0694887417717835
+      },
+      "source_slices": {
+        "real": {
+          "images": 80,
+          "valid": 80,
+          "ai_images": 0,
+          "real_images": 80,
+          "correct": 80,
+          "ai_detected": 0,
+          "real_false_flags": 0,
+          "brier": 0.003391063287070395,
+          "cost_usd": 0.0040496,
+          "latency": {
+            "count": 80,
+            "p50_seconds": 0.7535052915336564,
+            "p95_seconds": 1.0848066121456212
+          }
+        },
+        "dalle2": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 1,
+          "ai_detected": 1,
+          "real_false_flags": 0,
+          "brier": 0.675997402587949,
+          "cost_usd": 0.0010124,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.7273297091014683,
+            "p95_seconds": 1.006003625248559
+          }
+        },
+        "dalle3": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 20,
+          "ai_detected": 20,
+          "real_false_flags": 0,
+          "brier": 0.008427920829620916,
+          "cost_usd": 0.0010124,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.7296569789759815,
+            "p95_seconds": 0.9143492999835873
+          }
+        },
+        "firefly": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 15,
+          "ai_detected": 15,
+          "real_false_flags": 0,
+          "brier": 0.1680236272997993,
+          "cost_usd": 0.0010124,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.735331729054451,
+            "p95_seconds": 0.9098492388380692
+          }
+        },
+        "midjourney-v5": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 7,
+          "ai_detected": 7,
+          "real_false_flags": 0,
+          "brier": 0.3353661519720898,
+          "cost_usd": 0.0010124,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.712382395984605,
+            "p95_seconds": 1.0871317023760643
+          }
+        }
+      }
+    },
+    "all_context": {
+      "images": 160,
+      "valid": 160,
+      "ai_images": 80,
+      "real_images": 80,
+      "correct": 125,
+      "ai_detected": 45,
+      "real_false_flags": 0,
+      "brier": 0.1417702068532785,
+      "cost_usd": 0.01237144,
+      "latency": {
+        "count": 160,
+        "p50_seconds": 0.7382675630506128,
+        "p95_seconds": 1.0719686088850715
+      },
+      "source_slices": {
+        "real": {
+          "images": 80,
+          "valid": 80,
+          "ai_images": 0,
+          "real_images": 80,
+          "correct": 80,
+          "ai_detected": 0,
+          "real_false_flags": 0,
+          "brier": 0.00423604448113597,
+          "cost_usd": 0.00622436,
+          "latency": {
+            "count": 80,
+            "p50_seconds": 0.7472459379350767,
+            "p95_seconds": 1.1277712704148142
+          }
+        },
+        "dalle2": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 6,
+          "ai_detected": 6,
+          "real_false_flags": 0,
+          "brier": 0.5146977244105845,
+          "cost_usd": 0.00153506,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.7311895000748336,
+            "p95_seconds": 0.9058865815284665
+          }
+        },
+        "dalle3": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 20,
+          "ai_detected": 20,
+          "real_false_flags": 0,
+          "brier": 0.0072950785814743565,
+          "cost_usd": 0.00153374,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.7406270210631192,
+            "p95_seconds": 1.008570969349239
+          }
+        },
+        "firefly": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 10,
+          "ai_detected": 10,
+          "real_false_flags": 0,
+          "brier": 0.2685465491306225,
+          "cost_usd": 0.0015402200000000001,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.7487524164607748,
+            "p95_seconds": 1.0771529068471866
+          }
+        },
+        "midjourney-v5": {
+          "images": 20,
+          "valid": 20,
+          "ai_images": 20,
+          "real_images": 0,
+          "correct": 9,
+          "ai_detected": 9,
+          "real_false_flags": 0,
+          "brier": 0.3266781247790034,
+          "cost_usd": 0.00153806,
+          "latency": {
+            "count": 20,
+            "p50_seconds": 0.7088013126049191,
+            "p95_seconds": 1.0065872545121237
+          }
+        }
+      }
+    }
+  },
+  "decider_matched_valid_api": {
+    "image_only": {
+      "images": 15,
+      "valid": 15,
+      "ai_images": 8,
+      "real_images": 7,
+      "correct": 13,
+      "ai_detected": 6,
+      "real_false_flags": 0,
+      "brier": 0.10550354336038695,
+      "cost_usd": 0.0006009,
+      "latency": {
+        "count": 15,
+        "p50_seconds": 0.7741300829220563,
+        "p95_seconds": 1.134074966958724
+      }
+    },
+    "provenance": {
+      "images": 15,
+      "valid": 15,
+      "ai_images": 8,
+      "real_images": 7,
+      "correct": 12,
+      "ai_detected": 5,
+      "real_false_flags": 0,
+      "brier": 0.1420085153511316,
+      "cost_usd": 0.0007593,
+      "latency": {
+        "count": 15,
+        "p50_seconds": 0.8185259168967605,
+        "p95_seconds": 1.0110839162254706
+      }
+    },
+    "all_context": {
+      "images": 15,
+      "valid": 15,
+      "ai_images": 8,
+      "real_images": 7,
+      "correct": 14,
+      "ai_detected": 7,
+      "real_false_flags": 0,
+      "brier": 0.08722622301309381,
+      "cost_usd": 0.00116058,
+      "latency": {
+        "count": 15,
+        "p50_seconds": 0.7644926249049604,
+        "p95_seconds": 1.1772038708208128
+      }
+    }
+  },
+  "historical": {
+    "status": "separate_cohort",
+    "overlapping_image_hashes": 0,
+    "models": {
+      "decider": {
+        "images": 60,
+        "valid": 60,
+        "ai_images": 30,
+        "real_images": 30,
+        "correct": 46,
+        "ai_detected": 16,
+        "real_false_flags": 0,
+        "brier": 0.15923038386792523,
+        "cost_usd": 0.00148356,
+        "latency": {
+          "count": 60,
+          "p50_seconds": 0.6481772919651121,
+          "p95_seconds": 0.9997187687200494
+        }
+      },
+      "luna": {
+        "images": 60,
+        "valid": 60,
+        "ai_images": 30,
+        "real_images": 30,
+        "correct": 50,
+        "ai_detected": 20,
+        "real_false_flags": 0,
+        "brier": 0.13002666666666657,
+        "cost_usd": 0.0093766,
+        "latency": {
+          "count": 60,
+          "p50_seconds": 3.014461396029219,
+          "p95_seconds": 4.751513481664006
+        }
+      },
+      "gemini": {
+        "images": 60,
+        "valid": 60,
+        "ai_images": 30,
+        "real_images": 30,
+        "correct": 51,
+        "ai_detected": 21,
+        "real_false_flags": 0,
+        "brier": 0.135345,
+        "cost_usd": 0.09458775,
+        "latency": {
+          "count": 60,
+          "p50_seconds": 3.262772895512171,
+          "p95_seconds": 9.374094531568696
+        }
+      }
+    }
+  },
+  "guide": "https://developers.openai.com/api/docs/guides/content-provenance",
+  "limitations": [
+    "No current GPT-image positive controls",
+    "Older DALL-E 2/3 exports",
+    "Third-party generation lies outside the API attribution target",
+    "Native input differs from Decider's delivered view"
+  ],
+  "interpretation": "not_detected is unresolved, not a real-image prediction"
+}

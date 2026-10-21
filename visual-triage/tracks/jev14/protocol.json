@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "frozen_at": "2026-10-15T20:47:50.701889+00:00",
+  "model": "typesafe/jev-1.14",
+  "expected_revision": "typesafe/jev-1.14-20261014",
+  "request_headers": {
+    "TypeSafe-Danger-Zone-Long-Context": "true",
+    "TypeSafe-Danger-Zone-Images": "true"
+  },
+  "context_tokens": 262144,
+  "manifest_sha256": "a1b50fe5b8217ada61b616285f4ee462265c87c7ef3992a2413a3223684c2b6c",
+  "source_inputs": {
+    "evidence/benchmarks/freeze.json": {
+      "sha256": "96a0869c0fd20bddf764b0d9215353314940525bb74f1739b9c0525a13c373d3",
+      "bytes": 1520
+    },
+    "evidence/samples.json": {
+      "sha256": "0028c7ae5582dbb3e190342651f559d87bf2a6e88cf82682bc81050a8d63c8a9",
+      "bytes": 52974
+    },
+    "prompts/final/quality.json": {
+      "sha256": "0f6f9b4640bf26d534636448882a2d5c028d77a8dec31246601547110a0ffc81",
+      "bytes": 2710
+    },
+    "evidence/benchmarks/quality.json": {
+      "sha256": "5d6ee801963328710f1cc37aef475507dae2fe855799d11c41b0e8dc027c117d",
+      "bytes": 123017
+    },
+    "evidence/assessments/quality-60.json": {
+      "sha256": "120689b53ce0d3b8673058cb6d25debdc8524ea09f5be7a804f7b98d9c0a1e2b",
+      "bytes": 23941
+    },
+    "evidence/final/quality.jsonl": {
+      "sha256": "eaf6d297408df4e0d7ab056712a62687bbf1607b87cff7a96d940400b78dcc8d",
+      "bytes": 641513
+    },
+    "prompts/final/ai.json": {
+      "sha256": "25e5e76cd573e2c5b15cdf6e2a676441f399d11270f4dcc0ca9a29203041f532",
+      "bytes": 2181
+    },
+    "evidence/benchmarks/ai.json": {
+      "sha256": "7d193af99aa15697f8e626f02b511b6915c3d1aeffdb85b0f6f8ee7e238d8970",
+      "bytes": 134064
+    },
+    "evidence/assessments/ai-60.json": {
+      "sha256": "067cba7a93319d91e743f1b223e42ec349f604d25531ea7cd21348f2eee3017a",
+      "bytes": 27025
+    },
+    "evidence/final/ai.jsonl": {
+      "sha256": "49fca09663dd9a8596e66198562f4c370eed93f2a3b3c86b00040c952267aa23",
+      "bytes": 709544
+    },
+    "data/jev14-v1/research/contract-sources.json": {
+      "sha256": "e9e144e956935deedf3c1e0bfe3bb5d8e40f8e0f778d6f982bdd5f77429c247d",
+      "bytes": 2055
+    },
+    "data/jev14-v1/research/openrouter-catalog-guide.json": {
+      "sha256": "1bfae9f167703669d1994d217d8e1856fadec9e9aa9fef4dfff25f37f715f041",
+      "bytes": 5388
+    },
+    "data/jev14-v1/research/openrouter-decisions-models.json": {
+      "sha256": "598f959960d1d73d23bcaa213771cec8e62dac05f2e3d504975476801aaec2ae",
+      "bytes": 3846
+    },
+    "data/jev14-v1/research/openrouter-jev.json": {
+      "sha256": "0828994c450a68f7679db0a50bb3ac1ca30c1080d235618bedc4e9ef3b0a587b",
+      "bytes": 9452
+    },
+    "data/jev14-v1/research/openrouter-model.json": {
+      "sha256": "34ad22f160e5906a5ec8e2646fb4f05cda11803f020535ebf8b30916352e444d",
+      "bytes": 9275
+    },
+    "data/jev14-v1/research/openrouter-models.json": {
+      "sha256": "1970ed3a8e04c31e65c54fefab3b287ec10e4325383a741669912d742b6f6c16",
+      "bytes": 1951
+    },
+    "data/jev14-v1/research/openrouter-multimodal.json": {
+      "sha256": "54c56da7ed6ad43ae75c25bed2eefaa817723b2c8ec5a7cc87195199668b4b96",
+      "bytes": 7663
+    },
+    "data/jev14-v1/research/typesafe-images.json": {
+      "sha256": "4eb3e8e8f9d43c6555e219463ef18b973e97e2ec5b30ca8fea770fe6da8a8d18",
+      "bytes": 19509
+    },
+    "data/jev14-v1/research/typesafe-models.json": {
+      "sha256": "0ff72f1435fcdfe109e88eea1a40ecb5582f47d266ddd19240f22abfff925ad0",
+      "bytes": 7227
+    },
+    "data/jev14-v1/research/typesafe-release.json": {
+      "sha256": "95ba44fc0fb49524a0928786fbc1d20de902da88cbf7228899ca14b08f5f5934",
+      "bytes": 6097
+    }
+  },
+  "execution_sha256": {
+    "tracks/jev14/run.py": "4fc3dccf85778d0de2059a3c7915f952fdd0dc243399679f9bfaf3f44e1a9775",
+    "tracks/jev14/client.py": "c4846911f2bd67661c489a4d5447d6b1ee9b25ce514a76c99350fe7f69f5a4a8",
+    "bench_protocol.py": "be6ed1dbb8ccdc979312af1447766759f9036f26f7a2914223164459211f2bb9",
+    "bench_runner.py": "d65c6d68fd6d8f74f279f60140d9ca50aa6834d198f82e770cc9c3172bce1fd3"
+  },
+  "primary_counts": {
+    "quality": 58,
+    "ai": 60
+  },
+  "compatibility_cases": 2,
+  "size_probe_cases": 6,
+  "maximum_attempts": 126,
+  "budget_usd": 2,
+  "reserve_per_request_usd": 0.012,
+  "minimum_interval_seconds": 1,
+  "retry_policy": "No retries; stop on failure or unknown cost",
+  "prompt_policy": "Unchanged final prompts; no Jev-specific optimisation or threshold fitting",
+  "ai_threshold": 0.5,
+  "quality_scale": [
+    1,
+    5
+  ],
+  "views": "Primary bytes unchanged. Two panoramas: separate neutral PNG padding to height256.",
+  "probe": "Two development AGIQA images at320,512,1024square; upscaling adds no source detail.",
+  "cost": "Use reported usage.cost; no charge inferred from missing cost. Catalogue price is context.",
+  "comparison": "Historical model calls; same primary pixels/prompts, different run dates."
+}
