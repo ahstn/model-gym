@@ -1,0 +1,529 @@
+visual-triage/tests/test_jev14_report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-518
+visual-triage/tracks/quality/optimisation/run.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-9
+visual-triage/tracks/metadata_v3/recover_study.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-76
+visual-triage/tracks/quality/test_dataset.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-68
+visual-triage/tracks/metadata_v3/build_dataset.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-370
+visual-triage/tracks/metadata_v3/resume_reallocated.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-65
+visual-triage/tracks/metadata_v3/resume_http_errors.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-69
+visual-triage/tests/test_image_context.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-208
+visual-triage/prompts/trials/ai-r2.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tracks/metadata_v3/cost-recovery-reallocation.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-84
+visual-triage/tracks/ai_detection_v2/ablation-plan.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-185
+visual-triage/research/metadata-2026-10-12/c2pa-sources.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-55
+visual-triage/tests/test_metadata_v3_report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-1235
+visual-triage/prompts/final/ai.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tests/test_bench_report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-89
+visual-triage/tracks/ai_detection/eligibility.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-1013
+visual-triage/tracks/ai_detection_v2/dataset.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-19213
+visual-triage/tracks/metadata_v3/protocol.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-76
+visual-triage/tracks/metadata_v3/runtime.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-375
+visual-triage/tests/test_final_benchmark.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-62
+visual-triage/tracks/quality_v2/evidence/duplicate-check.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-7
+visual-triage/tracks/quality_v2/protocol.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-33
+visual-triage/tracks/jev14/protocol.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-121
+visual-triage/tracks/ai_detection_v2/build_dataset.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-346
+visual-triage/evidence/assessments/original-30.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-36
+visual-triage/evidence/benchmarks/quality.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-3566
+visual-triage/tracks/quality/build_dataset.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-241
+visual-triage/evidence/assessments/quality-60.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-550
+visual-triage/tracks/metadata_v3/prompts/resolution.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tracks/optimise.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-534
+visual-triage/tracks/ai_detection_v2/report/metadata-report.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tracks/openai_provenance/resume.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-162
+visual-triage/tracks/metadata_v3/budget_reallocation.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-187
+visual-triage/prompts/vision.txt
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-3
+visual-triage/tracks/openai_provenance/partial-2026-10-12/results/cases.csv
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-161
+visual-triage/bench_runner.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-295
+visual-triage/tests/test_metadata_v3_shared_pool.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-188
+visual-triage/prompts/trials/quality-r1.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-30
+visual-triage/tracks/quality_v2/selection.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-9528
+visual-triage/tracks/jev14/latest-results-2026-10-15/cases.csv
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-261
+visual-triage/tracks/metadata_v3/http_error_recovery.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-252
+visual-triage/research/metadata-2026-10-12/paper-and-design.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-55
+visual-triage/tracks/openai_provenance/partial-2026-10-12/report.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-53
+visual-triage/tracks/metadata_v3/cost-recovery-amendment.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-73
+visual-triage/research/expansion-2026-10-11/evidence/final-audit.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-241
+visual-triage/tracks/settings.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-12
+visual-triage/benchmark_data/eval-design-review.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-55
+visual-triage/tracks/metrics.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-356
+visual-triage/tracks/metadata_v3/prompts/tone.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/research/expansion-2026-10-11/evidence/final-audit-summary.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-119
+visual-triage/tracks/metadata_v3/prompts/all_context.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tests/test_metadata_v3_features.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-238
+visual-triage/.gitattributes
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-14
+visual-triage/benchmark_data/ai_slices.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-151
+visual-triage/prepare.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-146
+visual-triage/tracks/metadata_v3/evidence-bundle.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-22
+visual-triage/tracks/jev14/latest-results-2026-10-15/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-50
+visual-triage/tracks/openai_provenance/resume-amendment.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-22
+visual-triage/tracks/openai_provenance/study.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-186
+visual-triage/tracks/quality_v2/optimisation/run.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-9
+visual-triage/benchmark_data/quality-research.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-60
+visual-triage/EXTENDED-VALIDATION.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-61
+visual-triage/tests/test_evidence_archive.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-253
+visual-triage/ARCHIVE.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-57
+visual-triage/tests/test_bench_runner.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-528
+visual-triage/tracks/ai_detection/prompts/selected.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tracks/ai_detection_v2/eligibility-external-review.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-57
+visual-triage/tracks/jev14/latest_report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-491
+visual-triage/BENCHMARKS.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-91
+visual-triage/research/metadata-2026-10-12/real-sources.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-52
+visual-triage/tracks/ai_detection_v2/report/external.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-20
+visual-triage/evidence/benchmarks/quality-reference-context.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-130
+visual-triage/tracks/jev14/parser-amendment.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-14
+visual-triage/tracks/metadata_v3/request_audit.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-228
+visual-triage/tracks/metadata_v3/prompts/image_only.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/evidence/samples.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-1323
+visual-triage/tests/test_jev14_run.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-319
+visual-triage/research/expansion-2026-10-11/metadata-methods.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-78
+visual-triage/tracks/ai_detection/optimisation/run.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-9
+visual-triage/tracks/openai_provenance/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-32
+visual-triage/tracks/quality/prompts/baseline.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-30
+visual-triage/tracks/quality_v2/prompts/selected.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-30
+visual-triage/tracks/metadata_v3/cost_recovery.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-347
+visual-triage/tests/test_jev14_latest.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-188
+visual-triage/prompts/trials/ai-r1.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tests/test_metadata_v3_runtime.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-264
+visual-triage/tests/test_metadata_ablation.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-402
+visual-triage/tracks/metadata_v3/evidence_bundle.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-355
+visual-triage/tracks/ai_detection_v2/SOURCES.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-39
+visual-triage/bench_report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-208
+visual-triage/tests/test_ai_builder_freeze.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-51
+visual-triage/final_benchmark.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-67
+visual-triage/prompts/trials/quality-r4.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-30
+visual-triage/tracks/metadata_v3/features.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-373
+visual-triage/tracks/metadata_v3/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-84
+visual-triage/tests/test_openai_provenance_report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-330
+visual-triage/tracks/metadata_v3/provenance.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-149
+visual-triage/tracks/jev14/latest.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-259
+visual-triage/tracks/metadata_v3/results/cases.csv
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-3481
+visual-triage/tracks/openai_provenance/client.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-211
+visual-triage/tracks/quality_v2/SOURCES.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-37
+visual-triage/tests/test_metadata_v3_controls.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-228
+visual-triage/evidence/benchmarks/software.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-22
+visual-triage/summaries/ai_detection.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-657
+visual-triage/tests/test_cost_reservations.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-236
+visual-triage/tests/test_metadata_v3_recovery.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-213
+visual-triage/tracks/quality/prompt-selection.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-29
+visual-triage/tracks/jev14/run.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-293
+visual-triage/scripts/build_evidence_archive.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-86
+visual-triage/research/expansion-2026-10-11/quality-sources.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-39
+visual-triage/tracks/quality/protocol.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-29
+visual-triage/bench_analyze.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-441
+visual-triage/tracks/metadata_v3/prompts/camera.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tracks/quality_v2/cost-reservations.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-23
+visual-triage/tracks/quality_v2/prompt-selection.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-29
+visual-triage/summaries/candidate-prompts.jsonl
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-43
+visual-triage/prompts/trials/quality-r2.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-30
+visual-triage/archive-index.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-2750
+visual-triage/tracks/metadata_v3/acquire_real.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-279
+visual-triage/prompts/trials/ai-r4.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tracks/openai_provenance/partial-2026-10-12/results/summary.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-539
+visual-triage/tracks/ai_detection/report/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-20
+visual-triage/scripts/export_results.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-264
+visual-triage/summaries/quality_v2.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-3186
+visual-triage/analyze.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-133
+visual-triage/tests/test_metadata_v3_timeouts.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-169
+visual-triage/REPORT.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-44
+visual-triage/tests/test_jev14_rounding.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-157
+visual-triage/tracks/ai_detection_v2/report/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-22
+visual-triage/tracks/metadata_v3/optimise.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-342
+visual-triage/tracks/openai_provenance/protocol.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-36
+visual-triage/evidence/assessments/ai-60.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-789
+visual-triage/tracks/quality/report/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-17
+visual-triage/tests/test_openai_provenance_study.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-231
+visual-triage/tracks/jev14/shared-results-2026-10-15/summary.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-1492
+visual-triage/tracks/jev14/latest-results-2026-10-15/summary.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-1229
+visual-triage/tests/test_metadata_v3_evidence_bundle.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-339
+visual-triage/tracks/metadata_v3/baseline.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/research/metadata-2026-10-12/ai-sources.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-60
+visual-triage/tests/test_optimise.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-499
+visual-triage/research/expansion-2026-10-11/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-21
+visual-triage/prompts/questions.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-8
+visual-triage/summaries/quality.csv
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-81
+visual-triage/tests/test_bench_analyze.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-240
+visual-triage/tracks/ai_detection/dataset.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-5303
+visual-triage/tracks/ai_detection_v2/prompt-selection.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-29
+visual-triage/summaries/ai_detection.csv
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-121
+visual-triage/research/expansion-2026-10-11/evidence/final-audit-baseline.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-14
+visual-triage/tracks/openai_provenance/report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-411
+visual-triage/tests/test_tracks.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-604
+visual-triage/tests/test_metadata_v3_optimise.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-250
+visual-triage/summaries/initial_benchmark.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-1813
+visual-triage/benchmark_data/ai_builder.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-303
+visual-triage/tracks/jev14/report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-685
+visual-triage/tracks/quality_v2/prompts/baseline.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-30
+visual-triage/evidence/benchmarks/freeze.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-30
+visual-triage/tracks/metadata_v3/report.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-111
+visual-triage/tracks/metadata_v3/prompts/provenance.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-81
+visual-triage/research/metadata-2026-10-12/real-device-replacements.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-128
+visual-triage/tracks/ai_detection_v2/prompts/selected.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tracks/ai_detection_v2/protocol.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-34
+visual-triage/tracks/jev14/latest/protocol.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-88
+visual-triage/tracks/jev14/shared-results-2026-10-15/cases.csv
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-127
+visual-triage/tracks/image_context.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-334
+visual-triage/tracks/ai_detection/protocol.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-29
+visual-triage/cost_reservations.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-163
+visual-triage/tests/test_metadata_v3_build_dataset.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-289
+visual-triage/summaries/quality_v2.csv
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-401
+visual-triage/inference.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-151
+visual-triage/tracks/ai_detection_v2/eligibility.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-219
+visual-triage/tracks/metadata_ablation.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-407
+visual-triage/summaries/candidate-prompts-index.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-179
+visual-triage/evidence_archive.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-299
+visual-triage/tracks/metadata_v3/prompts/texture.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tracks/report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-289
+visual-triage/tracks/quality_v2/dataset.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-19162
+visual-triage/tracks/jev14/rounding.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-58
+visual-triage/tests/test_export_results.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-110
+visual-triage/evidence/benchmarks/ai.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-2718
+visual-triage/tests/test_openai_provenance_resume.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-268
+visual-triage/summaries/ai_detection_v2.csv
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-641
+visual-triage/tests/test_metadata_v3_request_audit.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-160
+visual-triage/research/expansion-2026-10-11/experiment-plan.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-38
+visual-triage/tracks/metadata_v3/cost-recovery-http-errors.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-736
+visual-triage/tracks/quality_v2/ablation-run.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-113
+visual-triage/tracks/ai_detection/test_build_dataset.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-43
+visual-triage/research/metadata-2026-10-12/real-eligibility.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-251
+visual-triage/tracks/metadata_v3/report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-1225
+visual-triage/tracks/ai_detection_v2/optimisation/run.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-9
+visual-triage/tracks/jev14/resume.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-190
+visual-triage/tracks/metadata_v3/shared_allowance_pool.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-202
+visual-triage/VALIDATION.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-53
+visual-triage/tracks/ai_detection_v2/native.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-159
+visual-triage/tracks/quality/dataset.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-7397
+visual-triage/run.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-141
+visual-triage/tests/test_metadata_v3_reallocation.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-117
+visual-triage/tracks/jev14/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-25
+visual-triage/tracks/quality/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-37
+visual-triage/research/expansion-2026-10-11/cost-recovery.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-13
+visual-triage/tests/test_jev14_client.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-372
+visual-triage/tracks/metadata_v3/cost-recovery-timeouts.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-218
+visual-triage/tracks/quality_v2/ablation-plan.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-124
+visual-triage/tests/test_metadata_v3_provenance.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-217
+visual-triage/tracks/ai_detection_v2/ablation-run.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-174
+visual-triage/benchmark_data/ai-research.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-59
+visual-triage/tests/test_jev14_latest_report.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-392
+visual-triage/.gitignore
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-42
+visual-triage/tracks/ai_detection/SOURCES.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-46
+visual-triage/tracks/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-37
+visual-triage/effort_pilot.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-40
+visual-triage/tests/test_metadata_v3_study.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-294
+visual-triage/tracks/quality_v2/report/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-20
+visual-triage/tracks/jev14/client.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-168
+visual-triage/tests/test_metadata_real_acquisition.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-45
+visual-triage/tests/test_jev14_resume.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-129
+visual-triage/tracks/metadata_v3/build_controls.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-403
+visual-triage/tracks/ai_detection/prompts/baseline.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tracks/metadata_v3/resume_shared_pool.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-129
+visual-triage/tracks/metadata_v3/results/request-audit.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-1452
+visual-triage/tracks/OPTIMISATION.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-51
+visual-triage/tracks/ai_detection_v2/prompts/baseline.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/research/expansion-2026-10-11/iqa-catalog.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-58
+visual-triage/tests/test_openai_provenance_client.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-234
+visual-triage/tracks/metadata_v3/acquire_ai.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-352
+visual-triage/tracks/metadata_v3/timeout_recovery.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-241
+visual-triage/benchmark_data/quality_builder.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-235
+visual-triage/evidence/assessments/protocol.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-18
+visual-triage/evidence/assessments/original-30.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-490
+visual-triage/tracks/metadata_v3/resume_timeouts.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-75
+visual-triage/summaries/ai_detection_v2.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-2512
+visual-triage/tracks/metadata_v3/cost-recovery-shared-pool.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-714
+visual-triage/tracks/ai_detection/build_dataset.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-324
+visual-triage/tracks/jev14/shared-results-2026-10-15/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-56
+visual-triage/pyproject.toml
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-16
+visual-triage/tracks/quality/SOURCES.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-39
+visual-triage/prompts/trials/quality-r3.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-30
+visual-triage/summaries/quality.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-583
+visual-triage/prompts/context.txt
+  s_a1df639cf4045d::t_39a0bc231a59d1 1
+visual-triage/tests/test_inference.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-189
+visual-triage/tests/test_metadata_v3_http_errors.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-164
+visual-triage/tracks/ai_detection/prompt-selection.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-29
+visual-triage/tracks/quality_v2/report/metadata-report.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-22
+visual-triage/research/metadata-2026-10-12/search-index.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-44
+visual-triage/probe.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-80
+visual-triage/tracks/run.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-590
+visual-triage/tracks/ai_detection/README.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-34
+visual-triage/tracks/quality/selection.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-1446
+visual-triage/bench_protocol.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-220
+visual-triage/research/expansion-2026-10-11/ai-sources.md
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-21
+visual-triage/prompts/trials/ai-r3.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-31
+visual-triage/tracks/metadata_v3/study.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-308
+visual-triage/summaries/initial_benchmark.csv
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-361
+visual-triage/prompts/final/quality.json
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-30
+visual-triage/tracks/quality_v2/build_dataset.py
+  s_a1df639cf4045d::t_39a0bc231a59d1 1-271
+visual-triage/uv.lock
+  s_a1df639cf4045d::t_8ea8a543db0600 1-540
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4869e56c85ea37152cb99f0d45b3ce6e99606427",
+  "prompts": {},
+  "sessions": {
+    "s_a1df639cf4045d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a15d73-2535-7ff2-be40-90ad31bfd1b1",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
