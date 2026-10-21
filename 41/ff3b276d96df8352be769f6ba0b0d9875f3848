@@ -1,0 +1,33 @@
+visual-quality/experiments/jev14-2026-10-18/results/cases.csv
+  s_af5e869a7baba5::t_cace1a8accd138 1-379
+visual-quality/experiments/jev14-calibration-2026-10-18/results/calibration-curve.csv
+  s_af5e869a7baba5::t_9fb014b1a8fa30 1-103
+visual-quality/experiments/jev14-calibration-2026-10-18/results/cases.csv
+  s_af5e869a7baba5::t_88011bfcc2e475 1-1601
+visual-quality/experiments/prompt-calibration-2026-10-18/results/cases.csv
+  s_327fe9b27426f4::t_053cae8cb7673c 1-101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "41ff3b276d96df8352be769f6ba0b0d9875f3848",
+  "prompts": {},
+  "sessions": {
+    "s_327fe9b27426f4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14258-b3f9-7a50-9987-4a60f71f58c8",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_af5e869a7baba5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14f85-5716-7da2-8e30-760886a4c624",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
