@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 
 from collections.abc import Sequence
+from copy import copy
 from dataclasses import dataclass
 from pathlib import Path
 from typing import TYPE_CHECKING
@@ -30,17 +31,25 @@ def load_model(
     adapter: str | Path | None = None,
     device: str = "cuda",
     dtype: torch.dtype = torch.bfloat16,
+    trust_remote_code: bool = False,
+    merge: bool = False,
 ) -> tuple[PreTrainedModel, PreTrainedTokenizerBase]:
+    """Load base (+ adapter). ``merge`` folds the adapter into the base weights: inference only, faster, and the
+    logits differ from the unmerged model by bf16 rounding."""
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
-    model = AutoModelForCausalLM.from_pretrained(model_id, dtype=dtype, attn_implementation="sdpa")
+    tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=trust_remote_code)
+    model = AutoModelForCausalLM.from_pretrained(
+        model_id, dtype=dtype, attn_implementation="sdpa", trust_remote_code=trust_remote_code
+    )
+    model.to(device)
     if adapter is not None:
         from peft import PeftModel
 
         log.info("loading adapter %s", adapter)
-        model = PeftModel.from_pretrained(model, str(adapter))
-    model.to(device)
+        model = PeftModel.from_pretrained(model, str(adapter)).to(device)
+        if merge:
+            model = model.merge_and_unload()
     model.eval()
     return model, tokenizer
 
@@ -116,24 +125,47 @@ def token_budget_batches(
 
 
 def _backbone_and_head(model: PreTrainedModel) -> tuple[torch.nn.Module, torch.nn.Module]:
+    """Text decoder and lm_head. Multimodal checkpoints (Gemma 4) return their language model, not the wrapper."""
     base = model.get_base_model() if hasattr(model, "get_base_model") else model
-    return base.model, base.lm_head
+    return base.get_decoder(), base.lm_head
+
+
+def _softcap(model: PreTrainedModel) -> float | None:
+    """Gemma-style final logit soft-capping (logits = cap * tanh(logits / cap)), or None."""
+    base = model.get_base_model() if hasattr(model, "get_base_model") else model
+    return getattr(base.config.get_text_config(), "final_logit_softcapping", None) or None
+
+
+def _code_logits_from_hidden(
+    h: torch.Tensor, weight: torch.Tensor, bias: torch.Tensor | None, softcap: float | None
+) -> torch.Tensor:
+    logits = (h @ weight.T).float()
+    if bias is not None:
+        logits = logits + bias
+    if softcap is not None:
+        logits = torch.tanh(logits / softcap) * softcap
+    return logits
+
+
+def _code_rows(head: torch.nn.Module, code_token_ids: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor | None]:
+    weight = head.weight.index_select(0, code_token_ids.to(head.weight.device))
+    bias = getattr(head, "bias", None)
+    code_bias = bias.index_select(0, code_token_ids.to(bias.device)).float() if bias is not None else None
+    return weight, code_bias
 
 
 def code_logits(model: PreTrainedModel, batch: Batch, code_token_ids: torch.Tensor) -> torch.Tensor:
     """Logits of the option codes at the answer position, [B, MAX_OPTIONS] float32; -inf past each row's options.
 
     Runs only the decoder backbone and multiplies the answer hidden state by the gathered code rows of lm_head,
-    so the full-vocab logits are never computed.
+    so the full-vocab logits are never computed. Final logit soft-capping is applied when the model defines it.
     """
     backbone, head = _backbone_and_head(model)
     hidden = backbone(input_ids=batch.input_ids, attention_mask=batch.attention_mask).last_hidden_state
     rows = torch.arange(hidden.shape[0], device=hidden.device)
     h = hidden[rows, batch.last_index]
-    weight = head.weight.index_select(0, code_token_ids.to(head.weight.device))
-    logits = (h @ weight.T).float()
-    if getattr(head, "bias", None) is not None:
-        logits = logits + head.bias.index_select(0, code_token_ids.to(head.bias.device)).float()
+    weight, bias = _code_rows(head, code_token_ids)
+    logits = _code_logits_from_hidden(h, weight, bias, _softcap(model))
     positions = torch.arange(logits.shape[1], device=logits.device)
     mask = positions.unsqueeze(0) >= batch.num_options.to(logits.device).unsqueeze(1)
     return logits.masked_fill(mask, float("-inf"))
@@ -154,12 +186,11 @@ def code_logits_shared_prefix(
     """``code_logits`` for rows sharing a token prefix, encoding that prefix once; [N, MAX_OPTIONS] float32.
 
     The longest common token prefix (kept at least one token short of every row) is run through the backbone once;
-    its K/V cache is expanded to each suffix chunk. Each row attends only to the prefix and its own suffix, exactly
-    as in an independent forward, so rows stay isolated. Falls back to ``collate``-style ``code_logits`` when there
-    is a single row or the shared prefix is shorter than ``MIN_SHARED_PREFIX`` tokens.
+    its cache is expanded (as views) to each suffix chunk. Each row attends only to the prefix and its own suffix,
+    exactly as in an independent forward, so rows stay isolated. The cache layers are shallow-copied, not rebuilt,
+    so sliding-window layers keep their cropped keys and cumulative length. Falls back to ``collate``-style
+    ``code_logits`` when there is a single row or the shared prefix is shorter than ``MIN_SHARED_PREFIX`` tokens.
     """
-    from transformers import DynamicCache
-
     if len(encoded) != len(num_options):
         raise ValueError(f"{len(encoded)} encodings for {len(num_options)} option counts")
     n = len(encoded)
@@ -170,7 +201,7 @@ def code_logits_shared_prefix(
         prefix += 1
     backbone, head = _backbone_and_head(model)
     base = model.get_base_model() if hasattr(model, "get_base_model") else model
-    pad_id = base.config.pad_token_id or 0
+    pad_id = getattr(base.config.get_text_config(), "pad_token_id", None) or 0
     if n == 1 or prefix < MIN_SHARED_PREFIX:
         width = max(len(ids) for ids in encoded)
         input_ids = torch.full((n, width), pad_id, dtype=torch.long)
@@ -189,10 +220,8 @@ def code_logits_shared_prefix(
 
     prefix_ids = torch.tensor([first[:prefix]], dtype=torch.long, device=device)
     cached = backbone(input_ids=prefix_ids, use_cache=True).past_key_values
-    prefix_kv = [(layer.keys, layer.values) for layer in cached.layers]
-    weight = head.weight.index_select(0, code_token_ids.to(head.weight.device))
-    bias = getattr(head, "bias", None)
-    code_bias = bias.index_select(0, code_token_ids.to(bias.device)).float() if bias is not None else None
+    weight, code_bias = _code_rows(head, code_token_ids)
+    softcap = _softcap(model)
 
     suffixes = [ids[prefix:] for ids in encoded]
     max_suffix = max(len(s) for s in suffixes)
@@ -210,10 +239,14 @@ def code_logits_shared_prefix(
         input_ids, suffix_mask = input_ids.to(device), suffix_mask.to(device)
         attention_mask = torch.cat([torch.ones((b, prefix), dtype=torch.long, device=device), suffix_mask], dim=1)
         position_ids = (prefix + torch.arange(width, device=device)).unsqueeze(0).expand(b, -1)
-        # expand() is a view; DynamicLayer.update concatenates into new tensors, so the prefix cache is never mutated.
-        cache = DynamicCache(
-            [(k.expand(b, -1, -1, -1), v.expand(b, -1, -1, -1)) for k, v in prefix_kv], config=base.config
-        )
+        # expand() is a view; cache layers concatenate into new tensors on update, so `cached` is never mutated.
+        cache = copy(cached)
+        cache.layers = []
+        for layer in cached.layers:
+            view = copy(layer)
+            view.keys = layer.keys.expand(b, -1, -1, -1)
+            view.values = layer.values.expand(b, -1, -1, -1)
+            cache.layers.append(view)
         hidden = backbone(
             input_ids=input_ids,
             attention_mask=attention_mask,
@@ -223,10 +256,7 @@ def code_logits_shared_prefix(
         ).last_hidden_state
         last = torch.tensor([len(s) - 1 for s in rows], dtype=torch.long, device=device)
         h = hidden[torch.arange(b, device=device), last]
-        logits = (h @ weight.T).float()
-        if code_bias is not None:
-            logits = logits + code_bias
-        out[start : start + b] = logits
+        out[start : start + b] = _code_logits_from_hidden(h, weight, code_bias, softcap)
     k = torch.tensor(list(num_options), dtype=torch.long, device=device)
     mask = torch.arange(MAX_OPTIONS, device=device).unsqueeze(0) >= k.unsqueeze(1)
     return out.masked_fill(mask, float("-inf"))

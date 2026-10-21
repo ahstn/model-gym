@@ -38,7 +38,7 @@ def _check_readout(args: argparse.Namespace) -> int:
     from decision.prompt import MAX_OPTIONS, Readout
     from decision.schema import Decision
 
-    readout = Readout(AutoTokenizer.from_pretrained(args.model))
+    readout = Readout(AutoTokenizer.from_pretrained(args.model, trust_remote_code=args.trust_remote_code))
     print(f"codes: {len(readout.codes)} first {readout.codes[:5]} last {readout.codes[-5:]}")
     sample = Decision(
         id="sample",
@@ -85,6 +85,14 @@ def _build_data(args: argparse.Namespace) -> int:
     return 0
 
 
+def _filter_pool(args: argparse.Namespace) -> int:
+    from decision import data
+
+    manifest = data.filter_pool(args.pool, args.out, suite_rows=args.suite_rows, exclude=args.exclude)
+    print(json.dumps(manifest, indent=2))
+    return 0
+
+
 def _train(args: argparse.Namespace) -> int:
     from decision import train
 
@@ -104,6 +112,8 @@ def _eval(args: argparse.Namespace) -> int:
         max_tokens=args.max_tokens,
         batch_tokens=args.batch_tokens,
         limit=args.limit,
+        trust_remote_code=args.trust_remote_code,
+        merge=args.merge,
     )
     print(json.dumps(metrics, indent=2))
     return 0
@@ -125,6 +135,7 @@ def main(argv: list[str] | None = None) -> int:
 
     p = sub.add_parser("check-readout", help="verify option-code tokenization")
     p.add_argument("--model", default=DEFAULT_MODEL)
+    p.add_argument("--trust-remote-code", action="store_true", help="run tokenizer code shipped in the model repo")
     p.set_defaults(func=_check_readout)
 
     p = sub.add_parser("build-data", help="build training pool and panels")
@@ -133,6 +144,13 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--suite-rows", type=Path, default=None)
     p.set_defaults(func=_build_data)
+
+    p = sub.add_parser("filter-pool", help="drop suite-overlapping rows and excluded datasets from a pool")
+    p.add_argument("--pool", type=Path, default=Path("data/pool.jsonl"))
+    p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--suite-rows", type=Path, nargs="+", required=True)
+    p.add_argument("--exclude", nargs="*", default=[])
+    p.set_defaults(func=_filter_pool)
 
     p = sub.add_parser("train", help="train a LoRA adapter")
     p.add_argument("--config", type=Path, required=True)
@@ -144,6 +162,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--panel", type=Path, required=True)
     p.add_argument("--calib", type=Path, default=None)
     p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--trust-remote-code", action="store_true", help="run modeling code shipped in the model repo")
+    p.add_argument("--merge", action="store_true", help="merge the adapter into the bf16 weights before the eval")
     p.add_argument("--max-tokens", type=int, default=2048)
     p.add_argument("--batch-tokens", type=int, default=65536)
     p.add_argument("--limit", type=int, default=None)

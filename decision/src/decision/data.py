@@ -22,7 +22,7 @@ from typing import Any
 
 import numpy as np
 
-from decision.schema import KINDS, NOUL_OPTIONS, Decision, write_jsonl
+from decision.schema import KINDS, NOUL_OPTIONS, Decision, read_jsonl, write_jsonl
 
 log = logging.getLogger(__name__)
 
@@ -548,4 +548,40 @@ def build(out_dir: Path, *, pool_size: int, seed: int, suite_rows: Path | None) 
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
     log.info("wrote pool=%d dev=%d calib=%d to %s", len(pool), len(dev), len(calib), out_dir)
+    return manifest
+
+
+def filter_pool(pool: Path, out: Path, *, suite_rows: Sequence[Path], exclude: Sequence[str]) -> dict:
+    """Copy `pool` to `out` without excluded datasets and without rows sharing a 13-gram with any suite row.
+
+    The row order is kept, so the first N rows of the output are the first N clean rows of the input, and the
+    panels built with the pool stay valid. Writes ``<out>.manifest.json`` and returns it.
+    """
+    suite = SuiteFilter([t for path in suite_rows for t in read_suite_texts(path)])
+    excluded = set(exclude)
+    kept: list[Decision] = []
+    dropped: Counter[str] = Counter()
+    total = 0
+    for d in read_jsonl(pool):
+        total += 1
+        if d.dataset in excluded:
+            dropped[f"{d.dataset}/excluded"] += 1
+        elif suite.hits("\n".join((d.state, d.question, *d.options))):
+            dropped[f"{d.dataset}/suite_ngram"] += 1
+        else:
+            kept.append(d)
+    write_jsonl(out, kept)
+    manifest = {
+        "pool": str(pool),
+        "pool_sha256": hashlib.sha256(pool.read_bytes()).hexdigest(),
+        "suite_rows": [str(p) for p in suite_rows],
+        "suite_ngrams": len(suite.hashes),
+        "exclude_datasets": sorted(excluded),
+        "rows_in": total,
+        "rows_out": len(kept),
+        "dropped": dict(sorted(dropped.items())),
+        "kept_by_dataset": dict(sorted(Counter(d.dataset for d in kept).items())),
+    }
+    out.with_suffix(".manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    log.info("filter-pool: %d of %d rows kept -> %s", len(kept), total, out)
     return manifest

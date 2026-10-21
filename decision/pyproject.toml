@@ -22,7 +22,7 @@ dependencies = [
 
 [project.optional-dependencies]
 suite = [
-    "decision-index[rebuild] @ git+https://github.com/apolinario/decision-index@19ad28ec9485493cc4f7fc07d91c178f948e6434",
+    "decision-index[rebuild] @ git+https://github.com/apolinario/decision-index@87d4650b42b377c0291a89c1f1a879f9b31082bf",
 ]
 
 [dependency-groups]

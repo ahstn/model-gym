@@ -3,7 +3,7 @@ import math
 import pytest
 import torch
 
-from decision.train import TrainConfig, soft_cross_entropy
+from decision.train import TrainConfig, _inverse, soft_cross_entropy, symmetric_kl
 
 
 def test_config_rejects_unknown_keys() -> None:
@@ -30,3 +30,26 @@ def test_soft_ce_masks_invalid_slots_and_matches_hand_value() -> None:
     expected = -(0.5 * math.log(0.25) + 0.5 * math.log(0.75))
     assert not torch.isnan(loss).any()
     assert loss.item() == pytest.approx(expected, rel=1e-6)
+
+
+def _view(orig_logits: list[float], order: list[int], width: int = 6) -> torch.Tensor:
+    """Logits of a view whose slot p holds original option order[p], padded with -inf."""
+    row = [orig_logits[o] for o in order] + [-math.inf] * (width - len(order))
+    return torch.tensor([row])
+
+
+def test_symmetric_kl_compares_options_not_slots() -> None:
+    orig = [2.0, 0.5, -1.0, 0.0]
+    a, b = [2, 0, 3, 1], [1, 3, 0, 2]
+
+    def inv(order: list[int]) -> torch.Tensor:
+        return torch.tensor([[*_inverse(order, 4), 0, 0]])
+
+    n = torch.tensor([4])
+    same = symmetric_kl(_view(orig, a), _view(orig, b), inv(a), inv(b), n)
+    assert same.item() == pytest.approx(0.0, abs=1e-6)
+    # Same slot scores under different orders mean different option beliefs: the loss must see that.
+    slots = _view(orig, a)
+    moved = symmetric_kl(slots, slots, inv(a), inv(b), n)
+    assert moved.item() > 0.1
+    assert torch.isfinite(moved).all()

@@ -1,0 +1,23 @@
+{
+  "pool": "data/pool.jsonl",
+  "pool_sha256": "f1abb0695cac4c6c8071942c74e8ed5ca60a82276654c5b5fb2effef2240351f",
+  "suite_rows": [
+    "data/suite-0.2/selected-rows.jsonl.gz",
+    "data/suite-0.2/added-rows.jsonl.gz"
+  ],
+  "suite_ngrams": 10798077,
+  "exclude_datasets": [
+    "sargedev"
+  ],
+  "rows_in": 200000,
+  "rows_out": 127909,
+  "dropped": {
+    "openjev/suite_ngram": 26,
+    "sargedev/excluded": 71529,
+    "tasksource/suite_ngram": 536
+  },
+  "kept_by_dataset": {
+    "openjev": 45739,
+    "tasksource": 82170
+  }
+}

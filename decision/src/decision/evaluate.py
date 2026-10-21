@@ -132,10 +132,12 @@ def run(
     max_tokens: int,
     batch_tokens: int,
     limit: int | None,
+    trust_remote_code: bool = False,
+    merge: bool = False,
 ) -> dict:
-    model, tokenizer = load_model(model_id, adapter=adapter)
+    model, tokenizer = load_model(model_id, adapter=adapter, trust_remote_code=trust_remote_code, merge=merge)
     readout = Readout(tokenizer)
-    pad_id = tokenizer.pad_token_id
+    pad_id = tokenizer.pad_token_id if tokenizer.pad_token_id is not None else tokenizer.eos_token_id
     width = len(readout.code_token_ids)
 
     all_rows = list(read_jsonl(panel))
@@ -192,6 +194,7 @@ def run(
         },
         "model": model_id,
         "adapter": str(adapter) if adapter is not None else None,
+        "adapter_merged": adapter is not None and merge,
         "temperatures": temps,
     }
 
