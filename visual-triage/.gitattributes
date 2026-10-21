@@ -12,3 +12,6 @@ archive-index.json text eol=lf
 evidence/ai-expansion/*.txt -whitespace
 research/**/evidence/*.txt -whitespace
 research/**/evidence/catalog-awesome-readme.md -whitespace
+
+# Preserve the original line endings in per-image outcome tables.
+tracks/**/*.csv -text

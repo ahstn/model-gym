@@ -1,0 +1,2 @@
+# Preserve frozen experiment files and reports byte for byte.
+experiments/** -text
