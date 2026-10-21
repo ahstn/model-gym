@@ -1,0 +1,229 @@
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/b-review-4.json
+  s_327fe9b27426f4::t_2984636e636555 1-191
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/b-freeze.json
+  s_327fe9b27426f4::t_e940f5f8abd463 1-14
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/b-review-3.json
+  s_327fe9b27426f4::t_ca1726aabf651c 1-185
+visual-quality/experiments/prompt-calibration-2026-10-18/references/a-review-2.json
+  s_327fe9b27426f4::t_cdc1d3712aad21 1-126
+visual-quality/experiments/prompt-calibration-2026-10-18/references/b-freeze.json
+  s_327fe9b27426f4::t_0b09f9f7e1e62d 1-14
+visual-quality/experiments/jev14-calibration-2026-10-18/study.py
+  s_af5e869a7baba5::t_baeb5e31345368 165
+  s_af5e869a7baba5::t_791bd0d7ec9fb4 47-52,57-60,84-87,92-107,110-140,142-146,148-159,182-193
+  s_af5e869a7baba5::t_917c71a07fa14f 169-171,178
+  s_af5e869a7baba5::t_7c4391870178b2 1-43,53-54,61-83,108-109,160-164,166-168,172-177,179-181,194-202
+  s_af5e869a7baba5::t_155c8a0f71f4d7 44-46
+  s_af5e869a7baba5::t_410736458d5b12 88-91
+  s_af5e869a7baba5::t_86f5841e2aa854 141,147
+  s_af5e869a7baba5::t_e09bd93f5e39c1 55-56
+visual-quality/experiments/jev14-calibration-2026-10-18/selection-lock.json
+  s_af5e869a7baba5::t_4475d97843b687 1-3
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/b-review-1.json
+  s_327fe9b27426f4::t_2df72dc5c51f0b 1-181
+visual-quality/experiments/prompt-calibration-2026-10-18/README.md
+  s_327fe9b27426f4::t_58c484e2068340 1-90
+visual-quality/experiments/prompt-calibration-2026-10-18/references/a-review-3.json
+  s_327fe9b27426f4::t_40f9f3b29337ab 1-125
+visual-quality/experiments/prompt-calibration-2026-10-18/references/a-review-1.json
+  s_327fe9b27426f4::t_8087b1c437e9c9 1-128
+visual-quality/experiments/jev14-calibration-2026-10-18/test_acquire.py
+  s_af5e869a7baba5::t_e296c68c9a6902 1-72
+visual-quality/tests/test_labelling.py
+  s_327fe9b27426f4::t_f8e2f5c7f0d377 4,17-65,169-196
+  s_af5e869a7baba5::t_0ae752226c460a 197-198
+visual-quality/experiments/jev14-calibration-2026-10-18/README.md
+  s_af5e869a7baba5::t_41b433033ab053 13-15
+  s_af5e869a7baba5::t_5806199b9fb3cd 9-10
+  s_af5e869a7baba5::t_7b576b5be62d0a 1-4,7-8,11-12,16-48
+  s_af5e869a7baba5::t_7768790209b891 5-6
+visual-quality/experiments/jev14-calibration-2026-10-18/calibration-tradeoffs.md
+  s_af5e869a7baba5::t_1f7ce4df0028ea 1-13
+visual-quality/experiments/jev14-calibration-2026-10-18/payload-audit.json
+  s_af5e869a7baba5::t_c5bdac79519b72 1-17609
+visual-quality/experiments/jev14-calibration-2026-10-18/verification.json
+  s_af5e869a7baba5::t_cc5ed34189e12f 1-34
+visual-quality/prompts/visual-rating-v2/system.txt
+  s_327fe9b27426f4::t_7296ed9c7feea9 1-9
+visual-quality/experiments/prompt-calibration-2026-10-18/references/a-review-4.json
+  s_327fe9b27426f4::t_9a0b28a129d528 1-124
+visual-quality/experiments/prompt-calibration-2026-10-18/references/b-review-4.json
+  s_327fe9b27426f4::t_f744be2074cf22 1-129
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/a-review-3.json
+  s_327fe9b27426f4::t_93f58ff4770baf 1-120
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/a-review-1.json
+  s_327fe9b27426f4::t_a9e45e7a7b6161 1-120
+visual-quality/experiments/jev14-calibration-2026-10-18/prompt.json
+  s_af5e869a7baba5::t_c5bdac79519b72 1-31
+visual-quality/experiments/jev14-calibration-2026-10-18/protocol.json
+  s_af5e869a7baba5::t_c5bdac79519b72 1-223
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/b-review-5.json
+  s_327fe9b27426f4::t_e281e61afb78be 1-173
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/a-review-4.json
+  s_327fe9b27426f4::t_d0f4c2cb510d00 1-117
+visual-quality/experiments/jev14-calibration-2026-10-18/report.py
+  s_af5e869a7baba5::t_206e2c030a28ab 2-8,10,12-66,72-106,108-118,151-157,185-189,198-199,282-314,329-334,347-349,356,360,395-396,407-409,429-431,435,443-447,490-492,494-495,502-503,508-518,520-531,535,541-546,548-551,553,563-566
+  s_af5e869a7baba5::t_cf90f9da899fd9 11,200-227,232,248,250,254,259,265-267,272-273,281
+  s_af5e869a7baba5::t_de021725463e62 9,107,448,462-477,481,507,547
+  s_af5e869a7baba5::t_027f98b5f05d0a 432,436-437,493,519
+  s_af5e869a7baba5::t_5d5a90a013043e 1,315-328,335,416-417,419
+  s_af5e869a7baba5::t_ee356c14fa859f 67-71,119-150,158-184,190-197,228-231,233-247,249,251-253,255-258,260-264,268-271,274-280,336-346,350-355,357-359,361-394,397-406,410-415,418,420-428,433-434,438-442,449-461,478-480,482-489,496-501,504-506,532-534,536-540,552,554-562
+visual-quality/experiments/prompt-calibration-2026-10-18/references/a-review-5.json
+  s_327fe9b27426f4::t_4d05c28395be25 1-127
+visual-quality/experiments/jev14-calibration-2026-10-18/results/README.md
+  s_af5e869a7baba5::t_237b6c79e06f61 1-95
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/b.jsonl
+  s_327fe9b27426f4::t_e940f5f8abd463 1-50
+visual-quality/experiments/jev14-calibration-2026-10-18/test_metrics.py
+  s_af5e869a7baba5::t_d93052d2969da6 14-20,28-30,90-96,118-120
+  s_af5e869a7baba5::t_3ae56f18164e43 1-13,21-25,31-43,46-51,58-65,69-81,89,97-117,121-139
+  s_af5e869a7baba5::t_779352069529f2 52-57
+  s_af5e869a7baba5::t_4fe31bd90b7411 44-45,82-88
+  s_af5e869a7baba5::t_b7bf5e9420452f 26-27,66-68
+visual-quality/docs/training/label-pilot-validation-2026-10-18.md
+  s_327fe9b27426f4::t_5dc82d77eee6f8 7-8
+visual-quality/experiments/jev14-calibration-2026-10-18/test_runner.py
+  s_af5e869a7baba5::t_7fb034598a7512 36-37,41-42,56-64,76-79,93-94,97-101,103-107,122-128,132-140,165-167
+  s_af5e869a7baba5::t_e9ac048dc30d98 1-35,38-40,43-55,65-75,80-92,95-96,102,108-121,129-131,141-164,168-239
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/a.jsonl
+  s_327fe9b27426f4::t_924a51778c1f7c 1-50
+visual-quality/experiments/jev14-calibration-2026-10-18/results/calibration-curve.csv
+  s_af5e869a7baba5::t_237b6c79e06f61 1-103
+visual-quality/experiments/jev14-calibration-2026-10-18/acquire.py
+  s_af5e869a7baba5::t_11b5d271227a1b 4,51-84,101,121,217-220,440
+  s_af5e869a7baba5::t_f569d70657bb2a 110-112,130,138-140,144-154,187-192,199-201,247-250,283-285,311-314,342-344,349-351,365-383,386-387,397-400,407-412,417-426,437-439,444-445,472-477
+  s_af5e869a7baba5::t_59ee521c192e7f 1-3,5-44,120,158-159,303
+  s_af5e869a7baba5::t_cb63f7edd7813a 93,160-172,174-186,193-198,202-212,221-246,251-255,257-269,274,276-282,286-302,304-307,309-310,315-341,345-348,352-364,384,388,390-396,401-406,414-416,427-430,432-433,435-436,442-443,446-471,478-493
+  s_af5e869a7baba5::t_e296c68c9a6902 173
+  s_327fe9b27426f4::t_4d05c28395be25 213-216
+  s_af5e869a7baba5::t_de910c9a41fac6 45-50,85-92,94-100,102-109,113-119,122-129,131-137,141-143,155-157,256,270-273,275,308,385,389,413,431,434,441
+visual-quality/experiments/prompt-calibration-2026-10-18/review-instructions.md
+  s_327fe9b27426f4::t_01f31ad9f94046 1-19
+visual-quality/experiments/jev14-calibration-2026-10-18/results/cases.csv
+  s_af5e869a7baba5::t_237b6c79e06f61 1-1601
+visual-quality/experiments/jev14-calibration-2026-10-18/results/summary.json
+  s_af5e869a7baba5::t_237b6c79e06f61 1-1307
+visual-quality/src/visual_quality/labelling.py
+  s_327fe9b27426f4::t_f8e2f5c7f0d377 10,51-67,82
+visual-quality/experiments/jev14-calibration-2026-10-18/test_report.py
+  s_af5e869a7baba5::t_027f98b5f05d0a 1-4,6-21,25,28-34,41-52,67-68,70-73,79-80,83-84,95-99,107-115,129,140-143
+  s_af5e869a7baba5::t_5d5a90a013043e 53-66
+  s_af5e869a7baba5::t_ee356c14fa859f 5,22-24,26-27,35-40,69,74-78,81-82,85-94,100-106,116-128,130-136,138
+  s_af5e869a7baba5::t_6d1540bd304424 137,139
+visual-quality/experiments/jev14-calibration-2026-10-18/results/calibration-curve.svg
+  s_af5e869a7baba5::t_237b6c79e06f61 1-45
+visual-quality/experiments/prompt-calibration-2026-10-18/test_report.py
+  s_327fe9b27426f4::t_1c4a6df8662019 26,103-105
+  s_327fe9b27426f4::t_508d831235f848 4,154-176,183-194,201-204,210-227,238-245,255-265
+  s_327fe9b27426f4::t_360501863f20f0 72-73,101-102,112-116,147-153
+  s_327fe9b27426f4::t_305d6f31e937aa 123-133
+  s_327fe9b27426f4::t_559cdf9f214f50 10-12,21-25,27-28,30-33,41-47,81-86,91-93,95-99
+  s_327fe9b27426f4::t_620896fc92df16 177-182,195-200,205-209,228-237,246-254
+  s_327fe9b27426f4::t_72395e8e1114e6 1-3,5-9,13-20,29,34-40,48-71,74-80,87-90,94,100,106-111,117-122,134-146
+visual-quality/experiments/prompt-calibration-2026-10-18/references/b-review-3.json
+  s_327fe9b27426f4::t_ead11e31b848b6 1-131
+visual-quality/experiments/jev14-calibration-2026-10-18/test_study.py
+  s_af5e869a7baba5::t_1a764f213c218d 1-19,26-69
+  s_af5e869a7baba5::t_c835308c104645 20-25
+visual-quality/experiments/prompt-calibration-2026-10-18/report.py
+  s_327fe9b27426f4::t_e84429dc0d041d 391-394,479-484,486-489
+  s_327fe9b27426f4::t_1c4a6df8662019 66,68-72,86,90-91
+  s_327fe9b27426f4::t_72395e8e1114e6 1-13,15-65,67,73-85,92-111,153-185,188-190,194-215,219-235,237-253,257,259-262,267,280-283,287-292,296-316,324-327,334-340,346-351,368,371-373,421-428,442-445,448-449,456-457,466-468,474-478,490-491,502-528,530-533,542-546,553-555,572-575,617,621-629,636-640,644-657
+  s_327fe9b27426f4::t_b69fa32d1044d4 87-89
+  s_327fe9b27426f4::t_5add08c85e9949 112-120,123-152,395-399,405,492,496-497,529,549
+  s_327fe9b27426f4::t_508d831235f848 121-122,186-187,594
+  s_327fe9b27426f4::t_fe6d03604319a3 369,374-390,400-404,406-420,485,568,606
+  s_327fe9b27426f4::t_a44f021b7c884d 556-567
+  s_327fe9b27426f4::t_559cdf9f214f50 216-218,254-256,263-266,268-279,284-286,293-295,317-323,328-333,341-345,352-359,362-367,429-441,450-455,458-465,469-473,498-501,534-541,547-548,550-552,569-571,576-593,595-605,607-616,618-620,630-635,641-643
+  s_327fe9b27426f4::t_620896fc92df16 493-495
+  s_327fe9b27426f4::t_1793d24b0e51d8 14,191-193,236,258,360-361,370,446-447
+visual-quality/experiments/prompt-calibration-2026-10-18/references/b-review-1.json
+  s_327fe9b27426f4::t_50cbef4b25cd39 1-129
+visual-quality/experiments/jev14-calibration-2026-10-18/calibration-tradeoffs.json
+  s_af5e869a7baba5::t_1f7ce4df0028ea 1-108
+visual-quality/experiments/prompt-calibration-2026-10-18/references/b-review-5.json
+  s_327fe9b27426f4::t_4a564d34e6d337 1-128
+visual-quality/prompts/visual-rating-v2/prompt-version.json
+  s_327fe9b27426f4::t_7296ed9c7feea9 1-3
+visual-quality/experiments/jev14-calibration-2026-10-18/selection.json
+  s_af5e869a7baba5::t_4475d97843b687 1-41
+visual-quality/experiments/jev14-calibration-2026-10-18/false-positive-audit.json
+  s_af5e869a7baba5::t_875df4650ddf7f 1-119
+visual-quality/experiments/jev14-calibration-2026-10-18/runner.py
+  s_af5e869a7baba5::t_6645e24cb954fe 219,312
+  s_af5e869a7baba5::t_846806b406c29f 145-147,301-311,313,356-368,378
+  s_af5e869a7baba5::t_eea7fa59df5cea 1-81,84-100,103-116,120-133,138-144,148-151,157-163,166-167,173-178,186-195,208,211-218,233-254,261-277,297-300,314-315,321-324,334-349,353-355,369-377,379
+  s_af5e869a7baba5::t_0828b1ca1ae1b8 82-83,101-102,117-119,134-137,152-156,164-165,168-172,179-185,196-207,209-210,220-232,255-260,278-296,316-320,325-333,350-352
+visual-quality/experiments/prompt-calibration-2026-10-18/protocol.md
+  s_327fe9b27426f4::t_0ecb2d0cc794d3 1-45
+visual-quality/prompts/visual-rating-v2/technical-quality.txt
+  s_327fe9b27426f4::t_09598deb72cc08 10
+  s_327fe9b27426f4::t_2190f3d8ea81b6 1-9,11-28
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/a-review-5.json
+  s_327fe9b27426f4::t_ad75d4986bebdd 1-118
+visual-quality/experiments/prompt-calibration-2026-10-18/references/b.jsonl
+  s_327fe9b27426f4::t_0b09f9f7e1e62d 1-50
+visual-quality/experiments/prompt-calibration-2026-10-18/audit-blinding.json
+  s_327fe9b27426f4::t_2f75e71ff2d66b 1-207
+visual-quality/docs/training/label-pilot.md
+  s_327fe9b27426f4::t_01ee2f5f4830a2 7,61
+  s_327fe9b27426f4::t_4f57b9cdfff80c 62
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/a-review-2.json
+  s_327fe9b27426f4::t_e72c24dd5f0d26 1-116
+visual-quality/experiments/prompt-calibration-2026-10-18/prepare.py
+  s_327fe9b27426f4::t_87cdc867df8614 68,73,91-92,124,269
+  s_327fe9b27426f4::t_78a403237f7450 94-102,210-215,223-228,287-300
+  s_327fe9b27426f4::t_e5bf125bc33b7e 1-67,69-72,74-90,93,103-123,125-209,216-222,229-268,270-286,301-304
+visual-quality/prompts/visual-rating-v2/response.schema.json
+  s_327fe9b27426f4::t_7296ed9c7feea9 1-171
+visual-quality/experiments/prompt-calibration-2026-10-18/references/a.jsonl
+  s_327fe9b27426f4::t_28c9f57692695e 1-50
+visual-quality/experiments/jev14-calibration-2026-10-18/assessment.md
+  s_af5e869a7baba5::t_7768790209b891 1-41
+visual-quality/experiments/prompt-calibration-2026-10-18/references/b-review-2.json
+  s_327fe9b27426f4::t_b1bb6340c47698 1-132
+visual-quality/experiments/prompt-calibration-2026-10-18/prompt-revision.json
+  s_327fe9b27426f4::t_b7bee8c1f67322 1-34
+visual-quality/experiments/prompt-calibration-2026-10-18/references/a-freeze.json
+  s_327fe9b27426f4::t_28c9f57692695e 1-14
+visual-quality/experiments/jev14-calibration-2026-10-18/metrics.py
+  s_af5e869a7baba5::t_3ae56f18164e43 1-28,33-52,54-61,63-69,71-90,108-122,124-129,131-139,143-146,152-153,163-180,184-191
+  s_af5e869a7baba5::t_d93052d2969da6 29-32,91-107,140-142,147-151,154-162,181-183
+  s_af5e869a7baba5::t_4fe31bd90b7411 53,62,70,123,130
+visual-quality/experiments/jev14-calibration-2026-10-18/acquisition-audit.json
+  s_af5e869a7baba5::t_24a5f44f85a788 1
+visual-quality/experiments/jev14-calibration-2026-10-18/manifest.json
+  s_af5e869a7baba5::t_103cc9a47256c7 1
+visual-quality/experiments/prompt-calibration-2026-10-18/audits/b-review-2.json
+  s_327fe9b27426f4::t_ba1dc40fac2dc4 1-176
+visual-quality/experiments/prompt-calibration-2026-10-18/manifest.json
+  s_327fe9b27426f4::t_84808ec09df40f 1-2116
+visual-quality/experiments/prompt-calibration-2026-10-18/results/cases.csv
+  s_327fe9b27426f4::t_7bebcb820e78b0 1-101
+visual-quality/experiments/prompt-calibration-2026-10-18/results/summary.json
+  s_327fe9b27426f4::t_e5567be679cb1f 1-1264
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "04be63619d7ef75420df81070939a890fc97e004",
+  "prompts": {},
+  "sessions": {
+    "s_327fe9b27426f4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14258-b3f9-7a50-9987-4a60f71f58c8",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_af5e869a7baba5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14f85-5716-7da2-8e30-760886a4c624",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
