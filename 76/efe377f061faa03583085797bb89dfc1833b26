@@ -1,0 +1,27 @@
+visual-quality/.gitattributes
+  s_a1df639cf4045d::t_c1bb0c63bc0387 1-2
+visual-triage/.gitattributes
+  s_a1df639cf4045d::t_c1bb0c63bc0387 15-17
+visual-triage/tracks/jev14/latest-results-2026-10-15/cases.csv
+  s_a1df639cf4045d::t_214798de7da7d5 1-261
+visual-triage/tracks/jev14/shared-results-2026-10-15/cases.csv
+  s_a1df639cf4045d::t_7bbf0d40257976 1-127
+visual-triage/tracks/openai_provenance/partial-2026-10-12/results/cases.csv
+  s_a1df639cf4045d::t_a5b8ab01c365d7 1-161
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "76efe377f061faa03583085797bb89dfc1833b26",
+  "prompts": {},
+  "sessions": {
+    "s_a1df639cf4045d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a15d73-2535-7ff2-be40-90ad31bfd1b1",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
