@@ -1,0 +1,130 @@
+{
+  "scope": "Post-freeze comparison of assistant references and native human quality MOS; no test model outputs used",
+  "manifest_sha256": "5d6ee801963328710f1cc37aef475507dae2fe855799d11c41b0e8dc027c117d",
+  "assistant_reference_sha256": "120689b53ce0d3b8673058cb6d25debdc8524ea09f5be7a804f7b98d9c0a1e2b",
+  "human_native_quality": {
+    "n": 60,
+    "range": [
+      0.4375,
+      0.8465
+    ],
+    "mean": 0.698725,
+    "median": 0.711,
+    "sample_sd": 0.08745078155691494
+  },
+  "human_quality_affine_1_5": {
+    "n": 60,
+    "range": [
+      2.7272727272727275,
+      4.37979797979798
+    ],
+    "mean": 3.7827272727272727,
+    "median": 3.8323232323232324,
+    "sample_sd": 0.35333649113905025,
+    "distribution": {
+      "edges": [
+        1,
+        1.8,
+        2.6,
+        3.4,
+        4.2,
+        5
+      ],
+      "counts": [
+        0,
+        0,
+        9,
+        45,
+        6
+      ],
+      "intervals": "left-closed right-open except final bin includes5"
+    }
+  },
+  "assistant_technical_quality": {
+    "n": 60,
+    "range": [
+      2.6,
+      4.6
+    ],
+    "mean": 4.008333333333334,
+    "median": 4.1,
+    "sample_sd": 0.4450449098140686,
+    "distribution": {
+      "edges": [
+        1,
+        1.8,
+        2.6,
+        3.4,
+        4.2,
+        5
+      ],
+      "counts": [
+        0,
+        0,
+        4,
+        29,
+        27
+      ],
+      "intervals": "left-closed right-open except final bin includes5"
+    }
+  },
+  "assistant_aesthetics": {
+    "n": 60,
+    "range": [
+      3.1,
+      4.6
+    ],
+    "mean": 3.9583333333333335,
+    "median": 4.0,
+    "sample_sd": 0.3538129672852721,
+    "distribution": {
+      "edges": [
+        1,
+        1.8,
+        2.6,
+        3.4,
+        4.2,
+        5
+      ],
+      "counts": [
+        0,
+        0,
+        4,
+        38,
+        18
+      ],
+      "intervals": "left-closed right-open except final bin includes5"
+    }
+  },
+  "human_quality_vs_assistant_technical_quality": {
+    "pearson": 0.5901519119406583,
+    "spearman_average_ties": 0.48742009963445226
+  },
+  "human_quality_vs_assistant_aesthetics": {
+    "pearson": 0.40892873736300206,
+    "spearman_average_ties": 0.3892602309070861
+  },
+  "assistant_quality_vs_assistant_aesthetics": {
+    "pearson": 0.352069837168512,
+    "spearman_average_ties": 0.296858936899899
+  },
+  "descriptive_affine_comparison": {
+    "assistant_minus_human_mean": 0.22560606060606062,
+    "mae": 0.36533670033670035,
+    "note": "Different views and constructs; this is not calibrated error to delivered-view human gold"
+  },
+  "low_quality_support": {
+    "human_below_2_6": 0,
+    "assistant_below_2_6": 0,
+    "human_below_3": 1,
+    "assistant_below_3": 3
+  },
+  "limitations": [
+    "Human MOS concerns3840px overall image quality; assistant assessed512px technical quality",
+    "Ten human raters each supplied two ratings; twenty ratings are not twenty independent raters",
+    "No human aesthetic MOS",
+    "Only medium-to-high quality samples in this draw; obvious-low-quality recall is unsupported",
+    "Assistant is one model reference and not independent human gold",
+    "Photo-level correlations on60 selected images do not establish production calibration or model-pretraining independence"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "frozen_at": "2026-10-15T20:59:45.634836+00:00",
+  "model": "typesafe/jev-1.14",
+  "expected_revision": "typesafe/jev-1.14-20261014",
+  "request_headers": {
+    "TypeSafe-Danger-Zone-Long-Context": "true",
+    "TypeSafe-Danger-Zone-Images": "true"
+  },
+  "context_tokens": 262144,
+  "manifest_sha256": "77e85862f6d47d1779deaaee0f657841d4d42e3ff88e4388a0856d0077bb94f0",
+  "maximum_attempts": 260,
+  "budget_usd": 2,
+  "prior_known_cost_usd": 0.006680982,
+  "prior_unknown_cost_reserve_usd": 0.012,
+  "prior_cost_note": "One HTTP400 charge is unreported; reserve is a guard, not its actual cost",
+  "reserve_per_request_usd": 0.012,
+  "minimum_interval_seconds": 1,
+  "source_inputs": {
+    "data/metadata-v3/runs/image_only/selection.json": {
+      "sha256": "66d423ecf6b5f9e3600d47ca8cbf0582e1e5a0c818a82647c8e74404a4a74e6d"
+    },
+    "tracks/quality_v2/protocol.json": {
+      "sha256": "c9e8ddb793186d5a6126de26c210afc394e28a623bbaaf7777f8770b2266361c"
+    },
+    "tracks/metadata_v3/protocol.json": {
+      "sha256": "d7b505fe004141e7ea41d5af756f80209bf5ff18dfa0303a192c33f3e8d02080"
+    },
+    "tracks/quality_v2/selection.json": {
+      "sha256": "b19ccf43873d0b04dfe83b7750c0f7e0f91a2a7b480c44736486df6dccd8e23f"
+    },
+    "tracks/quality_v2/dataset.json": {
+      "sha256": "5f249c036ce445ea0b91ffa472176b66cfee64644b6fc071129da41afbfa4d9f"
+    },
+    "tracks/quality_v2/final/selected.jsonl": {
+      "sha256": "7ee0098b94fc592e1d67e1fdef0088097c60daa8b23f44a485c53aba8d1cf55d"
+    },
+    "tracks/quality_v2/prompts/selected.json": {
+      "sha256": "69311ef4874dbc927c4eaaebaa7029fdbaad94d057da9a562927f353066e48cc"
+    },
+    "tracks/metadata_v3/dataset.json": {
+      "sha256": "3a1fe8dc41a7aff4d803a98ddf09f6aac5b1aa851b356ccda328e329756169de"
+    },
+    "data/metadata-v3/runs/image_only/final/selected.jsonl": {
+      "sha256": "aaf85f97f8ade564c21322896da2bb974d0f7eed8a887157b7d03285254ce700"
+    },
+    "data/metadata-v3/runs/image_only/candidates/fc15792f2b64d250730af9cfaca097ff21ad203d75991d5e915883af1715174f/prompt.json": {
+      "sha256": "30f616f2a05b8eb684e43eef43d8b248cab8c7e5b709120dc8d6bad65ddd893a"
+    },
+    "data/jev14-v1/attempts.jsonl": {
+      "sha256": "3a8cc0ec907b312984b5910975bbd358ddd2266fd9c03231b4967d8d1a3fc235"
+    },
+    "data/jev14-v1/research/openrouter-decisions-models.json": {
+      "sha256": "598f959960d1d73d23bcaa213771cec8e62dac05f2e3d504975476801aaec2ae"
+    }
+  },
+  "execution_sha256": {
+    "tracks/jev14/latest.py": "2723c27c56c38769c80d9dbe84f6ebd6be7f867b534752c3e5a4c1d0766ffa68",
+    "tracks/jev14/client.py": "c4846911f2bd67661c489a4d5447d6b1ee9b25ce514a76c99350fe7f69f5a4a8",
+    "tracks/jev14/rounding.py": "89de1cffcc237de0313488b98ff180a1a3b750e0bc965fcdb708af6f2873ac28",
+    "tracks/jev14/run.py": "4fc3dccf85778d0de2059a3c7915f952fdd0dc243399679f9bfaf3f44e1a9775",
+    "bench_protocol.py": "be6ed1dbb8ccdc979312af1447766759f9036f26f7a2914223164459211f2bb9",
+    "bench_runner.py": "d65c6d68fd6d8f74f279f60140d9ca50aa6834d198f82e770cc9c3172bce1fd3"
+  },
+  "prompts": {
+    "quality": "tracks/quality_v2/prompts/selected.json",
+    "ai": "data/metadata-v3/runs/image_only/candidates/fc15792f2b64d250730af9cfaca097ff21ad203d75991d5e915883af1715174f/prompt.json"
+  },
+  "baselines": {
+    "quality": "tracks/quality_v2/final/selected.jsonl",
+    "ai": "data/metadata-v3/runs/image_only/final/selected.jsonl"
+  },
+  "datasets": {
+    "quality": "tracks/quality_v2/dataset.json",
+    "ai": "tracks/metadata_v3/dataset.json"
+  },
+  "counts": {
+    "quality": 100,
+    "ai": 160
+  },
+  "ai_threshold": 0.5,
+  "low_quality_threshold": 2.6,
+  "view": "Exact frozen bytes: quality1024x768JPEG; AI512x512JPEG. No metadata text or resizing.",
+  "prompt_policy": "Transfer the selected Decider prompts unchanged; no Jev-specific optimisation",
+  "parsing": "Bounded two-decimal probability rounding; preserve native scores and probabilities",
+  "retry_policy": "No retries; retain and stop on any failed or unpriced attempt",
+  "order": "SHA256 of case ID, independent of labels and results"
+}

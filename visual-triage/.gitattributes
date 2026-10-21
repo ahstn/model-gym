@@ -1,0 +1,14 @@
+# Preserve source snapshots and frozen experiment evidence byte for byte.
+evidence/** -text
+research/**/evidence/** -text
+tracks/**/evidence/** -text
+tracks/**/*.json -text
+tracks/**/*.jsonl -text
+tracks/**/report/** -text
+summaries/** text eol=lf
+archive-index.json text eol=lf
+
+# Retain whitespace from imported source pages; authored code still uses Ruff.
+evidence/ai-expansion/*.txt -whitespace
+research/**/evidence/*.txt -whitespace
+research/**/evidence/catalog-awesome-readme.md -whitespace

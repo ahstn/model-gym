@@ -1,0 +1,2718 @@
+{
+  "benchmark": "ai",
+  "version": 1,
+  "created": "2026-10-11",
+  "selection_seed": 20261011,
+  "selection": "Hash-rank source strata within the first 1000 published core/test rows; 30 DOCCI real plus five per six generators; keyword exclusion and dHash<=5 duplicate rejection; shuffle fixed seed before assigning blind IDs.",
+  "delivery": "Full frame; EXIF transpose; RGB; maximum edge 512 without upscaling; JPEG quality 92, subsampling 0, optimize=True; metadata never sent to models.",
+  "limitations": [
+    "A small stratified convenience panel, not a population estimate or full OpenFake benchmark.",
+    "Real photos come from DOCCI only; source/content/camera confounding remains. Scenes are not paired.",
+    "Fixed modern-generator subset does not establish performance on unseen generators.",
+    "Viewer assets can contain upstream re-encoding; published and acquired hashes are separate.",
+    "dHash screening catches only some near duplicates and does not prove semantic scene independence."
+  ],
+  "excluded_candidates": [],
+  "samples": [
+    {
+      "id": "ai-000",
+      "image": "data/benchmarks/ai/ai-000.jpg",
+      "original_sha256": "9d742249d25ce672acb134ca32d72f36fd5fb8d8d8fb370060df287cb14db4e2",
+      "delivered_sha256": "8e206d671ed357dd0ba95beb7c229f5f8b1cf7666f931c8a980246439ae7748e",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 121562,
+      "dhash": "3931f1f1f0f26333",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 311,
+        "row_id": "openfake-87a5c2e80af80ff869d537c75d183788",
+        "group_id": "prompt-7113f3465657fbee6c605885",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/311/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "bc7d9a55bbcacd8820dc6639d2f8c0c40fcd77d6d5dcbcf602700e8a62b0cb83",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-001",
+      "image": "data/benchmarks/ai/ai-001.jpg",
+      "original_sha256": "86664927e05c4734075627611f9dd8bdf346e7f6c40f40a403a56b27e8632999",
+      "delivered_sha256": "bebd846971d98c2101b9397be110f3a2492567184be0ecd49618a47cbc77b09a",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 133346,
+      "dhash": "3230383c28cc4ccc",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 959,
+        "row_id": "openfake-cd60661b49948781cae2d63498d7b7ab",
+        "group_id": "prompt-ec296b088c92ccffd506e0ed",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/959/image/image.jpg",
+        "source_kind": "ernie-image-turbo",
+        "generator_type": "image",
+        "release_date_as_published": "2026-04",
+        "published_original_sha256": "f9f505340dce64ca681ffd977e17d9bbe9051d3fd7281e13776c245f0c2417e1",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-002",
+      "image": "data/benchmarks/ai/ai-002.jpg",
+      "original_sha256": "6eb13fb1651cbd486aa430924e42751ca15894e42cdf1de447f12c4964f45d91",
+      "delivered_sha256": "5bc6931729f985b5c8948e23d0835b6c106975009e7db53648d3580bf586a008",
+      "original_size": [
+        1535,
+        2048
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 86443,
+      "dhash": "4f59144c4c5c1c00",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 566,
+        "row_id": "openfake-f3534398780ca786b7835114c2fe81fa",
+        "group_id": "prompt-05baafb9c0f61ab65595ca4e",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/566/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "a2362eee1f7fb9dc7baa1898ffa018dcf0b349f96189811b72809320bc700c1d",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-003",
+      "image": "data/benchmarks/ai/ai-003.jpg",
+      "original_sha256": "8757ae406207b42df5793bed96f7e249cc89711914dba71c769521d8ab43505b",
+      "delivered_sha256": "6d54b7eb47b755a0afe25e1814727196c616014f3cdcc8d6d015b4726bd4e296",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 144445,
+      "dhash": "ce6c6562c8e9e383",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 166,
+        "row_id": "openfake-56cc2884ec15ac862b25a8091788b98a",
+        "group_id": "prompt-3aa33145763a80d6178cd333",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/166/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "2a8f840fdb0bf665f968321afc4ee63c7f8f7e67587480cf6ed535836f821dee",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-004",
+      "image": "data/benchmarks/ai/ai-004.jpg",
+      "original_sha256": "c8a72409c6b11dbb308d9cd43bec7ef9996d49c62dc6ed099742bf0e1e2afcf9",
+      "delivered_sha256": "48d339cd5a890f5fa60be4d322c86bcde5360b20e214c07e542ee06a2f339b58",
+      "original_size": [
+        1232,
+        928
+      ],
+      "delivered_size": [
+        512,
+        386
+      ],
+      "delivered_bytes": 41067,
+      "dhash": "7179e9e9e137278e",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 492,
+        "row_id": "openfake-15b4cf2a3600815a175c45aa5d37d279",
+        "group_id": "prompt-de3dc117b3781dcb2961230e",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/492/image/image.jpg",
+        "source_kind": "midjourney-7",
+        "generator_type": "base",
+        "release_date_as_published": "2025-04",
+        "published_original_sha256": "278433e89318f1ddb16768ffba44e772bedc09a6d61f5a6a81bef0f0b1369b32",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-005",
+      "image": "data/benchmarks/ai/ai-005.jpg",
+      "original_sha256": "e6d043d8826ea63a2d03f02a00cfad934882c8c0c0b678806b0a6d8dd776aa06",
+      "delivered_sha256": "7d0e98542313465c28d8abe199794a86a23b82f241afb46e7832912877859220",
+      "original_size": [
+        1024,
+        1536
+      ],
+      "delivered_size": [
+        341,
+        512
+      ],
+      "delivered_bytes": 107840,
+      "dhash": "83cb8c99656e7636",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 907,
+        "row_id": "openfake-f732b2d15ac73b6020be66d98f170350",
+        "group_id": "prompt-313d840622f1b25316248645",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/907/image/image.jpg",
+        "source_kind": "gpt-image-1.5",
+        "generator_type": "image",
+        "release_date_as_published": "2026-02",
+        "published_original_sha256": "ae5e184a329f2daf928512e2d0f0010d4006c826acd5a1de13b05aca9949b38f",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-006",
+      "image": "data/benchmarks/ai/ai-006.jpg",
+      "original_sha256": "e045381df1318e8d56a763e542ef68fa58d04fe38cad9ae1e935b562afe5c85d",
+      "delivered_sha256": "2d580e16f57bad38988e8ee9c61e7c5e0fe45766bc32ba19ee96c23ad052d9b3",
+      "original_size": [
+        600,
+        600
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 66012,
+      "dhash": "7efe6cec4e2e2666",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 227,
+        "row_id": "openfake-8fb3ac304054c392aa7ff20ce0f49b2d",
+        "group_id": "prompt-bbb0de0c3a3d2ffda3fac0cf",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/227/image/image.jpg",
+        "source_kind": "recraft-v3",
+        "generator_type": "base",
+        "release_date_as_published": "2024-10",
+        "published_original_sha256": "289623ee9ded6779e7f107bb5fd32c8117e624782f587bcfe9c25ddbaea614ad",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-007",
+      "image": "data/benchmarks/ai/ai-007.jpg",
+      "original_sha256": "25db8b806e553e134acb532f7b5926d2c276e197102fa1f246733a59aa1610fa",
+      "delivered_sha256": "fcf01e2bc492660f3405a6f05e513ae61f316e89759af04d6c514fdbb040bd00",
+      "original_size": [
+        600,
+        600
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 62034,
+      "dhash": "92a7b3a39b93a48e",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 305,
+        "row_id": "openfake-4e9a56ba2bd59979544735445bf95898",
+        "group_id": "prompt-6a1081dc34bdacb9e5fb299d",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/305/image/image.jpg",
+        "source_kind": "recraft-v3",
+        "generator_type": "base",
+        "release_date_as_published": "2024-10",
+        "published_original_sha256": "03f1196eb0bbc63b57aeec0fc826f868829bfd773e4cb8442ec5374dd470236a",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-008",
+      "image": "data/benchmarks/ai/ai-008.jpg",
+      "original_sha256": "7c594521e131f80c2b7ea5a4352b73395d738bae5eb54d0bfc0627aaa5fe9a7f",
+      "delivered_sha256": "f4c5c6f40306a1067e9fcd355830d15c61c38c877e13387f31e90bb35f0a8dfd",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 104744,
+      "dhash": "acb8d8f1ebc9c95b",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 357,
+        "row_id": "openfake-5d2c104a1bbc51a271c45eba24e2a30d",
+        "group_id": "prompt-ee3fb5681d3b6c8422fc1a19",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/357/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "2af898b7d5e046f922a2cc0cecbb5a6916c94744d56d1b498593e06aa6be3bd4",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-009",
+      "image": "data/benchmarks/ai/ai-009.jpg",
+      "original_sha256": "14795a17a236c38b3ca5ce338cebe6b6456e42507f2ba8915fad240a2e32966f",
+      "delivered_sha256": "bce7456aa197d31c2dee5f00737768a3b21b550528a3a12318eddd3edc698b15",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 134368,
+      "dhash": "39a1e34945a30858",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 702,
+        "row_id": "openfake-52ca3279a094b7a07c8b52ec0f93d7ed",
+        "group_id": "prompt-bbb997a2d49a986f1d054d08",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/702/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "0d0b44101c07452224a03a85eab011c5c6439bda1f513ca7f56f47f0a0742c80",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-010",
+      "image": "data/benchmarks/ai/ai-010.jpg",
+      "original_sha256": "e37f89d15e5547f58a7ee9d85c3be8bfd8ed062119dcb49d2b762596c369d62c",
+      "delivered_sha256": "43f4af92d991a6a1e8d93c93b4cae3661dce78f04516acc20cd7c0f0a9b1871d",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 163533,
+      "dhash": "4d4d39393969212f",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 119,
+        "row_id": "openfake-de9f49076a208a0805859cb81a48a5ec",
+        "group_id": "prompt-7890fb0e5adb9da86d426b41",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/119/image/image.jpg",
+        "source_kind": "gpt-image-1.5",
+        "generator_type": "image",
+        "release_date_as_published": "2026-01",
+        "published_original_sha256": "86134796903042a288b48e134922eeceab13ca9a57f6bfdef9a042c08562ae3f",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-011",
+      "image": "data/benchmarks/ai/ai-011.jpg",
+      "original_sha256": "6f187483c39817d59affcf6aae53f970a517ecba01cf0313d8c5ac49c1aacb96",
+      "delivered_sha256": "fc99cd91ab42b8542aea43ba1696653a94edfd28ea4261a8a8c5ae349efd7bed",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 132418,
+      "dhash": "b149e832d5e570f0",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 388,
+        "row_id": "openfake-06bdc26c84a5ef66dd464eec4cb68020",
+        "group_id": "prompt-33b1dd6abf9c4c14ed132c31",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/388/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "4aabc2a4caf0a5c03e60414ee460f6666a5487f1a88ece8a4bd12af86f887b07",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-012",
+      "image": "data/benchmarks/ai/ai-012.jpg",
+      "original_sha256": "ce2ba32d2152f043fa9ae9b45cd1a606128878cd417fd23a1162b5aa4b798810",
+      "delivered_sha256": "2e5560f9c38afd6dd9297f6c2f2f3cd377d7f6a3f7dd1f278a30d2acf0114c0a",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 133427,
+      "dhash": "c91973e50511a263",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 871,
+        "row_id": "openfake-eccf7d5de8b60115c21ff107540d0e58",
+        "group_id": "prompt-52a782e8905ad945a5513b94",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/871/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "75e866828e47c25a29aab4b447877329ea0b8d2f388d61bf85f6dab2c6a694fa",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-013",
+      "image": "data/benchmarks/ai/ai-013.jpg",
+      "original_sha256": "27231ac83191f79ed1498d4011c92b4f919335ebd8e33232099d48b043cc5bcf",
+      "delivered_sha256": "6c1e81d14f9cf7c4caa2dd0521adefb6aba7295cde7c68e418106a5c10342f36",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 71976,
+      "dhash": "e4ed4ed2f9b0e4c0",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 550,
+        "row_id": "openfake-230bed8b1ac7cb849d1c7c9e40787590",
+        "group_id": "prompt-051264f5359745395f56150b",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/550/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "9b65ea25aecd3986623eabe83ab7bbebac24de3ccf55f3ca957496bba1cc256a",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-014",
+      "image": "data/benchmarks/ai/ai-014.jpg",
+      "original_sha256": "b23ab9ba3fd1420cf86f946c8ae385ff196da6c4b9257b1b2c5030cf7efa9bd6",
+      "delivered_sha256": "70be54e16b639a81a32c4e1c387a17581aafaac9cc3c1edd84ae68025f902a4e",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 80093,
+      "dhash": "061615a515616d59",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 742,
+        "row_id": "openfake-7e716272152d484087109b4ecc43f958",
+        "group_id": "prompt-fb8deefef0400e7cec53a0ef",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/742/image/image.jpg",
+        "source_kind": "midjourney-7",
+        "generator_type": "base",
+        "release_date_as_published": "2025-04",
+        "published_original_sha256": "7fc4a1987dc42fd0f7c04424890e583e1c07a33041ca924ec747a8bf67644e47",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-015",
+      "image": "data/benchmarks/ai/ai-015.jpg",
+      "original_sha256": "6f61734d691c9e9633d163c283f76f227d44ae9647cee709bdb97537804a0664",
+      "delivered_sha256": "005c2c8575bbd361f741bd8311d67c7ce06926c7b31440c195384ecf34ad6465",
+      "original_size": [
+        1024,
+        1536
+      ],
+      "delivered_size": [
+        341,
+        512
+      ],
+      "delivered_bytes": 75171,
+      "dhash": "0b0f333369e0696d",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 276,
+        "row_id": "openfake-83f822d4a35582b4bef983614afaa86a",
+        "group_id": "prompt-a60d7cb49e856836dfead7ff",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/276/image/image.jpg",
+        "source_kind": "gpt-image-1.5",
+        "generator_type": "image",
+        "release_date_as_published": "2026-01",
+        "published_original_sha256": "7737e1ba5342a34869a4a527385be2b30c3b955fd24cbc93eded625503989db1",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-016",
+      "image": "data/benchmarks/ai/ai-016.jpg",
+      "original_sha256": "38adcfd87e01ee57d48f2b139496fe1cd6629046966d90e34e465e24d6cec663",
+      "delivered_sha256": "e7cc788523007afd6d0f184563d576c1997872eec97d8d5f864bb47412475e36",
+      "original_size": [
+        2048,
+        1535
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 69237,
+      "dhash": "4e161f0b278e3322",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 903,
+        "row_id": "openfake-24ddf5af425fc7652978b1345763d820",
+        "group_id": "prompt-ff2cfd457151ba76dac1bb64",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/903/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "f41b7fb5d526b4861b65401a29477f239757cbb7e707df2cd703f59e07d47404",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-017",
+      "image": "data/benchmarks/ai/ai-017.jpg",
+      "original_sha256": "981dd846c1a8a1fd24f328abc2ba184750dff34cbd7d98acd63ca5fbd06469f2",
+      "delivered_sha256": "a945e30159deae436fb0a34c48a39fa26e152fff8f5bb801c6b53d3b09d73f97",
+      "original_size": [
+        1024,
+        1536
+      ],
+      "delivered_size": [
+        341,
+        512
+      ],
+      "delivered_bytes": 63150,
+      "dhash": "0f170f2f2f5bdb5b",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 233,
+        "row_id": "openfake-334aa0bb3bdf1b780d4625fdbabad36c",
+        "group_id": "prompt-34a093619b42cd143ea0bb68",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/233/image/image.jpg",
+        "source_kind": "ernie-image-turbo",
+        "generator_type": "image",
+        "release_date_as_published": "2026-04",
+        "published_original_sha256": "d8471dcc6dcc5013e6f3dda5b23b1f1c39ed57d09a33cbc28f557c8c218c1936",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-018",
+      "image": "data/benchmarks/ai/ai-018.jpg",
+      "original_sha256": "0dfa9f42ef50049debd0abde5e4a0f1673eaf6c529f3225ce24c117ddc110146",
+      "delivered_sha256": "28eb3378a249ee544d014e76d75e8745016274659545642e862d8c5c15ac6c06",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 56568,
+      "dhash": "0406212801870f1c",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 362,
+        "row_id": "openfake-cd633d8e9f52c948e5407ad4306c6639",
+        "group_id": "prompt-c032435331b2ad6abd822bf7",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/362/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "0b4f9d8fceb9b2d249a9b6b4e6a5d6e8fb0da5d93b5bcfa16c47961818c20851",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-019",
+      "image": "data/benchmarks/ai/ai-019.jpg",
+      "original_sha256": "f8d80c318d75d8b5a2a2d55d5e46a9c5906acd8972adc8a4ec28229ae0de70ac",
+      "delivered_sha256": "fae25fb44fd030cdc67be5b773a9db468c6941c4d05212211c4519e0823951c9",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 74492,
+      "dhash": "d37b6b6becccd8f8",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 425,
+        "row_id": "openfake-4bc849211e0422f989664129ea1ffaa9",
+        "group_id": "prompt-af310822fc85314c7f7ea40f",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/425/image/image.jpg",
+        "source_kind": "flux.2-klein-9b",
+        "generator_type": "Base",
+        "release_date_as_published": "2026-01-14",
+        "published_original_sha256": "026c592b32b65107948f3ffa9ec77d7290d1dcff3ebc884db7573f5afc47f77a",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-020",
+      "image": "data/benchmarks/ai/ai-020.jpg",
+      "original_sha256": "82b42d660a2ef54db536d7eebab6c5f09cdc434fb922c24f7e96670ced4ce815",
+      "delivered_sha256": "3f13fc85e0cae739ca8e1963db471de0cdf5cccc257517cccadd85d89de68956",
+      "original_size": [
+        4032,
+        3024
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 105872,
+      "dhash": "cc4d0163e6f4e0c2",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 507,
+        "row_id": "openfake-1b3a92a950316bdfb7e4d75539270f78",
+        "group_id": "prompt-8993c1005c8180163fb8be6c",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/507/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "83540d7ec5dc565e98fa0ef9160f785910637be7ee9ede0e3ef744df8f6f3841",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-021",
+      "image": "data/benchmarks/ai/ai-021.jpg",
+      "original_sha256": "b179ee08c94d4a1ae515dd7c7a928e4600e9129508976f63d5650d01658d954f",
+      "delivered_sha256": "e4dc6327bc5c9c616d8b2aa44859f881b758949f961285e4e2c3ad433cece696",
+      "original_size": [
+        600,
+        1000
+      ],
+      "delivered_size": [
+        307,
+        512
+      ],
+      "delivered_bytes": 47293,
+      "dhash": "dfdfcd1df3ccf3ce",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 783,
+        "row_id": "openfake-e6a82687978f4a2858415c232d3cc2f5",
+        "group_id": "prompt-4fc966aec236006ab2f39d59",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/783/image/image.jpg",
+        "source_kind": "recraft-v3",
+        "generator_type": "base",
+        "release_date_as_published": "2024-10",
+        "published_original_sha256": "2691b5be677e0cf1d1f46ad11b2ddaf5ff0414ce526297109315f7005bac59ce",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-022",
+      "image": "data/benchmarks/ai/ai-022.jpg",
+      "original_sha256": "c19f81cf81e38fda8512007227dafebbfe396a539b4827a9f23aa80ef7b0abd8",
+      "delivered_sha256": "9948f07c34c53d681d35fda506991de40363a17545de6b67f404bd21ba28f1f7",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 103521,
+      "dhash": "6637b3f97c96b69c",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 386,
+        "row_id": "openfake-3c7f3dfb6c56bf7713dcc3f4264b1e9b",
+        "group_id": "prompt-a4b38ee3818abc4d82a5301f",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/386/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "7ea541535be3122ae78b978be8c9f8cb53540994de1e2f807721a43593db3dd0",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-023",
+      "image": "data/benchmarks/ai/ai-023.jpg",
+      "original_sha256": "ff96565ac51e5c160dd944abd6fdaf18c270b01f819b42f75812f842b56472e2",
+      "delivered_sha256": "12737e65229a1bb921a6be0823307e8ce7e77842526853838915ec275c6a6a2f",
+      "original_size": [
+        2048,
+        1535
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 94656,
+      "dhash": "fe72616363713836",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 669,
+        "row_id": "openfake-3b95c8246720ab864cfb28534af33b60",
+        "group_id": "prompt-93eaaadd2814bf77fdb1785e",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/669/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "9c3e11a314e8d8902c5d532071e2e272f28978940e8b397ff5473f5e8075846c",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-024",
+      "image": "data/benchmarks/ai/ai-024.jpg",
+      "original_sha256": "4531672492c39797606663ad577e57dca2281ac3be9de2570ddfed18de48ec4e",
+      "delivered_sha256": "4d375b502a230edf9f27840f5adf714fe112a6bd945a3e6e5255f6c5e8851de1",
+      "original_size": [
+        1080,
+        1920
+      ],
+      "delivered_size": [
+        288,
+        512
+      ],
+      "delivered_bytes": 55223,
+      "dhash": "7d6dbbbbe7f67933",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 308,
+        "row_id": "openfake-7304b375430dd7a56d096548152be715",
+        "group_id": "prompt-d99433d20ef87bb48c148498",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/308/image/image.jpg",
+        "source_kind": "z-image-turbo",
+        "generator_type": "image",
+        "release_date_as_published": "2026-04",
+        "published_original_sha256": "f3d54e15517787da1951bcf9573d03e56660b30bbc7968b8d778a4e562031452",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-025",
+      "image": "data/benchmarks/ai/ai-025.jpg",
+      "original_sha256": "567c1b2273a1e039218605638d720d581c09826f647b3ef5713ed97d9323e2cf",
+      "delivered_sha256": "451b3332d3a47e4375d660c4362d515f87dd51f09097c1165edcd671c7b56512",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 109917,
+      "dhash": "88cc1635350127ed",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 213,
+        "row_id": "openfake-063095250393c7e5625d7c544cf7ffb6",
+        "group_id": "prompt-058140a3f2815d1e5ad0edcf",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/213/image/image.jpg",
+        "source_kind": "z-image-turbo",
+        "generator_type": "Base",
+        "release_date_as_published": "2025-11-25",
+        "published_original_sha256": "60b4a5fee4dd544c3cdf4c08e3e0951cd95b519764ed0bfbbf63585d8815efef",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-026",
+      "image": "data/benchmarks/ai/ai-026.jpg",
+      "original_sha256": "299ebf692a5766b56b05a0b5d818879f1b1318755267432a98368d2d2d37c76f",
+      "delivered_sha256": "d9671842ed8fdcc6f7851fb8331958443caa54254485f9bf8edab153bea6d187",
+      "original_size": [
+        928,
+        1232
+      ],
+      "delivered_size": [
+        386,
+        512
+      ],
+      "delivered_bytes": 70931,
+      "dhash": "a4302aa86c6c2838",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 396,
+        "row_id": "openfake-c8c7321e2b9989116bd6cee57b5a709d",
+        "group_id": "prompt-a9f3f899c5d02a074e6edfae",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/396/image/image.jpg",
+        "source_kind": "midjourney-7",
+        "generator_type": "base",
+        "release_date_as_published": "2025-04",
+        "published_original_sha256": "e6a1f6c9439cbfa8372e3c3db66646fbbc4dca1fe6b3f4ede46981a80ec14a9d",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-027",
+      "image": "data/benchmarks/ai/ai-027.jpg",
+      "original_sha256": "3cf75379b62ca125f2cbe35d30522970ad6d7f9c5e7dce4cb672a64ac5878cdb",
+      "delivered_sha256": "8c0520aa434b6237182137d1dcbed19665a9aaa7a18e4a5d7c46a36e7bf24c30",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 126667,
+      "dhash": "049088703030380a",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 832,
+        "row_id": "openfake-47cd207052451f752fe5afe1013dff63",
+        "group_id": "prompt-94559701f8bb00b80b655764",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/832/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "f5c68e4b53d52d3c08d0bd092d2589c2ac9c20e204202f464b0b7ccb5916393a",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-028",
+      "image": "data/benchmarks/ai/ai-028.jpg",
+      "original_sha256": "0647afd92dc4d86ced856b45afec2e6a010d0eee6a461b44334322677eda8e76",
+      "delivered_sha256": "d99010d13ae8108fcc71131097dbae3a2353884ba65e6d0ef5cf37015222b7c9",
+      "original_size": [
+        1024,
+        1536
+      ],
+      "delivered_size": [
+        341,
+        512
+      ],
+      "delivered_bytes": 96420,
+      "dhash": "0f0f0f3b081d3727",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 630,
+        "row_id": "openfake-0226f6d9b6c700e3a56bbfa84a6da919",
+        "group_id": "prompt-e0477127f161cbbdfed052d5",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/630/image/image.jpg",
+        "source_kind": "gpt-image-1.5",
+        "generator_type": "image",
+        "release_date_as_published": "2026-01",
+        "published_original_sha256": "e36f01c962a6dbbc8f64a43e9c2e81e7e18936bfae4058b596f8dc33fa90cb5d",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-029",
+      "image": "data/benchmarks/ai/ai-029.jpg",
+      "original_sha256": "84090dc77d1548288a74e66b17aef9cea06f984fb2f86a336766ffc6ffd3b959",
+      "delivered_sha256": "1bd04bf98d56b79f136bc2492a68605c10578fe712c2163893b419583c09ff3c",
+      "original_size": [
+        832,
+        1216
+      ],
+      "delivered_size": [
+        350,
+        512
+      ],
+      "delivered_bytes": 103663,
+      "dhash": "474f122a02062003",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 180,
+        "row_id": "openfake-218dd3745411939b3da7c81fc87c527c",
+        "group_id": "prompt-d22e7e7f3b589766fea7dcd1",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/180/image/image.jpg",
+        "source_kind": "flux.2-klein-9b",
+        "generator_type": "image",
+        "release_date_as_published": "2026-04",
+        "published_original_sha256": "c46e93b3f32f18bb40484a9c1496e48ec18c04b57b6232b4e9ae00bb66225ec6",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-030",
+      "image": "data/benchmarks/ai/ai-030.jpg",
+      "original_sha256": "87afe0a66370693cca503323139703385b9cb0ab154a4d84c1fedd2198d2aec9",
+      "delivered_sha256": "266f8c8433ed884e8d2be2c4a00f8873f73381b403c4ecb71df970bb5cc6c6ff",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 81998,
+      "dhash": "0f11b33333330300",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 728,
+        "row_id": "openfake-3f416da509435f7594f333f05f56fb11",
+        "group_id": "prompt-ac163b633d257982b3b8e74d",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/728/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "429100df51217414c4ca8a7b045f442d961aced9c24830adb2e39de98adb054f",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-031",
+      "image": "data/benchmarks/ai/ai-031.jpg",
+      "original_sha256": "fb07129a964d4ff92079229b774c3869972c90abc139e263c7057e3b1de61155",
+      "delivered_sha256": "c1839f920695865582acd24b70117b862e1db251a8aca0c97e366029f7e9b335",
+      "original_size": [
+        1535,
+        2048
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 121690,
+      "dhash": "86a38b91c1899373",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 553,
+        "row_id": "openfake-8289f256c18fac1de6f8e726e410a0f0",
+        "group_id": "prompt-fed223e5ed926b9455adf93e",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/553/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "876f87d86f0634d05ab694922c1b6708869d80543c6c39239e1fd3b75e889e09",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-032",
+      "image": "data/benchmarks/ai/ai-032.jpg",
+      "original_sha256": "222395961d1a4b0023931586999197feb8899d5f2d6f7dddfd988b8b017eb612",
+      "delivered_sha256": "48ac250a0944922a7a503517fd243aef6456a89281fd8b8928d88e6f35b7433d",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 70916,
+      "dhash": "f879396d6c3cc7cf",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 458,
+        "row_id": "openfake-e57712a5b7a6595f845ab8b3daf8afeb",
+        "group_id": "prompt-529b6e5ba6322ade14189603",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/458/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "385ee0d7a3e70842a36940d1072ead8bdb84571df9636a702676a538a9423b78",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-033",
+      "image": "data/benchmarks/ai/ai-033.jpg",
+      "original_sha256": "ba341b902663357b74d8d098f3358c742ffa4c1fd5d31fa100be5559b1d8f80c",
+      "delivered_sha256": "c4d8b1e1fe80fb3d764092953aef4b2f38703a8823cb01f9b3e7371d84e697f3",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 49063,
+      "dhash": "ffffef7b3cec7c73",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 167,
+        "row_id": "openfake-b0d0804aef5f8162a3a7efdc64f6af47",
+        "group_id": "prompt-ef79fed222c98409c8f9d3de",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/167/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "ec83011ddfd678c97a6e75c550507be76c9576948d0bb19a400a603c66a56eb3",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-034",
+      "image": "data/benchmarks/ai/ai-034.jpg",
+      "original_sha256": "9d45fafcc639f5f434d93162e6cfcf46baee3c86667b079d8e06d83bdf46b3d6",
+      "delivered_sha256": "0af6f114b19ea870fc6440be6be0df1d832eb0e58f02f3e18e76f80c75cf0a6d",
+      "original_size": [
+        1634,
+        2180
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 95916,
+      "dhash": "128b93b2321a1272",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 647,
+        "row_id": "openfake-b05ebd16609ce413919c87667531a941",
+        "group_id": "prompt-a986ad3878110a9666bbb0f9",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/647/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "0d4233b0ee61684037f807d5357248547d90629313a11102eb6a2c2c9789973d",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-035",
+      "image": "data/benchmarks/ai/ai-035.jpg",
+      "original_sha256": "5b4c22fcc05bd541d0c12b29f206832adb6dcd92fa09336081fdfe90cacab2df",
+      "delivered_sha256": "8f85bc9006f0c2c680ea2882f87997de970e1914368f83ceb5ba4466e0eb60e7",
+      "original_size": [
+        480,
+        360
+      ],
+      "delivered_size": [
+        480,
+        360
+      ],
+      "delivered_bytes": 42287,
+      "dhash": "66df5a1afa863268",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 891,
+        "row_id": "openfake-7def3ced0fac92eb2fba83fda6bae4bf",
+        "group_id": "prompt-ad502ef6f2842577dc8e4125",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/891/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "7c994e92fec44df269b4caae673af7fdb55bc47412055120369bcc69422ea0c1",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-036",
+      "image": "data/benchmarks/ai/ai-036.jpg",
+      "original_sha256": "ebb607d237bd36924514cbefb6566631184101a9b3fb30c738d5ac3acc6d5647",
+      "delivered_sha256": "2c45102592136a02e576c14cc1512db7bdf5263b0a198feea2cae9b572ae8039",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 71961,
+      "dhash": "1939797d9584909a",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 232,
+        "row_id": "openfake-e68977520bc7b83f9972056d04859e61",
+        "group_id": "prompt-98fd7223f2bf65f772bd58b3",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/232/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "7a47111df2cc45a2d10c92c34a5717d393eeb140fc1b3b12673ec4e34671b751",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-037",
+      "image": "data/benchmarks/ai/ai-037.jpg",
+      "original_sha256": "db406e83bcc48ae7f8e5b4d18e0474f5cf11e199ad85068f175ee4ba71e6e00f",
+      "delivered_sha256": "26e6839173f7b08ba23512c25d6c695ef96d0450e3d3031ad06fd98c2bfcd532",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 99518,
+      "dhash": "c4e46cecd4c4c8e8",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 544,
+        "row_id": "openfake-e6321bb09ef051b782883e69ac049792",
+        "group_id": "prompt-4117253ec45355c70ff0ca20",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/544/image/image.jpg",
+        "source_kind": "z-image-turbo",
+        "generator_type": "Base",
+        "release_date_as_published": "2025-11-25",
+        "published_original_sha256": "918cbe5a9987e4acd58dadc4fef2cd4e457a2c88a464bfd0ca5cc6ebd224e482",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-038",
+      "image": "data/benchmarks/ai/ai-038.jpg",
+      "original_sha256": "c18c28933372a7e5a7d1c481eae0b0995f6a57c172a901799d38a5fc1fac7f75",
+      "delivered_sha256": "82569629fd989133fede622f527c1719661c45a141c02aeb7ed7685ba3256d53",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 126546,
+      "dhash": "06c71e3838e84f13",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 51,
+        "row_id": "openfake-d4895398f8f33045a4de642645ee5b8e",
+        "group_id": "prompt-3d98e68b7a779f16e0a43d37",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/51/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "cee14f91cde2cac36b11f55df7d702f203e07bcbe440ae8341bc7b11b98f82fd",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-039",
+      "image": "data/benchmarks/ai/ai-039.jpg",
+      "original_sha256": "a596a4ea9f0f8bbaed47120491b4c150a2f18ae12246915beecd74b794aa63cc",
+      "delivered_sha256": "18e23455f4f1e906572463978a6e65d6d4156823ce76450f4c8fccbb7f5b084a",
+      "original_size": [
+        1024,
+        1536
+      ],
+      "delivered_size": [
+        341,
+        512
+      ],
+      "delivered_bytes": 119948,
+      "dhash": "17174d07664e9655",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 78,
+        "row_id": "openfake-33095af9be6473979521d7943e8e42d0",
+        "group_id": "prompt-efcc1aa08d3125cc619a5567",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/78/image/image.jpg",
+        "source_kind": "ernie-image-turbo",
+        "generator_type": "image",
+        "release_date_as_published": "2026-04",
+        "published_original_sha256": "68ad4024fd6f8a5a3eaccae3e5bb85c94747c4b7b3f954515d5a50b0a6ce6f4f",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-040",
+      "image": "data/benchmarks/ai/ai-040.jpg",
+      "original_sha256": "d10a8f597290a1211681782b456af52eaa0ae2136d46ab51f033e0e89a6e0508",
+      "delivered_sha256": "e89021b76589ff999698e01e1c8122818e7b88aaaa2d256bb6a64bcaf192b73f",
+      "original_size": [
+        480,
+        361
+      ],
+      "delivered_size": [
+        480,
+        361
+      ],
+      "delivered_bytes": 40532,
+      "dhash": "bf261b33aeae113a",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 435,
+        "row_id": "openfake-982b24c466302da3f814297b0e139920",
+        "group_id": "prompt-cdf16de73727ce022e1c65a8",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/435/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "e2f3013514d072423a499c8bdbcf6208b2f4ad3652ef8c8ff8da8d40defb83b9",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-041",
+      "image": "data/benchmarks/ai/ai-041.jpg",
+      "original_sha256": "a5a42f33e1152ce6d8bb6e777176e9a3e181aafa1cd9f90d581a6700e01ba15e",
+      "delivered_sha256": "890740559dd6885fc041ebb4d06d842d342671ec3ce9bb63a137dbf1a91a10e5",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 119708,
+      "dhash": "8e4f0f8aa232368e",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 511,
+        "row_id": "openfake-e77fba85e261b99de8271ef7aa3f201d",
+        "group_id": "prompt-fd01ee53e20fdfef82c24a72",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/511/image/image.jpg",
+        "source_kind": "flux.2-klein-9b",
+        "generator_type": "Base",
+        "release_date_as_published": "2026-01-14",
+        "published_original_sha256": "ee0a3d72b2703f1ee82a04ffa8f39a1905cd09bde894c7a2bef3d1d4d5ff18c8",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-042",
+      "image": "data/benchmarks/ai/ai-042.jpg",
+      "original_sha256": "5e127716da6e9e0a0512b905ca1e189b9bd86f0c2326c9a2a42175a57eb531a1",
+      "delivered_sha256": "cbd810f6d2ea2ccac15a2dd4de67b545dd43610ae00e123fc2ac7dfd4ba244aa",
+      "original_size": [
+        1024,
+        1536
+      ],
+      "delivered_size": [
+        341,
+        512
+      ],
+      "delivered_bytes": 66224,
+      "dhash": "e0cc868ec6c64e36",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 928,
+        "row_id": "openfake-5c65a74e9a2833dcaa9609dd84d1b7b2",
+        "group_id": "prompt-7ce417fa6af8cd66a54eddbc",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/928/image/image.jpg",
+        "source_kind": "gpt-image-1.5",
+        "generator_type": "image",
+        "release_date_as_published": "2026-04",
+        "published_original_sha256": "44ea62c8b1ee2d17ba6145ff50c5d6bcaa9f9d593b35a1c576e0d1be8b5e3270",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-043",
+      "image": "data/benchmarks/ai/ai-043.jpg",
+      "original_sha256": "c840ca69ba4d84d9f9eb31443a0268f0b04044d1c1e75b2cd559778f42f4b06f",
+      "delivered_sha256": "09c9eac39ede6c9ded5a6ab9d8dd1b98dc4c74d7a2062d461562c20a58ff83a0",
+      "original_size": [
+        864,
+        1152
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 66148,
+      "dhash": "dfcb692378716368",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 160,
+        "row_id": "openfake-c00f42b50558ce8eab0c42cc99c1ee63",
+        "group_id": "prompt-8066a3a59362ee8908451d30",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/160/image/image.jpg",
+        "source_kind": "z-image-turbo",
+        "generator_type": "image",
+        "release_date_as_published": "2026-03",
+        "published_original_sha256": "36a84746a4658f4c5e6b20dbbf2261c92390c95eaaf6306903be8b1596a46f3f",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-044",
+      "image": "data/benchmarks/ai/ai-044.jpg",
+      "original_sha256": "36ce8e0c2ee486b1f828dabf25defd61fadab85d344cf1b5dc674da2dd527867",
+      "delivered_sha256": "3bdfbe0e7381a976d49fe99840fed193c771a38de9b70b0e19845976ab312cff",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 65860,
+      "dhash": "87e33361e48d8dcb",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 345,
+        "row_id": "openfake-9e04046c93711ef206df1b15e9124d73",
+        "group_id": "prompt-25d51249fd7d08408de344ed",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/345/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "36ce8e0c2ee486b1f828dabf25defd61fadab85d344cf1b5dc674da2dd527867",
+        "asset_matches_published_original_sha256": true,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-045",
+      "image": "data/benchmarks/ai/ai-045.jpg",
+      "original_sha256": "f9e039d14ed3ae6071cec44c1c3948f7a4529938eb2cbfa6557fce88cd304a8d",
+      "delivered_sha256": "2b319e4a5d418c546f2a44ca74b209492715a230cec09e0449608c0e739bb78f",
+      "original_size": [
+        1024,
+        1536
+      ],
+      "delivered_size": [
+        341,
+        512
+      ],
+      "delivered_bytes": 112176,
+      "dhash": "092b2b0313571733",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 773,
+        "row_id": "openfake-d21a7842f80889e95cdb310933448289",
+        "group_id": "prompt-ab8791639d0071ddf2c7e108",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/773/image/image.jpg",
+        "source_kind": "ernie-image-turbo",
+        "generator_type": "image",
+        "release_date_as_published": "2026-04",
+        "published_original_sha256": "727fbd21b8ef61247fa78f9a7ea4306127473ec135ebc179b69baebbb967aed2",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-046",
+      "image": "data/benchmarks/ai/ai-046.jpg",
+      "original_sha256": "693d059a94859a1c0e5042e54462d601ea168bcbebfac8bdd4cd541f72be1646",
+      "delivered_sha256": "5225703191aad6829e826fb34ab36b33484537b58874ec158dd442e7c99adb97",
+      "original_size": [
+        1232,
+        928
+      ],
+      "delivered_size": [
+        512,
+        386
+      ],
+      "delivered_bytes": 91209,
+      "dhash": "2d1d4f4d44c6ce8e",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 828,
+        "row_id": "openfake-accebbc59c96932bf9c92670b9365d1a",
+        "group_id": "prompt-fc4ea21d232fce3d99a5c201",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/828/image/image.jpg",
+        "source_kind": "midjourney-7",
+        "generator_type": "base",
+        "release_date_as_published": "2025-04",
+        "published_original_sha256": "890d7da035dd647e0fcaad92aa81884b9873204694a21a6dd79b42c96bf7f4c3",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-047",
+      "image": "data/benchmarks/ai/ai-047.jpg",
+      "original_sha256": "15eeb674e15acb921607a891cffed6792a3597f8a033e3bd4d6da7c1672dda91",
+      "delivered_sha256": "c629224252dfad8b1918a72a19817575b368888a540cee38d405bd9bb3e56320",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 92340,
+      "dhash": "6b6de4c44445554c",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 329,
+        "row_id": "openfake-8a9819df05d44eea8ed32d4f6c5af835",
+        "group_id": "prompt-6f4fd26082dbc26b9b799df2",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/329/image/image.jpg",
+        "source_kind": "z-image-turbo",
+        "generator_type": "Base",
+        "release_date_as_published": "2025-11-25",
+        "published_original_sha256": "151fe0bbf73d68cdafd53b693a90c0cafc072fb8c83d231f66a2f8ddc20608e0",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-048",
+      "image": "data/benchmarks/ai/ai-048.jpg",
+      "original_sha256": "ab81bbd7edefd57760f610040638e9b70aae10277aa25dca50a64cb84b90ce6e",
+      "delivered_sha256": "56cd8fda88d5a0d417764d0d1af5fd2d2586bec6c20f25c27daed203f451345d",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 27274,
+      "dhash": "e3921f1f05640d8d",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 509,
+        "row_id": "openfake-33dafd50a263881687bfb0fd5f1ec266",
+        "group_id": "prompt-0e4d28512d312b15362d1a5e",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/509/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "ab81bbd7edefd57760f610040638e9b70aae10277aa25dca50a64cb84b90ce6e",
+        "asset_matches_published_original_sha256": true,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-049",
+      "image": "data/benchmarks/ai/ai-049.jpg",
+      "original_sha256": "cecb76baa8debeb043aa2a1c388ba78a7e60ae8650091f581e1cd1ac435f9f9b",
+      "delivered_sha256": "03241cb3b529a8c5f5247c916a53e12f579e9500fc0a7e6113790efa396229b5",
+      "original_size": [
+        1456,
+        816
+      ],
+      "delivered_size": [
+        512,
+        287
+      ],
+      "delivered_bytes": 50046,
+      "dhash": "bf373e36276474c3",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 843,
+        "row_id": "openfake-c4269a5fe2d0b4e0f5a0fb28b3491599",
+        "group_id": "prompt-d589f2776df918d0f3779ba0",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/843/image/image.jpg",
+        "source_kind": "midjourney-7",
+        "generator_type": "base",
+        "release_date_as_published": "2025-04",
+        "published_original_sha256": "4a0955e366fb43ca93791862a274046c7aba18b4004771d3995e6543a64a18f3",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-050",
+      "image": "data/benchmarks/ai/ai-050.jpg",
+      "original_sha256": "19adee50c97bc502f3470aa1664df4a70eb16d9ff64e0a9295bc39dfb1fa61fb",
+      "delivered_sha256": "21ec8bceaff9f240b47fac200c527cdd6b0910aaf20479222cc1865f0d5f8dbb",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 105883,
+      "dhash": "e97111516931646c",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 60,
+        "row_id": "openfake-d7c35a19ac334661859934b9778ea082",
+        "group_id": "prompt-61f89e29baaff7b3bf1ad4cc",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/60/image/image.jpg",
+        "source_kind": "ernie-image-turbo",
+        "generator_type": "image",
+        "release_date_as_published": "2026-04",
+        "published_original_sha256": "40266cee278bfa9e36aaf5c7ec4bb87f45e81f2bd6206b18d52ecd178ee876ed",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-051",
+      "image": "data/benchmarks/ai/ai-051.jpg",
+      "original_sha256": "a96a260c5155780480366b469b95cbf5a477ac71f796544c3f9557b13479568e",
+      "delivered_sha256": "ead134175e48e8a201e9878b110acca79bc6a42d9e5a6096e49b2ccb7087f643",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 85074,
+      "dhash": "33256404397b7a9e",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 179,
+        "row_id": "openfake-4f4a310dc4b371a8c992870d6de54fa6",
+        "group_id": "prompt-c59a26a72aeeadc08e7bbfe9",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/179/image/image.jpg",
+        "source_kind": "flux.2-klein-9b",
+        "generator_type": "Base",
+        "release_date_as_published": "2026-01-14",
+        "published_original_sha256": "4ddc0acd14cbf9a67366a67fd8ea329a92c96664ffdcda2333c962d69a0b8d60",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-052",
+      "image": "data/benchmarks/ai/ai-052.jpg",
+      "original_sha256": "f5f19fed50add5cb781886cd3632b021110174799add5d4f8c8827d052df2dab",
+      "delivered_sha256": "ec2fc44ae49855ae1148bbe97f7c35959a540ce8304f0ecb55302cadd4e225d4",
+      "original_size": [
+        600,
+        600
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 82715,
+      "dhash": "46843051b0a3e3c6",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 185,
+        "row_id": "openfake-911ee23223860ec90deba203a167a53d",
+        "group_id": "prompt-d9daf4af9ee65e32865cd7f1",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/185/image/image.jpg",
+        "source_kind": "recraft-v3",
+        "generator_type": "base",
+        "release_date_as_published": "2024-10",
+        "published_original_sha256": "e50e6eb9117038c25d11bd0e514b2aee180b43f39b4f201ae53b73af7dfa33c0",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-053",
+      "image": "data/benchmarks/ai/ai-053.jpg",
+      "original_sha256": "72ce8ff0da1b213fe883874d892aadd26119e7b4f1e158c8eeee3acfef36f518",
+      "delivered_sha256": "5bbec69d9c2b43764010438de6fc8f6a201ffa7baaaddc0c32d91b85a50a5e29",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 106246,
+      "dhash": "4fd793b63422d7ff",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 135,
+        "row_id": "openfake-1f217fc60b7f9d6a9f49f0134d1d3c2b",
+        "group_id": "prompt-c22043b629a4558e53c7dab0",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/135/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "62db8b35573c59046eed546c7d3085b33af0672ae1f15990a6e1e33f58658113",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-054",
+      "image": "data/benchmarks/ai/ai-054.jpg",
+      "original_sha256": "cfda7c19bb0e78cd693317992f6d20fdcdf264e74c0610d914cec1a0428c8b68",
+      "delivered_sha256": "5f3b1c37aec5bbfbb8da8ae9ff5447b6e8d8abd2ddd8bd745a516d023d403aad",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 68111,
+      "dhash": "1216e6c6e6e6a6a6",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 623,
+        "row_id": "openfake-5dfcf80dbbb1864eb02f75580ce9c0dd",
+        "group_id": "prompt-eac640c15185c4c8646ede45",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/623/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "221f701f10f4ae7e1b997ba8494bbaf92b7b3013ac0a13cbd876ce468b253f0f",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-055",
+      "image": "data/benchmarks/ai/ai-055.jpg",
+      "original_sha256": "5573510b1a0a2b0fe7cf79be92eadda599619f384037ec4b504b834fd72e3ccb",
+      "delivered_sha256": "3cc9347424e4b06ab65617432f45cfb49c47d29e03f51b75912169f6cac60f79",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 124468,
+      "dhash": "d631da98acff7f0f",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 49,
+        "row_id": "openfake-c9a6aebc08cf043bde3472fd3b44c398",
+        "group_id": "prompt-470cba4bedab60bed51d4c7a",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/49/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "ac81bac3d62f77dbcea0ef86a37812e1537ddf8e9a8fff8cf2c9ede53682756d",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-056",
+      "image": "data/benchmarks/ai/ai-056.jpg",
+      "original_sha256": "a332025bc37bfecf39ef63f491fee1816b19ff10326820444a74abb5115132c9",
+      "delivered_sha256": "d6b351ccc4c611fe2778d7e6a3d59d47a019621d3e0d47a390fea9ab63e77a77",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 78705,
+      "dhash": "6596d6c91b331306",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 794,
+        "row_id": "openfake-7702d39259ee61f6c7e94f7ed8ef8b6b",
+        "group_id": "prompt-a13e6f824d08d287a4d8676f",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/794/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "ef5ab89be326bfb36535bda3191c141cfd1afc1e531c4baa6a6c9ae88ae154d3",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-057",
+      "image": "data/benchmarks/ai/ai-057.jpg",
+      "original_sha256": "da3f11fd87f81d3ba466a232860fee5e9cb1d3cc588846039eb88efa403b5761",
+      "delivered_sha256": "2e2429e749a316ef9ebf6f1803eb8ec650c9da57244fd6479fffbcca924bee47",
+      "original_size": [
+        600,
+        800
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 41674,
+      "dhash": "0e0f1b1fc3e11f0f",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 694,
+        "row_id": "openfake-a21b3da5f69b3cce649c03a91fb51ebc",
+        "group_id": "prompt-b0840f4214247544568c20e7",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/694/image/image.jpg",
+        "source_kind": "recraft-v3",
+        "generator_type": "base",
+        "release_date_as_published": "2024-10",
+        "published_original_sha256": "f8585fe9b25c71c4ef7eaf8e2bcf295a66d8c7438c0edbc0c58f88cf53d3357e",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    },
+    {
+      "id": "ai-058",
+      "image": "data/benchmarks/ai/ai-058.jpg",
+      "original_sha256": "ae507bbf4480d2d9f63e300f0731140fb113ee2dfc494dcb89d070a7050974ee",
+      "delivered_sha256": "23f7f9f3ad3d3b03c65ff4489cdc072f7e2dbd03707c4838a95d34dcecf2e6a7",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 140527,
+      "dhash": "222c304d59d0f36b",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 801,
+        "row_id": "openfake-38d7180339a924f8c7c82356c5161013",
+        "group_id": "prompt-79ab52dc37673d3abfbf528d",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/801/image/image.jpg",
+        "source_kind": "docci",
+        "generator_type": "real",
+        "release_date_as_published": null,
+        "published_original_sha256": "460e97dec93ab7bd0f78cdfc3bba83c4c66df8a48a6f1958b99d03c7038285a4",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": false,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "real"
+      }
+    },
+    {
+      "id": "ai-059",
+      "image": "data/benchmarks/ai/ai-059.jpg",
+      "original_sha256": "508762cfd1b9622beee372d11d7630ea78ea07bc33f3f5f8d9fb0eec80afe17e",
+      "delivered_sha256": "783a554ce6dd3c724fecf5ce921ce3172129adefd616306d8330816c88dceedd",
+      "original_size": [
+        1024,
+        1024
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 115283,
+      "dhash": "327994363d8c8ccc",
+      "source": {
+        "dataset": "ComplexDataLab/OpenFake",
+        "revision": "3247b942f18d39d1fd476b1077852af033d35d8c",
+        "config": "core",
+        "split": "test",
+        "row_index": 558,
+        "row_id": "openfake-ea99c15314e93cc35137bc73f078889b",
+        "group_id": "prompt-d683c7953a9ffbf19bbf838f",
+        "group_basis": "Exact normalized source prompt or caption; related scenes with different captions can remain",
+        "source_url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/3247b942f18d39d1fd476b1077852af033d35d8c",
+        "asset_url": "https://datasets-server.huggingface.co/cached-assets/ComplexDataLab/OpenFake/--/3247b942f18d39d1fd476b1077852af033d35d8c/--/core/test/558/image/image.jpg",
+        "source_kind": "flux.2-klein-9b",
+        "generator_type": "Base",
+        "release_date_as_published": "2026-01-14",
+        "published_original_sha256": "449e305dafbfe8fd7bb148218931bfda33cb57d3d1bedafeb22dff247f67507c",
+        "asset_matches_published_original_sha256": false,
+        "representation": "Hugging Face Dataset Viewer image asset; original_sha256 hashes acquired bytes, which may be re-encoded from upstream",
+        "license": {
+          "id": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/3247b942f18d39d1fd476b1077852af033d35d8c/README.md",
+          "upstream_real_photos": "DOCCI: CC-BY-4.0, Google LLC",
+          "use": "non-commercial evaluation; no image redistribution in this repository"
+        }
+      },
+      "labels": {
+        "ai_generated": true,
+        "basis": "Dataset generation provenance for fake; DOCCI camera capture provenance for real. No model prediction is ground truth.",
+        "source_label": "fake"
+      }
+    }
+  ]
+}

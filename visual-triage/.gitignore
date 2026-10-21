@@ -1,0 +1,42 @@
+data/
+.pytest_cache/
+.ruff_cache/
+
+# Raw evidence lives in the checksummed release archive. See ARCHIVE.md.
+/evidence/*.jsonl
+/evidence/catalog.json
+/evidence/per-image.md
+/evidence/research-index.json
+/evidence/software.json
+/evidence/summary.json
+/evidence/ai-expansion/
+/evidence/effort/
+/evidence/final/
+/evidence/trials/
+/evidence/benchmarks/ai-slices.json
+/evidence/benchmarks/chat-catalog.json
+/evidence/benchmarks/per-image.md
+/evidence/benchmarks/summary.json
+
+# Retain frozen run contracts and concise reports; restore raw trials as needed.
+/tracks/*/context-dataset.json
+/tracks/*/evidence/*
+!/tracks/quality_v2/evidence/duplicate-check.json
+/tracks/*/final/
+/tracks/*/final-metadata/
+/tracks/*/optimisation/*
+!/tracks/*/optimisation/run.json
+/tracks/*/report/*.json
+/tracks/*/report/*per-image.md
+
+# Retain the audit program and its frozen checks; archive fetched source bodies.
+/research/expansion-2026-10-11/evidence/*
+!/research/expansion-2026-10-11/evidence/final-audit.py
+!/research/expansion-2026-10-11/evidence/final-audit-baseline.json
+!/research/expansion-2026-10-11/evidence/final-audit-summary.json
+
+# Native metadata evidence is preserved in the local checksummed bundle.
+# Keep code, protocols, prompts, concise reports and per-image outcomes in Git.
+/tracks/metadata_v3/dataset.json
+/tracks/metadata_v3/controls.json
+/tracks/metadata_v3/results/summary.json
