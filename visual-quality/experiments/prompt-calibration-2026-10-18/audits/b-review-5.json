@@ -1,0 +1,173 @@
+[
+  {
+    "case_id": "B25",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Heavy blur and illegible label text are visible; the explanation captures the main detail loss, although it omits substantial grain."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Blurred lines of label text and grain are visible; describing the grain as faint understates it but does not change the main supported finding."
+      }
+    }
+  },
+  {
+    "case_id": "B07",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Strong blur spans the riders, bicycles, and background, with facial and fine structural detail lost."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "The scene has smooth, widespread blur; heavy compression artifacts are not visible."
+      }
+    }
+  },
+  {
+    "case_id": "B14",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The model structures remain clear, with visible noise and softness reducing small details; some labels are less legible than the wording suggests."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Buildings and trees remain inspectable, while softness and small label size limit text readability."
+      }
+    }
+  },
+  {
+    "case_id": "B23",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur"
+        ],
+        "note": "Produce edges, scales, crates, and wall detail remain resolved; heavy blur that merges edges and erases fine detail is not supported."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "noise_misattribution"
+        ],
+        "note": "Slight softness is visible, but heavy grain is not; much of the produce and wall texture is retained scene detail."
+      }
+    }
+  },
+  {
+    "case_id": "B47",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Faces and jersey markings show limited fine detail, consistent with the explanation; shadowed faces also contribute to the loss."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Softness is visible, but distinct compression artifacts are not; dark facial and jersey detail also makes the exposure claim too broad."
+      }
+    }
+  },
+  {
+    "case_id": "B44",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_exposure"
+        ],
+        "note": "Blur is correctly identified, but broad dark regions also hide facial and clothing detail; this major exposure loss is omitted."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "omitted_exposure"
+        ],
+        "note": "Strong blur and dark exposure reduce detail; the explanation omits the exposure loss and adds compression artifacts that are not visible."
+      }
+    }
+  },
+  {
+    "case_id": "B40",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "The foreground stem retains fine spines and surface texture; the smooth blurred background does not show the claimed blocky compression artifacts."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur"
+        ],
+        "note": "Background blur is visible, but the detailed stem contradicts the claim that the whole frame has low-detail rendering."
+      }
+    }
+  },
+  {
+    "case_id": "B05",
+    "judgments": {
+      "X": {
+        "evidence_supported": null,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Mild softness and fine grain are visible; I cannot confirm that the subtle sky and foliage texture changes are compression artifacts at this scale."
+      },
+      "Y": {
+        "evidence_supported": null,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "The scene is legible and slightly soft; the visible foliage and fence texture does not allow a firm judgment about compression artifacts."
+      }
+    }
+  },
+  {
+    "case_id": "B02",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Widespread blur reduces tree, building, and roadside detail while preserving the broad scene."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The description of lost fine detail and smeared text matches the image; low resolution is treated here as a description of visible detail."
+      }
+    }
+  },
+  {
+    "case_id": "B03",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Severe blur obscures edges and fine texture throughout the scene, while large shapes remain recognizable."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The stated loss of fine texture and retention of broad shapes matches the visible blur; the image alone does not establish its cause."
+      }
+    }
+  }
+]

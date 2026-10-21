@@ -1,0 +1,120 @@
+[
+  {
+    "case_id": "A06",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Soft letter edges and reduced fine-stroke clarity are visible; much of the text remains readable."
+      }
+    }
+  },
+  {
+    "case_id": "A29",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "noise_misattribution",
+          "omitted_exposure"
+        ],
+        "note": "Much of the fine pattern is visible fabric weave, not heavy noise; the explanation omits strong glare and washed-out detail at the right edge."
+      }
+    }
+  },
+  {
+    "case_id": "A16",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Dense colored noise is visible across the scene, but heavy compression artifacts are not established by the image."
+      }
+    }
+  },
+  {
+    "case_id": "A38",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "omitted_exposure"
+        ],
+        "note": "Blur is present, but repeated text overlays are not visible; broad glare across the upper image is omitted."
+      }
+    }
+  },
+  {
+    "case_id": "A46",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The explanation reasonably describes preserved stone texture, mild softness, and the absence of major artifacts."
+      }
+    }
+  },
+  {
+    "case_id": "A47",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "unsupported_repetition"
+        ],
+        "note": "The central speaker retains clear detail; visible compression artifacts and abnormal repeated texture patterns are not supported."
+      }
+    }
+  },
+  {
+    "case_id": "A32",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "exaggerated_blur",
+          "omitted_exposure"
+        ],
+        "note": "Much of the lower label is readable, so illegibility throughout is overstated; compression is unsupported, and glare erasing the upper graphic is omitted."
+      }
+    }
+  },
+  {
+    "case_id": "A07",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Severe blur and merged letter strokes make most text difficult to read, as described."
+      }
+    }
+  },
+  {
+    "case_id": "A24",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Large blocks and lost texture are visible in the sky, foliage, and path, while the scene remains identifiable."
+      }
+    }
+  },
+  {
+    "case_id": "A48",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur",
+          "unsupported_repetition"
+        ],
+        "note": "Facade patterns, boat edges, and water texture are clear; heavy smearing and repeated text-like artifacts are not visible."
+      }
+    }
+  }
+]

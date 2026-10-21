@@ -1,6 +1,7 @@
 """End-to-end local pilot tests using real views and a simulated provider."""
 
 import json
+import shutil
 from pathlib import Path
 
 import pytest
@@ -11,6 +12,55 @@ from visual_quality.storage import atomic_json, file_sha256, read_jsonl, write_j
 from visual_quality.views import prepare_views
 
 PROMPTS = Path(__file__).resolve().parents[1] / "prompts" / "visual-rating-v1"
+
+
+@pytest.fixture
+def prompt_dir(tmp_path):
+    return Path(shutil.copytree(PROMPTS, tmp_path / "prompts"))
+
+
+def test_legacy_prompt_bundle_preserves_version_and_hash():
+    bundle = labelling._prompt_bundle(PROMPTS)
+    assert bundle["version"] == "visual-rating-v1"
+    assert bundle["sha256"] == "1eb3ba4333b6651fa5ecaceb2305c9f28cc4516e851683e9de0caa871a9f1858"
+
+
+@pytest.mark.parametrize("version", ["visual-rating-v1", "visual-rating-v2"])
+def test_prompt_metadata_sets_version_and_hashes_raw_bytes(prompt_dir, version):
+    original = labelling._prompt_bundle(prompt_dir)
+    metadata = prompt_dir / "prompt-version.json"
+    metadata.write_bytes(f'{{"version":"{version}"}}\n'.encode())
+    bundle = labelling._prompt_bundle(prompt_dir)
+    assert bundle["version"] == version
+    assert bundle["sha256"] != original["sha256"]
+    assert bundle["response_format"] == original["response_format"]
+    metadata.write_bytes(f'{{"version":"{version}"}}\r\n'.encode())
+    assert labelling._prompt_bundle(prompt_dir)["sha256"] != bundle["sha256"]
+
+
+@pytest.mark.parametrize(
+    "metadata",
+    [
+        b"invalid json",
+        b"\xff",
+        b"null",
+        b"[]",
+        b"{}",
+        b'{"version":"visual-rating-v2","extra":true}',
+        b'{"version":null}',
+        b'{"version":2}',
+        b'{"version":""}',
+        b'{"version":"visual-rating-v0"}',
+        b'{"version":"visual-rating-v02"}',
+        b'{"version":"visual-rating-v-2"}',
+        b'{"version":"../visual-rating-v2"}',
+        b'{"version":"visual-rating-v2\\n"}',
+    ],
+)
+def test_prompt_bundle_rejects_invalid_metadata(prompt_dir, metadata):
+    (prompt_dir / "prompt-version.json").write_bytes(metadata)
+    with pytest.raises(ValueError, match="prompt-version.json"):
+        labelling._prompt_bundle(prompt_dir)
 
 
 @pytest.fixture
@@ -114,6 +164,36 @@ def test_dry_run_has_no_network_or_credentials(pilot, monkeypatch):
     monkeypatch.setattr(labelling.openrouter, "model_info", lambda _: pytest.fail("Network call"))
     assert labelling.label_pilot(views, output, PROMPTS, dry_run=True)["api_calls"] == 0
     assert not output.exists()
+
+
+def test_pilot_records_prompt_version_metadata(pilot, prompt_dir, monkeypatch):
+    views, output = pilot
+    (prompt_dir / "prompt-version.json").write_text('{"version":"visual-rating-v2"}\n')
+    monkeypatch.setattr(labelling.openrouter, "complete", lambda *_: response())
+    assert labelling.label_pilot(views, output, prompt_dir)["scored"] == 3
+    labels = read_jsonl(output / "observations.jsonl")
+    assert all(label["provenance"]["prompt_version"] == "visual-rating-v2" for label in labels)
+    assert labelling.verify_labels(views, output)["observations"] == 3
+
+
+def test_old_implementation_run_verifies_read_only_but_cannot_resume(pilot, monkeypatch):
+    views, output = pilot
+    original_sha256 = labelling.file_sha256
+    monkeypatch.setattr(
+        labelling,
+        "file_sha256",
+        lambda path: "0" * 64 if path.name == "labelling.py" else original_sha256(path),
+    )
+    monkeypatch.setattr(labelling.openrouter, "complete", lambda *_: response())
+    labelling.label_pilot(views, output, PROMPTS)
+    monkeypatch.setattr(labelling, "file_sha256", original_sha256)
+    monkeypatch.setattr(labelling.openrouter, "complete", lambda *_: pytest.fail("Network call"))
+    monkeypatch.setattr(labelling.openrouter, "model_info", lambda *_: pytest.fail("Network call"))
+    before = {path: path.read_bytes() for path in output.rglob("*") if path.is_file()}
+    assert labelling.verify_labels(views, output)["observations"] == 3
+    assert {path: path.read_bytes() for path in output.rglob("*") if path.is_file()} == before
+    with pytest.raises(ValueError, match="settings"):
+        labelling.label_pilot(views, output, PROMPTS)
 
 
 @pytest.mark.parametrize(

@@ -1,0 +1,181 @@
+[
+  {
+    "case_id": "B30",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The dark foreground, soft structural detail, and fine grain are visible."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "other"
+        ],
+        "note": "Foreground softness is supported, but the sky shows fine grain and a smooth gradient rather than distinct tonal bands."
+      }
+    }
+  },
+  {
+    "case_id": "B17",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Mild softness is visible, but no clear blocking or ringing supports the compression claim."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Soft fine detail and some grain are visible, but distinct compression artifacts are not evident."
+      }
+    }
+  },
+  {
+    "case_id": "B48",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Soft fur and mild noise are visible, but the explanation adds compression artifacts without clear visual support."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The dog remains recognizable, with broad softness and fine grain reducing fur and muzzle detail."
+      }
+    }
+  },
+  {
+    "case_id": "B06",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Blur affects the riders, clothing text, and bicycle details across the image."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Strong blur and smooth, soft edges visibly remove facial and bicycle detail."
+      }
+    }
+  },
+  {
+    "case_id": "B20",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Softness and compression are visible; the people remain recognizable, although blocks also affect faces and clothing."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Visible blocks and broken texture affect skin, hair, clothing, and the tabletop."
+      }
+    }
+  },
+  {
+    "case_id": "B50",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Some fine foliage is soft, but clear blocking or ringing does not support the compression claim."
+      },
+      "Y": {
+        "evidence_supported": null,
+        "issues": [],
+        "note": "Mild softness is visible, but I cannot distinguish the claimed grain throughout from fine foliage and cloud texture."
+      }
+    }
+  },
+  {
+    "case_id": "B28",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_exposure",
+          "noise_misattribution",
+          "unsupported_repetition"
+        ],
+        "note": "The large clipped glare patch is omitted; heavy grain is not evident, and the visible package phrases do not form repeated text."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_exposure",
+          "unsupported_repetition"
+        ],
+        "note": "Blur is visible, but the explanation omits the large glare patch that erases package detail and incorrectly describes repeated text."
+      }
+    }
+  },
+  {
+    "case_id": "B15",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Noise and soft miniature detail are visible; small labels vary in readability."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "other"
+        ],
+        "note": "The explanation omits dense colored noise, which affects the whole image and is a dominant source of lost detail."
+      }
+    }
+  },
+  {
+    "case_id": "B41",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur",
+          "unsupported_repetition"
+        ],
+        "note": "Fine building, foliage, and pavement detail remains clear; heavy smearing and repeated texture artifacts are not visible."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Shop signs, vehicles, and building details are clearly resolved, with only minor softness in small or distant detail."
+      }
+    }
+  },
+  {
+    "case_id": "B34",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "unsupported_repetition",
+          "other"
+        ],
+        "note": "Visible grain is omitted, softness lacks clear compression features, and the visible lettering does not form repeated text."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "other"
+        ],
+        "note": "Soft letter edges are visible, but grain is omitted, distinct tonal bands are not evident, and the text does not repeat."
+      }
+    }
+  }
+]

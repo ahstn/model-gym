@@ -1,0 +1,1264 @@
+{
+  "cost": {
+    "basis": "Reported OpenRouter usage cost; unknown charges remain null",
+    "known_cost_usd": "0.015141456",
+    "total_cost_usd": "0.015141456",
+    "unpriced_attempts": 0
+  },
+  "human_calibration": false,
+  "input_sha256": {
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/00294ec4ef6a26e29685516397bbf4b984cd0a1fda4dd8a7aaacf3680ce611ac/request.json": "af520a8babebb7ca268aa3c90c83a04cef80f7ba60e3daa030c94274a8f69da7",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/00294ec4ef6a26e29685516397bbf4b984cd0a1fda4dd8a7aaacf3680ce611ac/result.json": "40300bbe734881cefe6f56c38eb060a4fb91097694f0628d1a71affb150b3180",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/07d24da462ea4bedb7354f9de716d2d7ea8d642f658f72a132694ac7bcbea486/request.json": "5fa09fb71729633dc024fd585761bb51b4bbe81f7ffe8c53a62e498adad97221",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/07d24da462ea4bedb7354f9de716d2d7ea8d642f658f72a132694ac7bcbea486/result.json": "3d242d3ee98f5696e8e61a0707b4aaacd1054e23a72b9be867a0f7591a00fee0",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/082dbf4b223033aed227717fad63d97261e7bc2991ea0bde84b585b00c006dd3/request.json": "0ee89d59d74ea7b9eb4268a9afdb36515db9c0698107793d18d30e3135171a00",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/082dbf4b223033aed227717fad63d97261e7bc2991ea0bde84b585b00c006dd3/result.json": "f53594b68d2a5bf6f0d1c4c9ddb6631d915c4c224dea939315644a9a8323c571",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/13de913077693195740e65a389c76eda11db1ff2fcc0e19cf61c60b785295e53/request.json": "436cc00e0c7995838a1a03c32f32ea4bd815f01bd889b4e5b1bdd13d414a0867",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/13de913077693195740e65a389c76eda11db1ff2fcc0e19cf61c60b785295e53/result.json": "1b5734f0200cc5404ee3324148a36c9fd88f7d2a31032e2ed7d8d894ad89b5f5",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/14620621459d3a7deba217ac20938a18aedbf14c79d1ab3ae31e72f3ed4d0684/request.json": "cd2b5f1e58066df6676e2e6eee8e6146ec8136ac77fb3fa9db30daed98ddd616",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/14620621459d3a7deba217ac20938a18aedbf14c79d1ab3ae31e72f3ed4d0684/result.json": "7c665cb75b283b19c1e2c2167a4a67b0d708d6474f0f4da2c863d8792d27ea51",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/17ef6894707294a6b196b8f18f4e241c07d8510e65a91db90f2e1a3a2f103f52/request.json": "a1c5c3faa45d335d9631a3381f481ea4ac5672926863da1ac45739bf919f5e9a",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/17ef6894707294a6b196b8f18f4e241c07d8510e65a91db90f2e1a3a2f103f52/result.json": "4c9d2e9a2fcfb37a7f3254dd95f605d60d73ff200c833a631a73f8051a66c726",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/184303e2c42ab240c5e172e398b89598871788c1c279805dadf7733868807d75/request.json": "7e405b3c7aac8577d042cd4e992f0ab6dd5df6ba684c0301497a0bc084330d10",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/184303e2c42ab240c5e172e398b89598871788c1c279805dadf7733868807d75/result.json": "b471c393bc6b8266efcb051127e03f0dccb94bcab9567f7fa6796b0bd58bbe0c",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/258a516f3f0be6078fa71718ac41aeb10084ae43e8bbe128aa750bde088a07dc/request.json": "8e3cc8642fbbdc5f91bf481b21c28675ffda3cfb30aa3090708eee4bc7cf1405",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/258a516f3f0be6078fa71718ac41aeb10084ae43e8bbe128aa750bde088a07dc/result.json": "18679e00399bb82faa851b110cb4ff535fc0719b7a18968923287bedef47be87",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/261fe5ff72f38ae7e269c97c0b102dd3ff22e50e2109b265b0c66bfa759d512f/request.json": "80f78bd1bfe9dbf5f8362e639a18c719853f396707bb6e4c17d49e20e536f04e",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/261fe5ff72f38ae7e269c97c0b102dd3ff22e50e2109b265b0c66bfa759d512f/result.json": "1618629c33e512b128179a0c39d8c2eb90ccd4fb8dd4427a8a1ba7aca5e0f668",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/2e73d263c35a28d267d71792348b8b8c8a932238ea45eb80e58299bd45776ce5/request.json": "6a7c92156a95c895f112f9a7c16afed3b34ee4bf103d1f21abb15ea49c2f776d",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/2e73d263c35a28d267d71792348b8b8c8a932238ea45eb80e58299bd45776ce5/result.json": "2f58ddf771f1c0606255944584c7cd8883f7d4f90f6fffc0a08a08ed2d233622",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/2fc16d2531121600cc6306bf7eb5cacbff52af8fdb6d73772bf4437484476563/request.json": "096dbbfb296f65767a7081444d1707180c3257a403d1401b40ce34f2d2fc1614",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/2fc16d2531121600cc6306bf7eb5cacbff52af8fdb6d73772bf4437484476563/result.json": "79e6931525093f492f9601a8fca379aa6c0d1d062d5acea0c98bedaae71904c9",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/3316b6921935cbdce80f9257203e93551f4b4fffff6613281fa0f406170a4a7f/request.json": "ad1bf86c8190df888c886034a584140754732d1e0494d0bd2b6a61516378a61a",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/3316b6921935cbdce80f9257203e93551f4b4fffff6613281fa0f406170a4a7f/result.json": "02a3cd183d1fef244b3f9ce9402b5ba65b2babce1fab03a92f163d16cd3d8e59",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/34818db14a96381a445cca0f777e085b9b1d04d1fb665b7489a0ba8197622d9c/request.json": "ebb18ce7d81761c34aa2ea0b22d4cd840f75ed5d2d5a9ac9dc8e8a68b6076ced",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/34818db14a96381a445cca0f777e085b9b1d04d1fb665b7489a0ba8197622d9c/result.json": "d305fd5e69047d58d1bd7b56bb8bb62e3affec08ea60b41395bba18a191f004e",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/36677a0db4abfd72fe3eeaf19a84463554e324d116ff684c3b46debf93df851b/request.json": "79e2cc59088c6a35f7d51d0620b3c543183eea273b389f89fb185b72e7a298b0",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/36677a0db4abfd72fe3eeaf19a84463554e324d116ff684c3b46debf93df851b/result.json": "901761189ce58f8d6272edad231f9b6ca01ea20caaf4d3b64e1c71ea9e1cedad",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/377c7056010ebb36d80ab120556d29e33323aec9b8ea902f0424daadf9f576f0/request.json": "26c9bda77f005da4d90c2c697be60dfec7220e9287ab01ed90fbdc620ea7346f",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/377c7056010ebb36d80ab120556d29e33323aec9b8ea902f0424daadf9f576f0/result.json": "c9b87618c05be0c96ead2e98ede5704ee2e97f8acaf375d368002d4425634820",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/3a73f62754fef4585489bb85e0023e907d8a42df3430e2aca133df0d753a52e6/request.json": "002531b93d694d9b248ac092597365dc77979f7c255cbad91a29742cb5659add",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/3a73f62754fef4585489bb85e0023e907d8a42df3430e2aca133df0d753a52e6/result.json": "fca25b8128ffc2acd5c6056cb05df496f32ffb89bd9ea33b3d8b9322f75a8ca3",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/3aa7a3a9ee2f231716e409ca10718f01f8cedd4342bf68eade303306a20e509b/request.json": "3cb1983f4574b79c9bcb93bae7f9a32baa2abae7649bb602edf8df4dc4bd019d",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/3aa7a3a9ee2f231716e409ca10718f01f8cedd4342bf68eade303306a20e509b/result.json": "3524532d565383d3f0a92b4e00cf2b285dafface0a8e13690465b78e20d8e666",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/3bea8086541d3b441e3472854335d5f2fbf1bc406434be6bad2bf6abce7f8156/request.json": "a16930937fc9b529d9a75d163493a5c13bd8ef2f6686d15e33ad66633871f444",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/3bea8086541d3b441e3472854335d5f2fbf1bc406434be6bad2bf6abce7f8156/result.json": "4c3927b70f4a629e035970598cad40b4a0286148a419558b0bd0f1b4af60d4b9",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/3f4a85e7a2de12088f4060e34dbebd67634928dbecbf714ae5199524d9f6baf1/request.json": "72bbad9e44ee86a28a514ab80a441990aa864856ad9f67a5729956b9b55da859",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/3f4a85e7a2de12088f4060e34dbebd67634928dbecbf714ae5199524d9f6baf1/result.json": "87bd16d1400de0d6c26351b7cb191f03670d6a445457ded3437f558e7faae091",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/479c20a0bf26481426116e41a75324aac680d18074477e537178e923dafeec0a/request.json": "b1b6d86f7af45d64df12cdb66d571e04338e5ad10886a41b5571b56143fbb5c6",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/479c20a0bf26481426116e41a75324aac680d18074477e537178e923dafeec0a/result.json": "ba7a3d92d1f80bff906c83460784b0ac144fd18ff6fb9a518495e793aa4205a4",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/4a9df99537c26c55172b4d4383ae072323d1d913f719b5927cc243041990d8ec/request.json": "343fc5f8328ee6889c122bdef5a06601d1bd36f764ceb2deba66cefa82bfcc1a",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/4a9df99537c26c55172b4d4383ae072323d1d913f719b5927cc243041990d8ec/result.json": "01592a459b8f90baabd2cd0b71b17c5825476d587a4497739c7197a02531a6f5",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/53b87cc3f9d249b79a323744c345afddb1ff9e32d5d661e0513a8dcb42ac330a/request.json": "06e82005840326745f261a59cbad74f745c093a3d7f9d8530b84b93d65afb1a8",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/53b87cc3f9d249b79a323744c345afddb1ff9e32d5d661e0513a8dcb42ac330a/result.json": "2af8c82dfb708c40d7ef16ee3edd3581ab56ce02dec264e45b27db500aeaf56d",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/56e1630c826e2ab064f68663b82aab8058b324804a8420c7d1d29e0cc290e3cb/request.json": "665c7647ef5e587405970ffcea73dae6acf496cfb48d8ee331b37d67d0034bbe",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/56e1630c826e2ab064f68663b82aab8058b324804a8420c7d1d29e0cc290e3cb/result.json": "b65d303c15446d0cfc6f0649c9c5f48bdf59b78e877ea535990dac061efdf183",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/58eea5d4d29f24da691e56ae2198bf1f268a46aa24704cc63a3cb6c1734c2d4c/request.json": "fb1b3bd6e5d97af5a9852b75ddfb44b79a7a548ca84daec33f2dd32ced481018",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/58eea5d4d29f24da691e56ae2198bf1f268a46aa24704cc63a3cb6c1734c2d4c/result.json": "1fbc219cb2d8159ce4c94b8d384be206a03f68df64aa50e6dda4d2195cd1fa83",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/629e48449bc95685658bc5829f2cb4f5bc69c2f228387049d7f8a2d3720ff2d9/request.json": "d99b6408aa56d982d15fe14000e1abff8c76de2b28a9c7906e60b44b50b66d76",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/629e48449bc95685658bc5829f2cb4f5bc69c2f228387049d7f8a2d3720ff2d9/result.json": "24e703a95f653577e3762e7dc58f30158215e8a5ee290cf97b24d58f05169a26",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/636b01c8f740e91274bc76656844b13b6f18c92a46df00a7a311b048d7b93fd0/request.json": "8effdb219486575f225d9dac6e62464e671bfca96d257f7316fc4365c92f98ce",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/636b01c8f740e91274bc76656844b13b6f18c92a46df00a7a311b048d7b93fd0/result.json": "04ee42e7d50157790a0f42ed146291545e93410660433911ff6383f7b05024c2",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/70bdf6ef90b86fd88dba925d8c283f9bf14d79a40a7bf5999d3414c14775c7fe/request.json": "15d40bedf0069651752788b04005ea8b76acaf01c550ee8f2d960181c6d805a9",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/70bdf6ef90b86fd88dba925d8c283f9bf14d79a40a7bf5999d3414c14775c7fe/result.json": "2ad2a55c72721b8cbd6a085472ba897e821d6e914e8e3076e52905078e51672a",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/757f1278b1149dce6933dc7d3376c33668fa4bac63b8261bf21b842056c8dc71/request.json": "7d1de59adacba7cf28a712025cb22aaad632062a3c2fa78316b984f609ada027",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/757f1278b1149dce6933dc7d3376c33668fa4bac63b8261bf21b842056c8dc71/result.json": "f3cc801efca26fc7109687f6c029e15962efd041147a17fb9fa7955a7dd3b6b2",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/828de0cd5a26d3c6728d986669360427201c2c4ef0a0caa19ec172dd0e777216/request.json": "f19ce4f9f6021950042d4169198d497b4c58b3d26d80a2cad39a30f6f6226fe4",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/828de0cd5a26d3c6728d986669360427201c2c4ef0a0caa19ec172dd0e777216/result.json": "70b6211671f3b4c1f36bce4415ad7dd860eed903468405bd98b76c70a9f1e671",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/8be0b5e3648c57ac9e34557332f43ca6b8be919c8eccd1dc72240cf49a3adc5b/request.json": "654219f96d87f121bcbfef8fba100cca2abbfe25ef927bfc2b3e3abdc8c59f69",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/8be0b5e3648c57ac9e34557332f43ca6b8be919c8eccd1dc72240cf49a3adc5b/result.json": "6cef9871edd9e325f8cc4ec87a8c825240b66e65e7cb7ec306c1147108a5344c",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/9361aab87e2b4ba2d213d1c7c94422a63f51bd9ea9aaf8d4c59b0b57f1b5c4a6/request.json": "e81f9c03082565f2653b463cd4a0988c23b410604dbe8465628f4c24007c57c7",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/9361aab87e2b4ba2d213d1c7c94422a63f51bd9ea9aaf8d4c59b0b57f1b5c4a6/result.json": "0249fa20b7bfb7fc8d35bdd3f8703e04085013cdc99694c539737d074770afea",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/94291d22ed3190b3cf00280893c2ee5f9075396d22507761f2727bf8a7675f71/request.json": "aef79fb3e982a4465f56a29b1eeefe1d95e673ceb5a42c03f7935f73bb891c06",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/94291d22ed3190b3cf00280893c2ee5f9075396d22507761f2727bf8a7675f71/result.json": "5a87c4f23b765fce8b47cd3c0589ba787822ede3513c35ba81d38b9a87f66273",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/99ab4fcbaab2172fd2ce50d36ab32c5f28f4118880496cec94d50ef11f1eeb1b/request.json": "24796cd6f18025fbd0d4f715190e20a6dc9d0e52c3d120f87bbfda6d856c57e7",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/99ab4fcbaab2172fd2ce50d36ab32c5f28f4118880496cec94d50ef11f1eeb1b/result.json": "0a4022f60d30710bd1dc875b4e1e696e5a2228860951415000f424fffd2cc03f",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/9ae14ea9028fdcac37a4863b4b30bf4f3c46d57426d12dd3f1daef0a92859d68/request.json": "7571dce824222d2ad2d49ae151db20ece9c66a20799a05c45f0cb72c3aae8eb7",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/9ae14ea9028fdcac37a4863b4b30bf4f3c46d57426d12dd3f1daef0a92859d68/result.json": "e7bfc476cb717e6dea4a644d81e302f5512fc120ca36f26d057867b30529fcd9",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/9f0ed126f0af884bd9d2b5c7b1f44b932fe116c76f50b7b3c5fec1a9c9503c60/request.json": "a5a01865d85c0b8d4b33ea8ba50f08354e470998562122da66e9b63dcb215982",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/9f0ed126f0af884bd9d2b5c7b1f44b932fe116c76f50b7b3c5fec1a9c9503c60/result.json": "ebeab23fbbe9b518f0994f13b8442f84fd31b5a84c394c9deffbbed2140a18cc",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/9f5f07e6e9685722dff988aa13a36497df4c79e2dfc26cc84895e9ebcd67d896/request.json": "0b2ef896f04105d05214baf23a90ac037e876a3bdd3a49d0fbb4f4eea41ae967",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/9f5f07e6e9685722dff988aa13a36497df4c79e2dfc26cc84895e9ebcd67d896/result.json": "05b1b4f73e548f76768370d75c96b963d5d59664cfa3270cc32aa91e24c989ed",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/bc861debcde5e86187f50b1583bff2cb04d3a92b923b44968a3e613f032ff391/request.json": "09f4dc488c1c85c278c55b9624b5c70845b2bd543adbcf357c563497c209fcaa",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/bc861debcde5e86187f50b1583bff2cb04d3a92b923b44968a3e613f032ff391/result.json": "9d5a17003d18a238c7a1b464e9f83a2b5ef90051a1851cdab856db59a4cb593d",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/c259094e3dc4e5e3ca9b956c0d8f362b98424a1ecd360a01a45e00ca1eacf3d7/request.json": "1373482d93864fd99fcf6667fc84e783599749afceac6f93fdb42026362d8b96",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/c259094e3dc4e5e3ca9b956c0d8f362b98424a1ecd360a01a45e00ca1eacf3d7/result.json": "257f0dd6177cc66ec699f1dd8a9639f7b246cc148811783618aacfea7858c34f",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/c4c4dc42f7af7e725cb43788a0ee3bc3a087f15f88553e5f1e463521062dfdc3/request.json": "49c4b81a6016a2f0c39b3b8d390ddcbdb641e1115a0986f85bad0e78fe5887b0",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/c4c4dc42f7af7e725cb43788a0ee3bc3a087f15f88553e5f1e463521062dfdc3/result.json": "889f68cc32a5d17322e0b5623464b1a064ac02ac3f0bddaabe618faebc18e3bc",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/d1fee8e6ad90d0ab24888e2b4daa6429718e327e07d37b817cadefb8e232bc9e/request.json": "05d771fc11196efd22ef9d7c43a934757daecde5fc47ba32da81f0f271b6fb07",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/d1fee8e6ad90d0ab24888e2b4daa6429718e327e07d37b817cadefb8e232bc9e/result.json": "2cc7d1f8a363a6929dd5732ab0908ad79c3f497d382813857ce39a75c5150e45",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/d7a69159fe5b873a1cd8c2e99706227e1d6992847e82f4b06db6904b3379e2f1/request.json": "782bb277a19bcee9fa24a4a778981ab06767ae2420ffa4847e8eb410567306ad",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/d7a69159fe5b873a1cd8c2e99706227e1d6992847e82f4b06db6904b3379e2f1/result.json": "b734af4f913e24609552cdbefff911095985731a3d36a712bfb647f76e257914",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/d800c125dda5ea9054902910fdacf136b6da471e37363afe10fca7df35e20c43/request.json": "abb3045dfe7239e61d3c79dd26aff8b258814496db51d15c4ac461ecae53105d",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/d800c125dda5ea9054902910fdacf136b6da471e37363afe10fca7df35e20c43/result.json": "e42e9fecc4b45cfaba7ea00e000d6fe6241173401711da08f4173362ef90b59f",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/e00ff1687986666264dbcdaf922e731570784d745ab780c0eb3877abc457d7fa/request.json": "fa242ea89b10f8bc47349167fe34a2926316eae412c7cc147824f4fd36f1f5a6",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/e00ff1687986666264dbcdaf922e731570784d745ab780c0eb3877abc457d7fa/result.json": "1d0a064d315c7fa38d8b173b9d1bde91c9825a600d75e016f199d2d8561e5f62",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/e3842e2a52eb32e4aadc112ed091f580c0a4f8fcb0c95d8b8b4a55c3a5b32376/request.json": "db3a79026736bf51e78dea909fbfc972a1b4597da02bfde9f208a81be81558af",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/e3842e2a52eb32e4aadc112ed091f580c0a4f8fcb0c95d8b8b4a55c3a5b32376/result.json": "17d57be9d07f50f17707859643c3de737087dba2ecef5199adde880073cff543",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/e49564390da0d0a348ac8ddb5d1b24fed7ccc4f615b7466f5b8494cc13e53304/request.json": "596760296e2fbab956b3315b5e6187beeb80fe620d003178cc01c59a7db1183f",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/e49564390da0d0a348ac8ddb5d1b24fed7ccc4f615b7466f5b8494cc13e53304/result.json": "347aa2e38406a99cabb18da880417016447cabe088a46092a3b0694a454ba1d6",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/f2b2c86dd353301349d6fb99a1dac295e1c3c719131ec1b662947b911f2e47af/request.json": "8bf7a8d4ba4b33c240e0f2059917c0e8797514a69de20e68fefcba6c0e5e9d50",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/f2b2c86dd353301349d6fb99a1dac295e1c3c719131ec1b662947b911f2e47af/result.json": "1cf890a827afe94afc657c3eccbb298dab7945edf97b7032f4419d780ac92a15",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/f45a8a8366d10b0219ef7929b779cf4341a678f79eab2c863d2964b827566411/request.json": "39ab75d7234cb6ea985e83890ebc70d77467bde7a873f82d2af30426dfc0f38f",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/f45a8a8366d10b0219ef7929b779cf4341a678f79eab2c863d2964b827566411/result.json": "cc6a8628c8662c8b9e73880ddc4c520d2dc09fa601c2a8e55c34376121acd008",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/f647bdba57969a67a22fbf762f2ac86b19bdbfe3d9929dcb80f82ae76b040619/request.json": "2d3d9be3ddb60ad0676bd0e6e08d3847663bc65979553c0cef8213513ffbd9dc",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/f647bdba57969a67a22fbf762f2ac86b19bdbfe3d9929dcb80f82ae76b040619/result.json": "bd358f1090c223755c89344c4250b1eb5a594fa61e3b115d8fd7b4c7a439176e",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/f8c131d54caf747b6a9b051b5ef2884e690e9ac503ee3c62c8481f172bfd9a62/request.json": "cb4c6662dac33e1b05992dac0f912ac5dae394999f8f36cac53f89782500952b",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/f8c131d54caf747b6a9b051b5ef2884e690e9ac503ee3c62c8481f172bfd9a62/result.json": "65e52b9bdb892813a887670fbfe52365c7e6cee3e7b806d848deedefa88ce8ce",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/ffa5f5adc8dbcf61810937d5b141ba920efb2284c425b266d4f8388852bd7ac6/request.json": "3ea8fd1e338820b16f4dab5efd089f8d7f04f66ecb43650630cf68543f43ead3",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/attempts/ffa5f5adc8dbcf61810937d5b141ba920efb2284c425b266d4f8388852bd7ac6/result.json": "c9edd09f613c42c80ac2a9b0ef1913f94e2ccf1ef8bc26ae12d0c0549c2f8553",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/observations.jsonl": "b9e5395b9221d437b65f3ebe5b422875bbb0c68c021fc69b74299f04b580dc0d",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/report.json": "ee1fcf2e259ba716017dcdc7f5b73b6127d0acc3532d1b18cf170803bb2ba348",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/v1/run.json": "3d2329ba959614763a4320ab4d5ac4755f29b4be08162881b76c0ebf05ac3b11",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/views/preparation.json": "530da8786b14ad8e5f14de51a6628631c63bbb6fc3a69b4124446db27c48305e",
+    "visual-quality/data/prompt-calibration-2026-10-18/a/views/views.jsonl": "dfdcb0eae8fbc2bbf0210c1bae641abdab69c8c0e968a52fe0dd4b058ab0b91f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/01bc1ff30dc76f1bb88ae26e85fc47524c323785c8b1ef0b670f64fab480546c/request.json": "e30be4788fb832ad4889c6714eaf2d5a1e9221e6608587eb750357c590c1e1f7",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/01bc1ff30dc76f1bb88ae26e85fc47524c323785c8b1ef0b670f64fab480546c/result.json": "ce4698182a8f7329f5a4a1ba9f7c4277eadf2c736639ce1268a625338cfdc253",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/0b0ff886d7f8826576da12586a532d1cf33b30c2207cccc5ed2a01bdbc5fad63/request.json": "9e32fc4a2b9aef14901767f65c18133859a276c1ef8a7011d9132cb87aaa0f68",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/0b0ff886d7f8826576da12586a532d1cf33b30c2207cccc5ed2a01bdbc5fad63/result.json": "0980abbd8de0e45d1a03a87a003cf833981f7938ccefca33118d23248a46355f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/15f49bfb7b2c0bee6b398b04aa78d3c03189b6dc3db9e78928fc5179abdbe436/request.json": "33dfd54b1a3106a2748e6692f1b78c3e44716a8a9a31e9d509d3d9272c7ba5a2",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/15f49bfb7b2c0bee6b398b04aa78d3c03189b6dc3db9e78928fc5179abdbe436/result.json": "921dcd7207dc114e5df2d4b41a965a93c51596c73d8410550a623c4d0b275d68",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/164887ffbf7f8e95d3cb5a8223f89c93aec61b1fee02757e4a9b77df3481ab81/request.json": "8a16cb020508e7fe47afbaf3896b936f31dcf5ed6a6cc33f4473294378c0f358",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/164887ffbf7f8e95d3cb5a8223f89c93aec61b1fee02757e4a9b77df3481ab81/result.json": "ea1472aa4f28e18aeed6170c3be7dfdf51e08c58e8c49e274c9101609b8efb3c",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/186acaa882fbbd36f7470ea4d49b7973d4f0731743854ab2cd2c880effca7ba8/request.json": "e50709a11fcecfb8673177add35946995a38eb9c7523e0031beadc2ac89fcf3b",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/186acaa882fbbd36f7470ea4d49b7973d4f0731743854ab2cd2c880effca7ba8/result.json": "7c11fe20d59b5f61e0766849abe630079c0ca64f9fc9581b7629502c192ef86f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/1a344a22973d13656ede8fd9fbc473655d39bd94a2c1217507be29ea095c4992/request.json": "85c0d4149f725dd470d8643489d4a4e5ba3d17156580a026b3427a26e2d2ce9c",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/1a344a22973d13656ede8fd9fbc473655d39bd94a2c1217507be29ea095c4992/result.json": "a00abbec6eb72c8763d1358126b2335b5f31272f60f1fb2728a86ec6f09d662b",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/1ae7fa55543dfabe1535b7139777fbba962b212be8a6dc591144fe0e4130ed24/request.json": "f7a76178b25e85c74c7fc2727479880c9e9827351d11a4ecfb296d1066b3e931",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/1ae7fa55543dfabe1535b7139777fbba962b212be8a6dc591144fe0e4130ed24/result.json": "02774cfb5ee13f458f3e30d085da38d90f75dd43950c78b37ef50ad2b077208b",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/1fe0431dc88d321c087f49f37a9da5c4e9a7318e4dabc4bb3a68801bc3730bb1/request.json": "e475a587581db2b702f8f13ff0df87333a8e94061c78263d9593b5da3728f700",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/1fe0431dc88d321c087f49f37a9da5c4e9a7318e4dabc4bb3a68801bc3730bb1/result.json": "6dc8f74d33c70be021d47f6c7e5152410ad620007b4a24f66673b8c56dcd0351",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/2100d7aa32c9087765ab57752683952162d037e218f88ba104f566c3b02974a9/request.json": "7df4c72795375ab909735b6512a6943c6c5fd462e45614a4c029603fe122555b",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/2100d7aa32c9087765ab57752683952162d037e218f88ba104f566c3b02974a9/result.json": "aab85950ce5b804cdac56c33db3e0a1a5f747d8d7ee0cac6bf3126f808b99dbc",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/2ac413ea15b8c39b54504b5f3fa36448f86e4250091211d2ed28153afd0b8e0e/request.json": "38df8ee8e58e2722c1744784db16ba108bfb2b07fdeb53f3991708f9a282a594",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/2ac413ea15b8c39b54504b5f3fa36448f86e4250091211d2ed28153afd0b8e0e/result.json": "71d59e86ff647e019d5d03d8bce378a1ec3ed9c1c68c2a30e57ac9c2e63756d9",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/371a84fa5d79c80a9b89a4f0a269a7371eb850f2a9812e79e5644dfeb7a45477/request.json": "0e45e1fbf95e5c43fa2ca2afe1251b19a9b2fb96c91b04b2bdbd5f927b43a30a",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/371a84fa5d79c80a9b89a4f0a269a7371eb850f2a9812e79e5644dfeb7a45477/result.json": "bbda7c7b5d32cfd07f48ea1274e44444e0761ed375db5b9c6e4f48b7ef8a6c95",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/41594ff229bb170cd84f6b3ae2e5b8865976450b22e7c2087ff50d43dc9f9c74/request.json": "62c9143f5881af60f91ab6590ccc3019c6fdd1e2abaebda34d4bedb5e3f4661e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/41594ff229bb170cd84f6b3ae2e5b8865976450b22e7c2087ff50d43dc9f9c74/result.json": "739b45ea82487109b8d6e519a316e144e99999bdc8a7139786f863960dae3d5e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/449a8bc77e2fd2bffe60c7aa260a7ea57e398c6b4f5628275f02fdb83fb22d22/request.json": "1a937d569edeaa1e9b50fb04e89f95451f8ecfc015985c293521d9ac534fba38",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/449a8bc77e2fd2bffe60c7aa260a7ea57e398c6b4f5628275f02fdb83fb22d22/result.json": "a1a7359423e884b456cc66771b571704c0947deefd9a1efbe6af036933a46841",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/46413bfa7861f0f3228261888e514f64ac5156a96bcd74585228a765cb56cfa2/request.json": "1230d67937276418c0dfa8b8db9b4ba50abcb6eacf9029792ec7251b062a01c5",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/46413bfa7861f0f3228261888e514f64ac5156a96bcd74585228a765cb56cfa2/result.json": "444d879a8a3a7810a5bb5302e81dcbac2352f91a6290dfb78a13c074c6a056a1",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/48cdd66b754c7211aea6ef9c48d603fcd26966c2e3cc6475c0f0415e5e640c01/request.json": "68620d4f33593722309cf1797362f41d0d663eb14fcaf72e4ee822c5f0e5da85",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/48cdd66b754c7211aea6ef9c48d603fcd26966c2e3cc6475c0f0415e5e640c01/result.json": "791540d73f4cd142ce1e04f36215380a06fa7993f7353b460e21911910c711b6",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/48f628ccbbe5c8a778948a6a275216f54ff9ccc692a513f7726b17bdf77da6e8/request.json": "8664692d433ba46387ad8946b17cd86e25c3ac5bcd395a215ceda2ef7811b260",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/48f628ccbbe5c8a778948a6a275216f54ff9ccc692a513f7726b17bdf77da6e8/result.json": "fb20c1203020563818df527d6f48520f636f0c8240ebbf05af9855d19d45649f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/49d54fe34052a1efe31174a06615c95d34017418cd525ec54fbb39ad90cec59b/request.json": "6e02d317c029e496c83c3a32f2fb5028b142da9d79b11037bfb84d512044f18c",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/49d54fe34052a1efe31174a06615c95d34017418cd525ec54fbb39ad90cec59b/result.json": "3afc32edef8fd3a6eb3173960c75bcec70d9d7f6a3cf65eb551feef120f6e53e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/583226ef2a9777840bdcab8a86cceba807f045abba57fbbbc78fb88455e0c240/request.json": "60e14ba9d3e273ddf3914eead7a31d411e6aa0bca58725516dbe535f10e50dff",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/583226ef2a9777840bdcab8a86cceba807f045abba57fbbbc78fb88455e0c240/result.json": "9da4c022fee4f1128fe80e63f70b56b203b68e22a14d408c6f17984e4f1c036a",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/5cc2ddef33b9fa0d180819db76ab9a39a37c7afecb085aca3667e52b86371e81/request.json": "bbe8baf0e8e409d0c4716e94388d732eca6a830080625665ff1b5008fcd49251",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/5cc2ddef33b9fa0d180819db76ab9a39a37c7afecb085aca3667e52b86371e81/result.json": "1a41e566eb244da68e75d4b59a78d2d7e6080fcbc43d643fc89697888bb11f26",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/5cc355c48c554e2e5a70c3a94435a872eaba8839a9693ca4ac5114b84f7d239b/request.json": "0d9b3dde53eb1b617bd303a1f7d6dbabb8b31094548d11a47bf7709919340f6e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/5cc355c48c554e2e5a70c3a94435a872eaba8839a9693ca4ac5114b84f7d239b/result.json": "066acda29cebdeb05f18ddf7dc5f1354aee139bea3cc6a9825bceef3de4dba71",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/618eaec0f9bef011a4dd5175014fe1c98989370a62efe28c389c596ef2cbeb91/request.json": "cd87df4dfb209a9ea7a27f4fbb1c95e65fd7aee9b3ac367cfeff061d53e8b064",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/618eaec0f9bef011a4dd5175014fe1c98989370a62efe28c389c596ef2cbeb91/result.json": "975539a1209d64ae2d34a105d2932a561d7a6ef060b042ace846f8c87839a8f7",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/6516794787f0aa47d32c635a700220189d9c4fea555ca8f848cd46360d682d9a/request.json": "804110588639f0971c96fd74d37f0fd11803e269ba8251a3fb8488d3f5b113eb",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/6516794787f0aa47d32c635a700220189d9c4fea555ca8f848cd46360d682d9a/result.json": "8848c374d173a5ca0c2752afdabf9cf894e21dc6da08341e5c5ef775c515aa5a",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/66c370102121206385b18ea09ba2687908906742d2ed78fbaa5ff88afc660617/request.json": "0963ff7ca30245828a865f75c865b30cbede9119109f29917a1eb0048630d311",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/66c370102121206385b18ea09ba2687908906742d2ed78fbaa5ff88afc660617/result.json": "6bd0c1326ae401cd20904bbea53ad0985d786f032798fe8d74a0ce39ddaef3ac",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/66d03886a08b213c3514a435a6124021b9361ef89a63592c337b16d40fb735ff/request.json": "83fc29b5c808609eecf8142afa899ebe919cbfda9f4a79d27742daf225583f4d",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/66d03886a08b213c3514a435a6124021b9361ef89a63592c337b16d40fb735ff/result.json": "e364880cab7d6ef63fefe2ec3a5c7bb6729922a031c72a1be476560ebc1d686b",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/6d242036fa0c58149386f1bbd5894a805f83e1d7801817c7340f332512c4831b/request.json": "341a60f524ee51dd90232f0624c2f6f36d747410ad48711a775beb6a3be1e6b4",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/6d242036fa0c58149386f1bbd5894a805f83e1d7801817c7340f332512c4831b/result.json": "1690ec6789832a3bc3ae297468a5a6a854d39e38e6dcdd32c2d13d400c7d699e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/7adf5175416d1025bb0fa1d9360c3e933803a37b4c0761e658ec1a6c3400d552/request.json": "352337e2e4a3dc92d0ae6644b00a0d0882a5229f384034515a48d6c9fea84515",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/7adf5175416d1025bb0fa1d9360c3e933803a37b4c0761e658ec1a6c3400d552/result.json": "3db3f635c7ca357cd775b8ecdde7176a216a931eeaf11b2a25dfe3d086c74695",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/7fac63e66413d1e75b7300c4b7b81f15a9a94d480078a73f4d52c19d5bd34279/request.json": "4af3eb32256f7c690db7069f6f596c6ec2cb6e9d041bafdae0c43874e2410ef7",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/7fac63e66413d1e75b7300c4b7b81f15a9a94d480078a73f4d52c19d5bd34279/result.json": "bb03bc77c821aff2f06431855fbd06e01b3e4a688dde910b5ca1918b4236946c",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/801646b835822ff88c8621eda204bf662b53ef1bf89b55001461313874c0fa7b/request.json": "50765141b9d9b7135a7f7b740bb8ca1a2b1a423260acbebfce1df878035f9400",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/801646b835822ff88c8621eda204bf662b53ef1bf89b55001461313874c0fa7b/result.json": "e49d03006dab01d8a4044eec31c8841b1cab6d69fb56f53d03a597c2f51d0944",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/84999dba51dcacf45979748c11e86c5ea990424c50ea43384cbaae10996c65c5/request.json": "bf7d8a3055a3b2b3cbfb59ae5aa0ea8eb3e3b74516a39dde5eb656cc56f7b7ee",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/84999dba51dcacf45979748c11e86c5ea990424c50ea43384cbaae10996c65c5/result.json": "6c4bfae8b9d311ac4c1a7eea75ee8be7495cc798bd7796599ebf06fb35d64d42",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/85344cff440ad6f4d91c9ca45f177f2be3a46999b559255dfbf010c8231630cc/request.json": "1d5411e10214bd242cb0f74775c172ec6c65b38a2196719d26cf2b15490c3b13",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/85344cff440ad6f4d91c9ca45f177f2be3a46999b559255dfbf010c8231630cc/result.json": "2a197947482260cb22f124d824f08b26496a3eaff05fc5bf3515075f1a2fa4a2",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/8624dff5150d1ccc0e77adae288158ce855f573aed24c0e23d1cc02b5b841c6e/request.json": "064e25f0e69c04b1270cd2d3edca2711a9638bdab561277f2ab31403835d3250",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/8624dff5150d1ccc0e77adae288158ce855f573aed24c0e23d1cc02b5b841c6e/result.json": "d0ac7f7345d7b365821771838ca3a9afa7b0c43c4655fbd9cab51d240ad18e92",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/896ad225c20430f784ea96bbdeda8ada3514a475d38d1b977a91f775277f85d6/request.json": "410b2e92059ee972406342c57813d230146688c5b4ba81abc265ca9a1602d665",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/896ad225c20430f784ea96bbdeda8ada3514a475d38d1b977a91f775277f85d6/result.json": "4412f578aed405eb2c7ae0a60b427db426bda0027e7400200bb1793f49aa5de2",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/9ac75165d46104ef97704e6d7fc665e5435f513a40586ffdcf687a1ecb5710c8/request.json": "1ec911d6c399f28a0b3aa9dbca7772b8f04562dd203a35a85fdaea63452a040e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/9ac75165d46104ef97704e6d7fc665e5435f513a40586ffdcf687a1ecb5710c8/result.json": "4839b7d672ecd1725105b92b38b787406ddd7432028816ea553ffd66eeef5937",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/9bc1c90dc1565fdf6b1fbecc25d42e4f0f65d5bc593a0e26d2967f8c2f361d1a/request.json": "e5c2fb6e699d5a837b17bd49bba0efb1f4d4e2cb21a777a7e22970fab427ef5c",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/9bc1c90dc1565fdf6b1fbecc25d42e4f0f65d5bc593a0e26d2967f8c2f361d1a/result.json": "883491be7eac79cc6a71741d8cec2d96fe4e1eba08ee3cf4b756bd8fa64f21ce",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/9cc69fdf21503d04794af12265def1ca4fa298228da1506bfa2adb5178426a2d/request.json": "f4fbf74ec3ee1798a72c3aac2dac00568d5997560da7769ee0196a95e7cb88fe",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/9cc69fdf21503d04794af12265def1ca4fa298228da1506bfa2adb5178426a2d/result.json": "1f098ddd723fe157b1d083df6b74cea6c59d434b22b55d3552f78aa38a955b85",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/9fca82767f39ea0c57b01d07a4317153e5426769119143fa87a38b69ebb76c23/request.json": "cf112d63a61da7968ff4270965eda18685eb48ffbdaa28849d69b9a5317fa4a9",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/9fca82767f39ea0c57b01d07a4317153e5426769119143fa87a38b69ebb76c23/result.json": "812d34ab61dc36a41dc944c5db7f5d708c14336c1309045b1065e3a8356233f8",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/b016811e2fb342e981175d7afeca946752597f546263cb6cb6db693949ea265e/request.json": "6ddb7cb5a8dfc5ede5eb1a67194f0d854c1d775da324dbfd5a5fad18ab7af2f8",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/b016811e2fb342e981175d7afeca946752597f546263cb6cb6db693949ea265e/result.json": "68abbdb0d6d640bdbb3536d7a265ecdeaac560f40f6303a716940741c9168a35",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/b2ccb7280205c708a1afbf90bc48f685cd34490787fc57c1da51c6503ec4513f/request.json": "e2a355e1c0622e3d34669adeb7048e7e141e31f798c0264172689066f3b018e9",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/b2ccb7280205c708a1afbf90bc48f685cd34490787fc57c1da51c6503ec4513f/result.json": "0f31b55885d0bc5ab60dbe8b0cdaf742b13af7db1a02bf1e55175c8c2bc8e4bb",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/b65c762d2e0031f0cf648b2a634bef1e9813ae0726bbd6e34eb73a0f6ba5743f/request.json": "36b6bebee918c8c1d6a3b080e347e9871a2cc02051d2e7b12258863de30f5260",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/b65c762d2e0031f0cf648b2a634bef1e9813ae0726bbd6e34eb73a0f6ba5743f/result.json": "fec4765faad230b6b4060f3bd83edd3df70bd6df6a4e4b807b8ae178568fcc25",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/c025692589f8dde92a6ecbceeeb3fd66a6c3855130c159901d9e8cb914559abc/request.json": "589a508859d35682f9f19fe828a242765868917d33789be66587dbdacf786a34",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/c025692589f8dde92a6ecbceeeb3fd66a6c3855130c159901d9e8cb914559abc/result.json": "3050f4a26c32cb66619799644d47baa4dcd06a521bb3d2a20069500e63ea1715",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/c24c3a30aceb377512c85875c7895f3c7b6f748d251545c4624aec3f7bffd068/request.json": "4de75f3d2330cdec3d1fba2d0950756daea8201a665554a73dc2df9c1e508d6e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/c24c3a30aceb377512c85875c7895f3c7b6f748d251545c4624aec3f7bffd068/result.json": "f40af18f3063b0914e1ae120ad8e43d7776e90d8447c3cef7b7f3299f92a149a",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/d245d826455cc47d7ff9b0a830fe0dff24e753d528362c813d55da0aa86f616a/request.json": "f1da7cbe1749c2dbc063f5600aedc860cc74f6919ac1c6b6efb16b5875109a9c",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/d245d826455cc47d7ff9b0a830fe0dff24e753d528362c813d55da0aa86f616a/result.json": "b7bdbe13bf40bef6963e8094ea5fca34315f3f14291acaf60ae898a862e6a8b0",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/d2a645ec610beb0d2ee91eb2b4a5a8437dc59f1320c12fc91478b6ae93b651f2/request.json": "2e5efac89e73e7285c71dd3eb6f0c28ce845028304d44e785bec12cece1c2e1f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/d2a645ec610beb0d2ee91eb2b4a5a8437dc59f1320c12fc91478b6ae93b651f2/result.json": "9b40be05de3e324db8d73b38a237c406e565f3cdd5c65fcb25a266cf63b61f3d",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/e6b3974f13abd87ca9f672a18d0c4f26a1d45a5a013059f8d094ea3e9713ba9c/request.json": "22cd2fe66737518b487db6db40f2a9200bb41e7045085eb639f70b7bd7c3631d",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/e6b3974f13abd87ca9f672a18d0c4f26a1d45a5a013059f8d094ea3e9713ba9c/result.json": "a7c075cfc683494eb86e6f35ee8ddceeeeb4c8ce138a440f6f6d586c1e9861d2",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/e8f7b1ef0382a6cf0c0caae1813dde4334c6bcedc4cc76e62c78d4370019c7b7/request.json": "35d2a3e43ce99eb1841f6fcda585a808a7ca9422b546a7eee25aede103b32cdb",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/e8f7b1ef0382a6cf0c0caae1813dde4334c6bcedc4cc76e62c78d4370019c7b7/result.json": "8d92b413f829e0153f3fd96ac4978a7338782bcd388dd9453286707446f35583",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/e9394a5de82acdcd9cc6ca734e1c9eb6c15020a56260c64470d3dc4ba03d1cae/request.json": "4aabe3f500d0fceb9e27ede35ba7e977230169b4ebeec76d07d14d80133d8c8e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/e9394a5de82acdcd9cc6ca734e1c9eb6c15020a56260c64470d3dc4ba03d1cae/result.json": "3be4544a85452b5a30befa83c37dcd00758f5c99ab7a668181bb2aad09d6ff23",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/ee0396646511f56caf9a90af1ee2d180b7c38fc2fb4531d729aca82e3834b184/request.json": "eb41300cbb78e40d8f283e9dfaf4ec7687ba39f9c5bf6360e1b3306e6f762886",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/ee0396646511f56caf9a90af1ee2d180b7c38fc2fb4531d729aca82e3834b184/result.json": "df1e73a17dabcaf0d9821adbb1569fec6142f4c065427f710d2d9af1aaa36d06",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/ef0b422e78d8c3446cb67a54a2cb39d6368b18dd5da084573b2f51ae592ae9a0/request.json": "6f0a65cf92a53a25f81898d6a11aa9007917508f47834b7ec1ba236e0cd414c9",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/ef0b422e78d8c3446cb67a54a2cb39d6368b18dd5da084573b2f51ae592ae9a0/result.json": "180000c8bd4b581246ac3add3b7c1a012add580f6b5c12563bc2b7781a7c5933",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/f0a0f452d79f94f698e6612f6132da20cab695925cd8946840b6cc6ec7236181/request.json": "1f90e3dbeed63378cd4b38fa819fe5989894a7810350c98f9984d528d30f53f3",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/f0a0f452d79f94f698e6612f6132da20cab695925cd8946840b6cc6ec7236181/result.json": "42bbebd968cfa9ccb3c4af2c5ccbe117084ae14b16324e1f52bffc3ea87caff2",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/ff61e9e8b9b9a7c44c9921786f2ef19d8ed573d6eb662bda9369173359fdcca6/request.json": "533ecf8a183c1435355bbe36bb6420afbfe48d9f9e3700c9e2a9bae7d94e8376",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/attempts/ff61e9e8b9b9a7c44c9921786f2ef19d8ed573d6eb662bda9369173359fdcca6/result.json": "181e205ea4e9336e251d2883075049998c769959fbc7e54f7ae59d5fb292b5d9",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/observations.jsonl": "a84b771096800ecc70495197c50c7871d454f83c2017d2e4b6f21f1c6047b153",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/report.json": "55a47d993d27df47ff5d4c486168a92713b6ad2d98f1744124c04f67ecdbb4eb",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v1/run.json": "97262e05727b173bc5fb5deae336ad4855e230d703b669427603d8e6baefc87f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/01bc1ff30dc76f1bb88ae26e85fc47524c323785c8b1ef0b670f64fab480546c/request.json": "3034f59a5d79c65b95d6870b558e75de32648fe5334651b6d4a52e5e3c440826",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/01bc1ff30dc76f1bb88ae26e85fc47524c323785c8b1ef0b670f64fab480546c/result.json": "cff6d4e637bbe4997242286df1aad1e011ee3c26b786868440cec734221ee086",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/0b0ff886d7f8826576da12586a532d1cf33b30c2207cccc5ed2a01bdbc5fad63/request.json": "a4e99aa29c1018bd09963f1bf00cda2e5fa3c12a343359e1618095708de9b7a2",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/0b0ff886d7f8826576da12586a532d1cf33b30c2207cccc5ed2a01bdbc5fad63/result.json": "7ac994e5576692df8b15fe3689c5f36e931b9e4a0bb7c92e6aa345215572005f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/15f49bfb7b2c0bee6b398b04aa78d3c03189b6dc3db9e78928fc5179abdbe436/request.json": "c87c4a8f13dff15d5936331c1c290a72cfe0cbf4e6686ba5df151f3c90e4b53d",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/15f49bfb7b2c0bee6b398b04aa78d3c03189b6dc3db9e78928fc5179abdbe436/result.json": "b549004c396f7300aa739dab10fa8ae389e9243f0504d2151731924142124afd",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/164887ffbf7f8e95d3cb5a8223f89c93aec61b1fee02757e4a9b77df3481ab81/request.json": "361e62304cc372f601a7cdc20289f0cc85998b0b1a2e71c15769f108800f9bc8",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/164887ffbf7f8e95d3cb5a8223f89c93aec61b1fee02757e4a9b77df3481ab81/result.json": "c4569092a15754b1bc348229e372775362ec4cce1c1767c351d37aae193b6a63",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/186acaa882fbbd36f7470ea4d49b7973d4f0731743854ab2cd2c880effca7ba8/request.json": "034d6145cce9296f71c8a5cdb3db483c07482c079e75f7d85124d5e46184201a",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/186acaa882fbbd36f7470ea4d49b7973d4f0731743854ab2cd2c880effca7ba8/result.json": "b8220b46e7d04d00a2d1bbac63648f2caeb117e3ae4be697de634cf0e8fe772e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/1a344a22973d13656ede8fd9fbc473655d39bd94a2c1217507be29ea095c4992/request.json": "1dcdff3e69ceabe4106a3b2a97ede5abcd41769fdc623048800951a7585c31fa",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/1a344a22973d13656ede8fd9fbc473655d39bd94a2c1217507be29ea095c4992/result.json": "2ddb055ac5e298f00dbfed6d8733d8ebe6fb0be85ce6b885d3985a7d272085fc",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/1ae7fa55543dfabe1535b7139777fbba962b212be8a6dc591144fe0e4130ed24/request.json": "30ee68432b618ca2b46a339a999fb3b21f0ff170cad47ee6eea522f60cf34ee8",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/1ae7fa55543dfabe1535b7139777fbba962b212be8a6dc591144fe0e4130ed24/result.json": "eab4dfab648953f79f40bfba8c56ffe5f5628191f3605dddda7ef1cd6e445756",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/1fe0431dc88d321c087f49f37a9da5c4e9a7318e4dabc4bb3a68801bc3730bb1/request.json": "a52196e66dda3d5a44dc260e760f9ce520b28533783937a30d792d9f98017186",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/1fe0431dc88d321c087f49f37a9da5c4e9a7318e4dabc4bb3a68801bc3730bb1/result.json": "ad4d9708e27390f451c619c52e480cd323684f5a9bc9da0ccad674f32c349172",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/2100d7aa32c9087765ab57752683952162d037e218f88ba104f566c3b02974a9/request.json": "7fc45c89b35e62258bb7f1939b52a5570e5cf62d7ffa4706e75019ad300daf16",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/2100d7aa32c9087765ab57752683952162d037e218f88ba104f566c3b02974a9/result.json": "d54bbde70beff04163efa5e27153df7a54a10877ed436c414b1ce89479d6358a",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/2ac413ea15b8c39b54504b5f3fa36448f86e4250091211d2ed28153afd0b8e0e/request.json": "cb9d45214b1967a2f8171eea75d5adfd72ea8569b78524beac5061cba56f79b1",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/2ac413ea15b8c39b54504b5f3fa36448f86e4250091211d2ed28153afd0b8e0e/result.json": "4391e9f137f4c03c9a9f14299fadb20b59b6eb5decfc8ef0f40f9b58b14ec559",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/371a84fa5d79c80a9b89a4f0a269a7371eb850f2a9812e79e5644dfeb7a45477/request.json": "2ad111e07fc4f72e142ade410a69b4a110ac6eefec7f6ebe26e2324df2e4a55a",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/371a84fa5d79c80a9b89a4f0a269a7371eb850f2a9812e79e5644dfeb7a45477/result.json": "75aab75113ea44fbfa2b463e10f215cc01108dd23ca6a451588d8946470f9728",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/41594ff229bb170cd84f6b3ae2e5b8865976450b22e7c2087ff50d43dc9f9c74/request.json": "6342672cc992d7f7441a97fbc278c1a6dc4d0c3543bd565845bcf73e603f2d3d",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/41594ff229bb170cd84f6b3ae2e5b8865976450b22e7c2087ff50d43dc9f9c74/result.json": "74e863ca47975c15186a37f5e556b87a25fb0191a2b06360f8999be76f2bb243",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/449a8bc77e2fd2bffe60c7aa260a7ea57e398c6b4f5628275f02fdb83fb22d22/request.json": "38837496803a7c549ef048ec3c8a16781b9ecb92a7be70acbea43e9a9499528e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/449a8bc77e2fd2bffe60c7aa260a7ea57e398c6b4f5628275f02fdb83fb22d22/result.json": "346ded01953c36be67a54b96dd13df4042c7132b5e51429043814a066ffc3f71",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/46413bfa7861f0f3228261888e514f64ac5156a96bcd74585228a765cb56cfa2/request.json": "ba59b4a81029ce0dd7c01152e3767f96ebca5a7312fbb1239c2ef739123fb862",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/46413bfa7861f0f3228261888e514f64ac5156a96bcd74585228a765cb56cfa2/result.json": "2cb30daaf79907e541da9e0b86281626534982f0b457b752b7a0d2e50e30794e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/48cdd66b754c7211aea6ef9c48d603fcd26966c2e3cc6475c0f0415e5e640c01/request.json": "c5f31acc3424896020443229df6837658a9fc8d9d32a82d37e8a33a2ba7fc92d",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/48cdd66b754c7211aea6ef9c48d603fcd26966c2e3cc6475c0f0415e5e640c01/result.json": "6bef97a53ea318120db75ead1f79696b5adab3583f3030f5d4abf27aa807b356",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/48f628ccbbe5c8a778948a6a275216f54ff9ccc692a513f7726b17bdf77da6e8/request.json": "31e7dd26ce9828234178e91647c4773050361f00162571ead4ccbc50c9aa4ac0",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/48f628ccbbe5c8a778948a6a275216f54ff9ccc692a513f7726b17bdf77da6e8/result.json": "1c4e6eb96c4e49fafaacab8aaaec928c8d214952ee5ed0fbb1b007d459e694aa",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/49d54fe34052a1efe31174a06615c95d34017418cd525ec54fbb39ad90cec59b/request.json": "c1cd4bf964a0b559c4d456ccad2bb79bbb404fa7f6f39184937ef85db37000d2",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/49d54fe34052a1efe31174a06615c95d34017418cd525ec54fbb39ad90cec59b/result.json": "449005cc0499ac91379fd0f45e75c3cfcb60469ffbc124fd213e93688fa43135",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/583226ef2a9777840bdcab8a86cceba807f045abba57fbbbc78fb88455e0c240/request.json": "e6e898da84cfbbc0f73fffccbe0fc23db40446630e14fd4ce7dbe975f5b4e07b",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/583226ef2a9777840bdcab8a86cceba807f045abba57fbbbc78fb88455e0c240/result.json": "bffa00acb9cd349cb09b752c46d257b0420bd5bc4ad45b233a7120f44162cb29",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/5cc2ddef33b9fa0d180819db76ab9a39a37c7afecb085aca3667e52b86371e81/request.json": "ced1077f9005fbe0f96b845ef76bb210891e533da57d625dcfc72f4328aca97e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/5cc2ddef33b9fa0d180819db76ab9a39a37c7afecb085aca3667e52b86371e81/result.json": "3e5d0bb9b802da99e751ba6ee8b7cb60c76d3093a680cbdd1964c13d790a13d5",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/5cc355c48c554e2e5a70c3a94435a872eaba8839a9693ca4ac5114b84f7d239b/request.json": "09827585b3afd6b455f2826593ae00c4860a3919c8cf6e5380fc89c952cc52f0",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/5cc355c48c554e2e5a70c3a94435a872eaba8839a9693ca4ac5114b84f7d239b/result.json": "155075ede5ffd3286959c83fb9a674be349227ae140674dd7e6605df702339d3",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/618eaec0f9bef011a4dd5175014fe1c98989370a62efe28c389c596ef2cbeb91/request.json": "bc3a8901c321cd0336b6613679dc2a32fb874f5d07ecf6bb00570e8726a8f5b2",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/618eaec0f9bef011a4dd5175014fe1c98989370a62efe28c389c596ef2cbeb91/result.json": "6d013bbefee1377a878773e1e394478aae353c3d6d651eb188ff0cd8e0be3d72",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/6516794787f0aa47d32c635a700220189d9c4fea555ca8f848cd46360d682d9a/request.json": "3b1ecc3c33452644907e399c4185054c1dcad0537904a7b4680bb8dfbed6d1a6",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/6516794787f0aa47d32c635a700220189d9c4fea555ca8f848cd46360d682d9a/result.json": "60024a88a721a0e130a1f76aef693a634bc2ca60fc76d3acb16f363500ea34ab",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/66c370102121206385b18ea09ba2687908906742d2ed78fbaa5ff88afc660617/request.json": "c47cf24bdfed6e5c3cc1d85929b597f6c86008b99365c0076a1b2ca2ddf5b592",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/66c370102121206385b18ea09ba2687908906742d2ed78fbaa5ff88afc660617/result.json": "bdc888b5671e9a1540b301d7a572da17a6c9891e7dfc71686852090dff9f6f76",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/66d03886a08b213c3514a435a6124021b9361ef89a63592c337b16d40fb735ff/request.json": "f8c3e75551b8c1c4e71a327a90f4dcd5ab559543dc45615dfafd3d032fbd5a00",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/66d03886a08b213c3514a435a6124021b9361ef89a63592c337b16d40fb735ff/result.json": "3a0b0045bb86e3e7ae62c2cdda27f83954c9a094254ad9fcd18136ff68aa1489",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/6d242036fa0c58149386f1bbd5894a805f83e1d7801817c7340f332512c4831b/request.json": "7842ce54b27935f9e2740561936e126b96d004d43549fa4514a5f9caa160de44",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/6d242036fa0c58149386f1bbd5894a805f83e1d7801817c7340f332512c4831b/result.json": "892bb490a4edb6ca712f3ac6cb181149770ec2e0c9835c2848ad7c75e03ff28a",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/7adf5175416d1025bb0fa1d9360c3e933803a37b4c0761e658ec1a6c3400d552/request.json": "5c890ec2dcb53645dd624acde2e4e7e64cd2d166116242c52dfd7b6d4b1a7407",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/7adf5175416d1025bb0fa1d9360c3e933803a37b4c0761e658ec1a6c3400d552/result.json": "48001afb7d6fe7bbc33a64b119de1e68f304f7e8dcec624331889bb0e928901b",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/7fac63e66413d1e75b7300c4b7b81f15a9a94d480078a73f4d52c19d5bd34279/request.json": "fcdb5156ded5b086a7591daaa77c66dff28e1bd7dc6b046895a38bd391f41ef9",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/7fac63e66413d1e75b7300c4b7b81f15a9a94d480078a73f4d52c19d5bd34279/result.json": "85b00431efe52d73705c727a782ecbccc42157eb40eed3f4dadaac0c6cabf01a",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/801646b835822ff88c8621eda204bf662b53ef1bf89b55001461313874c0fa7b/request.json": "ff21126e3a520728285752a97ac27681a058b4e9c13449c41c0f6d69902c5917",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/801646b835822ff88c8621eda204bf662b53ef1bf89b55001461313874c0fa7b/result.json": "aa0389c332a33c02fcfcc4612569b965e8f790ddd7e43003568f56b4b6909533",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/84999dba51dcacf45979748c11e86c5ea990424c50ea43384cbaae10996c65c5/request.json": "e10c908b9e06183feff496e455dd968b58e58489d3e0f8906a873f0ad763a152",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/84999dba51dcacf45979748c11e86c5ea990424c50ea43384cbaae10996c65c5/result.json": "d07b46d7f745feb8cf693fa1196e3068ed9419881e4c72364c7f502000dc63ba",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/85344cff440ad6f4d91c9ca45f177f2be3a46999b559255dfbf010c8231630cc/request.json": "4994bf72893a88fa97473ef35eef543dffacbe089ad8d07d43cad4f44c2104a5",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/85344cff440ad6f4d91c9ca45f177f2be3a46999b559255dfbf010c8231630cc/result.json": "35d084e3947004319b8a249cd3d867eb75888f293fefafee3a38046046521fea",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/8624dff5150d1ccc0e77adae288158ce855f573aed24c0e23d1cc02b5b841c6e/request.json": "666ccf341bac1b9f4aa07ac35fde75442337a7d5f640a69daedb705d50c9dd7d",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/8624dff5150d1ccc0e77adae288158ce855f573aed24c0e23d1cc02b5b841c6e/result.json": "2495e9375d69fad9c5cb0402d2a78d20fd7b4720a271f1a418616000e09a844b",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/896ad225c20430f784ea96bbdeda8ada3514a475d38d1b977a91f775277f85d6/request.json": "fe70a248703f36359d500f12ea2c6526efe42d5a758b37efe4d0285abbcdc688",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/896ad225c20430f784ea96bbdeda8ada3514a475d38d1b977a91f775277f85d6/result.json": "b7eaad9fb4e132b9f191e6f6a3fa61f3484020d5a3e45e18c00e5b7e4665306b",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/9ac75165d46104ef97704e6d7fc665e5435f513a40586ffdcf687a1ecb5710c8/request.json": "875f78065d1bf87324e0f336f96713a6b318183c5e884329c402da396e405bfd",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/9ac75165d46104ef97704e6d7fc665e5435f513a40586ffdcf687a1ecb5710c8/result.json": "2c821bc4a4e4e2031b653fe727c7f752f9e4e8127f990af5f03e3e2c44eded32",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/9bc1c90dc1565fdf6b1fbecc25d42e4f0f65d5bc593a0e26d2967f8c2f361d1a/request.json": "e03f0181e61565b331112657184fdb58fff3a461da21618f5ef53b1d26885289",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/9bc1c90dc1565fdf6b1fbecc25d42e4f0f65d5bc593a0e26d2967f8c2f361d1a/result.json": "e061a4066ff77487b92810b4d3ed8d3e02a6e20148732dce88f22e3f1e91f80d",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/9cc69fdf21503d04794af12265def1ca4fa298228da1506bfa2adb5178426a2d/request.json": "a6f513286c9c537aee1113ebcd8d5329f77c21b0b07a1ce054ac9616b9779f87",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/9cc69fdf21503d04794af12265def1ca4fa298228da1506bfa2adb5178426a2d/result.json": "161af796ecba358b73c2260883cfc2f5d59da7f483b79e6982cebed1f75d1f04",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/9fca82767f39ea0c57b01d07a4317153e5426769119143fa87a38b69ebb76c23/request.json": "7b1c948863da5253b9ef10666ba57ffce880b7e139f644d1c7102e1bdf627333",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/9fca82767f39ea0c57b01d07a4317153e5426769119143fa87a38b69ebb76c23/result.json": "43a68c39d53231b8995e2fbe445efdbf63ef7eee4965b92269f0f299226011a7",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/b016811e2fb342e981175d7afeca946752597f546263cb6cb6db693949ea265e/request.json": "e19867b7eb76d9a1b9f4581ad55f69baa4d9b235a4e5c5b3b346040f3e7c5de6",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/b016811e2fb342e981175d7afeca946752597f546263cb6cb6db693949ea265e/result.json": "5e82d84a689a649bc7825f4a2196a4559d1fd2f0489e8f00589dbe3293fc647a",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/b2ccb7280205c708a1afbf90bc48f685cd34490787fc57c1da51c6503ec4513f/request.json": "e54ef2d93e9e497e36fb917bc1dc6addec47c3b4376c54658795402efce05bf7",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/b2ccb7280205c708a1afbf90bc48f685cd34490787fc57c1da51c6503ec4513f/result.json": "01f67fb4aef88c791aeff04964e8f6650f07ae21fb0bb2e004a64490171de74f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/b65c762d2e0031f0cf648b2a634bef1e9813ae0726bbd6e34eb73a0f6ba5743f/request.json": "cce578bcaf2a416e8ffdad740fda88692673a23e70cc84e8db72ee7180cf758f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/b65c762d2e0031f0cf648b2a634bef1e9813ae0726bbd6e34eb73a0f6ba5743f/result.json": "88add33fd073a29dc286ec7d5d07cf729567f89b5ff5df82065025a5fefd02b3",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/c025692589f8dde92a6ecbceeeb3fd66a6c3855130c159901d9e8cb914559abc/request.json": "3e8611021478aaa69890904253b3ed694dcce752879550e6ec655447bb8d8256",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/c025692589f8dde92a6ecbceeeb3fd66a6c3855130c159901d9e8cb914559abc/result.json": "94791a32ceb36e5c52a41eaeab771b5bf71688c62f5c13a611e162941d377a82",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/c24c3a30aceb377512c85875c7895f3c7b6f748d251545c4624aec3f7bffd068/request.json": "46a943d163bc8820a575b07d0b8e576304fe43eb727e6f1b872ca3addbde279e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/c24c3a30aceb377512c85875c7895f3c7b6f748d251545c4624aec3f7bffd068/result.json": "367b469216fd13d55ad310326e7feab3e6aea7c2572d470dd070599e2460f1c8",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/d245d826455cc47d7ff9b0a830fe0dff24e753d528362c813d55da0aa86f616a/request.json": "3f4d7ef82cdeb06e7e1e4f4220e748b2fa0526a8ebce62f636f418f1c979652b",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/d245d826455cc47d7ff9b0a830fe0dff24e753d528362c813d55da0aa86f616a/result.json": "d0ec520a8da0eb81dafed03ac6f4e62c5cbc4ac1cc3d829186c173a9d8c99d46",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/d2a645ec610beb0d2ee91eb2b4a5a8437dc59f1320c12fc91478b6ae93b651f2/request.json": "ddf7884b18e3c67464602e39f5792aa7889ba38075a742503fcd866c6af5e3ea",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/d2a645ec610beb0d2ee91eb2b4a5a8437dc59f1320c12fc91478b6ae93b651f2/result.json": "de3cdb2e986b3fe539d3d2692c6b4e63e6cde8bd5e8a633018e24b93ccff5381",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/e6b3974f13abd87ca9f672a18d0c4f26a1d45a5a013059f8d094ea3e9713ba9c/request.json": "d893b4819edb57871b00be4c0f1a8201bd4c10eda66bd6da15188c860e8610f8",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/e6b3974f13abd87ca9f672a18d0c4f26a1d45a5a013059f8d094ea3e9713ba9c/result.json": "bde751ec6b651b7fad14cfa476ed44094adb5a164497a612f2c1dfd0f8dfc25e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/e8f7b1ef0382a6cf0c0caae1813dde4334c6bcedc4cc76e62c78d4370019c7b7/request.json": "caf5b4f40320b98def399eca309e5b8d74428f5dfc99ae67aca8cecd7750946e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/e8f7b1ef0382a6cf0c0caae1813dde4334c6bcedc4cc76e62c78d4370019c7b7/result.json": "ecbb7d84a8b357b3507df78d3654fbb586bdc6eb8745359c7958972cde622804",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/e9394a5de82acdcd9cc6ca734e1c9eb6c15020a56260c64470d3dc4ba03d1cae/request.json": "6b5e7282e469895048391d4b0bf1e643f56d700ce48d93af0ca58622361e8201",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/e9394a5de82acdcd9cc6ca734e1c9eb6c15020a56260c64470d3dc4ba03d1cae/result.json": "18273cf627af7f1daec24c7b43dd39c29efb7fe7f794c754924bdff4dd73dbea",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/ee0396646511f56caf9a90af1ee2d180b7c38fc2fb4531d729aca82e3834b184/request.json": "2c1c0a4ee442f092b5e10f66aac0d2fc2acb22cc5c8b0f0644c387b0ee0eddad",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/ee0396646511f56caf9a90af1ee2d180b7c38fc2fb4531d729aca82e3834b184/result.json": "025d2778d3deb1fd04cb879ab0e91d4f82b6e5b47c0051ecc27a35000b1cdadd",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/ef0b422e78d8c3446cb67a54a2cb39d6368b18dd5da084573b2f51ae592ae9a0/request.json": "b833bb651f1849e253e7d87ad78883b4a4f9ff967d265ac81e41efb7e466e986",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/ef0b422e78d8c3446cb67a54a2cb39d6368b18dd5da084573b2f51ae592ae9a0/result.json": "6dd34a17a6e416c14ec3103178fdf0fdb14c8183c74d578fb6e453a5c732eeb9",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/f0a0f452d79f94f698e6612f6132da20cab695925cd8946840b6cc6ec7236181/request.json": "dcf95a0fdc38c070ec37847e331c651d3fe693e4600244b2e9f1ef9df72d2e01",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/f0a0f452d79f94f698e6612f6132da20cab695925cd8946840b6cc6ec7236181/result.json": "05a7b6dd20b48b72fc49b9940341cfa90b92d614da74728369beadbf065eabea",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/ff61e9e8b9b9a7c44c9921786f2ef19d8ed573d6eb662bda9369173359fdcca6/request.json": "fe76cbaefdf4a1682e97aa0b8d1263154362c2c3d3d14371ae5bb164bb409f74",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/attempts/ff61e9e8b9b9a7c44c9921786f2ef19d8ed573d6eb662bda9369173359fdcca6/result.json": "6c3c4f309ad08a5cbfcd9012089b2f3e1f693e8a173a7097fa6368fce6215b2e",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/observations.jsonl": "976072e889105de75084b34ed2d74d5a0a5c29ba2ace8a8a532b48e16b305d09",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/report.json": "088eae16db7dba1888e3893f1b9759315fb0e3e4b62ca8c3b72688e7c8a7240f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/v2/run.json": "08c38bfaaed01f884c65c53e6efd8e00a6167d533f540c8ccdd8f34cf6af215f",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/views/preparation.json": "dbb26b6a5c114c89ae44bc611e3809a361dc31b58882346e8913b16998730419",
+    "visual-quality/data/prompt-calibration-2026-10-18/b/views/views.jsonl": "c5fad4a977c695bf942e1d323523bdb892652e2233120fc4f4e1e31f42a6baf4",
+    "visual-quality/data/prompt-calibration-a-50-v1/dataset.json": "4d0540d52f52bd205a28030796a051d314420f91b1c7a56793803bd21a453149",
+    "visual-quality/data/prompt-calibration-a-50-v1/train.jsonl": "be168aaad0ee03ba1dbeaa3f48a726c3d07c1abae982d047d6a8776af11d4e9c",
+    "visual-quality/data/prompt-calibration-b-50-v1/dataset.json": "a41cfe58f607e245dedfe993199e8b14ef8513a5206b969f23021a9eb9a6e3bc",
+    "visual-quality/data/prompt-calibration-b-50-v1/train.jsonl": "bbf6724801a1e4949a7d02b8242a9f39cfaff528019682570658e702d2709a42",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/audits/a.jsonl": "d7fe52943ff2a078df4cb26dffa369ed00651606d315483f9e89c9f5bab5b61d",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/audits/b.jsonl": "fac633c59332f6a48b4fb369088ceb6ee5db66c925ff7b27222cba47717b95da",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/manifest.json": "db722f220bcd575de50d761c7afd871d1996b69223b5a903626bf415508cd75e",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/prompt-revision.json": "f2d1b8dc2e9ef5dbe608fb402ee55730b57c146ff82a86ae1d7c4d0f29c84d82",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/protocol.md": "3165f6f6eed21d43b2a8b5b9c6025ef8f34a792f6a5c69af2e839839c77e5645",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/a-freeze.json": "ab46cc0c06ef80e35b33c4dae19974de24e0f1506399bd7f0b4073847a745221",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/a-review-1.json": "b4042db947b287d41ec667e5130c5423a9dafee2bd5c5f934a2a36879f94c980",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/a-review-2.json": "5acb8eaed7c14b97e36c7febbe6d22ddc329b572982e09a3f0a28095ffc60ba7",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/a-review-3.json": "a67646f58898fdd5f7293dd9cbfb873b57b6de6fdcb24c6f8822c0a2cdc2a5a1",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/a-review-4.json": "aebab850d476586bb4cecb751238981a39f88f92bfb1177926ed6d4b9bfb01a7",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/a-review-5.json": "908e2770425db785ac8cc9ec3b99433d5679d30b9bd69e8a3eacf4c9e5abd0f3",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/a.jsonl": "3a14413dc718dc468cd3d544d27bfbe57af9194173cc16057928e02ef689aab6",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/b-freeze.json": "8905db3d4a350c766c0b7ccf8cde7991c2f7fe7468981fedae6f6322929bbf64",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/b-review-1.json": "498c14664f513e6b6f8986d4d5dff36a1f39a582fbdc1873364a7649b3640def",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/b-review-2.json": "58b529ce139fe153d0edbfaa66742cbac93c9154502367d286ef3ecb6d33a6b9",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/b-review-3.json": "ad4da5f0515afe13c48a349d3e88bc56c7714c3d1e1c0e0271af6d407a2f13f7",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/b-review-4.json": "b837660cdc73eaabec52500617fb4fb808f30883147d93d14f5060a3531773e1",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/b-review-5.json": "45b5e894f8dde706d38fcdc180b1ff93ae12c40df0ebc42093ccd954cd5521b1",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/references/b.jsonl": "73d85956e10d5e83d46e4592bf438a32a133ef1f414617f64c7b3c1389d4048e",
+    "visual-quality/experiments/prompt-calibration-2026-10-18/report.py": "3c99ebbbdb50783e06f677d4e69df1da7fb6cc2c20c7e2ff5279ab4f3a056145",
+    "visual-quality/prompts/visual-rating-v1/prompt-version.json": null,
+    "visual-quality/prompts/visual-rating-v1/response.schema.json": "6887bb89e24c2ac8f2a644bce1fea93ac0f88bdcf51c6826d51b6c74b697d691",
+    "visual-quality/prompts/visual-rating-v1/system.txt": "f95bf047900bb615f9d906709a46a77b64b851e771382a433d80c77877926959",
+    "visual-quality/prompts/visual-rating-v1/technical-quality.txt": "0dca7a228fa5b6b5054723d7a3c40d7a6f2134a0b1f0222db168762c2860cf2e",
+    "visual-quality/prompts/visual-rating-v2/prompt-version.json": "95e08d8dec78e3ec9ca14a3beebdf04d945224cff208a97765708559333c64f6",
+    "visual-quality/prompts/visual-rating-v2/response.schema.json": "6887bb89e24c2ac8f2a644bce1fea93ac0f88bdcf51c6826d51b6c74b697d691",
+    "visual-quality/prompts/visual-rating-v2/system.txt": "f95bf047900bb615f9d906709a46a77b64b851e771382a433d80c77877926959",
+    "visual-quality/prompts/visual-rating-v2/technical-quality.txt": "af89a8d7277494e1b2f2a3222565ef8c74af86b880461f36b6bf622215d351c1"
+  },
+  "limitations": [
+    "Assistant intervals are subjective ranges, not human MOS or confidence intervals.",
+    "Bootstrap uncertainty applies to this panel and its assistant references.",
+    "Severity ordering is diagnostic; stored severity is not measured perceptual quality.",
+    "Parent and variant preprocessing paths differ; parent comparisons are separate."
+  ],
+  "method": {
+    "bootstrap": "paired whole-family resampling within source strata; percentile interval",
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20261018,
+    "bootstrap_zero_endpoint_tolerance": 1e-12,
+    "distance": "max(L - score, 0, score - U)",
+    "effect": "v1_distance - v2_distance",
+    "inclusive_threshold_float_tolerance": 1e-12,
+    "maximum_stratum_worsening": 0.1,
+    "minimum_mean_improvement": 0.15,
+    "numpy_version": "2.5.3",
+    "percentile_method": "NumPy quantile linear at 0.025 and 0.975",
+    "planned_stratum_image_weights": {
+      "controlled": 0.48,
+      "standalone_megalith": 0.24,
+      "vizwiz": 0.28
+    },
+    "random_generator": "NumPy default_rng PCG64"
+  },
+  "prompt_revision": {
+    "frozen_at": "2026-10-18T16:49:13.100144+00:00",
+    "prompt_sha256": "cfe7313a8e4d011c7087c621dbbf60f9c5f663d50ce13cf27ffed129e9ab2233",
+    "status": "verified"
+  },
+  "reference_kind": "assistant_point_judgments_and_plausible_intervals",
+  "report_script_sha256": "3c99ebbbdb50783e06f677d4e69df1da7fb6cc2c20c7e2ff5279ab4f3a056145",
+  "review_status": "pending_human_validation",
+  "runs": {
+    "a/v1": {
+      "attempted": 50,
+      "known_cost_usd": "0.004938700",
+      "model_histogram": {
+        "deepseek/deepseek-v4.1-flash-1017": 50
+      },
+      "prompt_sha256": "1eb3ba4333b6651fa5ecaceb2305c9f28cc4516e851683e9de0caa871a9f1858",
+      "prompt_version": "visual-rating-v1",
+      "provider_histogram": {
+        "Relace": 50
+      },
+      "provider_histogram_basis": "verified observations; failed and missing outputs are excluded",
+      "scored": 50,
+      "selected": 50,
+      "settings": {
+        "max_tokens": 1024,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": {
+          "allow_fallbacks": false,
+          "max_price": {
+            "completion": 1.2,
+            "image": 0,
+            "prompt": 0.3,
+            "request": 0
+          },
+          "require_parameters": true
+        },
+        "reasoning": {
+          "enabled": false
+        },
+        "stream": false,
+        "temperature": 0
+      },
+      "status": "complete",
+      "total_cost_usd": "0.004938700",
+      "unpriced_attempts": 0,
+      "valid_observations": 50,
+      "verification": {
+        "note": "Artifact integrity only; human agreement has not been measured",
+        "observations": 50,
+        "status": "verified",
+        "training_ready": false
+      }
+    },
+    "b/v1": {
+      "attempted": 50,
+      "known_cost_usd": "0.005064500",
+      "model_histogram": {
+        "deepseek/deepseek-v4.1-flash-1017": 50
+      },
+      "prompt_sha256": "1eb3ba4333b6651fa5ecaceb2305c9f28cc4516e851683e9de0caa871a9f1858",
+      "prompt_version": "visual-rating-v1",
+      "provider_histogram": {
+        "Relace": 50
+      },
+      "provider_histogram_basis": "verified observations; failed and missing outputs are excluded",
+      "scored": 50,
+      "selected": 50,
+      "settings": {
+        "max_tokens": 1024,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": {
+          "allow_fallbacks": false,
+          "max_price": {
+            "completion": 1.2,
+            "image": 0,
+            "prompt": 0.3,
+            "request": 0
+          },
+          "require_parameters": true
+        },
+        "reasoning": {
+          "enabled": false
+        },
+        "stream": false,
+        "temperature": 0
+      },
+      "status": "complete",
+      "total_cost_usd": "0.005064500",
+      "unpriced_attempts": 0,
+      "valid_observations": 50,
+      "verification": {
+        "note": "Artifact integrity only; human agreement has not been measured",
+        "observations": 50,
+        "status": "verified",
+        "training_ready": false
+      }
+    },
+    "b/v2": {
+      "attempted": 50,
+      "known_cost_usd": "0.005138256",
+      "model_histogram": {
+        "deepseek/deepseek-v4.1-flash-1017": 50
+      },
+      "prompt_sha256": "cfe7313a8e4d011c7087c621dbbf60f9c5f663d50ce13cf27ffed129e9ab2233",
+      "prompt_version": "visual-rating-v2",
+      "provider_histogram": {
+        "Relace": 50
+      },
+      "provider_histogram_basis": "verified observations; failed and missing outputs are excluded",
+      "scored": 50,
+      "selected": 50,
+      "settings": {
+        "max_tokens": 1024,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": {
+          "allow_fallbacks": false,
+          "max_price": {
+            "completion": 1.2,
+            "image": 0,
+            "prompt": 0.3,
+            "request": 0
+          },
+          "require_parameters": true
+        },
+        "reasoning": {
+          "enabled": false
+        },
+        "stream": false,
+        "temperature": 0
+      },
+      "status": "complete",
+      "total_cost_usd": "0.005138256",
+      "unpriced_attempts": 0,
+      "valid_observations": 50,
+      "verification": {
+        "note": "Artifact integrity only; human agreement has not been measured",
+        "observations": 50,
+        "status": "verified",
+        "training_ready": false
+      }
+    }
+  },
+  "schema_version": "prompt-calibration-report-v1",
+  "stages": {
+    "a": {
+      "arms": {
+        "v1": {
+          "critical_case_ids": [],
+          "evidence_review": {
+            "assessed": 47,
+            "issues": {
+              "exaggerated_blur": 9,
+              "noise_misattribution": 7,
+              "omitted_exposure": 4,
+              "omitted_obstruction": 2,
+              "other": 3,
+              "unsupported_compression": 17,
+              "unsupported_repetition": 8
+            },
+            "supported": 16,
+            "unsupported": 31
+          },
+          "interval_hit_rate": 0.18,
+          "large_interval_error_count": 11,
+          "large_interval_error_rate": 0.22,
+          "mae_from_assistant_point": 0.8,
+          "mean_interval_distance": 0.5459999999999999,
+          "mean_reference_interval_width": 0.528,
+          "ordering_diagnostic": {
+            "parent_to_variant": {
+              "counts": {
+                "nonincreasing": 12,
+                "tie": 4,
+                "violation": 2
+              },
+              "edges": [
+                {
+                  "from": "A01",
+                  "operator": "gaussian_blur",
+                  "outcome": "tie",
+                  "to": "A02"
+                },
+                {
+                  "from": "A01",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "A03"
+                },
+                {
+                  "from": "A01",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "A04"
+                },
+                {
+                  "from": "A05",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "A06"
+                },
+                {
+                  "from": "A05",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "A07"
+                },
+                {
+                  "from": "A05",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "A08"
+                },
+                {
+                  "from": "A09",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "A10"
+                },
+                {
+                  "from": "A09",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "A11"
+                },
+                {
+                  "from": "A09",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "A12"
+                },
+                {
+                  "from": "A13",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "A14"
+                },
+                {
+                  "from": "A13",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "A15"
+                },
+                {
+                  "from": "A13",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "A16"
+                },
+                {
+                  "from": "A17",
+                  "operator": "jpeg_compression",
+                  "outcome": "violation",
+                  "to": "A18"
+                },
+                {
+                  "from": "A17",
+                  "operator": "jpeg_compression",
+                  "outcome": "violation",
+                  "to": "A19"
+                },
+                {
+                  "from": "A17",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "A20"
+                },
+                {
+                  "from": "A21",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "A22"
+                },
+                {
+                  "from": "A21",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "A23"
+                },
+                {
+                  "from": "A21",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "A24"
+                }
+              ]
+            },
+            "severity_adjacent": {
+              "counts": {
+                "nonincreasing": 7,
+                "tie": 5
+              },
+              "edges": [
+                {
+                  "from": "A02",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "A03"
+                },
+                {
+                  "from": "A03",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "A04"
+                },
+                {
+                  "from": "A06",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "A07"
+                },
+                {
+                  "from": "A07",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "A08"
+                },
+                {
+                  "from": "A10",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "A11"
+                },
+                {
+                  "from": "A11",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "A12"
+                },
+                {
+                  "from": "A14",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "A15"
+                },
+                {
+                  "from": "A15",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "A16"
+                },
+                {
+                  "from": "A18",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "A19"
+                },
+                {
+                  "from": "A19",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "A20"
+                },
+                {
+                  "from": "A22",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "A23"
+                },
+                {
+                  "from": "A23",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "A24"
+                }
+              ]
+            }
+          },
+          "planned": 50,
+          "scorable_outputs": 50,
+          "valid_reference_comparisons": 50
+        }
+      },
+      "audit_case_count": 50,
+      "reference_count": 50,
+      "reference_freeze": {
+        "frozen_at": "2026-10-18T16:44:18.444751+00:00",
+        "source_files": 5,
+        "status": "verified"
+      }
+    },
+    "b": {
+      "arms": {
+        "v1": {
+          "critical_case_ids": [],
+          "evidence_review": {
+            "assessed": 48,
+            "issues": {
+              "exaggerated_blur": 5,
+              "noise_misattribution": 9,
+              "omitted_exposure": 8,
+              "omitted_obstruction": 3,
+              "other": 2,
+              "unsupported_compression": 22,
+              "unsupported_repetition": 6
+            },
+            "supported": 14,
+            "unsupported": 34
+          },
+          "interval_hit_rate": 0.32,
+          "large_interval_error_count": 7,
+          "large_interval_error_rate": 0.14,
+          "mae_from_assistant_point": 0.614,
+          "mean_interval_distance": 0.38,
+          "mean_reference_interval_width": 0.5660000000000001,
+          "ordering_diagnostic": {
+            "parent_to_variant": {
+              "counts": {
+                "nonincreasing": 12,
+                "tie": 6
+              },
+              "edges": [
+                {
+                  "from": "B01",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B02"
+                },
+                {
+                  "from": "B01",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B03"
+                },
+                {
+                  "from": "B01",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B04"
+                },
+                {
+                  "from": "B05",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B06"
+                },
+                {
+                  "from": "B05",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B07"
+                },
+                {
+                  "from": "B05",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B08"
+                },
+                {
+                  "from": "B09",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "B10"
+                },
+                {
+                  "from": "B09",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B11"
+                },
+                {
+                  "from": "B09",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B12"
+                },
+                {
+                  "from": "B13",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "B14"
+                },
+                {
+                  "from": "B13",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B15"
+                },
+                {
+                  "from": "B13",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B16"
+                },
+                {
+                  "from": "B17",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "B18"
+                },
+                {
+                  "from": "B17",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "B19"
+                },
+                {
+                  "from": "B17",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B20"
+                },
+                {
+                  "from": "B21",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "B22"
+                },
+                {
+                  "from": "B21",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "B23"
+                },
+                {
+                  "from": "B21",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B24"
+                }
+              ]
+            },
+            "severity_adjacent": {
+              "counts": {
+                "nonincreasing": 8,
+                "tie": 4
+              },
+              "edges": [
+                {
+                  "from": "B02",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B03"
+                },
+                {
+                  "from": "B03",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B04"
+                },
+                {
+                  "from": "B06",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B07"
+                },
+                {
+                  "from": "B07",
+                  "operator": "gaussian_blur",
+                  "outcome": "tie",
+                  "to": "B08"
+                },
+                {
+                  "from": "B10",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B11"
+                },
+                {
+                  "from": "B11",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "B12"
+                },
+                {
+                  "from": "B14",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B15"
+                },
+                {
+                  "from": "B15",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B16"
+                },
+                {
+                  "from": "B18",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "B19"
+                },
+                {
+                  "from": "B19",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B20"
+                },
+                {
+                  "from": "B22",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "B23"
+                },
+                {
+                  "from": "B23",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B24"
+                }
+              ]
+            }
+          },
+          "planned": 50,
+          "scorable_outputs": 50,
+          "valid_reference_comparisons": 50
+        },
+        "v2": {
+          "critical_case_ids": [],
+          "evidence_review": {
+            "assessed": 46,
+            "issues": {
+              "exaggerated_blur": 4,
+              "noise_misattribution": 2,
+              "omitted_exposure": 8,
+              "omitted_obstruction": 2,
+              "other": 5,
+              "unsupported_compression": 3,
+              "unsupported_repetition": 8
+            },
+            "supported": 26,
+            "unsupported": 20
+          },
+          "interval_hit_rate": 0.34,
+          "large_interval_error_count": 8,
+          "large_interval_error_rate": 0.16,
+          "mae_from_assistant_point": 0.616,
+          "mean_interval_distance": 0.374,
+          "mean_reference_interval_width": 0.5660000000000001,
+          "ordering_diagnostic": {
+            "parent_to_variant": {
+              "counts": {
+                "nonincreasing": 14,
+                "tie": 4
+              },
+              "edges": [
+                {
+                  "from": "B01",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B02"
+                },
+                {
+                  "from": "B01",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B03"
+                },
+                {
+                  "from": "B01",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B04"
+                },
+                {
+                  "from": "B05",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B06"
+                },
+                {
+                  "from": "B05",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B07"
+                },
+                {
+                  "from": "B05",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B08"
+                },
+                {
+                  "from": "B09",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "B10"
+                },
+                {
+                  "from": "B09",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "B11"
+                },
+                {
+                  "from": "B09",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B12"
+                },
+                {
+                  "from": "B13",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "B14"
+                },
+                {
+                  "from": "B13",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B15"
+                },
+                {
+                  "from": "B13",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B16"
+                },
+                {
+                  "from": "B17",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B18"
+                },
+                {
+                  "from": "B17",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "B19"
+                },
+                {
+                  "from": "B17",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B20"
+                },
+                {
+                  "from": "B21",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B22"
+                },
+                {
+                  "from": "B21",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B23"
+                },
+                {
+                  "from": "B21",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B24"
+                }
+              ]
+            },
+            "severity_adjacent": {
+              "counts": {
+                "nonincreasing": 9,
+                "tie": 2,
+                "violation": 1
+              },
+              "edges": [
+                {
+                  "from": "B02",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B03"
+                },
+                {
+                  "from": "B03",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B04"
+                },
+                {
+                  "from": "B06",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B07"
+                },
+                {
+                  "from": "B07",
+                  "operator": "gaussian_blur",
+                  "outcome": "nonincreasing",
+                  "to": "B08"
+                },
+                {
+                  "from": "B10",
+                  "operator": "gaussian_noise",
+                  "outcome": "tie",
+                  "to": "B11"
+                },
+                {
+                  "from": "B11",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B12"
+                },
+                {
+                  "from": "B14",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B15"
+                },
+                {
+                  "from": "B15",
+                  "operator": "gaussian_noise",
+                  "outcome": "nonincreasing",
+                  "to": "B16"
+                },
+                {
+                  "from": "B18",
+                  "operator": "jpeg_compression",
+                  "outcome": "violation",
+                  "to": "B19"
+                },
+                {
+                  "from": "B19",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B20"
+                },
+                {
+                  "from": "B22",
+                  "operator": "jpeg_compression",
+                  "outcome": "tie",
+                  "to": "B23"
+                },
+                {
+                  "from": "B23",
+                  "operator": "jpeg_compression",
+                  "outcome": "nonincreasing",
+                  "to": "B24"
+                }
+              ]
+            }
+          },
+          "planned": 50,
+          "scorable_outputs": 50,
+          "valid_reference_comparisons": 50
+        }
+      },
+      "audit_case_count": 50,
+      "paired_comparison": {
+        "decision": "inconclusive",
+        "gates": {
+          "all_50_valid_scorable_pairs": true,
+          "lower_95_percent_bound_above_zero": false,
+          "mean_improvement_at_least_0_15": false,
+          "no_new_critical_contradictions": true,
+          "no_stratum_worsens_more_than_0_10": true
+        },
+        "mean_improvement": 0.005999999999999988,
+        "missing_pair_case_ids": [],
+        "new_critical_case_ids": [],
+        "paired_95_percent_bootstrap_interval": [
+          -0.068,
+          0.08199999999999998
+        ],
+        "partial_estimates_are_diagnostic": false,
+        "planned_pairs": 50,
+        "reason": "The bootstrap interval includes zero",
+        "strata": {
+          "controlled": {
+            "mean_improvement": -0.03333333333333335,
+            "v1_mean_distance": 0.3833333333333333,
+            "v2_mean_distance": 0.4166666666666667,
+            "valid_pairs": 24
+          },
+          "standalone_megalith": {
+            "mean_improvement": 0.04999999999999997,
+            "v1_mean_distance": 0.49166666666666653,
+            "v2_mean_distance": 0.4416666666666666,
+            "valid_pairs": 12
+          },
+          "vizwiz": {
+            "mean_improvement": 0.03571428571428571,
+            "v1_mean_distance": 0.2785714285714286,
+            "v2_mean_distance": 0.24285714285714288,
+            "valid_pairs": 14
+          }
+        },
+        "valid_pairs": 50
+      },
+      "reference_count": 50,
+      "reference_freeze": {
+        "frozen_at": "2026-10-18T16:53:22.217841+00:00",
+        "source_files": 5,
+        "status": "verified"
+      }
+    }
+  },
+  "training_ready": false
+}

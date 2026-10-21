@@ -1,0 +1,119 @@
+{
+  "created_at": "2026-10-18T16:57:59.900314+00:00",
+  "validation_ledger_sha256": "1ba926ccf7998316dceed7283331999cac956809c8a53fc791029cd3cd1137a6",
+  "threshold": 0.78,
+  "scope": "Post-validation descriptive error audit. No exclusion, relabeling, threshold change, or new model call. Visual observations do not prove provenance. The source-real class includes edited/composite images and is not a verified untouched-camera class.",
+  "false_positives": [
+    {
+      "row_id": "validation/mscocoai-0010-real",
+      "source_labels": {
+        "Label_A": 0,
+        "Label_B": 0
+      },
+      "image": "delivered/validation-mscocoai-0010-real.jpg",
+      "delivered_sha256": "ff50413c2b22604412457b65d07f9fc8de027a36113ca909737f1dc507b55408",
+      "native_answers": {
+        "ai_probability": {
+          "type": "noul",
+          "noul": 0.8
+        },
+        "medium": {
+          "type": "choice",
+          "choice": "photo",
+          "probabilities": {
+            "photo": 0.49,
+            "render": 0.15,
+            "graphic": 0.32,
+            "unknown": 0.04
+          },
+          "confidence": 0.32
+        },
+        "uncertainty": {
+          "type": "choice",
+          "choice": "low",
+          "probabilities": {
+            "low": 0.37,
+            "medium": 0.28,
+            "high": 0.35
+          },
+          "confidence": 0.06
+        }
+      },
+      "visual_observation": "Black-and-white sheep scene with colored geometric overlays; visibly edited/composite content."
+    },
+    {
+      "row_id": "validation/mscocoai-0128-real",
+      "source_labels": {
+        "Label_A": 0,
+        "Label_B": 0
+      },
+      "image": "delivered/validation-mscocoai-0128-real.jpg",
+      "delivered_sha256": "09fe2eeaac8e7d5186b0e714e2ed8e7f2f19d5e7a87ba68a20b4c9682df53f16",
+      "native_answers": {
+        "ai_probability": {
+          "type": "noul",
+          "noul": 0.78
+        },
+        "medium": {
+          "type": "choice",
+          "choice": "photo",
+          "probabilities": {
+            "photo": 0.77,
+            "render": 0.2,
+            "graphic": 0,
+            "unknown": 0.03
+          },
+          "confidence": 0.69
+        },
+        "uncertainty": {
+          "type": "choice",
+          "choice": "medium",
+          "probabilities": {
+            "low": 0.3,
+            "medium": 0.42,
+            "high": 0.28
+          },
+          "confidence": 0.13
+        }
+      },
+      "visual_observation": "Church facade and clock photographed from below."
+    },
+    {
+      "row_id": "validation/mscocoai-0380-real",
+      "source_labels": {
+        "Label_A": 0,
+        "Label_B": 0
+      },
+      "image": "delivered/validation-mscocoai-0380-real.jpg",
+      "delivered_sha256": "e7f189092b6ebc3059a94fa827822f076d453de1a81826ce06a987b1e88b6e3a",
+      "native_answers": {
+        "ai_probability": {
+          "type": "noul",
+          "noul": 0.8
+        },
+        "medium": {
+          "type": "choice",
+          "choice": "photo",
+          "probabilities": {
+            "photo": 0.59,
+            "render": 0.38,
+            "graphic": 0,
+            "unknown": 0.03
+          },
+          "confidence": 0.45
+        },
+        "uncertainty": {
+          "type": "choice",
+          "choice": "low",
+          "probabilities": {
+            "low": 0.41,
+            "medium": 0.33,
+            "high": 0.26
+          },
+          "confidence": 0.11
+        }
+      },
+      "visual_observation": "Unfinished interior with exposed services and toilets."
+    }
+  ]
+}

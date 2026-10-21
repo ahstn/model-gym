@@ -1,0 +1,14 @@
+{
+  "stage": "b",
+  "frozen_at": "2026-10-18T16:53:22.217841+00:00",
+  "method": "Five fresh disjoint blinded assistant reference tasks after v2 prompt freeze; references saved before either provider arm was supplied to reviewers or inspected by the prompt reviser.",
+  "source_files_sha256": {
+    "experiments/prompt-calibration-2026-10-18/references/b-review-1.json": "498c14664f513e6b6f8986d4d5dff36a1f39a582fbdc1873364a7649b3640def",
+    "experiments/prompt-calibration-2026-10-18/references/b-review-2.json": "58b529ce139fe153d0edbfaa66742cbac93c9154502367d286ef3ecb6d33a6b9",
+    "experiments/prompt-calibration-2026-10-18/references/b-review-3.json": "ad4da5f0515afe13c48a349d3e88bc56c7714c3d1e1c0e0271af6d407a2f13f7",
+    "experiments/prompt-calibration-2026-10-18/references/b-review-4.json": "b837660cdc73eaabec52500617fb4fb808f30883147d93d14f5060a3531773e1",
+    "experiments/prompt-calibration-2026-10-18/references/b-review-5.json": "45b5e894f8dde706d38fcdc180b1ff93ae12c40df0ebc42093ccd954cd5521b1"
+  },
+  "merged_sha256": "73d85956e10d5e83d46e4592bf438a32a133ef1f414617f64c7b3c1389d4048e",
+  "human_gold": false
+}

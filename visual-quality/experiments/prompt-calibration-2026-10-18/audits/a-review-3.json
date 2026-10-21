@@ -1,0 +1,120 @@
+[
+  {
+    "case_id": "A20",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "other"
+        ],
+        "note": "Large blocks dominate the sky; calling the compression artifacts slight materially understates the visible damage."
+      }
+    }
+  },
+  {
+    "case_id": "A28",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition"
+        ],
+        "note": "Severe blur is visible, but the claimed repeated text cannot be seen."
+      }
+    }
+  },
+  {
+    "case_id": "A01",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "noise_misattribution"
+        ],
+        "note": "No clear compression blocks are visible; the mottled wall is stone texture, and fine carved detail remains well preserved."
+      }
+    }
+  },
+  {
+    "case_id": "A17",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Thin twigs remain well defined, and the sky shows faint grain without the claimed blocky compression texture."
+      }
+    }
+  },
+  {
+    "case_id": "A31",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The frame is nearly black, with only small bright marks visible; extreme loss of scene detail is correctly identified."
+      }
+    }
+  },
+  {
+    "case_id": "A36",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_obstruction"
+        ],
+        "note": "The explanation misses the large foreground obstruction covering over half the frame and much of the bottle."
+      }
+    }
+  },
+  {
+    "case_id": "A25",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Blur and edge smearing are visible on the buttons, stem, and nearby objects; the explanation is broadly reasonable."
+      }
+    }
+  },
+  {
+    "case_id": "A02",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "noise_misattribution"
+        ],
+        "note": "Global blur is correctly identified, but the claimed visible noise appears to be softened stone and panel texture."
+      }
+    }
+  },
+  {
+    "case_id": "A45",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur"
+        ],
+        "note": "Facial features, eyelashes, and hands retain clear detail; heavy smearing and weak edges throughout are not supported."
+      }
+    }
+  },
+  {
+    "case_id": "A15",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "noise_misattribution"
+        ],
+        "note": "Dense colored noise is the dominant defect; the explanation instead attributes detail loss to unsupported compression artifacts."
+      }
+    }
+  }
+]

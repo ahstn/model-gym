@@ -1,0 +1,129 @@
+[
+  {
+    "case_id": "B30",
+    "score": 2.8,
+    "interval": [
+      2.5,
+      3.1
+    ],
+    "evidence": "Visible grain covers the sky, while blur and deep shadows reduce detail in the houses, trees, and parked cars.",
+    "defects": [
+      "blur",
+      "noise",
+      "exposure"
+    ]
+  },
+  {
+    "case_id": "B17",
+    "score": 4.2,
+    "interval": [
+      4.0,
+      4.4
+    ],
+    "evidence": "Faces, hands, and the central tube remain clear, with mild softness in fine hair and fabric detail and slight grain in darker clothing.",
+    "defects": [
+      "blur",
+      "noise"
+    ]
+  },
+  {
+    "case_id": "B48",
+    "score": 3.2,
+    "interval": [
+      2.9,
+      3.5
+    ],
+    "evidence": "Softness reduces detail across the dog's muzzle and fur, with fine noise in darker areas, although both eyes and facial features remain easy to inspect.",
+    "defects": [
+      "blur",
+      "noise"
+    ]
+  },
+  {
+    "case_id": "B06",
+    "score": 2.2,
+    "interval": [
+      2.0,
+      2.5
+    ],
+    "evidence": "Strong blur affects the whole scene, removing facial detail and softening bicycle parts, clothing, and distant structures, although the cyclists remain recognizable.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "B20",
+    "score": 2.7,
+    "interval": [
+      2.4,
+      3.0
+    ],
+    "evidence": "Large compression blocks and broken tonal transitions affect faces, clothing, and the tabletop, removing fine detail while leaving the people and central tube recognizable.",
+    "defects": [
+      "compression"
+    ]
+  },
+  {
+    "case_id": "B50",
+    "score": 4.4,
+    "interval": [
+      4.2,
+      4.7
+    ],
+    "evidence": "Tree canopies, rock faces, and cloud texture remain distinct, with slight softness in fine foliage and useful detail preserved across the shaded slopes.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "B28",
+    "score": 1.8,
+    "interval": [
+      1.5,
+      2.1
+    ],
+    "evidence": "Strong white glare erases a large area of the package, while widespread blur makes its small print difficult to read and dark surroundings lose detail.",
+    "defects": [
+      "exposure",
+      "blur"
+    ]
+  },
+  {
+    "case_id": "B15",
+    "score": 2.4,
+    "interval": [
+      2.1,
+      2.7
+    ],
+    "evidence": "Dense colored noise covers the model and background, while soft edges limit small structures and label detail; the main buildings and underground passages remain recognizable.",
+    "defects": [
+      "noise",
+      "blur"
+    ]
+  },
+  {
+    "case_id": "B41",
+    "score": 4.8,
+    "interval": [
+      4.6,
+      5.0
+    ],
+    "evidence": "Building texture, foliage, vehicles, and large shop signs are clearly resolved, with retained cloud detail and no meaningful visible artifacts at this scale.",
+    "defects": [
+      "none"
+    ]
+  },
+  {
+    "case_id": "B34",
+    "score": 3.1,
+    "interval": [
+      2.8,
+      3.4
+    ],
+    "evidence": "Visible grain covers the blue packaging and soft edges reduce the clarity of printed borders, although the large white letters remain clearly readable.",
+    "defects": [
+      "noise",
+      "blur"
+    ]
+  }
+]

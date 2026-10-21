@@ -1,0 +1,126 @@
+[
+  {
+    "case_id": "A04",
+    "score": 1.2,
+    "interval": [
+      1.0,
+      1.4
+    ],
+    "evidence": "Severe blur covers the entire image, leaving only broad shapes while removing the sign lettering and almost all door detail.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A11",
+    "score": 2.5,
+    "interval": [
+      2.2,
+      2.9
+    ],
+    "evidence": "Dense colored noise covers the sky and sea, reducing fine cloud and wave detail even though the sun, horizon, and main cloud shapes remain clear.",
+    "defects": [
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A26",
+    "score": 2.1,
+    "interval": [
+      1.8,
+      2.4
+    ],
+    "evidence": "Strong blur smears the patterned box, tissues, and table edges, while visible grain further reduces fine surface detail.",
+    "defects": [
+      "blur",
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A05",
+    "score": 4.0,
+    "interval": [
+      3.8,
+      4.3
+    ],
+    "evidence": "Both language blocks remain sharp and readable, although fine colored grain is visible across the sign and surrounding wall.",
+    "defects": [
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A14",
+    "score": 3.8,
+    "interval": [
+      3.5,
+      4.1
+    ],
+    "evidence": "The dome, windows, and stonework remain inspectable, but visible grain across the sky and buildings reduces the clarity of finer architectural detail.",
+    "defects": [
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A27",
+    "score": 2.0,
+    "interval": [
+      1.7,
+      2.3
+    ],
+    "evidence": "Strong blur and coarse grain smear object edges, fabric detail, and package text, with repeated light traces showing substantial motion blur.",
+    "defects": [
+      "blur",
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A50",
+    "score": 4.5,
+    "interval": [
+      4.2,
+      4.8
+    ],
+    "evidence": "Stonework, tree bark, and foliage retain clear detail, with slight colored fringes around some branches against the bright sky.",
+    "defects": [
+      "other"
+    ]
+  },
+  {
+    "case_id": "A12",
+    "score": 1.9,
+    "interval": [
+      1.6,
+      2.2
+    ],
+    "evidence": "Intense colored noise dominates the whole image and masks much of the sea texture and fine cloud detail, although the sun and horizon remain identifiable.",
+    "defects": [
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A18",
+    "score": 4.7,
+    "interval": [
+      4.4,
+      5.0
+    ],
+    "evidence": "Fine branch outlines and cloud structure remain clear against a smooth sky, without meaningful visible blur, noise, or exposure damage.",
+    "defects": [
+      "none"
+    ]
+  },
+  {
+    "case_id": "A30",
+    "score": 1.7,
+    "interval": [
+      1.4,
+      2.0
+    ],
+    "evidence": "Low exposure, blur, and visible grain obscure the bottle label and surface detail, leaving the bottle shape recognizable but its text unreadable.",
+    "defects": [
+      "exposure",
+      "blur",
+      "noise"
+    ]
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "case_id": "A33",
+    "score": 3.0,
+    "interval": [
+      2.7,
+      3.3
+    ],
+    "evidence": "Soft text edges and visible grain reduce small-print clarity, while glare washes out parts of the instructions and nutrition table; most larger text remains readable.",
+    "defects": [
+      "blur",
+      "noise",
+      "exposure"
+    ]
+  },
+  {
+    "case_id": "A34",
+    "score": 3.2,
+    "interval": [
+      2.9,
+      3.5
+    ],
+    "evidence": "The can and lid remain distinct, but blur softens the foreground label and makes much of its smaller text difficult to read.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A09",
+    "score": 4.4,
+    "interval": [
+      4.1,
+      4.7
+    ],
+    "evidence": "Cloud edges, the horizon, and wave patterns remain clear, with a small flare spot above the sun and dark foreground rocks visible mainly as silhouettes.",
+    "defects": [
+      "other"
+    ]
+  },
+  {
+    "case_id": "A49",
+    "score": 2.5,
+    "interval": [
+      2.2,
+      2.8
+    ],
+    "evidence": "Blur removes fine detail from the musicians and instruments, while bright faces and clothing lose tonal detail; the orchestra remains recognizable.",
+    "defects": [
+      "blur",
+      "exposure"
+    ]
+  },
+  {
+    "case_id": "A40",
+    "score": 4.5,
+    "interval": [
+      4.2,
+      4.8
+    ],
+    "evidence": "Faces, clothing, wheelchair parts, and metal rails remain clearly resolved, with only slight softness in hair and smaller background features.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A22",
+    "score": 4.8,
+    "interval": [
+      4.6,
+      5.0
+    ],
+    "evidence": "Fine branches, leaf clusters, bark, and paving joints remain distinct across the scene, with usable detail in both sunlit areas and most shadows.",
+    "defects": [
+      "none"
+    ]
+  },
+  {
+    "case_id": "A35",
+    "score": 1.1,
+    "interval": [
+      1.0,
+      1.3
+    ],
+    "evidence": "A large soft obstruction covers nearly the entire frame; only a small patch of grass is visible at the lower left, leaving the main scene uninspectable.",
+    "defects": [
+      "obstruction",
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A43",
+    "score": 4.3,
+    "interval": [
+      4.0,
+      4.6
+    ],
+    "evidence": "People, paving, and building details remain clear, although broad bright sky regions have little tonal detail and some fine facial features are slightly soft.",
+    "defects": [
+      "exposure",
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A39",
+    "score": 4.9,
+    "interval": [
+      4.7,
+      5.0
+    ],
+    "evidence": "Faces, hair, garment seams, and shoe details remain sharp and clean, with balanced exposure across skin, white clothing, and dark suits.",
+    "defects": [
+      "none"
+    ]
+  },
+  {
+    "case_id": "A19",
+    "score": 3.7,
+    "interval": [
+      3.4,
+      4.0
+    ],
+    "evidence": "Branches remain well defined, but blocky tonal patches and coarse texture affect the sky and cloud band, reducing smooth detail across much of the image.",
+    "defects": [
+      "compression"
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "stage": "b",
+  "frozen_at": "2026-10-18T16:58:40.750862+00:00",
+  "source_files_sha256": {
+    "experiments/prompt-calibration-2026-10-18/audits/b-review-1.json": "f63142eac5363d9577e64c0ad8cf9ca0a24922d23fb4f4560c932f0491b5e3ad",
+    "experiments/prompt-calibration-2026-10-18/audits/b-review-2.json": "a9524209c5a78f978645420786dbd8284ab3db8c4769a1c2d3a705102707da0a",
+    "experiments/prompt-calibration-2026-10-18/audits/b-review-3.json": "45ed11cad6f1e89b453965771379271444db7749adaddd88767d6cf4197c72df",
+    "experiments/prompt-calibration-2026-10-18/audits/b-review-4.json": "aac289ef93b645a5553e05feb09cdff141307d5bd8cde6db13a85d0a530975e1",
+    "experiments/prompt-calibration-2026-10-18/audits/b-review-5.json": "a6d3fd343e59974b956f2c77b42a7f86f8ff4c5118e8a58feddf3815edd01cf5"
+  },
+  "blinding_map_sha256": "58962c2079a6b933c19311503f7dc0fbe9a926b83c5c06928e7a7e18ae0eb32f",
+  "merged_sha256": "fac633c59332f6a48b4fb369088ceb6ee5db66c925ff7b27222cba47717b95da",
+  "method": "Map each fixed X/Y judgment to v1/v2 with the predeclared per-case assignment; no judgment changes."
+}

@@ -1,0 +1,191 @@
+[
+  {
+    "case_id": "B49",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "The sculpture is detailed and the background is softer, but clear compression artifacts are not visible."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Clear subject detail with slight softness in surrounding areas is a reasonable description; the score difference is not an evidence error."
+      }
+    }
+  },
+  {
+    "case_id": "B19",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Faces remain clear with mild softness and grain; the image does not show the claimed heavy compression or blocky background damage."
+      },
+      "Y": {
+        "evidence_supported": null,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "The softness is visible, but mild compression cannot be distinguished confidently from general softness and processing at this viewing scale."
+      }
+    }
+  },
+  {
+    "case_id": "B27",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [
+          "omitted_exposure"
+        ],
+        "note": "Strong blur supports the explanation, but bright clipping on the white bottle also removes substantial label detail and is omitted."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "omitted_exposure"
+        ],
+        "note": "Strong blur is visible, but widespread compression artifacts are not established; the explanation also misses the washed-out white bottle."
+      }
+    }
+  },
+  {
+    "case_id": "B32",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur"
+        ],
+        "note": "The label is soft, but several nutrition entries and barcode digits remain readable; describing most fine print as heavily blurred overstates the loss."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur"
+        ],
+        "note": "Wood grain remains distinct, and much of the label and barcode is inspectable; widespread heavy smearing and illegibility are overstated."
+      }
+    }
+  },
+  {
+    "case_id": "B39",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "noise_misattribution"
+        ],
+        "note": "The flower is strongly out of focus; grain and mottling are not the main visible cause of lost detail."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Strong blur removes fine detail from the center and petals while the flower shape and colors remain clear."
+      }
+    }
+  },
+  {
+    "case_id": "B45",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "exaggerated_blur",
+          "omitted_obstruction"
+        ],
+        "note": "There is no repeated text pattern; hair and facial features are detailed, while a blurred foreground head covers part of the lower torso."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "omitted_obstruction"
+        ],
+        "note": "The portrait has a small text mark, not repeated text; the explanation also omits the foreground object covering the lower torso."
+      }
+    }
+  },
+  {
+    "case_id": "B24",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [
+          "other"
+        ],
+        "note": "The loss of fine detail and smeared textures are supported, but the explanation does not identify the dominant block artifacts."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Strong block artifacts and broken fine textures are visible across the market scene, while the overall layout remains understandable."
+      }
+    }
+  },
+  {
+    "case_id": "B22",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "noise_misattribution",
+          "exaggerated_blur"
+        ],
+        "note": "Light grain is visible, but produce textures, price cards, and stall edges remain clear; heavy grain and widespread smearing overstate the defects."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur"
+        ],
+        "note": "The image retains distinct produce textures, edges, and several readable price cards; heavy blur that erases fine detail is not visible."
+      }
+    }
+  },
+  {
+    "case_id": "B31",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "noise_misattribution",
+          "omitted_exposure"
+        ],
+        "note": "Poor visibility and low contrast are clear, but a bright veil and glare dominate; heavy noise is not the main visible defect."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "omitted_exposure"
+        ],
+        "note": "The scene has faint equipment outlines and strong reflected glare, without a clear repeated text pattern; the bright veil is omitted."
+      }
+    }
+  },
+  {
+    "case_id": "B01",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "The scene retains clear grass, foliage, and structural detail; visible compression artifacts are not established by the image."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Slight softness in small distant detail is reasonable at this scale; the lower score alone does not make the explanation unsupported."
+      }
+    }
+  }
+]

@@ -1,0 +1,176 @@
+[
+  {
+    "case_id": "B37",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Blur, grain, reduced menu contrast, and washed-out background highlights are visible; the text remains broadly legible."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Soft small print, visible noise, and reduced contrast are supported; the calendar layout remains easy to identify."
+      }
+    }
+  },
+  {
+    "case_id": "B18",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur"
+        ],
+        "note": "There is mild fine-detail softness, but faces remain clear and the classroom background is not heavily blurred."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition"
+        ],
+        "note": "No tiling or duplicated-image artifact is visible; repeated chairs and floor patterns are ordinary scene content."
+      }
+    }
+  },
+  {
+    "case_id": "B26",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "omitted_exposure"
+        ],
+        "note": "Severe softness is supported, but repeated text cannot be verified; substantial bright-area detail loss is also omitted."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "unsupported_repetition",
+          "omitted_exposure"
+        ],
+        "note": "Blur and lost detail are clear, but repeated text and compression artifacts are not established; strong glare and clipped bright areas are omitted."
+      }
+    }
+  },
+  {
+    "case_id": "B21",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Fine grain and some small-detail softness are visible, while produce, signs, and the market scene remain inspectable."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Grain, some softness, and very bright awning areas are visible; heavy overstates the grain somewhat, but the cited defects are present."
+      }
+    }
+  },
+  {
+    "case_id": "B33",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_exposure"
+        ],
+        "note": "Heavy blur and noise are supported, but the large clipped lower region is a substantial defect that the explanation omits."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_exposure"
+        ],
+        "note": "Diffuse edges and lost detail are supported, but the explanation omits the large bright region with almost no retained detail."
+      }
+    }
+  },
+  {
+    "case_id": "B11",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "noise_misattribution"
+        ],
+        "note": "Dense colored noise covers the whole frame and is the dominant defect; the claimed visible compression is not established."
+      },
+      "Y": {
+        "evidence_supported": null,
+        "issues": [],
+        "note": "Grain and softness are supported, but compression-like texture is uncertain; the visible noise also affects the player and ground."
+      }
+    }
+  },
+  {
+    "case_id": "B36",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_obstruction"
+        ],
+        "note": "Noise and softness are present, but the broad dark obstruction across the right and lower frame is the dominant omitted defect."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The explanation correctly identifies dark blurred foreground that obscures detail; this obstruction also extends through the right side."
+      }
+    }
+  },
+  {
+    "case_id": "B43",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Good exposure and clear detail are supported, but no definite compression artifact is visible in the wood grain or text edges."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Legible sign text and well-resolved wood and wall textures are supported; any softness or grain is minor."
+      }
+    }
+  },
+  {
+    "case_id": "B38",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "other"
+        ],
+        "note": "Text and slight grain are visible, but tonal banding is not established; circular tonal regions near the hub follow the disc structure."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Small print has slight softness and faint grain; most lettering remains clear, so the description should not imply extensive damage."
+      }
+    }
+  },
+  {
+    "case_id": "B42",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Mural linework remains visible with softened fine detail and faint granular texture; the broad description is supported."
+      },
+      "Y": {
+        "evidence_supported": null,
+        "issues": [],
+        "note": "Softened detail and weak mural contrast are visible, but compression cannot be separated confidently from other processing at this scale."
+      }
+    }
+  }
+]

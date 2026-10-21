@@ -1,0 +1,34 @@
+{
+  "verified_at": "2026-10-18T16:58:23.680509+00:00",
+  "tests": {
+    "passed": 38,
+    "command": "PYTHONDONTWRITEBYTECODE=1 visual-quality/.venv/bin/python -m pytest -q visual-quality/experiments/jev14-calibration-2026-10-18",
+    "ruff_check": "passed",
+    "ruff_format_check": "11 files already formatted"
+  },
+  "inference": {
+    "completed_valid": 1600,
+    "unresolved": 0,
+    "unpriced": 0,
+    "pending_intents": 0,
+    "cost_usd": 0.11086639200000001
+  },
+  "frozen_code_and_source_hashes": "unchanged after inference",
+  "independent_review": "Recomputed source labels and all native image matches, request hashes, model revisions, selected rule, confusion counts, confidence bounds, cost, and per-generator results. No actionable discrepancy found.",
+  "validation_gate_passed": false,
+  "evidence_sha256": {
+    "protocol.json": "343793d47fbfb7c289c623bd494c4fc8081c3d9bd8c7a17cfdc24697fd85b392",
+    "manifest.json": "2644f9f0500caeeeb11dd640035738ee021953ab3871e617ed0e3bf52b9c290c",
+    "selection.json": "b0a579ac7a95700004abf5983aa90f645fa9d8ba34a5e19ff8ce049f36818fc7",
+    "selection-lock.json": "29384a27d7c4c6abe53adce9df20639c08452bc9cf6737d63a0ba02a9ae01046",
+    "results/summary.json": "cfe0847bc315ff2556d99517d4502dfee4ed8179fd078cb40b4351c2ccd2486d",
+    "results/cases.csv": "1bb69fd7c2018a4864c33e14e45241120ddf92821fbd0edd9c2633ee808ac679",
+    "results/calibration-curve.svg": "d9033794cc92a82a6668b183a05793d74b85546c761c60cb74c761b84f6733a1",
+    "false-positive-audit.json": "39cd14cbbd80620da4bf2244412d04a2d185d15c8690678f42aec2a3401c29eb",
+    "calibration-tradeoffs.json": "a09087349a7669560a5672bd21fe0b986762c96c3f68fb3e4b0f1d635db0fb73"
+  },
+  "raw_ledger_sha256": {
+    "calibration": "5b0e3ccce8f00721734b37bfcf47e6608c0d28a15db92e51b7e7e43478ccbc9b",
+    "validation": "1ba926ccf7998316dceed7283331999cac956809c8a53fc791029cd3cd1137a6"
+  }
+}

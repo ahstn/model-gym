@@ -1,0 +1,118 @@
+[
+  {
+    "case_id": "A33",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Soft text edges and reduced contrast are visible; the explanation reasonably describes the loss of small-print clarity."
+      }
+    }
+  },
+  {
+    "case_id": "A34",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur"
+        ],
+        "note": "The label is soft, but larger words remain readable and the can edges are distinct; the claim that text and edges are unreadable is too broad."
+      }
+    }
+  },
+  {
+    "case_id": "A09",
+    "judgments": {
+      "v1": {
+        "evidence_supported": null,
+        "issues": [],
+        "note": "The water is dark, but claimed mild cloud banding cannot be separated confidently from natural cloud layers at this scale."
+      }
+    }
+  },
+  {
+    "case_id": "A49",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_exposure",
+          "other"
+        ],
+        "note": "The performers are brightly lit, with washed-out faces and strong blur; the explanation instead calls them dim and focuses on shadow noise."
+      }
+    }
+  },
+  {
+    "case_id": "A40",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "exaggerated_blur"
+        ],
+        "note": "Faces and wheelchair parts remain clear; no repeated tiles or broken textures dominate the image."
+      }
+    }
+  },
+  {
+    "case_id": "A22",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "exaggerated_blur"
+        ],
+        "note": "Fine foliage and branch detail remain largely resolved; the claimed blockiness and widespread smearing are not visible."
+      }
+    }
+  },
+  {
+    "case_id": "A35",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_obstruction"
+        ],
+        "note": "A large soft obstruction covers almost the entire frame; describing a smoothed beige field omits the dominant blockage of scene content."
+      }
+    }
+  },
+  {
+    "case_id": "A43",
+    "judgments": {
+      "v1": {
+        "evidence_supported": null,
+        "issues": [],
+        "note": "Mild softness is plausible, but the claimed compression artifacts in windows and signage cannot be verified at this viewing scale."
+      }
+    }
+  },
+  {
+    "case_id": "A39",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "unsupported_repetition"
+        ],
+        "note": "Faces and clothing are clear, with no evident text ghosting; the repeated sponsor marks belong to the backdrop, and visible compression is not established."
+      }
+    }
+  },
+  {
+    "case_id": "A19",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The sky shows coarse tonal patches and texture while branch forms remain clear; the stated mild loss of detail is reasonable."
+      }
+    }
+  }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "case_id": "A44",
+    "score": 4.1,
+    "interval": [
+      3.9,
+      4.4
+    ],
+    "evidence": "Building edges, roof tiles, and the church spire remain clear, although slight softness reduces fine detail in distant figures and shop signs.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A23",
+    "score": 4.1,
+    "interval": [
+      3.8,
+      4.4
+    ],
+    "evidence": "Small branches and foliage lose some fine detail, with slight block-like texture around complex edges, while the paths, trunks, and shrubs remain clear.",
+    "defects": [
+      "compression",
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A10",
+    "score": 3.7,
+    "interval": [
+      3.4,
+      4.0
+    ],
+    "evidence": "Fine grain covers the sky and sea, reducing smooth tonal detail, while the sun, cloud edges, horizon, and wave shapes remain clear.",
+    "defects": [
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A03",
+    "score": 1.8,
+    "interval": [
+      1.6,
+      2.1
+    ],
+    "evidence": "Strong blur covers the entire image, removing facial details, small carvings, and surface texture, although the main figure and decorative outline remain recognizable.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A42",
+    "score": 3.8,
+    "interval": [
+      3.5,
+      4.0
+    ],
+    "evidence": "Faces, hands, and fine flower details are slightly soft, with visible grain in darker fabric, but the main figures and ceremonial objects remain easy to inspect.",
+    "defects": [
+      "blur",
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A21",
+    "score": 4.7,
+    "interval": [
+      4.5,
+      4.9
+    ],
+    "evidence": "Fine branches, bark, foliage, and path texture remain distinct, with clear tonal separation and no meaningful visible artifacts at this scale.",
+    "defects": [
+      "none"
+    ]
+  },
+  {
+    "case_id": "A41",
+    "score": 4.5,
+    "interval": [
+      4.3,
+      4.8
+    ],
+    "evidence": "Engraved letters and metal texture are clear, while the upper relief band is slightly soft; this has little effect on the main detail.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A08",
+    "score": 1.0,
+    "interval": [
+      1.0,
+      1.2
+    ],
+    "evidence": "Severe blur merges all text into indistinct bands, making the document's important content unreadable.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A13",
+    "score": 4.0,
+    "interval": [
+      3.7,
+      4.2
+    ],
+    "evidence": "The dome, columns, and surrounding buildings remain inspectable, although soft edges reduce small architectural detail and fine texture.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A37",
+    "score": 4.3,
+    "interval": [
+      4.0,
+      4.5
+    ],
+    "evidence": "Cup edges, painted stripes, and cloth texture are clear; mild grain in shaded areas slightly reduces smoothness without hiding important detail.",
+    "defects": [
+      "noise"
+    ]
+  }
+]

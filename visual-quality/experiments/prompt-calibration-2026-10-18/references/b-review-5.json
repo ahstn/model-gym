@@ -1,0 +1,128 @@
+[
+  {
+    "case_id": "B25",
+    "score": 1.8,
+    "interval": [
+      1.5,
+      2.1
+    ],
+    "evidence": "Strong blur and dense noise obscure the bottle label and fine surface detail, although the bottle and surrounding surfaces remain recognizable.",
+    "defects": [
+      "blur",
+      "noise"
+    ]
+  },
+  {
+    "case_id": "B07",
+    "score": 2.0,
+    "interval": [
+      1.7,
+      2.3
+    ],
+    "evidence": "Heavy blur affects the entire scene, removing facial features, clothing text, and bicycle detail while leaving the cyclists recognizable.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "B14",
+    "score": 3.6,
+    "interval": [
+      3.3,
+      3.9
+    ],
+    "evidence": "Visible noise and slight softness reduce small label and model detail, but buildings, tunnels, and figures remain clearly inspectable.",
+    "defects": [
+      "noise",
+      "blur"
+    ]
+  },
+  {
+    "case_id": "B23",
+    "score": 4.1,
+    "interval": [
+      3.8,
+      4.4
+    ],
+    "evidence": "Vegetables, crates, and scales retain useful detail, with slight softness and lost texture in the brightest canopy areas.",
+    "defects": [
+      "blur",
+      "exposure"
+    ]
+  },
+  {
+    "case_id": "B47",
+    "score": 3.5,
+    "interval": [
+      3.2,
+      3.8
+    ],
+    "evidence": "The central players remain identifiable, but softness reduces facial detail and dark exposure limits detail in faces and jerseys.",
+    "defects": [
+      "blur",
+      "exposure"
+    ]
+  },
+  {
+    "case_id": "B44",
+    "score": 2.4,
+    "interval": [
+      2.1,
+      2.7
+    ],
+    "evidence": "Widespread blur and dark exposure reduce facial and clothing detail across the audience, although foreground people remain recognizable.",
+    "defects": [
+      "blur",
+      "exposure"
+    ]
+  },
+  {
+    "case_id": "B40",
+    "score": 4.5,
+    "interval": [
+      4.2,
+      4.8
+    ],
+    "evidence": "Spines, holes, and rough stem surfaces retain clear detail, with only slight softness on parts of the main subject.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "B05",
+    "score": 4.0,
+    "interval": [
+      3.7,
+      4.3
+    ],
+    "evidence": "Faces, clothing text, and bicycle parts remain clear despite mild softness and fine noise in darker surfaces.",
+    "defects": [
+      "blur",
+      "noise"
+    ]
+  },
+  {
+    "case_id": "B02",
+    "score": 2.6,
+    "interval": [
+      2.3,
+      2.9
+    ],
+    "evidence": "Blur across the scene removes fine foliage, sign, and person detail, but the building, vehicle, road, and figure remain distinguishable.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "B03",
+    "score": 1.9,
+    "interval": [
+      1.7,
+      2.2
+    ],
+    "evidence": "Severe blur leaves broad scene shapes visible but makes the person, signs, foliage, and vehicle details difficult to inspect.",
+    "defects": [
+      "blur"
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "schema_version": "prompt-revision-v1",
+  "frozen_at": "2026-10-18T16:49:13.100144+00:00",
+  "source_stage": "a",
+  "source_references_sha256": "3a14413dc718dc468cd3d544d27bfbe57af9194173cc16057928e02ef689aab6",
+  "source_observations_sha256": "b9e5395b9221d437b65f3ebe5b422875bbb0c68c021fc69b74299f04b580dc0d",
+  "source_audits_sha256": "d7fe52943ff2a078df4cb26dffa369ed00651606d315483f9e89c9f5bab5b61d",
+  "prompt_version": "visual-rating-v2",
+  "prompt_sha256": "cfe7313a8e4d011c7087c621dbbf60f9c5f663d50ce13cf27ffed129e9ab2233",
+  "files": {
+    "visual-quality/prompts/visual-rating-v2/prompt-version.json": "95e08d8dec78e3ec9ca14a3beebdf04d945224cff208a97765708559333c64f6",
+    "visual-quality/prompts/visual-rating-v2/response.schema.json": "6887bb89e24c2ac8f2a644bce1fea93ac0f88bdcf51c6826d51b6c74b697d691",
+    "visual-quality/prompts/visual-rating-v2/system.txt": "f95bf047900bb615f9d906709a46a77b64b851e771382a433d80c77877926959",
+    "visual-quality/prompts/visual-rating-v2/technical-quality.txt": "af89a8d7277494e1b2f2a3222565ef8c74af86b880461f36b6bf622215d351c1"
+  },
+  "stage_b_not_inspected": true,
+  "changes": [
+    "Require visible evidence before naming compression, tiling, repeated text, or global blur.",
+    "Distinguish noise grain from block artifacts and retained edges from lost texture.",
+    "Assess obstruction and glare by visible loss of important content; avoid guesses about intent.",
+    "Clarify bad and excellent anchors to reduce unsupported concentration at fair.",
+    "Keep the output schema, system prompt, technical-quality construct, score range, and null rules unchanged."
+  ],
+  "stage_a_diagnostics": {
+    "cases": 50,
+    "mean_interval_distance": 0.546,
+    "assistant_point_mae": 0.8,
+    "interval_hits": 9,
+    "evidence_supported": 16,
+    "evidence_unsupported": 31,
+    "evidence_uncertain": 3,
+    "human_gold": false
+  }
+}

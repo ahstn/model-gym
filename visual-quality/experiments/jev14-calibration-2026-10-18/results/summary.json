@@ -1,0 +1,1307 @@
+{
+  "generated_at": "2026-10-18T16:55:31.520903+00:00",
+  "status": "complete",
+  "selected_rule": {
+    "threshold": 0.78,
+    "gate": "none"
+  },
+  "selection_policy": "Calibration only; frozen before validation inference; no validation retuning",
+  "evidence_sha256": {
+    "protocol.json": "343793d47fbfb7c289c623bd494c4fc8081c3d9bd8c7a17cfdc24697fd85b392",
+    "manifest.json": "2644f9f0500caeeeb11dd640035738ee021953ab3871e617ed0e3bf52b9c290c",
+    "prompt.json": "30f616f2a05b8eb684e43eef43d8b248cab8c7e5b709120dc8d6bad65ddd893a",
+    "selection.json": "b0a579ac7a95700004abf5983aa90f645fa9d8ba34a5e19ff8ce049f36818fc7",
+    "selection-lock.json": "29384a27d7c4c6abe53adce9df20639c08452bc9cf6737d63a0ba02a9ae01046",
+    "acquisition-audit.json": "357f3375ade0852cf83206d222f47ccfde1b85b81662bc876ea0973fb7ce6f6b",
+    "report.py": "3c1590fcf7064bdb2e01b136088f3e5cb466897de607c1b36016a4bc312076db",
+    "metrics.py": "99d7ca7065f976d681e825f54a3bf6c6cdbb851bf7e6bf4a8733ac1ced65a62c",
+    "calibration_ledger": "5b0e3ccce8f00721734b37bfcf47e6608c0d28a15db92e51b7e7e43478ccbc9b",
+    "validation_ledger": "1ba926ccf7998316dceed7283331999cac956809c8a53fc791029cd3cd1137a6"
+  },
+  "protocol": {
+    "version": 1,
+    "frozen_at": "2026-10-18T16:47:05.284439+00:00",
+    "model": "typesafe/jev-1.14",
+    "expected_revision": "typesafe/jev-1.14-20261014",
+    "endpoint": "https://openrouter.ai/api/alpha/decisions",
+    "request_headers": {
+      "TypeSafe-Danger-Zone-Long-Context": "true",
+      "TypeSafe-Danger-Zone-Images": "true"
+    },
+    "maximum_attempts": 1600,
+    "budget_usd": 0.25,
+    "reserve_per_request_usd": 0.012,
+    "concurrency": 4,
+    "minimum_interval_seconds": 0.25,
+    "manifest_sha256": "2644f9f0500caeeeb11dd640035738ee021953ab3871e617ed0e3bf52b9c290c",
+    "prompt_sha256": "30f616f2a05b8eb684e43eef43d8b248cab8c7e5b709120dc8d6bad65ddd893a",
+    "execution_sha256": {
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/analyze.py": "cb0cacf4b21d73ed443c38629a9bfbb765e0c630f1888e437c6c13e9cf1c790a",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/bench_analyze.py": "408fa78062b08923cdd685ed005e215229a51e123bc7e55d08d20f3109f8d5cb",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/bench_protocol.py": "be6ed1dbb8ccdc979312af1447766759f9036f26f7a2914223164459211f2bb9",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/bench_report.py": "970e40d33cbf2c98669e81a4140af9714c375d42a2ba064ed6a61baab984e63a",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/bench_runner.py": "d65c6d68fd6d8f74f279f60140d9ca50aa6834d198f82e770cc9c3172bce1fd3",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/cost_reservations.py": "2b41322edd8a107f00f2ecbb9632073cc6f3da5de28aa078b5a0f43d85625b39",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/effort_pilot.py": "af13686faa657608d0411fa4c8a66ee1ab0aa7a7f741adbd6d080687228ec590",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/evidence_archive.py": "4b360a1460b3383c47bfd84d1e12c180ff66a0c39a9f2b31850ff7e1a09f110f",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/final_benchmark.py": "bb8d0d5e6dc0612a07990a356a85da8d64d3da81df95bf16316041a06a4f344b",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/inference.py": "04db96caf25b500863cbdf5702c6e58362fdfb3b523ea44c6593500f372ab5da",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/prepare.py": "4f8d03e46cea5ca1a9ebd40ebce080408147321e9923320cacb56b827f1759d2",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/probe.py": "f586ba6740053e8678262ff6574b4c92b3eff74a75e7fc043e8e646c0e8778c1",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/run.py": "38e40e0bcddf308f599989a8e3d9b4f432d37669cac919c84c1bc28b6729ff84",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/ai_detection/build_dataset.py": "4a80ff2a05b7b3b84817a793c812fa1b6f06312f14435d26e5de4032777628d5",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/ai_detection/test_build_dataset.py": "c694cb730116c1b57b1710bd303221c78577b228e206a89febdb0171a4ab36e8",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/ai_detection_v2/build_dataset.py": "0ba59edb9464db17086becd47970607f7fff7de58794543d81d4d843785ec549",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/ai_detection_v2/native.py": "31ea13a914113415e2289e91021ffc71dc38621b145e79181b154e09906170c2",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/image_context.py": "26af566d54a5f5617123606702901037edb4b8a521988cfd0bce9943eb39d7e8",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/jev14/client.py": "c4846911f2bd67661c489a4d5447d6b1ee9b25ce514a76c99350fe7f69f5a4a8",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/jev14/latest.py": "2723c27c56c38769c80d9dbe84f6ebd6be7f867b534752c3e5a4c1d0766ffa68",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/jev14/latest_report.py": "ebd64fb6da8af287f713c6bd51891f802988de93eec2788ddb79662b8dd1ae89",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/jev14/report.py": "6114aa2d6207b99a1463810538da34f3b32eeee593fe3b0b3df68f8568a1f990",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/jev14/resume.py": "941f4491bb35168da5ccb686598e10deaacd848fc554f4d2e72e9f2c133e68d3",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/jev14/rounding.py": "89de1cffcc237de0313488b98ff180a1a3b750e0bc965fcdb708af6f2873ac28",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/jev14/run.py": "4fc3dccf85778d0de2059a3c7915f952fdd0dc243399679f9bfaf3f44e1a9775",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_ablation.py": "ac8b1a709d3178cd6c8d021ceba609a31a2b4ed683b4e97d74220db244c3e02f",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/acquire_ai.py": "d6dba0c56a3e4045736f5132c1fbedaf2f54b73df6476feacc809ff779f04b7e",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/acquire_real.py": "29377100a30abb11ff14e10148aeb1be7ecbfa76266710aa57eae06e78009096",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/budget_reallocation.py": "91196c5f00882a1fe96b21a2a7e0b09194ff7047d3277966a03d2d8a07f0b856",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/build_controls.py": "9190dd335bec50b842303116e458211c77b5b474b5c000ef9d2ed714ff4ce759",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/build_dataset.py": "e50b2a801b3b9897eb04690b5f1a5942ac856143032d4d5fd24a7609a750009b",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/cost_recovery.py": "02b2945f54c9e4c570f03cf3c40fc5089cfb75945c8e083f017027ab39166162",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/evidence_bundle.py": "2f7e4f4c4f7924a798c14e9e9c77f3b7371abacab27a823085f5eff45d14f8c6",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/features.py": "6c5705b286e72759cc664be12c6a9c63d629fe541f97bc02180c1f33b11d1338",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/http_error_recovery.py": "33800c1038449c4cdb0699ccf629952b5e1eb9cc2f0328777c0d5dc00a38c3cc",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/optimise.py": "4cbd8c2d7b57151f34473614cfb0dd873a987b42878f7458d42b076ffe20152e",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/provenance.py": "1023b617e5b2692e1552a0f7bd99df87f1bfc1d6c7b9193e14bbf49ac08867c7",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/recover_study.py": "ff77c9b0ed6650ba9595fcc0452ca0c3366632b1d29dfbb9a17ce905f60a07bf",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/report.py": "0149b2a33a73127d21e6413507b0ff6277a0f230c64e12da144e2dd932f34883",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/request_audit.py": "5a291d31df9159e677c7a0c03b6e155cd676b1166cfdd63fc837201b9419cbbb",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/resume_http_errors.py": "58591b031ba2884f3ca7914ee4fa836d8ba85262cf23256e9e114d4503079df1",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/resume_reallocated.py": "18de374bf70e6ec8dd22f83b5c037def40319c8d7f5b708c3e01b89c5f1e7d02",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/resume_shared_pool.py": "4ca77d54d1565878c6d2fca4a2649c9b964f56e1cbf0bc9cc0f05575bab9b4c7",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/resume_timeouts.py": "dcdd299a95e973594873467e45e223066707760dc8b406756eefcebd35e967e2",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/runtime.py": "28c608561fbfad33cb73543a6aa186668d9fd69e131a1977bbbac382921a5184",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/shared_allowance_pool.py": "13f8b32bc262a1d676a03b791726a5fcc854a3b02434524c9f8a7949abf8e545",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/study.py": "c9233a1ff727694ffdf3e5e5005248d86d494f74d561837c70da55b416980f84",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/timeout_recovery.py": "754d59359a2c55e8998a70dacf74a43aca3df067c61f5ce955514747f023f4ea",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metrics.py": "e43ad60188fc7e67ab932ab60279c13dc4561f7840187a2bf920651457375d3a",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/openai_provenance/client.py": "ae256fdf18f219fad23cb55a6cf0a0b0504ab69eb2cd5fc25cc7f90dbc38bf66",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/openai_provenance/report.py": "5ecedfd2f0366f4812aed6fed59c757ea5951f4b0903a404649bc34a5e34f723",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/openai_provenance/resume.py": "ed879471768e37d1de3f683ab415323e9ee6d52d67705f9666886ad258b4a384",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/openai_provenance/study.py": "4732b041996aa9623176e349dfe217504d09edd3ac5d77091c7a51edceb10c87",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/optimise.py": "8a72e5f0957679a77ff0caf0a2c74a04bcea3dc294ff9d980338b5775b66bddf",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/quality/build_dataset.py": "813229fca63376116cf3d974c4bb732f6e820c554d2cee0e4cf60358d5d1c1ff",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/quality/test_dataset.py": "65b6b83e9854456b3770e381468da6429b832f3f4a95bb9cf608eeca683abf6a",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/quality_v2/build_dataset.py": "ff72e5913baae76c446da406ce0d27546906f958a45792e98901d37062b80f5d",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/report.py": "b7a03d96301b1b77279c207000858d7b2e9a7995a2d389b6924835e76d0f6a84",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/run.py": "8aadf0579a8462b3d23453694df3a47efd2057f5a3d80877304fdf3b2a7f68a2",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/settings.py": "6001e71ed5415b9eb02929ab1c2dc04a3c7441c168c737cec0c58d1e89ab19e4",
+      "/Users/ahstn/git/model-gym/visual-quality/experiments/jev14-calibration-2026-10-18/acquire.py": "75480a1f2210451b5aedb30f5233770c2a2a7db60ec5f51a07a78f108299fe95",
+      "/Users/ahstn/git/model-gym/visual-quality/experiments/jev14-calibration-2026-10-18/metrics.py": "99d7ca7065f976d681e825f54a3bf6c6cdbb851bf7e6bf4a8733ac1ced65a62c",
+      "/Users/ahstn/git/model-gym/visual-quality/experiments/jev14-calibration-2026-10-18/report.py": "3c1590fcf7064bdb2e01b136088f3e5cb466897de607c1b36016a4bc312076db",
+      "/Users/ahstn/git/model-gym/visual-quality/experiments/jev14-calibration-2026-10-18/runner.py": "d57eb04ca62791a11ee7beaeb1a8f8b482276e2d6604091140bdd7a9964b8be9",
+      "/Users/ahstn/git/model-gym/visual-quality/experiments/jev14-calibration-2026-10-18/study.py": "2635a9b2012d33f7c808740297fe70d92c69b6f16ff0c8702c0dcb61b5990a78"
+    },
+    "source_inputs": {
+      "/Users/ahstn/git/model-gym/visual-quality/data/jev14-calibration-2026-10-18/research/catalog.json": "c4844466e6feddaf7a8967883207d8c8c79a2de32fdc47a062fe6f251e818560",
+      "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/data/metadata-v3/runs/image_only/candidates/fc15792f2b64d250730af9cfaca097ff21ad203d75991d5e915883af1715174f/prompt.json": "30f616f2a05b8eb684e43eef43d8b248cab8c7e5b709120dc8d6bad65ddd893a",
+      "/Users/ahstn/git/model-gym/visual-quality/experiments/jev14-calibration-2026-10-18/acquisition-audit.json": "357f3375ade0852cf83206d222f47ccfde1b85b81662bc876ea0973fb7ce6f6b",
+      "/Users/ahstn/git/model-gym/visual-quality/experiments/jev14-calibration-2026-10-18/payload-audit.json": "381aee718b759c71e6bd1e91160042845e3eafcd5e87a342cd0620cd02d4950d"
+    },
+    "catalog_model": {
+      "id": "typesafe/jev-1.14",
+      "canonical_slug": "typesafe/jev-1.14-20261014",
+      "hugging_face_id": null,
+      "name": "TypeSafe: Jev 1.14",
+      "created": 1792021417,
+      "description": "Jev 1.14 is the latest version of Jev, TypeSafe's structured decision model and the first of its System One models. System One models make fast, structured decisions for software, returning...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->decisions",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "decisions"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000000042",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 235929,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/typesafe/jev-1.14-20261014/endpoints"
+      }
+    },
+    "dataset": "Rajarshi-Roy-research/Defactify_Image_Dataset",
+    "dataset_revision": "787334f7857fa54f29027a7f09c30e895ad486ef",
+    "splits": {
+      "calibration": {
+        "official_split": "validation",
+        "real": 300,
+        "ai": 300
+      },
+      "validation": {
+        "official_split": "validation",
+        "real": 500,
+        "ai": 500
+      }
+    },
+    "thresholds": [
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75,
+      0.76,
+      0.77,
+      0.78,
+      0.79,
+      0.8,
+      0.81,
+      0.82,
+      0.83,
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.93,
+      0.94,
+      0.95,
+      0.96,
+      0.97,
+      0.98,
+      0.99,
+      1.0
+    ],
+    "gates": [
+      "none",
+      "not_high"
+    ],
+    "positive_comparison": "ai_probability >= threshold",
+    "calibration_fpr_limit": 0.01,
+    "source_split_correction": "Before inference, the official test split was found to repeat caption/label rows in five image-variant blocks. The first block has reduced brightness. Both study splits therefore use different caption families from the official validation pool; the discarded preflight cohort is retained only in ignored acquisition evidence.",
+    "selection": "Maximum unconditional AI recall among rules with empirical calibration FPR <= 1%; tie: lower FPR, ungated rule, higher threshold. No feasible rule means no selected rule.",
+    "validation": "All responses valid; selected rule has one-sided 95% exact binomial FPR upper bound <= 1% and observed unconditional AI recall >= 70%.",
+    "recall_floor": 0.7,
+    "recall_floor_basis": "Provisional operating assumption; not an approved production requirement or a confidence bound.",
+    "baselines": [
+      {
+        "threshold": 0.5,
+        "gate": "none"
+      },
+      {
+        "threshold": 0.8,
+        "gate": "none"
+      }
+    ],
+    "unresolved": "Never assign score zero; retain every attempted case in operational denominators and report incomplete validation.",
+    "retry_policy": "No automatic retry. Stop new dispatch on failed or unpriced call; drain in-flight calls and preserve every attempt.",
+    "validation_isolation": "Freeze selection.json and its hash before any validation request. No threshold change based on validation results.",
+    "probability_interpretation": "This selects decision thresholds; it does not calibrate numeric probabilities of correctness.",
+    "view": "EXIF transpose, RGB, centered ImageOps.fit 512x512 LANCZOS, JPEG quality95 subsampling0; unchanged prior image-only prompt."
+  },
+  "acquisition_audit": {
+    "source_revision": "787334f7857fa54f29027a7f09c30e895ad486ef",
+    "available": {
+      "calibration": {
+        "source_families": 1495,
+        "families_with_real": 1495,
+        "selected_generators": {
+          "1": 60,
+          "2": 60,
+          "3": 60,
+          "4": 60,
+          "5": 60
+        }
+      },
+      "validation": {
+        "source_families": 1495,
+        "families_with_real": 1495,
+        "selected_generators": {
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100
+        }
+      }
+    },
+    "source_dimensions": {
+      "real": {
+        "640x427": 91,
+        "640x426": 34,
+        "500x375": 38,
+        "640x480": 184,
+        "480x640": 67,
+        "640x361": 1,
+        "500x333": 13,
+        "426x640": 18,
+        "640x360": 11,
+        "640x425": 20,
+        "500x400": 1,
+        "640x478": 7,
+        "640x640": 10,
+        "640x430": 1,
+        "425x640": 6,
+        "512x640": 2,
+        "640x424": 12,
+        "478x640": 6,
+        "640x396": 2,
+        "640x482": 2,
+        "429x640": 2,
+        "343x500": 1,
+        "633x640": 1,
+        "375x500": 11,
+        "427x640": 22,
+        "500x377": 2,
+        "500x489": 2,
+        "333x500": 5,
+        "640x501": 1,
+        "612x612": 12,
+        "640x491": 1,
+        "640x422": 2,
+        "640x391": 1,
+        "511x640": 2,
+        "519x640": 1,
+        "500x198": 1,
+        "640x428": 16,
+        "475x640": 1,
+        "640x468": 2,
+        "467x350": 1,
+        "640x471": 1,
+        "413x640": 1,
+        "423x640": 1,
+        "500x413": 1,
+        "524x640": 1,
+        "500x368": 1,
+        "500x399": 1,
+        "640x552": 1,
+        "640x606": 1,
+        "436x640": 2,
+        "500x500": 4,
+        "332x500": 2,
+        "500x334": 2,
+        "640x333": 1,
+        "640x458": 3,
+        "640x414": 2,
+        "428x640": 4,
+        "640x481": 6,
+        "640x359": 3,
+        "640x421": 1,
+        "640x436": 2,
+        "307x500": 1,
+        "640x486": 1,
+        "500x332": 2,
+        "640x407": 1,
+        "640x612": 1,
+        "470x640": 1,
+        "640x483": 1,
+        "640x457": 1,
+        "640x401": 1,
+        "640x384": 3,
+        "640x362": 1,
+        "640x387": 1,
+        "640x403": 1,
+        "471x640": 1,
+        "555x640": 1,
+        "469x500": 1,
+        "334x500": 2,
+        "640x326": 1,
+        "640x266": 1,
+        "640x453": 2,
+        "640x443": 2,
+        "640x379": 1,
+        "500x398": 1,
+        "640x614": 1,
+        "640x363": 1,
+        "500x345": 2,
+        "466x640": 1,
+        "600x400": 1,
+        "500x308": 1,
+        "482x389": 1,
+        "640x435": 1,
+        "448x640": 1,
+        "640x456": 2,
+        "640x346": 1,
+        "500x337": 1,
+        "640x236": 1,
+        "640x336": 1,
+        "640x329": 1,
+        "640x442": 1,
+        "640x479": 4,
+        "456x640": 1,
+        "329x500": 1,
+        "613x449": 1,
+        "599x640": 1,
+        "600x450": 1,
+        "360x480": 1,
+        "460x640": 1,
+        "388x640": 1,
+        "473x640": 2,
+        "640x526": 1,
+        "395x640": 1,
+        "640x429": 3,
+        "437x640": 2,
+        "640x289": 1,
+        "301x450": 1,
+        "600x449": 1,
+        "640x467": 1,
+        "640x454": 1,
+        "571x640": 1,
+        "640x448": 1,
+        "640x522": 1,
+        "640x318": 1,
+        "640x512": 3,
+        "408x640": 1,
+        "450x640": 1,
+        "640x463": 1,
+        "420x266": 1,
+        "640x548": 1,
+        "500x387": 1,
+        "331x500": 2,
+        "533x640": 1,
+        "640x460": 1,
+        "500x343": 1,
+        "552x640": 1,
+        "393x640": 1,
+        "359x640": 1,
+        "470x500": 1,
+        "640x469": 2,
+        "640x374": 1,
+        "640x444": 1,
+        "640x381": 1,
+        "640x395": 1,
+        "640x533": 1,
+        "640x433": 1,
+        "500x304": 1,
+        "640x248": 1,
+        "500x331": 1,
+        "500x435": 1,
+        "421x640": 1,
+        "480x204": 1,
+        "640x553": 1,
+        "640x406": 1,
+        "527x640": 1,
+        "640x622": 1,
+        "424x640": 2,
+        "640x464": 1,
+        "500x336": 1,
+        "361x640": 1,
+        "354x500": 1,
+        "640x408": 1,
+        "640x298": 1,
+        "328x640": 1,
+        "640x440": 1,
+        "500x256": 1,
+        "640x514": 1,
+        "640x507": 1,
+        "300x432": 1,
+        "500x380": 1,
+        "640x400": 2,
+        "338x500": 1,
+        "247x500": 1,
+        "640x474": 1,
+        "639x640": 1,
+        "500x286": 1,
+        "440x640": 1,
+        "490x350": 1,
+        "442x640": 1,
+        "640x568": 1,
+        "640x439": 1,
+        "584x640": 1,
+        "640x419": 1,
+        "458x640": 1,
+        "407x640": 1,
+        "480x320": 1,
+        "344x500": 1
+      },
+      "SD2.1": {
+        "768x768": 160
+      },
+      "SDXL": {
+        "1024x1024": 160
+      },
+      "SD3": {
+        "1024x1024": 160
+      },
+      "DALL-E3": {
+        "270x270": 158,
+        "351x351": 2
+      },
+      "Midjourney-v6": {
+        "436x436": 160
+      }
+    },
+    "source_manifests": [
+      {
+        "path": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/evidence/samples.json",
+        "sha256": "0028c7ae5582dbb3e190342651f559d87bf2a6e88cf82682bc81050a8d63c8a9"
+      },
+      {
+        "path": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/evidence/benchmarks/ai.json",
+        "sha256": "7d193af99aa15697f8e626f02b511b6915c3d1aeffdb85b0f6f8ee7e238d8970"
+      },
+      {
+        "path": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/ai_detection/dataset.json",
+        "sha256": "79a8195b82ea76d2113ba7c59b14362bc7f4574efca588bf7b3df35e48d0eec9"
+      },
+      {
+        "path": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/ai_detection_v2/dataset.json",
+        "sha256": "4cf72dc0cf465e267d507401ae3de893ec6f32aa37b71e284454117ae9754039"
+      },
+      {
+        "path": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/dataset.json",
+        "sha256": "3a1fe8dc41a7aff4d803a98ddf09f6aac5b1aa851b356ccda328e329756169de"
+      },
+      {
+        "path": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/data/metadata-v3/research/ai/prompts.csv",
+        "sha256": "e915197c9394c267016d9d1c9cb9e8699abe1adfcc03d8b9406fd75c2229ecd8"
+      },
+      {
+        "path": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/data/agiqa-data.csv",
+        "sha256": "4b1945c2137e196d9378b9cf4a114de2267b97a4724f0743e260287eb2ddd6c0"
+      },
+      {
+        "path": "/Users/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/train.jsonl",
+        "sha256": "c8bc9fa7b796239739b2f7a00cd99e2051342c382ec179867658d1b702246a53"
+      },
+      {
+        "path": "/Users/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/development.jsonl",
+        "sha256": "131329cc408e05bca16c67a20a21ab3e67807cd060c1032be6bbf0cd1582809b"
+      },
+      {
+        "path": "/Users/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/test.jsonl",
+        "sha256": "fd49c03efc574c19be6c413885225a83223bd5ab3e175fb97f8dc7e6f7159c2c"
+      }
+    ],
+    "prior_origin_images": 1588,
+    "pilot_component_counts": {
+      "clevr": 480,
+      "distortions": 3000,
+      "megalith": 5400,
+      "owned_controls": 240,
+      "plotqa": 480,
+      "vizwiz": 1200
+    },
+    "prior_caption_exclusions": 2298,
+    "excluded_families": [],
+    "selected_families": 800,
+    "selected_images": 1600,
+    "duplicate_method": "SHA256 of acquired bytes, RGB pixels with dimensions and delivered bytes; 64-bit DCT perceptual hash, full-frame and standard delivered crop, Hamming distance at most6. Compared against prior origin cohorts, acquired origin-development candidates, all accepted images and each paired member. Pilot10k checked by source-byte hashes only.",
+    "limitations": [
+      "Caption normalization cannot prove capture-session or photographer independence; related scenes with different captions can remain.",
+      "Perceptual hash can reject similar but distinct scenes and miss transformed duplicates.",
+      "Both cohorts use distinct families from official validation. The official test split repeats each caption/label five times and its first block is brightness-reduced; it was excluded before model inference.",
+      "Source resolutions and compression histories differ by generator; a shared delivery transform cannot remove these upstream cues.",
+      "Dataset licence is not specified; paper CC BY4.0 is not an image licence. Keep image assets local and out of Git; commercial or redistribution rights are not established.",
+      "Distributed parquet bytes are verified; this does not establish untouched camera or generator-output identity.",
+      "No model outcomes, visual quality filters or detector scores were used for selection."
+    ],
+    "native_files": [
+      {
+        "path": "data/validation-00000-of-00002.parquet",
+        "bytes": 333255675,
+        "sha256": "f759e276b9dbb6965a427ec54384f608bcef9336983d77b9d2c70affef35ab8c"
+      },
+      {
+        "path": "data/validation-00001-of-00002.parquet",
+        "bytes": 344988959,
+        "sha256": "429ee1ff44d0c9e913c624532c0014cafc55ea6a9cc48a8ac8d820ba435beae5"
+      },
+      {
+        "path": "data/test-00000-of-00008.parquet",
+        "bytes": 318333820,
+        "sha256": "f4fe57e74c65427c283b3b38eccf58af4ef4cf286f63e0d11dc27f4e181e22fd"
+      },
+      {
+        "path": "data/test-00001-of-00008.parquet",
+        "bytes": 462192453,
+        "sha256": "f4c1251e38016d94113f6af0c9511c59c713523e322f36b3b45951f29e18e15f"
+      },
+      {
+        "path": "data/test-00002-of-00008.parquet",
+        "bytes": 670927639,
+        "sha256": "5d7012833cee948273bfd5c44c2a9870c672c826e1332f40b596137696bd26b2"
+      },
+      {
+        "path": "data/test-00003-of-00008.parquet",
+        "bytes": 477096313,
+        "sha256": "856ceb7376e7991b2b1cc9bdc0969d362278f3f3a9f24fc47e0677f0391a3ff6"
+      },
+      {
+        "path": "data/test-00004-of-00008.parquet",
+        "bytes": 425363358,
+        "sha256": "1e2789a0dd374bcb1cc6508528efde8ea5bca73b318c57b17c8260cacd1d8282"
+      },
+      {
+        "path": "data/test-00005-of-00008.parquet",
+        "bytes": 425250823,
+        "sha256": "a5422b46c161936f45deb6d02eafc7586ea73c3348a794d41d30868a674a5506"
+      },
+      {
+        "path": "data/test-00006-of-00008.parquet",
+        "bytes": 442703930,
+        "sha256": "7c86cc01169cb902bd67879e68cf965c459857bbd6573e2d6ed62b1b188fcae3"
+      },
+      {
+        "path": "data/test-00007-of-00008.parquet",
+        "bytes": 449388697,
+        "sha256": "17f818835f5e0e006a08043f1811e33c3ce14e2965e78ba178a549db8e38dd7f"
+      }
+    ],
+    "source_document_snapshots": [
+      {
+        "url": "https://huggingface.co/datasets/Rajarshi-Roy-research/Defactify_Image_Dataset/raw/787334f7857fa54f29027a7f09c30e895ad486ef/README.md",
+        "path": "research/dataset-card.md",
+        "sha256": "378ed90a2003b16fef9f607487bbb55f5a8e37b0aea34626b62e8f268c1f76c2"
+      },
+      {
+        "url": "https://arxiv.org/html/2601.00553v1",
+        "path": "research/paper.html",
+        "sha256": "458e7b13095334df36aabb962209ae8a72b9e482bac2849d8182e15aa669c122"
+      },
+      {
+        "url": "https://cocodataset.org/dataset/termsofuse.htm",
+        "path": "research/coco-terms.html",
+        "sha256": "bd019f88ee44c29b2f19c5b99888cf5bc2e7c16f57b6e52af8ed3a60462e8bdd"
+      }
+    ],
+    "acquisition_issue": "Dataset Viewer returned HTTP429 after 62 metadata pages; stopped Viewer requests and used ten pinned native parquet files instead. Before inference, the initial official-test cohort was archived and replaced by unused official-validation families because test rows contain five variant blocks and minimum-index selection chose reduced brightness.",
+    "source_documents": [
+      "https://huggingface.co/datasets/Rajarshi-Roy-research/Defactify_Image_Dataset/blob/787334f7857fa54f29027a7f09c30e895ad486ef/README.md",
+      "https://arxiv.org/html/2601.00553v1",
+      "https://cocodataset.org/dataset/termsofuse.htm"
+    ]
+  },
+  "validation_gate": {
+    "passed": false,
+    "checks": {
+      "rule_selected": true,
+      "both_classes_present": true,
+      "all_valid": true,
+      "fpr_upper_within_budget": false,
+      "recall_meets_floor": false
+    },
+    "metrics": {
+      "rule": {
+        "threshold": 0.78,
+        "gate": "none"
+      },
+      "counts": {
+        "total": 1000,
+        "real": 500,
+        "ai": 500,
+        "valid": 1000,
+        "unresolved": 0,
+        "tp": 259,
+        "fp": 3,
+        "tn": 497,
+        "fn": 241,
+        "flagged": 262,
+        "review": 738,
+        "gate_exclusions": 0
+      },
+      "fpr": 0.006,
+      "fpr_upper_95": 0.015433734876752443,
+      "recall": 0.518,
+      "recall_ci_95": [
+        0.47320683518770446,
+        0.5625791636239119
+      ],
+      "review_share": 0.738,
+      "unresolved": 0,
+      "gate_exclusions": 0
+    }
+  },
+  "splits": {
+    "calibration": {
+      "selected": {
+        "rule": {
+          "threshold": 0.78,
+          "gate": "none"
+        },
+        "counts": {
+          "total": 600,
+          "real": 300,
+          "ai": 300,
+          "valid": 600,
+          "unresolved": 0,
+          "tp": 155,
+          "fp": 3,
+          "tn": 297,
+          "fn": 145,
+          "flagged": 158,
+          "review": 442,
+          "gate_exclusions": 0
+        },
+        "fpr": 0.01,
+        "fpr_upper_95": 0.02564139308261016,
+        "recall": 0.5166666666666667,
+        "recall_ci_95": [
+          0.4585293985393615,
+          0.574471596601122
+        ],
+        "review_share": 0.7366666666666667,
+        "unresolved": 0,
+        "gate_exclusions": 0
+      },
+      "comparators": {
+        "0.5": {
+          "rule": {
+            "threshold": 0.5,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 600,
+            "real": 300,
+            "ai": 300,
+            "valid": 600,
+            "unresolved": 0,
+            "tp": 291,
+            "fp": 100,
+            "tn": 200,
+            "fn": 9,
+            "flagged": 391,
+            "review": 209,
+            "gate_exclusions": 0
+          },
+          "fpr": 0.3333333333333333,
+          "fpr_upper_95": 0.38086487814212633,
+          "recall": 0.97,
+          "recall_ci_95": [
+            0.9438164517583902,
+            0.986192180444474
+          ],
+          "review_share": 0.34833333333333333,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "0.8": {
+          "rule": {
+            "threshold": 0.8,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 600,
+            "real": 300,
+            "ai": 300,
+            "valid": 600,
+            "unresolved": 0,
+            "tp": 119,
+            "fp": 1,
+            "tn": 299,
+            "fn": 181,
+            "flagged": 120,
+            "review": 480,
+            "gate_exclusions": 0
+          },
+          "fpr": 0.0033333333333333335,
+          "fpr_upper_95": 0.01571455489158407,
+          "recall": 0.39666666666666667,
+          "recall_ci_95": [
+            0.3409066879985616,
+            0.4544887432658715
+          ],
+          "review_share": 0.8,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        }
+      },
+      "groups": {
+        "DALL-E3": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 60,
+            "real": 0,
+            "ai": 60,
+            "valid": 60,
+            "unresolved": 0,
+            "tp": 51,
+            "fp": 0,
+            "tn": 0,
+            "fn": 9,
+            "flagged": 51,
+            "review": 9,
+            "gate_exclusions": 0
+          },
+          "fpr": null,
+          "fpr_upper_95": null,
+          "recall": 0.85,
+          "recall_ci_95": [
+            0.7342595522427433,
+            0.9290438047429093
+          ],
+          "review_share": 0.15,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "Midjourney-v6": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 60,
+            "real": 0,
+            "ai": 60,
+            "valid": 60,
+            "unresolved": 0,
+            "tp": 17,
+            "fp": 0,
+            "tn": 0,
+            "fn": 43,
+            "flagged": 17,
+            "review": 43,
+            "gate_exclusions": 0
+          },
+          "fpr": null,
+          "fpr_upper_95": null,
+          "recall": 0.2833333333333333,
+          "recall_ci_95": [
+            0.17450528351440642,
+            0.4144360689498311
+          ],
+          "review_share": 0.7166666666666667,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "SD2.1": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 60,
+            "real": 0,
+            "ai": 60,
+            "valid": 60,
+            "unresolved": 0,
+            "tp": 32,
+            "fp": 0,
+            "tn": 0,
+            "fn": 28,
+            "flagged": 32,
+            "review": 28,
+            "gate_exclusions": 0
+          },
+          "fpr": null,
+          "fpr_upper_95": null,
+          "recall": 0.5333333333333333,
+          "recall_ci_95": [
+            0.3999649025843439,
+            0.6633008637495488
+          ],
+          "review_share": 0.4666666666666667,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "SD3": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 60,
+            "real": 0,
+            "ai": 60,
+            "valid": 60,
+            "unresolved": 0,
+            "tp": 21,
+            "fp": 0,
+            "tn": 0,
+            "fn": 39,
+            "flagged": 21,
+            "review": 39,
+            "gate_exclusions": 0
+          },
+          "fpr": null,
+          "fpr_upper_95": null,
+          "recall": 0.35,
+          "recall_ci_95": [
+            0.23132642214849825,
+            0.4840280093705681
+          ],
+          "review_share": 0.65,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "SDXL": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 60,
+            "real": 0,
+            "ai": 60,
+            "valid": 60,
+            "unresolved": 0,
+            "tp": 34,
+            "fp": 0,
+            "tn": 0,
+            "fn": 26,
+            "flagged": 34,
+            "review": 26,
+            "gate_exclusions": 0
+          },
+          "fpr": null,
+          "fpr_upper_95": null,
+          "recall": 0.5666666666666667,
+          "recall_ci_95": [
+            0.4324096535546549,
+            0.6941185731578281
+          ],
+          "review_share": 0.43333333333333335,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "unknown": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 300,
+            "real": 300,
+            "ai": 0,
+            "valid": 300,
+            "unresolved": 0,
+            "tp": 0,
+            "fp": 3,
+            "tn": 297,
+            "fn": 0,
+            "flagged": 3,
+            "review": 297,
+            "gate_exclusions": 0
+          },
+          "fpr": 0.01,
+          "fpr_upper_95": 0.02564139308261016,
+          "recall": null,
+          "recall_ci_95": null,
+          "review_share": 0.99,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        }
+      }
+    },
+    "validation": {
+      "selected": {
+        "rule": {
+          "threshold": 0.78,
+          "gate": "none"
+        },
+        "counts": {
+          "total": 1000,
+          "real": 500,
+          "ai": 500,
+          "valid": 1000,
+          "unresolved": 0,
+          "tp": 259,
+          "fp": 3,
+          "tn": 497,
+          "fn": 241,
+          "flagged": 262,
+          "review": 738,
+          "gate_exclusions": 0
+        },
+        "fpr": 0.006,
+        "fpr_upper_95": 0.015433734876752443,
+        "recall": 0.518,
+        "recall_ci_95": [
+          0.47320683518770446,
+          0.5625791636239119
+        ],
+        "review_share": 0.738,
+        "unresolved": 0,
+        "gate_exclusions": 0
+      },
+      "comparators": {
+        "0.5": {
+          "rule": {
+            "threshold": 0.5,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 1000,
+            "real": 500,
+            "ai": 500,
+            "valid": 1000,
+            "unresolved": 0,
+            "tp": 480,
+            "fp": 167,
+            "tn": 333,
+            "fn": 20,
+            "flagged": 647,
+            "review": 353,
+            "gate_exclusions": 0
+          },
+          "fpr": 0.334,
+          "fpr_upper_95": 0.3703633307094917,
+          "recall": 0.96,
+          "recall_ci_95": [
+            0.9388973906117466,
+            0.9753986879144547
+          ],
+          "review_share": 0.353,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "0.8": {
+          "rule": {
+            "threshold": 0.8,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 1000,
+            "real": 500,
+            "ai": 500,
+            "valid": 1000,
+            "unresolved": 0,
+            "tp": 198,
+            "fp": 2,
+            "tn": 498,
+            "fn": 302,
+            "flagged": 200,
+            "review": 800,
+            "gate_exclusions": 0
+          },
+          "fpr": 0.004,
+          "fpr_upper_95": 0.012537605409672366,
+          "recall": 0.396,
+          "recall_ci_95": [
+            0.3528578860328295,
+            0.44037933102675686
+          ],
+          "review_share": 0.8,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        }
+      },
+      "groups": {
+        "DALL-E3": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 100,
+            "real": 0,
+            "ai": 100,
+            "valid": 100,
+            "unresolved": 0,
+            "tp": 89,
+            "fp": 0,
+            "tn": 0,
+            "fn": 11,
+            "flagged": 89,
+            "review": 11,
+            "gate_exclusions": 0
+          },
+          "fpr": null,
+          "fpr_upper_95": null,
+          "recall": 0.89,
+          "recall_ci_95": [
+            0.8116988678035524,
+            0.9437929797145124
+          ],
+          "review_share": 0.11,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "Midjourney-v6": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 100,
+            "real": 0,
+            "ai": 100,
+            "valid": 100,
+            "unresolved": 0,
+            "tp": 27,
+            "fp": 0,
+            "tn": 0,
+            "fn": 73,
+            "flagged": 27,
+            "review": 73,
+            "gate_exclusions": 0
+          },
+          "fpr": null,
+          "fpr_upper_95": null,
+          "recall": 0.27,
+          "recall_ci_95": [
+            0.18606642229073556,
+            0.36801627290897376
+          ],
+          "review_share": 0.73,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "SD2.1": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 100,
+            "real": 0,
+            "ai": 100,
+            "valid": 100,
+            "unresolved": 0,
+            "tp": 46,
+            "fp": 0,
+            "tn": 0,
+            "fn": 54,
+            "flagged": 46,
+            "review": 54,
+            "gate_exclusions": 0
+          },
+          "fpr": null,
+          "fpr_upper_95": null,
+          "recall": 0.46,
+          "recall_ci_95": [
+            0.3598433529793974,
+            0.5625884201335285
+          ],
+          "review_share": 0.54,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "SD3": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 100,
+            "real": 0,
+            "ai": 100,
+            "valid": 100,
+            "unresolved": 0,
+            "tp": 32,
+            "fp": 0,
+            "tn": 0,
+            "fn": 68,
+            "flagged": 32,
+            "review": 68,
+            "gate_exclusions": 0
+          },
+          "fpr": null,
+          "fpr_upper_95": null,
+          "recall": 0.32,
+          "recall_ci_95": [
+            0.23021991676156184,
+            0.42076686163162247
+          ],
+          "review_share": 0.68,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "SDXL": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 100,
+            "real": 0,
+            "ai": 100,
+            "valid": 100,
+            "unresolved": 0,
+            "tp": 65,
+            "fp": 0,
+            "tn": 0,
+            "fn": 35,
+            "flagged": 65,
+            "review": 35,
+            "gate_exclusions": 0
+          },
+          "fpr": null,
+          "fpr_upper_95": null,
+          "recall": 0.65,
+          "recall_ci_95": [
+            0.5481506381760111,
+            0.7427062214685483
+          ],
+          "review_share": 0.35,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        },
+        "unknown": {
+          "rule": {
+            "threshold": 0.78,
+            "gate": "none"
+          },
+          "counts": {
+            "total": 500,
+            "real": 500,
+            "ai": 0,
+            "valid": 500,
+            "unresolved": 0,
+            "tp": 0,
+            "fp": 3,
+            "tn": 497,
+            "fn": 0,
+            "flagged": 3,
+            "review": 497,
+            "gate_exclusions": 0
+          },
+          "fpr": 0.006,
+          "fpr_upper_95": 0.015433734876752443,
+          "recall": null,
+          "recall_ci_95": null,
+          "review_share": 0.994,
+          "unresolved": 0,
+          "gate_exclusions": 0
+        }
+      }
+    }
+  },
+  "operations": {
+    "calibration": {
+      "expected_calls": 600,
+      "attempted_calls": 600,
+      "unattempted_calls": 0,
+      "known_cost_usd": 0.041574666,
+      "cost_known_calls": 600,
+      "cost_unknown_calls": 0,
+      "latency_measured_calls": 600,
+      "latency_p50_seconds": 0.5447204584488645,
+      "latency_p95_seconds": 0.8457394443918019,
+      "tokens": {
+        "input_tokens": {
+          "reported_total": 989873,
+          "known_calls": 600,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "reported_total": 59400,
+          "known_calls": 600,
+          "unknown_calls": 0
+        }
+      },
+      "resolved_models": {
+        "typesafe/jev-1.14-20261014": 600
+      }
+    },
+    "validation": {
+      "expected_calls": 1000,
+      "attempted_calls": 1000,
+      "unattempted_calls": 0,
+      "known_cost_usd": 0.069291726,
+      "cost_known_calls": 1000,
+      "cost_unknown_calls": 0,
+      "latency_measured_calls": 1000,
+      "latency_p50_seconds": 0.5510096460347995,
+      "latency_p95_seconds": 0.8335433351108804,
+      "tokens": {
+        "input_tokens": {
+          "reported_total": 1649803,
+          "known_calls": 1000,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "reported_total": 99000,
+          "known_calls": 1000,
+          "unknown_calls": 0
+        }
+      },
+      "resolved_models": {
+        "typesafe/jev-1.14-20261014": 1000
+      }
+    },
+    "total": {
+      "expected_calls": 1600,
+      "attempted_calls": 1600,
+      "unattempted_calls": 0,
+      "known_cost_usd": 0.11086639200000001,
+      "cost_known_calls": 1600,
+      "cost_unknown_calls": 0,
+      "latency_measured_calls": 1600,
+      "latency_p50_seconds": 0.5480425000423566,
+      "latency_p95_seconds": 0.8415063088061286,
+      "tokens": {
+        "input_tokens": {
+          "reported_total": 2639676,
+          "known_calls": 1600,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "reported_total": 158400,
+          "known_calls": 1600,
+          "unknown_calls": 0
+        }
+      },
+      "resolved_models": {
+        "typesafe/jev-1.14-20261014": 1600
+      }
+    }
+  },
+  "precision_scenarios": [
+    {
+      "assumed_ai_prevalence": 0.01,
+      "precision_using_observed_rates": 0.4658273381294964,
+      "precision_using_fpr_upper_95_and_observed_recall": 0.25318438594854303
+    },
+    {
+      "assumed_ai_prevalence": 0.05,
+      "precision_using_observed_rates": 0.819620253164557,
+      "precision_using_fpr_upper_95_and_observed_recall": 0.6385279144467799
+    },
+    {
+      "assumed_ai_prevalence": 0.1,
+      "precision_using_observed_rates": 0.9055944055944056,
+      "precision_using_fpr_upper_95_and_observed_recall": 0.7885479529210377
+    },
+    {
+      "assumed_ai_prevalence": 0.5,
+      "precision_using_observed_rates": 0.9885496183206107,
+      "precision_using_fpr_upper_95_and_observed_recall": 0.971067193790587
+    }
+  ]
+}

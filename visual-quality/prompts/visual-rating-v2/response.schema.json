@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visual rating v1",
+  "description": "Local response validation. Enforce the evidence word limit and exact decimal increments in the ingestion layer.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/technical_quality"
+    },
+    {
+      "$ref": "#/$defs/aesthetics"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "technical_quality",
+        "aesthetics"
+      ],
+      "properties": {
+        "technical_quality": {
+          "$ref": "#/$defs/technical_quality"
+        },
+        "aesthetics": {
+          "$ref": "#/$defs/aesthetics"
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "technical_quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task",
+        "status",
+        "score",
+        "evidence",
+        "limitations"
+      ],
+      "properties": {
+        "task": {
+          "const": "technical_quality"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "unscorable"
+          ]
+        },
+        "score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5,
+          "multipleOf": 0.1
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "limited_detail",
+              "partial_view",
+              "ambiguous_style",
+              "unsupported_domain"
+            ]
+          },
+          "uniqueItems": true,
+          "maxItems": 4
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "status": {
+              "const": "ok"
+            },
+            "score": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "properties": {
+            "status": {
+              "const": "unscorable"
+            },
+            "score": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    },
+    "aesthetics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task",
+        "status",
+        "score",
+        "evidence",
+        "limitations"
+      ],
+      "properties": {
+        "task": {
+          "const": "aesthetics"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "unscorable"
+          ]
+        },
+        "score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5,
+          "multipleOf": 0.1
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "limited_detail",
+              "partial_view",
+              "ambiguous_style",
+              "unsupported_domain"
+            ]
+          },
+          "uniqueItems": true,
+          "maxItems": 4
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "status": {
+              "const": "ok"
+            },
+            "score": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "properties": {
+            "status": {
+              "const": "unscorable"
+            },
+            "score": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

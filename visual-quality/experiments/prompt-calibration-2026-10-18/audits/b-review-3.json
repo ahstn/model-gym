@@ -1,0 +1,185 @@
+[
+  {
+    "case_id": "B13",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Mild softness and grain reduce tiny labels and texture while the model remains inspectable."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The stated loss of crispness and mild noise match the image; the overall model remains clear."
+      }
+    }
+  },
+  {
+    "case_id": "B08",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Heavy blur dominates both figures and background; the bright sky and reduced local contrast are visible."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The global blur leaves broad shapes with almost no fine detail, as described."
+      }
+    }
+  },
+  {
+    "case_id": "B04",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Severe blur merges trees, structures, and ground into broad soft areas."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Severe blur is visible, but heavy compression, block artifacts, and blocky banding are not supported."
+      }
+    }
+  },
+  {
+    "case_id": "B46",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "noise_misattribution"
+        ],
+        "note": "Visible grain and softness are described as heavy compression and blocky edges without clear supporting artifacts."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition"
+        ],
+        "note": "There is one watermark near the lower right; the separate jersey logos are printed content, not repeated overlays across the frame."
+      }
+    }
+  },
+  {
+    "case_id": "B10",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The image shows grain and mild softness while the player and ball remain recognizable."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "noise_misattribution"
+        ],
+        "note": "Grain and softness are visible, but the claimed compression artifacts are not established by the image."
+      }
+    }
+  },
+  {
+    "case_id": "B16",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "other"
+        ],
+        "note": "Dense colored noise covers the frame; calling it faint grain materially understates the dominant defect, and contrast is not muted."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "noise_misattribution"
+        ],
+        "note": "Dense colored noise masks detail; visible block artifacts and heavy compression are not supported."
+      }
+    }
+  },
+  {
+    "case_id": "B35",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "omitted_obstruction",
+          "omitted_exposure"
+        ],
+        "note": "No repeated text is visible; the explanation misses the large reddish obstruction and the washed-out bright region."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "omitted_obstruction",
+          "omitted_exposure"
+        ],
+        "note": "Repeated text fragments are not present; a large obstruction and severe highlight loss account for much of the missing content."
+      }
+    }
+  },
+  {
+    "case_id": "B09",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Mild softness is visible, but distinct compression artifacts are not supported by the image."
+      },
+      "Y": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "The player remains clear, with mild softness and reduced fine texture in the background."
+      }
+    }
+  },
+  {
+    "case_id": "B12",
+    "judgments": {
+      "X": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Grain across the frame and reduced texture are correctly identified; the noise is strong, but the player and ball remain recognizable."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression",
+          "noise_misattribution"
+        ],
+        "note": "Dense colored noise is the dominant defect; the explanation substitutes compression and smeared texture without clear block artifacts."
+      }
+    }
+  },
+  {
+    "case_id": "B29",
+    "judgments": {
+      "X": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_exposure"
+        ],
+        "note": "The room is dark, but the large foreground can is severely overexposed; this major source of detail loss is omitted."
+      },
+      "Y": {
+        "evidence_supported": false,
+        "issues": [
+          "omitted_exposure",
+          "noise_misattribution"
+        ],
+        "note": "The foreground is clipped white and soft, while the background is dark; heavy noise does not explain the main visible damage."
+      }
+    }
+  }
+]

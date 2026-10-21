@@ -1,0 +1,117 @@
+[
+  {
+    "case_id": "A44",
+    "judgments": {
+      "v1": {
+        "evidence_supported": null,
+        "issues": [],
+        "note": "Softness in distant detail is visible, but mild compression is not clear enough to confirm at this scale."
+      }
+    }
+  },
+  {
+    "case_id": "A23",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Fine foliage is softened and dense edges show mild artifact texture; the explanation is reasonable."
+      }
+    }
+  },
+  {
+    "case_id": "A10",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "Visible grain covers the sky and water; clear compression blocks or tonal bands are not evident."
+      }
+    }
+  },
+  {
+    "case_id": "A03",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Strong blur removes facial and carving detail while leaving the figure and broad layout recognizable."
+      }
+    }
+  },
+  {
+    "case_id": "A42",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "exaggerated_blur"
+        ],
+        "note": "The image has one readable two-line caption, not repeated garbled overlays; figures and banners are mildly soft rather than severely broken."
+      }
+    }
+  },
+  {
+    "case_id": "A21",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "exaggerated_blur",
+          "unsupported_compression"
+        ],
+        "note": "Fine branches and foliage remain distinct; heavy smearing and visible compression damage are not supported."
+      }
+    }
+  },
+  {
+    "case_id": "A41",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "other"
+        ],
+        "note": "The main subject is a weathered metal bell rather than stone; central lettering and texture remain clear, with softness mainly outside that area."
+      }
+    }
+  },
+  {
+    "case_id": "A08",
+    "judgments": {
+      "v1": {
+        "evidence_supported": true,
+        "issues": [],
+        "note": "Severe blur makes the document text unreadable and leaves only broad lines and shapes."
+      }
+    }
+  },
+  {
+    "case_id": "A13",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_compression"
+        ],
+        "note": "The architecture is mildly soft, but heavy compression and broken edges throughout the buildings and sky are not visible."
+      }
+    }
+  },
+  {
+    "case_id": "A37",
+    "judgments": {
+      "v1": {
+        "evidence_supported": false,
+        "issues": [
+          "unsupported_repetition",
+          "unsupported_compression"
+        ],
+        "note": "Repeated text is absent; the cup stripes and fabric remain clear, with mild grain rather than evident compression damage."
+      }
+    }
+  }
+]

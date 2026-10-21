@@ -7,6 +7,7 @@ import fcntl
 import hashlib
 import json
 import os
+import re
 from collections import Counter
 from contextlib import contextmanager
 from datetime import UTC, datetime
@@ -47,6 +48,23 @@ def _run_lock(output: Path):
 def _prompt_bundle(directory: Path) -> dict:
     names = ["system.txt", "technical-quality.txt", "response.schema.json"]
     files = {name: directory.joinpath(name).read_text() for name in names}
+    version = "visual-rating-v1"
+    version_path = directory / "prompt-version.json"
+    if version_path.exists():
+        try:
+            # Preserve metadata bytes, including line endings, in the bundle hash.
+            files[version_path.name] = version_path.read_bytes().decode("utf-8")
+            metadata = json.loads(files[version_path.name])
+        except (UnicodeDecodeError, json.JSONDecodeError) as error:
+            raise ValueError("Invalid prompt-version.json metadata") from error
+        if (
+            not isinstance(metadata, dict)
+            or set(metadata) != {"version"}
+            or not isinstance(metadata["version"], str)
+            or re.fullmatch(r"visual-rating-v[1-9][0-9]*", metadata["version"]) is None
+        ):
+            raise ValueError("prompt-version.json must contain only a valid visual-rating version")
+        version = metadata["version"]
     schema = json.loads(files["response.schema.json"])["$defs"]["technical_quality"]
     # Use the common provider schema subset. The ingestion validator enforces the
     # status/score relation, evidence length, and unique limitations locally.
@@ -61,7 +79,7 @@ def _prompt_bundle(directory: Path) -> dict:
     schema["properties"]["limitations"].pop("maxItems", None)
     schema["properties"]["limitations"]["items"]["type"] = "string"
     return {
-        "version": "visual-rating-v1",
+        "version": version,
         "sha256": _digest(files),
         "system": files["system.txt"],
         "user": files["technical-quality.txt"],

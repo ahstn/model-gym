@@ -4,7 +4,7 @@ This runner implements the [proposed label contract](label-specification-2026-10
 
 The [18 October run record](label-pilot-2026-10-18.md) reports the first 12-image execution and its validation results.
 
-The [visual validation audit](label-pilot-validation-2026-10-18.md) holds further expansion because some explanations conflict with the visible defects and the rubric. The commands below describe the runner; they do not approve more scoring or training.
+The [visual validation audit](label-pilot-validation-2026-10-18.md) holds bulk labelling because some explanations conflict with the visible defects and the rubric. A later, explicitly requested [50+50 prompt experiment](../../experiments/prompt-calibration-2026-10-18/README.md) completed 150 calls and found better explanations but no reliable score improvement. The commands below describe the runner; they do not approve training.
 
 The [reviewed score record](label-pilot-corrections-2026-10-18.md) contains seven score corrections and three evidence-only corrections. These assistant judgments remain pending human review and preserve the original teacher output.
 
@@ -57,6 +57,8 @@ uv run visual-pilot verify-labels
 ```
 
 `--dry-run` checks the prepared views and prompt without network access or credentials. It does not test provider compatibility. The live command fetches the exact model catalogue entry and requires image input and structured-output support. It sends the frozen PNG bytes as a base64 data URL, with the rubric first. There are no model substitutions, provider fallbacks, response-repair plugins, tools, or automatic retries. Reasoning is disabled; temperature is zero when supported. These settings reduce variation but do not guarantee identical model responses.
+
+A prompt directory can include `prompt-version.json` with exactly one key, for example `{"version":"visual-rating-v2"}`. The version must match `visual-rating-v` followed by a positive integer, and the metadata content enters the bundle hash. Without this file, the original v1 version and hash remain unchanged. The experimental v2 prompt has not passed the comparison rule and is not the default.
 
 One request is made at a time. Before each request, the runner reserves the cost of the model's entire context window plus its output limit at the highest listed token rates, including price overrides. This is a conservative admission bound, not an expected cost. Provider price caps use those rates and reject per-image or per-request fees. The first version supports token-billed models; it refuses nonzero additional fee types it cannot bound. It stops if the next reserve would exceed the run budget, which is limited to $10. The default budget is $1. Actual costs come from the provider's `usage.cost`; missing costs remain unknown and stop further calls.
 

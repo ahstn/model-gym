@@ -1,0 +1,129 @@
+[
+  {
+    "case_id": "B49",
+    "score": 4.8,
+    "interval": [
+      4.6,
+      5.0
+    ],
+    "evidence": "The sculpture retains clear surface texture, carved edges, and small cracks, with well preserved bright detail and no meaningful visible defects at this scale.",
+    "defects": [
+      "none"
+    ]
+  },
+  {
+    "case_id": "B19",
+    "score": 3.8,
+    "interval": [
+      3.5,
+      4.1
+    ],
+    "evidence": "Mild softness and grain reduce hair, skin, and fabric detail, while the faces and central object remain clear; some bright surfaces lose texture.",
+    "defects": [
+      "blur",
+      "noise",
+      "exposure"
+    ]
+  },
+  {
+    "case_id": "B27",
+    "score": 1.8,
+    "interval": [
+      1.6,
+      2.1
+    ],
+    "evidence": "Strong directional blur smears bottle edges and label text, while bright glare washes out much of the white bottle; the products remain recognizable but important detail is difficult to inspect.",
+    "defects": [
+      "blur",
+      "exposure"
+    ]
+  },
+  {
+    "case_id": "B32",
+    "score": 3.3,
+    "interval": [
+      3.0,
+      3.6
+    ],
+    "evidence": "Soft edges and visible grain reduce fine label and wood detail, while glare obscures a small part of the can label; most printed content remains inspectable.",
+    "defects": [
+      "blur",
+      "noise",
+      "exposure"
+    ]
+  },
+  {
+    "case_id": "B39",
+    "score": 2.2,
+    "interval": [
+      2.0,
+      2.5
+    ],
+    "evidence": "Strong blur affects the flower center and most petals, preserving the overall shape and colors but removing much of the fine detail from the stamens and petal surfaces.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "B45",
+    "score": 4.2,
+    "interval": [
+      3.9,
+      4.5
+    ],
+    "evidence": "Hair and facial features remain detailed despite light grain, while a blurred foreground object covers part of the lower torso without obscuring the face.",
+    "defects": [
+      "noise",
+      "obstruction"
+    ]
+  },
+  {
+    "case_id": "B24",
+    "score": 2.6,
+    "interval": [
+      2.3,
+      2.9
+    ],
+    "evidence": "Large block artifacts and smeared textures reduce detail across produce, faces, and walls; the market scene remains recognizable, but fine features and small text are difficult to inspect.",
+    "defects": [
+      "compression"
+    ]
+  },
+  {
+    "case_id": "B22",
+    "score": 4.4,
+    "interval": [
+      4.1,
+      4.7
+    ],
+    "evidence": "Produce textures, price cards, and stall edges remain clear, with light grain that has little effect on the main content.",
+    "defects": [
+      "noise"
+    ]
+  },
+  {
+    "case_id": "B31",
+    "score": 1.4,
+    "interval": [
+      1.2,
+      1.7
+    ],
+    "evidence": "A dense bright veil and reflected glare severely reduce contrast across the frame, leaving the screen and equipment faint and most small details unreadable.",
+    "defects": [
+      "contrast",
+      "exposure"
+    ]
+  },
+  {
+    "case_id": "B01",
+    "score": 4.7,
+    "interval": [
+      4.4,
+      4.9
+    ],
+    "evidence": "Grass, foliage, building edges, and the truck retain clear detail across the scene, with readable larger signs and no meaningful visible defects at this scale.",
+    "defects": [
+      "none"
+    ]
+  }
+]

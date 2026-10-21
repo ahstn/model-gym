@@ -1,0 +1,14 @@
+{
+  "stage": "a",
+  "frozen_at": "2026-10-18T16:44:18.444751+00:00",
+  "method": "Five disjoint blinded assistant reference tasks; references saved before any provider output was supplied to these reviewers or inspected by the prompt reviser.",
+  "source_files_sha256": {
+    "experiments/prompt-calibration-2026-10-18/references/a-review-1.json": "b4042db947b287d41ec667e5130c5423a9dafee2bd5c5f934a2a36879f94c980",
+    "experiments/prompt-calibration-2026-10-18/references/a-review-2.json": "5acb8eaed7c14b97e36c7febbe6d22ddc329b572982e09a3f0a28095ffc60ba7",
+    "experiments/prompt-calibration-2026-10-18/references/a-review-3.json": "a67646f58898fdd5f7293dd9cbfb873b57b6de6fdcb24c6f8822c0a2cdc2a5a1",
+    "experiments/prompt-calibration-2026-10-18/references/a-review-4.json": "aebab850d476586bb4cecb751238981a39f88f92bfb1177926ed6d4b9bfb01a7",
+    "experiments/prompt-calibration-2026-10-18/references/a-review-5.json": "908e2770425db785ac8cc9ec3b99433d5679d30b9bd69e8a3eacf4c9e5abd0f3"
+  },
+  "merged_sha256": "3a14413dc718dc468cd3d544d27bfbe57af9194173cc16057928e02ef689aab6",
+  "human_gold": false
+}

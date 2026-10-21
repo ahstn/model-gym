@@ -1,0 +1,125 @@
+[
+  {
+    "case_id": "A20",
+    "score": 2.1,
+    "interval": [
+      1.8,
+      2.4
+    ],
+    "evidence": "Large block artifacts and abrupt color steps cover most of the sky, severely reducing cloud detail, although the branches remain identifiable.",
+    "defects": [
+      "compression"
+    ]
+  },
+  {
+    "case_id": "A28",
+    "score": 1.1,
+    "interval": [
+      1.0,
+      1.3
+    ],
+    "evidence": "Severe blur removes almost all object detail, leaving a broad blue shape and a pink patch with no clearly defined surface features.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A01",
+    "score": 4.5,
+    "interval": [
+      4.2,
+      4.8
+    ],
+    "evidence": "Carved figures, fine inscriptions, and stone texture remain clear, with only slight softness around the lower carving.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A17",
+    "score": 4.4,
+    "interval": [
+      4.1,
+      4.7
+    ],
+    "evidence": "Thin branches and cloud texture remain clear; faint grain in the sky causes only minor loss of smoothness.",
+    "defects": [
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A31",
+    "score": 1.0,
+    "interval": [
+      1.0,
+      1.2
+    ],
+    "evidence": "Almost the entire frame is black, with only two small bright marks and faint grain visible, so scene detail cannot be inspected.",
+    "defects": [
+      "exposure",
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A36",
+    "score": 1.8,
+    "interval": [
+      1.5,
+      2.2
+    ],
+    "evidence": "A large foreground obstruction covers over half the frame and much of the bottle; blur and grain further reduce the remaining label and surface detail.",
+    "defects": [
+      "obstruction",
+      "blur",
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A25",
+    "score": 3.0,
+    "interval": [
+      2.7,
+      3.3
+    ],
+    "evidence": "Blur softens the pepper edges, stem, and control buttons, while the large shapes and table grain remain easy to inspect.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A02",
+    "score": 3.0,
+    "interval": [
+      2.7,
+      3.3
+    ],
+    "evidence": "Global blur obscures fine inscriptions and stone texture, but the main figure, robe folds, and panel outlines remain recognizable.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A45",
+    "score": 4.1,
+    "interval": [
+      3.8,
+      4.4
+    ],
+    "evidence": "Faces, eyelashes, and hands retain useful detail, although mild softness reduces fine detail on the nearer face.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A15",
+    "score": 2.8,
+    "interval": [
+      2.5,
+      3.1
+    ],
+    "evidence": "Dense colored noise covers the sky and buildings, obscuring fine surface detail while the dome, windows, and main architectural edges remain visible.",
+    "defects": [
+      "noise"
+    ]
+  }
+]

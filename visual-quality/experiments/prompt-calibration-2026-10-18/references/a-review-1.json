@@ -1,0 +1,128 @@
+[
+  {
+    "case_id": "A06",
+    "score": 2.9,
+    "interval": [
+      2.6,
+      3.2
+    ],
+    "evidence": "Blur softens letters throughout the sign and fine noise covers the paper, although most English text and the larger characters remain readable.",
+    "defects": [
+      "blur",
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A29",
+    "score": 3.6,
+    "interval": [
+      3.2,
+      3.9
+    ],
+    "evidence": "The fabric weave remains clear across much of the image, but bright glare washes out the right edge and the lower fabric texture is softer.",
+    "defects": [
+      "exposure",
+      "contrast",
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A16",
+    "score": 2.2,
+    "interval": [
+      2.0,
+      2.5
+    ],
+    "evidence": "Dense colored noise covers the entire scene and damages fine architectural detail, while the dome, windows, and building outlines remain identifiable.",
+    "defects": [
+      "noise"
+    ]
+  },
+  {
+    "case_id": "A38",
+    "score": 2.5,
+    "interval": [
+      2.2,
+      2.8
+    ],
+    "evidence": "Broad softness merges small package text and softens the beans, while strong glare obscures detail across the upper image and part of the center.",
+    "defects": [
+      "blur",
+      "exposure",
+      "contrast"
+    ]
+  },
+  {
+    "case_id": "A46",
+    "score": 4.1,
+    "interval": [
+      3.9,
+      4.4
+    ],
+    "evidence": "The face, carved hair, and stone texture remain well defined, with mild softness on the upper carving and outer edges having little effect on the main detail.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A47",
+    "score": 4.7,
+    "interval": [
+      4.5,
+      4.9
+    ],
+    "evidence": "The central speaker's face, hair, clothing, and nearby table objects retain clear detail, with smooth tones and no disruptive artifacts.",
+    "defects": [
+      "none"
+    ]
+  },
+  {
+    "case_id": "A32",
+    "score": 2.8,
+    "interval": [
+      2.5,
+      3.1
+    ],
+    "evidence": "Large white glare patches erase much of the upper package graphic and some lettering, while the remaining label text is slightly soft but mostly readable.",
+    "defects": [
+      "exposure",
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A07",
+    "score": 1.5,
+    "interval": [
+      1.3,
+      1.8
+    ],
+    "evidence": "Severe blur merges letter strokes throughout the sign, making most small text very difficult to read despite the visible heading and paragraph layout.",
+    "defects": [
+      "blur"
+    ]
+  },
+  {
+    "case_id": "A24",
+    "score": 2.7,
+    "interval": [
+      2.5,
+      3.0
+    ],
+    "evidence": "Large compression blocks break up the sky, foliage, and path, with strong color steps and lost texture, although the trees and garden layout remain clear.",
+    "defects": [
+      "compression"
+    ]
+  },
+  {
+    "case_id": "A48",
+    "score": 4.9,
+    "interval": [
+      4.7,
+      5.0
+    ],
+    "evidence": "Fine facade patterns, boat edges, and water texture remain clear, with balanced visible detail and no meaningful noise, blur, or compression artifacts.",
+    "defects": [
+      "none"
+    ]
+  }
+]

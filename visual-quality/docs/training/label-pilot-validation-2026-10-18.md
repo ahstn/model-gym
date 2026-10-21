@@ -4,6 +4,8 @@
 
 **Follow-up:** The user later requested score corrections. A fresh review produced a [separate versioned correction artifact](label-pilot-corrections-2026-10-18.md), with seven revised scores and three evidence-only corrections. The original records and this audit remain evidence of the teacher's output; expansion is still on hold.
 
+**Further diagnostic work:** The user then authorized a [50+50 prompt calibration experiment](../../experiments/prompt-calibration-2026-10-18/README.md). All 150 requests completed. The revised prompt reduced unsupported explanations but did not show reliable score improvement on the separate test cohort. Bulk labelling and training remain unapproved.
+
 ## Checks and limits
 
 `verify-labels` passed for all 12 records. Source files, prepared views, request hashes, and exported observations match the stored responses. Each score is finite and falls within 1–5 in exact 0.1 steps. All training masks remain false. The three source manifest hashes and the frozen runner code hashes are unchanged.

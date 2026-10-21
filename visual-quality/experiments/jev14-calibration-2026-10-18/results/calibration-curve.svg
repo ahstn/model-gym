@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="590" viewBox="0 0 880 590" role="img" aria-labelledby="title desc">
+<title id="title">Jev 1.14 calibration threshold tradeoffs</title>
+<desc id="desc">Empirical false-positive rate versus AI recall for the predeclared probability and uncertainty rules. Calibration data only. The vertical line is the one percent false-positive target.</desc>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#17212b">
+<text x="90" y="32" font-size="21" font-weight="bold">Calibration threshold tradeoffs</text>
+<text x="90" y="57" font-size="14">Calibration data only; observed rates, without confidence bounds</text>
+<line x1="90" y1="480.00" x2="830" y2="480.00" stroke="#e5e7eb"/>
+<text x="78" y="485.00" font-size="13" text-anchor="end">0</text>
+<line x1="90.00" y1="110" x2="90.00" y2="480" stroke="#f1f3f5"/>
+<text x="90.00" y="504" font-size="13" text-anchor="middle">0</text>
+<line x1="90" y1="406.00" x2="830" y2="406.00" stroke="#e5e7eb"/>
+<text x="78" y="411.00" font-size="13" text-anchor="end">20</text>
+<line x1="238.00" y1="110" x2="238.00" y2="480" stroke="#f1f3f5"/>
+<text x="238.00" y="504" font-size="13" text-anchor="middle">7</text>
+<line x1="90" y1="332.00" x2="830" y2="332.00" stroke="#e5e7eb"/>
+<text x="78" y="337.00" font-size="13" text-anchor="end">40</text>
+<line x1="386.00" y1="110" x2="386.00" y2="480" stroke="#f1f3f5"/>
+<text x="386.00" y="504" font-size="13" text-anchor="middle">14</text>
+<line x1="90" y1="258.00" x2="830" y2="258.00" stroke="#e5e7eb"/>
+<text x="78" y="263.00" font-size="13" text-anchor="end">60</text>
+<line x1="534.00" y1="110" x2="534.00" y2="480" stroke="#f1f3f5"/>
+<text x="534.00" y="504" font-size="13" text-anchor="middle">21</text>
+<line x1="90" y1="184.00" x2="830" y2="184.00" stroke="#e5e7eb"/>
+<text x="78" y="189.00" font-size="13" text-anchor="end">80</text>
+<line x1="682.00" y1="110" x2="682.00" y2="480" stroke="#f1f3f5"/>
+<text x="682.00" y="504" font-size="13" text-anchor="middle">28</text>
+<line x1="90" y1="110.00" x2="830" y2="110.00" stroke="#e5e7eb"/>
+<text x="78" y="115.00" font-size="13" text-anchor="end">100</text>
+<line x1="830.00" y1="110" x2="830.00" y2="480" stroke="#f1f3f5"/>
+<text x="830.00" y="504" font-size="13" text-anchor="middle">35</text>
+<line x1="111.14" y1="110" x2="111.14" y2="480" stroke="#64748b" stroke-dasharray="5 5"/>
+<text x="116.14" y="126" font-size="12" fill="#475569">1% target</text>
+<polyline points="794.76,121.10 759.52,122.33 717.24,124.80 674.95,124.80 618.57,127.27 562.19,129.73 512.86,130.97 463.52,132.20 421.24,135.90 400.10,139.60 393.05,140.83 364.86,144.53 322.57,147.00 301.43,148.23 287.33,150.70 259.14,153.17 238.00,153.17 223.90,158.10 202.76,165.50 195.71,170.43 181.62,182.77 174.57,186.47 160.48,196.33 153.43,211.13 153.43,218.53 146.38,237.03 125.24,258.00 118.19,275.27 111.14,288.83 104.10,312.27 97.05,333.23 90.00,359.13 90.00,380.10 90.00,393.67 90.00,406.00 90.00,423.27 90.00,440.53 90.00,449.17 90.00,461.50 90.00,468.90 90.00,476.30 90.00,477.53 90.00,477.53 90.00,478.77 90.00,480.00 90.00,480.00 90.00,480.00 90.00,480.00 90.00,480.00 90.00,480.00 90.00,480.00" fill="none" stroke="#1769aa" stroke-width="2.5"/>
+<line x1="90" y1="83" x2="120" y2="83" stroke="#1769aa" stroke-width="2.5"/>
+<text x="128" y="88" font-size="14">Probability only</text>
+<polyline points="174.57,276.50 174.57,276.50 174.57,276.50 174.57,276.50 174.57,276.50 174.57,276.50 167.52,276.50 167.52,276.50 167.52,276.50 167.52,276.50 167.52,276.50 167.52,276.50 167.52,276.50 160.48,276.50 160.48,276.50 160.48,277.73 153.43,277.73 153.43,277.73 153.43,277.73 153.43,277.73 153.43,278.97 153.43,278.97 153.43,280.20 146.38,285.13 146.38,286.37 139.33,291.30 118.19,297.47 118.19,306.10 111.14,311.03 104.10,327.07 97.05,341.87 90.00,366.53 90.00,383.80 90.00,396.13 90.00,407.23 90.00,424.50 90.00,440.53 90.00,449.17 90.00,461.50 90.00,468.90 90.00,476.30 90.00,477.53 90.00,477.53 90.00,478.77 90.00,480.00 90.00,480.00 90.00,480.00 90.00,480.00 90.00,480.00 90.00,480.00 90.00,480.00" fill="none" stroke="#c85d00" stroke-width="2.5" stroke-dasharray="7 4"/>
+<line x1="360" y1="83" x2="390" y2="83" stroke="#c85d00" stroke-width="2.5" stroke-dasharray="7 4"/>
+<text x="398" y="88" font-size="14">Exclude high uncertainty</text>
+<circle cx="111.14" cy="288.83" r="6" fill="white" stroke="#111827" stroke-width="2.5"><title>AI probability &gt;= 0.78</title></circle>
+<path d="M 90 110 V 480 H 830" fill="none" stroke="#374151"/>
+<text x="460.0" y="535" font-size="15" text-anchor="middle">Real-photo false-positive rate (%)</text>
+<text transform="translate(25 295) rotate(-90)" font-size="15" text-anchor="middle">AI recall (%)</text>
+<text x="90" y="568" font-size="12">Selected: AI probability &gt;= 0.78. Recall 51.7%; FPR 1.00%.</text>
+</g></svg>

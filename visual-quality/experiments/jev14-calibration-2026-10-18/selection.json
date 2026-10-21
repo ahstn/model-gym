@@ -1,0 +1,41 @@
+{
+  "selected_at": "2026-10-18T16:50:30.610162+00:00",
+  "rule": {
+    "threshold": 0.78,
+    "gate": "none"
+  },
+  "protocol_sha256": "343793d47fbfb7c289c623bd494c4fc8081c3d9bd8c7a17cfdc24697fd85b392",
+  "calibration_ledger_sha256": "5b0e3ccce8f00721734b37bfcf47e6608c0d28a15db92e51b7e7e43478ccbc9b",
+  "calibration_metrics": {
+    "rule": {
+      "threshold": 0.78,
+      "gate": "none"
+    },
+    "counts": {
+      "total": 600,
+      "real": 300,
+      "ai": 300,
+      "valid": 600,
+      "unresolved": 0,
+      "tp": 155,
+      "fp": 3,
+      "tn": 297,
+      "fn": 145,
+      "flagged": 158,
+      "review": 442,
+      "gate_exclusions": 0
+    },
+    "fpr": 0.01,
+    "fpr_upper_95": 0.02564139308261016,
+    "recall": 0.5166666666666667,
+    "recall_ci_95": [
+      0.4585293985393615,
+      0.574471596601122
+    ],
+    "review_share": 0.7366666666666667,
+    "unresolved": 0,
+    "gate_exclusions": 0
+  },
+  "calibration_cases": 600,
+  "validation_attempts_at_selection": 0
+}
