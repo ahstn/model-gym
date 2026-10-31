@@ -18,6 +18,7 @@ uv run image-stats calibrate out/stats.jsonl --output out/reference.json --name 
 uv run image-stats describe out/stats.jsonl --reference out/reference.json --output out/prompts.jsonl
 uv run image-stats evidence photo.jpg --output-dir out/evidence
 uv run pytest
+mise run parity                                  # decoding matches visual-quality's frozen views
 ```
 
 For frozen visual-quality views, read the manifest directly:
@@ -34,13 +35,13 @@ uv run image-stats analyse --manifest ../visual-quality/data/label-pilot-12/view
 ```python
 from image_stats import Reference, analyse, evidence_maps, read_metadata, render
 
-analysis = analyse(image_bytes)          # bytes, path, PIL image, or uint8/float array
-if analysis.gate:                        # "uniform_frame": apply the policy floor and skip the model
+analysis = analyse(image_bytes)  # bytes, path, PIL image, or uint8/float array
+if analysis.gate:  # "uniform_frame": apply the policy floor and skip the model
     ...
 reference = Reference.load("reference.json")
 prompt_block = render(analysis, reference)
-maps = evidence_maps(image_bytes)        # {"sharpness", "noise_residual", "clipping", "spectrum"} PIL images
-metadata = read_metadata(original_bytes) # EXIF camera fields, JPEG quality estimate, bytes per megapixel
+maps = evidence_maps(image_bytes)  # {"sharpness", "noise_residual", "clipping", "spectrum"} PIL images
+metadata = read_metadata(original_bytes)  # EXIF camera fields, JPEG quality estimate, bytes per megapixel
 ```
 
 An example prompt block for a blurred photo:
@@ -67,23 +68,31 @@ scenes, deliberate blur, or artistic intent; use them to check what you see, not
 | Noise | Immerkaer sigma for luma and chroma, measured in the flattest unclipped tiles |
 | Colour | Hasler-Suesstrunk colourfulness, mean saturation, Lab chroma p99, mean a\*/b\* cast |
 | Content | flat-tile area, palette size, top-colour share |
-| Compression | 8×8 blockiness at native resolution |
+| Compression | 8×8 blockiness at native resolution, at whichever 8-pixel phase is strongest |
 
 `read_metadata` reads the original file. It returns format, dimensions, frames, bytes per megapixel, alpha, ICC, camera make and model, software, exposure time, f-number, ISO, focal length, JPEG quality estimate, and chroma subsampling. It never reads capture time, GPS, or serial numbers.
 
-Flags are scale-free rules in [`flags.py`](src/image_stats/flags.py): `uniform_frame` (the only gating flag), `near_black`, `near_white`, `shadow_clipping`, `highlight_clipping`, `graphic_like`, `monochrome`, and `blocking`. Sharpness and noise have no absolute flags. Their raw values depend on content and resolution, so judge them as percentiles against a reference built from the same corpus and `max_edge`.
+Flags are scale-free rules in [`flags.py`](src/image_stats/flags.py): `uniform_frame`, `near_black`, `near_white`, `shadow_clipping`, `highlight_clipping`, `graphic_like`, `monochrome`, and `blocking`. Sharpness and noise have no absolute flags. Their raw values depend on content and resolution, so judge them as percentiles against a reference built from the same corpus and `max_edge`.
+
+`uniform_frame` is the only gating flag. It requires both conditions:
+
+- Canny edges cover less than 0.05% of the frame.
+- Median tile contrast is under 2 luma levels after the noise floor is removed, so a black frame with sensor grain still counts as empty.
+
+On the 72-image reviewed trial it gates exactly the two frames Ref scored 1.0 for having no content: T0571 (black) and T0984 (red). The nearest image it does not gate is T0028, a defocused ceiling with broad shapes (Ref 1.3), at 2.74 levels.
 
 ## Rules that keep the numbers comparable
 
 - **Analyse the pixels the model sees.** Decoding follows the visual-quality view policy: EXIF transpose, embedded ICC to sRGB with perceptual intent, alpha composited on white, then a Pillow LANCZOS thumbnail to `max_edge` (1536 by default, never upscaled). An original analysed at 1536 therefore goes through the same steps as its frozen view.
 - **Read file facts from the original.** Views are re-encoded PNGs with no EXIF, and resizing destroys the 8×8 JPEG grid. Pass `source_path` (or `--source-key`) to take metadata and `source_blockiness` from the original. `views.jsonl` does not store the original path, so join it from the dataset manifest first.
+- **Keep the decode policy in step.** `mise run parity` checks `decode` and `fit` pixel for pixel against `visual_quality.views._render`. Run it whenever either side changes.
 - **Version everything.** Every record carries `ALGORITHM_VERSION`. A `Reference` records the version and `max_edge` it was built with, and `describe` refuses a mismatch. Bump the version whenever a formula or default changes.
 - **Give the model ranks, not raw numbers.** A teacher cannot interpret `laplacian_var=12.4`, and numbers invite anchoring. Measure the effect before relying on it: score the reviewed cases with and without the block and compare error against the reference judgments per quality band.
 
 ## Limitations
 
-- Validation so far uses synthetic images with known blur, noise, clipping, and JPEG quality, plus scikit-image sample photos. Flag thresholds are initial guesses. Recalibrate them against reviewed labels before using them for anything except the uniform-frame gate.
-- `noise_sigma` reads about 5% low on flat synthetic noise and lower on busy photos, because it takes the 10th percentile of tiles. Use it as a rank.
+- Validation so far covers synthetic images with known blur, noise, clipping, and JPEG quality, scikit-image sample photos, and the 72-image reviewed trial. On that trial, Spearman ρ against Ref technical scores is +0.69 for `sharpness_peak`, +0.62 for `tenengrad`, and +0.56 for `luma_entropy`. By comparison, Luna scores 0.96 and DeepSeek 0.84. The uniform-frame thresholds come from this trial. The other flag thresholds are initial guesses, so recalibrate them against reviewed labels.
+- `noise_sigma` reads about 5% low on flat synthetic noise and lower on busy photos, because it takes the 10th percentile of tiles. It had no rank correlation with Ref scores on the trial (ρ 0.00), so use it as context, not as a quality signal.
 - `gradient_anisotropy` also rises for scenes with strong parallel lines, such as buildings and fences.
 - The JPEG quality estimate reads high below about quality 20, because 8-bit tables clip.
 - Documents photographed on textured paper are not flagged `graphic_like`. Detecting text, screenshots, and non-photographic scope needs OCR or a CLIP/SigLIP zero-shot score. Add those as separate optional extractors so the core stays dependency-light and licence-clean.

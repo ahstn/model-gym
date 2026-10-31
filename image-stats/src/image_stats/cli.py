@@ -9,15 +9,16 @@ import platform
 import sys
 
 from collections import Counter
+from collections.abc import Iterator
 from concurrent.futures import ProcessPoolExecutor
+from contextlib import ExitStack, contextmanager
 from dataclasses import asdict
 from pathlib import Path
+from typing import TextIO
 
 import cv2
 import numpy as np
 import PIL
-
-from PIL import Image
 
 from image_stats.analysis import Analysis, analyse_file
 from image_stats.describe import observations, render
@@ -63,6 +64,15 @@ def main(argv: list[str] | None = None) -> int:
     commands.add_parser("metrics", help="List metric definitions")
 
     args = parser.parse_args(argv)
+    if hasattr(args, "max_edge") and not 64 <= args.max_edge <= 8192:
+        parser.error("--max-edge must be from 64 to 8192")
+    try:
+        return _run(args, parser)
+    except ValueError as error:
+        parser.exit(2, f"{parser.prog}: error: {error}\n")
+
+
+def _run(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
     if args.command == "analyse":
         return _analyse(args, parser)
     if args.command == "calibrate":
@@ -84,24 +94,36 @@ def main(argv: list[str] | None = None) -> int:
 def _analyse(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
     if bool(args.manifest) == bool(args.inputs):
         parser.error("analyse takes either image inputs or --manifest")
+    if args.workers < 1:
+        parser.error("--workers must be at least 1")
     jobs = _manifest_jobs(args) if args.manifest else _input_jobs(args.inputs)
     if not jobs:
         parser.error("No images found")
+    duplicates = sorted(identity for identity, count in Counter(job[0] for job in jobs).items() if count > 1)
+    if duplicates:
+        parser.error(f"Duplicate image IDs: {', '.join(duplicates[:5])}")
     tasks = [(*job, args.max_edge) for job in jobs]
-    if args.workers > 1:
-        with ProcessPoolExecutor(args.workers, initializer=cv2.setNumThreads, initargs=(1,)) as pool:
-            records = list(pool.map(_record, tasks, chunksize=8))
-    else:
-        records = [_record(task) for task in tasks]
-    _write_jsonl(args.output, records)
-    analysed = [record["analysis"] for record in records if "analysis" in record]
+    counts, flags = Counter(), Counter()
+    with ExitStack() as stack:
+        if args.workers > 1:
+            pool = stack.enter_context(ProcessPoolExecutor(args.workers, initializer=cv2.setNumThreads, initargs=(1,)))
+            records = pool.map(_record, tasks, chunksize=8)
+        else:
+            records = map(_record, tasks)
+        # Stream records so memory stays flat; the rename publishes only a complete file.
+        with _staged(args.output) as handle:
+            for record in records:
+                handle.write(json.dumps(record, sort_keys=True, allow_nan=False) + "\n")
+                analysis = record.get("analysis")
+                counts.update(images=1, errors=analysis is None, gated=bool(analysis and analysis["gate"]))
+                flags.update(analysis["flags"] if analysis else ())
     summary = {
         "version": ALGORITHM_VERSION,
         "max_edge": args.max_edge,
-        "images": len(records),
-        "errors": len(records) - len(analysed),
-        "gated": sum(item["gate"] is not None for item in analysed),
-        "flags": dict(sorted(Counter(flag for item in analysed for flag in item["flags"]).items())),
+        "images": counts["images"],
+        "errors": counts["errors"],
+        "gated": counts["gated"],
+        "flags": dict(sorted(flags.items())),
         "output": str(args.output),
         "software": {
             "python": platform.python_version(),
@@ -119,8 +141,10 @@ def _input_jobs(inputs: list[Path]) -> list[tuple[str, Path, None]]:
     jobs = []
     for item in inputs:
         if item.is_dir():
+            # With several directories, prefix each ID with its directory name to keep IDs distinct.
+            prefix = f"{item.resolve().name}/" if len(inputs) > 1 else ""
             files = sorted(path for path in item.rglob("*") if path.suffix.lower() in IMAGE_SUFFIXES)
-            jobs += [(path.relative_to(item).as_posix(), path, None) for path in files]
+            jobs += [(prefix + path.relative_to(item).as_posix(), path, None) for path in files]
         else:
             jobs.append((item.as_posix(), item, None))
     return jobs
@@ -143,7 +167,7 @@ def _record(task: tuple[str, Path, Path | None, int]) -> dict:
     identity, path, source, max_edge = task
     try:
         return {"id": identity, "path": str(path), **analyse_file(path, max_edge=max_edge, source_path=source)}
-    except (OSError, ValueError, SyntaxError, Image.DecompressionBombError, cv2.error) as error:
+    except Exception as error:  # noqa: BLE001 - one bad file (e.g. corrupt EXIF) must not end a corpus run
         return {"id": identity, "path": str(path), "error": f"{type(error).__name__}: {error}"}
 
 
@@ -151,10 +175,10 @@ def _calibrate(args: argparse.Namespace) -> int:
     analysed = [record["analysis"] for record in _read_jsonl(args.stats) if "analysis" in record]
     settings = {(item["version"], item["max_edge"]) for item in analysed}
     if len(settings) != 1:
-        raise SystemExit(f"Expected one version and max_edge in {args.stats}; found {sorted(settings)}")
+        raise ValueError(f"Expected one version and max_edge in {args.stats}; found {sorted(settings)}")
     ((version, max_edge),) = settings
     if version != ALGORITHM_VERSION:
-        raise SystemExit(f"Records use {version}; this package computes {ALGORITHM_VERSION}. Re-run analyse.")
+        raise ValueError(f"Records use {version}; this package computes {ALGORITHM_VERSION}. Re-run analyse.")
     reference = Reference.build((item["metrics"] for item in analysed), name=args.name, max_edge=max_edge)
     reference.save(args.output)
     print(json.dumps({"reference": str(args.output), "count": reference.count, "version": version}))
@@ -188,10 +212,20 @@ def _read_jsonl(path: Path) -> list[dict]:
 
 
 def _write_jsonl(path: Path, rows: list[dict]) -> None:
+    with _staged(path) as handle:
+        handle.writelines(json.dumps(row, sort_keys=True, allow_nan=False) + "\n" for row in rows)
+
+
+@contextmanager
+def _staged(path: Path) -> Iterator[TextIO]:
     path.parent.mkdir(parents=True, exist_ok=True)
     staging = path.with_name(f".{path.name}.{os.getpid()}.tmp")
-    staging.write_text("".join(json.dumps(row, sort_keys=True, allow_nan=False) + "\n" for row in rows))
-    staging.replace(path)
+    try:
+        with staging.open("w") as handle:
+            yield handle
+        staging.replace(path)
+    finally:
+        staging.unlink(missing_ok=True)
 
 
 if __name__ == "__main__":

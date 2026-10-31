@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import math
+
 from collections.abc import Mapping
 from dataclasses import dataclass
 
@@ -22,10 +24,10 @@ FLAG_TEXT = {
 
 @dataclass(frozen=True)
 class Thresholds:
-    """Initial values chosen on synthetic images; recalibrate against reviewed labels before relying on them."""
+    """Uniform-frame values come from the 72-image reviewed trial; the rest are initial guesses."""
 
-    uniform_rms_contrast: float = 0.016  # about 4 luma levels
-    uniform_sharpness_peak: float = 5.0
+    uniform_edge_density: float = 0.0005
+    uniform_structure: float = 2.0  # luma levels of tile contrast left after removing noise
     near_black_p99: float = 0.08
     near_white_p01: float = 0.92
     shadow_clip: float = 0.4
@@ -43,8 +45,7 @@ DEFAULT_THRESHOLDS = Thresholds()
 def evaluate(metrics: Mapping[str, float], thresholds: Thresholds = DEFAULT_THRESHOLDS) -> tuple[str, ...]:
     t = thresholds
     checks = {
-        "uniform_frame": metrics["rms_contrast"] < t.uniform_rms_contrast
-        and metrics["sharpness_peak"] < t.uniform_sharpness_peak,
+        "uniform_frame": metrics["edge_density"] < t.uniform_edge_density and structure(metrics) < t.uniform_structure,
         "near_black": metrics["luma_p99"] < t.near_black_p99,
         "near_white": metrics["luma_p01"] > t.near_white_p01,
         "shadow_clipping": metrics["shadow_clip"] >= t.shadow_clip,
@@ -57,3 +58,9 @@ def evaluate(metrics: Mapping[str, float], thresholds: Thresholds = DEFAULT_THRE
         "blocking": metrics["blockiness"] >= t.blocking,
     }
     return tuple(name for name in FLAG_TEXT if checks[name])
+
+
+def structure(metrics: Mapping[str, float]) -> float:
+    """Median tile contrast in luma levels with the noise floor removed, so sensor noise is not content."""
+    local = metrics["local_contrast"] * 255
+    return math.sqrt(max(local * local - metrics["noise_sigma"] ** 2, 0.0))

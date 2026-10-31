@@ -83,6 +83,18 @@ def test_blockiness_tracks_jpeg_quality_at_native_resolution():
     assert metrics(decoded(10))["blockiness"] > 1.3
     assert metrics(decoded(95))["blockiness"] < 1.1
     assert metrics(texture())["blockiness"] == pytest.approx(1.0, abs=0.05)
+    # Rotation and an off-grid crop move the 8x8 phase; the measure must still find it.
+    shifted = np.rot90(decoded(10)[3:, 5:]).copy()
+    assert metrics(shifted)["blockiness"] > 1.3
+
+
+def test_blockiness_ignores_near_flat_frames():
+    payload = encode(
+        np.clip(np.rint(solid(1) + np.random.default_rng(0).normal(0, 0.4, (384, 576, 3))), 0, 255).astype(np.uint8),
+        "JPEG",
+        quality=30,
+    )
+    assert metrics(np.asarray(Image.open(io.BytesIO(payload))))["blockiness"] == 1.0
 
 
 def test_content_measures_for_a_solid_frame():

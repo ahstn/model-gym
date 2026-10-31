@@ -1,3 +1,5 @@
+import io
+
 import numpy as np
 import pytest
 
@@ -12,6 +14,15 @@ def test_jpeg_quality_estimate(quality):
     metadata = read_metadata(encode(texture(), "JPEG", quality=quality))
     assert metadata["jpeg_quality_estimate"] == pytest.approx(quality, abs=3)
     assert metadata["jpeg_subsampling"] == "4:2:0"
+
+
+def test_mpo_files_get_jpeg_fields():
+    buffer = io.BytesIO()
+    frame = Image.fromarray(texture())
+    frame.save(buffer, "MPO", save_all=True, append_images=[frame], quality=60)
+    metadata = read_metadata(buffer.getvalue())
+    assert metadata["format"] == "MPO"
+    assert metadata["jpeg_quality_estimate"] == pytest.approx(60, abs=3)
 
 
 def test_camera_exif_fields_without_location_or_time():

@@ -45,7 +45,8 @@ def read_metadata(source: bytes | str | Path) -> dict:
             "jpeg_quality_estimate": None,
             "jpeg_subsampling": None,
         }
-        if image.format == "JPEG":
+        # Many phone and camera JPEGs open as MPO, a JpegImageFile subclass with the same tables.
+        if isinstance(image, JpegImagePlugin.JpegImageFile):
             metadata["jpeg_quality_estimate"] = _jpeg_quality(image)
             metadata["jpeg_subsampling"] = _SUBSAMPLING.get(JpegImagePlugin.get_sampling(image))
     return metadata

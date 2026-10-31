@@ -58,9 +58,10 @@ def _from_pil(image: Image.Image) -> Decoded:
     has_alpha = "A" in oriented.getbands() or "transparency" in oriented.info
     alpha = oriented.convert("RGBA").getchannel("A") if has_alpha else None
     if oriented.mode.startswith("I;16") or oriented.mode == "I":
-        # Pillow clips 16-bit greyscale when converting to RGB; rescale instead.
+        # Pillow clips 16-bit greyscale when converting to RGB; rescale instead. 32-bit "I" has no declared
+        # range, so treat it as 16-bit unless every value fits in 8 bits.
         wide = np.asarray(oriented, dtype=np.float64)
-        top = 65535.0 if wide.max() > 255 else 255.0
+        top = 65535.0 if oriented.mode.startswith("I;16") or wide.max() > 255 else 255.0
         oriented = Image.fromarray(np.clip(wide / top * 255 + 0.5, 0, 255).astype(np.uint8), "L")
     rgb, colour_action = _to_srgb(oriented, icc)
     if alpha is not None:

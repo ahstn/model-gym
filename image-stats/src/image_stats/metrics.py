@@ -12,7 +12,7 @@ import numpy as np
 from image_stats.loading import MIN_EDGE
 
 # Bump whenever a formula, threshold inside a formula, or analysis default changes.
-ALGORITHM_VERSION = "image-stats-v1"
+ALGORITHM_VERSION = "image-stats-v2"
 
 _EPS = 1e-9
 _TILES_ON_LONG_EDGE = 16
@@ -20,6 +20,7 @@ _FLAT_TILE_STD = 2.0  # luma levels (0-255) below which a tile counts as flat
 _SHADOW_LEVEL, _HIGHLIGHT_LEVEL = 5.0, 250.0
 _IMMERKAER = np.array([[1, -2, 1], [-2, 4, -2], [1, -2, 1]], dtype=np.float32)
 _BLOCKINESS_MAX_PIXELS = 16_000_000
+_BLOCK_MIN_STEP = 0.5  # luma levels; flatter frames have no measurable block structure
 
 
 @dataclass(frozen=True)
@@ -78,7 +79,7 @@ METRICS: tuple[Metric, ...] = (
         "blockiness",
         "compression",
         "ratio",
-        "Mean luma step across 8x8 block boundaries over steps inside blocks, at native resolution; 1 = none.",
+        "Mean luma step at the strongest 8-pixel phase over the other phases, at native resolution; 1 = none.",
     ),
 )
 METRIC_NAMES = tuple(metric.name for metric in METRICS)
@@ -89,17 +90,20 @@ def compute(native: np.ndarray, view: np.ndarray) -> dict[str, float]:
     if min(view.shape[:2]) < MIN_EDGE:
         raise ValueError(f"Images must be at least {MIN_EDGE} pixels on each side")
     rgb = view.astype(np.float32)
+    unit = rgb / 255
     luma = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
+    levels = np.clip(np.rint(luma), 0, 255).astype(np.uint8)
     tile = tile_size(luma.shape)
+    tile_std = tiles(luma, tile).std(axis=(2, 3))
     gx = cv2.Sobel(luma, cv2.CV_32F, 1, 0, ksize=3)
     gy = cv2.Sobel(luma, cv2.CV_32F, 0, 1, ksize=3)
     values = {
-        **_exposure(rgb, luma, view),
-        **_contrast(luma, tile),
-        **_sharpness(luma, gx, gy, tile),
-        **_noise(rgb, luma, tile),
-        **_colour(rgb),
-        **_content(view, luma, tile),
+        **_exposure(unit, luma, view),
+        **_contrast(luma, levels, tile_std),
+        **_sharpness(luma, levels, gx, gy, tile),
+        **_noise(unit, luma, tile),
+        **_colour(rgb, unit),
+        **_content(view, tile_std),
         "blockiness": blockiness(native),
     }
     return {name: float(values[name]) for name in METRIC_NAMES}
@@ -108,19 +112,17 @@ def compute(native: np.ndarray, view: np.ndarray) -> dict[str, float]:
 def tiles(plane: np.ndarray, tile: int) -> np.ndarray:
     """Return a (rows, cols, tile, tile) view; partial tiles at the right and bottom are dropped."""
     rows, cols = plane.shape[0] // tile, plane.shape[1] // tile
-    if rows == 0 or cols == 0:
-        tile = min(plane.shape[:2])
-        rows, cols = plane.shape[0] // tile, plane.shape[1] // tile
     return plane[: rows * tile, : cols * tile].reshape(rows, tile, cols, tile).swapaxes(1, 2)
 
 
 def tile_size(shape: tuple[int, ...]) -> int:
+    """About 16 tiles on the long edge, never larger than the short edge."""
     return min(max(MIN_EDGE, round(max(shape[:2]) / _TILES_ON_LONG_EDGE)), min(shape[:2]))
 
 
-def _exposure(rgb: np.ndarray, luma: np.ndarray, view: np.ndarray) -> dict[str, float]:
+def _exposure(unit: np.ndarray, luma: np.ndarray, view: np.ndarray) -> dict[str, float]:
     p01, median, p99 = np.percentile(luma, [1, 50, 99])
-    small = _shrink(rgb / 255, 512)
+    small = _shrink(unit, 512)
     dark = cv2.erode(small.min(axis=2), np.ones((15, 15), np.uint8), borderType=cv2.BORDER_REFLECT)
     return {
         "luma_mean": luma.mean(dtype=np.float64) / 255,
@@ -134,21 +136,20 @@ def _exposure(rgb: np.ndarray, luma: np.ndarray, view: np.ndarray) -> dict[str, 
     }
 
 
-def _contrast(luma: np.ndarray, tile: int) -> dict[str, float]:
+def _contrast(luma: np.ndarray, levels: np.ndarray, tile_std: np.ndarray) -> dict[str, float]:
     p01, p99 = np.percentile(luma, [1, 99])
-    levels = np.clip(np.rint(luma), 0, 255).astype(np.uint8)
     hist = np.bincount(levels.ravel(), minlength=256) / levels.size
     hist = hist[hist > 0]
     return {
         "rms_contrast": luma.std(dtype=np.float64) / 255,
         "dynamic_range": (p99 - p01) / 255,
         "michelson_contrast": (p99 - p01) / (p99 + p01) if p99 + p01 > _EPS else 0.0,
-        "local_contrast": np.median(tiles(luma, tile).std(axis=(2, 3))) / 255,
+        "local_contrast": np.median(tile_std) / 255,
         "luma_entropy": -np.sum(hist * np.log2(hist)),
     }
 
 
-def _sharpness(luma: np.ndarray, gx: np.ndarray, gy: np.ndarray, tile: int) -> dict[str, float]:
+def _sharpness(luma: np.ndarray, levels: np.ndarray, gx: np.ndarray, gy: np.ndarray, tile: int) -> dict[str, float]:
     laplacian = cv2.Laplacian(luma, cv2.CV_32F)
     tile_var = tiles(laplacian, tile).var(axis=(2, 3), dtype=np.float64)
     peak = tile_var.max()
@@ -161,7 +162,7 @@ def _sharpness(luma: np.ndarray, gx: np.ndarray, gy: np.ndarray, tile: int) -> d
         "focus_area": np.mean(tile_var >= 0.25 * peak) if peak > _EPS else 0.0,
         "tenengrad": np.mean(gx * gx + gy * gy, dtype=np.float64),
         "high_frequency_ratio": _high_frequency_ratio(luma),
-        "edge_density": np.mean(cv2.Canny(np.clip(np.rint(luma), 0, 255).astype(np.uint8), 50, 150) > 0),
+        "edge_density": np.mean(cv2.Canny(levels, 50, 150) > 0),
         "gradient_anisotropy": math.sqrt((jxx - jyy) ** 2 + 4 * jxy**2) / trace if trace > _EPS else 0.0,
     }
 
@@ -176,8 +177,8 @@ def _high_frequency_ratio(luma: np.ndarray) -> float:
     return float(power[band & (radius > 0.25)].sum() / total) if total > _EPS else 0.0
 
 
-def _noise(rgb: np.ndarray, luma: np.ndarray, tile: int) -> dict[str, float]:
-    ycrcb = cv2.cvtColor(rgb / 255, cv2.COLOR_RGB2YCrCb) * 255
+def _noise(unit: np.ndarray, luma: np.ndarray, tile: int) -> dict[str, float]:
+    ycrcb = cv2.cvtColor(unit, cv2.COLOR_RGB2YCrCb) * 255
     level_tiles = tiles(luma, tile)
     clipped = ((level_tiles <= _SHADOW_LEVEL) | (level_tiles >= _HIGHLIGHT_LEVEL)).mean(axis=(2, 3))
     usable = clipped < 0.5
@@ -198,10 +199,9 @@ def _immerkaer_floor(plane: np.ndarray, tile: int, usable: np.ndarray) -> float:
     return float(np.percentile(selected, 10)) if selected.size else 0.0
 
 
-def _colour(rgb: np.ndarray) -> dict[str, float]:
+def _colour(rgb: np.ndarray, unit: np.ndarray) -> dict[str, float]:
     red, green, blue = rgb[..., 0], rgb[..., 1], rgb[..., 2]
     rg, yb = red - green, 0.5 * (red + green) - blue
-    unit = rgb / 255
     saturation = cv2.cvtColor(unit, cv2.COLOR_RGB2HSV)[..., 1]
     lab = cv2.cvtColor(unit, cv2.COLOR_RGB2Lab)
     return {
@@ -214,35 +214,35 @@ def _colour(rgb: np.ndarray) -> dict[str, float]:
     }
 
 
-def _content(view: np.ndarray, luma: np.ndarray, tile: int) -> dict[str, float]:
+def _content(view: np.ndarray, tile_std: np.ndarray) -> dict[str, float]:
     bins = view >> 4
     index = (bins[..., 0].astype(np.int32) << 8) | (bins[..., 1].astype(np.int32) << 4) | bins[..., 2]
     counts = np.sort(np.bincount(index.ravel(), minlength=4096))[::-1]
     covered = np.cumsum(counts) / index.size
     return {
-        "flat_area": np.mean(tiles(luma, tile).std(axis=(2, 3)) < _FLAT_TILE_STD),
+        "flat_area": np.mean(tile_std < _FLAT_TILE_STD),
         "palette_size": int(np.searchsorted(covered, 0.95)) + 1,
         "top_colour_share": counts[0] / index.size,
     }
 
 
 def blockiness(native: np.ndarray) -> float:
+    """Phase-agnostic, so EXIF rotation, flips, and crops that shift the 8x8 grid do not hide it."""
     height, width = native.shape[:2]
     if height * width > _BLOCKINESS_MAX_PIXELS:
-        # A centred crop whose origin stays on the 8x8 grid keeps the JPEG block phase.
-        side = int(math.sqrt(_BLOCKINESS_MAX_PIXELS)) // 8 * 8
-        top, left = max(0, (height - side) // 2) // 8 * 8, max(0, (width - side) // 2) // 8 * 8
+        side = int(math.sqrt(_BLOCKINESS_MAX_PIXELS))
+        top, left = max(0, (height - side) // 2), max(0, (width - side) // 2)
         native = native[top : top + side, left : left + side]
     if min(native.shape[:2]) < 32:
         return 1.0
     luma = cv2.cvtColor(native.astype(np.float32), cv2.COLOR_RGB2GRAY)
-    across, inside = 0.0, 0.0
+    ratios = []
     for steps in (np.abs(np.diff(luma, axis=1)), np.abs(np.diff(luma, axis=0)).T):
-        boundary = np.zeros(steps.shape[1], dtype=bool)
-        boundary[7::8] = True
-        across += steps[:, boundary].mean(dtype=np.float64)
-        inside += steps[:, ~boundary].mean(dtype=np.float64)
-    return across / inside if inside > 1e-3 else 1.0
+        positions = steps.mean(axis=0, dtype=np.float64)
+        phases = positions[: positions.size // 8 * 8].reshape(-1, 8).mean(axis=0)
+        others = (phases.sum() - phases.max()) / 7
+        ratios.append(phases.max() / others if others >= _BLOCK_MIN_STEP else 1.0)
+    return sum(ratios) / 2
 
 
 def _shrink(image: np.ndarray, edge: int) -> np.ndarray:

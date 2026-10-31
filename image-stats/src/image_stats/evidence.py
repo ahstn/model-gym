@@ -11,6 +11,8 @@ from image_stats.loading import DEFAULT_MAX_EDGE, ImageInput, decode, fit
 from image_stats.metrics import tile_size, tiles
 
 EVIDENCE_NAMES = ("sharpness", "noise_residual", "clipping", "spectrum")
+# Tile Laplacian variance drawn at full intensity; typical sharp photo tiles reach 1e3-1e4 at 1536 px.
+_SHARPNESS_FULL_SCALE = 20_000.0
 
 
 def evidence_maps(source: ImageInput, *, max_edge: int = DEFAULT_MAX_EDGE) -> dict[str, Image.Image]:
@@ -25,10 +27,10 @@ def evidence_maps(source: ImageInput, *, max_edge: int = DEFAULT_MAX_EDGE) -> di
 
 
 def _sharpness(view: np.ndarray, luma: np.ndarray) -> Image.Image:
-    """Per-tile Laplacian variance on a log scale, inferno colours, blended over a grey copy."""
+    """Per-tile Laplacian variance on a fixed log scale, so a blurred frame stays dark rather than self-normalised."""
     tile = tile_size(luma.shape)
     tile_var = tiles(cv2.Laplacian(luma, cv2.CV_32F), tile).var(axis=(2, 3))
-    scaled = np.log1p(tile_var) / np.log1p(max(float(tile_var.max()), 1.0))
+    scaled = np.log1p(tile_var) / np.log1p(_SHARPNESS_FULL_SCALE)
     heat = cv2.resize(
         np.clip(scaled * 255, 0, 255).astype(np.uint8),
         (tile_var.shape[1] * tile, tile_var.shape[0] * tile),

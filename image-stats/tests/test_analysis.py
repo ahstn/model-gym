@@ -4,14 +4,38 @@ import pytest
 from PIL import Image
 
 from image_stats import ALGORITHM_VERSION, Analysis, analyse, analyse_file
-from tests.images import blur, encode, solid, texture
+from tests.images import add_noise, blur, encode, solid, texture
 
 
-@pytest.mark.parametrize("colour", [0, (200, 20, 20)])
-def test_uniform_frames_are_gated(colour):
-    analysis = analyse(solid(colour))
+def gentle_gradient():
+    ramp = np.linspace(40, 85, 576)
+    return np.repeat(np.repeat(ramp[None, :, None], 384, axis=0), 3, axis=2).astype(np.uint8)
+
+
+@pytest.mark.parametrize(
+    "frame",
+    [
+        solid(0),
+        solid((200, 20, 20)),
+        add_noise(solid(0), 1.5),  # a black frame with sensor noise
+        add_noise(solid(60), 3.0),  # a grey pocket shot with visible grain
+        gentle_gradient(),  # a lit wall or lens cap with fall-off
+    ],
+)
+def test_content_free_frames_are_gated(frame):
+    analysis = analyse(frame)
     assert analysis.gate == "uniform_frame"
     assert analysis.to_dict()["gate"] == "uniform_frame"
+
+
+def test_heavily_blurred_photo_is_not_gated():
+    # Broad shapes survive defocus; the gate is only for frames with no content at all.
+    assert analyse(blur(texture(), 8)).gate is None
+
+
+def test_dark_sixteen_bit_greyscale_stays_dark():
+    dark = np.full((64, 64), 200, np.uint16)
+    assert analyse(encode(dark)).metrics["luma_mean"] < 0.01
 
 
 def test_black_frame_is_also_near_black_and_texture_has_no_flags():
