@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-29",
+  "scope": "Four adaptive Hugging Face rounds; root separately adds final fifth validation round",
+  "app": {
+    "dataset_search": {"attempts": 3, "result": "disabled by server configuration", "queries": ["image quality", "aesthetic", "AI generated detection"]},
+    "hub_repo_details": {"calls": 5, "repo_inspections": 22, "distinct_repositories": 21, "include_readme": true, "notes": "One baseline CommunityForensics inspection included with round 1; then four per-round batches. Full cards often required public Hub API fallback."}
+  },
+  "rounds": [
+    {"round": 1, "purpose": "Broad discovery across image quality, aesthetics, synthetic origin, editing", "api_queries": 4, "app_repo_inspections": 5, "raw": ["round1-app.json", "round1-search.json"]},
+    {"round": 2, "purpose": "Dataset family and author expansion", "api_queries": 17, "app_repo_inspections": 7, "raw": ["round2-app.json", "round2-search.json"]},
+    {"round": 3, "purpose": "Full-card/schema verification and exact-name/official-source follow-ups", "api_queries": 14, "app_repo_inspections": 4, "raw": ["round3-app.json", "round3-search.json", "round3-verified.json"]},
+    {"round": 4, "purpose": "Challenge release availability, newer mirrors, alternatives, archive/annotation checks", "api_queries": 10, "app_repo_inspections": 6, "raw": ["round4-app.json", "round4-search.json", "round4-verified.json", "fga-label-contents.json", "fga-label-summary.json"]}
+  ],
+  "best_candidates": [
+    {"id": "saberzl/SID_Set", "track": "AI origin", "status": "new", "public_rows": 240000, "headline_rows": 300000, "labels": "real / fully synthetic / tampered plus masks", "license_claim": "CC-BY-4.0, source terms separately unresolved", "priority": "high", "revision": "dc03ead57929879319ce30a82bfcfb8d317b10bd"},
+    {"id": "nebula/OpenSDI_train + nebula/OpenSDI_test", "track": "AI origin", "status": "new", "public_train_rows": 200824, "public_test_rows": 100000, "labels": "real/fake plus masks, local and global diffusion manipulations", "license_claim": "CC-BY-SA-4.0; card says academic use", "priority": "high", "caveat": "Real images from megalith-10m; must exclude overlap with current Megalith pilot"},
+    {"id": "nebula/OpenSDIDplus", "track": "AI origin", "status": "new family extension", "public_rows": 802518, "labels": "real/fake plus masks", "license_claim": "CC-BY-SA-4.0", "priority": "stage later", "revision": "ce647ee3eb7802e9a26ca1e89bb7dfddaa19d92f"},
+    {"id": "yzc002/FGAesthetics", "track": "aesthetics", "status": "existing catalog; newly actionable release", "paper_images": 32217, "paper_series": 10028, "verified_label_pair_rows": 44225, "label_files": 9, "archive_bytes": 19648100474, "labels": "human-derived within-series ranks/pairwise targets", "license_claim": "not stated", "priority": "high conditional on terms/schema", "revision": "f806ec5b06f02d5e80c40e866e397ad78bf9bc09", "caveat": "One-row viewer is illustration, not whole dataset; multipart image RARs and label.rar verified"},
+    {"id": "deepfakesMSU/TIQA_crops_and_images", "track": "technical quality, rendered text", "status": "new", "card_human_mos_crops": 9978, "card_proxy_crops": 110219, "card_full_images": 1440, "labels": "text appearance MOS; separate overall quality MOS; OCR proxy explicitly flagged", "license_claim": "CC-BY-NC-4.0 with literal TODO confirm comment", "priority": "targeted challenge", "revision": "3bc5d33a4356b4c202e424df541a2d04323fa0cd", "caveat": "Archive presence verified, full archives not inspected; org release updated Oct 28 fixes stale personal card's MOS omission"}
+  ],
+  "report": "/tmp/image-datasets-hf/REPORT.md",
+  "downloaded_image_payloads": 0,
+  "downloaded_annotation_archives": [{"file": "label.rar", "bytes": 201749}],
+  "workspace_manifests_modified": false
+}

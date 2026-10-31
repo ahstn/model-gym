@@ -4,6 +4,8 @@ This file lists large multimodal model (LMM) assessors that cover two or more of
 
 Last verified: 2026-09-27
 
+Targeted update: [2026-10-30 9–12B backbone refresh](backbone-refresh-2026-10-30.md) adds newer and previously omitted starting checkpoints, verifies visual benchmark protocols, and proposes the current shortlist for that size range. The historical tables below retain their original verification date.
+
 Related files: single-task models are in [iqa.md](iqa.md), [iaa.md](iaa.md), and [vqa.md](vqa.md). Metric rules and the Q-ReAlign code audit are in [../evaluation/protocol.md](../evaluation/protocol.md). Training recipes are in [../training/methods.md](../training/methods.md). The staged plan is in [../training/experiment-plan.md](../training/experiment-plan.md).
 
 All correlation pairs are `PLCC / SRCC`. All numbers are author-reported. We did not run any model.

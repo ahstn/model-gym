@@ -1,0 +1,289 @@
+{
+  "checked_date": "2026-10-29",
+  "root": "/home/ahstn/git/model-gym",
+  "method": "Read-only manifest parse and path is_file checks; no re-download or full-media hash/decode audit.",
+  "records": [
+    {
+      "category": "pilot",
+      "dataset": "clevr",
+      "count": 480,
+      "local_present": 480,
+      "manifests": [
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/development.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/test.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/train.jsonl"
+      ],
+      "splits": {
+        "development": 40,
+        "test": 40,
+        "train": 400
+      },
+      "technical_labels_nonnull": 0,
+      "aesthetic_labels_nonnull": 0
+    },
+    {
+      "category": "pilot",
+      "dataset": "distortions",
+      "count": 3000,
+      "local_present": 3000,
+      "manifests": [
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/development.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/test.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/train.jsonl"
+      ],
+      "splits": {
+        "train": 3000
+      },
+      "technical_labels_nonnull": 0,
+      "aesthetic_labels_nonnull": 0
+    },
+    {
+      "category": "pilot",
+      "dataset": "megalith",
+      "count": 5400,
+      "local_present": 5400,
+      "manifests": [
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/development.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/test.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/train.jsonl"
+      ],
+      "splits": {
+        "development": 200,
+        "test": 200,
+        "train": 5000
+      },
+      "technical_labels_nonnull": 0,
+      "aesthetic_labels_nonnull": 0
+    },
+    {
+      "category": "pilot",
+      "dataset": "owned_controls",
+      "count": 240,
+      "local_present": 240,
+      "manifests": [
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/development.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/test.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/train.jsonl"
+      ],
+      "splits": {
+        "development": 20,
+        "test": 20,
+        "train": 200
+      },
+      "technical_labels_nonnull": 0,
+      "aesthetic_labels_nonnull": 0
+    },
+    {
+      "category": "pilot",
+      "dataset": "plotqa",
+      "count": 480,
+      "local_present": 480,
+      "manifests": [
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/development.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/test.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/train.jsonl"
+      ],
+      "splits": {
+        "development": 40,
+        "test": 40,
+        "train": 400
+      },
+      "technical_labels_nonnull": 0,
+      "aesthetic_labels_nonnull": 0
+    },
+    {
+      "category": "pilot",
+      "dataset": "vizwiz",
+      "count": 1200,
+      "local_present": 1200,
+      "manifests": [
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/development.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/test.jsonl",
+        "/home/ahstn/git/model-gym/visual-quality/data/pilot-10k-v1/train.jsonl"
+      ],
+      "splits": {
+        "development": 100,
+        "test": 100,
+        "train": 1000
+      },
+      "technical_labels_nonnull": 0,
+      "aesthetic_labels_nonnull": 0
+    },
+    {
+      "category": "evaluation_panel",
+      "dataset": "UHD-IQA",
+      "count": 60,
+      "local_present": 60,
+      "manifest": "/home/ahstn/git/model-gym/visual-triage/evidence/benchmarks/quality.json",
+      "sources": {
+        "UHD-IQA": 60
+      },
+      "splits": {
+        "heldout": 60
+      }
+    },
+    {
+      "category": "evaluation_panel",
+      "dataset": "ai",
+      "count": 60,
+      "local_present": 60,
+      "manifest": "/home/ahstn/git/model-gym/visual-triage/evidence/benchmarks/ai.json",
+      "sources": {
+        "ComplexDataLab/OpenFake": 60
+      },
+      "splits": {
+        "heldout": 60
+      }
+    },
+    {
+      "category": "evaluation_panel",
+      "dataset": "quality",
+      "count": 160,
+      "local_present": 160,
+      "manifest": "/home/ahstn/git/model-gym/visual-triage/tracks/quality/dataset.json",
+      "sources": {
+        "KADID-10k": 160
+      },
+      "splits": {
+        "train": 40,
+        "test": 80,
+        "dev": 40
+      }
+    },
+    {
+      "category": "evaluation_panel",
+      "dataset": "quality_v2",
+      "count": 350,
+      "local_present": 350,
+      "manifest": "/home/ahstn/git/model-gym/visual-triage/tracks/quality_v2/dataset.json",
+      "sources": {
+        "KonIQ-10k": 350
+      },
+      "splits": {
+        "test": 100,
+        "dev": 100,
+        "train": 150
+      }
+    },
+    {
+      "category": "evaluation_panel",
+      "dataset": "ai_detection",
+      "count": 120,
+      "local_present": 120,
+      "manifest": "/home/ahstn/git/model-gym/visual-triage/tracks/ai_detection/dataset.json",
+      "sources": {
+        "marco-willi/synthbuster-plus": 120
+      },
+      "splits": {
+        "test": 60,
+        "train": 30,
+        "dev": 30
+      }
+    },
+    {
+      "category": "evaluation_panel",
+      "dataset": "ai_detection_v2",
+      "count": 400,
+      "local_present": 400,
+      "manifest": "/home/ahstn/git/model-gym/visual-triage/tracks/ai_detection_v2/dataset.json",
+      "sources": {
+        "marco-willi/synthclic": 320,
+        "marco-willi/synthbuster-plus": 80
+      },
+      "splits": {
+        "train": 160,
+        "dev": 80,
+        "test": 80,
+        "external": 80
+      }
+    },
+    {
+      "category": "evaluation_panel",
+      "dataset": "metadata_v3",
+      "count": 320,
+      "local_present": 320,
+      "manifest": "/home/ahstn/git/model-gym/visual-triage/tracks/metadata_v3/dataset.json",
+      "sources": {
+        "VISION": 160,
+        "Synthbuster": 160
+      },
+      "splits": {
+        "train": 80,
+        "dev": 80,
+        "test": 160
+      }
+    },
+    {
+      "category": "initial_panel",
+      "dataset": "original30",
+      "count": 30,
+      "local_present": 30,
+      "manifest": "/home/ahstn/git/model-gym/visual-triage/evidence/samples.json",
+      "components": {
+        "megalith": 3,
+        "distortions": 9,
+        "vizwiz": 6,
+        "clevr": 2,
+        "plotqa": 2,
+        "owned_controls": 2,
+        "agiqa": 6
+      },
+      "note": "24 pilot-derived views; 6 newly sourced AGIQA-3K images"
+    },
+    {
+      "category": "evaluation_panel",
+      "dataset": "MS COCOAI / Defactify",
+      "count": 1600,
+      "local_present": 1600,
+      "manifest": "/home/ahstn/git/model-gym/visual-quality/experiments/jev14-calibration-2026-10-18/manifest.json",
+      "splits": {
+        "calibration": 600,
+        "validation": 1000
+      },
+      "classes": {
+        "False": 800,
+        "True": 800
+      },
+      "generators": {
+        "None": 800,
+        "SD2.1": 160,
+        "SDXL": 160,
+        "SD3": 160,
+        "DALL-E3": 160,
+        "Midjourney-v6": 160
+      }
+    }
+  ],
+  "unique_origin_source_totals": {
+    "Synthbuster": {
+      "images": 260,
+      "unique_generator_source_id_pairs": 260,
+      "unique_reference_families": 140,
+      "panels": {
+        "v1": 60,
+        "v2_external": 40,
+        "metadata_v3": 160
+      }
+    },
+    "RAISE": {
+      "images": 100,
+      "unique_source_ids": 100,
+      "panels": {
+        "v1": 60,
+        "v2_external": 40
+      }
+    },
+    "CLIC2020_real_in_SynthCLIC": 160,
+    "SynthCLIC_generated": 160,
+    "VISION_real": 160,
+    "OpenFake": 60,
+    "MS_COCOAI_Defactify": 1600,
+    "AGIQA3K": 6
+  },
+  "warnings": [
+    "Do not add derivative trial views to source-image totals.",
+    "TAD66K is a documented training selection, not acquired media in this workspace.",
+    "Pilot technical/aesthetic gold labels null; later reviews and provider labels are assistant/model judgments.",
+    "No dedicated explicit partially-AI-edited origin class or historical moderation-status field found."
+  ]
+}
