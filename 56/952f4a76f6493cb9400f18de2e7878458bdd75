@@ -1,0 +1,47 @@
+docs/mug-provenance-prompt-2026-10-31.txt
+  s_b36b85173fb5b0::t_0c3a8b7641ce24 1-26
+docs/mug-provenance-protocol-2026-10-31.md
+  s_b36b85173fb5b0::t_28b45303bd33b1 1-120
+image-stats/data/controls/mug-2026-10-31/README.md
+  s_b36b85173fb5b0::t_e808218cdb19d0 1-151
+image-stats/data/controls/mug-2026-10-31/derived/webp-q75/manifest.jsonl
+  s_b36b85173fb5b0::t_441706aa860d91 1-4
+image-stats/data/controls/mug-2026-10-31/derived/webp-q75/stats-1024.jsonl
+  s_b36b85173fb5b0::t_184fe6a3b9b8cb 1-4
+image-stats/data/controls/mug-2026-10-31/derived/webp-q75/stats-1024.run.json
+  s_b36b85173fb5b0::t_c24522b0f328a3 1-15
+image-stats/data/controls/mug-2026-10-31/fetch_openrouter.py
+  s_b36b85173fb5b0::t_8744987b47b2ca 1-85
+image-stats/data/controls/mug-2026-10-31/manifest.jsonl
+  s_b36b85173fb5b0::t_80e63f9bfa8139 1-11
+image-stats/data/controls/mug-2026-10-31/provenance.jsonl
+  s_b36b85173fb5b0::t_829f2df96b6818 1-11
+image-stats/data/controls/mug-2026-10-31/requests.jsonl
+  s_b36b85173fb5b0::t_6a08c46868ec32 1-7
+image-stats/data/controls/mug-2026-10-31/scan_provenance.py
+  s_b36b85173fb5b0::t_7d719b5b5c6b0a 1-180
+image-stats/data/controls/mug-2026-10-31/stats-1024.jsonl
+  s_b36b85173fb5b0::t_fb79e907bbf330 1-11
+image-stats/data/controls/mug-2026-10-31/stats-1024.run.json
+  s_b36b85173fb5b0::t_39543dea4f4017 1-18
+image-stats/data/controls/mug-2026-10-31/stats.jsonl
+  s_b36b85173fb5b0::t_9d618584de14d3 1-11
+image-stats/data/controls/mug-2026-10-31/stats.run.json
+  s_b36b85173fb5b0::t_4b785623cf6004 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "56952f4a76f6493cb9400f18de2e7878458bdd75",
+  "prompts": {},
+  "sessions": {
+    "s_b36b85173fb5b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6f00aac9-5f72-495d-9879-b6dbc40c4a70",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
