@@ -1,0 +1,23 @@
+{
+  "model": "q-future/Q-ReAlign-Lite-4B",
+  "revision": "06add46a6bc4a7dfcf0a59a2fb1ed15a6e3d30b7",
+  "device": "NVIDIA GeForce RTX 4090",
+  "level_tokens": [
+    [
+      8800
+    ],
+    [
+      1603
+    ],
+    [
+      6415
+    ],
+    [
+      7604
+    ],
+    [
+      3743
+    ]
+  ],
+  "torch": "2.8.0+cu128"
+}

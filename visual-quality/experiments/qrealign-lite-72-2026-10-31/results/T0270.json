@@ -1,0 +1,35 @@
+{
+  "case_id": "T0270",
+  "view_sha256": "7aeebcc6abcb78d0c8a2730e36194f4fd80e9b2c0de682e8a26cbf51f9e802d7",
+  "model": "q-future/Q-ReAlign-Lite-4B",
+  "revision": "06add46a6bc4a7dfcf0a59a2fb1ed15a6e3d30b7",
+  "response": {
+    "quality": {
+      "native_0_1": 0.9866437911987305,
+      "score_1_5": 4.946575164794922,
+      "probabilities": [
+        0.9465869665145874,
+        0.05340278521180153,
+        9.008045708469581e-06,
+        7.394253884740465e-07,
+        6.130051701802586e-07
+      ],
+      "input_tokens": 833
+    },
+    "aesthetics": {
+      "native_0_1": 0.39704370498657227,
+      "score_1_5": 2.588174819946289,
+      "probabilities": [
+        2.1440269847516902e-05,
+        0.0028972604777663946,
+        0.5877287983894348,
+        0.40393972396850586,
+        0.00541279511526227
+      ],
+      "input_tokens": 833
+    },
+    "seconds": 2.377,
+    "peak_vram": 11384093696
+  },
+  "elapsed_seconds": 4.234
+}

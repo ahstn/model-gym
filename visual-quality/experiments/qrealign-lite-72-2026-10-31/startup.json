@@ -1,0 +1,7 @@
+{
+  "pod_container_create_timestamp": "2026-10-31T23:33:51Z",
+  "model_ready_timestamp": "2026-10-31T23:34:47.672265256Z",
+  "approx_seconds": 56.67,
+  "method": "Runpod system create-container and container MODEL_READY timestamps; includes dependency installation and checkpoint download",
+  "cold_cache": "checkpoint download required; no prewarmed persistent cache"
+}

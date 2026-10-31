@@ -1,0 +1,787 @@
+{
+  "eligible68": {
+    "average": {
+      "aesthetic_bias": 0.17132352941176476,
+      "aesthetic_mae": 0.2536764705882353,
+      "mean_mae": 0.31948529411764703,
+      "n": 68,
+      "technical_bias": 0.2691176470588235,
+      "technical_mae": 0.38529411764705884
+    },
+    "deepseek": {
+      "aesthetic_bias": 0.06617647058823536,
+      "aesthetic_mae": 0.27499999999999997,
+      "mean_mae": 0.3580882352941176,
+      "n": 68,
+      "technical_bias": 0.23529411764705882,
+      "technical_mae": 0.4411764705882353
+    },
+    "haiku": {
+      "aesthetic_bias": 0.005882352941176541,
+      "aesthetic_mae": 0.29117647058823526,
+      "mean_mae": 0.33308823529411763,
+      "n": 68,
+      "technical_bias": 0.0426470588235294,
+      "technical_mae": 0.375
+    },
+    "jev": {
+      "aesthetic_bias": -0.155735294117647,
+      "aesthetic_mae": 0.24397058823529405,
+      "mean_mae": 0.28669117647058817,
+      "n": 68,
+      "technical_bias": 0.1461764705882353,
+      "technical_mae": 0.32941176470588235
+    },
+    "liquid": {
+      "aesthetic_bias": -0.14147058823529404,
+      "aesthetic_mae": 0.25352941176470584,
+      "mean_mae": 0.2934558823529412,
+      "n": 68,
+      "technical_bias": 0.02338235294117648,
+      "technical_mae": 0.33338235294117646
+    },
+    "lite": {
+      "aesthetic_bias": -1.0218272978816565,
+      "aesthetic_mae": 1.0289676710134645,
+      "mean_mae": 0.766277984258212,
+      "n": 68,
+      "technical_bias": 0.4251628250979325,
+      "technical_mae": 0.5035882975029595
+    },
+    "luna": {
+      "aesthetic_bias": 0.27647058823529413,
+      "aesthetic_mae": 0.3205882352941176,
+      "mean_mae": 0.3514705882352941,
+      "n": 68,
+      "technical_bias": 0.3029411764705882,
+      "technical_mae": 0.38235294117647056
+    }
+  },
+  "fresh71": {
+    "average": {
+      "aesthetic_bias": 0.1901408450704226,
+      "aesthetic_mae": 0.26901408450704223,
+      "mean_mae": 0.34225352112676055,
+      "n": 71,
+      "technical_bias": 0.30422535211267604,
+      "technical_mae": 0.4154929577464789
+    },
+    "deepseek": {
+      "aesthetic_bias": 0.08873239436619725,
+      "aesthetic_mae": 0.28873239436619713,
+      "mean_mae": 0.38943661971830984,
+      "n": 71,
+      "technical_bias": 0.29295774647887324,
+      "technical_mae": 0.49014084507042255
+    },
+    "haiku": {
+      "aesthetic_bias": 0.025352112676056405,
+      "aesthetic_mae": 0.29859154929577464,
+      "mean_mae": 0.3415492957746479,
+      "n": 71,
+      "technical_bias": 0.06619718309859154,
+      "technical_mae": 0.3845070422535211
+    },
+    "jev": {
+      "aesthetic_bias": -0.130281690140845,
+      "aesthetic_mae": 0.2525352112676056,
+      "mean_mae": 0.3072535211267605,
+      "n": 71,
+      "technical_bias": 0.18647887323943663,
+      "technical_mae": 0.36197183098591545
+    },
+    "liquid": {
+      "aesthetic_bias": -0.10802816901408445,
+      "aesthetic_mae": 0.270281690140845,
+      "mean_mae": 0.311056338028169,
+      "n": 71,
+      "technical_bias": 0.054929577464788736,
+      "technical_mae": 0.35183098591549294
+    },
+    "lite": {
+      "aesthetic_bias": -0.9790402798605164,
+      "aesthetic_mae": 0.998438183886563,
+      "mean_mae": 0.7585754909326361,
+      "n": 71,
+      "technical_bias": 0.4436010779288243,
+      "technical_mae": 0.5187127979787093
+    },
+    "luna": {
+      "aesthetic_bias": 0.2915492957746479,
+      "aesthetic_mae": 0.33380281690140845,
+      "mean_mae": 0.36267605633802813,
+      "n": 71,
+      "technical_bias": 0.31549295774647884,
+      "technical_mae": 0.39154929577464787
+    }
+  },
+  "heldout48": {
+    "average": {
+      "aesthetic_bias": 0.17395833333333338,
+      "aesthetic_mae": 0.27812499999999996,
+      "mean_mae": 0.3734375,
+      "n": 48,
+      "technical_bias": 0.32916666666666666,
+      "technical_mae": 0.46875000000000006
+    },
+    "deepseek": {
+      "aesthetic_bias": 0.058333333333333404,
+      "aesthetic_mae": 0.30833333333333335,
+      "mean_mae": 0.42083333333333334,
+      "n": 48,
+      "technical_bias": 0.3375,
+      "technical_mae": 0.5333333333333333
+    },
+    "haiku": {
+      "aesthetic_bias": -0.018749999999999933,
+      "aesthetic_mae": 0.30624999999999997,
+      "mean_mae": 0.35,
+      "n": 48,
+      "technical_bias": 0.07708333333333332,
+      "technical_mae": 0.39375
+    },
+    "jev": {
+      "aesthetic_bias": -0.12187499999999996,
+      "aesthetic_mae": 0.24687499999999993,
+      "mean_mae": 0.3179166666666666,
+      "n": 48,
+      "technical_bias": 0.2377083333333333,
+      "technical_mae": 0.3889583333333333
+    },
+    "liquid": {
+      "aesthetic_bias": -0.11916666666666662,
+      "aesthetic_mae": 0.26499999999999996,
+      "mean_mae": 0.3177083333333333,
+      "n": 48,
+      "technical_bias": 0.09083333333333334,
+      "technical_mae": 0.37041666666666667
+    },
+    "lite": {
+      "aesthetic_bias": -1.0286308320210082,
+      "aesthetic_mae": 1.0288403274850375,
+      "mean_mae": 0.7924646893909084,
+      "n": 48,
+      "technical_bias": 0.4956633598660119,
+      "technical_mae": 0.5560890512967792
+    },
+    "luna": {
+      "aesthetic_bias": 0.2895833333333333,
+      "aesthetic_mae": 0.33125,
+      "mean_mae": 0.37604166666666666,
+      "n": 48,
+      "technical_bias": 0.3208333333333333,
+      "technical_mae": 0.42083333333333334
+    }
+  },
+  "latency": {
+    "batch_size": 1,
+    "concurrency": 1,
+    "end_to_end_seconds": {
+      "max": 31.551,
+      "mean": 6.654875,
+      "median": 5.846,
+      "min": 3.29,
+      "n": 72,
+      "p95_nearest_rank": 12.183
+    },
+    "peak_allocated_vram_bytes": 11686957056,
+    "per_case": [
+      {
+        "case_id": "T0028",
+        "end_to_end_seconds": 6.109,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 4.278
+      },
+      {
+        "case_id": "T0039",
+        "end_to_end_seconds": 4.721,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.771
+      },
+      {
+        "case_id": "T0110",
+        "end_to_end_seconds": 3.29,
+        "input_tokens_aesthetics": 453,
+        "input_tokens_quality": 453,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.034
+      },
+      {
+        "case_id": "T0141",
+        "end_to_end_seconds": 4.4,
+        "input_tokens_aesthetics": 908,
+        "input_tokens_quality": 908,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.474
+      },
+      {
+        "case_id": "T0192",
+        "end_to_end_seconds": 4.809,
+        "input_tokens_aesthetics": 833,
+        "input_tokens_quality": 833,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.615
+      },
+      {
+        "case_id": "T0221",
+        "end_to_end_seconds": 4.278,
+        "input_tokens_aesthetics": 833,
+        "input_tokens_quality": 833,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.685
+      },
+      {
+        "case_id": "T0231",
+        "end_to_end_seconds": 4.484,
+        "input_tokens_aesthetics": 833,
+        "input_tokens_quality": 833,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.566
+      },
+      {
+        "case_id": "T0270",
+        "end_to_end_seconds": 4.234,
+        "input_tokens_aesthetics": 833,
+        "input_tokens_quality": 833,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.377
+      },
+      {
+        "case_id": "T0340",
+        "end_to_end_seconds": 4.313,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.858
+      },
+      {
+        "case_id": "T0366",
+        "end_to_end_seconds": 4.891,
+        "input_tokens_aesthetics": 1516,
+        "input_tokens_quality": 1516,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 3.001
+      },
+      {
+        "case_id": "T0413",
+        "end_to_end_seconds": 4.561,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.864
+      },
+      {
+        "case_id": "T0463",
+        "end_to_end_seconds": 4.632,
+        "input_tokens_aesthetics": 1324,
+        "input_tokens_quality": 1324,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.631
+      },
+      {
+        "case_id": "T0481",
+        "end_to_end_seconds": 4.89,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 3.169
+      },
+      {
+        "case_id": "T0483",
+        "end_to_end_seconds": 12.183,
+        "input_tokens_aesthetics": 796,
+        "input_tokens_quality": 796,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.344
+      },
+      {
+        "case_id": "T0510",
+        "end_to_end_seconds": 6.728,
+        "input_tokens_aesthetics": 1228,
+        "input_tokens_quality": 1228,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.779
+      },
+      {
+        "case_id": "T0529",
+        "end_to_end_seconds": 6.375,
+        "input_tokens_aesthetics": 1228,
+        "input_tokens_quality": 1228,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.841
+      },
+      {
+        "case_id": "T0539",
+        "end_to_end_seconds": 8.407,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.773
+      },
+      {
+        "case_id": "T0549",
+        "end_to_end_seconds": 4.598,
+        "input_tokens_aesthetics": 796,
+        "input_tokens_quality": 796,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.476
+      },
+      {
+        "case_id": "T0571",
+        "end_to_end_seconds": 5.659,
+        "input_tokens_aesthetics": 193,
+        "input_tokens_quality": 193,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.118
+      },
+      {
+        "case_id": "T0587",
+        "end_to_end_seconds": 20.307,
+        "input_tokens_aesthetics": 1228,
+        "input_tokens_quality": 1228,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.816
+      },
+      {
+        "case_id": "T0599",
+        "end_to_end_seconds": 4.489,
+        "input_tokens_aesthetics": 193,
+        "input_tokens_quality": 193,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.294
+      },
+      {
+        "case_id": "T0611",
+        "end_to_end_seconds": 6.054,
+        "input_tokens_aesthetics": 1228,
+        "input_tokens_quality": 1228,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.859
+      },
+      {
+        "case_id": "T0629",
+        "end_to_end_seconds": 6.734,
+        "input_tokens_aesthetics": 1404,
+        "input_tokens_quality": 1404,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.936
+      },
+      {
+        "case_id": "T0632",
+        "end_to_end_seconds": 6.529,
+        "input_tokens_aesthetics": 1228,
+        "input_tokens_quality": 1228,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 3.007
+      },
+      {
+        "case_id": "T0644",
+        "end_to_end_seconds": 9.758,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 3.03
+      },
+      {
+        "case_id": "T0645",
+        "end_to_end_seconds": 5.445,
+        "input_tokens_aesthetics": 796,
+        "input_tokens_quality": 796,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.542
+      },
+      {
+        "case_id": "T0677",
+        "end_to_end_seconds": 6.598,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.847
+      },
+      {
+        "case_id": "T0700",
+        "end_to_end_seconds": 6.412,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.974
+      },
+      {
+        "case_id": "T0714",
+        "end_to_end_seconds": 7.299,
+        "input_tokens_aesthetics": 1404,
+        "input_tokens_quality": 1404,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.848
+      },
+      {
+        "case_id": "T0720",
+        "end_to_end_seconds": 7.47,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 3.042
+      },
+      {
+        "case_id": "T0724",
+        "end_to_end_seconds": 6.086,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.883
+      },
+      {
+        "case_id": "T0727",
+        "end_to_end_seconds": 7.415,
+        "input_tokens_aesthetics": 1404,
+        "input_tokens_quality": 1404,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.794
+      },
+      {
+        "case_id": "T0765",
+        "end_to_end_seconds": 8.403,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.893
+      },
+      {
+        "case_id": "T0790",
+        "end_to_end_seconds": 31.551,
+        "input_tokens_aesthetics": 1159,
+        "input_tokens_quality": 1159,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.82
+      },
+      {
+        "case_id": "T0794",
+        "end_to_end_seconds": 6.294,
+        "input_tokens_aesthetics": 1228,
+        "input_tokens_quality": 1228,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.793
+      },
+      {
+        "case_id": "T0857",
+        "end_to_end_seconds": 5.8,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.687
+      },
+      {
+        "case_id": "T0865",
+        "end_to_end_seconds": 5.426,
+        "input_tokens_aesthetics": 1324,
+        "input_tokens_quality": 1324,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.657
+      },
+      {
+        "case_id": "T0887",
+        "end_to_end_seconds": 7.053,
+        "input_tokens_aesthetics": 988,
+        "input_tokens_quality": 988,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.637
+      },
+      {
+        "case_id": "T0914",
+        "end_to_end_seconds": 4.701,
+        "input_tokens_aesthetics": 220,
+        "input_tokens_quality": 220,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.116
+      },
+      {
+        "case_id": "T0952",
+        "end_to_end_seconds": 6.822,
+        "input_tokens_aesthetics": 1159,
+        "input_tokens_quality": 1159,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.775
+      },
+      {
+        "case_id": "T0958",
+        "end_to_end_seconds": 7.067,
+        "input_tokens_aesthetics": 608,
+        "input_tokens_quality": 608,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.289
+      },
+      {
+        "case_id": "T0965",
+        "end_to_end_seconds": 8.633,
+        "input_tokens_aesthetics": 1275,
+        "input_tokens_quality": 1275,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.822
+      },
+      {
+        "case_id": "T0974",
+        "end_to_end_seconds": 7.388,
+        "input_tokens_aesthetics": 1404,
+        "input_tokens_quality": 1404,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.56
+      },
+      {
+        "case_id": "T0984",
+        "end_to_end_seconds": 5.892,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.929
+      },
+      {
+        "case_id": "T0998",
+        "end_to_end_seconds": 6.971,
+        "input_tokens_aesthetics": 700,
+        "input_tokens_quality": 700,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.742
+      },
+      {
+        "case_id": "T1008",
+        "end_to_end_seconds": 6.086,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.927
+      },
+      {
+        "case_id": "T1012",
+        "end_to_end_seconds": 8.293,
+        "input_tokens_aesthetics": 1042,
+        "input_tokens_quality": 1042,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.45
+      },
+      {
+        "case_id": "T1113",
+        "end_to_end_seconds": 7.035,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.921
+      },
+      {
+        "case_id": "T1125",
+        "end_to_end_seconds": 6.526,
+        "input_tokens_aesthetics": 1612,
+        "input_tokens_quality": 1612,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 3.031
+      },
+      {
+        "case_id": "T1131",
+        "end_to_end_seconds": 6.567,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.825
+      },
+      {
+        "case_id": "T1162",
+        "end_to_end_seconds": 6.09,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.623
+      },
+      {
+        "case_id": "T1186",
+        "end_to_end_seconds": 19.13,
+        "input_tokens_aesthetics": 1662,
+        "input_tokens_quality": 1662,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.985
+      },
+      {
+        "case_id": "T1191",
+        "end_to_end_seconds": 6.894,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.865
+      },
+      {
+        "case_id": "T1388",
+        "end_to_end_seconds": 6.896,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 3.018
+      },
+      {
+        "case_id": "T1393",
+        "end_to_end_seconds": 6.022,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.654
+      },
+      {
+        "case_id": "T1543",
+        "end_to_end_seconds": 5.556,
+        "input_tokens_aesthetics": 1275,
+        "input_tokens_quality": 1275,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.874
+      },
+      {
+        "case_id": "T1556",
+        "end_to_end_seconds": 5.579,
+        "input_tokens_aesthetics": 938,
+        "input_tokens_quality": 938,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.635
+      },
+      {
+        "case_id": "T1559",
+        "end_to_end_seconds": 4.518,
+        "input_tokens_aesthetics": 1159,
+        "input_tokens_quality": 1159,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.383
+      },
+      {
+        "case_id": "T1602",
+        "end_to_end_seconds": 4.883,
+        "input_tokens_aesthetics": 1275,
+        "input_tokens_quality": 1275,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.893
+      },
+      {
+        "case_id": "T1657",
+        "end_to_end_seconds": 4.607,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.853
+      },
+      {
+        "case_id": "T1661",
+        "end_to_end_seconds": 5.102,
+        "input_tokens_aesthetics": 1159,
+        "input_tokens_quality": 1159,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.645
+      },
+      {
+        "case_id": "T1711",
+        "end_to_end_seconds": 4.785,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.767
+      },
+      {
+        "case_id": "T1712",
+        "end_to_end_seconds": 4.73,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 3.062
+      },
+      {
+        "case_id": "T1715",
+        "end_to_end_seconds": 4.874,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.625
+      },
+      {
+        "case_id": "T1750",
+        "end_to_end_seconds": 4.988,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.762
+      },
+      {
+        "case_id": "T1774",
+        "end_to_end_seconds": 4.578,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.599
+      },
+      {
+        "case_id": "T1797",
+        "end_to_end_seconds": 4.703,
+        "input_tokens_aesthetics": 1756,
+        "input_tokens_quality": 1756,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.747
+      },
+      {
+        "case_id": "T1806",
+        "end_to_end_seconds": 5.48,
+        "input_tokens_aesthetics": 1146,
+        "input_tokens_quality": 1146,
+        "peak_vram_bytes": 11384093696,
+        "server_seconds": 2.909
+      },
+      {
+        "case_id": "T1843",
+        "end_to_end_seconds": 4.932,
+        "input_tokens_aesthetics": 2332,
+        "input_tokens_quality": 2332,
+        "peak_vram_bytes": 11686957056,
+        "server_seconds": 2.965
+      },
+      {
+        "case_id": "T1860",
+        "end_to_end_seconds": 5.301,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11686957056,
+        "server_seconds": 3.089
+      },
+      {
+        "case_id": "T1953",
+        "end_to_end_seconds": 4.464,
+        "input_tokens_aesthetics": 1564,
+        "input_tokens_quality": 1564,
+        "peak_vram_bytes": 11686957056,
+        "server_seconds": 2.633
+      },
+      {
+        "case_id": "T2000",
+        "end_to_end_seconds": 4.373,
+        "input_tokens_aesthetics": 478,
+        "input_tokens_quality": 478,
+        "peak_vram_bytes": 11686957056,
+        "server_seconds": 2.653
+      }
+    ],
+    "scope": "Post-load warm and first-request times. End-to-end includes network and upload; server timing includes two processor/forward passes, excludes decode and server startup.",
+    "server_seconds": {
+      "max": 4.278,
+      "mean": 2.758875,
+      "median": 2.786,
+      "min": 2.034,
+      "n": 72,
+      "p95_nearest_rank": 3.062
+    },
+    "tasks_per_request": 2
+  },
+  "paired_lite_minus_teacher_mean": {
+    "bootstrap_95_interval": [
+      0.3063362374751401,
+      0.5283628726475096
+    ],
+    "mean_difference": 0.41902718939090844,
+    "n": 48,
+    "resamples": 5000,
+    "seed": 20261031072
+  }
+}

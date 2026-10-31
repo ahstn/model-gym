@@ -1,0 +1,18 @@
+{
+  "pod_id": "j8qvat8tmzyhgr",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_memory_gib": 24,
+  "cloud": "SECURE",
+  "gpu_price_usd_per_hour": 0.89,
+  "container": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+  "container_digest": "sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+  "container_disk_gb": 40,
+  "port": "8888/http",
+  "model": "q-future/Q-ReAlign-Lite-4B",
+  "model_revision": "06add46a6bc4a7dfcf0a59a2fb1ed15a6e3d30b7",
+  "transformers": "5.2.0",
+  "concurrency": 1,
+  "authentication": "Bearer token kept locally outside repository",
+  "preprocessing": "model-default processor; no external cap",
+  "attention": "PyTorch fallback; optional fast linear-attention kernels not installed"
+}

@@ -4,6 +4,8 @@ This is the working space for the 2,000-image Luna/DeepSeek trial and the follow
 
 [Comparison page 1](comparison-page-1.png) · [Page 2](comparison-page-2.png) · [Page 3](comparison-page-3.png) · [Page 4](comparison-page-4.png) · [Interactive gallery](gallery.html)
 
+Follow-up: [Q-ReAlign Lite on the same 72 images](../qrealign-lite-72-2026-10-31/README.md), with [comparison gallery](../qrealign-lite-72-2026-10-31/gallery.html), native outputs and per-image latency. The model assesses visual quality without the photography eligibility floor.
+
 The four image pages show all 72 original delivered views, sorted by reference technical score, with a `TUNING` or `HELD OUT` label. The known poster is identified separately. [scores-72.csv](scores-72.csv) contains every displayed score to two decimals, the original image SHA-256, scope probabilities and native pre-floor decision scores. [Selected responses](selected-responses-72.jsonl) preserves the actual outputs, usage, distributions and normalized scores for Jev, Liquid and Haiku in one file. The 72 PNGs under `images/` are the exact delivered views used for the evaluations.
 
 ## Decision-model comparison
