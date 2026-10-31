@@ -1,0 +1,30 @@
+{
+  "publication_files_hash_verified": 16,
+  "routes": {
+    "deepseek": {
+      "http_attempts": 2005,
+      "selected": 2000,
+      "unknown_costs": 5,
+      "known_cost_usd": "1.02420423",
+      "exact_request_result_objects_checked": 2005
+    },
+    "luna": {
+      "http_attempts": 2000,
+      "selected": 2000,
+      "unknown_costs": 0,
+      "known_cost_usd": "1.567249875",
+      "exact_request_result_objects_checked": 2000
+    }
+  },
+  "original_images": 72,
+  "full_grid_cells": 432,
+  "html_pages_verified": 3,
+  "html_portable_links": "all resolve",
+  "raster_validation_counts": [
+    72,
+    36,
+    36
+  ],
+  "source_result_bodies_unchanged": true,
+  "issues": []
+}

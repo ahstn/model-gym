@@ -1,0 +1,18 @@
+{
+  "audit_families": 72,
+  "audit_images": 72,
+  "families": 1640,
+  "fresh_images": 1999,
+  "images": 2000,
+  "known_anchors": 1,
+  "manifest_id": "2e244a475d9f65fb2cf2064a3bc7101bb198b5866b31fb3d3825d659afcb38c8",
+  "max_delivered_bytes": 2649731,
+  "strata": {
+    "controlled": 480,
+    "known_poster_anchor": 1,
+    "standalone_megalith": 1279,
+    "vizwiz": 240
+  },
+  "training_masks_enabled": 0,
+  "verified": true
+}
