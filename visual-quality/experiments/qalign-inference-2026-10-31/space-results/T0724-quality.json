@@ -1,0 +1,16 @@
+{
+  "case_id": "T0724",
+  "task": "Quality (IQA)",
+  "image_sha256": "6e2da1a63e5f8a1f4db8da38f8445f80d445153b73498f373da59dab87f9f3f5",
+  "space_revision": "9fb0e64200c1615a962551f002e11c1fc981ec04",
+  "space": "VOIDER/Q-ReAlign-0.8B",
+  "event_id": "ac5d58cec4ba4732a3ee546270e79582",
+  "event": "complete",
+  "data": [
+    "0.9789",
+    "\u2705 Done in 17.7 seconds."
+  ],
+  "native_0_1": 0.9789,
+  "score_1_5": 4.9155999999999995,
+  "elapsed_seconds": 18.59
+}

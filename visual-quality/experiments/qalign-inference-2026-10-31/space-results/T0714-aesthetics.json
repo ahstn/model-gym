@@ -1,0 +1,16 @@
+{
+  "case_id": "T0714",
+  "task": "Aesthetics (IAA)",
+  "image_sha256": "cefa06182ef370e685a036cc0b980c33762beacee5f4482f3147161171a0215e",
+  "space_revision": "9fb0e64200c1615a962551f002e11c1fc981ec04",
+  "space": "VOIDER/Q-ReAlign-0.8B",
+  "event_id": "2a0080dfe8fd48259b9a539eb69af358",
+  "event": "complete",
+  "data": [
+    "0.4347",
+    "\u2705 Done in 19.5 seconds."
+  ],
+  "native_0_1": 0.4347,
+  "score_1_5": 2.7388,
+  "elapsed_seconds": 20.49
+}
