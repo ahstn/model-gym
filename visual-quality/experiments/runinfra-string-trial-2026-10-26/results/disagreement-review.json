@@ -1,0 +1,173 @@
+{
+  "schema_version": "runinfra-posthoc-disagreement-review-v1",
+  "blinded": false,
+  "reference_scores_revised": false,
+  "selection": "Six cases selected after ranking large interval errors, to inspect distinct failure patterns. This is separate from the preselected 24-case explanation audit and cannot estimate an error rate.",
+  "reviewer": "root_assistant",
+  "cases": [
+    {
+      "case_id": "T112",
+      "path": "/home/ahstn/git/model-gym/visual-quality/data/runinfra-string-trial-2026-10-26/views/5cdd27922f5108fc5100cd35050cad774f89798b4a2c45f60348aca05468a8a1.png",
+      "model": {
+        "evidence": "The image is a very soft, low-detail abstract gradient with no sharp subject; smooth tonal transitions and mild grain are visible, but large areas are near-white with little preserved detail.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": "3.00",
+        "status": "ok",
+        "task": "technical_quality"
+      },
+      "reference": {
+        "case_id": "T112",
+        "view_sha256": "5cdd27922f5108fc5100cd35050cad774f89798b4a2c45f60348aca05468a8a1",
+        "reviewer_id": "blind_review_04",
+        "score": 1,
+        "interval": [
+          1,
+          1.1
+        ],
+        "evidence": "Broad white clipping and extremely blurred yellow-orange patches erase recognizable subject detail across almost the entire image.",
+        "defects": [
+          "exposure",
+          "blur"
+        ]
+      },
+      "reviewer_note": "The image contains almost no recognizable detail and broad near-white areas. Calling it an abstract gradient does not establish that the lost detail is intentional; a fair score is too generous under the frozen rubric."
+    },
+    {
+      "case_id": "T103",
+      "path": "/home/ahstn/git/model-gym/visual-quality/data/runinfra-string-trial-2026-10-26/views/78d3e732cea28c5b4d060770b50c3b5091de1285baa00903632d9e096b38d150.png",
+      "model": {
+        "evidence": "The image is a close-up of fabric with visible texture and a red light leak; it is slightly soft and grainy, but the main content remains clear.",
+        "limitations": [],
+        "score": "3.80",
+        "status": "ok",
+        "task": "technical_quality"
+      },
+      "reference": {
+        "case_id": "T103",
+        "view_sha256": "78d3e732cea28c5b4d060770b50c3b5091de1285baa00903632d9e096b38d150",
+        "reviewer_id": "blind_review_09",
+        "score": 2.1,
+        "interval": [
+          1.8,
+          2.4
+        ],
+        "evidence": "A large blurred reddish obstruction covers much of the right side, while visible grain and softness reduce clarity of the remaining fabric.",
+        "defects": [
+          "obstruction",
+          "noise",
+          "blur"
+        ]
+      },
+      "reviewer_note": "The reddish out-of-focus region obscures a substantial part of the image. The left-hand fabric remains detailed, but the explanation understates the obstruction and assumes a light-leak cause."
+    },
+    {
+      "case_id": "T173",
+      "path": "/home/ahstn/git/model-gym/visual-quality/data/runinfra-string-trial-2026-10-26/views/8a0a7e5986cc5ce451f4842d0f855bd82c60162917d56f31b79624d094c97342.png",
+      "model": {
+        "evidence": "The daisy's center and petals are sharp and detailed, with clean color and exposure; the blurred background is a natural depth-of-field effect, not a defect.",
+        "limitations": [],
+        "score": "4.50",
+        "status": "ok",
+        "task": "technical_quality"
+      },
+      "reference": {
+        "case_id": "T173",
+        "view_sha256": "8a0a7e5986cc5ce451f4842d0f855bd82c60162917d56f31b79624d094c97342",
+        "reviewer_id": "blind_review_04",
+        "score": 2.8,
+        "interval": [
+          2.5,
+          3.1
+        ],
+        "evidence": "The rear petals show texture, but substantial defocus obscures the yellow flower center and most foreground petals.",
+        "defects": [
+          "blur"
+        ]
+      },
+      "reviewer_note": "The yellow center and foreground petals are visibly defocused. The statement that the center and petals are sharp is contradicted by the delivered image."
+    },
+    {
+      "case_id": "T084",
+      "path": "/home/ahstn/git/model-gym/visual-quality/data/runinfra-string-trial-2026-10-26/views/c62d1e97a9e416bcc5ced18fbe3114eacc8ef80f757aa5c87f6422c122a56258.png",
+      "model": {
+        "evidence": "The image is generally clear, but the deep shadows under the trees lose detail, and the bright sky and ground show some clipping.",
+        "limitations": [],
+        "score": "3.60",
+        "status": "ok",
+        "task": "technical_quality"
+      },
+      "reference": {
+        "case_id": "T084",
+        "view_sha256": "c62d1e97a9e416bcc5ced18fbe3114eacc8ef80f757aa5c87f6422c122a56258",
+        "reviewer_id": "blind_review_04",
+        "score": 2.1,
+        "interval": [
+          1.8,
+          2.4
+        ],
+        "evidence": "Large compression blocks and coarse tonal patches damage soil, timber, and foliage throughout, while deep shadow obscures much of the trench area.",
+        "defects": [
+          "compression",
+          "exposure"
+        ]
+      },
+      "reviewer_note": "Large compression blocks damage the ground, timber, sky, and foliage. The response notices shadow and highlight loss but omits the dominant block artifacts."
+    },
+    {
+      "case_id": "T139",
+      "path": "/home/ahstn/git/model-gym/visual-quality/data/runinfra-string-trial-2026-10-26/views/435345c19011ade66548d96f947b14552edb8209497a2bb5e2c4e1e060667ef0.png",
+      "model": {
+        "evidence": "A large portion of the frame is obscured by a soft, out-of-focus foreground object, and the visible cable and wood grain are somewhat soft with visible noise.",
+        "limitations": [
+          "limited_detail"
+        ],
+        "score": "2.80",
+        "status": "ok",
+        "task": "technical_quality"
+      },
+      "reference": {
+        "case_id": "T139",
+        "view_sha256": "435345c19011ade66548d96f947b14552edb8209497a2bb5e2c4e1e060667ef0",
+        "reviewer_id": "blind_review_09",
+        "score": 1.3,
+        "interval": [
+          1.1,
+          1.6
+        ],
+        "evidence": "A large pale out-of-focus obstruction hides most of the frame, leaving only a narrow area of cables and surface texture visible.",
+        "defects": [
+          "obstruction"
+        ]
+      },
+      "reviewer_note": "A large foreground obstruction hides most of the frame. The explanation acknowledges this, but the score gives the loss of visible content too little weight."
+    },
+    {
+      "case_id": "T026",
+      "path": "/home/ahstn/git/model-gym/visual-quality/data/runinfra-string-trial-2026-10-26/views/63abb24d8c15e0f829fcb4ff4394d99218b173ca8581699e201f35c34fd7cc6d.png",
+      "model": {
+        "evidence": "The patterned blade is in sharp focus with clear detail and clean edges; the background is intentionally soft, and no significant noise, compression, or exposure defects are visible.",
+        "limitations": [],
+        "score": "4.30",
+        "status": "ok",
+        "task": "technical_quality"
+      },
+      "reference": {
+        "case_id": "T026",
+        "view_sha256": "63abb24d8c15e0f829fcb4ff4394d99218b173ca8581699e201f35c34fd7cc6d",
+        "reviewer_id": "blind_review_06",
+        "score": 3.1,
+        "interval": [
+          2.8,
+          3.3
+        ],
+        "evidence": "The blade shape and repeating decorative pattern are visible, but broad softness blunts the pattern lines, blade edge and transparent support.",
+        "defects": [
+          "blur"
+        ]
+      },
+      "reviewer_note": "The blade and patterned lines are broadly soft. Calling the blade sharply focused and attributing softness only to the background is not supported."
+    }
+  ]
+}

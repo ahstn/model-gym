@@ -1,0 +1,13 @@
+{
+  "families": 54,
+  "images": 72,
+  "manifest_id": "f850170ead76eeff3d423946d337bc3480c7c740af37f2280adf885981fb0fed",
+  "max_delivered_bytes": 2634046,
+  "new_components": {
+    "megalith": 14,
+    "vizwiz": 8
+  },
+  "new_images": 22,
+  "preserved_images": 50,
+  "verified": true
+}

@@ -1,0 +1,66 @@
+"""The experiment changes instructions, never the strict response transport."""
+
+import importlib.util
+import json
+from pathlib import Path
+
+import pytest
+
+HERE = Path(__file__).parent
+spec = importlib.util.spec_from_file_location("ablation_test_wire", HERE / "wire.py")
+wire = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(wire)
+PROMPTS = HERE.parents[1] / "prompts/visual-rating-v1"
+
+
+def test_baseline_identical_and_each_addendum_inserted_once_before_contract():
+    arms = wire.load_arms(HERE / "arms.json")
+    baseline = wire._base.prompt_bundle(PROMPTS)
+    assert wire.prompt_bundle(PROMPTS, arms[0]) == baseline
+    hashes = set()
+    for arm in arms:
+        prompt = wire.prompt_bundle(PROMPTS, arm)
+        assert prompt["response_format"] == baseline["response_format"]
+        assert prompt["system"] == baseline["system"]
+        assert prompt["user"].split("OUTPUT CONTRACT")[1] == baseline["user"].split("OUTPUT CONTRACT")[1]
+        if arm["addendum"]:
+            assert prompt["user"].count(arm["addendum"]) == 1
+            assert prompt["user"].index(arm["addendum"]) < prompt["user"].index("OUTPUT CONTRACT")
+        hashes.add(prompt["sha256"])
+    assert len(hashes) == 6
+
+
+@pytest.mark.parametrize("change", ["duplicate", "baseline", "contract", "empty"])
+def test_bad_arm_mapping_rejected(tmp_path, change):
+    value = json.loads((HERE / "arms.json").read_text())
+    if change == "duplicate":
+        value["arms"][1]["id"] = "baseline"
+    elif change == "baseline":
+        value["arms"][0]["addendum"] = "Change baseline"
+    elif change == "contract":
+        value["arms"][1]["addendum"] = "OUTPUT CONTRACT"
+    else:
+        value["arms"][1]["addendum"] = ""
+    path = tmp_path / "arms.json"
+    path.write_text(json.dumps(value))
+    with pytest.raises(ValueError):
+        wire.load_arms(path)
+
+
+def test_parser_retains_valid_sibling_without_rounding_or_repair():
+    payload = {
+        task: {
+            "task": task,
+            "status": "ok",
+            "score": "4.10",
+            "evidence": "Visible detail remains clean.",
+            "limitations": [],
+        }
+        for task in wire.TASKS
+    }
+    payload["technical_quality"]["score"] = 4.123
+    parsed = wire.parse_joint(json.dumps(payload))
+    assert set(parsed["errors"]) == {"technical_quality"}
+    assert parsed["ratings"]["aesthetics"]["score"] == 4.1
+    assert "technical_quality" not in parsed["ratings"]
+    assert wire.parse_joint("```json\n" + json.dumps(payload) + "\n```")["ratings"] == {}

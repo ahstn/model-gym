@@ -1,0 +1,1274 @@
+{
+  "case_ids": [
+    "P051",
+    "P052",
+    "P053",
+    "P054",
+    "P055",
+    "P056",
+    "P057",
+    "P058",
+    "P059",
+    "P060",
+    "P061",
+    "P062",
+    "P063",
+    "P064",
+    "P065",
+    "P066",
+    "P067",
+    "P068",
+    "P069",
+    "P070",
+    "P071",
+    "P072"
+  ],
+  "cases": [
+    {
+      "case_id": "P051",
+      "component": "vizwiz",
+      "decoded_sha256": "7b1fd10097146b2a770c66e69ec308e2d14368d8fc5564dd07fd89c3d1eb7cf0",
+      "delivered_bytes": 1896963,
+      "dhash": "c19c3e7ffc009bcb",
+      "family_id": "vizwiz:VizWiz_train_00004636.jpg",
+      "height": 1536,
+      "image_id": "vizwiz:VizWiz_train_00004636.jpg",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/4a132557d233ba582d8e74fb19d55474fec578f27fa2844dcb9ea36f0f5cbcf9.png",
+      "issue_tags": [
+        "natural_vizwiz",
+        "blur",
+        "framing"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          1224,
+          1632
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          1224,
+          1632
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1152,
+          1536
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "vizwiz",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/vizwiz/images/VizWiz_train_00004636.jpg",
+      "source_sha256": "5bd7286d41934a9efd204dcca65f30e1d256df8fcf18e3fdb53b1ab67ec0a16c",
+      "split": "train",
+      "split_group": "vizwiz:VizWiz_train_00004636.jpg",
+      "stratum": "vizwiz",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "d15355457c621e2064594514b61160de3b7a7b1d282302481c4b67ac0d538f65",
+      "view_sha256": "4a132557d233ba582d8e74fb19d55474fec578f27fa2844dcb9ea36f0f5cbcf9",
+      "vizwiz_stratum": "BLR",
+      "width": 1152
+    },
+    {
+      "case_id": "P052",
+      "component": "vizwiz",
+      "decoded_sha256": "37133a1ee667b67f6d57e23d37be50f369bc6d99ccc9a1e8e89ffcb728f1e17b",
+      "delivered_bytes": 2381474,
+      "dhash": "00ff0ba43f92cc24",
+      "family_id": "vizwiz:VizWiz_train_00014846.jpg",
+      "height": 1382,
+      "image_id": "vizwiz:VizWiz_train_00014846.jpg",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/2c12a82d753bdbd8bc6365a3b3a97012015f238f95df323c9d4c45d1441eed44.png",
+      "issue_tags": [
+        "natural_vizwiz",
+        "blur",
+        "framing"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          1536,
+          2048
+        ],
+        "exif_orientation": 6,
+        "native_dimensions": [
+          2048,
+          1536
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": true,
+        "output_dimensions": [
+          1036,
+          1382
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "vizwiz",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/vizwiz/images/VizWiz_train_00014846.jpg",
+      "source_sha256": "ddeb64cc987f74a75c10f2f1d8dc0829a4a8c146bec5ef1514dc51240980c516",
+      "split": "train",
+      "split_group": "vizwiz:VizWiz_train_00014846.jpg",
+      "stratum": "vizwiz",
+      "target_edge": 1382,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "b7326883b85ec86ae66fdc38e1ca345a02a1b722631a97b0ebb24a1de443e01f",
+      "view_sha256": "2c12a82d753bdbd8bc6365a3b3a97012015f238f95df323c9d4c45d1441eed44",
+      "vizwiz_stratum": "BLR",
+      "width": 1036
+    },
+    {
+      "case_id": "P053",
+      "component": "vizwiz",
+      "decoded_sha256": "6164bc7ab5fea0756be78c6de6ebf3eedbed07e93076a015754aaa21a05d9c1c",
+      "delivered_bytes": 1085538,
+      "dhash": "dfff3fffff7f3f0f",
+      "family_id": "vizwiz:VizWiz_train_00020783.jpg",
+      "height": 1536,
+      "image_id": "vizwiz:VizWiz_train_00020783.jpg",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/b78c746ffc33bc25fd46251569937fb881e24132f01f6e557ff570dd9aff04c0.png",
+      "issue_tags": [
+        "natural_vizwiz",
+        "bright"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          1224,
+          1632
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          1224,
+          1632
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1152,
+          1536
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "vizwiz",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/vizwiz/images/VizWiz_train_00020783.jpg",
+      "source_sha256": "6cdf4b3dd3db9bc0c3f608cf5b3d5a6d0bf85cb16aeeb560d09e4269fb264370",
+      "split": "train",
+      "split_group": "vizwiz:VizWiz_train_00020783.jpg",
+      "stratum": "vizwiz",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "517f251e9c9d0f6e5480f710f1a157bfb7246fa8fbfd90fbe9e81d91fd96f09d",
+      "view_sha256": "b78c746ffc33bc25fd46251569937fb881e24132f01f6e557ff570dd9aff04c0",
+      "vizwiz_stratum": "BRT",
+      "width": 1152
+    },
+    {
+      "case_id": "P054",
+      "component": "vizwiz",
+      "decoded_sha256": "839d28419a91a3a73df159b59d97b5d2a1d96221be609eca85706f1d25dc17a3",
+      "delivered_bytes": 69480,
+      "dhash": "0401001000000000",
+      "family_id": "vizwiz:VizWiz_train_00022894.jpg",
+      "height": 480,
+      "image_id": "vizwiz:VizWiz_train_00022894.jpg",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/4544da548dcafd6e12181fd7d3f2f6d153cf633814617a28ddc9bc530e77c3bc.png",
+      "issue_tags": [
+        "natural_vizwiz",
+        "dark"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          360,
+          480
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          360,
+          480
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          360,
+          480
+        ],
+        "resized": false,
+        "source_icc_sha256": null
+      },
+      "role": "vizwiz",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/vizwiz/images/VizWiz_train_00022894.jpg",
+      "source_sha256": "e212abe693407fedeb5ac2455d4a751342afeb55417ae00fba36bd57ce52928b",
+      "split": "train",
+      "split_group": "vizwiz:VizWiz_train_00022894.jpg",
+      "stratum": "vizwiz",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "66d770ca1eac6a573c3871a5751b07f696f92d9b7072ffee461b40ed82c0bc27",
+      "view_sha256": "4544da548dcafd6e12181fd7d3f2f6d153cf633814617a28ddc9bc530e77c3bc",
+      "vizwiz_stratum": "DRK",
+      "width": 360
+    },
+    {
+      "case_id": "P055",
+      "component": "vizwiz",
+      "decoded_sha256": "17d1d3a022531e87b09f985d72fa68cf1a56a0ca88c52fc647c6de659dd6bb50",
+      "delivered_bytes": 2272087,
+      "dhash": "091f0c19b36b67cf",
+      "family_id": "vizwiz:VizWiz_train_00017955.jpg",
+      "height": 1382,
+      "image_id": "vizwiz:VizWiz_train_00017955.jpg",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/52b570fbf228a41f59c33f21e1cb6d0bf64dfa4b82fe2675adf551fb59bdd9ec.png",
+      "issue_tags": [
+        "natural_vizwiz",
+        "framing"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          1224,
+          1632
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          1224,
+          1632
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1036,
+          1382
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "vizwiz",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/vizwiz/images/VizWiz_train_00017955.jpg",
+      "source_sha256": "38fcbb7a2ce43f565050852891f2872916b6730ad4febbdf1dbe68c808d94dfe",
+      "split": "train",
+      "split_group": "vizwiz:VizWiz_train_00017955.jpg",
+      "stratum": "vizwiz",
+      "target_edge": 1382,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "ed9ca592ec2ad0abf937254f00d8509942d303d3cfc491d770296b7d41417067",
+      "view_sha256": "52b570fbf228a41f59c33f21e1cb6d0bf64dfa4b82fe2675adf551fb59bdd9ec",
+      "vizwiz_stratum": "FRM",
+      "width": 1036
+    },
+    {
+      "case_id": "P056",
+      "component": "vizwiz",
+      "decoded_sha256": "5706b399059b5ab69d0e48d1fbb07e8ae6e1906cd352f73cb09cb37ed7ca28cf",
+      "delivered_bytes": 1944477,
+      "dhash": "444542978d0a0b27",
+      "family_id": "vizwiz:VizWiz_train_00008640.jpg",
+      "height": 1536,
+      "image_id": "vizwiz:VizWiz_train_00008640.jpg",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/59a03bf86843fb80f4684d6423ded4c0048c1c05afd5118eb2b87fa3ad172c87.png",
+      "issue_tags": [
+        "natural_vizwiz",
+        "framing"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          1224,
+          1632
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          1224,
+          1632
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1152,
+          1536
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "vizwiz",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/vizwiz/images/VizWiz_train_00008640.jpg",
+      "source_sha256": "78c2b42fcc896cebae356180fedb8394b30779946d6cb7509e77dd497fcaf61c",
+      "split": "train",
+      "split_group": "vizwiz:VizWiz_train_00008640.jpg",
+      "stratum": "vizwiz",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "4cd1ce48dc8b3add9406bda91dde12ca6e4e92d2a422079fdba390ffe4259d15",
+      "view_sha256": "59a03bf86843fb80f4684d6423ded4c0048c1c05afd5118eb2b87fa3ad172c87",
+      "vizwiz_stratum": "FRM",
+      "width": 1152
+    },
+    {
+      "case_id": "P057",
+      "component": "vizwiz",
+      "decoded_sha256": "c68325458b4878f3a82d3cb3313e5ae9300cd65ea2ac80c5e5d03da59f11479a",
+      "delivered_bytes": 1709078,
+      "dhash": "1f47030380c0300c",
+      "family_id": "vizwiz:VizWiz_train_00009351.jpg",
+      "height": 1536,
+      "image_id": "vizwiz:VizWiz_train_00009351.jpg",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/adf281157f0a7c8102f60b77428df969340d82b9d6a2b24ca2892aaa3655dc74.png",
+      "issue_tags": [
+        "natural_vizwiz",
+        "obstruction"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          1224,
+          1632
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          1224,
+          1632
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1152,
+          1536
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "vizwiz",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/vizwiz/images/VizWiz_train_00009351.jpg",
+      "source_sha256": "cd4f3e2250a0d213c2ef2a6149080242c3b484001166cd20c70a81069a9e0a04",
+      "split": "train",
+      "split_group": "vizwiz:VizWiz_train_00009351.jpg",
+      "stratum": "vizwiz",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "e505050fdd4c5c2fca0b0731de6b939260c182c9e1067918a335a07906943043",
+      "view_sha256": "adf281157f0a7c8102f60b77428df969340d82b9d6a2b24ca2892aaa3655dc74",
+      "vizwiz_stratum": "OBS",
+      "width": 1152
+    },
+    {
+      "case_id": "P058",
+      "component": "vizwiz",
+      "decoded_sha256": "9f69b8398bb84d53e00b9288567c920e95b45acad19de674751042551c3f795b",
+      "delivered_bytes": 2534870,
+      "dhash": "20600145450d3125",
+      "family_id": "vizwiz:VizWiz_train_00001211.jpg",
+      "height": 1536,
+      "image_id": "vizwiz:VizWiz_train_00001211.jpg",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/acda6dd7a15cfc39f6cd48188713f61287137bbb602af274945a432a639d0cba.png",
+      "issue_tags": [
+        "natural_vizwiz",
+        "rotation"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          1224,
+          1632
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          1224,
+          1632
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1152,
+          1536
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "vizwiz",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/vizwiz/images/VizWiz_train_00001211.jpg",
+      "source_sha256": "607f1dd2c5f1cb7b042f446d1a6890b712ce0345c2fea3854c5a1c55a91bd175",
+      "split": "train",
+      "split_group": "vizwiz:VizWiz_train_00001211.jpg",
+      "stratum": "vizwiz",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "f7bdc9c24d4e2457e4b3504231724a4ef4c456070634be5863955d6de4c12f62",
+      "view_sha256": "acda6dd7a15cfc39f6cd48188713f61287137bbb602af274945a432a639d0cba",
+      "vizwiz_stratum": "ROT",
+      "width": 1152
+    },
+    {
+      "case_id": "P059",
+      "component": "megalith",
+      "decoded_sha256": "03a7821dc08c1b083f442b0e50fd85744cf2b1a9f940caf82eff9902468815a9",
+      "delivered_bytes": 2227049,
+      "dhash": "64b8134bc98496d6",
+      "family_id": "megalith-7ab737d82f8d05d03c37ebbca4975b12",
+      "height": 1037,
+      "image_id": "megalith-7ab737d82f8d05d03c37ebbca4975b12",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/f829189caa95e267a37fca1d3eed13bffc07a3c47f37eb2b2ec18418014a9818.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "embedded ICC converted to sRGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          1600,
+          1200
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          1600,
+          1200
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1382,
+          1037
+        ],
+        "resized": true,
+        "source_icc_sha256": "7e1c7ec53e8ea35fed3e169dee62115ac045f26c7bc256fab16a5c26c29eacbd"
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/7ab737d82f8d05d03c37ebbca4975b12.image",
+      "source_sha256": "4a02cc315a043ad9f6dfa432bb2382ac4ead76c1999350ac04fccdc198c149dc",
+      "split": "train",
+      "split_group": "megalith-7ab737d82f8d05d03c37ebbca4975b12",
+      "stratum": "standalone_megalith",
+      "target_edge": 1382,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "8476b5d828bcacad350a3e5b1fc7b69b1e6a899099b5c308dc0e10bc5d12a341",
+      "view_sha256": "f829189caa95e267a37fca1d3eed13bffc07a3c47f37eb2b2ec18418014a9818",
+      "vizwiz_stratum": null,
+      "width": 1382
+    },
+    {
+      "case_id": "P060",
+      "component": "megalith",
+      "decoded_sha256": "85d8d2ad337691835a7ca3bb106cfdccb861f5cd3d1e13b448f1ca33a6d1f169",
+      "delivered_bytes": 2498937,
+      "dhash": "c6c271330749cb91",
+      "family_id": "megalith-59923e8686057d02f59e4b31727039d3",
+      "height": 864,
+      "image_id": "megalith-59923e8686057d02f59e4b31727039d3",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/7e04c16c63b041319e5bab2ef457e94092445182fd1114c3d5bfff054c67a817.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "embedded ICC converted to sRGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          6000,
+          3750
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          6000,
+          3750
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1382,
+          864
+        ],
+        "resized": true,
+        "source_icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/59923e8686057d02f59e4b31727039d3.image",
+      "source_sha256": "f80d59cb1cfa2b0d830961884528e8d8c9fd6ee2996406000b2780b0634f1fa1",
+      "split": "train",
+      "split_group": "megalith-59923e8686057d02f59e4b31727039d3",
+      "stratum": "standalone_megalith",
+      "target_edge": 1382,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "5673eb0dfb998ae61ff09abf125b96200bb0c97fab4e365077fbef25dab714cc",
+      "view_sha256": "7e04c16c63b041319e5bab2ef457e94092445182fd1114c3d5bfff054c67a817",
+      "vizwiz_stratum": null,
+      "width": 1382
+    },
+    {
+      "case_id": "P061",
+      "component": "megalith",
+      "decoded_sha256": "96d9c942d385aa7ec2aef956271c75b671e0813c41909f6963179677f3bae8ca",
+      "delivered_bytes": 2088846,
+      "dhash": "e0e0c083e3e22866",
+      "family_id": "megalith-34538ebe7954d13a92fba2312082bb34",
+      "height": 1536,
+      "image_id": "megalith-34538ebe7954d13a92fba2312082bb34",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/a2305873114951370f272ca2dd32b2fcddc0180a9313333f8f19cbf1001bcd96.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "embedded ICC converted to sRGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          2334,
+          3500
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          2334,
+          3500
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1024,
+          1536
+        ],
+        "resized": true,
+        "source_icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/34538ebe7954d13a92fba2312082bb34.image",
+      "source_sha256": "7987b900dd45ce36aac90ce3850857776d40c28b9ca690cb30d3275f3a7d72eb",
+      "split": "train",
+      "split_group": "megalith-34538ebe7954d13a92fba2312082bb34",
+      "stratum": "standalone_megalith",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "fd23c6428011d1208f9644bf7d359f63002ab174104864ad419e47a036f94dd3",
+      "view_sha256": "a2305873114951370f272ca2dd32b2fcddc0180a9313333f8f19cbf1001bcd96",
+      "vizwiz_stratum": null,
+      "width": 1024
+    },
+    {
+      "case_id": "P062",
+      "component": "megalith",
+      "decoded_sha256": "cfa2cda799a56420ad1d6a40814798fd6e45a462733af7c75112fbd5dc5fc1d5",
+      "delivered_bytes": 2298659,
+      "dhash": "972e8e1d76661d6f",
+      "family_id": "megalith-7eb99dfdd7acefb025bdb827e0adad3b",
+      "height": 777,
+      "image_id": "megalith-7eb99dfdd7acefb025bdb827e0adad3b",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/860d0ab0956e503a12b5427436ac014bc5d7001bd1b0d2202da93b901ed2cb7a.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "embedded ICC converted to sRGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          6000,
+          3750
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          6000,
+          3750
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1243,
+          777
+        ],
+        "resized": true,
+        "source_icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/7eb99dfdd7acefb025bdb827e0adad3b.image",
+      "source_sha256": "a6c3f225935c6895f2344e68ccec27c5efb769e45cbfcf2fa11d8b3df8fd5a95",
+      "split": "train",
+      "split_group": "megalith-7eb99dfdd7acefb025bdb827e0adad3b",
+      "stratum": "standalone_megalith",
+      "target_edge": 1243,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "930d8e0597d71095226ecc31c521fea258b543d03a439244df2cb201327f4381",
+      "view_sha256": "860d0ab0956e503a12b5427436ac014bc5d7001bd1b0d2202da93b901ed2cb7a",
+      "vizwiz_stratum": null,
+      "width": 1243
+    },
+    {
+      "case_id": "P063",
+      "component": "megalith",
+      "decoded_sha256": "355938f5bd52f3721cd8398d25a8e4b5cdf8027a47c44d0dba5703aad6d7efce",
+      "delivered_bytes": 2537530,
+      "dhash": "60284ccacc4b6984",
+      "family_id": "megalith-34e710fab7b1514a79a31ee88fe0034b",
+      "height": 995,
+      "image_id": "megalith-34e710fab7b1514a79a31ee88fe0034b",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/9d3a78623dd0a7621ca861e45a3bab54fe3b3567315d11bd0b2ad90fe045645b.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          2510,
+          1807
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          2510,
+          1807
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1382,
+          995
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/34e710fab7b1514a79a31ee88fe0034b.image",
+      "source_sha256": "c6f495f6279421d3a784b6c6efbf005e939d43a4eaf3cc3617e1049b76f0f480",
+      "split": "train",
+      "split_group": "megalith-34e710fab7b1514a79a31ee88fe0034b",
+      "stratum": "standalone_megalith",
+      "target_edge": 1382,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "f5441a081b6facdb5bf459d6f2c08ce2385b6dae8864e5506ee2b4bf0e0f17b7",
+      "view_sha256": "9d3a78623dd0a7621ca861e45a3bab54fe3b3567315d11bd0b2ad90fe045645b",
+      "vizwiz_stratum": null,
+      "width": 1382
+    },
+    {
+      "case_id": "P064",
+      "component": "megalith",
+      "decoded_sha256": "429ddfd26e3d82637cf7c9cfe2fb89a1089b221ac386235cbc00e60b01834952",
+      "delivered_bytes": 2389475,
+      "dhash": "8b4d158a87159300",
+      "family_id": "megalith-0abf6ee0a492ca877b18cd6e132b6cc8",
+      "height": 864,
+      "image_id": "megalith-0abf6ee0a492ca877b18cd6e132b6cc8",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/7760bdd20a721519ce77018ae0a8b547cbd5fdc79ab09b973d1e4053c3b08e4f.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "embedded ICC converted to sRGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          5472,
+          3078
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          5472,
+          3078
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1536,
+          864
+        ],
+        "resized": true,
+        "source_icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/0abf6ee0a492ca877b18cd6e132b6cc8.image",
+      "source_sha256": "9e1ee1e1e10e050a7ecf78356a7dd0a1f7cdd5ea4fd931de7144cabe1a901ff4",
+      "split": "train",
+      "split_group": "megalith-0abf6ee0a492ca877b18cd6e132b6cc8",
+      "stratum": "standalone_megalith",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "24a1c5bbc31753583db5f52db4aa70d2bc3e2e4537b1c99ee71834e299530517",
+      "view_sha256": "7760bdd20a721519ce77018ae0a8b547cbd5fdc79ab09b973d1e4053c3b08e4f",
+      "vizwiz_stratum": null,
+      "width": 1536
+    },
+    {
+      "case_id": "P065",
+      "component": "megalith",
+      "decoded_sha256": "5fd49bc211918d0cbe41562c3e726bd2e7478507a24177abd55984a577474aa8",
+      "delivered_bytes": 2155213,
+      "dhash": "6bc5953497662430",
+      "family_id": "megalith-934b02731d865ab5719807a91a934541",
+      "height": 1536,
+      "image_id": "megalith-934b02731d865ab5719807a91a934541",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/afc4bd9c88d05045fe9a66774d06d4dc93f143a5e9ccf4fcc295f191d125972f.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "embedded ICC converted to sRGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          3648,
+          5472
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          3648,
+          5472
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1024,
+          1536
+        ],
+        "resized": true,
+        "source_icc_sha256": "e5f6ffb83b6d3491301dd750975684cc5cc2a1951c994a14b08cfdaa0d75a041"
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/934b02731d865ab5719807a91a934541.image",
+      "source_sha256": "d7ee5da6b137f53628a210e8615db22d58640f8fedb064719691a532936a0893",
+      "split": "train",
+      "split_group": "megalith-934b02731d865ab5719807a91a934541",
+      "stratum": "standalone_megalith",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "110c5386463332ae7bd341a304b9ce0420bf71faad347d517e567f939fb44801",
+      "view_sha256": "afc4bd9c88d05045fe9a66774d06d4dc93f143a5e9ccf4fcc295f191d125972f",
+      "vizwiz_stratum": null,
+      "width": 1024
+    },
+    {
+      "case_id": "P066",
+      "component": "megalith",
+      "decoded_sha256": "c450a2cb9190ba1d71855d525055f0f1e60e16fdc827ee61681f45ee9d0c9f32",
+      "delivered_bytes": 1374651,
+      "dhash": "0c460e0f3f0f8d0e",
+      "family_id": "megalith-9eb6efaac8e59b71ee41916e17452f23",
+      "height": 1152,
+      "image_id": "megalith-9eb6efaac8e59b71ee41916e17452f23",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/620416fd107bfbab147c3f3fdec117a03de2bf3e80ee6a4281620ec8cbcee5cf.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "embedded ICC converted to sRGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          3072,
+          2304
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          3072,
+          2304
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1536,
+          1152
+        ],
+        "resized": true,
+        "source_icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/9eb6efaac8e59b71ee41916e17452f23.image",
+      "source_sha256": "68806aa90d038eee46b4a558a5e6ef54c8228a2ce88bade0c87403731223ea82",
+      "split": "train",
+      "split_group": "megalith-9eb6efaac8e59b71ee41916e17452f23",
+      "stratum": "standalone_megalith",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "207b870ec1dc2f1e91fc8fc677c1bdec67ca29babb69801ded8e2c9d59477b49",
+      "view_sha256": "620416fd107bfbab147c3f3fdec117a03de2bf3e80ee6a4281620ec8cbcee5cf",
+      "vizwiz_stratum": null,
+      "width": 1536
+    },
+    {
+      "case_id": "P067",
+      "component": "megalith",
+      "decoded_sha256": "e3db23bda7c323a1531f1f16a2ff3addf2121245979684b27727ebe749bc4e18",
+      "delivered_bytes": 2286510,
+      "dhash": "d1caf0d8cccaa666",
+      "family_id": "megalith-9fff41f042844fb5db518ff2400871b3",
+      "height": 1037,
+      "image_id": "megalith-9fff41f042844fb5db518ff2400871b3",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/c1297c6127fca6ffd64bc6e90dc7bc9c1a72d25ce20b867298416b295bc4ae9f.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          1600,
+          1200
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          1600,
+          1200
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1382,
+          1037
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/9fff41f042844fb5db518ff2400871b3.image",
+      "source_sha256": "06711f1960c1d2342aae06ba0c16910c47f1016c6ffe756c2ff4fe6a4ea7bbe7",
+      "split": "train",
+      "split_group": "megalith-9fff41f042844fb5db518ff2400871b3",
+      "stratum": "standalone_megalith",
+      "target_edge": 1382,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "ca39223f30c92ca444febc9d18cb3cc211928a2e2da267d8c842020c09edbe6e",
+      "view_sha256": "c1297c6127fca6ffd64bc6e90dc7bc9c1a72d25ce20b867298416b295bc4ae9f",
+      "vizwiz_stratum": null,
+      "width": 1382
+    },
+    {
+      "case_id": "P068",
+      "component": "megalith",
+      "decoded_sha256": "bb54ec9d6bac6a88a5cada90f3b3850028cfad21d11fd26be26414b68224c4aa",
+      "delivered_bytes": 1589998,
+      "dhash": "3b5bde349d191b4f",
+      "family_id": "megalith-f223647e210a743ca4a5ea8ac47c267c",
+      "height": 1152,
+      "image_id": "megalith-f223647e210a743ca4a5ea8ac47c267c",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/b1ef4edf3d46760841abf66f02815b784fe7ab4fd0c0748a73f21dc540d2c358.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "embedded ICC converted to sRGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          2560,
+          1920
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          2560,
+          1920
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1536,
+          1152
+        ],
+        "resized": true,
+        "source_icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/f223647e210a743ca4a5ea8ac47c267c.image",
+      "source_sha256": "1559db3c28837e3a308e9ea7ee4f7f20e8ce7729441adaa352b3f83d7d310e84",
+      "split": "train",
+      "split_group": "megalith-f223647e210a743ca4a5ea8ac47c267c",
+      "stratum": "standalone_megalith",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "51d7481c8f5bdf3f56fee99b0376f1ad5392d753215b0b7e6b567e99591e6bc4",
+      "view_sha256": "b1ef4edf3d46760841abf66f02815b784fe7ab4fd0c0748a73f21dc540d2c358",
+      "vizwiz_stratum": null,
+      "width": 1536
+    },
+    {
+      "case_id": "P069",
+      "component": "megalith",
+      "decoded_sha256": "8d5695414fd4c34658961bc81cf23323cded4596185bd670b2cb685e6a162f68",
+      "delivered_bytes": 1756043,
+      "dhash": "167464383b322765",
+      "family_id": "megalith-272c23b1ff97608a6c7bcc4c1dbccc36",
+      "height": 960,
+      "image_id": "megalith-272c23b1ff97608a6c7bcc4c1dbccc36",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/462cb2b28e3d3853e926c51be79bcf90e98c2de33a5c147bb9ebae3b23857950.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "embedded ICC converted to sRGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          5726,
+          3579
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          5726,
+          3579
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1536,
+          960
+        ],
+        "resized": true,
+        "source_icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e"
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/272c23b1ff97608a6c7bcc4c1dbccc36.image",
+      "source_sha256": "c61f61d94c5502f553685d635de168263ea5690654cc465716350ff36df17a43",
+      "split": "train",
+      "split_group": "megalith-272c23b1ff97608a6c7bcc4c1dbccc36",
+      "stratum": "standalone_megalith",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "ddc92a7f5e1cbc05aefc7e7540342b79b899c9cadb221aeb26c993df3b9a351c",
+      "view_sha256": "462cb2b28e3d3853e926c51be79bcf90e98c2de33a5c147bb9ebae3b23857950",
+      "vizwiz_stratum": null,
+      "width": 1536
+    },
+    {
+      "case_id": "P070",
+      "component": "megalith",
+      "decoded_sha256": "74cb9741a912a368d0a20436538866e631f4358fad6b8f5dfe97dd959db478d3",
+      "delivered_bytes": 334564,
+      "dhash": "07c1c9ccb4890913",
+      "family_id": "megalith-46077572349fc043604caec6351ac60a",
+      "height": 983,
+      "image_id": "megalith-46077572349fc043604caec6351ac60a",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/fceda563e535c8ea07815ceb2dfb6f17d02dd6160cc46cac8beef44e3f9ea053.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          625,
+          983
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          625,
+          983
+        ],
+        "native_mode": "L",
+        "orientation_applied": false,
+        "output_dimensions": [
+          625,
+          983
+        ],
+        "resized": false,
+        "source_icc_sha256": null
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/46077572349fc043604caec6351ac60a.image",
+      "source_sha256": "b345fcec08632f329b623c7843803f535e2596ccdbcfc1ae54f1e84fdcfee997",
+      "split": "train",
+      "split_group": "megalith-46077572349fc043604caec6351ac60a",
+      "stratum": "standalone_megalith",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "3e319a6c85fbacfd940b3379da01425d528840916ba25e1a0764e8a3d9cf6b40",
+      "view_sha256": "fceda563e535c8ea07815ceb2dfb6f17d02dd6160cc46cac8beef44e3f9ea053",
+      "vizwiz_stratum": null,
+      "width": 625
+    },
+    {
+      "case_id": "P071",
+      "component": "megalith",
+      "decoded_sha256": "6a9463000c1a09a0ed6d7c658f78ca25903452bf93db394400909a8cf0df2639",
+      "delivered_bytes": 1880684,
+      "dhash": "8a12536767233135",
+      "family_id": "megalith-6d63181c753beb3c23f3f49b262bd608",
+      "height": 863,
+      "image_id": "megalith-6d63181c753beb3c23f3f49b262bd608",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/bc8c70308ea9e5205f017b7d7ca3f27b1fde0aaf178c89866252ab2a08e045fb.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          4912,
+          2760
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          4912,
+          2760
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1536,
+          863
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/6d63181c753beb3c23f3f49b262bd608.image",
+      "source_sha256": "59b2e09caf54965fce2a2448e1e075306346cefd3c5f9a86f755259749ce604a",
+      "split": "train",
+      "split_group": "megalith-6d63181c753beb3c23f3f49b262bd608",
+      "stratum": "standalone_megalith",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "794de2d9ba7efd6bcad2ed262d7a97f2894fac26f1c4a86e59117d2b4618bb7b",
+      "view_sha256": "bc8c70308ea9e5205f017b7d7ca3f27b1fde0aaf178c89866252ab2a08e045fb",
+      "vizwiz_stratum": null,
+      "width": 1536
+    },
+    {
+      "case_id": "P072",
+      "component": "megalith",
+      "decoded_sha256": "c0881f2631298602d30d6ca751a19e41a224ba69da596c7a17287fbf5abe6d72",
+      "delivered_bytes": 2064674,
+      "dhash": "d1a1315d25e3c706",
+      "family_id": "megalith-b952b5c2c65adbed13790122ca5b505f",
+      "height": 864,
+      "image_id": "megalith-b952b5c2c65adbed13790122ca5b505f",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/views/0470bde1b1e38b28d2007eb5bce2b4d630285342504b79416fc83b3abd524cca.png",
+      "issue_tags": [
+        "standalone_megalith"
+      ],
+      "mime_type": "image/png",
+      "operator": null,
+      "photo_domain_eligible": null,
+      "preprocessing": {
+        "alpha_composited_on_white": false,
+        "colour_action": "missing ICC assumed sRGB; Pillow mode conversion to RGB",
+        "crop_bounds": null,
+        "decoded_dimensions": [
+          1920,
+          1080
+        ],
+        "exif_orientation": 1,
+        "native_dimensions": [
+          1920,
+          1080
+        ],
+        "native_mode": "RGB",
+        "orientation_applied": false,
+        "output_dimensions": [
+          1536,
+          864
+        ],
+        "resized": true,
+        "source_icc_sha256": null
+      },
+      "role": "standalone_megalith",
+      "severity": null,
+      "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/b952b5c2c65adbed13790122ca5b505f.image",
+      "source_sha256": "ec0e69a9b6f6822169083b804b1bceca439f7e698e0223d816d09e24caf5f6d8",
+      "split": "train",
+      "split_group": "megalith-b952b5c2c65adbed13790122ca5b505f",
+      "stratum": "standalone_megalith",
+      "target_edge": 1536,
+      "task_masks": {
+        "aesthetics": false,
+        "photo_domain": false,
+        "technical_quality": false
+      },
+      "view_id": "290aa127341731df7ba62211628ab1e773b1f78e33bd416941c1a63dcfb8dcdf",
+      "view_sha256": "0470bde1b1e38b28d2007eb5bce2b4d630285342504b79416fc83b3abd524cca",
+      "vizwiz_stratum": null,
+      "width": 1536
+    }
+  ],
+  "image_appearance_not_inspected_for_selection": true,
+  "manifest_id": "f850170ead76eeff3d423946d337bc3480c7c740af37f2280adf885981fb0fed",
+  "seed": 20261031,
+  "selected_before_provider_inference": true
+}

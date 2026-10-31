@@ -1,0 +1,123 @@
+{
+  "reason": "Haiku HTTP400 nullable enum schema incompatibility before any image calls; explicit transport revision, not an automatic identical retry.",
+  "inputs": {
+    "/home/ahstn/git/model-gym/visual-quality/experiments/dual-score-trial-2026-10-27/runner.py": {
+      "sha256": "c562f34509a66aae3ca7f8405c555e1678ffea83207e4c741fdc8a523e925230",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/c562f34509a66aae3ca7f8405c555e1678ffea83207e4c741fdc8a523e925230"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/dual-score-trial-2026-10-27/wire.py": {
+      "sha256": "ebbeed1c93208b1533c869d175301df32f49a8a8e8e04336d11c0c8c1f3e9376",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/ebbeed1c93208b1533c869d175301df32f49a8a8e8e04336d11c0c8c1f3e9376"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/arms.json": {
+      "sha256": "03bfd32e5cfb717b2b5d1dc42bb48c0c33add6fa9ff6b125eab36cac7950f8f3",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/03bfd32e5cfb717b2b5d1dc42bb48c0c33add6fa9ff6b125eab36cac7950f8f3"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/collage-selection.json": {
+      "sha256": "63cd93f0bef7aeb60ee7c8cf57a13e067868bfb5f687a9ab11bdcc3f054bbb74",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/63cd93f0bef7aeb60ee7c8cf57a13e067868bfb5f687a9ab11bdcc3f054bbb74"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/freeze_references.py": {
+      "sha256": "eeb1df2b597852b5f4413605b972447261b274cc863310d4eaf1d96541a2590c",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/eeb1df2b597852b5f4413605b972447261b274cc863310d4eaf1d96541a2590c"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/openrouter-catalog.json": {
+      "sha256": "86c87ec72efa45bbe06ecc6e397a1289955b402f66dc33192ee64f3cae2c0442",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/86c87ec72efa45bbe06ecc6e397a1289955b402f66dc33192ee64f3cae2c0442"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/openrouter-gemini-endpoints.json": {
+      "sha256": "0fe30579908eb29c6e795eb5eeee3bc199071ff87582d1cc71ab6fa3a6ef76f6",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/0fe30579908eb29c6e795eb5eeee3bc199071ff87582d1cc71ab6fa3a6ef76f6"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/openrouter-haiku-endpoints.json": {
+      "sha256": "e18b27e0c122f1e76db88319e5533a7763de1e904d0d223c1a818052d178a222",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/e18b27e0c122f1e76db88319e5533a7763de1e904d0d223c1a818052d178a222"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/openrouter-luna-endpoints.json": {
+      "sha256": "78313ae6ac93b78dad057ebe3770ef257a5090499a1750c42e835a05dd98feb5",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/78313ae6ac93b78dad057ebe3770ef257a5090499a1750c42e835a05dd98feb5"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/protocol.md": {
+      "sha256": "7cd8b3beeea05b3f42cea1cc41421d706990d77acdca9e03885cf92971f5c141",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/7cd8b3beeea05b3f42cea1cc41421d706990d77acdca9e03885cf92971f5c141"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/provider-research.json": {
+      "sha256": "6cf17b2affc9e1223e490dfaa9ccbefca6599ea603661fbeb3d0d091a7dccc09",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/6cf17b2affc9e1223e490dfaa9ccbefca6599ea603661fbeb3d0d091a7dccc09"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/report.py": {
+      "sha256": "0e0ee8566a86c478a8c299a9c020036af305d6a16325cbe6de9211c4078f39a4",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/0e0ee8566a86c478a8c299a9c020036af305d6a16325cbe6de9211c4078f39a4"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/routes.json": {
+      "sha256": "e41d47f6575d73eb68588fb16454cfe899599035b62ab23780c18310b1bc8526",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/e41d47f6575d73eb68588fb16454cfe899599035b62ab23780c18310b1bc8526"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/runinfra-catalog.json": {
+      "sha256": "19136415693f394b8417e83569f78f9a3070a8a8ed0c75df59c2b8b496580d8d",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/19136415693f394b8417e83569f78f9a3070a8a8ed0c75df59c2b8b496580d8d"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/runner.py": {
+      "sha256": "797920eabbe66cf92411abf538da6850662dcef4a3f152f37ce2e42bdc8de428",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/797920eabbe66cf92411abf538da6850662dcef4a3f152f37ce2e42bdc8de428"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/test_report.py": {
+      "sha256": "98604368af64d2028e481183e1d63ec4accedaacd2f40444316ed93556b97e6e",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/98604368af64d2028e481183e1d63ec4accedaacd2f40444316ed93556b97e6e"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/test_runner.py": {
+      "sha256": "cb1d72399a0c6559f9c8fdd7b25b594e6b1d6c75364378a24f140ead0b3bf94d",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/cb1d72399a0c6559f9c8fdd7b25b594e6b1d6c75364378a24f140ead0b3bf94d"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/test_wire.py": {
+      "sha256": "da5fb24d77e9e90ec943c1e8363342c746478b01aded95558d974ddd8b2495b0",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/da5fb24d77e9e90ec943c1e8363342c746478b01aded95558d974ddd8b2495b0"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/wire.py": {
+      "sha256": "8373b79b030ab5956f82a0c2406b440e30ca9524b999c090bc27541dfa0f8709",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/8373b79b030ab5956f82a0c2406b440e30ca9524b999c090bc27541dfa0f8709"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/prompts/visual-rating-v1/joint.txt": {
+      "sha256": "d5b07c97f9b3dd1884a1c69b4511f94d1646d623f8232751ea7c9c6ecffcb12a",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/d5b07c97f9b3dd1884a1c69b4511f94d1646d623f8232751ea7c9c6ecffcb12a"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/prompts/visual-rating-v1/system.txt": {
+      "sha256": "f95bf047900bb615f9d906709a46a77b64b851e771382a433d80c77877926959",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/f95bf047900bb615f9d906709a46a77b64b851e771382a433d80c77877926959"
+    },
+    "/home/ahstn/git/model-gym/visual-quality/src/visual_quality/storage.py": {
+      "sha256": "e84fe19228b46ba4a6bea89d85cf99265b64fe3bbef39586e199536ddb8c7528",
+      "archived_copy": "/home/ahstn/git/model-gym/visual-quality/experiments/prompt-ablation-2026-10-30/preflight-v1/inputs/e84fe19228b46ba4a6bea89d85cf99265b64fe3bbef39586e199536ddb8c7528"
+    }
+  },
+  "routes": {
+    "deepseek": {
+      "attempted": 5,
+      "known_cost_usd": "0.00032775",
+      "unpriced_attempts": 0,
+      "admission_debit_usd": "0.00032775",
+      "run_id": "845b77c6f28d3dfc1f4d071a5ca8da1ad7063869e3a69f768e55cefd7fb1c0ff"
+    },
+    "gemini": {
+      "attempted": 5,
+      "known_cost_usd": "0.00706575",
+      "unpriced_attempts": 0,
+      "admission_debit_usd": "0.00706575",
+      "run_id": "695185b2cf8d3c8185a982d33a66313991ea89a4073b04a013633597ba62c633"
+    },
+    "luna": {
+      "attempted": 5,
+      "known_cost_usd": "0.0005953",
+      "unpriced_attempts": 0,
+      "admission_debit_usd": "0.0005953",
+      "run_id": "e55e7c3231c4080d9ef3266484905ebba5f0524f3fefec595eb933406a20ea2d"
+    },
+    "haiku": {
+      "attempted": 1,
+      "known_cost_usd": "0",
+      "unpriced_attempts": 1,
+      "admission_debit_usd": "0.54096",
+      "run_id": "47f0e5d16b0d324077099a09372a036aa9318693ae5982aba3eb1e6613ee30f1"
+    }
+  }
+}

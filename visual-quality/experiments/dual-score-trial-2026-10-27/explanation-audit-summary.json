@@ -1,0 +1,628 @@
+{
+  "cases": 12,
+  "explanations": 72,
+  "selection": "preselected 12-case sample",
+  "scores_and_model_identities_hidden_from_auditor": true,
+  "counts": {
+    "deepseek": {
+      "technical_quality": {
+        "supported": 10,
+        "mixed": 2,
+        "unsupported": 0,
+        "unavailable": 0
+      },
+      "aesthetics": {
+        "supported": 11,
+        "mixed": 1,
+        "unsupported": 0,
+        "unavailable": 0
+      }
+    },
+    "gemini": {
+      "technical_quality": {
+        "supported": 10,
+        "mixed": 2,
+        "unsupported": 0,
+        "unavailable": 0
+      },
+      "aesthetics": {
+        "supported": 11,
+        "mixed": 1,
+        "unsupported": 0,
+        "unavailable": 0
+      }
+    },
+    "luna": {
+      "technical_quality": {
+        "supported": 12,
+        "mixed": 0,
+        "unsupported": 0,
+        "unavailable": 0
+      },
+      "aesthetics": {
+        "supported": 11,
+        "mixed": 1,
+        "unsupported": 0,
+        "unavailable": 0
+      }
+    }
+  },
+  "findings": [
+    {
+      "case_id": "D002",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Pervasive softness and merged foliage visibly limit resolved fine detail across the supplied view.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D002",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Dense overlapping weeds occupy most of the frame without a strongly separated focal subject; the negative compositional judgment is reasonable.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D002",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "The vegetation and railway are recognizable, but leaf texture and rail edges are visibly soft.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D002",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Rail lines and vegetation form visible layers, while crowded greens and subdued color support the stated limitations.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D002",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Fine leaves merge together, and tracks and trees lack crisp definition throughout the image.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D002",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Weeds dominate the foreground and the tracks occupy the upper portion; the claimed weak anchoring is a reasonable aesthetic reading.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D006",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "mixed",
+      "reason": "Overall softness and varying definition across the objects are visible, but no clear directional smear establishes the additional claim of motion blur.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D006",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Diagonal placement, subdued illumination, cropped end objects, and uneven empty space support the framing criticism; its degree is subjective.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D006",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "The repeated objects remain recognizable despite blurred surface detail, and illumination is broadly even.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D006",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Repeated linked forms make a diagonal rhythm, while the large empty upper region and muted tones support the subdued reading.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D006",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "A soft, hazy rendering and fine mottling are visible, with patinated surfaces and overall object shapes still legible.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D006",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Repeated patinated objects form a broadly regular row against a plain background; the clipped end objects support the tight-framing observation.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D012",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Dense colored grain visibly covers the table, vessels, and background and interferes with fine ornament and edge clarity.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D012",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The red decorated vessels, display sign, reflective backdrop, and straightforward display framing are visible; the appeal judgment is subjective.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D012",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Strong grain and dark areas reduce fine detail, while the vessel shapes and enough label lettering remain readable to support the claim of legibility.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D012",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Warm red vessels are visibly arranged on a pale surface around a prominent large tray; balance and hierarchy are reasonable positive interpretations.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D012",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Heavy multicolored noise and dark vessel interiors obscure small details without preventing object recognition.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D012",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The red-black vessels contrast with the pale surface, while strong shadows and numerous competing items support the stated reservations.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D014",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Leading riders remain clearly defined, with fine grain, softer distant detail, and a pale low-detail sky visible.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D014",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "mixed",
+      "reason": "The foreground riders, receding line, and broad road are accurately described, but the light produces distinct hard shadows rather than clearly flat illumination.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D014",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "mixed",
+      "reason": "Foreground definition and softer distant riders are visible, but distinctive compression artifacts are not evident enough to establish the compression claim.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D014",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The lead riders, diagonal recession along the road, and green banks visibly establish subject emphasis and depth.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D014",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Lead cyclists retain adequate detail, fine noise is present, and sunlit white clothing has small areas of reduced highlight detail.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D014",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The staggered riders convey forward movement, with hard sunlight and an everyday road setting visible; their aesthetic effect is subjective.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D017",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Most foreground faces, clothing, and bottles retain useful clarity despite hard light and some softer shadow detail.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D017",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Dense overlapping people, edge crops, tents, and the foreground barrier support a crowded reading; limited hierarchy is a defensible aesthetic judgment.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D017",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Foreground activity is legible, while very bright tent areas and deep facial shadows visibly support the exposure qualification.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D017",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The foreground bottle exchange forms a focal interaction amid dense crowding, cropped people, and numerous competing details.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D017",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Main foreground subjects are clearly rendered with usable tonal detail, and the distant crowd is softer; the summary reasonably describes the overall view.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D017",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Layered figures, repeated bright blue shirts, and the foreground interaction around bottles are all directly visible.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D022",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Architectural edges remain defined, with retained stone and glazing detail, fine grain, and small sky flecks.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D022",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Centered symmetry, warm stone light, sparse figures, and broad foreground horizontal bands are visible and support the static reading.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D022",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Dust-like specks and grain are visible, while the main structural edges and exposure remain clear; their exact capture origin is not needed for the material observation.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D022",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The facade is framed nearly symmetrically with repeated clean verticals and a comparatively plain foreground.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D022",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Facade divisions and paving edges are well defined overall, while small distant figures and vegetation have less detail.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D022",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Symmetry, warm directional light, and layered stone foreground bands visibly create an ordered architectural presentation.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D025",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "The weave is sharply resolved and the pale-bordered lower object is heavily defocused with a bright glare patch; its precise identity is incidental.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D025",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "A strong diagonal separates woven brown texture from the pale-bordered blurred lower object, supporting the modest abstract-composition reading.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D025",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Sharp fabric, severe lower-object blur, and lost detail in the bright reflection are all plainly visible.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D025",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The warm patterned fabric and diagonal boundary provide structure, while the large blurred reflection and abrupt crop support the stated weaknesses.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D025",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "The strong contrast between sharply resolved fabric and the extremely blurred foreground is visible; calling that focus allocation unsuccessful is a reasonable execution judgment.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D025",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Heavy foreground blur, diagonal division, and abrupt cropping support an apparently haphazard reading; the negative aesthetic assessment does not require inferring a literal accident.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D031",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Broad light bloom, pervasive colored noise, and low contrast visibly obscure most scene information.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D031",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The large upper-left glare dominates the dark frame and provides visible grounds for the stated imbalance.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D031",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Heavy grain, darkness, and a broad white glare leave the lower-left window shapes as the clearest recognizable scene detail.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D031",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "A grainy dark field, glowing windows, and faint scattered lights are visible; describing their effect as atmospheric is a permissible subjective reading.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D031",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Pervasive grain, soft window and building forms, and the clipped bright left region materially obscure detail.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D031",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Strong bright-dark contrast and small scattered lights coexist with extensive indistinct dark space, supporting both the atmosphere and cohesion observations.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D032",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Tile seams remain recognizable amid global softness, colored grain, dull color, and uneven dim illumination.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D032",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Mostly empty marked tiles, skewed grout lines, and a cut-off left-edge object support weak focal emphasis and an apparently incidental frame.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D032",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "mixed",
+      "reason": "Softness, grain, and poor illumination are visible, but the blurred intrusion occupies a narrow edge strip rather than a large obstruction of the main tiled field.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D032",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The angled tiled view, scattered marks, and blurred edge intrusion are visible; the strongly negative compositional judgment is subjective rather than a false scene claim.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D032",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "The image is globally soft and grainy, with a clearly defocused object intruding into the lower-left.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D032",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Tilted floor geometry and the cropped blurred object provide visible support for the weak-focal-point reading; deliberateness is treated as a visual impression.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D039",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "The three subjects remain clearly identifiable with mild softness, bright background patches, and no conspicuous compression or noise defects.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D039",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Vertical framing, the dark horse, blue shirt, overlapping figures, and plain softened arena background are all visible.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D039",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "The rider and horse retain clear subject detail against a smoothly blurred background; the general exposure and focus description is reasonable despite mild local softness.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D039",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The rider, horse, and handler are clearly presented in an arena setting; calling the setting ordinary is a subjective aesthetic assessment.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D039",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Main subject detail and natural-looking colors are preserved, with soft background separation and no prominent artifacts; slight local softness does not materially contradict the summary.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D039",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The rider sits above-left of the horse's head while the handler occupies the right, providing a reasonable basis for the described balanced arrangement.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D040",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "The face, clothing, hands, and certificate markings are sharply rendered, and the background is visibly defocused.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D040",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "mixed",
+      "reason": "The commemorative portrait framing and background distractions are visible, but the directional sunlight creates hard edges and bright highlights rather than balanced soft lighting.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D040",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "mixed",
+      "reason": "The subject and certificate are sharp and well exposed, but background people and architectural details are substantially defocused, stronger than the stated only mild blur.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D040",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "mixed",
+      "reason": "Centered framing, subject separation, and background clutter are accurately described, but strong directional sunlight and cast shadows contradict the flat-lighting claim.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D040",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Sharp subject and certificate detail, bright sunlit highlights, and smooth background blur are all visible.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D040",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The centered boy, red plaid, pale certificate, background figures, and hard sunlight provide direct support for the stated composition and distractions.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D042",
+      "alias": "A",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "The group and setting remain legible despite general softness, visible dust spots, and scattered scratches.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D042",
+      "alias": "A",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Inward-facing figures and gestures form a coherent group; monochrome grain, clothing, and the setting reasonably support the atmospheric reading without establishing a specific date.",
+      "route": "deepseek"
+    },
+    {
+      "case_id": "D042",
+      "alias": "B",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Softness, grain, scratches, and pale washed-out sky and rocks are visible while the people remain distinguishable.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D042",
+      "alias": "B",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "Gestures connect the clustered people, boats occupy the background, and tight edge crops plus uneven tones support the stated qualifications.",
+      "route": "luna"
+    },
+    {
+      "case_id": "D042",
+      "alias": "C",
+      "task": "technical_quality",
+      "verdict": "supported",
+      "reason": "Visible grain, small scratches, and a nearly white sky reduce fidelity without erasing the central subjects.",
+      "route": "gemini"
+    },
+    {
+      "case_id": "D042",
+      "alias": "C",
+      "task": "aesthetics",
+      "verdict": "supported",
+      "reason": "The figures' inward arrangement and gestures visibly imply interaction, while the pale background is washed out; balance is a reasonable aesthetic interpretation.",
+      "route": "gemini"
+    }
+  ]
+}

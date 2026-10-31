@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Original views · Dual-score trial · 36-case inspection</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17212e; background: #f2f4f7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 30px clamp(12px, 2vw, 32px) 40px; }
+    header { margin: 0 auto 26px; max-width: 1900px; }
+    .eyebrow { margin: 0 0 8px; color: #53657d; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0 0 12px; font-size: clamp(25px, 3vw, 38px); letter-spacing: -.04em; }
+    header p { max-width: 1000px; margin: 8px 0; line-height: 1.55; }
+    a { color: #234e84; text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid #d66e16; outline-offset: 3px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 18px; font-size: 13px; color: #3d4e65; }
+    .grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; max-width: 1900px; margin: auto; }
+    .card { min-width: 0; overflow: hidden; border: 1px solid #dce1e8; border-radius: 9px; background: white; }
+    h2 { display: flex; justify-content: space-between; align-items: baseline; margin: 0; padding: 12px; font-size: 17px; letter-spacing: .02em; }
+    .position { color: #7a8797; font-size: 11px; font-weight: 500; }
+    .image-link { display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 3; background: #e9edf2; }
+    img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    table { width: calc(100% - 24px); margin: 10px 12px 0; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+    th, td { padding: 6px 4px; text-align: right; border-bottom: 1px solid #edf0f4; }
+    th:first-child { text-align: left; }
+    thead th { color: #637086; font-size: 11px; font-weight: 600; }
+    tbody th { font-weight: 500; }
+    tbody tr:first-child { background: #edf3fb; color: #183d6d; }
+    tbody tr:first-child th, tbody tr:first-child td { font-weight: 700; }
+    .original-link { margin: 10px 16px 13px; font-size: 11px; }
+    footer { max-width: 1900px; margin: 24px auto 0; color: #637086; font-size: 12px; line-height: 1.6; }
+    @media (max-width: 1350px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+    @media (max-width: 950px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 680px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
+    @media (max-width: 420px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+    @media print { body { padding: 0; } .grid { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; } .card { break-inside: avoid; } table { font-size: 10px; } h2 { font-size: 12px; } .original-link { display: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Dual-score trial · 27 October 2026</p>
+    <h1>Original views, exact scores</h1>
+    <p>Inspection companion to the generated poster: 36 original scored PNGs spanning all 32 image families, including six controlled source parents and four severe distortion variants. Select any image to inspect its full original.</p>
+    <p>Scores use a <strong>1–5 scale</strong>, with higher values indicating better quality. <strong>Ref is a blind assistant assessment, not human gold.</strong> Tech means technical quality; Aest means aesthetics.</p>
+    <div class="legend">
+      <span>Order: increasing Ref technical score, then aesthetics</span>
+      <span>Images: full frame, no crop</span>
+      <a href="scores.csv" download>Download exact scores CSV</a>
+      <a href="selection.json">Selection and image hashes</a>
+    </div>
+  </header>
+  <main class="grid" aria-label="36 original views and scores">
+    <article class="card" id="D030" data-case-id="D030">
+      <h2><span>D030</span><span class="position">01 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/b4ae4c309aca84fab24fbcbcea7fb685f7120ae5e1bd0b5d81eaafda3d3740ee.png" aria-label="Open original scored PNG for D030">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/b4ae4c309aca84fab24fbcbcea7fb685f7120ae5e1bd0b5d81eaafda3d3740ee.png" alt="Original scored view D030" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D030">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">1.0</td><td data-model="Ref" data-task="aesthetics">1.2</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">1.0</td><td data-model="DeepSeek" data-task="aesthetics">1.0</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.1</td><td data-model="Gemini" data-task="aesthetics">2.0</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">1.8</td><td data-model="Luna" data-task="aesthetics">2.3</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/b4ae4c309aca84fab24fbcbcea7fb685f7120ae5e1bd0b5d81eaafda3d3740ee.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D004" data-case-id="D004">
+      <h2><span>D004</span><span class="position">02 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/0b0c844c4b3ecdadde72e45ed365957b41d6a2eb14cad18261a2612d2802eaec.png" aria-label="Open original scored PNG for D004">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/0b0c844c4b3ecdadde72e45ed365957b41d6a2eb14cad18261a2612d2802eaec.png" alt="Original scored view D004" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D004">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">1.3</td><td data-model="Ref" data-task="aesthetics">1.8</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">1.2</td><td data-model="DeepSeek" data-task="aesthetics">2.3</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.1</td><td data-model="Gemini" data-task="aesthetics">2.3</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">1.8</td><td data-model="Luna" data-task="aesthetics">2.4</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/0b0c844c4b3ecdadde72e45ed365957b41d6a2eb14cad18261a2612d2802eaec.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D035" data-case-id="D035">
+      <h2><span>D035</span><span class="position">03 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/c98e5056cd194d4efc710dcfd6770529e1c7d7922d6be7da5c34d00b210815b8.png" aria-label="Open original scored PNG for D035">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/c98e5056cd194d4efc710dcfd6770529e1c7d7922d6be7da5c34d00b210815b8.png" alt="Original scored view D035" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D035">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">1.5</td><td data-model="Ref" data-task="aesthetics">1.4</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">1.1</td><td data-model="DeepSeek" data-task="aesthetics">1.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.0</td><td data-model="Gemini" data-task="aesthetics">2.1</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.0</td><td data-model="Luna" data-task="aesthetics">1.8</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/c98e5056cd194d4efc710dcfd6770529e1c7d7922d6be7da5c34d00b210815b8.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D029" data-case-id="D029">
+      <h2><span>D029</span><span class="position">04 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/55560ec82acebb5f42b27d209e11cfc0edfeec37d1abe3acb31ddd73849d9356.png" aria-label="Open original scored PNG for D029">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/55560ec82acebb5f42b27d209e11cfc0edfeec37d1abe3acb31ddd73849d9356.png" alt="Original scored view D029" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D029">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">1.5</td><td data-model="Ref" data-task="aesthetics">1.7</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">1.8</td><td data-model="DeepSeek" data-task="aesthetics">2.3</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.0</td><td data-model="Gemini" data-task="aesthetics">2.1</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.2</td><td data-model="Luna" data-task="aesthetics">2.1</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/55560ec82acebb5f42b27d209e11cfc0edfeec37d1abe3acb31ddd73849d9356.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D031" data-case-id="D031">
+      <h2><span>D031</span><span class="position">05 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/ab6707c8403cfee874d6ec8fdb5ceb086d147e144a71fd78802ae7854c7bcca9.png" aria-label="Open original scored PNG for D031">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/ab6707c8403cfee874d6ec8fdb5ceb086d147e144a71fd78802ae7854c7bcca9.png" alt="Original scored view D031" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D031">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">1.5</td><td data-model="Ref" data-task="aesthetics">1.9</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">2.2</td><td data-model="DeepSeek" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.1</td><td data-model="Gemini" data-task="aesthetics">2.2</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.1</td><td data-model="Luna" data-task="aesthetics">2.6</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/ab6707c8403cfee874d6ec8fdb5ceb086d147e144a71fd78802ae7854c7bcca9.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D028" data-case-id="D028">
+      <h2><span>D028</span><span class="position">06 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/20204e24ea782e00e20dfe93abc1a68beb44ae57ab25d94bd874597e14d9006c.png" aria-label="Open original scored PNG for D028">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/20204e24ea782e00e20dfe93abc1a68beb44ae57ab25d94bd874597e14d9006c.png" alt="Original scored view D028" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D028">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">1.6</td><td data-model="Ref" data-task="aesthetics">2.2</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">2.3</td><td data-model="DeepSeek" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.1</td><td data-model="Gemini" data-task="aesthetics">2.0</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.5</td><td data-model="Luna" data-task="aesthetics">3.1</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/20204e24ea782e00e20dfe93abc1a68beb44ae57ab25d94bd874597e14d9006c.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D027" data-case-id="D027">
+      <h2><span>D027</span><span class="position">07 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/c3fcb488dc99510855b0e48e3599e984e9b937ca8b9246549ed630592e342329.png" aria-label="Open original scored PNG for D027">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/c3fcb488dc99510855b0e48e3599e984e9b937ca8b9246549ed630592e342329.png" alt="Original scored view D027" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D027">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">1.9</td><td data-model="Ref" data-task="aesthetics">1.7</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">1.5</td><td data-model="DeepSeek" data-task="aesthetics">1.5</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.1</td><td data-model="Gemini" data-task="aesthetics">2.0</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.1</td><td data-model="Luna" data-task="aesthetics">2.1</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/c3fcb488dc99510855b0e48e3599e984e9b937ca8b9246549ed630592e342329.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D036" data-case-id="D036">
+      <h2><span>D036</span><span class="position">08 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/0eaaf34397398e3f9f1fb4461016953ab09834509b1afd5f325e5757194e4cc6.png" aria-label="Open original scored PNG for D036">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/0eaaf34397398e3f9f1fb4461016953ab09834509b1afd5f325e5757194e4cc6.png" alt="Original scored view D036" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D036">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">2.0</td><td data-model="Ref" data-task="aesthetics">1.8</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">2.8</td><td data-model="DeepSeek" data-task="aesthetics">2.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.0</td><td data-model="Gemini" data-task="aesthetics">2.1</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.4</td><td data-model="Luna" data-task="aesthetics">1.7</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/0eaaf34397398e3f9f1fb4461016953ab09834509b1afd5f325e5757194e4cc6.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D020" data-case-id="D020">
+      <h2><span>D020</span><span class="position">09 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/19ff2f25a4b2e1e6e856db9ce8b9c0bdde5d6e47f1ed0b91f12bfca23cd813fb.png" aria-label="Open original scored PNG for D020">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/19ff2f25a4b2e1e6e856db9ce8b9c0bdde5d6e47f1ed0b91f12bfca23cd813fb.png" alt="Original scored view D020" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D020">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">2.0</td><td data-model="Ref" data-task="aesthetics">2.5</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.5</td><td data-model="DeepSeek" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.3</td><td data-model="Gemini" data-task="aesthetics">2.6</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.0</td><td data-model="Luna" data-task="aesthetics">3.6</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/19ff2f25a4b2e1e6e856db9ce8b9c0bdde5d6e47f1ed0b91f12bfca23cd813fb.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D024" data-case-id="D024">
+      <h2><span>D024</span><span class="position">10 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/a7dcbdea8857c03b3a6a92dbd8f875dbee8252f01605f7e7ffa9dacc540c7d26.png" aria-label="Open original scored PNG for D024">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/a7dcbdea8857c03b3a6a92dbd8f875dbee8252f01605f7e7ffa9dacc540c7d26.png" alt="Original scored view D024" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D024">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">2.1</td><td data-model="Ref" data-task="aesthetics">3.0</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.6</td><td data-model="DeepSeek" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.7</td><td data-model="Gemini" data-task="aesthetics">3.1</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.5</td><td data-model="Luna" data-task="aesthetics">3.8</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/a7dcbdea8857c03b3a6a92dbd8f875dbee8252f01605f7e7ffa9dacc540c7d26.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D034" data-case-id="D034">
+      <h2><span>D034</span><span class="position">11 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/1285cac1724236103ecf297d1bb24e2c32b88cfd5579a9f3d389a9a2d7a52bc0.png" aria-label="Open original scored PNG for D034">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/1285cac1724236103ecf297d1bb24e2c32b88cfd5579a9f3d389a9a2d7a52bc0.png" alt="Original scored view D034" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D034">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">2.2</td><td data-model="Ref" data-task="aesthetics">2.0</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">2.2</td><td data-model="DeepSeek" data-task="aesthetics">2.3</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.4</td><td data-model="Gemini" data-task="aesthetics">2.3</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.4</td><td data-model="Luna" data-task="aesthetics">2.6</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/1285cac1724236103ecf297d1bb24e2c32b88cfd5579a9f3d389a9a2d7a52bc0.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D038" data-case-id="D038">
+      <h2><span>D038</span><span class="position">12 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/46bcc71646f8617751025d1487850fcb58c1ef1f7b346ab5de946ef18e47872b.png" aria-label="Open original scored PNG for D038">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/46bcc71646f8617751025d1487850fcb58c1ef1f7b346ab5de946ef18e47872b.png" alt="Original scored view D038" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D038">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">2.3</td><td data-model="Ref" data-task="aesthetics">2.0</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">2.6</td><td data-model="DeepSeek" data-task="aesthetics">2.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.3</td><td data-model="Gemini" data-task="aesthetics">2.1</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.4</td><td data-model="Luna" data-task="aesthetics">2.8</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/46bcc71646f8617751025d1487850fcb58c1ef1f7b346ab5de946ef18e47872b.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D012" data-case-id="D012">
+      <h2><span>D012</span><span class="position">13 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/78f00b5664a6b40ebdb4976d460d67e0d98b38837185d67dc51f82c1d8748187.png" aria-label="Open original scored PNG for D012">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/78f00b5664a6b40ebdb4976d460d67e0d98b38837185d67dc51f82c1d8748187.png" alt="Original scored view D012" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D012">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">2.3</td><td data-model="Ref" data-task="aesthetics">2.9</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.2</td><td data-model="DeepSeek" data-task="aesthetics">3.6</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.4</td><td data-model="Gemini" data-task="aesthetics">2.9</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.5</td><td data-model="Luna" data-task="aesthetics">3.4</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/78f00b5664a6b40ebdb4976d460d67e0d98b38837185d67dc51f82c1d8748187.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D032" data-case-id="D032">
+      <h2><span>D032</span><span class="position">14 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/30ecc65b7a6330d5fb3532d705c2f183842d7c9a8221f4fa49767285bc869ef0.png" aria-label="Open original scored PNG for D032">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/30ecc65b7a6330d5fb3532d705c2f183842d7c9a8221f4fa49767285bc869ef0.png" alt="Original scored view D032" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D032">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">2.6</td><td data-model="Ref" data-task="aesthetics">1.8</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">2.3</td><td data-model="DeepSeek" data-task="aesthetics">1.8</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.1</td><td data-model="Gemini" data-task="aesthetics">1.2</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.8</td><td data-model="Luna" data-task="aesthetics">1.9</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/30ecc65b7a6330d5fb3532d705c2f183842d7c9a8221f4fa49767285bc869ef0.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D026" data-case-id="D026">
+      <h2><span>D026</span><span class="position">15 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/f27a4cd5d7db641178bd5f2a5864d235e1f09b35a2aba5a9a8a72d79cf87722e.png" aria-label="Open original scored PNG for D026">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/f27a4cd5d7db641178bd5f2a5864d235e1f09b35a2aba5a9a8a72d79cf87722e.png" alt="Original scored view D026" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D026">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">2.6</td><td data-model="Ref" data-task="aesthetics">2.9</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.4</td><td data-model="DeepSeek" data-task="aesthetics">2.8</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.6</td><td data-model="Gemini" data-task="aesthetics">2.5</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.0</td><td data-model="Luna" data-task="aesthetics">3.2</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/f27a4cd5d7db641178bd5f2a5864d235e1f09b35a2aba5a9a8a72d79cf87722e.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D025" data-case-id="D025">
+      <h2><span>D025</span><span class="position">16 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/5271773e7452115475d0847635fbcec2f8dc13fe4e097d8b797eae44f01f8382.png" aria-label="Open original scored PNG for D025">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/5271773e7452115475d0847635fbcec2f8dc13fe4e097d8b797eae44f01f8382.png" alt="Original scored view D025" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D025">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">2.7</td><td data-model="Ref" data-task="aesthetics">2.4</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">2.8</td><td data-model="DeepSeek" data-task="aesthetics">2.6</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.4</td><td data-model="Gemini" data-task="aesthetics">2.2</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">2.7</td><td data-model="Luna" data-task="aesthetics">2.6</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/5271773e7452115475d0847635fbcec2f8dc13fe4e097d8b797eae44f01f8382.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D033" data-case-id="D033">
+      <h2><span>D033</span><span class="position">17 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/882ed8df9cea80bdb95185ac63d2d40bf35de392ad53d448ec3d7edc6232a14b.png" aria-label="Open original scored PNG for D033">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/882ed8df9cea80bdb95185ac63d2d40bf35de392ad53d448ec3d7edc6232a14b.png" alt="Original scored view D033" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D033">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">2.8</td><td data-model="Ref" data-task="aesthetics">2.1</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.2</td><td data-model="DeepSeek" data-task="aesthetics">2.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.4</td><td data-model="Gemini" data-task="aesthetics">2.2</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.2</td><td data-model="Luna" data-task="aesthetics">2.5</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/882ed8df9cea80bdb95185ac63d2d40bf35de392ad53d448ec3d7edc6232a14b.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D047" data-case-id="D047">
+      <h2><span>D047</span><span class="position">18 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/ae0c5dab1ce8ae1ace4e206d8fbb4e3addbb4d27719c1bd959f61743907abb3a.png" aria-label="Open original scored PNG for D047">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/ae0c5dab1ce8ae1ace4e206d8fbb4e3addbb4d27719c1bd959f61743907abb3a.png" alt="Original scored view D047" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D047">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">3.0</td><td data-model="Ref" data-task="aesthetics">3.0</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.2</td><td data-model="DeepSeek" data-task="aesthetics">3.0</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.7</td><td data-model="Gemini" data-task="aesthetics">2.8</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.0</td><td data-model="Luna" data-task="aesthetics">3.3</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/ae0c5dab1ce8ae1ace4e206d8fbb4e3addbb4d27719c1bd959f61743907abb3a.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D037" data-case-id="D037">
+      <h2><span>D037</span><span class="position">19 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/b4304e88b0ae081a99f855b4ea376685e38af69d26e0a0046e048288510bd522.png" aria-label="Open original scored PNG for D037">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/b4304e88b0ae081a99f855b4ea376685e38af69d26e0a0046e048288510bd522.png" alt="Original scored view D037" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D037">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">3.2</td><td data-model="Ref" data-task="aesthetics">2.3</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.5</td><td data-model="DeepSeek" data-task="aesthetics">2.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">2.7</td><td data-model="Gemini" data-task="aesthetics">2.4</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.9</td><td data-model="Luna" data-task="aesthetics">2.8</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/b4304e88b0ae081a99f855b4ea376685e38af69d26e0a0046e048288510bd522.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D042" data-case-id="D042">
+      <h2><span>D042</span><span class="position">20 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/863fcb9c91bdb6b9ab1d82b259c099e2ece0373df59b81c7870a098229dac518.png" aria-label="Open original scored PNG for D042">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/863fcb9c91bdb6b9ab1d82b259c099e2ece0373df59b81c7870a098229dac518.png" alt="Original scored view D042" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D042">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">3.2</td><td data-model="Ref" data-task="aesthetics">4.0</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.5</td><td data-model="DeepSeek" data-task="aesthetics">4.0</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.0</td><td data-model="Gemini" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.3</td><td data-model="Luna" data-task="aesthetics">3.8</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/863fcb9c91bdb6b9ab1d82b259c099e2ece0373df59b81c7870a098229dac518.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D041" data-case-id="D041">
+      <h2><span>D041</span><span class="position">21 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/ce4072d6848d5055bb88f2c1c035e0562e81f50b24d78f59d6f9fe5f84264715.png" aria-label="Open original scored PNG for D041">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/ce4072d6848d5055bb88f2c1c035e0562e81f50b24d78f59d6f9fe5f84264715.png" alt="Original scored view D041" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D041">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">3.3</td><td data-model="Ref" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">4.2</td><td data-model="DeepSeek" data-task="aesthetics">3.6</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.1</td><td data-model="Gemini" data-task="aesthetics">2.9</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.3</td><td data-model="Luna" data-task="aesthetics">3.4</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/ce4072d6848d5055bb88f2c1c035e0562e81f50b24d78f59d6f9fe5f84264715.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D013" data-case-id="D013">
+      <h2><span>D013</span><span class="position">22 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/88d6362fe0e704a057cbe961ba2794055efd3efd035f6f10af930219b800f529.png" aria-label="Open original scored PNG for D013">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/88d6362fe0e704a057cbe961ba2794055efd3efd035f6f10af930219b800f529.png" alt="Original scored view D013" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D013">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">3.4</td><td data-model="Ref" data-task="aesthetics">3.5</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.6</td><td data-model="DeepSeek" data-task="aesthetics">3.8</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.2</td><td data-model="Gemini" data-task="aesthetics">2.9</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.0</td><td data-model="Luna" data-task="aesthetics">3.8</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/88d6362fe0e704a057cbe961ba2794055efd3efd035f6f10af930219b800f529.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D046" data-case-id="D046">
+      <h2><span>D046</span><span class="position">23 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/82f876b589c127e17799f36b632b8788cae1e0b58c09d20aa590b7d815fa1ebd.png" aria-label="Open original scored PNG for D046">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/82f876b589c127e17799f36b632b8788cae1e0b58c09d20aa590b7d815fa1ebd.png" alt="Original scored view D046" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D046">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">3.5</td><td data-model="Ref" data-task="aesthetics">3.4</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.6</td><td data-model="DeepSeek" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.0</td><td data-model="Gemini" data-task="aesthetics">3.1</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.8</td><td data-model="Luna" data-task="aesthetics">3.4</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/82f876b589c127e17799f36b632b8788cae1e0b58c09d20aa590b7d815fa1ebd.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D045" data-case-id="D045">
+      <h2><span>D045</span><span class="position">24 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/7562b755665193e82d82bd13fd1b04aab0edf63f78c4759bc2d73f72b124d79f.png" aria-label="Open original scored PNG for D045">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/7562b755665193e82d82bd13fd1b04aab0edf63f78c4759bc2d73f72b124d79f.png" alt="Original scored view D045" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D045">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">3.5</td><td data-model="Ref" data-task="aesthetics">3.6</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">4.3</td><td data-model="DeepSeek" data-task="aesthetics">3.6</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.2</td><td data-model="Gemini" data-task="aesthetics">2.8</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.8</td><td data-model="Luna" data-task="aesthetics">3.4</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/7562b755665193e82d82bd13fd1b04aab0edf63f78c4759bc2d73f72b124d79f.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D005" data-case-id="D005">
+      <h2><span>D005</span><span class="position">25 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/9bc370c60414dcbca852b465dfef2fa45adb7971b30f54b7f96406e6d1d8386a.png" aria-label="Open original scored PNG for D005">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/9bc370c60414dcbca852b465dfef2fa45adb7971b30f54b7f96406e6d1d8386a.png" alt="Original scored view D005" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D005">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">3.7</td><td data-model="Ref" data-task="aesthetics">3.3</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.6</td><td data-model="DeepSeek" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.3</td><td data-model="Gemini" data-task="aesthetics">2.9</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.2</td><td data-model="Luna" data-task="aesthetics">3.1</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/9bc370c60414dcbca852b465dfef2fa45adb7971b30f54b7f96406e6d1d8386a.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D043" data-case-id="D043">
+      <h2><span>D043</span><span class="position">26 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/c2a9b666c7f7487883634b6e849230b6f1a139fd2b518803f43f2a9885df64ac.png" aria-label="Open original scored PNG for D043">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/c2a9b666c7f7487883634b6e849230b6f1a139fd2b518803f43f2a9885df64ac.png" alt="Original scored view D043" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D043">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">3.8</td><td data-model="Ref" data-task="aesthetics">3.5</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.8</td><td data-model="DeepSeek" data-task="aesthetics">3.6</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.3</td><td data-model="Gemini" data-task="aesthetics">2.9</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.0</td><td data-model="Luna" data-task="aesthetics">3.5</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/c2a9b666c7f7487883634b6e849230b6f1a139fd2b518803f43f2a9885df64ac.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D001" data-case-id="D001">
+      <h2><span>D001</span><span class="position">27 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/6b9de77703389ef910fb49f5ceba2d490aa30e1e1792c4b72e25d5a063b3fa73.png" aria-label="Open original scored PNG for D001">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/6b9de77703389ef910fb49f5ceba2d490aa30e1e1792c4b72e25d5a063b3fa73.png" alt="Original scored view D001" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D001">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">4.0</td><td data-model="Ref" data-task="aesthetics">3.0</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.4</td><td data-model="DeepSeek" data-task="aesthetics">2.6</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.0</td><td data-model="Gemini" data-task="aesthetics">2.7</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.7</td><td data-model="Luna" data-task="aesthetics">3.2</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/6b9de77703389ef910fb49f5ceba2d490aa30e1e1792c4b72e25d5a063b3fa73.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D017" data-case-id="D017">
+      <h2><span>D017</span><span class="position">28 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/c3b78bec58fbe5ed63cf7fb64f61fd6319220484565d7f28b4d76916ceb6f311.png" aria-label="Open original scored PNG for D017">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/c3b78bec58fbe5ed63cf7fb64f61fd6319220484565d7f28b4d76916ceb6f311.png" alt="Original scored view D017" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D017">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">4.0</td><td data-model="Ref" data-task="aesthetics">3.3</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">4.0</td><td data-model="DeepSeek" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.6</td><td data-model="Gemini" data-task="aesthetics">2.8</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.1</td><td data-model="Luna" data-task="aesthetics">3.7</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/c3b78bec58fbe5ed63cf7fb64f61fd6319220484565d7f28b4d76916ceb6f311.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D009" data-case-id="D009">
+      <h2><span>D009</span><span class="position">29 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/0656bd78335cfefe8ce21a4f5f8e135f369e3196c890dd43870183bc885957d7.png" aria-label="Open original scored PNG for D009">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/0656bd78335cfefe8ce21a4f5f8e135f369e3196c890dd43870183bc885957d7.png" alt="Original scored view D009" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D009">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">4.0</td><td data-model="Ref" data-task="aesthetics">3.5</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.6</td><td data-model="DeepSeek" data-task="aesthetics">3.8</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.4</td><td data-model="Gemini" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.1</td><td data-model="Luna" data-task="aesthetics">4.1</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/0656bd78335cfefe8ce21a4f5f8e135f369e3196c890dd43870183bc885957d7.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D021" data-case-id="D021">
+      <h2><span>D021</span><span class="position">30 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/35a7ebe1e167913b23a80495a66cbf25f8cd664b696e13b663fcff7acf05bbaa.png" aria-label="Open original scored PNG for D021">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/35a7ebe1e167913b23a80495a66cbf25f8cd664b696e13b663fcff7acf05bbaa.png" alt="Original scored view D021" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D021">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">4.1</td><td data-model="Ref" data-task="aesthetics">4.0</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">4.2</td><td data-model="DeepSeek" data-task="aesthetics">4.0</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.3</td><td data-model="Gemini" data-task="aesthetics">3.1</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.3</td><td data-model="Luna" data-task="aesthetics">4.2</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/35a7ebe1e167913b23a80495a66cbf25f8cd664b696e13b663fcff7acf05bbaa.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D048" data-case-id="D048">
+      <h2><span>D048</span><span class="position">31 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/7b6607464465b70de8d628da869848af60fa073df8f63a21ee1c194f4de4e801.png" aria-label="Open original scored PNG for D048">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/7b6607464465b70de8d628da869848af60fa073df8f63a21ee1c194f4de4e801.png" alt="Original scored view D048" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D048">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">4.2</td><td data-model="Ref" data-task="aesthetics">3.4</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.5</td><td data-model="DeepSeek" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.2</td><td data-model="Gemini" data-task="aesthetics">2.8</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.2</td><td data-model="Luna" data-task="aesthetics">3.6</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/7b6607464465b70de8d628da869848af60fa073df8f63a21ee1c194f4de4e801.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D039" data-case-id="D039">
+      <h2><span>D039</span><span class="position">32 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/8e4e5e44bd96252b321c198a80142ac0c947ed82052805ffa051f9476210f3b2.png" aria-label="Open original scored PNG for D039">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/8e4e5e44bd96252b321c198a80142ac0c947ed82052805ffa051f9476210f3b2.png" alt="Original scored view D039" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D039">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">4.2</td><td data-model="Ref" data-task="aesthetics">3.9</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">4.3</td><td data-model="DeepSeek" data-task="aesthetics">3.3</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.7</td><td data-model="Gemini" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.1</td><td data-model="Luna" data-task="aesthetics">3.8</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/8e4e5e44bd96252b321c198a80142ac0c947ed82052805ffa051f9476210f3b2.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D050" data-case-id="D050">
+      <h2><span>D050</span><span class="position">33 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/478b3564339d76d4db57d59cf4ebf3d41822e5d5b18038b4d595ba1e794ed133.png" aria-label="Open original scored PNG for D050">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/478b3564339d76d4db57d59cf4ebf3d41822e5d5b18038b4d595ba1e794ed133.png" alt="Original scored view D050" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D050">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">4.4</td><td data-model="Ref" data-task="aesthetics">4.1</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">3.5</td><td data-model="DeepSeek" data-task="aesthetics">4.0</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.5</td><td data-model="Gemini" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">3.1</td><td data-model="Luna" data-task="aesthetics">4.0</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/478b3564339d76d4db57d59cf4ebf3d41822e5d5b18038b4d595ba1e794ed133.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D044" data-case-id="D044">
+      <h2><span>D044</span><span class="position">34 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/1a0e8a6baf2f50232c9f5d027c5b2be3dca656727bc75e0bd5669fab8707f100.png" aria-label="Open original scored PNG for D044">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/1a0e8a6baf2f50232c9f5d027c5b2be3dca656727bc75e0bd5669fab8707f100.png" alt="Original scored view D044" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D044">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">4.6</td><td data-model="Ref" data-task="aesthetics">3.7</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">4.1</td><td data-model="DeepSeek" data-task="aesthetics">3.8</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.6</td><td data-model="Gemini" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.4</td><td data-model="Luna" data-task="aesthetics">3.8</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/1a0e8a6baf2f50232c9f5d027c5b2be3dca656727bc75e0bd5669fab8707f100.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D049" data-case-id="D049">
+      <h2><span>D049</span><span class="position">35 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/f2c7c63189c974835c7b280d609d05dbca49ff288ef06e040c53b6fd56a41e81.png" aria-label="Open original scored PNG for D049">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/f2c7c63189c974835c7b280d609d05dbca49ff288ef06e040c53b6fd56a41e81.png" alt="Original scored view D049" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D049">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">4.6</td><td data-model="Ref" data-task="aesthetics">3.7</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">4.2</td><td data-model="DeepSeek" data-task="aesthetics">3.6</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.7</td><td data-model="Gemini" data-task="aesthetics">3.1</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.5</td><td data-model="Luna" data-task="aesthetics">3.9</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/f2c7c63189c974835c7b280d609d05dbca49ff288ef06e040c53b6fd56a41e81.png">Open full original ↗</a></p>
+    </article>
+    <article class="card" id="D040" data-case-id="D040">
+      <h2><span>D040</span><span class="position">36 / 36</span></h2>
+      <a class="image-link" href="../../../data/dual-score-trial-2026-10-27/views/2a5fbda19fc3a02b53c9b4154f94c3d20ca410bcae980a0a22411ebb59e27047.png" aria-label="Open original scored PNG for D040">
+        <img src="../../../data/dual-score-trial-2026-10-27/views/2a5fbda19fc3a02b53c9b4154f94c3d20ca410bcae980a0a22411ebb59e27047.png" alt="Original scored view D040" loading="lazy" decoding="async">
+      </a>
+      <table aria-label="Scores for D040">
+        <thead><tr><th scope="col">Model</th><th scope="col">Tech</th><th scope="col">Aest</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ref</th><td data-model="Ref" data-task="technical_quality">4.7</td><td data-model="Ref" data-task="aesthetics">3.9</td></tr>
+          <tr><th scope="row">DeepSeek</th><td data-model="DeepSeek" data-task="technical_quality">4.3</td><td data-model="DeepSeek" data-task="aesthetics">3.2</td></tr>
+          <tr><th scope="row">Gemini</th><td data-model="Gemini" data-task="technical_quality">3.8</td><td data-model="Gemini" data-task="aesthetics">3.1</td></tr>
+          <tr><th scope="row">Luna</th><td data-model="Luna" data-task="technical_quality">4.3</td><td data-model="Luna" data-task="aesthetics">4.0</td></tr>
+        </tbody>
+      </table>
+      <p class="original-link"><a href="../../../data/dual-score-trial-2026-10-27/views/2a5fbda19fc3a02b53c9b4154f94c3d20ca410bcae980a0a22411ebb59e27047.png">Open full original ↗</a></p>
+    </article>
+  </main>
+  <footer>Each image links directly to the existing scored view. Scores are transcribed from selection.json and displayed to one decimal place. This companion preserves the original image files; the generated poster is a separate presentation artifact.</footer>
+</body>
+</html>

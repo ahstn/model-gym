@@ -1,0 +1,133 @@
+"""Checks for image-budget invariants and fresh-family exclusion."""
+
+import importlib.util
+from pathlib import Path
+
+import pytest
+
+SPEC = importlib.util.spec_from_file_location("trial_prepare", Path(__file__).with_name("prepare.py"))
+prepare = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(prepare)
+
+
+def test_budget_rerenders_all_members_from_original_bytes(monkeypatch):
+    calls = []
+
+    def render(payload, edge):
+        calls.append((payload, edge))
+        size = edge * (2 if payload == b"noisy" else 1)
+        return b"p" * size, {"output_dimensions": [edge, edge // 2]}
+
+    monkeypatch.setattr(prepare.views, "_render", render)
+    edge, rendered = prepare.render_family(
+        [b"parent", b"noisy", b"blur", b"jpeg"], max_edge=100, max_bytes=180
+    )
+    assert edge == 90
+    assert all(len(data) <= 180 for data, _ in rendered)
+    assert calls == [
+        (payload, edge) for edge in (100, 90) for payload in (b"parent", b"noisy", b"blur", b"jpeg")
+    ]
+    assert {tuple(metadata["output_dimensions"]) for _, metadata in rendered} == {(90, 45)}
+
+
+def test_budget_does_not_resize_a_family_that_already_fits(monkeypatch):
+    monkeypatch.setattr(prepare.views, "_render", lambda payload, edge: (payload, {"edge": edge}))
+    edge, rendered = prepare.render_family([b"one", b"two"], max_edge=1536, max_bytes=3)
+    assert edge == 1536
+    assert [data for data, _ in rendered] == [b"one", b"two"]
+
+
+def test_impossible_minimum_budget_fails(monkeypatch):
+    monkeypatch.setattr(prepare.views, "_render", lambda payload, edge: (b"xx", {}))
+    with pytest.raises(ValueError, match="minimum-size"):
+        prepare.render_family([b"source"], max_edge=64, max_bytes=1)
+
+
+def test_exclusion_checks_family_exact_pixels_and_near_duplicate():
+    old = {"split_group": "old", "sha256": "a", "decoded_sha256": "b", "dhash": "0000"}
+    fresh = {"split_group": "new", "sha256": "c", "decoded_sha256": "d", "dhash": "ffff"}
+    assert not prepare.overlaps([fresh], [old])
+    for key in prepare.IDENTITY_KEYS:
+        assert prepare.overlaps([{**fresh, key: old[key]}], [old])
+    assert prepare.overlaps([{**fresh, "dhash": "0003"}], [old])
+    assert not prepare.overlaps([{**fresh, "dhash": "0007"}], [old])
+
+
+def test_freeze_reuses_exact_bytes_and_refuses_overwrite(tmp_path):
+    path = tmp_path / "frozen.json"
+    prepare.freeze(path, b"first")
+    prepare.freeze(path, b"first")
+    with pytest.raises(ValueError, match="Frozen artifact differs"):
+        prepare.freeze(path, b"second")
+    assert path.read_bytes() == b"first"
+
+
+def test_packets_are_anonymous_complete_and_stably_shuffled(tmp_path, monkeypatch):
+    monkeypatch.setattr(prepare, "OUTPUT", tmp_path)
+    cases = [
+        {
+            "case_id": f"D{i:03d}",
+            "image_path": f"/views/{i}.png",
+            "view_sha256": str(i),
+            "width": 800,
+            "height": 600,
+            "stratum": "secret",
+        }
+        for i in range(1, 51)
+    ]
+    paths = prepare.packets(cases)
+    rows = [prepare.json.loads(Path(path).read_text()) for path in paths]
+    assert [len(packet) for packet in rows] == [17, 17, 16]
+    flat = [row for packet in rows for row in packet]
+    assert {row["case_id"] for row in flat} == {case["case_id"] for case in cases}
+    assert all(set(row) == {"case_id", "path", "view_sha256", "width", "height"} for row in flat)
+    assert flat[0]["case_id"] != cases[0]["case_id"]
+    assert prepare.packets(cases) == paths
+
+
+def test_exclusion_expands_every_previously_exposed_family(tmp_path, monkeypatch):
+    prior = tmp_path / "pilot.jsonl"
+    old = tmp_path / "calibration.json"
+    recent = tmp_path / "runinfra200.json"
+    prior.write_text('{"split_group":"pilot"}\n')
+    old.write_text(prepare.json.dumps({"stages": {"A": {"cases": [{"family_id": "calibration"}]}}}))
+    recent.write_text(prepare.json.dumps({"cases": [{"family_id": "recent"}]}))
+    monkeypatch.setattr(prepare, "PRIOR", prior)
+    monkeypatch.setattr(prepare, "OLD", old)
+    monkeypatch.setattr(prepare, "RECENT", recent)
+    rows = [{"split_group": group} for group in ["pilot", "calibration", "recent", "recent", "fresh"]]
+    excluded, record = prepare.historical_exclusions(rows)
+    assert excluded == rows[:4]
+    assert record["family_ids"] == ["calibration", "pilot", "recent"]
+    assert record["expanded_source_row_count"] == 4
+
+
+def test_verify_selection_rejects_a_family_seen_in_the_200_image_trial(monkeypatch):
+    cases = []
+    rows = []
+    strata = ["controlled"] * 24 + ["vizwiz"] * 14 + ["standalone_megalith"] * 12
+    for index, stratum in enumerate(strata, 1):
+        row = {
+            "id": str(index),
+            "split": "train",
+            "split_group": str(index),
+            "sha256": f"source-{index}",
+            "decoded_sha256": f"pixels-{index}",
+            "dhash": f"{index:016x}",
+        }
+        rows.append(row)
+        cases.append(
+            {
+                "case_id": f"D{index:03d}",
+                "image_id": row["id"],
+                "family_id": row["split_group"],
+                "stratum": stratum,
+                "source_sha256": row["sha256"],
+                "decoded_sha256": row["decoded_sha256"],
+                "dhash": row["dhash"],
+            }
+        )
+    monkeypatch.setattr(prepare, "read_jsonl", lambda path: rows)
+    monkeypatch.setattr(prepare, "historical_exclusions", lambda values: ([rows[0]], {}))
+    with pytest.raises(ValueError, match="overlaps prior exposure"):
+        prepare.verify_selection(cases)

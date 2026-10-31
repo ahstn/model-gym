@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-10-27T21:52:33.245764+00:00",
+  "count": 50,
+  "reference_kind": "frozen_assistant_judgments",
+  "human_gold": false,
+  "dimensions": [
+    "technical_quality",
+    "aesthetics"
+  ],
+  "references_sha256": "4b8e2e9af7604b38e2acb6e07c202fd9a0d63fc561647be16621f9bb3a25530e",
+  "manifest_sha256": "1c97b4db204fd97911d093c9816e7d62461bfe3fab3274f30ec5f8745e902151",
+  "review_instructions_sha256": "1aade4a6fa22891d1d48eb64b96204a877abe82d9663fce580faa1068b60a1f0",
+  "reviewer_files": {
+    "/home/ahstn/git/model-gym/visual-quality/experiments/dual-score-trial-2026-10-27/references-reviewer-1.jsonl": "7ebbbca4ab94069cf17870d84d2f91f4a25541e4876c916a224e413e499e7f70",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/dual-score-trial-2026-10-27/references-reviewer-2.jsonl": "0c416e643053e97c4f673ad835f986ad438652ad43be93602d4f3321eb881cee",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/dual-score-trial-2026-10-27/references-reviewer-3.jsonl": "617e67c019bcc5e0a45eba3267dad86050ba5769aa9debaaf4b85f204763fb36"
+  },
+  "blinding": {
+    "provider_image_requests_before_freeze": 0,
+    "reviewers_received_provider_outputs": false,
+    "reviewers_received_source_metadata": false,
+    "fresh_context_reviewers": 3,
+    "each_supplied_image_individually_inspected": true
+  }
+}

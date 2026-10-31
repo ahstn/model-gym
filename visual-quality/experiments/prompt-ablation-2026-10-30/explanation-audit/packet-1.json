@@ -1,0 +1,470 @@
+[
+  {
+    "case_id": "P022",
+    "path": "/home/ahstn/git/model-gym/visual-quality/data/prompt-ablation-2026-10-30/views/1cd1717df1f94f5e0e1fa6d0098dcbdcbf1de6b6d0650669f4f284d957421bcf.png",
+    "view_sha256": "1cd1717df1f94f5e0e1fa6d0098dcbdcbf1de6b6d0650669f4f284d957421bcf",
+    "labels": [
+      {
+        "label_id": "05271203e648",
+        "task": "aesthetics",
+        "evidence": "The casual documentary composition is weakened by prominent foreground trash bins, distracting overhead utility wires, and flat overcast lighting.",
+        "limitations": []
+      },
+      {
+        "label_id": "09c593246267",
+        "task": "technical_quality",
+        "evidence": "Slightly soft foliage and a clipped overcast sky accompany modest overall detail across the building surfaces.",
+        "limitations": []
+      },
+      {
+        "label_id": "198d04ef800f",
+        "task": "technical_quality",
+        "evidence": "The church's siding, windows, and rooflines remain clear, with only slight softness and mildly washed-out overcast sky.",
+        "limitations": []
+      },
+      {
+        "label_id": "1aaf444d2368",
+        "task": "aesthetics",
+        "evidence": "The centered church and distinctive blue entrance read clearly, but wires, bins, and parking lines make the scene feel cluttered.",
+        "limitations": []
+      },
+      {
+        "label_id": "3c0a83ec6824",
+        "task": "aesthetics",
+        "evidence": "Centered church facade with steeple and red cross on blue door forms a clear focal point; flat overcast light and cluttered trees and bins limit visual impact.",
+        "limitations": []
+      },
+      {
+        "label_id": "40ef84572cd3",
+        "task": "technical_quality",
+        "evidence": "The church and surroundings remain legible with consistent edges, though the overcast image is mildly soft and subdued.",
+        "limitations": []
+      },
+      {
+        "label_id": "4238b4911da1",
+        "task": "technical_quality",
+        "evidence": "Image is mostly sharp with acceptable exposure, though slight softness, flattened tones, and some noise in shadows and foliage are visible.",
+        "limitations": []
+      },
+      {
+        "label_id": "452d49c0048d",
+        "task": "aesthetics",
+        "evidence": "Straightforward documentary framing of a white church with steeple; overcast light is flat, and the large dark evergreen on the right crowds the edge.",
+        "limitations": [
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "4b380c334c40",
+        "task": "aesthetics",
+        "evidence": "The white church and blue door anchor a clear, balanced composition, though foreground bins and overhead wires distract.",
+        "limitations": []
+      },
+      {
+        "label_id": "6caad68069fa",
+        "task": "technical_quality",
+        "evidence": "The church, sign, and windows are clearly resolved; slight softness and mild noise appear in foliage and sky.",
+        "limitations": []
+      },
+      {
+        "label_id": "714444c0c024",
+        "task": "aesthetics",
+        "evidence": "The white church and blue door anchor a clear focal point, but the flat overcast light and foreground bins weaken visual balance.",
+        "limitations": []
+      },
+      {
+        "label_id": "83e42e0ab92a",
+        "task": "aesthetics",
+        "evidence": "Distracting foreground elements like trash bins, overhead wires, and flat overcast lighting diminish the composition's visual appeal.",
+        "limitations": []
+      },
+      {
+        "label_id": "8ca7919300b8",
+        "task": "technical_quality",
+        "evidence": "The building, windows, and sign remain clearly legible, with only mild softness and slight noise in the overcast scene.",
+        "limitations": []
+      },
+      {
+        "label_id": "a1b1a255bd03",
+        "task": "technical_quality",
+        "evidence": "Image is reasonably sharp with readable sign and window details; mild softness, flat exposure, and some noise in shadows and foliage are visible.",
+        "limitations": []
+      },
+      {
+        "label_id": "c8c7f590bd15",
+        "task": "aesthetics",
+        "evidence": "The blue-and-red entrance gives the centered church a focal accent, while utility wires, bins, and flat light weaken the composition.",
+        "limitations": []
+      },
+      {
+        "label_id": "eae590d82c47",
+        "task": "technical_quality",
+        "evidence": "The image exhibits adequate sharpness and natural exposure, though slight compression artifacts and overcast lighting soften fine foliage details.",
+        "limitations": []
+      }
+    ]
+  },
+  {
+    "case_id": "P016",
+    "path": "/home/ahstn/git/model-gym/visual-quality/data/prompt-ablation-2026-10-30/views/05d8b3907ce274f84c8b28397c680a0d0a0d60738d6408307e652fc6275683b3.png",
+    "view_sha256": "05d8b3907ce274f84c8b28397c680a0d0a0d60738d6408307e652fc6275683b3",
+    "labels": [
+      {
+        "label_id": "01ce293060c4",
+        "task": "technical_quality",
+        "evidence": "Pervasive color noise and heavy digital grain severely degrade clarity across the sky and architectural surfaces.",
+        "limitations": []
+      },
+      {
+        "label_id": "036892e6dbed",
+        "task": "technical_quality",
+        "evidence": "Prominent chromatic grain throughout the sky and shadows degrades fine clarity and creates harsh, noisy textures.",
+        "limitations": []
+      },
+      {
+        "label_id": "1d90c2909f95",
+        "task": "technical_quality",
+        "evidence": "Dense colored speckle noise covers the sky and building, muddling fine textures, though major edges and windows remain visible.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "2b50d45146ac",
+        "task": "aesthetics",
+        "evidence": "Layered fence, bare tree, lamppost, and tan building create depth, but the large empty sky weakens balance.",
+        "limitations": []
+      },
+      {
+        "label_id": "2b6e7e54af3c",
+        "task": "aesthetics",
+        "evidence": "Strong saturated blue sky contrasts with pale brick buildings, bare tree and black fence framing the foreground, giving a clear documentary composition.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "338577345482",
+        "task": "aesthetics",
+        "evidence": "Strong blue sky and warm building tones create a vivid contrast, but the tilted framing and cluttered foreground fence and van weaken hierarchy.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "3835aceddfbc",
+        "task": "technical_quality",
+        "evidence": "Visible grain and speckle noise across the sky and walls, soft detail on buildings and fence, and mild color processing, but main subjects remain clear.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "475572867056",
+        "task": "aesthetics",
+        "evidence": "A cluttered foreground fence and competing vertical elements disrupt the visual balance of the sunny architectural scene.",
+        "limitations": []
+      },
+      {
+        "label_id": "83070542416f",
+        "task": "technical_quality",
+        "evidence": "Heavy grain and smeared fine detail in foliage, fence, and building edges reduce clarity across the image.",
+        "limitations": []
+      },
+      {
+        "label_id": "84f56b9c537e",
+        "task": "technical_quality",
+        "evidence": "Pervasive coarse multicolored noise overwhelms fine textures across sky, foliage, and building, though major forms remain recognizable.",
+        "limitations": []
+      },
+      {
+        "label_id": "a36b91399c0c",
+        "task": "technical_quality",
+        "evidence": "Heavy grain and noisy texture reduce clarity across sky and building surfaces, though main structures remain legible.",
+        "limitations": []
+      },
+      {
+        "label_id": "b8e72382897d",
+        "task": "aesthetics",
+        "evidence": "The blue sky, warm facade, bare tree, and lamp form a coherent street scene, but the dominant fence and visual noise make it busy.",
+        "limitations": []
+      },
+      {
+        "label_id": "bf817abc8eb3",
+        "task": "aesthetics",
+        "evidence": "Cluttered foreground fencing and ordinary parking lot elements create a chaotic composition with limited visual impact.",
+        "limitations": []
+      },
+      {
+        "label_id": "cbd3b23c429a",
+        "task": "aesthetics",
+        "evidence": "Layered sky, bare tree, and brick building create depth, but the fence and lamp post clutter the foreground hierarchy.",
+        "limitations": []
+      },
+      {
+        "label_id": "d8d8918278eb",
+        "task": "aesthetics",
+        "evidence": "Blue sky and warm facade contrast clearly; the tree and angled fence add depth, though pervasive noise distracts.",
+        "limitations": []
+      },
+      {
+        "label_id": "eac1c4089795",
+        "task": "technical_quality",
+        "evidence": "Visible grain and speckle noise cover the sky and building, and the image looks soft with mild color smearing across the facade.",
+        "limitations": [
+          "limited_detail"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "P026",
+    "path": "/home/ahstn/git/model-gym/visual-quality/data/prompt-ablation-2026-10-30/views/f5508aa67c34c9e50f5ea0c08ca70f1841cd1ad1d3e68612f594aa9956ecea38.png",
+    "view_sha256": "f5508aa67c34c9e50f5ea0c08ca70f1841cd1ad1d3e68612f594aa9956ecea38",
+    "labels": [
+      {
+        "label_id": "12a7a13d179f",
+        "task": "aesthetics",
+        "evidence": "Heavily motion-blurred dark object dominates the frame with a warm skin-tone blur and blue fabric; composition feels accidental and unclear.",
+        "limitations": [
+          "limited_detail",
+          "ambiguous_style"
+        ]
+      },
+      {
+        "label_id": "1e6535db6eb2",
+        "task": "aesthetics",
+        "evidence": "The blurred foreground object dominates the frame, leaving the blue fabric and background clutter with weak, unclear visual hierarchy.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "233a9b60e6fb",
+        "task": "technical_quality",
+        "evidence": "The close foreground is heavily out of focus, with visible grain and muddied edges obscuring nearly all useful detail.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "50c3a9ad6c0e",
+        "task": "technical_quality",
+        "evidence": "Extremely heavy defocus blur, prominent digital noise, and motion smearing eliminate almost all usable image detail.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "5a76bebdf569",
+        "task": "aesthetics",
+        "evidence": "Accidental framing and severe blur eliminate visual structure, resulting in an unappealing, incoherent composition.",
+        "limitations": [
+          "limited_detail",
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "7e8f8492bd69",
+        "task": "aesthetics",
+        "evidence": "The oversized, indistinct foreground blocks the scene, while the tight crop and muted background provide little coherent visual hierarchy.",
+        "limitations": [
+          "limited_detail",
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "8172565aaf72",
+        "task": "technical_quality",
+        "evidence": "The foreground is heavily out of focus and grainy, with dim, muddy tones obscuring nearly all object detail.",
+        "limitations": [
+          "limited_detail",
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "8b2fa17eeafb",
+        "task": "technical_quality",
+        "evidence": "The image is heavily blurred and noisy, with soft edges and lost detail across the main subject and background.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "a2254d4aaba2",
+        "task": "aesthetics",
+        "evidence": "Accidental blur, poor framing, and lack of deliberate composition result in negligible visual appeal.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "bdc3d263d96c",
+        "task": "technical_quality",
+        "evidence": "Severe motion blur and softness dominate the bottle, hand, and background; fine detail and label text are unreadable.",
+        "limitations": [
+          "limited_detail",
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "d692ab3ad373",
+        "task": "technical_quality",
+        "evidence": "Severe defocus blur and heavy digital noise obscure virtually all subject textures and fine detail.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "decb848312dc",
+        "task": "aesthetics",
+        "evidence": "Heavy motion blur across the central object and hand, with dim, murky tones and an unclear focal point weakening the composition.",
+        "limitations": [
+          "limited_detail",
+          "ambiguous_style"
+        ]
+      },
+      {
+        "label_id": "f2273a4ac055",
+        "task": "aesthetics",
+        "evidence": "The blurred close-up of a hand and dark object lacks clear focal structure, with a cluttered background and weak visual hierarchy.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "f6896cd81489",
+        "task": "technical_quality",
+        "evidence": "Strong motion blur and softness across the main object and hand; label text is unreadable, and only the blue fabric shows modest detail.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "fdca517e20d4",
+        "task": "technical_quality",
+        "evidence": "The main foreground object is heavily blurred and noisy, with smeared edges and lost detail throughout the frame.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "ff399e8af412",
+        "task": "aesthetics",
+        "evidence": "An indistinct foreground mass dominates the frame, while dim, cluttered bedding offers little balance or coherent visual emphasis.",
+        "limitations": [
+          "limited_detail"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "P046",
+    "path": "/home/ahstn/git/model-gym/visual-quality/data/prompt-ablation-2026-10-30/views/0cabd14102aac76de9978b91987db892e9d220542d6ef486caa2d1105a051163.png",
+    "view_sha256": "0cabd14102aac76de9978b91987db892e9d220542d6ef486caa2d1105a051163",
+    "labels": [
+      {
+        "label_id": "1f326f17092c",
+        "task": "technical_quality",
+        "evidence": "Sharp focus on the main subject with well-controlled exposure and smooth background defocusing throughout.",
+        "limitations": []
+      },
+      {
+        "label_id": "2dbacae3d4ac",
+        "task": "technical_quality",
+        "evidence": "Rider and bicycle are sharp with clean detail; background is intentionally soft, with mild noise in shadows and some blur in the foreground flowers.",
+        "limitations": [
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "2e2cf7622eb2",
+        "task": "technical_quality",
+        "evidence": "The cyclist and bicycle are clearly rendered with controlled exposure; background and foreground blur leave the main subject intact.",
+        "limitations": []
+      },
+      {
+        "label_id": "3d82877a133e",
+        "task": "aesthetics",
+        "evidence": "The bright green rider anchors the frame against softer surroundings, though the large empty roadway and edge distractions weaken the composition.",
+        "limitations": []
+      },
+      {
+        "label_id": "4b5b15d910ad",
+        "task": "aesthetics",
+        "evidence": "A standard documentary action capture with decent subject separation, though somewhat cluttered by background elements.",
+        "limitations": []
+      },
+      {
+        "label_id": "61d29560291f",
+        "task": "aesthetics",
+        "evidence": "The cyclist is centered and sharply isolated against blurred spectators and buildings, with vivid green and red accents creating lively visual hierarchy.",
+        "limitations": []
+      },
+      {
+        "label_id": "6e76883cc29e",
+        "task": "aesthetics",
+        "evidence": "A standard event snapshot with reasonable depth of field, though background elements slightly clutter the frame.",
+        "limitations": []
+      },
+      {
+        "label_id": "8ec43305b6e3",
+        "task": "technical_quality",
+        "evidence": "Sharp focus on the cyclist and bicycle details with clean exposure and naturally soft background separation.",
+        "limitations": []
+      },
+      {
+        "label_id": "a8e5489b1a9d",
+        "task": "technical_quality",
+        "evidence": "The cyclist is clearly resolved, with readable jersey and bicycle detail; background blur is controlled and exposure remains balanced.",
+        "limitations": []
+      },
+      {
+        "label_id": "b2f0ce1265eb",
+        "task": "technical_quality",
+        "evidence": "The cyclist and bicycle are sharply resolved, with clean color and controlled background blur; no significant artifacts are visible.",
+        "limitations": []
+      },
+      {
+        "label_id": "b874de8d11bb",
+        "task": "aesthetics",
+        "evidence": "Bright green rider anchors the frame against warm architecture, while shallow focus separates action, though ample pavement weakens balance.",
+        "limitations": []
+      },
+      {
+        "label_id": "c9c4f0b875da",
+        "task": "technical_quality",
+        "evidence": "The cyclist and bicycle are sharply focused with clean color and detail, while the blurred foreground and background appear intentional.",
+        "limitations": []
+      },
+      {
+        "label_id": "cff4afba7a17",
+        "task": "technical_quality",
+        "evidence": "Rider's face, number 57 and bike details are sharp and well resolved; background is cleanly defocused, with only mild softness and no visible compression or noise.",
+        "limitations": [
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "da24d2040988",
+        "task": "aesthetics",
+        "evidence": "The cyclist is centered and framed by blurred foreground flowers and background spectators, creating clear depth and focus.",
+        "limitations": []
+      },
+      {
+        "label_id": "e251e481cb9a",
+        "task": "aesthetics",
+        "evidence": "Cyclist in bright green shirt stands out against blurred houses and greenery; rider is sharp while foreground pink blur adds depth, though background crowd is cluttered.",
+        "limitations": [
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "efb23b590079",
+        "task": "aesthetics",
+        "evidence": "Cyclist in bright green shirt is well isolated against softer background; leading lines of road and warm roof create balanced framing with a blurred foreground accent.",
+        "limitations": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,214 @@
+{
+  "scope": "The prior 72-image four-model trial plus this 72-image DeepSeek high rerun; earlier 50/200-image experiments are excluded.",
+  "basis": "Exact API-reported usage costs, reconciled per attempt against saved reports. Confirmed BYOK upstream costs are included; ordinary gateway/upstream costs are not double-counted. Not invoice verification.",
+  "runs": {
+    "deepseek_none": {
+      "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "period": "previous",
+      "calls": 72,
+      "known_cost_usd": "0.01690555",
+      "gateway_reported_cost_usd": "0.01690555",
+      "upstream_reported_cost_usd": "0",
+      "unpriced_attempt_ids": [],
+      "cost_sources": {
+        "usage.cost": 72
+      },
+      "reasoning_evidence": {
+        "requested_setting": "none",
+        "applied_header_counts": {},
+        "applied_header_missing_calls": 72,
+        "requested_header_counts": {},
+        "requested_header_missing_calls": 72,
+        "interpretation": "Request settings state intent. Applied headers report gateway handling; missing headers establish neither enabled nor disabled reasoning. Positive reported reasoning tokens provide evidence that reasoning ran."
+      },
+      "usage": {
+        "prompt_tokens": 220877,
+        "completion_tokens": 8498,
+        "total_tokens": 229375,
+        "reasoning_tokens": 0,
+        "prompt_tokens_reported_calls": 72,
+        "completion_tokens_reported_calls": 72,
+        "total_tokens_reported_calls": 72,
+        "reasoning_tokens_reported_calls": 72,
+        "positive_reasoning_tokens_calls": 0,
+        "byok_calls": 0
+      }
+    },
+    "deepseek_high": {
+      "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "period": "incremental",
+      "calls": 72,
+      "known_cost_usd": "0.03646735",
+      "gateway_reported_cost_usd": "0.03646735",
+      "upstream_reported_cost_usd": "0",
+      "unpriced_attempt_ids": [],
+      "cost_sources": {
+        "usage.cost": 72
+      },
+      "reasoning_evidence": {
+        "requested_setting": "high",
+        "applied_header_counts": {},
+        "applied_header_missing_calls": 72,
+        "requested_header_counts": {},
+        "requested_header_missing_calls": 72,
+        "interpretation": "Request settings state intent. Applied headers report gateway handling; missing headers establish neither enabled nor disabled reasoning. Positive reported reasoning tokens provide evidence that reasoning ran."
+      },
+      "usage": {
+        "prompt_tokens": 222677,
+        "completion_tokens": 40651,
+        "total_tokens": 263328,
+        "reasoning_tokens": 32329,
+        "prompt_tokens_reported_calls": 72,
+        "completion_tokens_reported_calls": 72,
+        "total_tokens_reported_calls": 72,
+        "reasoning_tokens_reported_calls": 72,
+        "positive_reasoning_tokens_calls": 72,
+        "byok_calls": 0
+      }
+    },
+    "luna_high": {
+      "model": "openai/gpt-6-luna",
+      "period": "previous",
+      "calls": 72,
+      "known_cost_usd": "0.055711975",
+      "gateway_reported_cost_usd": "0",
+      "upstream_reported_cost_usd": "0.055711975",
+      "unpriced_attempt_ids": [],
+      "cost_sources": {
+        "usage.cost + confirmed BYOK upstream": 72
+      },
+      "reasoning_evidence": {
+        "requested_setting": "high",
+        "applied_header_counts": {},
+        "applied_header_missing_calls": 72,
+        "requested_header_counts": {},
+        "requested_header_missing_calls": 72,
+        "interpretation": "Request settings state intent. Applied headers report gateway handling; missing headers establish neither enabled nor disabled reasoning. Positive reported reasoning tokens provide evidence that reasoning ran."
+      },
+      "usage": {
+        "prompt_tokens": 316003,
+        "completion_tokens": 32434,
+        "total_tokens": 348437,
+        "reasoning_tokens": 24125,
+        "prompt_tokens_reported_calls": 72,
+        "completion_tokens_reported_calls": 72,
+        "total_tokens_reported_calls": 72,
+        "reasoning_tokens_reported_calls": 72,
+        "positive_reasoning_tokens_calls": 72,
+        "byok_calls": 72
+      }
+    },
+    "gemini_medium": {
+      "model": "google/gemini-3.8-flash",
+      "period": "previous",
+      "calls": 72,
+      "known_cost_usd": "0.32156325",
+      "gateway_reported_cost_usd": "0.32156325",
+      "upstream_reported_cost_usd": "0.32156325",
+      "unpriced_attempt_ids": [],
+      "cost_sources": {
+        "max(gateway, upstream); not BYOK": 72
+      },
+      "reasoning_evidence": {
+        "requested_setting": "medium",
+        "applied_header_counts": {},
+        "applied_header_missing_calls": 72,
+        "requested_header_counts": {},
+        "requested_header_missing_calls": 72,
+        "interpretation": "Request settings state intent. Applied headers report gateway handling; missing headers establish neither enabled nor disabled reasoning. Positive reported reasoning tokens provide evidence that reasoning ran."
+      },
+      "usage": {
+        "prompt_tokens": 240376,
+        "completion_tokens": 37675,
+        "total_tokens": 278051,
+        "reasoning_tokens": 27767,
+        "prompt_tokens_reported_calls": 72,
+        "completion_tokens_reported_calls": 72,
+        "total_tokens_reported_calls": 72,
+        "reasoning_tokens_reported_calls": 72,
+        "positive_reasoning_tokens_calls": 72,
+        "byok_calls": 0
+      }
+    },
+    "haiku_low": {
+      "model": "anthropic/claude-haiku-5.5",
+      "period": "previous",
+      "calls": 72,
+      "known_cost_usd": "0.0584440",
+      "gateway_reported_cost_usd": "0.0584440",
+      "upstream_reported_cost_usd": "0.0584440",
+      "unpriced_attempt_ids": [],
+      "cost_sources": {
+        "max(gateway, upstream); not BYOK": 72
+      },
+      "reasoning_evidence": {
+        "requested_setting": "low",
+        "applied_header_counts": {},
+        "applied_header_missing_calls": 72,
+        "requested_header_counts": {},
+        "requested_header_missing_calls": 72,
+        "interpretation": "Request settings state intent. Applied headers report gateway handling; missing headers establish neither enabled nor disabled reasoning. Positive reported reasoning tokens provide evidence that reasoning ran."
+      },
+      "usage": {
+        "prompt_tokens": 503015,
+        "completion_tokens": 16285,
+        "total_tokens": 519300,
+        "reasoning_tokens": 1526,
+        "prompt_tokens_reported_calls": 72,
+        "completion_tokens_reported_calls": 72,
+        "total_tokens_reported_calls": 72,
+        "reasoning_tokens_reported_calls": 72,
+        "positive_reasoning_tokens_calls": 4,
+        "byok_calls": 0
+      }
+    }
+  },
+  "models": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "previous_calls": 72,
+      "incremental_calls": 72,
+      "previous_cost_usd": "0.01690555",
+      "incremental_cost_usd": "0.03646735",
+      "unpriced_attempts": 0,
+      "total_calls": 144,
+      "total_cost_usd": "0.05337290"
+    },
+    "openai/gpt-6-luna": {
+      "previous_calls": 72,
+      "incremental_calls": 0,
+      "previous_cost_usd": "0.055711975",
+      "incremental_cost_usd": "0",
+      "unpriced_attempts": 0,
+      "total_calls": 72,
+      "total_cost_usd": "0.055711975"
+    },
+    "google/gemini-3.8-flash": {
+      "previous_calls": 72,
+      "incremental_calls": 0,
+      "previous_cost_usd": "0.32156325",
+      "incremental_cost_usd": "0",
+      "unpriced_attempts": 0,
+      "total_calls": 72,
+      "total_cost_usd": "0.32156325"
+    },
+    "anthropic/claude-haiku-5.5": {
+      "previous_calls": 72,
+      "incremental_calls": 0,
+      "previous_cost_usd": "0.0584440",
+      "incremental_cost_usd": "0",
+      "unpriced_attempts": 0,
+      "total_calls": 72,
+      "total_cost_usd": "0.0584440"
+    }
+  },
+  "totals": {
+    "previous_cost_usd": "0.452624775",
+    "incremental_cost_usd": "0.03646735",
+    "total_cost_usd": "0.489092125",
+    "previous_calls": 288,
+    "incremental_calls": 72,
+    "total_calls": 360,
+    "unpriced_attempts": 0
+  },
+  "generator_sha256": "f2160c4c828f3c456166be3fa9c4458c73eab3eeced009564b2b75ec89752ed2"
+}

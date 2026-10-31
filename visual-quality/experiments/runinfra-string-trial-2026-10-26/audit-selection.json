@@ -1,0 +1,127 @@
+{
+  "method": "SHA256 rank of 20261026-explanation-audit- plus case_id within source stratum; 12 controlled, 6 VizWiz, 6 standalone",
+  "selected_before_provider_image_requests": true,
+  "manifest_id": "7192073b04be5bd49258eb0a74987a6f341cfa68555ae680947d05a8fb75958c",
+  "cases": [
+    {
+      "case_id": "T050",
+      "view_sha256": "575837193dfcec4b1eb78324ced6268ac9f12eeda7be33b17118b79c429ba769",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T048",
+      "view_sha256": "32bdcbfd341ad31486d1683f8d87e100d5e920bf37f0cc1b46fde71856f1d678",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T052",
+      "view_sha256": "1eae2338b465613d2ba1abc1e722b420646ac2ee8759ae5e0f5c184acfe915c2",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T093",
+      "view_sha256": "4a7fc83c25ed0c38a02664282d2cb774b0ae26b3de484c9270ceb2aa9c2cdc7f",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T075",
+      "view_sha256": "5565390f703f61046b03c904f7ba2917b7e6cb611d6bf6e45a6cdef7a9f1f4e5",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T011",
+      "view_sha256": "fd529f6e368a4d92a1d26613a0c43528e7c57f101ad04e71dcb43d39edf2a45a",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T047",
+      "view_sha256": "e272fe0eab935c9c41311a51daed57b94260e2200e9e104d69f031d5e0a3f1a0",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T064",
+      "view_sha256": "fe42aba522703d893f7e834310f3f94b9535473f0b8081eaa82a172fcef01e30",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T019",
+      "view_sha256": "a6b5cfc3a8aa69e3429d941e7d4fc24d621a861b8cd39ddda41ed33a453569b6",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T083",
+      "view_sha256": "b6a25151642beb23cb4265dc24ebae83af03e6904a85319f5e98113a34fded7b",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T089",
+      "view_sha256": "8740e17c3df8aae5bc23972dfefed96d3d217605db2e15c4efe2792fac650173",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T020",
+      "view_sha256": "cc9102a41f52bae37a28e69b9d38664bdc5441af89db2a3657ba205a2e511917",
+      "stratum": "controlled"
+    },
+    {
+      "case_id": "T149",
+      "view_sha256": "c5b5b2e2945c55ee1537025dfb16aa81f4acbd27d09c090906edfe115e1207be",
+      "stratum": "vizwiz"
+    },
+    {
+      "case_id": "T109",
+      "view_sha256": "05c25b3ee2dbc5aa77d7efa9f5bb70b3ee6921156fe47699085ad1c05b472447",
+      "stratum": "vizwiz"
+    },
+    {
+      "case_id": "T137",
+      "view_sha256": "331251442164e31df4c74b2eb55c70af0edea54c653e8e8b69224b9537bb2228",
+      "stratum": "vizwiz"
+    },
+    {
+      "case_id": "T099",
+      "view_sha256": "672c38e6d36eccfebe2f3cf0318ede16842faa6d385c7831a5d152a0a0c07a0a",
+      "stratum": "vizwiz"
+    },
+    {
+      "case_id": "T131",
+      "view_sha256": "63d692c292f59fe4d133ce42a0f7cf1ff651cd805602a79bf84573416736d42c",
+      "stratum": "vizwiz"
+    },
+    {
+      "case_id": "T120",
+      "view_sha256": "84d0af64e77a97cabfc6b48535459188853537b60a1ff9b9740e108eb99104bf",
+      "stratum": "vizwiz"
+    },
+    {
+      "case_id": "T171",
+      "view_sha256": "b56a62a43b06bc760e8da6f0f0d44e74fc5ff9bead6863d9b03c5156e85ac763",
+      "stratum": "standalone_megalith"
+    },
+    {
+      "case_id": "T180",
+      "view_sha256": "00a4cea2628d6656c50aea2643de40d63d6586de2a1b89a76ac30b4409c9dbc7",
+      "stratum": "standalone_megalith"
+    },
+    {
+      "case_id": "T178",
+      "view_sha256": "46718787a5f034c497ccca288ec32e89fcaf61bc14549a8508aebb75515e43c0",
+      "stratum": "standalone_megalith"
+    },
+    {
+      "case_id": "T167",
+      "view_sha256": "3e9fc84632727f2cf531f591e63409768f07cad76d7f7e31e4b0727419c19ab6",
+      "stratum": "standalone_megalith"
+    },
+    {
+      "case_id": "T174",
+      "view_sha256": "fb34ca5f3db317105977b9cd1285d53871bd6357bfeef97b29d6046dc1299a52",
+      "stratum": "standalone_megalith"
+    },
+    {
+      "case_id": "T183",
+      "view_sha256": "d784d69adbb4ee96e7e761d27f7c3e603e52aa1754430bdc384d8f736a078db4",
+      "stratum": "standalone_megalith"
+    }
+  ]
+}

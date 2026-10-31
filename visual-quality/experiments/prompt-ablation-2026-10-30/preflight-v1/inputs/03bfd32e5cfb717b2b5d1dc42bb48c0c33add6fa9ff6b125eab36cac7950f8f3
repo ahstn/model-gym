@@ -1,0 +1,36 @@
+{
+  "version": "joint-ablation-v1",
+  "locked_before_model_outputs": true,
+  "arms": [
+    {
+      "id": "baseline",
+      "name": "Original joint rubric",
+      "addendum": ""
+    },
+    {
+      "id": "A",
+      "name": "Recognizability versus fidelity",
+      "addendum": "Recognizing the subject does not establish good technical quality. Inspect boundaries, fine textures and tonal transitions in the important content. Substantial blocking, smearing or lost detail can justify a poor rating even when the scene remains identifiable. Describe a defect only when its visual signature is present; do not infer compression from subject matter or low apparent detail alone."
+    },
+    {
+      "id": "B",
+      "name": "Main focal region before blur",
+      "addendum": "Identify the important subject or focal region from visible evidence before judging blur. Judge whether its relevant detail is resolved, verifying a concrete visible feature before calling it sharp. Background defocus alone does not reduce technical quality; a sharp incidental region does not excuse a blurred main subject. Do not invent artistic intent. If the focal interpretation is genuinely ambiguous, use the existing ambiguous_style limitation and judge the visible evidence."
+    },
+    {
+      "id": "C",
+      "name": "Whole-image aesthetic contribution",
+      "addendum": "For aesthetics, credit atmosphere, symmetry, color and subject interest according to their visible contribution to the overall composition, hierarchy, balance, coherence and expression. One appealing feature does not automatically outweigh dominant distractions, weak hierarchy or incoherent framing. Technical imperfections affect aesthetics only through their effect on the whole result; they are not an automatic aesthetic penalty."
+    },
+    {
+      "id": "D",
+      "name": "Anchor and evidence consistency",
+      "addendum": "Select the best-fitting bad, poor, fair, good or excellent anchor independently for each task before refining the score. Check that the brief evidence supports that anchor and identifies the decisive visible feature and its location when relevant. A good technical rating requires consequential defects to be minor. Excellent technical quality does not require an impressive subject. Good or excellent aesthetics requires an effective overall result. Do not invent defects to avoid high scores, and do not impose any score distribution."
+    },
+    {
+      "id": "combined",
+      "name": "All four additions in fixed A/B/C/D order",
+      "addendum": "Recognizing the subject does not establish good technical quality. Inspect boundaries, fine textures and tonal transitions in the important content. Substantial blocking, smearing or lost detail can justify a poor rating even when the scene remains identifiable. Describe a defect only when its visual signature is present; do not infer compression from subject matter or low apparent detail alone.\n\nIdentify the important subject or focal region from visible evidence before judging blur. Judge whether its relevant detail is resolved, verifying a concrete visible feature before calling it sharp. Background defocus alone does not reduce technical quality; a sharp incidental region does not excuse a blurred main subject. Do not invent artistic intent. If the focal interpretation is genuinely ambiguous, use the existing ambiguous_style limitation and judge the visible evidence.\n\nFor aesthetics, credit atmosphere, symmetry, color and subject interest according to their visible contribution to the overall composition, hierarchy, balance, coherence and expression. One appealing feature does not automatically outweigh dominant distractions, weak hierarchy or incoherent framing. Technical imperfections affect aesthetics only through their effect on the whole result; they are not an automatic aesthetic penalty.\n\nSelect the best-fitting bad, poor, fair, good or excellent anchor independently for each task before refining the score. Check that the brief evidence supports that anchor and identifies the decisive visible feature and its location when relevant. A good technical rating requires consequential defects to be minor. Excellent technical quality does not require an impressive subject. Good or excellent aesthetics requires an effective overall result. Do not invent defects to avoid high scores, and do not impose any score distribution."
+    }
+  ]
+}

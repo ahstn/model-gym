@@ -1,0 +1,513 @@
+[
+  {
+    "case_id": "P008",
+    "path": "/home/ahstn/git/model-gym/visual-quality/data/prompt-ablation-2026-10-30/views/75bb44639498753d455d0d63b231f201193af6b4f5ce5815db1c626d207d98b7.png",
+    "view_sha256": "75bb44639498753d455d0d63b231f201193af6b4f5ce5815db1c626d207d98b7",
+    "labels": [
+      {
+        "label_id": "0a2526470dac",
+        "task": "aesthetics",
+        "evidence": "A centered dark rectangle and muted pale surroundings form a simple composition, but pervasive softness obscures its visual character and detail.",
+        "limitations": [
+          "limited_detail",
+          "ambiguous_style"
+        ]
+      },
+      {
+        "label_id": "1e4efa45e016",
+        "task": "technical_quality",
+        "evidence": "Entire image is heavily blurred with lost edges and fine detail across the dark square and dots; colour fringing appears at the top and bottom borders.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "258ad92e902b",
+        "task": "technical_quality",
+        "evidence": "The entire image is heavily blurred, with no sharp edges or legible detail visible at this scale.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "2aeac3e2a7ef",
+        "task": "aesthetics",
+        "evidence": "Centered framing and muted tones provide some order, but pervasive softness and indistinct markings leave the image with little visual impact.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "3088558f1ffe",
+        "task": "technical_quality",
+        "evidence": "Extreme optical blur obscures all fine texture and structural detail throughout the entire frame.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "4972ddb82d30",
+        "task": "technical_quality",
+        "evidence": "The central rectangular object and its small markings are heavily blurred, leaving its edges and internal details indistinct.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "498fc85d578f",
+        "task": "aesthetics",
+        "evidence": "Severe blur and lack of distinct visual features produce an indistinct, unengaging minimalist composition.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "5113d36e4aac",
+        "task": "aesthetics",
+        "evidence": "Centered dark square on pale gray field with heavy blur; dots and faint texture barely visible, giving a minimal but muddy arrangement.",
+        "limitations": [
+          "limited_detail",
+          "ambiguous_style"
+        ]
+      },
+      {
+        "label_id": "5614263e0830",
+        "task": "aesthetics",
+        "evidence": "Centered dark square on pale grey field with soft, heavily diffused edges; sparse light dots form a minimal, quiet arrangement with little tonal interest.",
+        "limitations": [
+          "limited_detail",
+          "ambiguous_style"
+        ]
+      },
+      {
+        "label_id": "690b188840ec",
+        "task": "aesthetics",
+        "evidence": "The blurred dark rectangle with faint dots offers little visual structure, contrast, or expressive interest beyond a vague abstract shape.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "83a88a8659c0",
+        "task": "technical_quality",
+        "evidence": "Severe global blur removes edges and fine detail; the dark square's texture and small dots are smeared, with cyan-tinted edge halos at borders.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "c59f8af36c2d",
+        "task": "technical_quality",
+        "evidence": "The entire image is heavily blurred, with the dark central rectangle and its faint dots lacking any resolved edges or detail.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "c66c4b5f4fcb",
+        "task": "technical_quality",
+        "evidence": "Extremely heavy focus blur across the entire frame eliminates fine texture, sharp contours, and readable surface detail.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "ca365cd778a7",
+        "task": "aesthetics",
+        "evidence": "The blurred dark rectangle with faint dots offers little visual structure, contrast, or expressive interest.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "cc7392694c72",
+        "task": "aesthetics",
+        "evidence": "The pervasive blur and simple framed presentation result in very limited visual interest and weak expressive impact.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "d3a9c2683be3",
+        "task": "technical_quality",
+        "evidence": "Strong, pervasive defocus blurs the rectangle, its edges, and the small light shapes, substantially reducing clarity while preserving the basic arrangement.",
+        "limitations": [
+          "limited_detail"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "P004",
+    "path": "/home/ahstn/git/model-gym/visual-quality/data/prompt-ablation-2026-10-30/views/10be9dc03cb5ca60bb9bf183c31c2d2329d46d09ece6ffb6f109a26f4c11f618.png",
+    "view_sha256": "10be9dc03cb5ca60bb9bf183c31c2d2329d46d09ece6ffb6f109a26f4c11f618",
+    "labels": [
+      {
+        "label_id": "14244288279c",
+        "task": "technical_quality",
+        "evidence": "The entire image is heavily blurred, with no sharp edges or resolved detail on the central object, making its form difficult to inspect.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "37fab54bda0e",
+        "task": "aesthetics",
+        "evidence": "A centered museum presentation is heavily compromised by pervasive softness and lack of visual definition.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "4a4d4da05d56",
+        "task": "technical_quality",
+        "evidence": "Severe, pervasive out-of-focus blur obscures fine texture, edges, and detail across the entire subject.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "5648bda08a18",
+        "task": "aesthetics",
+        "evidence": "The heavy overall blur completely diminishes visual clarity, resulting in an unengaging and ineffective presentation.",
+        "limitations": []
+      },
+      {
+        "label_id": "568c15c18991",
+        "task": "technical_quality",
+        "evidence": "The central object's contours and internal details are broadly out of focus, leaving its main features indistinct despite even exposure.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "716d4709f13b",
+        "task": "technical_quality",
+        "evidence": "Whole image is uniformly out of focus with no sharp edges or fine texture; the main sculpture's contours and surface detail are lost throughout.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "75592f6c0d5d",
+        "task": "technical_quality",
+        "evidence": "The entire subject is severely out of focus, with soft, smeared contours and no recoverable fine detail.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "76b7bd7eeaa1",
+        "task": "technical_quality",
+        "evidence": "Severe overall blur eliminates fine surface details and clear edge definition across the artifact.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "7bc6d38eff99",
+        "task": "technical_quality",
+        "evidence": "The object\u2019s broad silhouette remains visible, but pervasive defocus erases edges and surface detail across the main subject.",
+        "limitations": []
+      },
+      {
+        "label_id": "7e0c3a295d78",
+        "task": "aesthetics",
+        "evidence": "The heavily blurred, indistinct form and flat beige background offer little visual structure or expressive impact.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "9210b37d239c",
+        "task": "aesthetics",
+        "evidence": "Warm cream-brown tones and centered framing offer coherence, but pervasive blur obscures the subject and weakens visual impact.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "b7d6213cba93",
+        "task": "aesthetics",
+        "evidence": "The soft, blurred form and muted beige-brown palette create a quiet, abstract atmosphere, though the composition is simple and lacks a strong focal hierarchy.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "c00f15431dee",
+        "task": "technical_quality",
+        "evidence": "Entire image is out of focus with strong blur across the sculpture, losing edges and surface detail; bright blown highlights on the base add further loss.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "c0d5d6c3e653",
+        "task": "aesthetics",
+        "evidence": "Soft, heavily blurred sculptural form against a pale neutral backdrop; the dark oval and warm tones create a quiet, muted mood with a centered subject.",
+        "limitations": [
+          "limited_detail",
+          "ambiguous_style"
+        ]
+      },
+      {
+        "label_id": "d7079114f6db",
+        "task": "aesthetics",
+        "evidence": "Warm neutral tones and centered framing create a calm arrangement, though pervasive softness weakens definition and visual impact.",
+        "limitations": []
+      },
+      {
+        "label_id": "e7db7ab170ce",
+        "task": "aesthetics",
+        "evidence": "Soft, heavily blurred sculptural form against a pale neutral backdrop; tonal contrast between dark ovoid and light background creates a quiet, moody arrangement.",
+        "limitations": [
+          "limited_detail",
+          "ambiguous_style"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "P025",
+    "path": "/home/ahstn/git/model-gym/visual-quality/data/prompt-ablation-2026-10-30/views/db9d22604812b0b63020cfe5bea52d1f3d67b8dca7552fd0d43ed819f76a028e.png",
+    "view_sha256": "db9d22604812b0b63020cfe5bea52d1f3d67b8dca7552fd0d43ed819f76a028e",
+    "labels": [
+      {
+        "label_id": "06344d3ae25c",
+        "task": "aesthetics",
+        "evidence": "Tilted, motion-smeared product box on a wooden surface with harsh glare; the nutrition panel is cut off and the composition feels accidental.",
+        "limitations": [
+          "partial_view",
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "08c6979fa7d7",
+        "task": "technical_quality",
+        "evidence": "Severe motion blur, strong glare, and heavy defocus render text illegible and obscure details across the frame.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "0e5c6f362984",
+        "task": "aesthetics",
+        "evidence": "The tight, tilted crop and smeared label create a weak hierarchy; warm light adds atmosphere but glare dominates.",
+        "limitations": [
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "162dce66a2ee",
+        "task": "aesthetics",
+        "evidence": "Accidental framing, severe blur, and harsh shadows result in a visually disorganized, unappealing snapshot without clear artistic intent.",
+        "limitations": [
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "1e9c0dd7f4d6",
+        "task": "aesthetics",
+        "evidence": "The tight, tilted close-up and uneven glare create a muddled arrangement, though warm tones give it slight coherence.",
+        "limitations": [
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "1f47b085336c",
+        "task": "aesthetics",
+        "evidence": "Cramped, tilted framing of a package label and wood surface creates weak hierarchy and little visual interest.",
+        "limitations": []
+      },
+      {
+        "label_id": "23c5bb712435",
+        "task": "technical_quality",
+        "evidence": "Strong motion blur and smearing across the package and label make nutrition text largely illegible; exposure is warm but usable.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "30f88341e4d4",
+        "task": "technical_quality",
+        "evidence": "Heavy motion blur and glare obscure the label text, leaving most important detail unreadable.",
+        "limitations": []
+      },
+      {
+        "label_id": "75ad8187fd00",
+        "task": "technical_quality",
+        "evidence": "Motion blur smears the package and label text, while glare and uneven lighting obscure important detail.",
+        "limitations": []
+      },
+      {
+        "label_id": "90ac53d20ab8",
+        "task": "technical_quality",
+        "evidence": "Strong motion blur and smearing across the box, nutrition text and wood grain; the label text is unreadable and specular highlights are blown out.",
+        "limitations": [
+          "limited_detail",
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "9d382f854b72",
+        "task": "aesthetics",
+        "evidence": "Heavy motion blur, cropped nutrition label, and warm glare on wood create a disorganized, accidental snapshot with weak framing.",
+        "limitations": [
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "a44ade2b0990",
+        "task": "aesthetics",
+        "evidence": "The tilted, cluttered framing of a package label against wood lacks a clear focal point or expressive intent.",
+        "limitations": []
+      },
+      {
+        "label_id": "b8513ab548af",
+        "task": "aesthetics",
+        "evidence": "An accidental snapshot style, uneven lighting with dark shadows, and awkward framing create very weak visual appeal.",
+        "limitations": []
+      },
+      {
+        "label_id": "bde156d32e1f",
+        "task": "technical_quality",
+        "evidence": "The label text and package edges are heavily motion-blurred, with glare washing out the upper area and obscuring useful detail.",
+        "limitations": [
+          "limited_detail",
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "c73343f6eb11",
+        "task": "technical_quality",
+        "evidence": "Pronounced motion blur smears the label and packaging details, while bright glare washes out the upper area.",
+        "limitations": [
+          "limited_detail",
+          "partial_view"
+        ]
+      },
+      {
+        "label_id": "cb1372172dd6",
+        "task": "technical_quality",
+        "evidence": "Severe motion blur, strong defocus, and intense glare completely degrade fine details, rendering package text almost entirely unreadable.",
+        "limitations": [
+          "limited_detail"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "P048",
+    "path": "/home/ahstn/git/model-gym/visual-quality/data/prompt-ablation-2026-10-30/views/5d71b8aa4fc41b722c6be384908c61eb6c49bdcdf3b8b6537634f88b74f55048.png",
+    "view_sha256": "5d71b8aa4fc41b722c6be384908c61eb6c49bdcdf3b8b6537634f88b74f55048",
+    "labels": [
+      {
+        "label_id": "0bf8a31dee0d",
+        "task": "aesthetics",
+        "evidence": "The dynamic central equestrian painting is effectively framed by bold, balanced late-nineteenth-century exhibition typography.",
+        "limitations": []
+      },
+      {
+        "label_id": "17cdab73735a",
+        "task": "technical_quality",
+        "evidence": "Text and painted scene are legible and clean, with only mild softness and slight grain at this viewing scale.",
+        "limitations": []
+      },
+      {
+        "label_id": "1b6b7b83db6d",
+        "task": "technical_quality",
+        "evidence": "Visible compression artifacts, text haloing, and reproduction softness noticeably reduce the fine detail and edge clarity.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "3c40563497f8",
+        "task": "aesthetics",
+        "evidence": "Dynamic horse-and-rider scene framed by bold typography; strong contrast and balanced poster layout create engaging visual hierarchy.",
+        "limitations": []
+      },
+      {
+        "label_id": "45c0b3e4d469",
+        "task": "technical_quality",
+        "evidence": "The lettering and framed illustration remain legible, with visible painterly texture and no substantial blur, clipping, or rendering damage.",
+        "limitations": []
+      },
+      {
+        "label_id": "50ca86328eaf",
+        "task": "aesthetics",
+        "evidence": "Dynamic painted horses and a nude rider in surf, framed by bold red-and-cream lettering on black, create a strong poster hierarchy and vivid sunlit palette.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "55c50d8ec99d",
+        "task": "technical_quality",
+        "evidence": "Poster scan is clean with saturated colors and legible lettering; slight softness and minor print texture visible in the painted area but important forms remain clear.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "6776db11c28a",
+        "task": "technical_quality",
+        "evidence": "The lettering and framed illustration remain legible with clean contours; mild print-like texture softens fine painted details.",
+        "limitations": []
+      },
+      {
+        "label_id": "85614017d94f",
+        "task": "aesthetics",
+        "evidence": "Dynamic horse-and-rider scene framed by bold typography; strong contrast and balanced poster layout create engaging period character.",
+        "limitations": []
+      },
+      {
+        "label_id": "946cd52cdf4a",
+        "task": "technical_quality",
+        "evidence": "Text and central illustration remain legible, though fine detail is softened and edges show mild compression artifacts.",
+        "limitations": []
+      },
+      {
+        "label_id": "a37491dbc22f",
+        "task": "aesthetics",
+        "evidence": "Bold painted rearing horses and a nude rider dominate a clear diagonal composition, with strong warm-cool contrast and well-integrated bold lettering framing the image.",
+        "limitations": [
+          "ambiguous_style"
+        ]
+      },
+      {
+        "label_id": "ac9a2da3d428",
+        "task": "technical_quality",
+        "evidence": "Visible compression artifacts, haloing around typography, and harsh contrast reduce fine detail in this print reproduction.",
+        "limitations": []
+      },
+      {
+        "label_id": "afc7b81357bd",
+        "task": "technical_quality",
+        "evidence": "Poster reproduction is clean with crisp lettering, though slight softness, mild color shift, and minor print texture are visible at this scale.",
+        "limitations": [
+          "limited_detail"
+        ]
+      },
+      {
+        "label_id": "d4b675fd57f6",
+        "task": "aesthetics",
+        "evidence": "The dynamic equine illustration harmonizes effectively with the balanced period typography and bold dark framing.",
+        "limitations": []
+      },
+      {
+        "label_id": "f65e37948610",
+        "task": "aesthetics",
+        "evidence": "Decorative lettering frames a lively equestrian scene, and restrained colors create a cohesive, distinctive poster hierarchy.",
+        "limitations": []
+      },
+      {
+        "label_id": "f958384ae40c",
+        "task": "aesthetics",
+        "evidence": "Ornate red-and-white lettering frames a lively equestrian scene, with strong contrast, coherent vintage styling, and a clear visual hierarchy.",
+        "limitations": []
+      }
+    ]
+  }
+]

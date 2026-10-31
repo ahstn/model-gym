@@ -1,0 +1,2785 @@
+{
+  "reference_kind": "frozen_assistant_judgments",
+  "human_gold": false,
+  "training_ready": false,
+  "tasks": {
+    "technical_quality": {
+      "available": {
+        "deepseek": {
+          "n": 50,
+          "mae": 0.45,
+          "bias": 0.206,
+          "mean_interval_distance": 0.204,
+          "interval_hits": 22,
+          "interval_hit_rate": 0.44,
+          "large_interval_errors": 2,
+          "critical_contradictions": 0
+        },
+        "gemini": {
+          "n": 50,
+          "mae": 0.43799999999999994,
+          "bias": -0.11,
+          "mean_interval_distance": 0.19,
+          "interval_hits": 22,
+          "interval_hit_rate": 0.44,
+          "large_interval_errors": 0,
+          "critical_contradictions": 0
+        },
+        "luna": {
+          "n": 50,
+          "mae": 0.436,
+          "bias": 0.31999999999999995,
+          "mean_interval_distance": 0.20200000000000004,
+          "interval_hits": 25,
+          "interval_hit_rate": 0.5,
+          "large_interval_errors": 3,
+          "critical_contradictions": 0
+        }
+      },
+      "matched": {
+        "deepseek": {
+          "n": 50,
+          "mae": 0.45,
+          "bias": 0.206,
+          "mean_interval_distance": 0.204,
+          "interval_hits": 22,
+          "interval_hit_rate": 0.44,
+          "large_interval_errors": 2,
+          "critical_contradictions": 0
+        },
+        "gemini": {
+          "n": 50,
+          "mae": 0.43799999999999994,
+          "bias": -0.11,
+          "mean_interval_distance": 0.19,
+          "interval_hits": 22,
+          "interval_hit_rate": 0.44,
+          "large_interval_errors": 0,
+          "critical_contradictions": 0
+        },
+        "luna": {
+          "n": 50,
+          "mae": 0.436,
+          "bias": 0.31999999999999995,
+          "mean_interval_distance": 0.20200000000000004,
+          "interval_hits": 25,
+          "interval_hit_rate": 0.5,
+          "large_interval_errors": 3,
+          "critical_contradictions": 0
+        }
+      },
+      "matched_case_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012",
+        "D013",
+        "D014",
+        "D015",
+        "D016",
+        "D017",
+        "D018",
+        "D019",
+        "D020",
+        "D021",
+        "D022",
+        "D023",
+        "D024",
+        "D025",
+        "D026",
+        "D027",
+        "D028",
+        "D029",
+        "D030",
+        "D031",
+        "D032",
+        "D033",
+        "D034",
+        "D035",
+        "D036",
+        "D037",
+        "D038",
+        "D039",
+        "D040",
+        "D041",
+        "D042",
+        "D043",
+        "D044",
+        "D045",
+        "D046",
+        "D047",
+        "D048",
+        "D049",
+        "D050"
+      ],
+      "by_stratum": {
+        "deepseek": {
+          "controlled": {
+            "n": 24,
+            "mae": 0.48750000000000004,
+            "bias": 0.3125,
+            "mean_interval_distance": 0.25000000000000006,
+            "interval_hits": 10,
+            "interval_hit_rate": 0.4166666666666667,
+            "large_interval_errors": 2,
+            "critical_contradictions": 0
+          },
+          "standalone_megalith": {
+            "n": 12,
+            "mae": 0.44166666666666665,
+            "bias": -0.041666666666666706,
+            "mean_interval_distance": 0.19999999999999998,
+            "interval_hits": 5,
+            "interval_hit_rate": 0.4166666666666667,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          },
+          "vizwiz": {
+            "n": 14,
+            "mae": 0.39285714285714285,
+            "bias": 0.2357142857142857,
+            "mean_interval_distance": 0.12857142857142856,
+            "interval_hits": 7,
+            "interval_hit_rate": 0.5,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          }
+        },
+        "gemini": {
+          "controlled": {
+            "n": 24,
+            "mae": 0.3916666666666668,
+            "bias": -0.00833333333333335,
+            "mean_interval_distance": 0.14583333333333337,
+            "interval_hits": 12,
+            "interval_hit_rate": 0.5,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          },
+          "standalone_megalith": {
+            "n": 12,
+            "mae": 0.6,
+            "bias": -0.6,
+            "mean_interval_distance": 0.3166666666666666,
+            "interval_hits": 4,
+            "interval_hit_rate": 0.3333333333333333,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          },
+          "vizwiz": {
+            "n": 14,
+            "mae": 0.3785714285714286,
+            "bias": 0.1357142857142857,
+            "mean_interval_distance": 0.1571428571428571,
+            "interval_hits": 6,
+            "interval_hit_rate": 0.42857142857142855,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          }
+        },
+        "luna": {
+          "controlled": {
+            "n": 24,
+            "mae": 0.5291666666666667,
+            "bias": 0.4624999999999999,
+            "mean_interval_distance": 0.2750000000000001,
+            "interval_hits": 8,
+            "interval_hit_rate": 0.3333333333333333,
+            "large_interval_errors": 2,
+            "critical_contradictions": 0
+          },
+          "standalone_megalith": {
+            "n": 12,
+            "mae": 0.24999999999999997,
+            "bias": -0.10000000000000005,
+            "mean_interval_distance": 0.09166666666666667,
+            "interval_hits": 10,
+            "interval_hit_rate": 0.8333333333333334,
+            "large_interval_errors": 1,
+            "critical_contradictions": 0
+          },
+          "vizwiz": {
+            "n": 14,
+            "mae": 0.43571428571428567,
+            "bias": 0.43571428571428567,
+            "mean_interval_distance": 0.17142857142857146,
+            "interval_hits": 7,
+            "interval_hit_rate": 0.5,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          }
+        }
+      },
+      "paired_differences": {
+        "deepseek_minus_gemini": {
+          "n": 50,
+          "families": 32,
+          "draws": 10000,
+          "seed": 20261027,
+          "mae_difference": {
+            "estimate": 0.012000000000000005,
+            "ci95": [
+              -0.13799999999999993,
+              0.15600000000000006
+            ]
+          },
+          "interval_distance_difference": {
+            "estimate": 0.014000000000000007,
+            "ci95": [
+              -0.10199999999999998,
+              0.12999999999999998
+            ]
+          }
+        },
+        "deepseek_minus_luna": {
+          "n": 50,
+          "families": 32,
+          "draws": 10000,
+          "seed": 20261027,
+          "mae_difference": {
+            "estimate": 0.014000000000000047,
+            "ci95": [
+              -0.10799999999999998,
+              0.1520000000000001
+            ]
+          },
+          "interval_distance_difference": {
+            "estimate": 0.001999999999999993,
+            "ci95": [
+              -0.08,
+              0.1
+            ]
+          }
+        },
+        "gemini_minus_luna": {
+          "n": 50,
+          "families": 32,
+          "draws": 10000,
+          "seed": 20261027,
+          "mae_difference": {
+            "estimate": 0.0020000000000000417,
+            "ci95": [
+              -0.11204999999999997,
+              0.10600000000000007
+            ]
+          },
+          "interval_distance_difference": {
+            "estimate": -0.01200000000000001,
+            "ci95": [
+              -0.11399999999999999,
+              0.08004999999999929
+            ]
+          }
+        }
+      },
+      "ranking_by_matched_mae": [
+        "luna",
+        "gemini",
+        "deepseek"
+      ],
+      "comparison_status": "paired"
+    },
+    "aesthetics": {
+      "available": {
+        "deepseek": {
+          "n": 50,
+          "mae": 0.32,
+          "bias": 0.14000000000000007,
+          "mean_interval_distance": 0.07599999999999998,
+          "interval_hits": 37,
+          "interval_hit_rate": 0.74,
+          "large_interval_errors": 0,
+          "critical_contradictions": 0
+        },
+        "gemini": {
+          "n": 50,
+          "mae": 0.37400000000000005,
+          "bias": -0.19799999999999998,
+          "mean_interval_distance": 0.09,
+          "interval_hits": 34,
+          "interval_hit_rate": 0.68,
+          "large_interval_errors": 0,
+          "critical_contradictions": 0
+        },
+        "luna": {
+          "n": 50,
+          "mae": 0.38599999999999995,
+          "bias": 0.3459999999999999,
+          "mean_interval_distance": 0.08999999999999998,
+          "interval_hits": 34,
+          "interval_hit_rate": 0.68,
+          "large_interval_errors": 0,
+          "critical_contradictions": 0
+        }
+      },
+      "matched": {
+        "deepseek": {
+          "n": 50,
+          "mae": 0.32,
+          "bias": 0.14000000000000007,
+          "mean_interval_distance": 0.07599999999999998,
+          "interval_hits": 37,
+          "interval_hit_rate": 0.74,
+          "large_interval_errors": 0,
+          "critical_contradictions": 0
+        },
+        "gemini": {
+          "n": 50,
+          "mae": 0.37400000000000005,
+          "bias": -0.19799999999999998,
+          "mean_interval_distance": 0.09,
+          "interval_hits": 34,
+          "interval_hit_rate": 0.68,
+          "large_interval_errors": 0,
+          "critical_contradictions": 0
+        },
+        "luna": {
+          "n": 50,
+          "mae": 0.38599999999999995,
+          "bias": 0.3459999999999999,
+          "mean_interval_distance": 0.08999999999999998,
+          "interval_hits": 34,
+          "interval_hit_rate": 0.68,
+          "large_interval_errors": 0,
+          "critical_contradictions": 0
+        }
+      },
+      "matched_case_ids": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012",
+        "D013",
+        "D014",
+        "D015",
+        "D016",
+        "D017",
+        "D018",
+        "D019",
+        "D020",
+        "D021",
+        "D022",
+        "D023",
+        "D024",
+        "D025",
+        "D026",
+        "D027",
+        "D028",
+        "D029",
+        "D030",
+        "D031",
+        "D032",
+        "D033",
+        "D034",
+        "D035",
+        "D036",
+        "D037",
+        "D038",
+        "D039",
+        "D040",
+        "D041",
+        "D042",
+        "D043",
+        "D044",
+        "D045",
+        "D046",
+        "D047",
+        "D048",
+        "D049",
+        "D050"
+      ],
+      "by_stratum": {
+        "deepseek": {
+          "controlled": {
+            "n": 24,
+            "mae": 0.35833333333333334,
+            "bias": 0.2083333333333334,
+            "mean_interval_distance": 0.07499999999999998,
+            "interval_hits": 16,
+            "interval_hit_rate": 0.6666666666666666,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          },
+          "standalone_megalith": {
+            "n": 12,
+            "mae": 0.20833333333333323,
+            "bias": -0.10833333333333328,
+            "mean_interval_distance": 0.041666666666666664,
+            "interval_hits": 10,
+            "interval_hit_rate": 0.8333333333333334,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          },
+          "vizwiz": {
+            "n": 14,
+            "mae": 0.35000000000000003,
+            "bias": 0.23571428571428582,
+            "mean_interval_distance": 0.10714285714285714,
+            "interval_hits": 11,
+            "interval_hit_rate": 0.7857142857142857,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          }
+        },
+        "gemini": {
+          "controlled": {
+            "n": 24,
+            "mae": 0.28333333333333327,
+            "bias": -0.19999999999999996,
+            "mean_interval_distance": 0.0375,
+            "interval_hits": 20,
+            "interval_hit_rate": 0.8333333333333334,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          },
+          "standalone_megalith": {
+            "n": 12,
+            "mae": 0.5916666666666666,
+            "bias": -0.5916666666666666,
+            "mean_interval_distance": 0.22499999999999998,
+            "interval_hits": 3,
+            "interval_hit_rate": 0.25,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          },
+          "vizwiz": {
+            "n": 14,
+            "mae": 0.3428571428571429,
+            "bias": 0.14285714285714293,
+            "mean_interval_distance": 0.06428571428571428,
+            "interval_hits": 11,
+            "interval_hit_rate": 0.7857142857142857,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          }
+        },
+        "luna": {
+          "controlled": {
+            "n": 24,
+            "mae": 0.44583333333333336,
+            "bias": 0.4208333333333334,
+            "mean_interval_distance": 0.1083333333333333,
+            "interval_hits": 13,
+            "interval_hit_rate": 0.5416666666666666,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          },
+          "standalone_megalith": {
+            "n": 12,
+            "mae": 0.1416666666666666,
+            "bias": 0.041666666666666595,
+            "mean_interval_distance": 0.0,
+            "interval_hits": 12,
+            "interval_hit_rate": 1.0,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          },
+          "vizwiz": {
+            "n": 14,
+            "mae": 0.4928571428571428,
+            "bias": 0.4785714285714286,
+            "mean_interval_distance": 0.1357142857142857,
+            "interval_hits": 9,
+            "interval_hit_rate": 0.6428571428571429,
+            "large_interval_errors": 0,
+            "critical_contradictions": 0
+          }
+        }
+      },
+      "paired_differences": {
+        "deepseek_minus_gemini": {
+          "n": 50,
+          "families": 32,
+          "draws": 10000,
+          "seed": 20261027,
+          "mae_difference": {
+            "estimate": -0.054000000000000006,
+            "ci95": [
+              -0.17,
+              0.05199999999999996
+            ]
+          },
+          "interval_distance_difference": {
+            "estimate": -0.013999999999999999,
+            "ci95": [
+              -0.07005000000000003,
+              0.042000000000000044
+            ]
+          }
+        },
+        "deepseek_minus_luna": {
+          "n": 50,
+          "families": 32,
+          "draws": 10000,
+          "seed": 20261027,
+          "mae_difference": {
+            "estimate": -0.06600000000000003,
+            "ci95": [
+              -0.15,
+              0.015999999999999917
+            ]
+          },
+          "interval_distance_difference": {
+            "estimate": -0.01399999999999999,
+            "ci95": [
+              -0.06399999999999997,
+              0.03400000000000001
+            ]
+          }
+        },
+        "gemini_minus_luna": {
+          "n": 50,
+          "families": 32,
+          "draws": 10000,
+          "seed": 20261027,
+          "mae_difference": {
+            "estimate": -0.012000000000000025,
+            "ci95": [
+              -0.09799999999999999,
+              0.07999999999999993
+            ]
+          },
+          "interval_distance_difference": {
+            "estimate": 8.881784197001253e-18,
+            "ci95": [
+              -0.044000000000000004,
+              0.044000000000000004
+            ]
+          }
+        }
+      },
+      "ranking_by_matched_mae": [
+        "deepseek",
+        "gemini",
+        "luna"
+      ],
+      "comparison_status": "paired"
+    }
+  },
+  "bootstrap_scope": "Whole families within strata, conditional on these assistant references; not human accuracy.",
+  "controlled_diagnostics": {
+    "deepseek:technical_quality": {
+      "complete_families": 6,
+      "nonincreasing_score_families": 3,
+      "note": "Operator severity ordering is diagnostic, not perceptual or aesthetic ground truth."
+    },
+    "deepseek:aesthetics": {
+      "complete_families": 6,
+      "nonincreasing_score_families": 3,
+      "note": "Operator severity ordering is diagnostic, not perceptual or aesthetic ground truth."
+    },
+    "gemini:technical_quality": {
+      "complete_families": 6,
+      "nonincreasing_score_families": 3,
+      "note": "Operator severity ordering is diagnostic, not perceptual or aesthetic ground truth."
+    },
+    "gemini:aesthetics": {
+      "complete_families": 6,
+      "nonincreasing_score_families": 2,
+      "note": "Operator severity ordering is diagnostic, not perceptual or aesthetic ground truth."
+    },
+    "luna:technical_quality": {
+      "complete_families": 6,
+      "nonincreasing_score_families": 5,
+      "note": "Operator severity ordering is diagnostic, not perceptual or aesthetic ground truth."
+    },
+    "luna:aesthetics": {
+      "complete_families": 6,
+      "nonincreasing_score_families": 2,
+      "note": "Operator severity ordering is diagnostic, not perceptual or aesthetic ground truth."
+    }
+  },
+  "accounting": {
+    "deepseek": {
+      "schema_version": "dual-score-trial-report-v1",
+      "run_id": "5e94fd84489273073c8b1c86f070f744a2a3b73c561055457bd9c7bed513cb57",
+      "route": "deepseek",
+      "phase": "images",
+      "status": "complete",
+      "planned": 50,
+      "attempted": 50,
+      "valid_observations": 50,
+      "invalid_observations": 0,
+      "task_valid_observations": {
+        "technical_quality": 50,
+        "aesthetics": 50
+      },
+      "scored": {
+        "technical_quality": 50,
+        "aesthetics": 50
+      },
+      "known_cost_usd": "0.02030325",
+      "total_known_cost_usd": "0.02063100",
+      "unpriced_attempts": 0,
+      "attempts": [
+        {
+          "case_id": "D001",
+          "status": "valid",
+          "cost_usd": "0.00038175",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D002",
+          "status": "valid",
+          "cost_usd": "0.00038235",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D003",
+          "status": "valid",
+          "cost_usd": "0.00038295",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D004",
+          "status": "valid",
+          "cost_usd": "0.00038235",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D005",
+          "status": "valid",
+          "cost_usd": "0.00042915",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D006",
+          "status": "valid",
+          "cost_usd": "0.00043335",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D007",
+          "status": "valid",
+          "cost_usd": "0.00043335",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D008",
+          "status": "valid",
+          "cost_usd": "0.00043095",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D009",
+          "status": "valid",
+          "cost_usd": "0.00035865",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D010",
+          "status": "valid",
+          "cost_usd": "0.00036525",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D011",
+          "status": "valid",
+          "cost_usd": "0.00035865",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D012",
+          "status": "valid",
+          "cost_usd": "0.00036225",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D013",
+          "status": "valid",
+          "cost_usd": "0.00036585",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D014",
+          "status": "valid",
+          "cost_usd": "0.00036645",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D015",
+          "status": "valid",
+          "cost_usd": "0.00036765",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D016",
+          "status": "valid",
+          "cost_usd": "0.00037005",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D017",
+          "status": "valid",
+          "cost_usd": "0.00042375",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D018",
+          "status": "valid",
+          "cost_usd": "0.00042435",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D019",
+          "status": "valid",
+          "cost_usd": "0.00042615",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D020",
+          "status": "valid",
+          "cost_usd": "0.00042435",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D021",
+          "status": "valid",
+          "cost_usd": "0.00042675",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D022",
+          "status": "valid",
+          "cost_usd": "0.00042795",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D023",
+          "status": "valid",
+          "cost_usd": "0.00042495",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D024",
+          "status": "valid",
+          "cost_usd": "0.00042375",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D025",
+          "status": "valid",
+          "cost_usd": "0.00043485",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D026",
+          "status": "valid",
+          "cost_usd": "0.0003999",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D027",
+          "status": "valid",
+          "cost_usd": "0.00036585",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D028",
+          "status": "valid",
+          "cost_usd": "0.0004023",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D029",
+          "status": "valid",
+          "cost_usd": "0.00043605",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D030",
+          "status": "valid",
+          "cost_usd": "0.00044145",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D031",
+          "status": "valid",
+          "cost_usd": "0.00041535",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D032",
+          "status": "valid",
+          "cost_usd": "0.0003969",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D033",
+          "status": "valid",
+          "cost_usd": "0.00041535",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D034",
+          "status": "valid",
+          "cost_usd": "0.0004041",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D035",
+          "status": "valid",
+          "cost_usd": "0.00043425",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D036",
+          "status": "valid",
+          "cost_usd": "0.0003243",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D037",
+          "status": "valid",
+          "cost_usd": "0.0003231",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D038",
+          "status": "valid",
+          "cost_usd": "0.00043485",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D039",
+          "status": "valid",
+          "cost_usd": "0.00042495",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D040",
+          "status": "valid",
+          "cost_usd": "0.00042495",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D041",
+          "status": "valid",
+          "cost_usd": "0.00042735",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D042",
+          "status": "valid",
+          "cost_usd": "0.00043245",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D043",
+          "status": "valid",
+          "cost_usd": "0.00041535",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D044",
+          "status": "valid",
+          "cost_usd": "0.00043095",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D045",
+          "status": "valid",
+          "cost_usd": "0.00042555",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D046",
+          "status": "valid",
+          "cost_usd": "0.00042795",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D047",
+          "status": "valid",
+          "cost_usd": "0.0004365",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D048",
+          "status": "valid",
+          "cost_usd": "0.00042675",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D049",
+          "status": "valid",
+          "cost_usd": "0.00040275",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D050",
+          "status": "valid",
+          "cost_usd": "0.00042615",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        }
+      ],
+      "training_ready": false
+    },
+    "gemini": {
+      "schema_version": "dual-score-trial-report-v1",
+      "run_id": "3eee267e80e5a238b2ffed999486601203809d3ee01348731fe18614dada1026",
+      "route": "gemini",
+      "phase": "images",
+      "status": "complete",
+      "planned": 50,
+      "attempted": 50,
+      "valid_observations": 50,
+      "invalid_observations": 0,
+      "task_valid_observations": {
+        "technical_quality": 50,
+        "aesthetics": 50
+      },
+      "scored": {
+        "technical_quality": 50,
+        "aesthetics": 50
+      },
+      "known_cost_usd": "0.202379025",
+      "total_known_cost_usd": "0.207468525",
+      "unpriced_attempts": 0,
+      "attempts": [
+        {
+          "case_id": "D001",
+          "status": "valid",
+          "cost_usd": "0.0041775",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D002",
+          "status": "valid",
+          "cost_usd": "0.00427875",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D003",
+          "status": "valid",
+          "cost_usd": "0.00399",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D004",
+          "status": "valid",
+          "cost_usd": "0.005655",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D005",
+          "status": "valid",
+          "cost_usd": "0.003765",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D006",
+          "status": "valid",
+          "cost_usd": "0.00508875",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D007",
+          "status": "valid",
+          "cost_usd": "0.00520125",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D008",
+          "status": "valid",
+          "cost_usd": "0.0039525",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D009",
+          "status": "valid",
+          "cost_usd": "0.00414375",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D010",
+          "status": "valid",
+          "cost_usd": "0.00426375",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D011",
+          "status": "valid",
+          "cost_usd": "0.00448875",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D012",
+          "status": "valid",
+          "cost_usd": "0.003675",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D013",
+          "status": "valid",
+          "cost_usd": "0.0043455",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D014",
+          "status": "valid",
+          "cost_usd": "0.00264675",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D015",
+          "status": "valid",
+          "cost_usd": "0.00404925",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D016",
+          "status": "valid",
+          "cost_usd": "0.0035805",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D017",
+          "status": "valid",
+          "cost_usd": "0.00391125",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D018",
+          "status": "valid",
+          "cost_usd": "0.0040125",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D019",
+          "status": "valid",
+          "cost_usd": "0.0036825",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D020",
+          "status": "valid",
+          "cost_usd": "0.00349875",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D021",
+          "status": "valid",
+          "cost_usd": "0.0032025",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D022",
+          "status": "valid",
+          "cost_usd": "0.00482625",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D023",
+          "status": "valid",
+          "cost_usd": "0.0043575",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D024",
+          "status": "valid",
+          "cost_usd": "0.00445125",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D025",
+          "status": "valid",
+          "cost_usd": "0.0042105",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D026",
+          "status": "valid",
+          "cost_usd": "0.004728",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D027",
+          "status": "valid",
+          "cost_usd": "0.00457425",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D028",
+          "status": "valid",
+          "cost_usd": "0.00377925",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D029",
+          "status": "valid",
+          "cost_usd": "0.00367425",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D030",
+          "status": "valid",
+          "cost_usd": "0.00389175",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D031",
+          "status": "valid",
+          "cost_usd": "0.00372675",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D032",
+          "status": "valid",
+          "cost_usd": "0.00265425",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D033",
+          "status": "valid",
+          "cost_usd": "0.0037155",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D034",
+          "status": "valid",
+          "cost_usd": "0.004713",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D035",
+          "status": "valid",
+          "cost_usd": "0.0039705",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D036",
+          "status": "valid",
+          "cost_usd": "0.004038",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D037",
+          "status": "valid",
+          "cost_usd": "0.00472425",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D038",
+          "status": "valid",
+          "cost_usd": "0.00460425",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D039",
+          "status": "valid",
+          "cost_usd": "0.00351",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D040",
+          "status": "valid",
+          "cost_usd": "0.00351",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D041",
+          "status": "valid",
+          "cost_usd": "0.0026424",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D042",
+          "status": "valid",
+          "cost_usd": "0.004134",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D043",
+          "status": "valid",
+          "cost_usd": "0.00359475",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D044",
+          "status": "valid",
+          "cost_usd": "0.00483",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D045",
+          "status": "valid",
+          "cost_usd": "0.00392625",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D046",
+          "status": "valid",
+          "cost_usd": "0.00422025",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D047",
+          "status": "valid",
+          "cost_usd": "0.00352425",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D048",
+          "status": "valid",
+          "cost_usd": "0.00417",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D049",
+          "status": "valid",
+          "cost_usd": "0.003529125",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D050",
+          "status": "valid",
+          "cost_usd": "0.004539",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        }
+      ],
+      "training_ready": false
+    },
+    "luna": {
+      "schema_version": "dual-score-trial-report-v1",
+      "run_id": "0bb0ca3c1c0631ca158c310b6834f28b22361e78370d1d06616a30da4a9acda1",
+      "route": "luna",
+      "phase": "images",
+      "status": "complete",
+      "planned": 50,
+      "attempted": 50,
+      "valid_observations": 50,
+      "invalid_observations": 0,
+      "task_valid_observations": {
+        "technical_quality": 50,
+        "aesthetics": 50
+      },
+      "scored": {
+        "technical_quality": 50,
+        "aesthetics": 50
+      },
+      "known_cost_usd": "0",
+      "total_known_cost_usd": "0",
+      "unpriced_attempts": 0,
+      "attempts": [
+        {
+          "case_id": "D001",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D002",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D003",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D004",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D005",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D006",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D007",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D008",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D009",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D010",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D011",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D012",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D013",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D014",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D015",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D016",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D017",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D018",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D019",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D020",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D021",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D022",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D023",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D024",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D025",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D026",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D027",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D028",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D029",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D030",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D031",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D032",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D033",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D034",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D035",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D036",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D037",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D038",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D039",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D040",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D041",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D042",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D043",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D044",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D045",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D046",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D047",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D048",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D049",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        },
+        {
+          "case_id": "D050",
+          "status": "valid",
+          "cost_usd": "0",
+          "reason": null,
+          "wire_score_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          },
+          "task_valid": {
+            "technical_quality": true,
+            "aesthetics": true
+          }
+        }
+      ],
+      "training_ready": false
+    }
+  }
+}

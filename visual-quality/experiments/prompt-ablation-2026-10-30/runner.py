@@ -1,0 +1,691 @@
+"""Frozen, resumable six-arm study; each provider route fails independently."""
+
+from __future__ import annotations
+
+import argparse
+import base64
+import concurrent.futures
+import fcntl
+import hashlib
+import importlib.util
+import json
+import os
+import re
+import sys
+import uuid
+from decimal import Decimal
+from pathlib import Path
+
+import requests
+
+from visual_quality.storage import atomic_json, file_sha256, read_jsonl, write_jsonl
+
+HERE = Path(__file__).resolve().parent
+PROJECT = HERE.parents[1]
+DATA = PROJECT / "data/prompt-ablation-2026-10-30"
+ROUTES = ("deepseek", "gemini", "luna", "haiku")
+PROBE_SCORES = ("1.00", "3.90", "4.10", "5.00", None)
+_local_spec = importlib.util.spec_from_file_location("ablation_local_wire", HERE / "wire.py")
+_local_wire = importlib.util.module_from_spec(_local_spec)
+_local_spec.loader.exec_module(_local_wire)
+ADAPTER_VERSION, ARM_IDS, BASE_PATH, TASKS = (
+    _local_wire.ADAPTER_VERSION,
+    _local_wire.ARM_IDS,
+    _local_wire.BASE_PATH,
+    _local_wire.TASKS,
+)
+load_arms, parse_joint, prompt_bundle = (
+    _local_wire.load_arms,
+    _local_wire.parse_joint,
+    _local_wire.prompt_bundle,
+)
+
+# Reuse the frozen trial's numerical, clock, and reference validators. Its wire import
+# is temporarily bound explicitly, avoiding whichever experiment is on sys.path.
+_old_wire = sys.modules.get("wire")
+_wire_spec = importlib.util.spec_from_file_location("ablation_frozen_wire", BASE_PATH)
+_frozen_wire = importlib.util.module_from_spec(_wire_spec)
+_wire_spec.loader.exec_module(_frozen_wire)
+sys.modules["wire"] = _frozen_wire
+try:
+    _base_path = BASE_PATH.with_name("runner.py")
+    _spec = importlib.util.spec_from_file_location("ablation_frozen_runner", _base_path)
+    _base = importlib.util.module_from_spec(_spec)
+    _spec.loader.exec_module(_base)
+finally:
+    if _old_wire is None:
+        sys.modules.pop("wire", None)
+    else:
+        sys.modules["wire"] = _old_wire
+digest, now, encoded = _base.digest, _base.now, _base.encoded
+cost, validate_reference_rating = _base.cost, _base.validate_reference_rating
+
+
+def directory(run: dict) -> Path:
+    return DATA / run["route"] / run["phase"]
+
+
+def durable_json(path: Path, value: dict) -> None:
+    """Persist the journal and directory entry before any external request starts."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name("." + path.name + "." + uuid.uuid4().hex + ".tmp")
+    try:
+        with temporary.open("w") as stream:
+            json.dump(value, stream, sort_keys=True, indent=2, allow_nan=False)
+            stream.write("\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temporary, path)
+        for parent in (path.parent, path.parent.parent):
+            descriptor = os.open(parent, os.O_DIRECTORY)
+            try:
+                os.fsync(descriptor)
+            finally:
+                os.close(descriptor)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
+def route_entry(route: str) -> dict:
+    if route not in ROUTES:
+        raise ValueError("Unknown route")
+    config = json.loads((HERE / "routes.json").read_text())[route]
+    expected = {
+        "runinfra": "https://api.runinfra.ai/v1/chat/completions",
+        "openrouter": "https://openrouter.ai/api/v1/chat/completions",
+    }
+    if config["endpoint"] != expected.get(config["provider"]):
+        raise ValueError("Unexpected provider endpoint")
+    settings = config["settings"]
+    if settings["model"] not in config["accepted_models"] or settings["stream"] is not False:
+        raise ValueError("Invalid requested model or streaming setting")
+    if config["provider"] == "openrouter":
+        policy = settings["provider"]
+        if (
+            not policy["only"]
+            or policy["allow_fallbacks"] is not False
+            or policy["require_parameters"] is not True
+        ):
+            raise ValueError("Explicit provider pinning and parameter support are required")
+    for name in ("input_price_per_million", "output_price_per_million"):
+        value = Decimal(config[name])
+        if not value.is_finite() or value < 0:
+            raise ValueError("Invalid route price ceiling")
+    return config
+
+
+def payload(run: dict, case: dict) -> dict:
+    prompt = run["prompts"][case["arm_id"]]
+    if run["phase"] == "probes":
+        expected = {
+            task: {
+                "task": task,
+                "status": "unscorable" if score is None else "ok",
+                "score": score,
+                "evidence": "Literal transport conformance check.",
+                "limitations": [],
+            }
+            for task, score in case["expected_scores"].items()
+        }
+        messages = [
+            {
+                "role": "system",
+                "content": "Copy the supplied JSON object exactly. This is a text-only format test.",
+            },
+            {"role": "user", "content": json.dumps(expected, sort_keys=True)},
+        ]
+    else:
+        raw = Path(case["image_path"]).read_bytes()
+        if hashlib.sha256(raw).hexdigest() != case["view_sha256"]:
+            raise ValueError("Frozen image bytes changed")
+        messages = [
+            {"role": "system", "content": prompt["system"]},
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": prompt["user"]},
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": "data:image/png;base64," + base64.b64encode(raw).decode(),
+                            "detail": "high",
+                        },
+                    },
+                ],
+            },
+        ]
+    return {**run["settings"], "messages": messages, "response_format": prompt["response_format"]}
+
+
+def validate_references(manifest_path: Path, references_path: Path) -> list[dict]:
+    manifest = json.loads(manifest_path.read_text())
+    cases, references = manifest["cases"], read_jsonl(references_path)
+    frozen = json.loads(references_path.with_name("references-freeze.json").read_text())
+    if (
+        len(cases) != 50
+        or len(references) != 50
+        or frozen["count"] != 50
+        or frozen["human_gold"] is not False
+        or frozen["reference_kind"] != "frozen_assistant_judgments"
+        or frozen["references_sha256"] != file_sha256(references_path)
+        or frozen["manifest_sha256"] != file_sha256(manifest_path)
+    ):
+        raise ValueError("All 50 blinded references must be frozen before image requests")
+    blinding = frozen["blinding"]
+    if (
+        blinding["provider_image_requests_before_freeze"] != 0
+        or blinding["reviewers_received_provider_outputs"] is not False
+    ):
+        raise ValueError("Reference blinding is not established")
+    if frozen["review_instructions_sha256"] != file_sha256(HERE / "review-instructions.md"):
+        raise ValueError("Frozen review instructions changed")
+    if not isinstance(frozen["reviewer_files"], dict) or not frozen["reviewer_files"]:
+        raise ValueError("Frozen reviewer files are required")
+    by_id = {row["case_id"]: row for row in references}
+    if len(by_id) != 50 or set(by_id) != {case["case_id"] for case in cases}:
+        raise ValueError("Reference identities differ from cohort")
+    for case in cases:
+        row = by_id[case["case_id"]]
+        if row["view_sha256"] != case["view_sha256"]:
+            raise ValueError("Reference and delivered view differ")
+        for task in TASKS:
+            validate_reference_rating(row[task])
+    pins = {**manifest.get("inputs", {}), **manifest.get("packet_files", {}), **frozen["reviewer_files"]}
+    for name, expected in pins.items():
+        if file_sha256(Path(name)) != expected:
+            raise ValueError("Frozen source, packet, or reviewer file changed")
+    return cases
+
+
+def interleave(cases: list[dict], route: str, arm_ids=ARM_IDS) -> list[dict]:
+    """Different deterministic case and arm orders per route; all arms in each block."""
+    result = []
+    for case in sorted(cases, key=lambda c: digest(["ablation-order-v1", route, c["case_id"]])):
+        order = sorted(arm_ids, key=lambda arm: digest(["ablation-order-v1", route, case["case_id"], arm]))
+        for arm_id in order:
+            result.append({**case, "arm_id": arm_id, "attempt_id": arm_id + "--" + case["case_id"]})
+    return result
+
+
+def freeze(
+    route: str, phase: str, manifest_path: Path | None = None, references_path: Path | None = None
+) -> dict:
+    target = DATA / route / phase
+    if (target / "run.json").exists():
+        raise ValueError("Run already frozen")
+    config = route_entry(route)
+    arms = load_arms(HERE / "arms.json")
+    files = [
+        HERE / name
+        for name in (
+            "runner.py",
+            "wire.py",
+            "protocol.md",
+            "routes.json",
+            "arms.json",
+            "report.py",
+            "test_report.py",
+            "test_runner.py",
+            "test_wire.py",
+            "freeze_references.py",
+            "collage-selection.json",
+            "preflight-v1/archive.json",
+        )
+    ]
+    files += [BASE_PATH, _base_path, PROJECT / "src/visual_quality/storage.py"]
+    files += [PROJECT / "prompts/visual-rating-v1" / name for name in ("system.txt", "joint.txt")]
+    # Pin provider evidence whenever present; route settings always remain pinned.
+    files += sorted(HERE.glob("*catalog.json")) + sorted(HERE.glob("*endpoints.json"))
+    if (HERE / "provider-research.json").exists():
+        files.append(HERE / "provider-research.json")
+    previous_cost = "0"
+    prior_preflight = json.loads((HERE / "preflight-v1/archive.json").read_text())["routes"][route]
+    admission_debit = Decimal(prior_preflight["admission_debit_usd"])
+    if phase == "images":
+        if manifest_path is None or references_path is None:
+            raise ValueError("Manifest and frozen references are required")
+        originals = validate_references(manifest_path, references_path)
+        probes = verify(read_run(route, "probes"))
+        if probes["status"] != "complete" or probes["valid_observations"] != 5:
+            raise ValueError("All five conformance probes must pass")
+        previous_cost = probes["known_cost_usd"]
+        cases = interleave(originals, route)
+        files += [
+            manifest_path,
+            references_path,
+            references_path.with_name("references-freeze.json"),
+            HERE / "review-instructions.md",
+        ]
+        frozen = json.loads(references_path.with_name("references-freeze.json").read_text())
+        manifest = json.loads(manifest_path.read_text())
+        files += [
+            Path(p)
+            for p in {
+                *frozen["reviewer_files"],
+                *manifest.get("inputs", {}),
+                *manifest.get("packet_files", {}),
+            }
+        ]
+        files += [p for p in (DATA / route / "probes").rglob("*") if p.is_file() and p.name != ".lock"]
+    elif phase == "probes":
+        cases = [
+            {
+                "case_id": f"probe-{i + 1}",
+                "arm_id": "baseline",
+                "attempt_id": f"probe-{i + 1}",
+                "expected_scores": {"technical_quality": score, "aesthetics": PROBE_SCORES[-1 - i]},
+            }
+            for i, score in enumerate(PROBE_SCORES)
+        ]
+    else:
+        raise ValueError("Unknown phase")
+    reserve = (
+        Decimal(config["input_price_per_million"]) * config["context_length"]
+        + Decimal(config["output_price_per_million"]) * config["settings"]["max_tokens"]
+    ) / 1_000_000
+    run = {
+        "schema_version": "prompt-ablation-run-v1",
+        "route": route,
+        "phase": phase,
+        "created_at": now(),
+        "endpoint": config["endpoint"],
+        "requested_model": config["requested_model"],
+        "route_config": config,
+        "prompts": {arm["id"]: prompt_bundle(PROJECT / "prompts/visual-rating-v1", arm) for arm in arms},
+        "settings": config["settings"],
+        "cases": cases,
+        "previous_cost_usd": previous_cost,
+        "policy": {
+            "automatic_retries": False,
+            "fallback": False,
+            "max_concurrency": 4,
+            "reference_kind": "frozen_assistant_judgments",
+            "human_gold": False,
+        },
+        "budget": {
+            "max_cost_usd": str(Decimal("5.00") - admission_debit),
+            "prior_preflight_admission_debit_usd": str(admission_debit),
+            "total_route_caps_usd": "20.00",
+            "reserve_per_request_usd": str(reserve),
+            "reserve_basis": "full_context_and_max_output",
+        },
+        "inputs": {str(p.resolve()): file_sha256(p) for p in files},
+        "training_ready": False,
+    }
+    for case in cases:
+        if not re.fullmatch(r"[A-Za-z0-9_-]+", case["case_id"]):
+            raise ValueError("Case identifier is unsafe")
+        body = payload(run, case)
+        case.update(request_sha256=digest(body), request_bytes=len(encoded(body)))
+        if case["request_bytes"] > config["max_request_bytes"]:
+            raise ValueError("Request exceeds provider limit: " + case["attempt_id"])
+    if len({c["attempt_id"] for c in cases}) != len(cases):
+        raise ValueError("Duplicate attempt identifier")
+    run["run_id"] = digest(run)
+    durable_json(target / "run.json", run)
+    return run
+
+
+def validate_run(run: dict, *, check_payloads=True) -> None:
+    if digest({k: v for k, v in run.items() if k != "run_id"}) != run["run_id"]:
+        raise ValueError("Frozen run metadata changed")
+    for name, expected in run["inputs"].items():
+        if file_sha256(Path(name)) != expected:
+            raise ValueError("Pinned input changed: " + name)
+    if check_payloads:
+        for case in run["cases"]:
+            body = payload(run, case)
+            if digest(body) != case["request_sha256"] or len(encoded(body)) != case["request_bytes"]:
+                raise ValueError("Request differs from frozen inputs")
+
+
+def read_run(route: str, phase="images") -> dict:
+    run = json.loads((DATA / route / phase / "run.json").read_text())
+    if run["route"] != route or run["phase"] != phase:
+        raise ValueError("Frozen run location differs")
+    validate_run(run)
+    return run
+
+
+def billing(body: dict, provider: str) -> dict:
+    """Gateway debit and BYOK inference costs are distinct, never blindly added."""
+    gateway = cost(body, provider)
+    usage = body.get("usage", {})
+    usage = usage if isinstance(usage, dict) else {}
+    details = usage.get("cost_details", {})
+    details = details if isinstance(details, dict) else {}
+    upstream = details.get("upstream_inference_cost")
+    try:
+        upstream = Decimal(str(upstream)) if upstream is not None and not isinstance(upstream, bool) else None
+        if upstream is not None and (not upstream.is_finite() or upstream < 0):
+            upstream = None
+    except ArithmeticError:
+        upstream = None
+    is_byok = usage.get("is_byok", details.get("is_byok"))
+    # When their relationship is unconfirmed, reserve both potential charges rather
+    # than silently assuming an upstream amount is already included in gateway cost.
+    if gateway is None or is_byok is True and upstream is None:
+        charged = None
+    elif is_byok is not False and upstream is not None:
+        charged = gateway + upstream
+    else:
+        charged = max(gateway, upstream or Decimal(0))
+    return {
+        "cost_usd": None if charged is None else str(charged),
+        "gateway_cost_usd": None if gateway is None else str(gateway),
+        "upstream_inference_cost_usd": None if upstream is None else str(upstream),
+        "is_byok": is_byok,
+        "cost_source": "usage.cost + confirmed BYOK upstream"
+        if is_byok is True and upstream is not None
+        else "conservative gateway + upstream; additive relationship unconfirmed"
+        if is_byok is not False and upstream is not None
+        else "max(gateway, upstream); not BYOK"
+        if upstream is not None
+        else "usage.cost",
+    }
+
+
+def interpret(run: dict, case: dict, request: dict, result: dict) -> tuple[dict, dict | None]:
+    details = {
+        "case_id": case["case_id"],
+        "arm_id": case["arm_id"],
+        "attempt_id": case["attempt_id"],
+        "status": "failed",
+        "cost_usd": None,
+        "reason": None,
+        "wire_score_valid": None,
+        "task_valid": dict.fromkeys(TASKS, False),
+    }
+    if result["transport_error"]:
+        details["reason"] = "transport_outcome_unknown"
+        return details, None
+    try:
+        body = json.loads(result["body"])
+        if not isinstance(body, dict):
+            raise TypeError("Non-object envelope")
+        details.update(billing(body, run["route_config"]["provider"]))
+        if result["http_status"] != 200 or body.get("error"):
+            details["reason"] = "http_or_provider_error"
+            return details, None
+        if body.get("model") not in run["route_config"]["accepted_models"]:
+            raise ValueError("Unexpected returned model")
+        providers = run["route_config"].get("accepted_providers")
+        if providers and body.get("provider") not in providers:
+            raise ValueError("Unexpected or missing returned provider")
+        choices = body["choices"]
+        if not isinstance(choices, list) or len(choices) != 1 or choices[0]["finish_reason"] != "stop":
+            raise ValueError("Incomplete response")
+        message = choices[0]["message"]
+        if not isinstance(message, dict) or message.get("refusal") or not isinstance(message["content"], str):
+            raise ValueError("Missing response content or refusal")
+    except (ValueError, TypeError, KeyError, IndexError, AttributeError) as error:
+        details["reason"] = "invalid_envelope: " + str(error)
+        return details, None
+    parsed = parse_joint(message["content"])
+    details.update(
+        wire_score_valid=parsed["wire_score_valid"], task_valid={t: t in parsed["ratings"] for t in TASKS}
+    )
+    if run["phase"] == "probes" and not parsed["errors"] and parsed["wire_scores"] != case["expected_scores"]:
+        details.update(status="invalid", reason="conformance_value_mismatch")
+        return details, None
+    if parsed["errors"]:
+        details.update(status="invalid", reason="invalid_rating", validation_errors=parsed["errors"])
+    else:
+        details.update(status="valid", reason=None if details["cost_usd"] is not None else "cost_unavailable")
+    prompt = run["prompts"][case["arm_id"]]
+    record = {
+        "schema_version": "prompt-ablation-observation-v1",
+        "label_kind": "teacher_scalar" if run["phase"] == "images" else "conformance_probe",
+        "case_id": case["case_id"],
+        "arm_id": case["arm_id"],
+        "attempt_id": case["attempt_id"],
+        "wire_scores": parsed["wire_scores"],
+        "wire_score_valid": parsed["wire_score_valid"],
+        "validation_errors": parsed["errors"],
+        "adapter_version": ADAPTER_VERSION,
+        **{task: parsed["ratings"].get(task, {"status": "invalid", "score": None}) for task in TASKS},
+        "review_status": "pending_human_review",
+        "task_masks": {"technical_quality": False, "aesthetics": False, "photo_domain": False},
+        "provenance": {
+            "provider": run["route_config"]["provider"],
+            "provider_returned": body.get("provider"),
+            "route": run["route"],
+            "arm_id": case["arm_id"],
+            "model_requested": run["settings"]["model"],
+            "model_returned": body["model"],
+            "run_id": run["run_id"],
+            "attempt_id": case["attempt_id"],
+            "prompt_version": prompt["version"],
+            "prompt_sha256": prompt["sha256"],
+            "request_sha256": request["request_sha256"],
+            "created_at": request["created_at"],
+            "usage": body.get("usage", {}),
+            "billing": billing(body, run["route_config"]["provider"]),
+        },
+    }
+    if run["phase"] == "images":
+        for key in (
+            "image_id",
+            "view_id",
+            "source_sha256",
+            "view_sha256",
+            "photo_domain_eligible",
+            "family_id",
+        ):
+            if key in case:
+                record[key] = case[key]
+        record["delivered_sha256"] = case["view_sha256"]
+    return details, record
+
+
+def reconstruct(run: dict, *, check_payloads=True) -> tuple[dict, list[dict]]:
+    validate_run(run, check_payloads=check_payloads)
+    observations, attempts = [], []
+    root = directory(run) / "attempts"
+    expected_ids = {c["attempt_id"] for c in run["cases"]}
+    if root.exists() and not {p.name for p in root.iterdir()}.issubset(expected_ids):
+        raise ValueError("Unexpected attempt directory")
+    for case in run["cases"]:
+        folder = root / case["attempt_id"]
+        if not folder.exists():
+            continue
+        if not (folder / "request.json").exists():
+            raise ValueError("Incomplete attempt directory; inspect manually")
+        request = json.loads((folder / "request.json").read_text())
+        expected = {
+            k: case[k] for k in ("case_id", "arm_id", "attempt_id", "request_sha256", "request_bytes")
+        }
+        if any(request.get(k) != v for k, v in {**expected, "run_id": run["run_id"]}.items()):
+            raise ValueError("Attempt request metadata differs from frozen run")
+        if not (folder / "result.json").exists():
+            attempts.append(
+                {
+                    "case_id": case["case_id"],
+                    "arm_id": case["arm_id"],
+                    "attempt_id": case["attempt_id"],
+                    "status": "unknown",
+                    "cost_usd": None,
+                    "reason": "interrupted_request",
+                    "wire_score_valid": None,
+                    "task_valid": dict.fromkeys(TASKS, False),
+                }
+            )
+            continue
+        detail, row = interpret(run, case, request, json.loads((folder / "result.json").read_text()))
+        attempts.append(detail)
+        if row is not None:
+            observations.append(row)
+    stopped = any(a["status"] in {"failed", "unknown"} or a["cost_usd"] is None for a in attempts)
+    if run["phase"] == "probes":
+        stopped |= any(a["status"] != "valid" for a in attempts)
+    spend = sum((Decimal(a["cost_usd"]) for a in attempts if a["cost_usd"] is not None), Decimal(0))
+    report = {
+        "schema_version": "prompt-ablation-report-v1",
+        "run_id": run["run_id"],
+        "route": run["route"],
+        "phase": run["phase"],
+        "status": "blocked" if stopped else "complete" if len(attempts) == len(run["cases"]) else "partial",
+        "planned": len(run["cases"]),
+        "attempted": len(attempts),
+        "valid_observations": sum(a["status"] == "valid" for a in attempts),
+        "invalid_observations": sum(a["status"] == "invalid" for a in attempts),
+        "task_valid_observations": {t: sum(a["task_valid"][t] for a in attempts) for t in TASKS},
+        "scored": {t: sum(r[t]["score"] is not None for r in observations) for t in TASKS},
+        "known_cost_usd": str(spend),
+        "total_known_cost_usd": str(spend + Decimal(run["previous_cost_usd"])),
+        "unpriced_attempts": sum(a["cost_usd"] is None for a in attempts),
+        "attempts": attempts,
+        "training_ready": False,
+    }
+    return report, observations
+
+
+def save_report(run: dict, *, check_payloads=True) -> dict:
+    report, rows = reconstruct(run, check_payloads=check_payloads)
+    write_jsonl(directory(run) / "observations.jsonl", rows)
+    atomic_json(directory(run) / "report.json", report)
+    return report
+
+
+def send(run: dict, case: dict, key: str) -> None:
+    body = payload(run, case)
+    if digest(body) != case["request_sha256"]:
+        raise ValueError("Request changed after freezing")
+    try:
+        response = requests.post(
+            run["endpoint"],
+            data=encoded(body),
+            headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"},
+            timeout=(15, 740),
+            allow_redirects=False,
+        )
+        result = {
+            "http_status": response.status_code,
+            "body": response.text.replace(key, "[REDACTED]"),
+            "headers": {
+                k.lower(): v.replace(key, "[REDACTED]")
+                for k, v in response.headers.items()
+                if k.lower().startswith(("x-runinfra-", "x-request-id", "retry-after"))
+            },
+            "transport_error": None,
+            "received_at": now(),
+        }
+    except requests.RequestException as error:
+        result = {
+            "http_status": None,
+            "body": None,
+            "headers": {},
+            "transport_error": type(error).__name__,
+            "received_at": now(),
+        }
+    durable_json(directory(run) / "attempts" / case["attempt_id"] / "result.json", result)
+
+
+def execute(run: dict) -> dict:
+    validate_run(run)
+    key = os.environ.get(run["route_config"]["key_env"])
+    if not key:
+        raise ValueError(run["route_config"]["key_env"] + " is unavailable")
+    with (directory(run) / ".lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        report = save_report(run, check_payloads=False)
+        if report["status"] == "blocked":
+            raise ValueError("Existing failed or uncertain attempts prevent further calls")
+        pending = [c for c in run["cases"] if not (directory(run) / "attempts" / c["attempt_id"]).exists()]
+        concurrency = 1 if run["phase"] == "probes" else min(4, run["policy"]["max_concurrency"])
+        with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as pool:
+            while pending:
+                remaining = Decimal(run["budget"]["max_cost_usd"]) - Decimal(report["total_known_cost_usd"])
+                reserve = Decimal(run["budget"]["reserve_per_request_usd"])
+                admitted = min(
+                    concurrency, len(pending), int(remaining / reserve) if reserve else len(pending)
+                )
+                if admitted < 1:
+                    raise ValueError("Next request exceeds the admission budget")
+                batch = pending[:admitted]
+                for case in batch:
+                    folder = directory(run) / "attempts" / case["attempt_id"]
+                    folder.mkdir(parents=True)
+                    request = {
+                        k: case[k]
+                        for k in ("case_id", "arm_id", "attempt_id", "request_sha256", "request_bytes")
+                    }
+                    durable_json(
+                        folder / "request.json", {**request, "run_id": run["run_id"], "created_at": now()}
+                    )
+                futures = [pool.submit(send, run, case, key) for case in batch]
+                for future in concurrent.futures.as_completed(futures):
+                    future.result()
+                # Full payload checks occur on execute entry, each send, and verify.
+                # Every batch still checks the immutable run and all method pins.
+                report = save_report(run, check_payloads=False)
+                print(
+                    json.dumps(
+                        {
+                            k: report[k]
+                            for k in (
+                                "route",
+                                "phase",
+                                "attempted",
+                                "scored",
+                                "invalid_observations",
+                                "total_known_cost_usd",
+                                "status",
+                            )
+                        }
+                    ),
+                    flush=True,
+                )
+                if report["status"] == "blocked":
+                    break
+                pending = pending[admitted:]
+        return report
+
+
+def verify(run: dict) -> dict:
+    report, rows = reconstruct(run)
+    if (
+        json.loads((directory(run) / "report.json").read_text()) != report
+        or read_jsonl(directory(run) / "observations.jsonl") != rows
+    ):
+        raise ValueError("Saved exports differ from preserved replies")
+    return report
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "command", choices=["freeze-probes", "probe", "verify-probes", "freeze", "run", "verify"]
+    )
+    parser.add_argument("--route", choices=[*ROUTES, "all"], required=True)
+    parser.add_argument("--manifest", type=Path, default=HERE / "manifest.json")
+    parser.add_argument("--references", type=Path, default=HERE / "references.jsonl")
+    args = parser.parse_args()
+    phase = "probes" if args.command in {"freeze-probes", "probe", "verify-probes"} else "images"
+
+    def operate(route):
+        if args.command.startswith("freeze"):
+            report = save_report(freeze(route, phase, args.manifest, args.references))
+        else:
+            run = read_run(route, phase)
+            report = execute(run) if args.command in {"run", "probe"} else verify(run)
+        return {k: v for k, v in report.items() if k != "attempts"}
+
+    routes = ROUTES if args.route == "all" else [args.route]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=len(routes)) as pool:
+        futures = {pool.submit(operate, route): route for route in routes}
+        failed = False
+        for future in concurrent.futures.as_completed(futures):
+            try:
+                print(json.dumps(future.result(), indent=2), flush=True)
+            except Exception as error:  # noqa: BLE001 — isolate each route at the CLI boundary
+                failed = True
+                print(
+                    json.dumps({"route": futures[future], "status": "error", "error": str(error)}), flush=True
+                )
+    if failed:
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

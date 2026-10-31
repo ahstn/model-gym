@@ -1,0 +1,4 @@
+Use case: text-localization.
+Edit the supplied 36-card comparison poster. Make exactly one numeric correction, leaving all other text, numbers, photos, colors and layout unchanged.
+In card D050 (bottom row, third column), in the final table row labelled Luna, change the rightmost Aest score from 4.4 to 4.0. The correct Luna row is: Luna   3.1   4.0.
+Do not change D050's Ref technical score of 4.4. Do not change any other number anywhere. Preserve all 36 cards, their order and photographs. Return the complete poster, without cropping.

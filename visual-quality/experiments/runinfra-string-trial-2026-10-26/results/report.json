@@ -1,0 +1,1485 @@
+{
+  "agreement": {
+    "compared_families": 119,
+    "critical_case_ids": [],
+    "critical_error_rate": 0.0,
+    "interval_hit_rate": 0.40425531914893614,
+    "interval_hits": 76,
+    "large_interval_error_count": 10,
+    "large_interval_error_rate": 0.05319148936170213,
+    "mae_from_assistant_point": 0.4627659574468085,
+    "mean_interval_distance": 0.24361702127659574,
+    "mean_score_bias": 0.1851063829787234,
+    "model_score_histogram": {
+      "1.00": 7,
+      "1.30": 1,
+      "1.50": 10,
+      "2.00": 22,
+      "2.30": 4,
+      "2.50": 2,
+      "2.60": 4,
+      "2.80": 7,
+      "3.00": 14,
+      "3.20": 4,
+      "3.30": 6,
+      "3.40": 1,
+      "3.50": 4,
+      "3.60": 8,
+      "3.70": 2,
+      "3.80": 7,
+      "4.00": 12,
+      "4.20": 23,
+      "4.30": 29,
+      "4.50": 21
+    },
+    "percentile_95_family_bootstrap_intervals": {
+      "critical_error_rate": [
+        0.0,
+        0.0
+      ],
+      "interval_hit_rate": [
+        0.3384966097732055,
+        0.4710288521389769
+      ],
+      "large_interval_error_rate": [
+        0.02625979843225084,
+        0.08545328399629971
+      ],
+      "mae_from_assistant_point": [
+        0.41276581598008144,
+        0.5143102451433859
+      ],
+      "mean_interval_distance": [
+        0.19999999999999996,
+        0.28989361702127653
+      ],
+      "mean_score_bias": [
+        0.11758629470348579,
+        0.25383725543356594
+      ]
+    },
+    "planned_cases": 200,
+    "reference_comparisons": 188,
+    "reference_score_histogram": {
+      "1.00": 5,
+      "1.10": 1,
+      "1.20": 7,
+      "1.30": 1,
+      "1.50": 4,
+      "1.60": 3,
+      "1.70": 3,
+      "1.80": 2,
+      "1.90": 6,
+      "2.00": 6,
+      "2.10": 6,
+      "2.20": 2,
+      "2.30": 6,
+      "2.40": 7,
+      "2.50": 5,
+      "2.60": 3,
+      "2.70": 7,
+      "2.80": 7,
+      "2.90": 7,
+      "3.00": 8,
+      "3.10": 9,
+      "3.20": 6,
+      "3.30": 5,
+      "3.40": 5,
+      "3.50": 1,
+      "3.60": 1,
+      "3.70": 4,
+      "3.80": 3,
+      "3.90": 4,
+      "4.00": 6,
+      "4.10": 8,
+      "4.20": 4,
+      "4.30": 3,
+      "4.40": 8,
+      "4.50": 3,
+      "4.60": 8,
+      "4.70": 6,
+      "4.80": 13,
+      "4.90": 5,
+      "5.00": 2
+    },
+    "scorable_outputs": 188,
+    "valid_observations": 188
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "estimator": "sampled_sums_over_sampled_counts_within_stratum",
+    "seed": 20261026,
+    "unit": "family_within_stratum",
+    "weights": "observed_compared_image_count_by_stratum"
+  },
+  "by_stratum": {
+    "controlled": {
+      "compared_families": 24,
+      "critical_case_ids": [],
+      "critical_error_rate": 0.0,
+      "interval_hit_rate": 0.3870967741935484,
+      "interval_hits": 36,
+      "large_interval_error_count": 4,
+      "large_interval_error_rate": 0.043010752688172046,
+      "mae_from_assistant_point": 0.46881720430107526,
+      "mean_interval_distance": 0.24731182795698922,
+      "mean_score_bias": 0.2258064516129032,
+      "model_score_histogram": {
+        "1.00": 6,
+        "1.50": 6,
+        "2.00": 5,
+        "2.30": 1,
+        "2.60": 3,
+        "2.80": 4,
+        "3.00": 8,
+        "3.20": 1,
+        "3.30": 5,
+        "3.40": 1,
+        "3.50": 2,
+        "3.60": 7,
+        "3.70": 2,
+        "3.80": 4,
+        "4.00": 9,
+        "4.20": 7,
+        "4.30": 11,
+        "4.50": 11
+      },
+      "percentile_95_family_bootstrap_intervals": {
+        "critical_error_rate": [
+          0.0,
+          0.0
+        ],
+        "interval_hit_rate": [
+          0.3010752688172043,
+          0.4782608695652174
+        ],
+        "large_interval_error_rate": [
+          0.010526315789473684,
+          0.08602150537634409
+        ],
+        "mae_from_assistant_point": [
+          0.40644989704873014,
+          0.5319148936170213
+        ],
+        "mean_interval_distance": [
+          0.1944270833333333,
+          0.30326086956521736
+        ],
+        "mean_score_bias": [
+          0.1452631578947369,
+          0.30319148936170204
+        ]
+      },
+      "planned_cases": 96,
+      "reference_comparisons": 93,
+      "reference_score_histogram": {
+        "1.10": 1,
+        "1.20": 5,
+        "1.50": 2,
+        "1.60": 2,
+        "1.70": 1,
+        "1.90": 3,
+        "2.00": 1,
+        "2.10": 4,
+        "2.30": 3,
+        "2.40": 3,
+        "2.50": 5,
+        "2.70": 6,
+        "2.80": 2,
+        "2.90": 5,
+        "3.00": 6,
+        "3.10": 4,
+        "3.20": 4,
+        "3.30": 4,
+        "3.40": 1,
+        "3.50": 1,
+        "3.70": 3,
+        "3.80": 2,
+        "3.90": 2,
+        "4.00": 2,
+        "4.10": 2,
+        "4.20": 3,
+        "4.30": 1,
+        "4.40": 3,
+        "4.50": 2,
+        "4.60": 3,
+        "4.70": 3,
+        "4.80": 4,
+        "4.90": 2,
+        "5.00": 1
+      },
+      "scorable_outputs": 93,
+      "valid_observations": 93
+    },
+    "standalone_megalith": {
+      "compared_families": 43,
+      "critical_case_ids": [],
+      "critical_error_rate": 0.0,
+      "interval_hit_rate": 0.4186046511627907,
+      "interval_hits": 18,
+      "large_interval_error_count": 1,
+      "large_interval_error_rate": 0.023255813953488372,
+      "mae_from_assistant_point": 0.36976744186046523,
+      "mean_interval_distance": 0.16744186046511628,
+      "mean_score_bias": -0.08604651162790695,
+      "model_score_histogram": {
+        "3.60": 1,
+        "4.00": 3,
+        "4.20": 11,
+        "4.30": 18,
+        "4.50": 10
+      },
+      "percentile_95_family_bootstrap_intervals": {
+        "critical_error_rate": [
+          0.0,
+          0.0
+        ],
+        "interval_hit_rate": [
+          0.27906976744186046,
+          0.5581395348837209
+        ],
+        "large_interval_error_rate": [
+          0.0,
+          0.06976744186046512
+        ],
+        "mae_from_assistant_point": [
+          0.2930232558139536,
+          0.4627906976744189
+        ],
+        "mean_interval_distance": [
+          0.10232558139534885,
+          0.2511627906976743
+        ],
+        "mean_score_bias": [
+          -0.21627906976744188,
+          0.060465116279069905
+        ]
+      },
+      "planned_cases": 48,
+      "reference_comparisons": 43,
+      "reference_score_histogram": {
+        "2.80": 1,
+        "3.00": 1,
+        "3.20": 1,
+        "3.40": 1,
+        "3.60": 1,
+        "3.80": 1,
+        "3.90": 2,
+        "4.00": 4,
+        "4.10": 6,
+        "4.20": 1,
+        "4.30": 2,
+        "4.40": 5,
+        "4.50": 1,
+        "4.60": 5,
+        "4.70": 3,
+        "4.80": 9,
+        "4.90": 3,
+        "5.00": 1
+      },
+      "scorable_outputs": 43,
+      "valid_observations": 43
+    },
+    "vizwiz": {
+      "compared_families": 52,
+      "critical_case_ids": [],
+      "critical_error_rate": 0.0,
+      "interval_hit_rate": 0.4230769230769231,
+      "interval_hits": 22,
+      "large_interval_error_count": 5,
+      "large_interval_error_rate": 0.09615384615384616,
+      "mae_from_assistant_point": 0.5288461538461539,
+      "mean_interval_distance": 0.3,
+      "mean_score_bias": 0.33653846153846156,
+      "model_score_histogram": {
+        "1.00": 1,
+        "1.30": 1,
+        "1.50": 4,
+        "2.00": 17,
+        "2.30": 3,
+        "2.50": 2,
+        "2.60": 1,
+        "2.80": 3,
+        "3.00": 6,
+        "3.20": 3,
+        "3.30": 1,
+        "3.50": 2,
+        "3.80": 3,
+        "4.20": 5
+      },
+      "percentile_95_family_bootstrap_intervals": {
+        "critical_error_rate": [
+          0.0,
+          0.0
+        ],
+        "interval_hit_rate": [
+          0.28846153846153844,
+          0.5576923076923077
+        ],
+        "large_interval_error_rate": [
+          0.019230769230769232,
+          0.17307692307692307
+        ],
+        "mae_from_assistant_point": [
+          0.4057692307692307,
+          0.6596153846153847
+        ],
+        "mean_interval_distance": [
+          0.19033653846153842,
+          0.423076923076923
+        ],
+        "mean_score_bias": [
+          0.1692307692307692,
+          0.5057692307692309
+        ]
+      },
+      "planned_cases": 56,
+      "reference_comparisons": 52,
+      "reference_score_histogram": {
+        "1.00": 5,
+        "1.20": 2,
+        "1.30": 1,
+        "1.50": 2,
+        "1.60": 1,
+        "1.70": 2,
+        "1.80": 2,
+        "1.90": 3,
+        "2.00": 5,
+        "2.10": 2,
+        "2.20": 2,
+        "2.30": 3,
+        "2.40": 4,
+        "2.60": 3,
+        "2.70": 1,
+        "2.80": 4,
+        "2.90": 2,
+        "3.00": 1,
+        "3.10": 5,
+        "3.20": 1,
+        "3.30": 1,
+        "3.40": 3,
+        "3.70": 1
+      },
+      "scorable_outputs": 52,
+      "valid_observations": 52
+    }
+  },
+  "complete_families_sensitivity": {
+    "compared_families": 116,
+    "critical_case_ids": [],
+    "critical_error_rate": 0.0,
+    "interval_hit_rate": 0.40782122905027934,
+    "interval_hits": 73,
+    "large_interval_error_count": 9,
+    "large_interval_error_rate": 0.05027932960893855,
+    "mae_from_assistant_point": 0.4564245810055866,
+    "mean_interval_distance": 0.23798882681564243,
+    "mean_score_bias": 0.1692737430167598,
+    "model_score_histogram": {
+      "1.00": 7,
+      "1.30": 1,
+      "1.50": 10,
+      "2.00": 22,
+      "2.30": 3,
+      "2.50": 2,
+      "2.60": 4,
+      "2.80": 7,
+      "3.00": 14,
+      "3.20": 3,
+      "3.30": 6,
+      "3.40": 1,
+      "3.50": 4,
+      "3.60": 6,
+      "3.70": 2,
+      "3.80": 7,
+      "4.00": 8,
+      "4.20": 23,
+      "4.30": 29,
+      "4.50": 20
+    },
+    "percentile_95_family_bootstrap_intervals": {
+      "critical_error_rate": [
+        0.0,
+        0.0
+      ],
+      "interval_hit_rate": [
+        0.335195530726257,
+        0.4748603351955308
+      ],
+      "large_interval_error_rate": [
+        0.0223463687150838,
+        0.08379888268156425
+      ],
+      "mae_from_assistant_point": [
+        0.4044692737430169,
+        0.5106145251396649
+      ],
+      "mean_interval_distance": [
+        0.19217877094972066,
+        0.2865921787709498
+      ],
+      "mean_score_bias": [
+        0.1005586592178771,
+        0.23798882681564243
+      ]
+    },
+    "planned_cases": 179,
+    "reference_comparisons": 179,
+    "reference_score_histogram": {
+      "1.00": 4,
+      "1.10": 1,
+      "1.20": 7,
+      "1.30": 1,
+      "1.50": 4,
+      "1.60": 3,
+      "1.70": 3,
+      "1.80": 2,
+      "1.90": 6,
+      "2.00": 5,
+      "2.10": 5,
+      "2.20": 2,
+      "2.30": 6,
+      "2.40": 7,
+      "2.50": 4,
+      "2.60": 3,
+      "2.70": 5,
+      "2.80": 7,
+      "2.90": 6,
+      "3.00": 8,
+      "3.10": 8,
+      "3.20": 5,
+      "3.30": 4,
+      "3.40": 4,
+      "3.50": 1,
+      "3.60": 1,
+      "3.70": 2,
+      "3.80": 3,
+      "3.90": 3,
+      "4.00": 4,
+      "4.10": 6,
+      "4.20": 3,
+      "4.30": 2,
+      "4.40": 8,
+      "4.50": 2,
+      "4.60": 8,
+      "4.70": 6,
+      "4.80": 13,
+      "4.90": 5,
+      "5.00": 2
+    },
+    "scorable_outputs": 179,
+    "valid_observations": 179
+  },
+  "controlled_source_parents": {
+    "compared_families": 23,
+    "critical_case_ids": [],
+    "critical_error_rate": 0.0,
+    "interval_hit_rate": 0.34782608695652173,
+    "interval_hits": 8,
+    "large_interval_error_count": 0,
+    "large_interval_error_rate": 0.0,
+    "mae_from_assistant_point": 0.3695652173913043,
+    "mean_interval_distance": 0.16956521739130426,
+    "mean_score_bias": -0.08260869565217396,
+    "model_score_histogram": {
+      "2.80": 1,
+      "3.00": 1,
+      "3.30": 1,
+      "3.50": 1,
+      "3.60": 2,
+      "4.00": 2,
+      "4.20": 4,
+      "4.30": 5,
+      "4.50": 6
+    },
+    "percentile_95_family_bootstrap_intervals": {
+      "critical_error_rate": [
+        0.0,
+        0.0
+      ],
+      "interval_hit_rate": [
+        0.17391304347826086,
+        0.5652173913043478
+      ],
+      "large_interval_error_rate": [
+        0.0,
+        0.0
+      ],
+      "mae_from_assistant_point": [
+        0.2782608695652174,
+        0.46086956521739153
+      ],
+      "mean_interval_distance": [
+        0.10434782608695645,
+        0.24347826086956506
+      ],
+      "mean_score_bias": [
+        -0.2521739130434783,
+        0.09565217391304345
+      ]
+    },
+    "planned_cases": 24,
+    "reference_comparisons": 23,
+    "reference_score_histogram": {
+      "2.70": 1,
+      "2.80": 1,
+      "3.00": 2,
+      "3.20": 1,
+      "3.50": 1,
+      "3.70": 2,
+      "4.20": 1,
+      "4.30": 1,
+      "4.40": 3,
+      "4.50": 2,
+      "4.60": 2,
+      "4.70": 2,
+      "4.80": 3,
+      "4.90": 1,
+      "5.00": 1
+    },
+    "scorable_outputs": 23,
+    "valid_observations": 23
+  },
+  "controlled_variants": {
+    "compared_families": 24,
+    "critical_case_ids": [],
+    "critical_error_rate": 0.0,
+    "interval_hit_rate": 0.4,
+    "interval_hits": 28,
+    "large_interval_error_count": 4,
+    "large_interval_error_rate": 0.05714285714285714,
+    "mae_from_assistant_point": 0.5014285714285714,
+    "mean_interval_distance": 0.27285714285714285,
+    "mean_score_bias": 0.3271428571428571,
+    "model_score_histogram": {
+      "1.00": 6,
+      "1.50": 6,
+      "2.00": 5,
+      "2.30": 1,
+      "2.60": 3,
+      "2.80": 3,
+      "3.00": 7,
+      "3.20": 1,
+      "3.30": 4,
+      "3.40": 1,
+      "3.50": 1,
+      "3.60": 5,
+      "3.70": 2,
+      "3.80": 4,
+      "4.00": 7,
+      "4.20": 3,
+      "4.30": 6,
+      "4.50": 5
+    },
+    "percentile_95_family_bootstrap_intervals": {
+      "critical_error_rate": [
+        0.0,
+        0.0
+      ],
+      "interval_hit_rate": [
+        0.31343283582089554,
+        0.49295774647887325
+      ],
+      "large_interval_error_rate": [
+        0.014084507042253521,
+        0.11428571428571428
+      ],
+      "mae_from_assistant_point": [
+        0.42916666666666664,
+        0.5771428571428571
+      ],
+      "mean_interval_distance": [
+        0.20985915492957744,
+        0.3388140817650875
+      ],
+      "mean_score_bias": [
+        0.227536231884058,
+        0.4323529411764705
+      ]
+    },
+    "planned_cases": 72,
+    "reference_comparisons": 70,
+    "reference_score_histogram": {
+      "1.10": 1,
+      "1.20": 5,
+      "1.50": 2,
+      "1.60": 2,
+      "1.70": 1,
+      "1.90": 3,
+      "2.00": 1,
+      "2.10": 4,
+      "2.30": 3,
+      "2.40": 3,
+      "2.50": 5,
+      "2.70": 5,
+      "2.80": 1,
+      "2.90": 5,
+      "3.00": 4,
+      "3.10": 4,
+      "3.20": 3,
+      "3.30": 4,
+      "3.40": 1,
+      "3.70": 1,
+      "3.80": 2,
+      "3.90": 2,
+      "4.00": 2,
+      "4.10": 2,
+      "4.20": 2,
+      "4.60": 1,
+      "4.70": 1,
+      "4.80": 1,
+      "4.90": 1
+    },
+    "scorable_outputs": 70,
+    "valid_observations": 70
+  },
+  "explanation_support": {
+    "audited": false,
+    "note": "Score agreement does not establish that the model evidence is visually supported.",
+    "unsupported_count": null
+  },
+  "format_conformance": {
+    "all_200_exact_wire_and_full_contract": false,
+    "attempted_cases": 200,
+    "component_conformance": {
+      "rating_schema_valid": {
+        "assessed": 0,
+        "passed": 0,
+        "rate_among_assessed": null,
+        "unknown": 200
+      },
+      "wire_score_valid": {
+        "assessed": 200,
+        "passed": 200,
+        "rate_among_assessed": 1.0,
+        "unknown": 0
+      }
+    },
+    "planned_cases": 200,
+    "rejection_reasons": {
+      "invalid_rating: Rating evidence must contain at most 30 words": 12
+    },
+    "statuses": {
+      "invalid": 12,
+      "valid": 188
+    },
+    "strict_valid_observations": 188,
+    "strict_valid_rate_among_attempts": 0.94,
+    "strict_valid_rate_among_planned_cases": 0.94
+  },
+  "historical_comparison": "Different images and delivered views prevent a paired improvement or causal model comparison.",
+  "incomplete_family_ids": [
+    "megalith-223d30d5af19e359944bee4b1265407e",
+    "megalith-26ac6a09610ee3b9269f4421c90b329f",
+    "megalith-31be20fb5e2666a2c9ab15c4abad297d",
+    "megalith-7012de04177bdae5c522e24d31d7788c",
+    "megalith-7d8051a45a5f67cb9063c95ff53f78f0",
+    "megalith-867e226a4dd1dd11c3ee063f5fbf8bb5",
+    "megalith-995d52e12b5d0659e056b863f86d6a4d",
+    "megalith-f4a061cbb4f6812c0a3bae412895ef4f",
+    "vizwiz:VizWiz_train_00007469.jpg",
+    "vizwiz:VizWiz_train_00014391.jpg",
+    "vizwiz:VizWiz_train_00014634.jpg",
+    "vizwiz:VizWiz_train_00022436.jpg"
+  ],
+  "inference_limit": "Bootstrap intervals describe sample variability conditional on the frozen assistant judgments; they do not measure reference uncertainty or human accuracy.",
+  "invalid_case_ids": [
+    "T049",
+    "T058",
+    "T083",
+    "T117",
+    "T122",
+    "T128",
+    "T151",
+    "T161",
+    "T166",
+    "T178",
+    "T192",
+    "T199"
+  ],
+  "missing_case_ids": [],
+  "null_reference_case_ids": [],
+  "operational": {
+    "known_cost_usd": "0.03555504",
+    "status": "complete",
+    "total_known_cost_usd": "0.03571179",
+    "unpriced_attempts": 0
+  },
+  "reference_kind": "frozen_assistant_judgments_not_human_ground_truth",
+  "run_id": "84ab51fb2ae6bc507b1afe5eea412807144c0bb575cb1cfdb11185197de19648",
+  "schema_version": "runinfra-string-trial-report-v1",
+  "severity_ordering": {
+    "interpretation": "Diagnostic only: transform severity is not human ground truth and does not fix an expected score.",
+    "nonincreasing_pairs": 63,
+    "pairs": [
+      {
+        "family_id": "megalith-0fd7ec882f291e76406745efc30df20a",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T065",
+        "more_degraded_case_id": "T066",
+        "more_minus_less_score": -0.20000000000000018,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-0fd7ec882f291e76406745efc30df20a",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T066",
+        "more_degraded_case_id": "T067",
+        "more_minus_less_score": 0.0,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-0fd7ec882f291e76406745efc30df20a",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T067",
+        "more_degraded_case_id": "T068",
+        "more_minus_less_score": -0.09999999999999964,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-1619651b514c2de06c00ec6cba33dab2",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T041",
+        "more_degraded_case_id": "T042",
+        "more_minus_less_score": 0.10000000000000009,
+        "operator": "gaussian_noise",
+        "reversal": true,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-1619651b514c2de06c00ec6cba33dab2",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T042",
+        "more_degraded_case_id": "T043",
+        "more_minus_less_score": -0.7000000000000002,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-1619651b514c2de06c00ec6cba33dab2",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T043",
+        "more_degraded_case_id": "T044",
+        "more_minus_less_score": -0.3999999999999999,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-223d30d5af19e359944bee4b1265407e",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T081",
+        "more_degraded_case_id": "T082",
+        "more_minus_less_score": 0.0,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-223d30d5af19e359944bee4b1265407e",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T082",
+        "more_degraded_case_id": "T083",
+        "more_minus_less_score": null,
+        "operator": "jpeg_compression",
+        "reversal": null,
+        "tie": null
+      },
+      {
+        "family_id": "megalith-223d30d5af19e359944bee4b1265407e",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T083",
+        "more_degraded_case_id": "T084",
+        "more_minus_less_score": null,
+        "operator": "jpeg_compression",
+        "reversal": null,
+        "tie": null
+      },
+      {
+        "family_id": "megalith-23740bd31926461b788f1fa3a6d8f4f7",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T077",
+        "more_degraded_case_id": "T078",
+        "more_minus_less_score": -0.20000000000000018,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-23740bd31926461b788f1fa3a6d8f4f7",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T078",
+        "more_degraded_case_id": "T079",
+        "more_minus_less_score": -0.7999999999999998,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-23740bd31926461b788f1fa3a6d8f4f7",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T079",
+        "more_degraded_case_id": "T080",
+        "more_minus_less_score": -1.5,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-2c561dfb69fd0afb0917187a2f094fa6",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T009",
+        "more_degraded_case_id": "T010",
+        "more_minus_less_score": -0.5,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-2c561dfb69fd0afb0917187a2f094fa6",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T010",
+        "more_degraded_case_id": "T011",
+        "more_minus_less_score": -2.3,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-2c561dfb69fd0afb0917187a2f094fa6",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T011",
+        "more_degraded_case_id": "T012",
+        "more_minus_less_score": -0.5,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-2ee8de9656fa882a4b271083bf495494",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T045",
+        "more_degraded_case_id": "T046",
+        "more_minus_less_score": -0.20000000000000018,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-2ee8de9656fa882a4b271083bf495494",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T046",
+        "more_degraded_case_id": "T047",
+        "more_minus_less_score": 0.0,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-2ee8de9656fa882a4b271083bf495494",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T047",
+        "more_degraded_case_id": "T048",
+        "more_minus_less_score": -0.7000000000000002,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-31be20fb5e2666a2c9ab15c4abad297d",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T049",
+        "more_degraded_case_id": "T050",
+        "more_minus_less_score": null,
+        "operator": "gaussian_noise",
+        "reversal": null,
+        "tie": null
+      },
+      {
+        "family_id": "megalith-31be20fb5e2666a2c9ab15c4abad297d",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T050",
+        "more_degraded_case_id": "T051",
+        "more_minus_less_score": -0.3999999999999999,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-31be20fb5e2666a2c9ab15c4abad297d",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T051",
+        "more_degraded_case_id": "T052",
+        "more_minus_less_score": -1.3000000000000003,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-4e2909ee95f69ab199ad2f111db3047b",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T053",
+        "more_degraded_case_id": "T054",
+        "more_minus_less_score": -0.2999999999999998,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-4e2909ee95f69ab199ad2f111db3047b",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T054",
+        "more_degraded_case_id": "T055",
+        "more_minus_less_score": -0.2999999999999998,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-4e2909ee95f69ab199ad2f111db3047b",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T055",
+        "more_degraded_case_id": "T056",
+        "more_minus_less_score": -0.7000000000000002,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-5231a02a9da42184883eed2087cc56b2",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T089",
+        "more_degraded_case_id": "T090",
+        "more_minus_less_score": 0.0,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-5231a02a9da42184883eed2087cc56b2",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T090",
+        "more_degraded_case_id": "T091",
+        "more_minus_less_score": 0.20000000000000018,
+        "operator": "jpeg_compression",
+        "reversal": true,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-5231a02a9da42184883eed2087cc56b2",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T091",
+        "more_degraded_case_id": "T092",
+        "more_minus_less_score": -1.5,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-52521433dfd984d4a64397ccb46254da",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T061",
+        "more_degraded_case_id": "T062",
+        "more_minus_less_score": 0.0,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-52521433dfd984d4a64397ccb46254da",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T062",
+        "more_degraded_case_id": "T063",
+        "more_minus_less_score": 0.0,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-52521433dfd984d4a64397ccb46254da",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T063",
+        "more_degraded_case_id": "T064",
+        "more_minus_less_score": -0.5,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-64feec232606500b0ba563640f4ab8a6",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T005",
+        "more_degraded_case_id": "T006",
+        "more_minus_less_score": -1.2999999999999998,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-64feec232606500b0ba563640f4ab8a6",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T006",
+        "more_degraded_case_id": "T007",
+        "more_minus_less_score": -1.0,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-64feec232606500b0ba563640f4ab8a6",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T007",
+        "more_degraded_case_id": "T008",
+        "more_minus_less_score": -1.0,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-6ba81d47b2ead7d0b30e6f5feea705d7",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T085",
+        "more_degraded_case_id": "T086",
+        "more_minus_less_score": 0.0,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-6ba81d47b2ead7d0b30e6f5feea705d7",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T086",
+        "more_degraded_case_id": "T087",
+        "more_minus_less_score": -0.20000000000000018,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-6ba81d47b2ead7d0b30e6f5feea705d7",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T087",
+        "more_degraded_case_id": "T088",
+        "more_minus_less_score": -0.6999999999999997,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-77d66591ad8a0cd92c608105a036bd55",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T021",
+        "more_degraded_case_id": "T022",
+        "more_minus_less_score": -0.8999999999999999,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-77d66591ad8a0cd92c608105a036bd55",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T022",
+        "more_degraded_case_id": "T023",
+        "more_minus_less_score": -1.6,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-77d66591ad8a0cd92c608105a036bd55",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T023",
+        "more_degraded_case_id": "T024",
+        "more_minus_less_score": -1.0,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-826f66a1945d399541b4f8eae0c2d2df",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T073",
+        "more_degraded_case_id": "T074",
+        "more_minus_less_score": 0.0,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-826f66a1945d399541b4f8eae0c2d2df",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T074",
+        "more_degraded_case_id": "T075",
+        "more_minus_less_score": 0.0,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-826f66a1945d399541b4f8eae0c2d2df",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T075",
+        "more_degraded_case_id": "T076",
+        "more_minus_less_score": -0.7000000000000002,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-867e226a4dd1dd11c3ee063f5fbf8bb5",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T057",
+        "more_degraded_case_id": "T058",
+        "more_minus_less_score": null,
+        "operator": "gaussian_noise",
+        "reversal": null,
+        "tie": null
+      },
+      {
+        "family_id": "megalith-867e226a4dd1dd11c3ee063f5fbf8bb5",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T058",
+        "more_degraded_case_id": "T059",
+        "more_minus_less_score": null,
+        "operator": "gaussian_noise",
+        "reversal": null,
+        "tie": null
+      },
+      {
+        "family_id": "megalith-867e226a4dd1dd11c3ee063f5fbf8bb5",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T059",
+        "more_degraded_case_id": "T060",
+        "more_minus_less_score": -0.7999999999999998,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-95cc53f048b8f2b39c194cba90826fac",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T029",
+        "more_degraded_case_id": "T030",
+        "more_minus_less_score": 0.0,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-95cc53f048b8f2b39c194cba90826fac",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T030",
+        "more_degraded_case_id": "T031",
+        "more_minus_less_score": -1.2999999999999998,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-95cc53f048b8f2b39c194cba90826fac",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T031",
+        "more_degraded_case_id": "T032",
+        "more_minus_less_score": -0.5,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-9db74d7b00c6ae409deccf67ff97c0c4",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T001",
+        "more_degraded_case_id": "T002",
+        "more_minus_less_score": 0.0,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-9db74d7b00c6ae409deccf67ff97c0c4",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T002",
+        "more_degraded_case_id": "T003",
+        "more_minus_less_score": -2.3,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-9db74d7b00c6ae409deccf67ff97c0c4",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T003",
+        "more_degraded_case_id": "T004",
+        "more_minus_less_score": 0.0,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-ba6fa8c1d68789d2c038c5da62d3efad",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T037",
+        "more_degraded_case_id": "T038",
+        "more_minus_less_score": 0.09999999999999964,
+        "operator": "gaussian_noise",
+        "reversal": true,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-ba6fa8c1d68789d2c038c5da62d3efad",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T038",
+        "more_degraded_case_id": "T039",
+        "more_minus_less_score": -0.09999999999999964,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-ba6fa8c1d68789d2c038c5da62d3efad",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T039",
+        "more_degraded_case_id": "T040",
+        "more_minus_less_score": -1.4000000000000004,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-cb2a39a6b4f6d0108f6f78d38d6d86fd",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T033",
+        "more_degraded_case_id": "T034",
+        "more_minus_less_score": 0.0,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-cb2a39a6b4f6d0108f6f78d38d6d86fd",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T034",
+        "more_degraded_case_id": "T035",
+        "more_minus_less_score": -0.20000000000000018,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-cb2a39a6b4f6d0108f6f78d38d6d86fd",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T035",
+        "more_degraded_case_id": "T036",
+        "more_minus_less_score": -0.20000000000000018,
+        "operator": "gaussian_noise",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-cb85fe790a46541d49dbc78aa61ddf9f",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T069",
+        "more_degraded_case_id": "T070",
+        "more_minus_less_score": 0.0,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-cb85fe790a46541d49dbc78aa61ddf9f",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T070",
+        "more_degraded_case_id": "T071",
+        "more_minus_less_score": 0.0,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": true
+      },
+      {
+        "family_id": "megalith-cb85fe790a46541d49dbc78aa61ddf9f",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T071",
+        "more_degraded_case_id": "T072",
+        "more_minus_less_score": -0.8999999999999999,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-d069fca0bf59ca9c6300eb91ff9b40cb",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T017",
+        "more_degraded_case_id": "T018",
+        "more_minus_less_score": -0.6000000000000001,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-d069fca0bf59ca9c6300eb91ff9b40cb",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T018",
+        "more_degraded_case_id": "T019",
+        "more_minus_less_score": -1.5,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-d069fca0bf59ca9c6300eb91ff9b40cb",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T019",
+        "more_degraded_case_id": "T020",
+        "more_minus_less_score": -0.5,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-e48a770129af8861392e59380bbfa3be",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T025",
+        "more_degraded_case_id": "T026",
+        "more_minus_less_score": -0.20000000000000018,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-e48a770129af8861392e59380bbfa3be",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T026",
+        "more_degraded_case_id": "T027",
+        "more_minus_less_score": -2.8,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-e48a770129af8861392e59380bbfa3be",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T027",
+        "more_degraded_case_id": "T028",
+        "more_minus_less_score": -0.5,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-ea151d821c7425676c574928dda825b2",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T013",
+        "more_degraded_case_id": "T014",
+        "more_minus_less_score": -1.2000000000000002,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-ea151d821c7425676c574928dda825b2",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T014",
+        "more_degraded_case_id": "T015",
+        "more_minus_less_score": -1.0,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-ea151d821c7425676c574928dda825b2",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T015",
+        "more_degraded_case_id": "T016",
+        "more_minus_less_score": -0.5,
+        "operator": "gaussian_blur",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-f8d4801c2bc44a457143c741d85562b9",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T093",
+        "more_degraded_case_id": "T094",
+        "more_minus_less_score": 0.6000000000000001,
+        "operator": "jpeg_compression",
+        "reversal": true,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-f8d4801c2bc44a457143c741d85562b9",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T094",
+        "more_degraded_case_id": "T095",
+        "more_minus_less_score": -0.20000000000000018,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-f8d4801c2bc44a457143c741d85562b9",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T095",
+        "more_degraded_case_id": "T096",
+        "more_minus_less_score": -0.7999999999999998,
+        "operator": "jpeg_compression",
+        "reversal": false,
+        "tie": false
+      }
+    ],
+    "planned_adjacent_pairs": 72,
+    "reversals": [
+      {
+        "family_id": "megalith-1619651b514c2de06c00ec6cba33dab2",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T041",
+        "more_degraded_case_id": "T042",
+        "more_minus_less_score": 0.10000000000000009,
+        "operator": "gaussian_noise",
+        "reversal": true,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-5231a02a9da42184883eed2087cc56b2",
+        "includes_source_parent": false,
+        "less_degraded_case_id": "T090",
+        "more_degraded_case_id": "T091",
+        "more_minus_less_score": 0.20000000000000018,
+        "operator": "jpeg_compression",
+        "reversal": true,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-ba6fa8c1d68789d2c038c5da62d3efad",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T037",
+        "more_degraded_case_id": "T038",
+        "more_minus_less_score": 0.09999999999999964,
+        "operator": "gaussian_noise",
+        "reversal": true,
+        "tie": false
+      },
+      {
+        "family_id": "megalith-f8d4801c2bc44a457143c741d85562b9",
+        "includes_source_parent": true,
+        "less_degraded_case_id": "T093",
+        "more_degraded_case_id": "T094",
+        "more_minus_less_score": 0.6000000000000001,
+        "operator": "jpeg_compression",
+        "reversal": true,
+        "tie": false
+      }
+    ],
+    "scored_adjacent_pairs": 67,
+    "ties": 15
+  },
+  "study_design": "Fresh descriptive 200-image sample; no paired historical baseline.",
+  "training_ready": false,
+  "unscorable_case_ids": []
+}

@@ -1,0 +1,6082 @@
+{
+  "arm_id": "photo_scope",
+  "cases": [
+    {
+      "case_id": "P048",
+      "display_position": 1,
+      "eligibility": "excluded",
+      "family_id": "megalith-322704c6a821a7d9b5b5c3d9336afc2f",
+      "height": 800,
+      "image_path": "../images/5d71b8aa4fc41b722c6be384908c61eb6c49bdcdf3b8b6537634f88b74f55048.png",
+      "new_image": false,
+      "photo_domain_eligible": false,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "reference",
+          "score": "1.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.0"
+        },
+        {
+          "model": "luna",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "luna",
+          "score": "1.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.0"
+        },
+        {
+          "model": "gemini",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "gemini",
+          "score": "1.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.0"
+        },
+        {
+          "model": "haiku",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "haiku",
+          "score": "1.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.0"
+        }
+      ],
+      "view_sha256": "5d71b8aa4fc41b722c6be384908c61eb6c49bdcdf3b8b6537634f88b74f55048",
+      "width": 568
+    },
+    {
+      "case_id": "P054",
+      "display_position": 2,
+      "eligibility": "uncertain",
+      "family_id": "vizwiz:VizWiz_train_00022894.jpg",
+      "height": 480,
+      "image_path": "../images/4544da548dcafd6e12181fd7d3f2f6d153cf633814617a28ddc9bc530e77c3bc.png",
+      "new_image": true,
+      "photo_domain_eligible": null,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "reference",
+          "score": "1.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.0"
+        },
+        {
+          "model": "luna",
+          "score": "1.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.5"
+        },
+        {
+          "model": "luna",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "gemini",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "gemini",
+          "score": "1.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.0"
+        },
+        {
+          "model": "haiku",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "haiku",
+          "score": "1.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.0"
+        }
+      ],
+      "view_sha256": "4544da548dcafd6e12181fd7d3f2f6d153cf633814617a28ddc9bc530e77c3bc",
+      "width": 360
+    },
+    {
+      "case_id": "P008",
+      "display_position": 3,
+      "eligibility": "eligible",
+      "family_id": "megalith-42bea2b675e7927bfc3b6fe6b408b002",
+      "height": 1536,
+      "image_path": "../images/75bb44639498753d455d0d63b231f201193af6b4f5ce5815db1c626d207d98b7.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.1"
+        },
+        {
+          "model": "reference",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.0"
+        },
+        {
+          "model": "luna",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "haiku",
+          "score": "1.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.3"
+        },
+        {
+          "model": "haiku",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        }
+      ],
+      "view_sha256": "75bb44639498753d455d0d63b231f201193af6b4f5ce5815db1c626d207d98b7",
+      "width": 1024
+    },
+    {
+      "case_id": "P004",
+      "display_position": 4,
+      "eligibility": "eligible",
+      "family_id": "megalith-a2375723225b1b4a8caf99869cfff0c0",
+      "height": 1536,
+      "image_path": "../images/10be9dc03cb5ca60bb9bf183c31c2d2329d46d09ece6ffb6f109a26f4c11f618.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.3"
+        },
+        {
+          "model": "reference",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.9"
+        },
+        {
+          "model": "gemini",
+          "score": "1.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.1"
+        },
+        {
+          "model": "gemini",
+          "score": "1.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.3"
+        },
+        {
+          "model": "haiku",
+          "score": "1.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.6"
+        },
+        {
+          "model": "haiku",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        }
+      ],
+      "view_sha256": "10be9dc03cb5ca60bb9bf183c31c2d2329d46d09ece6ffb6f109a26f4c11f618",
+      "width": 1024
+    },
+    {
+      "case_id": "P026",
+      "display_position": 5,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00016382.jpg",
+      "height": 1024,
+      "image_path": "../images/f5508aa67c34c9e50f5ea0c08ca70f1841cd1ad1d3e68612f594aa9956ecea38.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.4"
+        },
+        {
+          "model": "reference",
+          "score": "1.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.7"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.5"
+        },
+        {
+          "model": "luna",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "gemini",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        },
+        {
+          "model": "haiku",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "haiku",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        }
+      ],
+      "view_sha256": "f5508aa67c34c9e50f5ea0c08ca70f1841cd1ad1d3e68612f594aa9956ecea38",
+      "width": 768
+    },
+    {
+      "case_id": "P053",
+      "display_position": 6,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00020783.jpg",
+      "height": 1536,
+      "image_path": "../images/b78c746ffc33bc25fd46251569937fb881e24132f01f6e557ff570dd9aff04c0.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.5"
+        },
+        {
+          "model": "reference",
+          "score": "1.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.7"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.3"
+        },
+        {
+          "model": "luna",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        },
+        {
+          "model": "gemini",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        },
+        {
+          "model": "haiku",
+          "score": "1.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.9"
+        },
+        {
+          "model": "haiku",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        }
+      ],
+      "view_sha256": "b78c746ffc33bc25fd46251569937fb881e24132f01f6e557ff570dd9aff04c0",
+      "width": 1152
+    },
+    {
+      "case_id": "P025",
+      "display_position": 7,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00001657.jpg",
+      "height": 1536,
+      "image_path": "../images/db9d22604812b0b63020cfe5bea52d1f3d67b8dca7552fd0d43ed819f76a028e.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.6"
+        },
+        {
+          "model": "reference",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "luna",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "gemini",
+          "score": "1.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.1"
+        },
+        {
+          "model": "gemini",
+          "score": "1.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.1"
+        },
+        {
+          "model": "haiku",
+          "score": "1.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.6"
+        },
+        {
+          "model": "haiku",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        }
+      ],
+      "view_sha256": "db9d22604812b0b63020cfe5bea52d1f3d67b8dca7552fd0d43ed819f76a028e",
+      "width": 1152
+    },
+    {
+      "case_id": "P051",
+      "display_position": 8,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00004636.jpg",
+      "height": 1536,
+      "image_path": "../images/4a132557d233ba582d8e74fb19d55474fec578f27fa2844dcb9ea36f0f5cbcf9.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.6"
+        },
+        {
+          "model": "reference",
+          "score": "1.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.7"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "luna",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "gemini",
+          "score": "1.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.2"
+        },
+        {
+          "model": "gemini",
+          "score": "1.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.2"
+        },
+        {
+          "model": "haiku",
+          "score": "1.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.6"
+        },
+        {
+          "model": "haiku",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        }
+      ],
+      "view_sha256": "4a132557d233ba582d8e74fb19d55474fec578f27fa2844dcb9ea36f0f5cbcf9",
+      "width": 1152
+    },
+    {
+      "case_id": "P052",
+      "display_position": 9,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00014846.jpg",
+      "height": 1382,
+      "image_path": "../images/2c12a82d753bdbd8bc6365a3b3a97012015f238f95df323c9d4c45d1441eed44.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.6"
+        },
+        {
+          "model": "reference",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "luna",
+          "score": "2.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.1"
+        },
+        {
+          "model": "luna",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "gemini",
+          "score": "1.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.1"
+        },
+        {
+          "model": "gemini",
+          "score": "1.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.1"
+        },
+        {
+          "model": "haiku",
+          "score": "1.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.3"
+        },
+        {
+          "model": "haiku",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        }
+      ],
+      "view_sha256": "2c12a82d753bdbd8bc6365a3b3a97012015f238f95df323c9d4c45d1441eed44",
+      "width": 1036
+    },
+    {
+      "case_id": "P007",
+      "display_position": 10,
+      "eligibility": "eligible",
+      "family_id": "megalith-42bea2b675e7927bfc3b6fe6b408b002",
+      "height": 1536,
+      "image_path": "../images/fa0e99d19d25ddb58e02f07a6e1b293285a14a9916aefceb3232d15313838e00.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "reference",
+          "score": "2.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.3"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.3"
+        },
+        {
+          "model": "luna",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "gemini",
+          "score": "1.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.3"
+        },
+        {
+          "model": "gemini",
+          "score": "1.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.5"
+        },
+        {
+          "model": "haiku",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "haiku",
+          "score": "",
+          "status": "invalid",
+          "task": "aesthetics",
+          "text": "invalid"
+        }
+      ],
+      "view_sha256": "fa0e99d19d25ddb58e02f07a6e1b293285a14a9916aefceb3232d15313838e00",
+      "width": 1024
+    },
+    {
+      "case_id": "P027",
+      "display_position": 11,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00012431.jpg",
+      "height": 1536,
+      "image_path": "../images/a4f77ff7d2f1b4ddde9bff8559f2400831381ea97ba1a6d2e4ed2477e4526abc.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "reference",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.3"
+        },
+        {
+          "model": "luna",
+          "score": "2.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.7"
+        },
+        {
+          "model": "gemini",
+          "score": "1.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.3"
+        },
+        {
+          "model": "gemini",
+          "score": "1.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.3"
+        },
+        {
+          "model": "haiku",
+          "score": "2.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.3"
+        },
+        {
+          "model": "haiku",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        }
+      ],
+      "view_sha256": "a4f77ff7d2f1b4ddde9bff8559f2400831381ea97ba1a6d2e4ed2477e4526abc",
+      "width": 1152
+    },
+    {
+      "case_id": "P032",
+      "display_position": 12,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00008801.jpg",
+      "height": 1296,
+      "image_path": "../images/88340b9b7c28cb190b8a6f98204c0bcbd9a6bcdc0082005d07f484dc7ce339fb.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "reference",
+          "score": "1.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.4"
+        },
+        {
+          "model": "luna",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "gemini",
+          "score": "1.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.5"
+        },
+        {
+          "model": "gemini",
+          "score": "1.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.3"
+        },
+        {
+          "model": "haiku",
+          "score": "2.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.2"
+        },
+        {
+          "model": "haiku",
+          "score": "2.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.3"
+        }
+      ],
+      "view_sha256": "88340b9b7c28cb190b8a6f98204c0bcbd9a6bcdc0082005d07f484dc7ce339fb",
+      "width": 968
+    },
+    {
+      "case_id": "P057",
+      "display_position": 13,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00009351.jpg",
+      "height": 1536,
+      "image_path": "../images/adf281157f0a7c8102f60b77428df969340d82b9d6a2b24ca2892aaa3655dc74.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "reference",
+          "score": "1.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.7"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.9"
+        },
+        {
+          "model": "luna",
+          "score": "2.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.7"
+        },
+        {
+          "model": "gemini",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        },
+        {
+          "model": "haiku",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "haiku",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        }
+      ],
+      "view_sha256": "adf281157f0a7c8102f60b77428df969340d82b9d6a2b24ca2892aaa3655dc74",
+      "width": 1152
+    },
+    {
+      "case_id": "P003",
+      "display_position": 14,
+      "eligibility": "eligible",
+      "family_id": "megalith-a2375723225b1b4a8caf99869cfff0c0",
+      "height": 1536,
+      "image_path": "../images/6d0c71c767f96d703f6f86cb7243cf3d6fca74a59eb6f99b12434d6c55001f9d.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.9"
+        },
+        {
+          "model": "reference",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "luna",
+          "score": "2.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.4"
+        },
+        {
+          "model": "luna",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "gemini",
+          "score": "2.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.2"
+        },
+        {
+          "model": "gemini",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "haiku",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "haiku",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        }
+      ],
+      "view_sha256": "6d0c71c767f96d703f6f86cb7243cf3d6fca74a59eb6f99b12434d6c55001f9d",
+      "width": 1024
+    },
+    {
+      "case_id": "P029",
+      "display_position": 15,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00005273.jpg",
+      "height": 1536,
+      "image_path": "../images/ed8703567b28b313de77f61352e138144fa00922924313781686f3b83b5fb1de.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.9"
+        },
+        {
+          "model": "reference",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.4"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.1"
+        },
+        {
+          "model": "gemini",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "haiku",
+          "score": "2.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.4"
+        },
+        {
+          "model": "haiku",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        }
+      ],
+      "view_sha256": "ed8703567b28b313de77f61352e138144fa00922924313781686f3b83b5fb1de",
+      "width": 1152
+    },
+    {
+      "case_id": "P030",
+      "display_position": 16,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00018948.jpg",
+      "height": 1296,
+      "image_path": "../images/d036477e3e13d50a476359830ebdaa2eecb3a5913fb9cde1014454d0118453b8.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.9"
+        },
+        {
+          "model": "reference",
+          "score": "1.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.9"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.7"
+        },
+        {
+          "model": "luna",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.1"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        },
+        {
+          "model": "haiku",
+          "score": "2.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.3"
+        },
+        {
+          "model": "haiku",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        }
+      ],
+      "view_sha256": "d036477e3e13d50a476359830ebdaa2eecb3a5913fb9cde1014454d0118453b8",
+      "width": 968
+    },
+    {
+      "case_id": "P035",
+      "display_position": 17,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00002260.jpg",
+      "height": 1536,
+      "image_path": "../images/8df445b8531ed6ffa11f5d65a377f60a34a15a67635b20bfa7d19b27529371fc.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "1.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.9"
+        },
+        {
+          "model": "reference",
+          "score": "1.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.7"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "luna",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.2"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        },
+        {
+          "model": "haiku",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "haiku",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        }
+      ],
+      "view_sha256": "8df445b8531ed6ffa11f5d65a377f60a34a15a67635b20bfa7d19b27529371fc",
+      "width": 1152
+    },
+    {
+      "case_id": "P031",
+      "display_position": 18,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00008092.jpg",
+      "height": 1536,
+      "image_path": "../images/6d2b5516edb1d40b0701b6d13c560c4a3f6256b98b2f99ea443ff8c258d5fb34.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "reference",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "luna",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "luna",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "gemini",
+          "score": "1.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.4"
+        },
+        {
+          "model": "gemini",
+          "score": "1.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.2"
+        },
+        {
+          "model": "haiku",
+          "score": "1.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.8"
+        },
+        {
+          "model": "haiku",
+          "score": "1.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.9"
+        }
+      ],
+      "view_sha256": "6d2b5516edb1d40b0701b6d13c560c4a3f6256b98b2f99ea443ff8c258d5fb34",
+      "width": 1152
+    },
+    {
+      "case_id": "P036",
+      "display_position": 19,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00009790.jpg",
+      "height": 1536,
+      "image_path": "../images/795a7aad3183d86eedc6e9f90100a5bd55fad016ece26a96c0eaccb9f1e5ac77.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "reference",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "luna",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "gemini",
+          "score": "1.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "1.3"
+        },
+        {
+          "model": "gemini",
+          "score": "1.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.1"
+        },
+        {
+          "model": "haiku",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "haiku",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        }
+      ],
+      "view_sha256": "795a7aad3183d86eedc6e9f90100a5bd55fad016ece26a96c0eaccb9f1e5ac77",
+      "width": 1152
+    },
+    {
+      "case_id": "P028",
+      "display_position": 20,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00008065.jpg",
+      "height": 1296,
+      "image_path": "../images/e11b62b1f2ad1e9d8f438a6ad60bb9192ab2eb830d996e841593f96226ed1731.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.1"
+        },
+        {
+          "model": "reference",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.1"
+        },
+        {
+          "model": "gemini",
+          "score": "1.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.5"
+        },
+        {
+          "model": "haiku",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "haiku",
+          "score": "",
+          "status": "invalid",
+          "task": "aesthetics",
+          "text": "invalid"
+        }
+      ],
+      "view_sha256": "e11b62b1f2ad1e9d8f438a6ad60bb9192ab2eb830d996e841593f96226ed1731",
+      "width": 968
+    },
+    {
+      "case_id": "P070",
+      "display_position": 21,
+      "eligibility": "eligible",
+      "family_id": "megalith-46077572349fc043604caec6351ac60a",
+      "height": 983,
+      "image_path": "../images/fceda563e535c8ea07815ceb2dfb6f17d02dd6160cc46cac8beef44e3f9ea053.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.1"
+        },
+        {
+          "model": "reference",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.4"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.1"
+        },
+        {
+          "model": "gemini",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "haiku",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "fceda563e535c8ea07815ceb2dfb6f17d02dd6160cc46cac8beef44e3f9ea053",
+      "width": 625
+    },
+    {
+      "case_id": "P012",
+      "display_position": 22,
+      "eligibility": "eligible",
+      "family_id": "megalith-8dc1b0f42f8191b48b403bd8fe2f2336",
+      "height": 711,
+      "image_path": "../images/54489cf3bd8fd24243ab6c30cdf7ca98f37ddc9b1998b1bfe0aff70799ff997a.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.2"
+        },
+        {
+          "model": "reference",
+          "score": "2.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.9"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "2.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.2"
+        },
+        {
+          "model": "luna",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "gemini",
+          "score": "2.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.4"
+        },
+        {
+          "model": "gemini",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "haiku",
+          "score": "2.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.3"
+        },
+        {
+          "model": "haiku",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        }
+      ],
+      "view_sha256": "54489cf3bd8fd24243ab6c30cdf7ca98f37ddc9b1998b1bfe0aff70799ff997a",
+      "width": 1024
+    },
+    {
+      "case_id": "P024",
+      "display_position": 23,
+      "eligibility": "eligible",
+      "family_id": "megalith-01677dc5a4182cb2b1232fa093623f40",
+      "height": 1037,
+      "image_path": "../images/e111186a7339bea537a3cf9814a7998e574a83d63f657dbd09f99f248a47ed7d.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.4"
+        },
+        {
+          "model": "reference",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "luna",
+          "score": "2.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.1"
+        },
+        {
+          "model": "gemini",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "haiku",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        }
+      ],
+      "view_sha256": "e111186a7339bea537a3cf9814a7998e574a83d63f657dbd09f99f248a47ed7d",
+      "width": 1382
+    },
+    {
+      "case_id": "P034",
+      "display_position": 24,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00007257.jpg",
+      "height": 1024,
+      "image_path": "../images/29428b54e6848f84d3183f8b2adb4c2431299fb70bb3e86e43ba79f7cebf5fed.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.5"
+        },
+        {
+          "model": "reference",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.3"
+        },
+        {
+          "model": "gemini",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "gemini",
+          "score": "1.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.4"
+        },
+        {
+          "model": "haiku",
+          "score": "2.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.9"
+        },
+        {
+          "model": "haiku",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        }
+      ],
+      "view_sha256": "29428b54e6848f84d3183f8b2adb4c2431299fb70bb3e86e43ba79f7cebf5fed",
+      "width": 768
+    },
+    {
+      "case_id": "P047",
+      "display_position": 25,
+      "eligibility": "eligible",
+      "family_id": "megalith-a39a2088846d3e81ac38545a9a2fec71",
+      "height": 1024,
+      "image_path": "../images/2afe0aa7e5ccbf179f26f0bcc4cda74e9abf920546d5aa706cb9f2dcbbb67a86.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.5"
+        },
+        {
+          "model": "reference",
+          "score": "2.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.7"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.3"
+        },
+        {
+          "model": "luna",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        },
+        {
+          "model": "gemini",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "gemini",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "haiku",
+          "score": "2.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.4"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        }
+      ],
+      "view_sha256": "2afe0aa7e5ccbf179f26f0bcc4cda74e9abf920546d5aa706cb9f2dcbbb67a86",
+      "width": 1536
+    },
+    {
+      "case_id": "P068",
+      "display_position": 26,
+      "eligibility": "eligible",
+      "family_id": "megalith-f223647e210a743ca4a5ea8ac47c267c",
+      "height": 1152,
+      "image_path": "../images/b1ef4edf3d46760841abf66f02815b784fe7ab4fd0c0748a73f21dc540d2c358.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.5"
+        },
+        {
+          "model": "reference",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.3"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "luna",
+          "score": "2.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.7"
+        },
+        {
+          "model": "luna",
+          "score": "3.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.7"
+        },
+        {
+          "model": "gemini",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        },
+        {
+          "model": "haiku",
+          "score": "3.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.4"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        }
+      ],
+      "view_sha256": "b1ef4edf3d46760841abf66f02815b784fe7ab4fd0c0748a73f21dc540d2c358",
+      "width": 1536
+    },
+    {
+      "case_id": "P033",
+      "display_position": 27,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00014375.jpg",
+      "height": 1296,
+      "image_path": "../images/b3b9220e77c88b4fafd409f7a67a632a3d7e961b0f34f9552607f5ac4574dd1b.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "reference",
+          "score": "2.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.4"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "luna",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "luna",
+          "score": "2.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.4"
+        },
+        {
+          "model": "gemini",
+          "score": "2.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.3"
+        },
+        {
+          "model": "gemini",
+          "score": "1.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.6"
+        },
+        {
+          "model": "haiku",
+          "score": "2.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.9"
+        },
+        {
+          "model": "haiku",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        }
+      ],
+      "view_sha256": "b3b9220e77c88b4fafd409f7a67a632a3d7e961b0f34f9552607f5ac4574dd1b",
+      "width": 968
+    },
+    {
+      "case_id": "P006",
+      "display_position": 28,
+      "eligibility": "eligible",
+      "family_id": "megalith-42bea2b675e7927bfc3b6fe6b408b002",
+      "height": 1536,
+      "image_path": "../images/0f317d7cd12648fbefcce784abf428d6f7ce825138f7320de90cad0e9b62448b.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.7"
+        },
+        {
+          "model": "reference",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.4"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "luna",
+          "score": "2.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        },
+        {
+          "model": "haiku",
+          "score": "2.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.2"
+        },
+        {
+          "model": "haiku",
+          "score": "2.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.7"
+        }
+      ],
+      "view_sha256": "0f317d7cd12648fbefcce784abf428d6f7ce825138f7320de90cad0e9b62448b",
+      "width": 1024
+    },
+    {
+      "case_id": "P016",
+      "display_position": 29,
+      "eligibility": "eligible",
+      "family_id": "megalith-96b98de283a70fef96f1910bd1917c5e",
+      "height": 1118,
+      "image_path": "../images/05d8b3907ce274f84c8b28397c680a0d0a0d60738d6408307e652fc6275683b3.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.7"
+        },
+        {
+          "model": "reference",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "2.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.3"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "gemini",
+          "score": "2.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.7"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "05d8b3907ce274f84c8b28397c680a0d0a0d60738d6408307e652fc6275683b3",
+      "width": 838
+    },
+    {
+      "case_id": "P056",
+      "display_position": 30,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00008640.jpg",
+      "height": 1536,
+      "image_path": "../images/59a03bf86843fb80f4684d6423ded4c0048c1c05afd5118eb2b87fa3ad172c87.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.7"
+        },
+        {
+          "model": "reference",
+          "score": "2.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "gemini",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "gemini",
+          "score": "2.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.3"
+        },
+        {
+          "model": "haiku",
+          "score": "2.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.8"
+        },
+        {
+          "model": "haiku",
+          "score": "2.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.4"
+        }
+      ],
+      "view_sha256": "59a03bf86843fb80f4684d6423ded4c0048c1c05afd5118eb2b87fa3ad172c87",
+      "width": 1152
+    },
+    {
+      "case_id": "P011",
+      "display_position": 31,
+      "eligibility": "eligible",
+      "family_id": "megalith-8dc1b0f42f8191b48b403bd8fe2f2336",
+      "height": 711,
+      "image_path": "../images/e79f22effd35b0276d6a39f9bbff9e034895f8fcefee60bfa9559cafa867acd1.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.8"
+        },
+        {
+          "model": "reference",
+          "score": "3.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.5"
+        },
+        {
+          "model": "luna",
+          "score": "2.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.8"
+        },
+        {
+          "model": "luna",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "gemini",
+          "score": "2.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.9"
+        },
+        {
+          "model": "gemini",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "haiku",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        }
+      ],
+      "view_sha256": "e79f22effd35b0276d6a39f9bbff9e034895f8fcefee60bfa9559cafa867acd1",
+      "width": 1024
+    },
+    {
+      "case_id": "P002",
+      "display_position": 32,
+      "eligibility": "eligible",
+      "family_id": "megalith-a2375723225b1b4a8caf99869cfff0c0",
+      "height": 1536,
+      "image_path": "../images/163f5e013758eb40b0e1ab13f23ce2fea9c9a92f7e29dc74d8436b1ca6532b0c.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.9"
+        },
+        {
+          "model": "reference",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "luna",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "luna",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "gemini",
+          "score": "2.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.1"
+        },
+        {
+          "model": "gemini",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "haiku",
+          "score": "2.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.5"
+        },
+        {
+          "model": "haiku",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        }
+      ],
+      "view_sha256": "163f5e013758eb40b0e1ab13f23ce2fea9c9a92f7e29dc74d8436b1ca6532b0c",
+      "width": 1024
+    },
+    {
+      "case_id": "P015",
+      "display_position": 33,
+      "eligibility": "eligible",
+      "family_id": "megalith-96b98de283a70fef96f1910bd1917c5e",
+      "height": 1118,
+      "image_path": "../images/c955c617bb9f56d33592e74b544a66bfa9e64efbc48eb969456d9a04b6bc5239.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "2.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.9"
+        },
+        {
+          "model": "reference",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "luna",
+          "score": "3.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.3"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "gemini",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        }
+      ],
+      "view_sha256": "c955c617bb9f56d33592e74b544a66bfa9e64efbc48eb969456d9a04b6bc5239",
+      "width": 838
+    },
+    {
+      "case_id": "P005",
+      "display_position": 34,
+      "eligibility": "eligible",
+      "family_id": "megalith-42bea2b675e7927bfc3b6fe6b408b002",
+      "height": 1536,
+      "image_path": "../images/ed0e50afd94089117cb70a7b3b57314fc6c80144984946a23fac68ce6dd88a92.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "reference",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.1"
+        },
+        {
+          "model": "luna",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "gemini",
+          "score": "2.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.5"
+        },
+        {
+          "model": "gemini",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "haiku",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "ed0e50afd94089117cb70a7b3b57314fc6c80144984946a23fac68ce6dd88a92",
+      "width": 1024
+    },
+    {
+      "case_id": "P055",
+      "display_position": 35,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00017955.jpg",
+      "height": 1382,
+      "image_path": "../images/52b570fbf228a41f59c33f21e1cb6d0bf64dfa4b82fe2675adf551fb59bdd9ec.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "reference",
+          "score": "2.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.1"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "luna",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "luna",
+          "score": "2.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.4"
+        },
+        {
+          "model": "gemini",
+          "score": "2.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.4"
+        },
+        {
+          "model": "gemini",
+          "score": "1.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.3"
+        },
+        {
+          "model": "haiku",
+          "score": "2.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.9"
+        },
+        {
+          "model": "haiku",
+          "score": "2.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.3"
+        }
+      ],
+      "view_sha256": "52b570fbf228a41f59c33f21e1cb6d0bf64dfa4b82fe2675adf551fb59bdd9ec",
+      "width": 1036
+    },
+    {
+      "case_id": "P020",
+      "display_position": 36,
+      "eligibility": "eligible",
+      "family_id": "megalith-aecd87ce45f429b6b4d360ed7b7eb33d",
+      "height": 921,
+      "image_path": "../images/4a7f6908bb26304a4f29dcd7f8a5b1d3981c07feb3c88471e06366f5842748b2.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.1"
+        },
+        {
+          "model": "reference",
+          "score": "3.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        },
+        {
+          "model": "luna",
+          "score": "3.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.7"
+        },
+        {
+          "model": "luna",
+          "score": "3.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.7"
+        },
+        {
+          "model": "gemini",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "gemini",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "haiku",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "haiku",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        }
+      ],
+      "view_sha256": "4a7f6908bb26304a4f29dcd7f8a5b1d3981c07feb3c88471e06366f5842748b2",
+      "width": 1382
+    },
+    {
+      "case_id": "P001",
+      "display_position": 37,
+      "eligibility": "eligible",
+      "family_id": "megalith-a2375723225b1b4a8caf99869cfff0c0",
+      "height": 1536,
+      "image_path": "../images/b02533e8053854eb5ac48a0503d9066b1430a88a101d7ecb564a012afc881f75.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "reference",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "gemini",
+          "score": "2.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.6"
+        },
+        {
+          "model": "gemini",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "haiku",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "haiku",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        }
+      ],
+      "view_sha256": "b02533e8053854eb5ac48a0503d9066b1430a88a101d7ecb564a012afc881f75",
+      "width": 1024
+    },
+    {
+      "case_id": "P037",
+      "display_position": 38,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00002004.jpg",
+      "height": 1536,
+      "image_path": "../images/df77ac6a8bffe5671018c0a68eef035896a4c45e9ca6269e56f25c07ff747649.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.3"
+        },
+        {
+          "model": "reference",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.2"
+        },
+        {
+          "model": "luna",
+          "score": "3.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.4"
+        },
+        {
+          "model": "luna",
+          "score": "2.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.5"
+        },
+        {
+          "model": "gemini",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "gemini",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "haiku",
+          "score": "2.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.3"
+        }
+      ],
+      "view_sha256": "df77ac6a8bffe5671018c0a68eef035896a4c45e9ca6269e56f25c07ff747649",
+      "width": 1152
+    },
+    {
+      "case_id": "P066",
+      "display_position": 39,
+      "eligibility": "eligible",
+      "family_id": "megalith-9eb6efaac8e59b71ee41916e17452f23",
+      "height": 1152,
+      "image_path": "../images/620416fd107bfbab147c3f3fdec117a03de2bf3e80ee6a4281620ec8cbcee5cf.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.3"
+        },
+        {
+          "model": "reference",
+          "score": "2.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.9"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "3.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.3"
+        },
+        {
+          "model": "luna",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "gemini",
+          "score": "2.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.9"
+        },
+        {
+          "model": "gemini",
+          "score": "2.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.7"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        }
+      ],
+      "view_sha256": "620416fd107bfbab147c3f3fdec117a03de2bf3e80ee6a4281620ec8cbcee5cf",
+      "width": 1536
+    },
+    {
+      "case_id": "P058",
+      "display_position": 40,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00001211.jpg",
+      "height": 1536,
+      "image_path": "../images/acda6dd7a15cfc39f6cd48188713f61287137bbb602af274945a432a639d0cba.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.4"
+        },
+        {
+          "model": "reference",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.4"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.3"
+        },
+        {
+          "model": "luna",
+          "score": "3.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.7"
+        },
+        {
+          "model": "luna",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "gemini",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "gemini",
+          "score": "1.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "haiku",
+          "score": "2.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.3"
+        }
+      ],
+      "view_sha256": "acda6dd7a15cfc39f6cd48188713f61287137bbb602af274945a432a639d0cba",
+      "width": 1152
+    },
+    {
+      "case_id": "P040",
+      "display_position": 41,
+      "eligibility": "eligible",
+      "family_id": "megalith-562f9ad3e0a4de70af066bd08a2a92e2",
+      "height": 932,
+      "image_path": "../images/119c967e588be66accc5c50e1f6c775491b8eadbc9fdb3f3e4308b0cc765a65a.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "reference",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "gemini",
+          "score": "2.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "2.8"
+        },
+        {
+          "model": "gemini",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "haiku",
+          "score": "2.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.9"
+        }
+      ],
+      "view_sha256": "119c967e588be66accc5c50e1f6c775491b8eadbc9fdb3f3e4308b0cc765a65a",
+      "width": 1243
+    },
+    {
+      "case_id": "P019",
+      "display_position": 42,
+      "eligibility": "eligible",
+      "family_id": "megalith-aecd87ce45f429b6b4d360ed7b7eb33d",
+      "height": 921,
+      "image_path": "../images/24a841140e9b78ebed62ec662be525a009eeaa1dceb185e0741a7552cfc75735.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.7"
+        },
+        {
+          "model": "reference",
+          "score": "3.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.7"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.9"
+        },
+        {
+          "model": "gemini",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "gemini",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "24a841140e9b78ebed62ec662be525a009eeaa1dceb185e0741a7552cfc75735",
+      "width": 1382
+    },
+    {
+      "case_id": "P049",
+      "display_position": 43,
+      "eligibility": "eligible",
+      "family_id": "megalith-aebac4b1535aeab7450b7998a2420584",
+      "height": 1152,
+      "image_path": "../images/41b484fcd9be0b33e9ae9561a8aff71b812d757d775a5a5b334b7544762b42c0.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.7"
+        },
+        {
+          "model": "reference",
+          "score": "3.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.7"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "luna",
+          "score": "4.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.2"
+        },
+        {
+          "model": "gemini",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "gemini",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "haiku",
+          "score": "3.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.7"
+        },
+        {
+          "model": "haiku",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        }
+      ],
+      "view_sha256": "41b484fcd9be0b33e9ae9561a8aff71b812d757d775a5a5b334b7544762b42c0",
+      "width": 1536
+    },
+    {
+      "case_id": "P038",
+      "display_position": 44,
+      "eligibility": "eligible",
+      "family_id": "vizwiz:VizWiz_train_00003355.jpg",
+      "height": 1382,
+      "image_path": "../images/30ae8a5fce72ae7ac4be53db61d07fe5f403e5c2409ea12de5dcde2db742fd82.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "reference",
+          "score": "2.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.9"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "luna",
+          "score": "2.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.9"
+        },
+        {
+          "model": "gemini",
+          "score": "3.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.1"
+        },
+        {
+          "model": "gemini",
+          "score": "1.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "1.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "haiku",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        }
+      ],
+      "view_sha256": "30ae8a5fce72ae7ac4be53db61d07fe5f403e5c2409ea12de5dcde2db742fd82",
+      "width": 1032
+    },
+    {
+      "case_id": "P067",
+      "display_position": 45,
+      "eligibility": "eligible",
+      "family_id": "megalith-9fff41f042844fb5db518ff2400871b3",
+      "height": 1037,
+      "image_path": "../images/c1297c6127fca6ffd64bc6e90dc7bc9c1a72d25ce20b867298416b295bc4ae9f.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "reference",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "luna",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "gemini",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "gemini",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "c1297c6127fca6ffd64bc6e90dc7bc9c1a72d25ce20b867298416b295bc4ae9f",
+      "width": 1382
+    },
+    {
+      "case_id": "P071",
+      "display_position": 46,
+      "eligibility": "eligible",
+      "family_id": "megalith-6d63181c753beb3c23f3f49b262bd608",
+      "height": 863,
+      "image_path": "../images/bc8c70308ea9e5205f017b7d7ca3f27b1fde0aaf178c89866252ab2a08e045fb.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "reference",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        },
+        {
+          "model": "luna",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "luna",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "gemini",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "gemini",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "haiku",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "bc8c70308ea9e5205f017b7d7ca3f27b1fde0aaf178c89866252ab2a08e045fb",
+      "width": 1536
+    },
+    {
+      "case_id": "P013",
+      "display_position": 47,
+      "eligibility": "eligible",
+      "family_id": "megalith-96b98de283a70fef96f1910bd1917c5e",
+      "height": 1118,
+      "image_path": "../images/b564c4caa297421ac4fdb29eb422fc5a95a6d28aed719bf2d0b0ab4d81c32a9a.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "reference",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "luna",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "gemini",
+          "score": "4.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.3"
+        },
+        {
+          "model": "gemini",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "haiku",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "b564c4caa297421ac4fdb29eb422fc5a95a6d28aed719bf2d0b0ab4d81c32a9a",
+      "width": 838
+    },
+    {
+      "case_id": "P023",
+      "display_position": 48,
+      "eligibility": "eligible",
+      "family_id": "megalith-01677dc5a4182cb2b1232fa093623f40",
+      "height": 1037,
+      "image_path": "../images/3fe8a4673179f3b238c8b8fac67909231081bd89665c43256e8febe48397a19b.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "reference",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "luna",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "gemini",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "gemini",
+          "score": "2.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.4"
+        },
+        {
+          "model": "haiku",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "3fe8a4673179f3b238c8b8fac67909231081bd89665c43256e8febe48397a19b",
+      "width": 1382
+    },
+    {
+      "case_id": "P039",
+      "display_position": 49,
+      "eligibility": "eligible",
+      "family_id": "megalith-f1688a2b73c7f7707d494861078c9a90",
+      "height": 480,
+      "image_path": "../images/358c7216c15429e99084d111f5fbf242e3008a4adc79d042c3c4763b1a58c63b.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "reference",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "luna",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "gemini",
+          "score": "3.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.0"
+        },
+        {
+          "model": "gemini",
+          "score": "2.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.7"
+        },
+        {
+          "model": "haiku",
+          "score": "3.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.1"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        }
+      ],
+      "view_sha256": "358c7216c15429e99084d111f5fbf242e3008a4adc79d042c3c4763b1a58c63b",
+      "width": 640
+    },
+    {
+      "case_id": "P072",
+      "display_position": 50,
+      "eligibility": "eligible",
+      "family_id": "megalith-b952b5c2c65adbed13790122ca5b505f",
+      "height": 864,
+      "image_path": "../images/0470bde1b1e38b28d2007eb5bce2b4d630285342504b79416fc83b3abd524cca.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "reference",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "gemini",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "gemini",
+          "score": "2.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "0470bde1b1e38b28d2007eb5bce2b4d630285342504b79416fc83b3abd524cca",
+      "width": 1536
+    },
+    {
+      "case_id": "P010",
+      "display_position": 51,
+      "eligibility": "eligible",
+      "family_id": "megalith-8dc1b0f42f8191b48b403bd8fe2f2336",
+      "height": 711,
+      "image_path": "../images/e52db7fee32a480b91d8e51c0531dfa7303aa859f0daea016751b693d613a875.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.1"
+        },
+        {
+          "model": "reference",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.5"
+        },
+        {
+          "model": "luna",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "luna",
+          "score": "3.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.7"
+        },
+        {
+          "model": "gemini",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "gemini",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        }
+      ],
+      "view_sha256": "e52db7fee32a480b91d8e51c0531dfa7303aa859f0daea016751b693d613a875",
+      "width": 1024
+    },
+    {
+      "case_id": "P014",
+      "display_position": 52,
+      "eligibility": "eligible",
+      "family_id": "megalith-96b98de283a70fef96f1910bd1917c5e",
+      "height": 1118,
+      "image_path": "../images/3481740b0fbfecc32a6dad6216a6ebf1e99bdb65556921ce364b154fffc7bafd.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.1"
+        },
+        {
+          "model": "reference",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "gemini",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "gemini",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "haiku",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        }
+      ],
+      "view_sha256": "3481740b0fbfecc32a6dad6216a6ebf1e99bdb65556921ce364b154fffc7bafd",
+      "width": 838
+    },
+    {
+      "case_id": "P041",
+      "display_position": 53,
+      "eligibility": "eligible",
+      "family_id": "megalith-c22578e32c4c8293140b32392ef03ffb",
+      "height": 1028,
+      "image_path": "../images/3b3b8a2075b3853c35703777da7ea4011711f0d5c14b3eb4ad435e98e730dc27.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.1"
+        },
+        {
+          "model": "reference",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        },
+        {
+          "model": "luna",
+          "score": "4.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.1"
+        },
+        {
+          "model": "luna",
+          "score": "4.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.2"
+        },
+        {
+          "model": "gemini",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "gemini",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "haiku",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        }
+      ],
+      "view_sha256": "3b3b8a2075b3853c35703777da7ea4011711f0d5c14b3eb4ad435e98e730dc27",
+      "width": 1536
+    },
+    {
+      "case_id": "P043",
+      "display_position": 54,
+      "eligibility": "eligible",
+      "family_id": "megalith-c8174fbfd6880b93ac3c9ec5f441bc84",
+      "height": 1536,
+      "image_path": "../images/abf1419501e3bffacd647dc22bafc6ade3a1b838ca1a858f5761f05933f364fb.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "reference",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.3"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.5"
+        },
+        {
+          "model": "gemini",
+          "score": "3.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.3"
+        },
+        {
+          "model": "gemini",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        },
+        {
+          "model": "haiku",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "haiku",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        }
+      ],
+      "view_sha256": "abf1419501e3bffacd647dc22bafc6ade3a1b838ca1a858f5761f05933f364fb",
+      "width": 1152
+    },
+    {
+      "case_id": "P059",
+      "display_position": 55,
+      "eligibility": "eligible",
+      "family_id": "megalith-7ab737d82f8d05d03c37ebbca4975b12",
+      "height": 1037,
+      "image_path": "../images/f829189caa95e267a37fca1d3eed13bffc07a3c47f37eb2b2ec18418014a9818.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "reference",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "4.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.5"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "gemini",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "gemini",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "haiku",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        }
+      ],
+      "view_sha256": "f829189caa95e267a37fca1d3eed13bffc07a3c47f37eb2b2ec18418014a9818",
+      "width": 1382
+    },
+    {
+      "case_id": "P021",
+      "display_position": 56,
+      "eligibility": "eligible",
+      "family_id": "megalith-01677dc5a4182cb2b1232fa093623f40",
+      "height": 1037,
+      "image_path": "../images/4f41dcb5b4ceac4b5aa3131f46fd7b369f98074e1f2ef26220f0b69a90777345.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.3"
+        },
+        {
+          "model": "reference",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "luna",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "gemini",
+          "score": "3.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.2"
+        },
+        {
+          "model": "gemini",
+          "score": "2.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.7"
+        },
+        {
+          "model": "haiku",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "haiku",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        }
+      ],
+      "view_sha256": "4f41dcb5b4ceac4b5aa3131f46fd7b369f98074e1f2ef26220f0b69a90777345",
+      "width": 1382
+    },
+    {
+      "case_id": "P050",
+      "display_position": 57,
+      "eligibility": "eligible",
+      "family_id": "megalith-47787b4289fbfcd5c36ed161c52961ea",
+      "height": 915,
+      "image_path": "../images/84b75c755ee35ff87bbe68e513a3a1018dd88183076aaa01e40e28e9f57f86ba.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.3"
+        },
+        {
+          "model": "reference",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "gemini",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "gemini",
+          "score": "2.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.7"
+        },
+        {
+          "model": "haiku",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "84b75c755ee35ff87bbe68e513a3a1018dd88183076aaa01e40e28e9f57f86ba",
+      "width": 1382
+    },
+    {
+      "case_id": "P017",
+      "display_position": 58,
+      "eligibility": "eligible",
+      "family_id": "megalith-aecd87ce45f429b6b4d360ed7b7eb33d",
+      "height": 921,
+      "image_path": "../images/d52cc6d0cb3cef5fe217e5b73d0ca3fb93a95b0e81e726a2ea96b18cfd7a4443.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "reference",
+          "score": "3.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.9"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "luna",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "gemini",
+          "score": "3.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.1"
+        },
+        {
+          "model": "gemini",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "haiku",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        }
+      ],
+      "view_sha256": "d52cc6d0cb3cef5fe217e5b73d0ca3fb93a95b0e81e726a2ea96b18cfd7a4443",
+      "width": 1382
+    },
+    {
+      "case_id": "P018",
+      "display_position": 59,
+      "eligibility": "eligible",
+      "family_id": "megalith-aecd87ce45f429b6b4d360ed7b7eb33d",
+      "height": 921,
+      "image_path": "../images/becc9d4b5e563c6bed9a0703ad8bcbc7620862553eeda5f4ceb83a04553f3bb5.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "reference",
+          "score": "3.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.9"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.7"
+        },
+        {
+          "model": "gemini",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "gemini",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "haiku",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "haiku",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        }
+      ],
+      "view_sha256": "becc9d4b5e563c6bed9a0703ad8bcbc7620862553eeda5f4ceb83a04553f3bb5",
+      "width": 1382
+    },
+    {
+      "case_id": "P022",
+      "display_position": 60,
+      "eligibility": "eligible",
+      "family_id": "megalith-01677dc5a4182cb2b1232fa093623f40",
+      "height": 1037,
+      "image_path": "../images/1cd1717df1f94f5e0e1fa6d0098dcbdcbf1de6b6d0650669f4f284d957421bcf.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "reference",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "2.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "luna",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "gemini",
+          "score": "3.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.1"
+        },
+        {
+          "model": "gemini",
+          "score": "2.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.3"
+        },
+        {
+          "model": "haiku",
+          "score": "3.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.6"
+        },
+        {
+          "model": "haiku",
+          "score": "2.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.6"
+        }
+      ],
+      "view_sha256": "1cd1717df1f94f5e0e1fa6d0098dcbdcbf1de6b6d0650669f4f284d957421bcf",
+      "width": 1382
+    },
+    {
+      "case_id": "P044",
+      "display_position": 61,
+      "eligibility": "eligible",
+      "family_id": "megalith-3f0d7db845d03fcac2ffa431e3ba0314",
+      "height": 1024,
+      "image_path": "../images/11aa827524ac7d3f22eedc2a8409a31fdecc05eb1bd14fe4acbbd4bb47b0a121.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "reference",
+          "score": "3.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.9"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.7"
+        },
+        {
+          "model": "gemini",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "gemini",
+          "score": "3.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.5"
+        },
+        {
+          "model": "haiku",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        }
+      ],
+      "view_sha256": "11aa827524ac7d3f22eedc2a8409a31fdecc05eb1bd14fe4acbbd4bb47b0a121",
+      "width": 1536
+    },
+    {
+      "case_id": "P045",
+      "display_position": 62,
+      "eligibility": "eligible",
+      "family_id": "megalith-cb66b26153d8c60739a9a7818653bf7f",
+      "height": 1152,
+      "image_path": "../images/6286c9d0b33403512a517ab2397207e65a0ef9223f44780e5d8dd4af42f486e8.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.5"
+        },
+        {
+          "model": "reference",
+          "score": "3.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.9"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.1"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "gemini",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "gemini",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "haiku",
+          "score": "4.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.1"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        }
+      ],
+      "view_sha256": "6286c9d0b33403512a517ab2397207e65a0ef9223f44780e5d8dd4af42f486e8",
+      "width": 1536
+    },
+    {
+      "case_id": "P060",
+      "display_position": 63,
+      "eligibility": "eligible",
+      "family_id": "megalith-59923e8686057d02f59e4b31727039d3",
+      "height": 864,
+      "image_path": "../images/7e04c16c63b041319e5bab2ef457e94092445182fd1114c3d5bfff054c67a817.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.5"
+        },
+        {
+          "model": "reference",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.1"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "luna",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "luna",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "gemini",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "gemini",
+          "score": "2.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        }
+      ],
+      "view_sha256": "7e04c16c63b041319e5bab2ef457e94092445182fd1114c3d5bfff054c67a817",
+      "width": 1382
+    },
+    {
+      "case_id": "P061",
+      "display_position": 64,
+      "eligibility": "eligible",
+      "family_id": "megalith-34538ebe7954d13a92fba2312082bb34",
+      "height": 1536,
+      "image_path": "../images/a2305873114951370f272ca2dd32b2fcddc0180a9313333f8f19cbf1001bcd96.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.5"
+        },
+        {
+          "model": "reference",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        },
+        {
+          "model": "luna",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "luna",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "gemini",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "gemini",
+          "score": "2.90",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "2.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        }
+      ],
+      "view_sha256": "a2305873114951370f272ca2dd32b2fcddc0180a9313333f8f19cbf1001bcd96",
+      "width": 1024
+    },
+    {
+      "case_id": "P063",
+      "display_position": 65,
+      "eligibility": "eligible",
+      "family_id": "megalith-34e710fab7b1514a79a31ee88fe0034b",
+      "height": 995,
+      "image_path": "../images/9d3a78623dd0a7621ca861e45a3bab54fe3b3567315d11bd0b2ad90fe045645b.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.5"
+        },
+        {
+          "model": "reference",
+          "score": "4.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.1"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "4.10",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.1"
+        },
+        {
+          "model": "luna",
+          "score": "4.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.2"
+        },
+        {
+          "model": "gemini",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "gemini",
+          "score": "3.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.5"
+        },
+        {
+          "model": "haiku",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.7"
+        }
+      ],
+      "view_sha256": "9d3a78623dd0a7621ca861e45a3bab54fe3b3567315d11bd0b2ad90fe045645b",
+      "width": 1382
+    },
+    {
+      "case_id": "P064",
+      "display_position": 66,
+      "eligibility": "eligible",
+      "family_id": "megalith-0abf6ee0a492ca877b18cd6e132b6cc8",
+      "height": 864,
+      "image_path": "../images/7760bdd20a721519ce77018ae0a8b547cbd5fdc79ab09b973d1e4053c3b08e4f.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.5"
+        },
+        {
+          "model": "reference",
+          "score": "4.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.3"
+        },
+        {
+          "model": "luna",
+          "score": "4.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.5"
+        },
+        {
+          "model": "luna",
+          "score": "4.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.4"
+        },
+        {
+          "model": "gemini",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "gemini",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "haiku",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "haiku",
+          "score": "4.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.0"
+        }
+      ],
+      "view_sha256": "7760bdd20a721519ce77018ae0a8b547cbd5fdc79ab09b973d1e4053c3b08e4f",
+      "width": 1536
+    },
+    {
+      "case_id": "P009",
+      "display_position": 67,
+      "eligibility": "eligible",
+      "family_id": "megalith-8dc1b0f42f8191b48b403bd8fe2f2336",
+      "height": 711,
+      "image_path": "../images/23e2e7b061ee1824af4e90474446a6a15a3a2338ad6c234a963f2c9c691c0245.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.6"
+        },
+        {
+          "model": "reference",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.5"
+        },
+        {
+          "model": "luna",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "gemini",
+          "score": "3.50",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.5"
+        },
+        {
+          "model": "gemini",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "haiku",
+          "score": "3.90",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.9"
+        },
+        {
+          "model": "haiku",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        }
+      ],
+      "view_sha256": "23e2e7b061ee1824af4e90474446a6a15a3a2338ad6c234a963f2c9c691c0245",
+      "width": 1024
+    },
+    {
+      "case_id": "P042",
+      "display_position": 68,
+      "eligibility": "eligible",
+      "family_id": "megalith-5b8974a75a0c54910050af81fe3df17e",
+      "height": 921,
+      "image_path": "../images/518f77d88322ffcfe85221a0fd7a3367a2ea38b5fe1b30f73ab702029c9f03e9.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.6"
+        },
+        {
+          "model": "reference",
+          "score": "4.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "luna",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "gemini",
+          "score": "3.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "3.7"
+        },
+        {
+          "model": "gemini",
+          "score": "3.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.1"
+        },
+        {
+          "model": "haiku",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "haiku",
+          "score": "3.40",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.4"
+        }
+      ],
+      "view_sha256": "518f77d88322ffcfe85221a0fd7a3367a2ea38b5fe1b30f73ab702029c9f03e9",
+      "width": 1382
+    },
+    {
+      "case_id": "P065",
+      "display_position": 69,
+      "eligibility": "eligible",
+      "family_id": "megalith-934b02731d865ab5719807a91a934541",
+      "height": 1536,
+      "image_path": "../images/afc4bd9c88d05045fe9a66774d06d4dc93f143a5e9ccf4fcc295f191d125972f.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.6"
+        },
+        {
+          "model": "reference",
+          "score": "4.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.3"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.0"
+        },
+        {
+          "model": "luna",
+          "score": "4.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.3"
+        },
+        {
+          "model": "luna",
+          "score": "4.10",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.1"
+        },
+        {
+          "model": "gemini",
+          "score": "4.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.3"
+        },
+        {
+          "model": "gemini",
+          "score": "3.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.5"
+        },
+        {
+          "model": "haiku",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "haiku",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        }
+      ],
+      "view_sha256": "afc4bd9c88d05045fe9a66774d06d4dc93f143a5e9ccf4fcc295f191d125972f",
+      "width": 1024
+    },
+    {
+      "case_id": "P046",
+      "display_position": 70,
+      "eligibility": "eligible",
+      "family_id": "megalith-5bc303039399acc4efefe0a626b875f6",
+      "height": 1536,
+      "image_path": "../images/0cabd14102aac76de9978b91987db892e9d220542d6ef486caa2d1105a051163.png",
+      "new_image": false,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.7"
+        },
+        {
+          "model": "reference",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.3"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "luna",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "luna",
+          "score": "3.70",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.7"
+        },
+        {
+          "model": "gemini",
+          "score": "4.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.6"
+        },
+        {
+          "model": "gemini",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "haiku",
+          "score": "4.00",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.0"
+        },
+        {
+          "model": "haiku",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        }
+      ],
+      "view_sha256": "0cabd14102aac76de9978b91987db892e9d220542d6ef486caa2d1105a051163",
+      "width": 1023
+    },
+    {
+      "case_id": "P062",
+      "display_position": 71,
+      "eligibility": "eligible",
+      "family_id": "megalith-7eb99dfdd7acefb025bdb827e0adad3b",
+      "height": 777,
+      "image_path": "../images/860d0ab0956e503a12b5427436ac014bc5d7001bd1b0d2202da93b901ed2cb7a.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.70",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.7"
+        },
+        {
+          "model": "reference",
+          "score": "3.50",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.5"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "luna",
+          "score": "4.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.3"
+        },
+        {
+          "model": "luna",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "gemini",
+          "score": "4.30",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.3"
+        },
+        {
+          "model": "gemini",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        },
+        {
+          "model": "haiku",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "haiku",
+          "score": "3.00",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.0"
+        }
+      ],
+      "view_sha256": "860d0ab0956e503a12b5427436ac014bc5d7001bd1b0d2202da93b901ed2cb7a",
+      "width": 1243
+    },
+    {
+      "case_id": "P069",
+      "display_position": 72,
+      "eligibility": "eligible",
+      "family_id": "megalith-272c23b1ff97608a6c7bcc4c1dbccc36",
+      "height": 960,
+      "image_path": "../images/462cb2b28e3d3853e926c51be79bcf90e98c2de33a5c147bb9ebae3b23857950.png",
+      "new_image": true,
+      "photo_domain_eligible": true,
+      "score_cells": [
+        {
+          "model": "reference",
+          "score": "4.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.8"
+        },
+        {
+          "model": "reference",
+          "score": "3.80",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.8"
+        },
+        {
+          "model": "deepseek",
+          "score": "4.20",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.2"
+        },
+        {
+          "model": "deepseek",
+          "score": "3.60",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.6"
+        },
+        {
+          "model": "luna",
+          "score": "4.80",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.8"
+        },
+        {
+          "model": "luna",
+          "score": "4.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "4.3"
+        },
+        {
+          "model": "gemini",
+          "score": "4.60",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.6"
+        },
+        {
+          "model": "gemini",
+          "score": "3.30",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.3"
+        },
+        {
+          "model": "haiku",
+          "score": "4.40",
+          "status": "ok",
+          "task": "technical_quality",
+          "text": "4.4"
+        },
+        {
+          "model": "haiku",
+          "score": "3.20",
+          "status": "ok",
+          "task": "aesthetics",
+          "text": "3.2"
+        }
+      ],
+      "view_sha256": "462cb2b28e3d3853e926c51be79bcf90e98c2de33a5c147bb9ebae3b23857950",
+      "width": 1536
+    }
+  ],
+  "display_order": "Frozen assistant technical score ascending, then case ID; unscorable last",
+  "human_gold": false,
+  "image_policy": "Original delivered PNG bytes; browser scales full frame with object-fit contain",
+  "input_files_sha256": {
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/deepseek/images/observations.jsonl": "e71cd3372cfecb6ecb7f2653c3d5c8bc2bd21369be972aadffd123209f7384e0",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/deepseek/images/report.json": "eee3aaab701b4615e70010ef6edae53dcc64b714e3e68b5a876af62d31c358aa",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/deepseek/images/run.json": "231be1f6e9c6cb35456286aacfd5cbddfd30e5d935114f8f66d9325d1ceb417e",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/gemini/images/observations.jsonl": "ee6f500de960f9b5ce6e08fc9e45dd0eb24a956a338efdb7a303d1b715443aef",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/gemini/images/report.json": "07d3c90c9108a07a871033a502953b86efb0e8392551632db575691ab3400984",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/gemini/images/run.json": "6a439b991f69bfaa909d6a56e631d9dd7409b76e681a75024f24c07d71995ee3",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/haiku/images/observations.jsonl": "c6448dede885973a26bd111b80371ae477a1e223021895810486de26151d8ba6",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/haiku/images/report.json": "d4e49e0c9458e4a2de481ae29871f337fa8319429179b52f687e4fd138535321",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/haiku/images/run.json": "206e097dde79deeade6549ce6d64cc3232b2222899fa3ede9c190fd26df96aed",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/luna/images/observations.jsonl": "e48889d135aaf7ceaa5a93a485eeb0e29977d1e3937aef1b2cfc6a8256aaeddc",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/luna/images/report.json": "7254554604aa13496b822ae59c06dedbdb3cac82d592d8bfe34c95a3ac526fc4",
+    "/home/ahstn/git/model-gym/visual-quality/data/photo-scope-trial-2026-10-31/luna/images/run.json": "bd66f08fb5c597061551105f8599bb61e41ea2b08956384a6a4c0afc65f26934",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/photo-scope-trial-2026-10-31/build_collage.py": "994e1a7e2dd55b580dbfb7ce1f7303c3729776673215803aa1cd148b2cf64206",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/photo-scope-trial-2026-10-31/collage/collage.css": "1bfacfc12b3bace83982c47de06cab1c96d6e0558362e60997f7475a7748d314",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/photo-scope-trial-2026-10-31/collage/render.mjs": "26b64dea5ff43b4c7666a9b86b2bd44cee56ae6360126d5a9b53629142959632",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/photo-scope-trial-2026-10-31/manifest.json": "a46f498e9f108be41143fa2b026b46ac4d69ca0f4bc02fdac68e91e135e6c988",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/photo-scope-trial-2026-10-31/photo-scope.txt": "7ad2d61624ca9e2a5aeb5f2b40a31f243e1834e8cb2f44c622e7efef7987f0b2",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/photo-scope-trial-2026-10-31/prompt.json": "ab350c2bc039cc76785ee5ea20cc9ede31ee7b2d549616921215ddbfbddadf1c",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/photo-scope-trial-2026-10-31/references-freeze.json": "d9a0d6a5a045971f6fc29e5df5967f9502b47019e05ada7487ee1dd016e27fd6",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/photo-scope-trial-2026-10-31/references.jsonl": "24295ea33a49258a18c57b09de023d188d791a986b629632a3ad1277bb03499f",
+    "/home/ahstn/git/model-gym/visual-quality/experiments/photo-scope-trial-2026-10-31/routes.json": "e41d47f6575d73eb68588fb16454cfe899599035b62ab23780c18310b1bc8526"
+  },
+  "manifest_id": "f850170ead76eeff3d423946d337bc3480c7c740af37f2280adf885981fb0fed",
+  "schema_version": "photography-collage-v1",
+  "selection_rule": "All 72 corpus images; no score-based omission"
+}

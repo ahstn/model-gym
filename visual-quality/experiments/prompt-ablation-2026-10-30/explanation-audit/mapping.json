@@ -1,0 +1,1154 @@
+{
+  "8ca7919300b8": {
+    "case_id": "P022",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "714444c0c024": {
+    "case_id": "P022",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "6caad68069fa": {
+    "case_id": "P022",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "4b380c334c40": {
+    "case_id": "P022",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "09c593246267": {
+    "case_id": "P022",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "83e42e0ab92a": {
+    "case_id": "P022",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "eae590d82c47": {
+    "case_id": "P022",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "05271203e648": {
+    "case_id": "P022",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "40ef84572cd3": {
+    "case_id": "P022",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "1aaf444d2368": {
+    "case_id": "P022",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "198d04ef800f": {
+    "case_id": "P022",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "c8c7f590bd15": {
+    "case_id": "P022",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "4238b4911da1": {
+    "case_id": "P022",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "452d49c0048d": {
+    "case_id": "P022",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "a1b1a255bd03": {
+    "case_id": "P022",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "3c0a83ec6824": {
+    "case_id": "P022",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "258ad92e902b": {
+    "case_id": "P008",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "ca365cd778a7": {
+    "case_id": "P008",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "c59f8af36c2d": {
+    "case_id": "P008",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "690b188840ec": {
+    "case_id": "P008",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "3088558f1ffe": {
+    "case_id": "P008",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "498fc85d578f": {
+    "case_id": "P008",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "c66c4b5f4fcb": {
+    "case_id": "P008",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "cc7392694c72": {
+    "case_id": "P008",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "d3a9c2683be3": {
+    "case_id": "P008",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "0a2526470dac": {
+    "case_id": "P008",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "4972ddb82d30": {
+    "case_id": "P008",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "2aeac3e2a7ef": {
+    "case_id": "P008",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "83a88a8659c0": {
+    "case_id": "P008",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "5113d36e4aac": {
+    "case_id": "P008",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "1e4efa45e016": {
+    "case_id": "P008",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "5614263e0830": {
+    "case_id": "P008",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "55626e37e435": {
+    "case_id": "P010",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "f9d9d0343c3e": {
+    "case_id": "P010",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "6a5b9c4d96d0": {
+    "case_id": "P010",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "38f5706af706": {
+    "case_id": "P010",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "40adf1ce9379": {
+    "case_id": "P010",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "070464196bb1": {
+    "case_id": "P010",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "b94d6c18eb4d": {
+    "case_id": "P010",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "e29b8302b8be": {
+    "case_id": "P010",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "d8a40ce5357e": {
+    "case_id": "P010",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "9ba4b5a8cd73": {
+    "case_id": "P010",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "9e9ee734d0d3": {
+    "case_id": "P010",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "d10e3bfac900": {
+    "case_id": "P010",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "4fb2df8448db": {
+    "case_id": "P010",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "e98b4c3180d2": {
+    "case_id": "P010",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "89ac5baf77f9": {
+    "case_id": "P010",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "7ed62eb69f57": {
+    "case_id": "P010",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "a36b91399c0c": {
+    "case_id": "P016",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "2b50d45146ac": {
+    "case_id": "P016",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "83070542416f": {
+    "case_id": "P016",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "cbd3b23c429a": {
+    "case_id": "P016",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "036892e6dbed": {
+    "case_id": "P016",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "475572867056": {
+    "case_id": "P016",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "01ce293060c4": {
+    "case_id": "P016",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "bf817abc8eb3": {
+    "case_id": "P016",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "84f56b9c537e": {
+    "case_id": "P016",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "d8d8918278eb": {
+    "case_id": "P016",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "1d90c2909f95": {
+    "case_id": "P016",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "b8e72382897d": {
+    "case_id": "P016",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "3835aceddfbc": {
+    "case_id": "P016",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "2b6e7e54af3c": {
+    "case_id": "P016",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "eac1c4089795": {
+    "case_id": "P016",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "338577345482": {
+    "case_id": "P016",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "75592f6c0d5d": {
+    "case_id": "P004",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "7e0c3a295d78": {
+    "case_id": "P004",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "14244288279c": {
+    "case_id": "P004",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "b7d6213cba93": {
+    "case_id": "P004",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "76b7bd7eeaa1": {
+    "case_id": "P004",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "37fab54bda0e": {
+    "case_id": "P004",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "4a4d4da05d56": {
+    "case_id": "P004",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "5648bda08a18": {
+    "case_id": "P004",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "7bc6d38eff99": {
+    "case_id": "P004",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "d7079114f6db": {
+    "case_id": "P004",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "568c15c18991": {
+    "case_id": "P004",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "9210b37d239c": {
+    "case_id": "P004",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "c00f15431dee": {
+    "case_id": "P004",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "e7db7ab170ce": {
+    "case_id": "P004",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "716d4709f13b": {
+    "case_id": "P004",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "c0d5d6c3e653": {
+    "case_id": "P004",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "29c5ff425c71": {
+    "case_id": "P019",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "a9b26630c821": {
+    "case_id": "P019",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "9646d328f978": {
+    "case_id": "P019",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "cbd4be6ef122": {
+    "case_id": "P019",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "92008ba75fe7": {
+    "case_id": "P019",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "3b46b525e209": {
+    "case_id": "P019",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "667f5a201875": {
+    "case_id": "P019",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "96581a1a5742": {
+    "case_id": "P019",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "4f99678d9664": {
+    "case_id": "P019",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "007ef1bc5b0a": {
+    "case_id": "P019",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "cb2ee239928a": {
+    "case_id": "P019",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "c77e2a923beb": {
+    "case_id": "P019",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "eb53a8c7cbb5": {
+    "case_id": "P019",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "ecf3c53ef5a0": {
+    "case_id": "P019",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "ff9bd38546e0": {
+    "case_id": "P019",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "2e35b7f33097": {
+    "case_id": "P019",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "8b2fa17eeafb": {
+    "case_id": "P026",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "f2273a4ac055": {
+    "case_id": "P026",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "fdca517e20d4": {
+    "case_id": "P026",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "1e6535db6eb2": {
+    "case_id": "P026",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "d692ab3ad373": {
+    "case_id": "P026",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "a2254d4aaba2": {
+    "case_id": "P026",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "50c3a9ad6c0e": {
+    "case_id": "P026",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "5a76bebdf569": {
+    "case_id": "P026",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "233a9b60e6fb": {
+    "case_id": "P026",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "ff399e8af412": {
+    "case_id": "P026",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "8172565aaf72": {
+    "case_id": "P026",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "7e8f8492bd69": {
+    "case_id": "P026",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "f6896cd81489": {
+    "case_id": "P026",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "12a7a13d179f": {
+    "case_id": "P026",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "bdc3d263d96c": {
+    "case_id": "P026",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "decb848312dc": {
+    "case_id": "P026",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "30f88341e4d4": {
+    "case_id": "P025",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "a44ade2b0990": {
+    "case_id": "P025",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "75ad8187fd00": {
+    "case_id": "P025",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "1f47b085336c": {
+    "case_id": "P025",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "cb1372172dd6": {
+    "case_id": "P025",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "162dce66a2ee": {
+    "case_id": "P025",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "08c6979fa7d7": {
+    "case_id": "P025",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "b8513ab548af": {
+    "case_id": "P025",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "c73343f6eb11": {
+    "case_id": "P025",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "1e9c0dd7f4d6": {
+    "case_id": "P025",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "bde156d32e1f": {
+    "case_id": "P025",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "0e5c6f362984": {
+    "case_id": "P025",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "23c5bb712435": {
+    "case_id": "P025",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "9d382f854b72": {
+    "case_id": "P025",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "90ac53d20ab8": {
+    "case_id": "P025",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "06344d3ae25c": {
+    "case_id": "P025",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "0062d43e4a85": {
+    "case_id": "P030",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "f041ebe9cdbd": {
+    "case_id": "P030",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "dd0e51cfb7e8": {
+    "case_id": "P030",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "1dfa212180b7": {
+    "case_id": "P030",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "38b1314dd914": {
+    "case_id": "P030",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "1a975d27ad88": {
+    "case_id": "P030",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "edbb6b34b4a7": {
+    "case_id": "P030",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "7cd734e2a969": {
+    "case_id": "P030",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "82afd8be7e34": {
+    "case_id": "P030",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "8bdbc13632dc": {
+    "case_id": "P030",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "37fafedc5f96": {
+    "case_id": "P030",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "ca440a02d93a": {
+    "case_id": "P030",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "ff31d95897c2": {
+    "case_id": "P030",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "a84e15b39c83": {
+    "case_id": "P030",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "060d64c7f1ba": {
+    "case_id": "P030",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "897b48985e8b": {
+    "case_id": "P030",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "c9c4f0b875da": {
+    "case_id": "P046",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "61d29560291f": {
+    "case_id": "P046",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "b2f0ce1265eb": {
+    "case_id": "P046",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "da24d2040988": {
+    "case_id": "P046",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "1f326f17092c": {
+    "case_id": "P046",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "6e76883cc29e": {
+    "case_id": "P046",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "8ec43305b6e3": {
+    "case_id": "P046",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "4b5b15d910ad": {
+    "case_id": "P046",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "2e2cf7622eb2": {
+    "case_id": "P046",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "b874de8d11bb": {
+    "case_id": "P046",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "a8e5489b1a9d": {
+    "case_id": "P046",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "3d82877a133e": {
+    "case_id": "P046",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "2dbacae3d4ac": {
+    "case_id": "P046",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "e251e481cb9a": {
+    "case_id": "P046",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "cff4afba7a17": {
+    "case_id": "P046",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "efb23b590079": {
+    "case_id": "P046",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "17cdab73735a": {
+    "case_id": "P048",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "3c40563497f8": {
+    "case_id": "P048",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "946cd52cdf4a": {
+    "case_id": "P048",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "85614017d94f": {
+    "case_id": "P048",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "ac9a2da3d428": {
+    "case_id": "P048",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "0bf8a31dee0d": {
+    "case_id": "P048",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "1b6b7b83db6d": {
+    "case_id": "P048",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "d4b675fd57f6": {
+    "case_id": "P048",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "45c0b3e4d469": {
+    "case_id": "P048",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "f65e37948610": {
+    "case_id": "P048",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "6776db11c28a": {
+    "case_id": "P048",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "f958384ae40c": {
+    "case_id": "P048",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "afc7b81357bd": {
+    "case_id": "P048",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "50ca86328eaf": {
+    "case_id": "P048",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "55c50d8ec99d": {
+    "case_id": "P048",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "a37491dbc22f": {
+    "case_id": "P048",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "bb276515ca2e": {
+    "case_id": "P044",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "5563f018b305": {
+    "case_id": "P044",
+    "route": "deepseek",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "42a087745fb8": {
+    "case_id": "P044",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "777c98a499c6": {
+    "case_id": "P044",
+    "route": "deepseek",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "55b9011c68ce": {
+    "case_id": "P044",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "c05717743f4a": {
+    "case_id": "P044",
+    "route": "gemini",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "2830d6246ee3": {
+    "case_id": "P044",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "6d361806125b": {
+    "case_id": "P044",
+    "route": "gemini",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "d4904dd3a027": {
+    "case_id": "P044",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "c838a95d9fca": {
+    "case_id": "P044",
+    "route": "luna",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "06e62e6a1683": {
+    "case_id": "P044",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "035f6d1f0ac7": {
+    "case_id": "P044",
+    "route": "luna",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  },
+  "9bc7c1d6abf6": {
+    "case_id": "P044",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "technical_quality"
+  },
+  "4dfd8f2d3b88": {
+    "case_id": "P044",
+    "route": "haiku",
+    "arm_id": "baseline",
+    "task": "aesthetics"
+  },
+  "2cb3bacf0e59": {
+    "case_id": "P044",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "technical_quality"
+  },
+  "652523860024": {
+    "case_id": "P044",
+    "route": "haiku",
+    "arm_id": "combined",
+    "task": "aesthetics"
+  }
+}

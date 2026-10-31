@@ -1,0 +1,1465 @@
+{
+  "attempted": 72,
+  "attempts": [
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P058",
+      "case_id": "P058",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00051901",
+      "gateway_cost_usd": "0.00051901",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P023",
+      "case_id": "P023",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00033571",
+      "gateway_cost_usd": "0.00033571",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P015",
+      "case_id": "P015",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00028966",
+      "gateway_cost_usd": "0.00028966",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P070",
+      "case_id": "P070",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00116325",
+      "gateway_cost_usd": "0.00116325",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P047",
+      "case_id": "P047",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00042751",
+      "gateway_cost_usd": "0.00042751",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P034",
+      "case_id": "P034",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00080701",
+      "gateway_cost_usd": "0.00080701",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P056",
+      "case_id": "P056",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00047521",
+      "gateway_cost_usd": "0.00047521",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P026",
+      "case_id": "P026",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00060901",
+      "gateway_cost_usd": "0.00060901",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P052",
+      "case_id": "P052",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00069571",
+      "gateway_cost_usd": "0.00069571",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P037",
+      "case_id": "P037",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00036181",
+      "gateway_cost_usd": "0.00036181",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P046",
+      "case_id": "P046",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00092491",
+      "gateway_cost_usd": "0.00092491",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P038",
+      "case_id": "P038",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00060151",
+      "gateway_cost_usd": "0.00060151",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P006",
+      "case_id": "P006",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00082291",
+      "gateway_cost_usd": "0.00082291",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P044",
+      "case_id": "P044",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00034711",
+      "gateway_cost_usd": "0.00034711",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P010",
+      "case_id": "P010",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00045091",
+      "gateway_cost_usd": "0.00045091",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P018",
+      "case_id": "P018",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00034501",
+      "gateway_cost_usd": "0.00034501",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P001",
+      "case_id": "P001",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00057451",
+      "gateway_cost_usd": "0.00057451",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P005",
+      "case_id": "P005",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00062851",
+      "gateway_cost_usd": "0.00062851",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P043",
+      "case_id": "P043",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00037021",
+      "gateway_cost_usd": "0.00037021",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P045",
+      "case_id": "P045",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00057166",
+      "gateway_cost_usd": "0.00057166",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P039",
+      "case_id": "P039",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00060241",
+      "gateway_cost_usd": "0.00060241",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P003",
+      "case_id": "P003",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00037711",
+      "gateway_cost_usd": "0.00037711",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P069",
+      "case_id": "P069",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00031891",
+      "gateway_cost_usd": "0.00031891",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P002",
+      "case_id": "P002",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00067711",
+      "gateway_cost_usd": "0.00067711",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P050",
+      "case_id": "P050",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00038701",
+      "gateway_cost_usd": "0.00038701",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P053",
+      "case_id": "P053",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00080041",
+      "gateway_cost_usd": "0.00080041",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P017",
+      "case_id": "P017",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00077341",
+      "gateway_cost_usd": "0.00077341",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P068",
+      "case_id": "P068",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00047926",
+      "gateway_cost_usd": "0.00047926",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P035",
+      "case_id": "P035",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00033661",
+      "gateway_cost_usd": "0.00033661",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P060",
+      "case_id": "P060",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00056671",
+      "gateway_cost_usd": "0.00056671",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P042",
+      "case_id": "P042",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00058561",
+      "gateway_cost_usd": "0.00058561",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P062",
+      "case_id": "P062",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00061276",
+      "gateway_cost_usd": "0.00061276",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P054",
+      "case_id": "P054",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00060166",
+      "gateway_cost_usd": "0.00060166",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P027",
+      "case_id": "P027",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00044101",
+      "gateway_cost_usd": "0.00044101",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P040",
+      "case_id": "P040",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00038956",
+      "gateway_cost_usd": "0.00038956",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P012",
+      "case_id": "P012",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00033391",
+      "gateway_cost_usd": "0.00033391",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P063",
+      "case_id": "P063",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00034681",
+      "gateway_cost_usd": "0.00034681",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P049",
+      "case_id": "P049",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00046366",
+      "gateway_cost_usd": "0.00046366",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P030",
+      "case_id": "P030",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00029206",
+      "gateway_cost_usd": "0.00029206",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P014",
+      "case_id": "P014",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00030406",
+      "gateway_cost_usd": "0.00030406",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P007",
+      "case_id": "P007",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00075991",
+      "gateway_cost_usd": "0.00075991",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P032",
+      "case_id": "P032",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00035506",
+      "gateway_cost_usd": "0.00035506",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P011",
+      "case_id": "P011",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00039031",
+      "gateway_cost_usd": "0.00039031",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P057",
+      "case_id": "P057",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00040621",
+      "gateway_cost_usd": "0.00040621",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P009",
+      "case_id": "P009",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00045451",
+      "gateway_cost_usd": "0.00045451",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P020",
+      "case_id": "P020",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00113641",
+      "gateway_cost_usd": "0.00113641",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P021",
+      "case_id": "P021",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00045571",
+      "gateway_cost_usd": "0.00045571",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P048",
+      "case_id": "P048",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00065025",
+      "gateway_cost_usd": "0.00065025",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P066",
+      "case_id": "P066",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00038686",
+      "gateway_cost_usd": "0.00038686",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P059",
+      "case_id": "P059",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00032731",
+      "gateway_cost_usd": "0.00032731",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P071",
+      "case_id": "P071",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00027571",
+      "gateway_cost_usd": "0.00027571",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P029",
+      "case_id": "P029",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00042121",
+      "gateway_cost_usd": "0.00042121",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P067",
+      "case_id": "P067",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00053671",
+      "gateway_cost_usd": "0.00053671",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P004",
+      "case_id": "P004",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00050671",
+      "gateway_cost_usd": "0.00050671",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P013",
+      "case_id": "P013",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00029206",
+      "gateway_cost_usd": "0.00029206",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P008",
+      "case_id": "P008",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00063151",
+      "gateway_cost_usd": "0.00063151",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P064",
+      "case_id": "P064",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00031111",
+      "gateway_cost_usd": "0.00031111",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P051",
+      "case_id": "P051",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00036361",
+      "gateway_cost_usd": "0.00036361",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P028",
+      "case_id": "P028",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00059686",
+      "gateway_cost_usd": "0.00059686",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P024",
+      "case_id": "P024",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00031951",
+      "gateway_cost_usd": "0.00031951",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P072",
+      "case_id": "P072",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00044371",
+      "gateway_cost_usd": "0.00044371",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P033",
+      "case_id": "P033",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00063706",
+      "gateway_cost_usd": "0.00063706",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P022",
+      "case_id": "P022",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00032131",
+      "gateway_cost_usd": "0.00032131",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P041",
+      "case_id": "P041",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00051331",
+      "gateway_cost_usd": "0.00051331",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P016",
+      "case_id": "P016",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00034666",
+      "gateway_cost_usd": "0.00034666",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P019",
+      "case_id": "P019",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00028981",
+      "gateway_cost_usd": "0.00028981",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P065",
+      "case_id": "P065",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00034411",
+      "gateway_cost_usd": "0.00034411",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P031",
+      "case_id": "P031",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00124801",
+      "gateway_cost_usd": "0.00124801",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P036",
+      "case_id": "P036",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00038941",
+      "gateway_cost_usd": "0.00038941",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P025",
+      "case_id": "P025",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00046681",
+      "gateway_cost_usd": "0.00046681",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P055",
+      "case_id": "P055",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00044011",
+      "gateway_cost_usd": "0.00044011",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    },
+    {
+      "arm_id": "photo_scope",
+      "attempt_id": "photo_scope--P061",
+      "case_id": "P061",
+      "cost_source": "usage.cost",
+      "cost_usd": "0.00043831",
+      "gateway_cost_usd": "0.00043831",
+      "is_byok": null,
+      "reason": null,
+      "status": "valid",
+      "task_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      },
+      "upstream_inference_cost_usd": null,
+      "wire_score_valid": {
+        "aesthetics": true,
+        "technical_quality": true
+      }
+    }
+  ],
+  "invalid_observations": 0,
+  "known_cost_usd": "0.03646735",
+  "phase": "images",
+  "planned": 72,
+  "route": "deepseek",
+  "run_id": "85470b0929c300398a5651f43892d01fcc0ee2d06a3e663e2ff703091bfd70ba",
+  "schema_version": "prompt-ablation-report-v1",
+  "scored": {
+    "aesthetics": 72,
+    "technical_quality": 72
+  },
+  "status": "complete",
+  "task_valid_observations": {
+    "aesthetics": 72,
+    "technical_quality": 72
+  },
+  "total_known_cost_usd": "0.03646735",
+  "training_ready": false,
+  "unpriced_attempts": 0,
+  "valid_observations": 72
+}
