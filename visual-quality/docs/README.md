@@ -14,7 +14,7 @@ Dataset follow-up: the [2026-10-29 inventory and adoption review](datasets/inven
 
 The [pilot builder](../README.md) provides acquisition, assembly, and verification commands for the proposed image mix. Its source manifests retain source labels and leave teacher scores unset. The [small label runner](training/label-pilot.md) stores pending teacher observations in separate, versioned files.
 
-Latest labeling trial: the [2026-10-31 dual high-reasoning report](../experiments/dual-high-2000-2026-10-31/README.md) records 2,000 images scored by DeepSeek and GPT-6 Luna, with 8,000 valid technical/aesthetic task scores and a 72-image comparison gallery. Their average has the lowest combined error on 71 fresh assistant-reference cases; Luna is closest on technical quality. The average retains positive technical bias, and its advantage over Luna is uncertain. All labels remain unapproved for training.
+Latest labeling trials: the [consolidated 2026-10-31 photo-scoring workspace](../experiments/photo-scoring-2026-10-31/README.md) retains the 2,000-image Luna/DeepSeek run, the 72-image Jev/Liquid/Haiku comparison, original image views, scores and galleries. Jev and Liquid were close on 48 held-out assistant-reference cases; Drex and Decider were dropped after weaker technical results. All labels remain unapproved for training.
 
 Corpus sizing: the [2026-10-31 estimate](training/corpus-size-estimate-2026-10-31.md) proposes 50,000 independent source-image families across training, validation and test, with smaller nested training subsets and independent human evaluation. This is a planning estimate for pretrained-model adaptation, not a measured data requirement or an approved acquisition run.
 

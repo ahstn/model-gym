@@ -1,0 +1,451 @@
+{
+  "costs": {
+    "Decider": {
+      "positive_reasoning_tokens": 0,
+      "providers": [
+        "Perplexity"
+      ],
+      "reported_cost_plus_upstream": 0.004029519999999998,
+      "requests": 120,
+      "resolved_models": [
+        "perplexity/pplx-decider-v1.2-20261016"
+      ],
+      "unpriced_requests": 0,
+      "upstream_cost_count": 0
+    },
+    "Drex": {
+      "positive_reasoning_tokens": 0,
+      "providers": [
+        "DeepInfra"
+      ],
+      "reported_cost_plus_upstream": 0.01323960000000001,
+      "requests": 120,
+      "resolved_models": [
+        "nace-ai/drex-max-20261016"
+      ],
+      "unpriced_requests": 0,
+      "upstream_cost_count": 0
+    },
+    "Haiku": {
+      "positive_reasoning_tokens": 4,
+      "providers": [
+        "Anthropic"
+      ],
+      "reported_cost_plus_upstream": 0.05745190000000001,
+      "requests": 72,
+      "resolved_models": [
+        "anthropic/claude-haiku-5.5"
+      ],
+      "unpriced_requests": 0,
+      "upstream_cost_count": 0
+    },
+    "Jev": {
+      "positive_reasoning_tokens": 0,
+      "providers": [
+        "TypeSafe"
+      ],
+      "reported_cost_plus_upstream": 0.020543796000000003,
+      "requests": 120,
+      "resolved_models": [
+        "typesafe/jev-1.14-20261014"
+      ],
+      "unpriced_requests": 0,
+      "upstream_cost_count": 0
+    },
+    "Liquid": {
+      "positive_reasoning_tokens": 0,
+      "providers": [
+        "Liquid"
+      ],
+      "reported_cost_plus_upstream": 0.005588239999999993,
+      "requests": 120,
+      "resolved_models": [
+        "liquid/d1.1-20261027"
+      ],
+      "unpriced_requests": 0,
+      "upstream_cost_count": 0
+    }
+  },
+  "development_prompt_task_mae": {
+    "Jev": {
+      "anchors": {
+        "aesthetics": 0.3430434782608695,
+        "technical_quality": 0.3
+      },
+      "brief": {
+        "aesthetics": 0.2643478260869565,
+        "technical_quality": 0.3056521739130435
+      },
+      "detail": {
+        "aesthetics": 0.37608695652173907,
+        "technical_quality": 0.3278260869565218
+      }
+    },
+    "Liquid": {
+      "anchors": {
+        "aesthetics": 0.28171559448466693,
+        "technical_quality": 0.3134490179301756
+      },
+      "brief": {
+        "aesthetics": 0.28047977193709445,
+        "technical_quality": 0.32939123002798426
+      },
+      "detail": {
+        "aesthetics": 0.3245860282169443,
+        "technical_quality": 0.3322103613962065
+      }
+    }
+  },
+  "fresh_71": {
+    "average": {
+      "aesthetics": {
+        "bias": 0.1901408450704226,
+        "mae": 0.26901408450704223,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      },
+      "combined_mae": 0.34225352112676055,
+      "technical_quality": {
+        "bias": 0.30422535211267604,
+        "mae": 0.4154929577464789,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      }
+    },
+    "deepseek": {
+      "aesthetics": {
+        "bias": 0.08873239436619725,
+        "mae": 0.28873239436619713,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      },
+      "combined_mae": 0.3894366197183098,
+      "technical_quality": {
+        "bias": 0.29295774647887324,
+        "mae": 0.4901408450704225,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      }
+    },
+    "haiku": {
+      "aesthetics": {
+        "bias": 0.025352112676056405,
+        "mae": 0.29859154929577464,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      },
+      "combined_mae": 0.3415492957746479,
+      "technical_quality": {
+        "bias": 0.06619718309859154,
+        "mae": 0.3845070422535211,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      }
+    },
+    "jev": {
+      "aesthetics": {
+        "bias": -0.130281690140845,
+        "mae": 0.2525352112676056,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      },
+      "combined_mae": 0.3072535211267605,
+      "technical_quality": {
+        "bias": 0.18647887323943663,
+        "mae": 0.3619718309859155,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      }
+    },
+    "liquid": {
+      "aesthetics": {
+        "bias": -0.10819923147221439,
+        "mae": 0.2702685463453903,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      },
+      "combined_mae": 0.3109723769976188,
+      "technical_quality": {
+        "bias": 0.05531454957276759,
+        "mae": 0.3516762076498473,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      }
+    },
+    "luna": {
+      "aesthetics": {
+        "bias": 0.29154929577464794,
+        "mae": 0.33380281690140845,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      },
+      "combined_mae": 0.3626760563380282,
+      "technical_quality": {
+        "bias": 0.31549295774647884,
+        "mae": 0.3915492957746479,
+        "n": 71,
+        "total": 71,
+        "valid": 71
+      }
+    }
+  },
+  "heldout_48": {
+    "average": {
+      "aesthetics": {
+        "bias": 0.1739583333333334,
+        "mae": 0.278125,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      },
+      "combined_mae": 0.37343750000000003,
+      "technical_quality": {
+        "bias": 0.32916666666666666,
+        "mae": 0.46875000000000006,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      }
+    },
+    "decider": {
+      "aesthetics": {
+        "bias": 0.1439893980352335,
+        "mae": 0.23966164291304984,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      },
+      "combined_mae": 0.39727069835275614,
+      "technical_quality": {
+        "bias": 0.47624093134717205,
+        "mae": 0.5548797537924625,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      }
+    },
+    "deepseek": {
+      "aesthetics": {
+        "bias": 0.058333333333333404,
+        "mae": 0.3083333333333333,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      },
+      "combined_mae": 0.4208333333333333,
+      "technical_quality": {
+        "bias": 0.33749999999999997,
+        "mae": 0.5333333333333333,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      }
+    },
+    "drex": {
+      "aesthetics": {
+        "bias": -0.13697157176965127,
+        "mae": 0.2249889508198322,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      },
+      "combined_mae": 0.3552717930619077,
+      "technical_quality": {
+        "bias": 0.437374386039004,
+        "mae": 0.48555463530398324,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      }
+    },
+    "haiku": {
+      "aesthetics": {
+        "bias": -0.018749999999999933,
+        "mae": 0.30624999999999997,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      },
+      "combined_mae": 0.35,
+      "technical_quality": {
+        "bias": 0.07708333333333332,
+        "mae": 0.39375,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      }
+    },
+    "jev": {
+      "aesthetics": {
+        "bias": -0.12187499999999996,
+        "mae": 0.24687499999999993,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      },
+      "combined_mae": 0.3179166666666666,
+      "technical_quality": {
+        "bias": 0.23770833333333333,
+        "mae": 0.3889583333333333,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      }
+    },
+    "liquid": {
+      "aesthetics": {
+        "bias": -0.11899526506599811,
+        "mae": 0.2647835024453203,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      },
+      "combined_mae": 0.3173884525845885,
+      "technical_quality": {
+        "bias": 0.09193109956399148,
+        "mae": 0.36999340272385667,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      }
+    },
+    "luna": {
+      "aesthetics": {
+        "bias": 0.28958333333333336,
+        "mae": 0.33125,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      },
+      "combined_mae": 0.37604166666666666,
+      "technical_quality": {
+        "bias": 0.3208333333333333,
+        "mae": 0.42083333333333334,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      }
+    },
+    "scope": {
+      "jev": {
+        "eligible_false_exclusions": [],
+        "excluded": [],
+        "reference_exclusion_misses": []
+      },
+      "liquid": {
+        "eligible_false_exclusions": [],
+        "excluded": [
+          "T0571"
+        ],
+        "reference_exclusion_misses": []
+      }
+    }
+  },
+  "notes": "Reference judgments are assistant labels; heldout excludes prompt development. Dropped models are retained as aggregate evidence only.",
+  "paired_bootstrap_vs_average": {
+    "decider": {
+      "bootstrap_95_interval": [
+        -0.055198905995713345,
+        0.09422536457575813
+      ],
+      "cases": 48,
+      "mean_difference_vs_average": 0.02383319835275613
+    },
+    "deepseek": {
+      "bootstrap_95_interval": [
+        0.0130208333333333,
+        0.08229166666666665
+      ],
+      "cases": 48,
+      "mean_difference_vs_average": 0.04739583333333331
+    },
+    "drex": {
+      "bootstrap_95_interval": [
+        -0.10084016243036219,
+        0.048971950589171
+      ],
+      "cases": 48,
+      "mean_difference_vs_average": -0.018165706938092295
+    },
+    "haiku": {
+      "bootstrap_95_interval": [
+        -0.09791666666666665,
+        0.04479166666666665
+      ],
+      "cases": 48,
+      "mean_difference_vs_average": -0.02343750000000003
+    },
+    "jev": {
+      "bootstrap_95_interval": [
+        -0.11927083333333337,
+        0.005833333333333239
+      ],
+      "cases": 48,
+      "mean_difference_vs_average": -0.05552083333333339
+    },
+    "liquid": {
+      "bootstrap_95_interval": [
+        -0.12653094775561533,
+        0.005490893502033678
+      ],
+      "cases": 48,
+      "mean_difference_vs_average": -0.05604904741541156
+    },
+    "luna": {
+      "bootstrap_95_interval": [
+        -0.038020833333333344,
+        0.047395833333333304
+      ],
+      "cases": 48,
+      "mean_difference_vs_average": 0.0026041666666666505
+    }
+  },
+  "uncertain_scope_no_floor": {
+    "jev": {
+      "aesthetics": {
+        "bias": -0.12187499999999996,
+        "mae": 0.24687499999999993,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      },
+      "combined_mae": 0.3179166666666666,
+      "technical_quality": {
+        "bias": 0.23770833333333333,
+        "mae": 0.3889583333333333,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      }
+    },
+    "liquid": {
+      "aesthetics": {
+        "bias": -0.11268017806920085,
+        "mae": 0.27109858944211757,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      },
+      "combined_mae": 0.3217398970549853,
+      "technical_quality": {
+        "bias": 0.09431890150798787,
+        "mae": 0.372381204667853,
+        "n": 48,
+        "total": 48,
+        "valid": 48
+      }
+    }
+  },
+  "unpriced_refusals": 2
+}
