@@ -1,0 +1,15 @@
+{
+  "frozen_inputs_verified": 11,
+  "development_and_holdout_cases": {
+    "development": 120,
+    "heldout": 120
+  },
+  "family_disjoint": true,
+  "all_240_input_view_hashes_verified": true,
+  "all_2880_development_jobs_attempted": true,
+  "holdout_first_request": "2026-11-01T20:11:36.518386+00:00",
+  "winner_frozen_at": "2026-11-01T20:10:48.977237+00:00",
+  "boundary_sensitivity_declared_at": "2026-11-01T20:05:39.034234+00:00",
+  "selected_questions_match_frozen_winner": true,
+  "independent_holdout_recount_agrees": true
+}

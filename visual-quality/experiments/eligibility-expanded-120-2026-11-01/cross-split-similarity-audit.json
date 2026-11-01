@@ -1,0 +1,109 @@
+{
+  "reference_sha256": "db27f989d0f727fb904839ad30a6b1d3ba59c0cf6dd17064c07ff417a1a35afe",
+  "embeddings_sha256": "135e260a74eb2e6b1acf73e9a82ea3139b0b5b9e1a90465a571971b3e7a62b75",
+  "method": "Cross-split cosine similarity of 60 eligible source photos per panel, using previously generated EmbeddingGemma2 candidate vectors. Screenshots are paired within the same panel, excluded artwork/charts/renders are not included. Similarity does not prove duplicates.",
+  "max_similarity": 0.8370370864868164,
+  "pairs_at_least_0_94": 0,
+  "top_20": [
+    {
+      "development": "C2354",
+      "heldout": "C1735",
+      "similarity": 0.8370370864868164
+    },
+    {
+      "development": "C0535",
+      "heldout": "C0412",
+      "similarity": 0.8321224451065063
+    },
+    {
+      "development": "C0584",
+      "heldout": "C5303",
+      "similarity": 0.8126732110977173
+    },
+    {
+      "development": "C0543",
+      "heldout": "C1735",
+      "similarity": 0.8067561388015747
+    },
+    {
+      "development": "C2017",
+      "heldout": "C3392",
+      "similarity": 0.8032652139663696
+    },
+    {
+      "development": "C4111",
+      "heldout": "C4363",
+      "similarity": 0.8006610870361328
+    },
+    {
+      "development": "C5120",
+      "heldout": "C0206",
+      "similarity": 0.8000113368034363
+    },
+    {
+      "development": "C4734",
+      "heldout": "C0118",
+      "similarity": 0.7939847707748413
+    },
+    {
+      "development": "C1616",
+      "heldout": "C1151",
+      "similarity": 0.79176265001297
+    },
+    {
+      "development": "C4886",
+      "heldout": "C4729",
+      "similarity": 0.7867661714553833
+    },
+    {
+      "development": "C5120",
+      "heldout": "C4729",
+      "similarity": 0.7847825884819031
+    },
+    {
+      "development": "C5120",
+      "heldout": "C0118",
+      "similarity": 0.7839476466178894
+    },
+    {
+      "development": "C4971",
+      "heldout": "C4670",
+      "similarity": 0.7789576053619385
+    },
+    {
+      "development": "C4831",
+      "heldout": "C4729",
+      "similarity": 0.7786257266998291
+    },
+    {
+      "development": "C4989",
+      "heldout": "C5006",
+      "similarity": 0.7771612405776978
+    },
+    {
+      "development": "C4666",
+      "heldout": "C0118",
+      "similarity": 0.7767461538314819
+    },
+    {
+      "development": "C4620",
+      "heldout": "C0035",
+      "similarity": 0.7749759554862976
+    },
+    {
+      "development": "C4936",
+      "heldout": "C4637",
+      "similarity": 0.7724656462669373
+    },
+    {
+      "development": "C4734",
+      "heldout": "C4637",
+      "similarity": 0.7714782953262329
+    },
+    {
+      "development": "C0883",
+      "heldout": "C4842",
+      "similarity": 0.7704781889915466
+    }
+  ]
+}

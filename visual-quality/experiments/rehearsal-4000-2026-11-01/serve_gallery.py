@@ -28,6 +28,9 @@ class GalleryHandler(BaseHTTPRequestHandler):
         elif re.fullmatch(r"/eligibility-originals/[0-9a-f]{64}\.png", path):
             allowed_root = (self.root.parent / "eligibility-optimization-2026-11-01").resolve()
             target = allowed_root / "views" / path.removeprefix("/eligibility-originals/")
+        elif re.fullmatch(r"/expanded-originals/[0-9a-f]{64}\.png", path):
+            allowed_root = (self.root.parent / "eligibility-expanded-120-2026-11-01").resolve()
+            target = allowed_root / "views" / path.removeprefix("/expanded-originals/")
         elif path in ("/report.md", "/scores-long.csv"):
             target = self.root / "published" / path.lstrip("/")
         elif path.startswith("/gallery/"):
@@ -43,6 +46,9 @@ class GalleryHandler(BaseHTTPRequestHandler):
                         "eligibility-trial.html",
                         "eligibility-trial.js",
                         "eligibility-report.md",
+                        "expanded-eligibility.html",
+                        "expanded-eligibility.js",
+                        "expanded-eligibility-report.md",
                     }
                     and len(relative.parts) == 1
                 )
@@ -54,6 +60,11 @@ class GalleryHandler(BaseHTTPRequestHandler):
                     len(relative.parts) == 2
                     and relative.parts[0] == "previews"
                     and re.fullmatch(r"[CRSWU][0-9]{4}\.jpg", relative.name)
+                )
+                or (
+                    len(relative.parts) == 2
+                    and relative.parts[0] == "expanded-previews"
+                    and re.fullmatch(r"(?:[CRX][0-9]{4}|M[0-9]{1,8})\.jpg", relative.name)
                 )
             )
             if not permitted:
@@ -77,10 +88,16 @@ class GalleryHandler(BaseHTTPRequestHandler):
                 if (self.root / "published" / "gallery" / "eligibility-trial.html").is_file()
                 else b""
             )
+            expanded_link = (
+                b' &middot; <a href="expanded-eligibility.html">Expanded eligibility comparison</a>'
+                if (self.root / "published" / "gallery" / "expanded-eligibility.html").is_file()
+                else b""
+            )
             content = content.replace(
                 b"<nav>",
                 b'<p><a href="high-variance.html">Explore 48 highest-disagreement images</a>'
                 + trial_link
+                + expanded_link
                 + b"</p><nav>",
                 1,
             )

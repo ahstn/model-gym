@@ -1,0 +1,1477 @@
+{
+  "records": [
+    {
+      "case_id": "M787866",
+      "family_id": "met:787866",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-expanded-120-2026-11-01/views/7800b3e7e2c5c9e53b8566343b13302ffe2d18a93efdfe6cd8f8aeb8d4ccc2b4.png",
+      "view_sha256": "7800b3e7e2c5c9e53b8566343b13302ffe2d18a93efdfe6cd8f8aeb8d4ccc2b4",
+      "width": 430,
+      "height": 624,
+      "source": "The Metropolitan Museum of Art Open Access",
+      "source_page": "https://www.metmuseum.org/art/collection/search/787866",
+      "source_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP880377.jpg",
+      "source_sha256": "33b45ffb8f1dc77e0f6cac8acc7bcffcb3b65c42a7a05d14dd8b9687d1bd1d06",
+      "source_license": "public domain (Met isPublicDomain)",
+      "source_title": "Design for a Four Poster Bed",
+      "source_object_name": "Print",
+      "source_medium": "Etching",
+      "source_artist": "Jacques Androuet Du Cerceau",
+      "query": "poster"
+    },
+    {
+      "case_id": "M334196",
+      "family_id": "met:334196",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-expanded-120-2026-11-01/views/c46f30fbc709bd40fadaea6c24a553ea8e781f6ee21d9a7abb3f0d815f8ad5f2.png",
+      "view_sha256": "c46f30fbc709bd40fadaea6c24a553ea8e781f6ee21d9a7abb3f0d815f8ad5f2",
+      "width": 488,
+      "height": 624,
+      "source": "The Metropolitan Museum of Art Open Access",
+      "source_page": "https://www.metmuseum.org/art/collection/search/334196",
+      "source_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP835778.jpg",
+      "source_sha256": "81330e372379ec9feb920532139502b45b5203b2dfc016d196bb333f7253ed44",
+      "source_license": "public domain (Met isPublicDomain)",
+      "source_title": "Elles (poster for 1896 exhibition at La Plume)",
+      "source_object_name": "Print",
+      "source_medium": "Crayon, brush, and spatter lithograph printed in four colors on beige wove paper; third of three states (poster edition)",
+      "source_artist": "Henri de Toulouse-Lautrec",
+      "query": "poster"
+    },
+    {
+      "case_id": "M637486",
+      "family_id": "met:637486",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-expanded-120-2026-11-01/views/6cfd8eb1d04654d89016ae516b3e9bc5a002982ad6e5906f3d2f0d36f996ec8a.png",
+      "view_sha256": "6cfd8eb1d04654d89016ae516b3e9bc5a002982ad6e5906f3d2f0d36f996ec8a",
+      "width": 474,
+      "height": 624,
+      "source": "The Metropolitan Museum of Art Open Access",
+      "source_page": "https://www.metmuseum.org/art/collection/search/637486",
+      "source_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP884635.jpg",
+      "source_sha256": "1503a10ea511a8a690c52b40f0cbe5e09145cc5e90c508035d1c8779ecfe7f5c",
+      "source_license": "public domain (Met isPublicDomain)",
+      "source_title": "Poster for The Yellow Book, Volume IV",
+      "source_object_name": "Print",
+      "source_medium": "Lithograph and relief process",
+      "source_artist": "Aubrey Vincent Beardsley",
+      "query": "poster"
+    },
+    {
+      "case_id": "M916228",
+      "family_id": "met:916228",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-expanded-120-2026-11-01/views/165e3884118a6c2ae46725fb810788670ad93e95c502d7741cca55e51a7ab3ef.png",
+      "view_sha256": "165e3884118a6c2ae46725fb810788670ad93e95c502d7741cca55e51a7ab3ef",
+      "width": 520,
+      "height": 625,
+      "source": "The Metropolitan Museum of Art Open Access",
+      "source_page": "https://www.metmuseum.org/art/collection/search/916228",
+      "source_url": "https://images.metmuseum.org/CRDImages/mi/web-large/DP-42482-001.jpg",
+      "source_sha256": "7348b61610b5a4ca13b10f6993ad8d989ececb2297caed947d35f010f2a2d85b",
+      "source_license": "public domain (Met isPublicDomain)",
+      "source_title": "Poster for a performance by Henri Huerta",
+      "source_object_name": "Poster for a performance by Henri Huerta",
+      "source_medium": "Lithograph",
+      "source_artist": "Anonymous",
+      "query": "poster"
+    },
+    {
+      "case_id": "M334404",
+      "family_id": "met:334404",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-expanded-120-2026-11-01/views/61cbaf18128517b0fca561b6865e08d5c52dff5ea678991a292fc252cbbf6157.png",
+      "view_sha256": "61cbaf18128517b0fca561b6865e08d5c52dff5ea678991a292fc252cbbf6157",
+      "width": 509,
+      "height": 625,
+      "source": "The Metropolitan Museum of Art Open Access",
+      "source_page": "https://www.metmuseum.org/art/collection/search/334404",
+      "source_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP835776.jpg",
+      "source_sha256": "fb1e510af45e20988d9559ce16722c4de39298225516075d2c4243fc9d84bf1c",
+      "source_license": "public domain (Met isPublicDomain)",
+      "source_title": "Elles (poster for 1896 exhibition at La Plume)",
+      "source_object_name": "Print",
+      "source_medium": "Crayon, brush, and spatter lithograph printed in four colors on beige wove paper; third state of three (poster edition)",
+      "source_artist": "Henri de Toulouse-Lautrec",
+      "query": "poster"
+    }
+  ],
+  "errors": [
+    {
+      "error": "HTTPError",
+      "object_id": 280319,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280314,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280311,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280328,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280318,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280310,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280308,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280322,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280309,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280321,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 902986,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 929100,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 907093,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280315,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280327,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280304,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 846811,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 280323,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 364269,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 746809,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 936273,
+      "query": "poster"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 457723,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 13763,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 825610,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 351287,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 701460,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 316763,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54836,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 340973,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 489766,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 38023,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 547746,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 313649,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 915385,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57850,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 450551,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 317806,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 449863,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 770740,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 312055,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 449458,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 459152,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 312117,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 490082,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 253334,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 316759,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 336663,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 245846,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 313784,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 394741,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 38063,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 493757,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 394633,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 888429,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 483301,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 274549,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 483150,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 483042,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 313650,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 888892,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 399978,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 270028,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 14170,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 313632,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 254440,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 933861,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 485515,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 248130,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 838375,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 316760,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 485191,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 370206,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 838376,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 482811,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 728246,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 339957,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 556954,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 691053,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 317805,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 252979,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 245838,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 915379,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 189543,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 310096,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 21656,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 338600,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 392765,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 915380,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 489602,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 253338,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 253324,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 473058,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 728021,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 915388,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 253329,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 253330,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 492759,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 245847,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 488660,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 344404,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57339,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 312124,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 316758,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 245840,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 51754,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 311951,
+      "query": "painting"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 396123,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 76937,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 76945,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363722,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 483674,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 736218,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 76938,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 883962,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 76941,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 76933,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 489657,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 547975,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 736223,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 482686,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 742687,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 486199,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 343905,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 487003,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 18989,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 766443,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 766773,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363714,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363728,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 766780,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 364029,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 380202,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 76947,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 485691,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 548053,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363721,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 766628,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363723,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 337715,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 838268,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363729,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 767482,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 883965,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363734,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 483672,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 76939,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 548067,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 414401,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 766666,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 766776,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 392375,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 483682,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 384401,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363730,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 471868,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 548065,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 482087,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 547976,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 483852,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 482086,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 905500,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 548171,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 547968,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 767494,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363726,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 337714,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 452274,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 766633,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 490693,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 482687,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 548075,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363733,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 883959,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 481124,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 76942,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 883964,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 483681,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 547977,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 384400,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 548071,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 491985,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 548068,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 497568,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363724,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 766624,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363732,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 883961,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 340246,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 363715,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 19104,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 736221,
+      "query": "drawing"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54301,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58005,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57994,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54216,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54365,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 56778,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58218,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57995,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58018,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58025,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 56823,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58021,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55578,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55592,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58036,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55383,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58230,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58077,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55542,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58031,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58211,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55614,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58052,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58034,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58198,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58037,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58202,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57987,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58051,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54304,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55540,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58223,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58004,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58041,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58017,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55176,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58053,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 490952,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58067,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58062,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58069,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54395,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58040,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55139,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58015,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 13772,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58237,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54373,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58006,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58233,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58073,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58011,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54369,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58024,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58044,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58059,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58205,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58039,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58213,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58047,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 53690,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57991,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57993,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58239,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58061,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58027,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58063,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58072,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58016,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55200,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57989,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57986,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55539,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54370,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58076,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 55386,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58212,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58009,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54221,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58020,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57997,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 54362,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 57988,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 56552,
+      "query": "print"
+    },
+    {
+      "error": "HTTPError",
+      "object_id": 58028,
+      "query": "print"
+    }
+  ],
+  "requested": 340
+}

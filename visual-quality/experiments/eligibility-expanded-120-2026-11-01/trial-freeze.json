@@ -1,0 +1,18 @@
+{
+  "frozen_at": "2026-11-01T20:00:42.796469+00:00",
+  "inputs": {
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-expanded-120-2026-11-01/reference-manifest.json": "db27f989d0f727fb904839ad30a6b1d3ba59c0cf6dd17064c07ff417a1a35afe",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-expanded-120-2026-11-01/variants.json": "48a8ac48ef858fb11a75fccb1a9c5ffbaaa2b7e0d07ffd2393eb6fe2ee0abdf6",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-expanded-120-2026-11-01/previous-prompts.json": "a9b0c6d419286b7d83d29d1c420ae0ea46822ad6f39976a4915b441f1436aeda",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-expanded-120-2026-11-01/protocol.md": "ca2bef03e6eb6ebf44e6f59c9669bbcf71dd7ed1d89513871a862dc2dfcb6de1",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-expanded-120-2026-11-01/runner.py": "ba3c1891427db06536d2921ebf9c39db7da2c42e1f68ba58b7cdbfcf971d5fe9",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-expanded-120-2026-11-01/drive.py": "11eeb6087ab6dd3c80e49b6c6d9a434911d9d9a14dbcd04e7dba2857cdfbb077",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-expanded-120-2026-11-01/run.zsh": "fd7094a4241afb61f22fdfc0693d8515aabaa86b31bdce5cdcb6fafb472ee023",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/api-routes.json": "5d39edf4f983a4f5ff3e9489213f50a6c861048e78575369ce20f5c8d662cd08",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/api-decision-prompts.json": "efeda1aaf70e0cfb6200100b7ea2a78cbff9f4179b8ddba9a5810f23b9f219a1",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/api_contract.py": "510b5177d5ae02284ba44533f3412a3ef9d51706937db247cdad59d8ddbd57a9",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/dual-score-trial-2026-10-27/wire.py": "ebbeed1c93208b1533c869d175301df32f49a8a8e8e04336d11c0c8c1f3e9376"
+  },
+  "heldout_used_for_prompt_selection": false,
+  "heldout_notes": "Ten historical natural cases previously scored in the 4,000-image corpus; not used in earlier eligibility optimization."
+}

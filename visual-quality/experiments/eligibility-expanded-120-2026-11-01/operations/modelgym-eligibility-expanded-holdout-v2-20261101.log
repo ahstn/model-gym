@@ -1,0 +1,8 @@
+Started modelgym-eligibility-expanded-holdout-v2-20261101.service - Score expanded holdout with corrected partition filter.
+{"time": "2026-11-01T20:11:36.506071+00:00", "round": "holdout-original", "jobs": 240, "event": "start"}
+{"time": "2026-11-01T20:12:34.728403+00:00", "round": "holdout-original", "counts": {"valid": 239, "exhausted_503": 1}, "ledger": {"liquid": {"known_usd": "0.06879404", "unpriced_attempts": 0, "liability_usd": "0.06879404"}, "jev": {"known_usd": "0.247706886", "unpriced_attempts": 286, "liability_usd": "3.396580614"}}, "stopped": false}
+{"time": "2026-11-01T20:12:34.729755+00:00", "round": "holdout-previous", "jobs": 240, "event": "start"}
+{"time": "2026-11-01T20:13:29.118395+00:00", "round": "holdout-previous", "counts": {"valid": 239, "exhausted_503": 1}, "ledger": {"liquid": {"known_usd": "0.07412344", "unpriced_attempts": 0, "liability_usd": "0.07412344"}, "jev": {"known_usd": "0.266683872", "unpriced_attempts": 308, "liability_usd": "3.657778656"}}, "stopped": false}
+{"time": "2026-11-01T20:13:29.119775+00:00", "round": "holdout-selected", "jobs": 240, "event": "start"}
+{"time": "2026-11-01T20:14:25.473333+00:00", "round": "holdout-selected", "counts": {"valid": 238, "exhausted_503": 2}, "ledger": {"liquid": {"known_usd": "0.07945284", "unpriced_attempts": 0, "liability_usd": "0.07945284"}, "jev": {"known_usd": "0.285588954", "unpriced_attempts": 336, "liability_usd": "3.984965082"}}, "stopped": false}
+modelgym-eligibility-expanded-holdout-v2-20261101.service: Consumed 20.398s CPU time over 2min 49.216s wall clock time, 120.9M memory peak.

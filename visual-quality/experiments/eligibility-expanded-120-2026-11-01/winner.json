@@ -1,0 +1,4831 @@
+{
+  "created_at": "2026-11-01T20:10:48.976545+00:00",
+  "rule_sha256": "f337447a048a6bffba9b3fa9ba470d9f3aa49f232b0413f07534ec589c2127b2",
+  "reference_sha256": "db27f989d0f727fb904839ad30a6b1d3ba59c0cf6dd17064c07ff417a1a35afe",
+  "models": {
+    "liquid": {
+      "round": "previous",
+      "qualified_new_variants": 0,
+      "selected_rank": null
+    },
+    "jev": {
+      "round": "r14",
+      "qualified_new_variants": 6,
+      "selected_rank": [
+        2,
+        0,
+        2,
+        438,
+        "r14"
+      ]
+    }
+  },
+  "development": {
+    "liquid": {
+      "original": {
+        "expected": 120,
+        "valid": 120,
+        "excluded_expected": 60,
+        "eligible_expected": 60,
+        "excluded_valid": 60,
+        "eligible_valid": 60,
+        "missed_exclusions": 33,
+        "false_floors": 0,
+        "correct_exclusions": 27,
+        "correct_eligible": 60,
+        "missing_ids": [],
+        "false_floor_ids": [],
+        "missed_exclusion_ids": [
+          "X0011",
+          "X0003",
+          "X0018",
+          "X0015",
+          "X0014",
+          "X0020",
+          "R3554",
+          "X0006",
+          "X0022",
+          "X0010",
+          "X0019",
+          "X0009",
+          "R1381",
+          "X0002",
+          "X0025",
+          "X0013",
+          "X0007",
+          "R2037",
+          "X0005",
+          "X0028",
+          "X0012",
+          "R0580",
+          "X0027",
+          "X0024",
+          "X0008",
+          "X0021",
+          "X0017",
+          "X0023",
+          "X0004",
+          "X0016",
+          "X0001",
+          "X0026",
+          "R2455"
+        ],
+        "by_group": {
+          "render": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "synthetic_screenshot": {
+            "expected": 28,
+            "valid": 28,
+            "errors": 28
+          },
+          "physical_context": {
+            "expected": 30,
+            "valid": 30,
+            "errors": 0
+          },
+          "chart": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "photo_scene": {
+            "expected": 30,
+            "valid": 30,
+            "errors": 0
+          },
+          "historical_flat": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 5
+          },
+          "museum_flat": {
+            "expected": 2,
+            "valid": 2,
+            "errors": 0
+          }
+        }
+      },
+      "previous": {
+        "expected": 120,
+        "valid": 120,
+        "excluded_expected": 60,
+        "eligible_expected": 60,
+        "excluded_valid": 60,
+        "eligible_valid": 60,
+        "missed_exclusions": 1,
+        "false_floors": 0,
+        "correct_exclusions": 59,
+        "correct_eligible": 60,
+        "missing_ids": [],
+        "false_floor_ids": [],
+        "missed_exclusion_ids": [
+          "R1381"
+        ],
+        "by_group": {
+          "render": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "synthetic_screenshot": {
+            "expected": 28,
+            "valid": 28,
+            "errors": 0
+          },
+          "physical_context": {
+            "expected": 30,
+            "valid": 30,
+            "errors": 0
+          },
+          "chart": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "photo_scene": {
+            "expected": 30,
+            "valid": 30,
+            "errors": 0
+          },
+          "historical_flat": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 1
+          },
+          "museum_flat": {
+            "expected": 2,
+            "valid": 2,
+            "errors": 0
+          }
+        }
+      },
+      "rounds": {
+        "r11": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 2,
+            "false_floors": 0,
+            "correct_exclusions": 58,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 2
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 2,
+              "false_floors": 0,
+              "correct_exclusions": 58,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 2
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.009517381520348412,
+                "mean_absolute_change": 0.056859648311712245,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.013461958463546801,
+                "mean_absolute_change": 0.05191999434124883,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 2,
+          "qualifies": false
+        },
+        "r12": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 3,
+            "false_floors": 0,
+            "correct_exclusions": 57,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 3
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 3,
+              "false_floors": 0,
+              "correct_exclusions": 57,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 3
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.028339119550316094,
+                "mean_absolute_change": 0.06780688409331062,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.00504618581203012,
+                "mean_absolute_change": 0.062196091521975,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 3,
+          "qualifies": false
+        },
+        "r13": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 3,
+            "false_floors": 0,
+            "correct_exclusions": 57,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 3
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 3,
+              "false_floors": 0,
+              "correct_exclusions": 57,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 3
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.018681336101005707,
+                "mean_absolute_change": 0.059733246594381735,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.0012354279134831855,
+                "mean_absolute_change": 0.04551401262399026,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 3,
+          "qualifies": false
+        },
+        "r14": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 1,
+            "false_floors": 0,
+            "correct_exclusions": 59,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 1
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.02225596678462255,
+                "mean_absolute_change": 0.06752616855583009,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.010174459205734177,
+                "mean_absolute_change": 0.05359290058103086,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 1,
+          "qualifies": false
+        },
+        "r15": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 59,
+            "false_floors": 59,
+            "correct_exclusions": 1,
+            "correct_eligible": 1,
+            "missing_ids": [],
+            "false_floor_ids": [
+              "C4734",
+              "C5186",
+              "C5220",
+              "C4843",
+              "C0154",
+              "C4541",
+              "C0543",
+              "C1883",
+              "C5181",
+              "C4770",
+              "C4869",
+              "C0936",
+              "C4936",
+              "C5307",
+              "C4522",
+              "C0609",
+              "C2821",
+              "C5057",
+              "C3622",
+              "C1616",
+              "C4167",
+              "C2904",
+              "C3107",
+              "C4989",
+              "C0466",
+              "C5120",
+              "C4025",
+              "C0251",
+              "C0776",
+              "C0217",
+              "C1930",
+              "C5191",
+              "C0592",
+              "C0584",
+              "C1189",
+              "C4111",
+              "C4831",
+              "C1487",
+              "C4507",
+              "C4971",
+              "C2017",
+              "C2091",
+              "C4666",
+              "C3428",
+              "C4271",
+              "C0883",
+              "C0535",
+              "C4576",
+              "C0052",
+              "C3242",
+              "C4886",
+              "C4701",
+              "C3952",
+              "C2106",
+              "C3592",
+              "C5017",
+              "C4620",
+              "C2354",
+              "C5103"
+            ],
+            "missed_exclusion_ids": [
+              "C5457",
+              "X0011",
+              "X0003",
+              "C5496",
+              "C5352",
+              "X0018",
+              "X0015",
+              "C0388",
+              "X0014",
+              "X0020",
+              "C5487",
+              "R3554",
+              "C0812",
+              "R3373",
+              "X0006",
+              "R2563",
+              "X0022",
+              "C5449",
+              "C5414",
+              "X0010",
+              "M787866",
+              "C5450",
+              "X0019",
+              "C5346",
+              "X0009",
+              "X0002",
+              "X0025",
+              "C5398",
+              "C5392",
+              "C5378",
+              "X0013",
+              "X0007",
+              "R2037",
+              "X0005",
+              "X0028",
+              "X0012",
+              "R0580",
+              "C5390",
+              "X0027",
+              "C5430",
+              "R1377",
+              "X0024",
+              "M334196",
+              "C0938",
+              "X0008",
+              "C5403",
+              "R2362",
+              "C5342",
+              "X0021",
+              "C5380",
+              "X0017",
+              "X0023",
+              "X0004",
+              "R1393",
+              "X0016",
+              "X0001",
+              "X0026",
+              "C5446",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 10
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 28
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 29
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 10
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 30
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 9
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 2
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 59,
+              "false_floors": 59,
+              "correct_exclusions": 1,
+              "correct_eligible": 1,
+              "missing_ids": [],
+              "false_floor_ids": [
+                "C4734",
+                "C5186",
+                "C5220",
+                "C4843",
+                "C0154",
+                "C4541",
+                "C0543",
+                "C1883",
+                "C5181",
+                "C4770",
+                "C4869",
+                "C0936",
+                "C4936",
+                "C5307",
+                "C4522",
+                "C0609",
+                "C2821",
+                "C5057",
+                "C3622",
+                "C1616",
+                "C4167",
+                "C2904",
+                "C3107",
+                "C4989",
+                "C0466",
+                "C5120",
+                "C4025",
+                "C0251",
+                "C0776",
+                "C0217",
+                "C1930",
+                "C5191",
+                "C0592",
+                "C0584",
+                "C1189",
+                "C4111",
+                "C4831",
+                "C1487",
+                "C4507",
+                "C4971",
+                "C2017",
+                "C2091",
+                "C4666",
+                "C3428",
+                "C4271",
+                "C0883",
+                "C0535",
+                "C4576",
+                "C0052",
+                "C3242",
+                "C4886",
+                "C4701",
+                "C3952",
+                "C2106",
+                "C3592",
+                "C5017",
+                "C4620",
+                "C2354",
+                "C5103"
+              ],
+              "missed_exclusion_ids": [
+                "C5457",
+                "X0011",
+                "X0003",
+                "C5496",
+                "C5352",
+                "X0018",
+                "X0015",
+                "C0388",
+                "X0014",
+                "X0020",
+                "C5487",
+                "R3554",
+                "C0812",
+                "R3373",
+                "X0006",
+                "R2563",
+                "X0022",
+                "C5449",
+                "C5414",
+                "X0010",
+                "M787866",
+                "C5450",
+                "X0019",
+                "C5346",
+                "X0009",
+                "X0002",
+                "X0025",
+                "C5398",
+                "C5392",
+                "C5378",
+                "X0013",
+                "X0007",
+                "R2037",
+                "X0005",
+                "X0028",
+                "X0012",
+                "R0580",
+                "C5390",
+                "X0027",
+                "C5430",
+                "R1377",
+                "X0024",
+                "M334196",
+                "C0938",
+                "X0008",
+                "C5403",
+                "R2362",
+                "C5342",
+                "X0021",
+                "C5380",
+                "X0017",
+                "X0023",
+                "X0004",
+                "R1393",
+                "X0016",
+                "X0001",
+                "X0026",
+                "C5446",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 10
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 28
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 29
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 10
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 30
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 9
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 2
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.02740947755980667,
+                "mean_absolute_change": 0.07308143661056474,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.012723421479366353,
+                "mean_absolute_change": 0.06037575454981373,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 118,
+          "qualifies": false
+        },
+        "r16": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 2,
+            "false_floors": 0,
+            "correct_exclusions": 58,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 2
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 2,
+              "false_floors": 0,
+              "correct_exclusions": 58,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 2
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.028387933792632828,
+                "mean_absolute_change": 0.06180284283932278,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.005204889936479192,
+                "mean_absolute_change": 0.059909734638810934,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 2,
+          "qualifies": false
+        },
+        "r17": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 4,
+            "false_floors": 0,
+            "correct_exclusions": 56,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037",
+              "X0026",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 1
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 3
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "X0026",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 1
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 3
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.014735259836981667,
+                "mean_absolute_change": 0.07231251558072524,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.002168099394731989,
+                "mean_absolute_change": 0.05476368204171663,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 4,
+          "qualifies": false
+        },
+        "r18": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 4,
+            "false_floors": 0,
+            "correct_exclusions": 56,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "M787866",
+              "R1381",
+              "R2037",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 3
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 1
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "M787866",
+                "R1381",
+                "R2037",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 3
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 1
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.028223922466159353,
+                "mean_absolute_change": 0.06879629916100968,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.010777326120656383,
+                "mean_absolute_change": 0.05196023749834669,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 4,
+          "qualifies": false
+        },
+        "r19": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 3,
+            "false_floors": 0,
+            "correct_exclusions": 57,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 3
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 3,
+              "false_floors": 0,
+              "correct_exclusions": 57,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 3
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.024376791526465026,
+                "mean_absolute_change": 0.06135886557143935,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.010045008342802838,
+                "mean_absolute_change": 0.05488078294414216,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 3,
+          "qualifies": false
+        },
+        "r20": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 2,
+            "false_floors": 0,
+            "correct_exclusions": 58,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 2
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 59,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 2,
+              "false_floors": 0,
+              "correct_exclusions": 58,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 2
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.019373668504275705,
+                "mean_absolute_change": 0.06715916491095246,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.001989860743313639,
+                "mean_absolute_change": 0.05604356446660626,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 2,
+          "qualifies": false
+        }
+      }
+    },
+    "jev": {
+      "original": {
+        "expected": 120,
+        "valid": 119,
+        "excluded_expected": 60,
+        "eligible_expected": 60,
+        "excluded_valid": 59,
+        "eligible_valid": 60,
+        "missed_exclusions": 28,
+        "false_floors": 0,
+        "correct_exclusions": 31,
+        "correct_eligible": 60,
+        "missing_ids": [
+          "M787866"
+        ],
+        "false_floor_ids": [],
+        "missed_exclusion_ids": [
+          "X0011",
+          "X0003",
+          "X0018",
+          "X0014",
+          "X0020",
+          "R3554",
+          "X0006",
+          "X0010",
+          "X0019",
+          "R1381",
+          "X0025",
+          "X0013",
+          "X0007",
+          "R2037",
+          "X0005",
+          "X0028",
+          "X0012",
+          "R0580",
+          "X0027",
+          "X0024",
+          "M334196",
+          "X0008",
+          "X0021",
+          "X0017",
+          "X0004",
+          "X0016",
+          "X0026",
+          "R2455"
+        ],
+        "by_group": {
+          "render": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "synthetic_screenshot": {
+            "expected": 28,
+            "valid": 28,
+            "errors": 22
+          },
+          "physical_context": {
+            "expected": 30,
+            "valid": 30,
+            "errors": 0
+          },
+          "chart": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "photo_scene": {
+            "expected": 30,
+            "valid": 30,
+            "errors": 0
+          },
+          "historical_flat": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 5
+          },
+          "museum_flat": {
+            "expected": 2,
+            "valid": 1,
+            "errors": 1
+          }
+        }
+      },
+      "previous": {
+        "expected": 120,
+        "valid": 120,
+        "excluded_expected": 60,
+        "eligible_expected": 60,
+        "excluded_valid": 60,
+        "eligible_valid": 60,
+        "missed_exclusions": 4,
+        "false_floors": 0,
+        "correct_exclusions": 56,
+        "correct_eligible": 60,
+        "missing_ids": [],
+        "false_floor_ids": [],
+        "missed_exclusion_ids": [
+          "R1381",
+          "R2037",
+          "R0580",
+          "R2455"
+        ],
+        "by_group": {
+          "render": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "synthetic_screenshot": {
+            "expected": 28,
+            "valid": 28,
+            "errors": 0
+          },
+          "physical_context": {
+            "expected": 30,
+            "valid": 30,
+            "errors": 0
+          },
+          "chart": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "photo_scene": {
+            "expected": 30,
+            "valid": 30,
+            "errors": 0
+          },
+          "historical_flat": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 4
+          },
+          "museum_flat": {
+            "expected": 2,
+            "valid": 2,
+            "errors": 0
+          }
+        }
+      },
+      "rounds": {
+        "r11": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 3,
+            "false_floors": 0,
+            "correct_exclusions": 57,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 3
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R0580",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 4
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 3,
+              "false_floors": 0,
+              "correct_exclusions": 57,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 3
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.0045000000000000075,
+                "mean_absolute_change": 0.024833333333333426,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.007833333333333319,
+                "mean_absolute_change": 0.019499999999999986,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 3,
+          "qualifies": true
+        },
+        "r12": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 3,
+            "false_floors": 0,
+            "correct_exclusions": 57,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 3
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R0580",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 4
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 3,
+              "false_floors": 0,
+              "correct_exclusions": 57,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 3
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.003833333333333392,
+                "mean_absolute_change": 0.022833333333333327,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.005166666666666656,
+                "mean_absolute_change": 0.023166666666666686,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 3,
+          "qualifies": true
+        },
+        "r13": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 7,
+            "false_floors": 0,
+            "correct_exclusions": 53,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037",
+              "X0028",
+              "X0008",
+              "X0004",
+              "X0026",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 4
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 3
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R0580",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 4
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 7,
+              "false_floors": 0,
+              "correct_exclusions": 53,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "X0028",
+                "X0008",
+                "X0004",
+                "X0026",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 4
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 3
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.005000000000000042,
+                "mean_absolute_change": 0.024666666666666667,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.0036666666666666328,
+                "mean_absolute_change": 0.019999999999999997,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 7,
+          "qualifies": false
+        },
+        "r14": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 2,
+            "false_floors": 0,
+            "correct_exclusions": 58,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 2
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R0580",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 4
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 2,
+              "false_floors": 0,
+              "correct_exclusions": 58,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 2
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.0029999999999999805,
+                "mean_absolute_change": 0.026000000000000082,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.0021666666666666427,
+                "mean_absolute_change": 0.016499999999999966,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 2,
+          "qualifies": true
+        },
+        "r15": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 59,
+            "false_floors": 56,
+            "correct_exclusions": 1,
+            "correct_eligible": 4,
+            "missing_ids": [],
+            "false_floor_ids": [
+              "C4734",
+              "C5186",
+              "C5220",
+              "C4843",
+              "C0154",
+              "C4541",
+              "C0543",
+              "C1883",
+              "C5181",
+              "C4770",
+              "C4869",
+              "C0936",
+              "C4936",
+              "C5307",
+              "C4522",
+              "C0609",
+              "C2821",
+              "C5057",
+              "C3622",
+              "C1616",
+              "C4167",
+              "C2904",
+              "C3107",
+              "C0466",
+              "C5120",
+              "C4025",
+              "C0251",
+              "C0776",
+              "C0217",
+              "C1930",
+              "C5191",
+              "C0592",
+              "C0584",
+              "C1189",
+              "C4111",
+              "C4831",
+              "C1487",
+              "C4507",
+              "C2017",
+              "C2091",
+              "C4666",
+              "C3428",
+              "C4271",
+              "C0883",
+              "C0535",
+              "C4576",
+              "C0052",
+              "C3242",
+              "C4701",
+              "C3952",
+              "C2106",
+              "C3592",
+              "C5017",
+              "C4620",
+              "C2354",
+              "C5103"
+            ],
+            "missed_exclusion_ids": [
+              "C5457",
+              "X0011",
+              "X0003",
+              "C5496",
+              "C5352",
+              "X0018",
+              "X0015",
+              "C0388",
+              "X0014",
+              "X0020",
+              "C5487",
+              "R3554",
+              "C0812",
+              "R3373",
+              "X0006",
+              "R2563",
+              "X0022",
+              "C5449",
+              "C5414",
+              "X0010",
+              "M787866",
+              "C5450",
+              "X0019",
+              "C5346",
+              "X0009",
+              "X0002",
+              "X0025",
+              "C5398",
+              "C5392",
+              "C5378",
+              "X0013",
+              "X0007",
+              "R2037",
+              "X0005",
+              "X0028",
+              "X0012",
+              "R0580",
+              "C5390",
+              "X0027",
+              "C5430",
+              "R1377",
+              "X0024",
+              "M334196",
+              "C0938",
+              "X0008",
+              "C5403",
+              "R2362",
+              "C5342",
+              "X0021",
+              "C5380",
+              "X0017",
+              "X0023",
+              "X0004",
+              "R1393",
+              "X0016",
+              "X0001",
+              "X0026",
+              "C5446",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 10
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 28
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 26
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 10
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 30
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 9
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 2
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R0580",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 4
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 59,
+              "false_floors": 56,
+              "correct_exclusions": 1,
+              "correct_eligible": 4,
+              "missing_ids": [],
+              "false_floor_ids": [
+                "C4734",
+                "C5186",
+                "C5220",
+                "C4843",
+                "C0154",
+                "C4541",
+                "C0543",
+                "C1883",
+                "C5181",
+                "C4770",
+                "C4869",
+                "C0936",
+                "C4936",
+                "C5307",
+                "C4522",
+                "C0609",
+                "C2821",
+                "C5057",
+                "C3622",
+                "C1616",
+                "C4167",
+                "C2904",
+                "C3107",
+                "C0466",
+                "C5120",
+                "C4025",
+                "C0251",
+                "C0776",
+                "C0217",
+                "C1930",
+                "C5191",
+                "C0592",
+                "C0584",
+                "C1189",
+                "C4111",
+                "C4831",
+                "C1487",
+                "C4507",
+                "C2017",
+                "C2091",
+                "C4666",
+                "C3428",
+                "C4271",
+                "C0883",
+                "C0535",
+                "C4576",
+                "C0052",
+                "C3242",
+                "C4701",
+                "C3952",
+                "C2106",
+                "C3592",
+                "C5017",
+                "C4620",
+                "C2354",
+                "C5103"
+              ],
+              "missed_exclusion_ids": [
+                "C5457",
+                "X0011",
+                "X0003",
+                "C5496",
+                "C5352",
+                "X0018",
+                "X0015",
+                "C0388",
+                "X0014",
+                "X0020",
+                "C5487",
+                "R3554",
+                "C0812",
+                "R3373",
+                "X0006",
+                "R2563",
+                "X0022",
+                "C5449",
+                "C5414",
+                "X0010",
+                "M787866",
+                "C5450",
+                "X0019",
+                "C5346",
+                "X0009",
+                "X0002",
+                "X0025",
+                "C5398",
+                "C5392",
+                "C5378",
+                "X0013",
+                "X0007",
+                "R2037",
+                "X0005",
+                "X0028",
+                "X0012",
+                "R0580",
+                "C5390",
+                "X0027",
+                "C5430",
+                "R1377",
+                "X0024",
+                "M334196",
+                "C0938",
+                "X0008",
+                "C5403",
+                "R2362",
+                "C5342",
+                "X0021",
+                "C5380",
+                "X0017",
+                "X0023",
+                "X0004",
+                "R1393",
+                "X0016",
+                "X0001",
+                "X0026",
+                "C5446",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 10
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 28
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 26
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 10
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 30
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 9
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 2
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.003666666666666707,
+                "mean_absolute_change": 0.028666666666666677,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.005333333333333324,
+                "mean_absolute_change": 0.018666666666666647,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 115,
+          "qualifies": false
+        },
+        "r16": {
+          "metrics": {
+            "expected": 120,
+            "valid": 119,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 59,
+            "missed_exclusions": 2,
+            "false_floors": 0,
+            "correct_exclusions": 58,
+            "correct_eligible": 59,
+            "missing_ids": [
+              "C5103"
+            ],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 29,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 2
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 119,
+            "baseline_paired": {
+              "expected": 119,
+              "valid": 119,
+              "excluded_expected": 60,
+              "eligible_expected": 59,
+              "excluded_valid": 60,
+              "eligible_valid": 59,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 59,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R0580",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 29,
+                  "valid": 29,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 4
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 119,
+              "valid": 119,
+              "excluded_expected": 60,
+              "eligible_expected": 59,
+              "excluded_valid": 60,
+              "eligible_valid": 59,
+              "missed_exclusions": 2,
+              "false_floors": 0,
+              "correct_exclusions": 58,
+              "correct_eligible": 59,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 29,
+                  "valid": 29,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 2
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 59,
+                "mean_signed_change": 0.0006779661016948782,
+                "mean_absolute_change": 0.025762711864406804,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 59,
+                "mean_signed_change": 0.004237288135593179,
+                "mean_absolute_change": 0.02050847457627119,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 1,
+          "rank_error_with_missing_penalty": 3,
+          "qualifies": true
+        },
+        "r17": {
+          "metrics": {
+            "expected": 120,
+            "valid": 119,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 59,
+            "missed_exclusions": 3,
+            "false_floors": 0,
+            "correct_exclusions": 57,
+            "correct_eligible": 59,
+            "missing_ids": [
+              "C1189"
+            ],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 29,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 3
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 119,
+            "baseline_paired": {
+              "expected": 119,
+              "valid": 119,
+              "excluded_expected": 60,
+              "eligible_expected": 59,
+              "excluded_valid": 60,
+              "eligible_valid": 59,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 59,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R0580",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 29,
+                  "valid": 29,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 4
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 119,
+              "valid": 119,
+              "excluded_expected": 60,
+              "eligible_expected": 59,
+              "excluded_valid": 60,
+              "eligible_valid": 59,
+              "missed_exclusions": 3,
+              "false_floors": 0,
+              "correct_exclusions": 57,
+              "correct_eligible": 59,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 29,
+                  "valid": 29,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 3
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 59,
+                "mean_signed_change": -0.005254237288135606,
+                "mean_absolute_change": 0.022542372881355924,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 59,
+                "mean_signed_change": 0.006271186440677987,
+                "mean_absolute_change": 0.01983050847457628,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 1,
+          "rank_error_with_missing_penalty": 4,
+          "qualifies": true
+        },
+        "r18": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 31,
+            "false_floors": 60,
+            "correct_exclusions": 29,
+            "correct_eligible": 0,
+            "missing_ids": [],
+            "false_floor_ids": [
+              "C4734",
+              "C5186",
+              "C5220",
+              "C4843",
+              "C0154",
+              "C4541",
+              "C0543",
+              "C1883",
+              "C5181",
+              "C4770",
+              "C4869",
+              "C0936",
+              "C4936",
+              "C5307",
+              "C4522",
+              "C0609",
+              "C2821",
+              "C5057",
+              "C3622",
+              "C1616",
+              "C4167",
+              "C2904",
+              "C3107",
+              "C4989",
+              "C0466",
+              "C5120",
+              "C4025",
+              "C0251",
+              "C0776",
+              "C0217",
+              "C1930",
+              "C5191",
+              "C0592",
+              "C0584",
+              "C1189",
+              "C4111",
+              "C4831",
+              "C1487",
+              "C4507",
+              "C4971",
+              "C2017",
+              "C2091",
+              "C4666",
+              "C3428",
+              "C4271",
+              "C0883",
+              "C0535",
+              "C4576",
+              "C0052",
+              "C3242",
+              "C5008",
+              "C4886",
+              "C4701",
+              "C3952",
+              "C2106",
+              "C3592",
+              "C5017",
+              "C4620",
+              "C2354",
+              "C5103"
+            ],
+            "missed_exclusion_ids": [
+              "C5457",
+              "X0011",
+              "C5496",
+              "C5352",
+              "C0388",
+              "C5487",
+              "R3554",
+              "C0812",
+              "R3373",
+              "R2563",
+              "C5449",
+              "C5414",
+              "M787866",
+              "C5450",
+              "C5346",
+              "C5398",
+              "C5392",
+              "C5378",
+              "R0580",
+              "C5390",
+              "C5430",
+              "R1377",
+              "M334196",
+              "C0938",
+              "C5403",
+              "R2362",
+              "C5342",
+              "C5380",
+              "R1393",
+              "C5446",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 10
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 1
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 30
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 10
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 30
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 8
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 2
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R0580",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 4
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 31,
+              "false_floors": 60,
+              "correct_exclusions": 29,
+              "correct_eligible": 0,
+              "missing_ids": [],
+              "false_floor_ids": [
+                "C4734",
+                "C5186",
+                "C5220",
+                "C4843",
+                "C0154",
+                "C4541",
+                "C0543",
+                "C1883",
+                "C5181",
+                "C4770",
+                "C4869",
+                "C0936",
+                "C4936",
+                "C5307",
+                "C4522",
+                "C0609",
+                "C2821",
+                "C5057",
+                "C3622",
+                "C1616",
+                "C4167",
+                "C2904",
+                "C3107",
+                "C4989",
+                "C0466",
+                "C5120",
+                "C4025",
+                "C0251",
+                "C0776",
+                "C0217",
+                "C1930",
+                "C5191",
+                "C0592",
+                "C0584",
+                "C1189",
+                "C4111",
+                "C4831",
+                "C1487",
+                "C4507",
+                "C4971",
+                "C2017",
+                "C2091",
+                "C4666",
+                "C3428",
+                "C4271",
+                "C0883",
+                "C0535",
+                "C4576",
+                "C0052",
+                "C3242",
+                "C5008",
+                "C4886",
+                "C4701",
+                "C3952",
+                "C2106",
+                "C3592",
+                "C5017",
+                "C4620",
+                "C2354",
+                "C5103"
+              ],
+              "missed_exclusion_ids": [
+                "C5457",
+                "X0011",
+                "C5496",
+                "C5352",
+                "C0388",
+                "C5487",
+                "R3554",
+                "C0812",
+                "R3373",
+                "R2563",
+                "C5449",
+                "C5414",
+                "M787866",
+                "C5450",
+                "C5346",
+                "C5398",
+                "C5392",
+                "C5378",
+                "R0580",
+                "C5390",
+                "C5430",
+                "R1377",
+                "M334196",
+                "C0938",
+                "C5403",
+                "R2362",
+                "C5342",
+                "C5380",
+                "R1393",
+                "C5446",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 10
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 1
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 30
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 10
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 30
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 8
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 2
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.0019999999999999758,
+                "mean_absolute_change": 0.026333333333333396,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.005166666666666645,
+                "mean_absolute_change": 0.020499999999999984,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 91,
+          "qualifies": false
+        },
+        "r19": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 3,
+            "false_floors": 0,
+            "correct_exclusions": 57,
+            "correct_eligible": 60,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "R1381",
+              "R2037",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 0
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 0
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 3
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R0580",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 4
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 3,
+              "false_floors": 0,
+              "correct_exclusions": 57,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 3
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.0030000000000000174,
+                "mean_absolute_change": 0.020333333333333387,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.003166666666666647,
+                "mean_absolute_change": 0.01850000000000001,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 3,
+          "qualifies": true
+        },
+        "r20": {
+          "metrics": {
+            "expected": 120,
+            "valid": 120,
+            "excluded_expected": 60,
+            "eligible_expected": 60,
+            "excluded_valid": 60,
+            "eligible_valid": 60,
+            "missed_exclusions": 37,
+            "false_floors": 10,
+            "correct_exclusions": 23,
+            "correct_eligible": 50,
+            "missing_ids": [],
+            "false_floor_ids": [
+              "C4734",
+              "C0936",
+              "C2904",
+              "C0466",
+              "C4025",
+              "C0776",
+              "C1189",
+              "C2091",
+              "C3428",
+              "C3952"
+            ],
+            "missed_exclusion_ids": [
+              "C5457",
+              "X0011",
+              "C5496",
+              "X0015",
+              "C0388",
+              "X0014",
+              "C5487",
+              "C0812",
+              "R2563",
+              "C5449",
+              "C5414",
+              "M787866",
+              "C5450",
+              "X0019",
+              "C5346",
+              "X0009",
+              "R1381",
+              "X0025",
+              "C5398",
+              "C5392",
+              "R2037",
+              "X0005",
+              "X0028",
+              "R0580",
+              "X0027",
+              "C5430",
+              "C0938",
+              "R2362",
+              "C5342",
+              "X0021",
+              "C5380",
+              "X0017",
+              "X0023",
+              "R1393",
+              "X0001",
+              "C5446",
+              "R2455"
+            ],
+            "by_group": {
+              "render": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 9
+              },
+              "synthetic_screenshot": {
+                "expected": 28,
+                "valid": 28,
+                "errors": 13
+              },
+              "physical_context": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 1
+              },
+              "chart": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 7
+              },
+              "photo_scene": {
+                "expected": 30,
+                "valid": 30,
+                "errors": 9
+              },
+              "historical_flat": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 7
+              },
+              "museum_flat": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 1
+              }
+            }
+          },
+          "paired_vs_previous": {
+            "paired_cases": 120,
+            "baseline_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 4,
+              "false_floors": 0,
+              "correct_exclusions": 56,
+              "correct_eligible": 60,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "R1381",
+                "R2037",
+                "R0580",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 0
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 0
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 4
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 120,
+              "valid": 120,
+              "excluded_expected": 60,
+              "eligible_expected": 60,
+              "excluded_valid": 60,
+              "eligible_valid": 60,
+              "missed_exclusions": 37,
+              "false_floors": 10,
+              "correct_exclusions": 23,
+              "correct_eligible": 50,
+              "missing_ids": [],
+              "false_floor_ids": [
+                "C4734",
+                "C0936",
+                "C2904",
+                "C0466",
+                "C4025",
+                "C0776",
+                "C1189",
+                "C2091",
+                "C3428",
+                "C3952"
+              ],
+              "missed_exclusion_ids": [
+                "C5457",
+                "X0011",
+                "C5496",
+                "X0015",
+                "C0388",
+                "X0014",
+                "C5487",
+                "C0812",
+                "R2563",
+                "C5449",
+                "C5414",
+                "M787866",
+                "C5450",
+                "X0019",
+                "C5346",
+                "X0009",
+                "R1381",
+                "X0025",
+                "C5398",
+                "C5392",
+                "R2037",
+                "X0005",
+                "X0028",
+                "R0580",
+                "X0027",
+                "C5430",
+                "C0938",
+                "R2362",
+                "C5342",
+                "X0021",
+                "C5380",
+                "X0017",
+                "X0023",
+                "R1393",
+                "X0001",
+                "C5446",
+                "R2455"
+              ],
+              "by_group": {
+                "render": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 9
+                },
+                "synthetic_screenshot": {
+                  "expected": 28,
+                  "valid": 28,
+                  "errors": 13
+                },
+                "physical_context": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 1
+                },
+                "chart": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 7
+                },
+                "photo_scene": {
+                  "expected": 30,
+                  "valid": 30,
+                  "errors": 9
+                },
+                "historical_flat": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 7
+                },
+                "museum_flat": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 1
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 60,
+                "mean_signed_change": -0.004833333333333312,
+                "mean_absolute_change": 0.030166666666666682,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 60,
+                "mean_signed_change": 0.0064999999999999685,
+                "mean_absolute_change": 0.017166666666666674,
+                "changes_at_least_half_point": 0
+              }
+            }
+          },
+          "missing_on_previous_valid": 0,
+          "rank_error_with_missing_penalty": 47,
+          "qualifies": false
+        }
+      }
+    }
+  }
+}
