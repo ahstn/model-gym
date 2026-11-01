@@ -164,6 +164,46 @@ def accuracy_section(analysis: dict, panel: str, count: int) -> str:
     )
 
 
+def baseline_comparison_section(analysis: dict) -> str:
+    comparisons = analysis.get("baseline_comparisons", [])
+    if not comparisons:
+        return "## Exploratory baseline comparisons\n\nPaired baseline-versus-ensemble intervals are unavailable in this artifact."
+
+    def cell(result: dict) -> str:
+        bounds = result["ci95"]
+        interval_text = (
+            f"[{number(bounds[0], 3)}, {number(bounds[1], 3)}]" if bounds is not None else "CI unavailable"
+        )
+        return f"{number(result['estimate'], 3)} {interval_text} ({result['n_images']})"
+
+    rows = [
+        [
+            row["panel"].title(),
+            NAMES[row["model"]],
+            cell(row["technical_score"]),
+            cell(row["aesthetic_score"]),
+            cell(row["combined_error"]),
+        ]
+        for row in comparisons
+    ]
+    return "\n\n".join(
+        [
+            "## Exploratory baseline comparisons",
+            "Each difference is the individual baseline's MAE minus the fixed Luna/DeepSeek mean's MAE, on the same valid cases. Negative values favor the individual point estimate; positive values favor the ensemble. Cells show ΔMAE, paired source-family 95% interval and paired image count. Technical and aesthetic comparisons retain their own valid cases; combined error requires both tasks. These contrasts are exploratory and uncorrected for multiple comparisons, conditional on assistant labels. Small point-estimate gaps alone do not establish a meaningful winner; intervals spanning zero leave the direction unresolved.",
+            table(
+                (
+                    "Panel",
+                    "Individual baseline",
+                    "Tech ΔMAE [CI] (n)",
+                    "Aest ΔMAE [CI] (n)",
+                    "Combined ΔMAE [CI] (n)",
+                ),
+                rows,
+            ),
+        ]
+    )
+
+
 def treatment_section(analysis: dict) -> str:
     selected = [
         row
@@ -329,7 +369,7 @@ def ladder_section(analysis: dict) -> str:
     return "\n\n".join(
         [
             "## Controlled degradation ladders",
-            "All controlled families are retained. Technical scores are expected to be non-increasing from parent through the three severities; aesthetic monotonicity is not required. Ties and strict inversions are separate counts. Positive parent-minus-severity-3 values mean the original scored higher.",
+            "All controlled families are retained. These diagnostics describe whether technical scores decrease through the three severities; aesthetic monotonicity is not required. Ties and strict inversions are separate counts. Some mild changes are not visibly worse, and a photography-scope floor can legitimately produce ties. Positive parent-minus-severity-3 values mean the original scored higher. Independently verified comparisons, when available, appear in the supplemental review below.",
             table(
                 (
                     "Model",
@@ -342,7 +382,7 @@ def ladder_section(analysis: dict) -> str:
                 ),
                 rows,
             ),
-            ladder["verified_subset_status"] + ". " + ladder["pace_caveat"] + ".",
+            "This table retains the complete family set independently of the supplemental visual review. " + ladder["pace_caveat"] + ".",
         ]
     )
 
@@ -450,7 +490,13 @@ def render(analysis: dict, manifest: dict) -> str:
         f"Development results ({partitions['development']} images), pooled evaluation results and full-corpus score agreement are retained in analysis.json. Agreement on the {partitions['rehearsal']:,} nonbenchmark images does not measure accuracy because they have no independent reference labels."
     )
     parts.extend(
-        [treatment_section(analysis), scope_section(analysis), qc_section(analysis), ladder_section(analysis)]
+        [
+            baseline_comparison_section(analysis),
+            treatment_section(analysis),
+            scope_section(analysis),
+            qc_section(analysis),
+            ladder_section(analysis),
+        ]
     )
     timing = []
     for row in models:
@@ -511,8 +557,44 @@ def main() -> None:
     ]
     if matching != [digest]:
         raise ValueError("Report manifest does not match the audited analysis input")
+    text = render(analysis, manifest)
+    supplements = {}
+    for relative in (
+        "reference-reliability/report.md",
+        "controlled-report.md",
+        "protected-review/report.md",
+        "operations-report.md",
+        "lite-cost-report.md",
+    ):
+        source = args.analysis.parent / relative
+        if source.exists():
+            fragment = source.read_text().strip()
+            if fragment.startswith("# "):
+                fragment = "#" + fragment
+            marker = "## Total cost per model"
+            if text.count(marker) != 1:
+                raise ValueError("Final cost section must occur exactly once")
+            text = text.replace(marker, fragment + "\n\n" + marker)
+            supplements[str(source.resolve())] = hashlib.sha256(source.read_bytes()).hexdigest()
+    findings = args.analysis.parent / "final-findings.md"
+    if findings.exists():
+        heading, rest = text.split("\n", 1)
+        text = heading + "\n\n" + findings.read_text().strip() + "\n" + rest
+        supplements[str(findings.resolve())] = hashlib.sha256(findings.read_bytes()).hexdigest()
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(render(analysis, manifest))
+    args.output.write_text(text)
+    args.output.with_name("report-provenance.json").write_text(
+        json.dumps(
+            {
+                "analysis_sha256": hashlib.sha256(args.analysis.read_bytes()).hexdigest(),
+                "manifest_sha256": digest,
+                "renderer_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                "supplements": supplements,
+                "report_sha256": hashlib.sha256(args.output.read_bytes()).hexdigest(),
+            },
+            indent=2,
+        ) + "\n"
+    )
     print(json.dumps({"report": str(args.output.resolve()), "analysis_created_at": analysis["created_at"]}))
 
 

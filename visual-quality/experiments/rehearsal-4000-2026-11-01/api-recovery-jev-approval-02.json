@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-11-01T13:50:14.029341+00:00",
+  "route": "jev",
+  "replay_completed_attempts": false,
+  "operational_authorization": "Recurring identical HTTP503 image-processing failures at concurrency4. Continue only previously unattempted cases at concurrency1 as an explicit operational amendment; preserve all prior results and unknown bills. Halt on any new failure.",
+  "previous_approval_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/api-recovery-jev-approval-01.json",
+  "previous_approval_sha256": "804120b5eb96a01ddb6f8d96a4890558e4e64af126d6fee257ce7f8878a36d15",
+  "reviewed_attempts": [
+    {
+      "attempt_id": "rehearsal/baseline--R2717/01",
+      "raw_response_sha256": "6b900ea32e076f33f7fe287ad04aae43b3ffc152c8854aa11092595beeae018a",
+      "request_journal_sha256": "a9d6400363fe914b16be02c7af9aaa74b0887dddcd8c03a0fffc27bfdaabd3c9",
+      "request_sha256": "de26d8b48fac3f590bf6a777e64bc6c9927af4a8f2fdab13a349b05660d99042"
+    },
+    {
+      "attempt_id": "rehearsal/baseline--R1868/01",
+      "raw_response_sha256": "a188739568975fb4a4bc1af2d81a22484f3ccd0cb412f26799454989e9fd154e",
+      "request_journal_sha256": "367d2899228d8648b76bfc8f011a6d05790f83b12e5429137e7e8b700b14ae0d",
+      "request_sha256": "ca7e9b55f3b8495ed77e62fe60926247dbbce68d0519015477b7e4f94ea66b47"
+    },
+    {
+      "attempt_id": "rehearsal/baseline--R3985/01",
+      "raw_response_sha256": "4e7c7e55ed3aebf337b5bb6b67c1feff7dfb3aeed46f6e1aaa4e673b23cc8af7",
+      "request_journal_sha256": "4c5dac4168efd78bd8965c82f40cdcd763fbe33f406d8108b22b875a814ef9a5",
+      "request_sha256": "7b645996bd6bee8ed7380cf20d753544206a3a33fd07f96373a8c83fad08605d"
+    },
+    {
+      "attempt_id": "rehearsal/baseline--R0880/01",
+      "raw_response_sha256": "e8de1fc128e063c55c0334f9923133afdc9ef8c517748b77376e522f2c218046",
+      "request_journal_sha256": "e92cde7e4086cc99c093c57536f2ae006598ba294334c634536b8f7f94c14506",
+      "request_sha256": "3b5f0ab1aa0d0d196afc12dae73997ccd9c8a379e83d2224ef8c93472023f9a6"
+    }
+  ],
+  "newly_reviewed_case_ids": [
+    "R3985",
+    "R0880"
+  ],
+  "original_concurrency": 4,
+  "effective_concurrency": 1,
+  "rationale": "Test whether a lower dispatch rate avoids intermittent provider-side image-processing unavailability; causal effect is not yet established.",
+  "latency_reporting": "Preserve each request end-to-end latency. Segment concurrency1 measurements separately from original concurrency4 for any timing comparison.",
+  "frozen_plans_unchanged": true
+}

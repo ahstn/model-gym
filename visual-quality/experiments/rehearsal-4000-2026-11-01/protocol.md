@@ -1,6 +1,6 @@
 # Four-thousand-image rehearsal and fresh benchmark
 
-Authorized 1 November 2026. Status: preparation. This protocol is written before selection is finalized, reference review, and new scoring. Changes required by preparation will be recorded before inference rather than silently replacing a frozen run.
+Authorized 1 November 2026. Status: preparation. The protocol was opened before corpus selection and reference review. This revision includes preparation and preflight amendments made before any new model-scoring request; these are recorded in `preflight-amendments.json`. The primary reference rubric and original saved judgments are preserved. One confirmed historical duplicate was replaced before inference under the predeclared freshness rule; `benchmark-revisions.json` records the replacement and separate fresh blind review. Do not silently replace a frozen run.
 
 ## Scope
 

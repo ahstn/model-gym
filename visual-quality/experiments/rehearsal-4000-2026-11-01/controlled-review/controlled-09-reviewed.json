@@ -1,0 +1,527 @@
+{
+  "packet_sha256": "90e1d3f8bd5821b3a9b54b8b968fa424a0824a36814a81c8b578d002f9250028",
+  "reviewer": "independent_assistant_reference_repeat",
+  "families": [
+    {
+      "review_family_id": "F081",
+      "family_id": "megalith-d41bf53ce5402a072da387ad80776f75",
+      "contact_sheet_sha256": "130987ebcf4a7b7caeb8d6acec52b7c56c63c174b3bdc002d63ec3dff808d00a",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [
+        "R0965",
+        "R3262"
+      ],
+      "comparisons": [
+        {
+          "case_id": "R3262",
+          "view_sha256": "db270664df9f66f224a1f7c5fe892a28d096ce8731e65e5f189e34eed6c6c6e7",
+          "versus_parent": {
+            "comparison_case_id": "R0965",
+            "classification": "clear_degradation",
+            "evidence": "Native crops show coarser, patchier bark texture and reduced fine grain along the gray trunk surface."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0965",
+            "classification": "clear_degradation",
+            "evidence": "Native crops show coarser, patchier bark texture and reduced fine grain along the gray trunk surface."
+          }
+        },
+        {
+          "case_id": "R3420",
+          "view_sha256": "25b75a0e4decdd16cb3222e06656aeb790e523994633e20fbce13552abbba3b6",
+          "versus_parent": {
+            "comparison_case_id": "R0965",
+            "classification": "clear_degradation",
+            "evidence": "Bark ridges and peeling edges become more blocklike, with subtle surface texture lost relative to the parent."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3262",
+            "classification": "clear_degradation",
+            "evidence": "V2 further coarsens fine bark ridges and introduces stronger patch boundaries than V1."
+          }
+        },
+        {
+          "case_id": "R3736",
+          "view_sha256": "a9d3eb972f7f1d4e020f84edcd4d446d8f1652697ac48d642b7932363c8f8882",
+          "versus_parent": {
+            "comparison_case_id": "R0965",
+            "classification": "clear_degradation",
+            "evidence": "Large rectangular color patches and broken peeling contours replace detailed bark structure."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3420",
+            "classification": "clear_degradation",
+            "evidence": "V3 shows much larger blocks and severe contour damage beyond V2's finer artifacts."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F082",
+      "family_id": "megalith-d65fb7b5dd98b80ba782401a7c17a3f1",
+      "contact_sheet_sha256": "4b9c49c02fd73fb58d4ce7899237909362ae9d0e9f3c357a10d2c13dd7a6434a",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R1876",
+          "view_sha256": "2fc4ba2b51292ab922f609b314bc79b2fbb4cfb1cf4ead63f24bf18c7b8076a3",
+          "versus_parent": {
+            "comparison_case_id": "R0874",
+            "classification": "clear_degradation",
+            "evidence": "Surface pits and cracks soften visibly, and carved eyelid and lip edges are less distinct than in the parent."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0874",
+            "classification": "clear_degradation",
+            "evidence": "Surface pits and cracks soften visibly, and carved eyelid and lip edges are less distinct than in the parent."
+          }
+        },
+        {
+          "case_id": "R2905",
+          "view_sha256": "9481a9536d616f865c52ad38ac603b8706715debf9a4d7325409e8a9db9bda7f",
+          "versus_parent": {
+            "comparison_case_id": "R0874",
+            "classification": "clear_degradation",
+            "evidence": "Blur removes much of the sculpture's fine surface texture and softens its facial carving."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1876",
+            "classification": "clear_degradation",
+            "evidence": "V2 further merges cracks and pitting and broadens eye and mouth boundaries beyond V1."
+          }
+        },
+        {
+          "case_id": "R2436",
+          "view_sha256": "492fa8a630a0c096ae7f926ea4867b27bf4918ca39b89b4358591c85b01d4fc0",
+          "versus_parent": {
+            "comparison_case_id": "R0874",
+            "classification": "clear_degradation",
+            "evidence": "The carved face becomes broadly indistinct, with nearly all surface grain and fine contour detail lost."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2905",
+            "classification": "clear_degradation",
+            "evidence": "V3 removes remaining eye, nose, and crack definition that is still partly visible in V2."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F083",
+      "family_id": "megalith-d6b24a9796effac1acc338e06e755a3f",
+      "contact_sheet_sha256": "a2bf9299ce16d82ba2c3be59f03f2bd2f1ba1c4c52f97d8be51937649b01add9",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R3049",
+          "view_sha256": "68f6a9f47e9ace1fd6594a1b73f407c2c4c5e5d1ae0ca642b6ad636dd58ca1d4",
+          "versus_parent": {
+            "comparison_case_id": "R1026",
+            "classification": "clear_degradation",
+            "evidence": "Added fine grain is visible on skin, black clothing, and white shirt stripes compared with the cleaner parent."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1026",
+            "classification": "clear_degradation",
+            "evidence": "Added fine grain is visible on skin, black clothing, and white shirt stripes compared with the cleaner parent."
+          }
+        },
+        {
+          "case_id": "R3509",
+          "view_sha256": "81c2e87a2f7af702fa5cbe61c5e087028a3491f5f7d8ede23fe7a2a41cc95e9e",
+          "versus_parent": {
+            "comparison_case_id": "R1026",
+            "classification": "clear_degradation",
+            "evidence": "Colored noise visibly roughens faces and garment tones and obscures subtle fabric texture."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3049",
+            "classification": "clear_degradation",
+            "evidence": "V2 has substantially stronger speckling across skin and striped clothing than V1."
+          }
+        },
+        {
+          "case_id": "R2887",
+          "view_sha256": "f948c02bd5f13688b0614433cb257051cbbbe9b6f73ffcbe2fcfd3ca20014e4f",
+          "versus_parent": {
+            "comparison_case_id": "R1026",
+            "classification": "clear_degradation",
+            "evidence": "Heavy multicolored grain overlays the group and competes with fine clothing and facial detail."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3509",
+            "classification": "clear_degradation",
+            "evidence": "V3 further masks skin gradients and garment detail with much denser noise than V2."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F084",
+      "family_id": "megalith-d871dc1cb2d6554899e3bf2ba8f26741",
+      "contact_sheet_sha256": "9f1c61ea185a70a0b10317017f3854d36a042586bfe8796282f22f9a5281528e",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R3893",
+          "view_sha256": "d7a5219c67eee900610b884272e148bb9b7b9f387f1a7e5cb9c856c607f01b10",
+          "versus_parent": {
+            "comparison_case_id": "R2059",
+            "classification": "clear_degradation",
+            "evidence": "The hands, metal vessel, and robe texture lose fine definition compared with the parent's native crop."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2059",
+            "classification": "clear_degradation",
+            "evidence": "The hands, metal vessel, and robe texture lose fine definition compared with the parent's native crop."
+          }
+        },
+        {
+          "case_id": "R1914",
+          "view_sha256": "deb21e9bd539be9dd518434dbd5538539139e9b001a55a433acf4d23a969c5c4",
+          "versus_parent": {
+            "comparison_case_id": "R2059",
+            "classification": "clear_degradation",
+            "evidence": "Faces and hands blur substantially, and robe embroidery and chain detail become indistinct."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3893",
+            "classification": "clear_degradation",
+            "evidence": "V2 further merges finger edges and fabric patterns that remain partly resolved in V1."
+          }
+        },
+        {
+          "case_id": "R1085",
+          "view_sha256": "d9318f816c4ba4eba01cb8d4e1ea3935fdcf12a39cae895274229547fdf58b87",
+          "versus_parent": {
+            "comparison_case_id": "R2059",
+            "classification": "clear_degradation",
+            "evidence": "Strong blur removes facial detail, fingers, and nearly all textile texture preserved in the parent."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1914",
+            "classification": "clear_degradation",
+            "evidence": "V3 erases remaining hand and garment-edge distinctions visible in V2."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F085",
+      "family_id": "megalith-d8c0e9cddf66929f9107230768588dd8",
+      "contact_sheet_sha256": "44f5f235d73e42e30e752f4300237b7018de946314d87802d6b66fc05b95458d",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R3917",
+          "view_sha256": "06395a044deea3ca218cdf26982c5f25398ad99b4cc4eba54633eb98833c3a60",
+          "versus_parent": {
+            "comparison_case_id": "R3701",
+            "classification": "clear_degradation",
+            "evidence": "Fine colored speckle interrupts the smooth cream paper and dark border visible in the parent."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3701",
+            "classification": "clear_degradation",
+            "evidence": "Fine colored speckle interrupts the smooth cream paper and dark border visible in the parent."
+          }
+        },
+        {
+          "case_id": "R2306",
+          "view_sha256": "aa453145f89b26d78e15fffe982b705ed95266a49431df9cc6e4c6ca4e4a4000",
+          "versus_parent": {
+            "comparison_case_id": "R3701",
+            "classification": "clear_degradation",
+            "evidence": "Noticeable colored grain roughens the page and interferes with clean letter-edge separation."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3917",
+            "classification": "clear_degradation",
+            "evidence": "V2 shows stronger paper speckling and noisier letter boundaries than V1."
+          }
+        },
+        {
+          "case_id": "R3215",
+          "view_sha256": "9fa9577159cabfa4f1e691bc8417f2d158e61e36254ab6a2fb21e98a5053cc14",
+          "versus_parent": {
+            "comparison_case_id": "R3701",
+            "classification": "clear_degradation",
+            "evidence": "Heavy multicolored noise covers the page and substantially reduces the clean rendering of small printed characters."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2306",
+            "classification": "clear_degradation",
+            "evidence": "V3 intensifies paper grain and disrupts small character edges more than V2."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F086",
+      "family_id": "megalith-dab6f23014c6a7ea129f156b3992e92b",
+      "contact_sheet_sha256": "816c0c1788311a31463bcfb3960074f90f14479e43f7cbdaaea93036198c28c5",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [
+        "R0969",
+        "R0803"
+      ],
+      "comparisons": [
+        {
+          "case_id": "R0803",
+          "view_sha256": "964c1dddb3145278bb792d2e429128ed4734335d821bb8aeb0a48f8d29aa84fc",
+          "versus_parent": {
+            "comparison_case_id": "R0969",
+            "classification": "clear_degradation",
+            "evidence": "Individual full frames show added grain across the blue sky and shaded foliage, roughening the parent's cleaner tones."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0969",
+            "classification": "clear_degradation",
+            "evidence": "Individual full frames show added grain across the blue sky and shaded foliage, roughening the parent's cleaner tones."
+          }
+        },
+        {
+          "case_id": "R3595",
+          "view_sha256": "fb833f1aed3615dedbfc37fc8b8fc4dc8268039ae6643877e3d721c86f9b7133",
+          "versus_parent": {
+            "comparison_case_id": "R0969",
+            "classification": "clear_degradation",
+            "evidence": "Visible color noise overlays sky, snow, and fine foliage, reducing tonal clarity relative to the parent."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0803",
+            "classification": "clear_degradation",
+            "evidence": "V2 has stronger sky speckling and more disrupted fine foliage texture than V1."
+          }
+        },
+        {
+          "case_id": "R3563",
+          "view_sha256": "5ccf201576955ddc5510da0173161697bf6f39b22ada04ea65f40e96295872f2",
+          "versus_parent": {
+            "comparison_case_id": "R0969",
+            "classification": "clear_degradation",
+            "evidence": "Heavy multicolored grain obscures delicate leaves and branches and dominates the sky."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3595",
+            "classification": "clear_degradation",
+            "evidence": "V3 adds substantially denser noise and masks more foliage detail than V2."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F087",
+      "family_id": "megalith-de2e7250ece199943a1fbca2fe41a9be",
+      "contact_sheet_sha256": "7495d6973343dfc3e8ef052a0f7a6b8c01cdc1ef9913acf7e445b60d8de284c0",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R2892",
+          "view_sha256": "5befb6e4b691674d00b40d80915e37e4230b1e0ac4a58983bb9d2736e61a11f5",
+          "versus_parent": {
+            "comparison_case_id": "R0860",
+            "classification": "clear_degradation",
+            "evidence": "The cloth weave and metal surface markings soften visibly, with slight loss of shell spot definition."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0860",
+            "classification": "clear_degradation",
+            "evidence": "The cloth weave and metal surface markings soften visibly, with slight loss of shell spot definition."
+          }
+        },
+        {
+          "case_id": "R3236",
+          "view_sha256": "32a18c9feabb587dad21815aea64ce1fe4b561b9eab3d72c9f7d83e84b526155",
+          "versus_parent": {
+            "comparison_case_id": "R0860",
+            "classification": "clear_degradation",
+            "evidence": "Blur removes fine fabric weave and metal texture and weakens shell markings relative to the parent."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2892",
+            "classification": "clear_degradation",
+            "evidence": "V2 further merges the metal decoration and eliminates cloth threads still partly visible in V1."
+          }
+        },
+        {
+          "case_id": "R2581",
+          "view_sha256": "d574a518964dab50662343a7238bb2c26bfcaccb0d27b27be3c9af8ca78c43a4",
+          "versus_parent": {
+            "comparison_case_id": "R0860",
+            "classification": "clear_degradation",
+            "evidence": "The object loses fine contours and markings, while the cloth becomes nearly featureless."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3236",
+            "classification": "clear_degradation",
+            "evidence": "V3 erases remaining surface markings and broadens the object's edge more strongly than V2."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F088",
+      "family_id": "megalith-e0849cb794e899b471b090436d3d63b1",
+      "contact_sheet_sha256": "1077e7104d3b53f56919becb3eedfe01699b621d5c2f86e4016c9c7e1ee468aa",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [
+        "R3174",
+        "R1797"
+      ],
+      "comparisons": [
+        {
+          "case_id": "R1797",
+          "view_sha256": "296ca71c1ab4deee1f54f1f69bb927618d46ac40d06d92a3a1dc3aa63e17e274",
+          "versus_parent": {
+            "comparison_case_id": "R3174",
+            "classification": "not_clearly_worse",
+            "evidence": "The fan grille, bowl rim, and carpet retain comparable definition in individual crops; small texture changes do not establish clear loss."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3174",
+            "classification": "not_clearly_worse",
+            "evidence": "The fan grille, bowl rim, and carpet retain comparable definition in individual crops; small texture changes do not establish clear loss."
+          }
+        },
+        {
+          "case_id": "R0751",
+          "view_sha256": "5dd843001f7572970007018f0b729f339270c6c3e18048142827c8cd1e50fa81",
+          "versus_parent": {
+            "comparison_case_id": "R3174",
+            "classification": "clear_degradation",
+            "evidence": "Fan-grid lines, cords, and carpet texture show coarser blocklike edges than the parent."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1797",
+            "classification": "clear_degradation",
+            "evidence": "V2 has rougher thin-line rendering and more mottled carpet detail than V1."
+          }
+        },
+        {
+          "case_id": "R0767",
+          "view_sha256": "2a2c67a5d93d4b358dc453785e86ee03ab20fccd04a1967f883ea879c38c5305",
+          "versus_parent": {
+            "comparison_case_id": "R3174",
+            "classification": "clear_degradation",
+            "evidence": "Large blocks disrupt the fan grille, carpet, and tonal transitions around dark objects."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0751",
+            "classification": "clear_degradation",
+            "evidence": "V3 increases block size and breaks thin grille and cord contours more severely than V2."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F089",
+      "family_id": "megalith-e085a7d41a913315d88134681c897313",
+      "contact_sheet_sha256": "6f8ca9ba6f5be6b9bdc6cd14eb0ab7d8710dc6aeec5c1105c2900cd76fbb2f3d",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R3579",
+          "view_sha256": "c6d1fc23e4b4b3bfeaa7846c015837ce39be3640f5fd579980d1cbca5bd45047",
+          "versus_parent": {
+            "comparison_case_id": "R3316",
+            "classification": "clear_degradation",
+            "evidence": "Hood fur strands and fence links lose separation, with slight additional softness on the face and dog."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3316",
+            "classification": "clear_degradation",
+            "evidence": "Hood fur strands and fence links lose separation, with slight additional softness on the face and dog."
+          }
+        },
+        {
+          "case_id": "R0659",
+          "view_sha256": "0d81780de424c9d2cac283044068c0904b8d01c497cde7e5e3792a0e25a6cc2d",
+          "versus_parent": {
+            "comparison_case_id": "R3316",
+            "classification": "clear_degradation",
+            "evidence": "Blur obscures fur and fence detail and reduces facial definition compared with the parent."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3579",
+            "classification": "clear_degradation",
+            "evidence": "V2 merges most fence links and fine fur strands still visible in V1."
+          }
+        },
+        {
+          "case_id": "R2813",
+          "view_sha256": "a053eeb99a45abcdf71f38998db2c1666343755bc3b15c055d36b7febc0c9727",
+          "versus_parent": {
+            "comparison_case_id": "R3316",
+            "classification": "clear_degradation",
+            "evidence": "Strong blur removes facial detail and turns the hood and background fence into indistinct masses."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0659",
+            "classification": "clear_degradation",
+            "evidence": "V3 further erases the remaining fence pattern and substantially broadens face and dog contours beyond V2."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F090",
+      "family_id": "megalith-e3061440820bff2983fba5cdaed5fa99",
+      "contact_sheet_sha256": "84fcc38db84c73bd9c5bf83b685b9b1065b5916d2cff31e1b97a3d417ca6c117",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R2967",
+          "view_sha256": "49ac95ce79940dc142c6cab2c3c7a1caf7e18099e3e6f829589ab4f42c74b170",
+          "versus_parent": {
+            "comparison_case_id": "R3198",
+            "classification": "clear_degradation",
+            "evidence": "Hair, beard, shirt texture, and brick lines are visibly softer than the parent in the native crop."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3198",
+            "classification": "clear_degradation",
+            "evidence": "Hair, beard, shirt texture, and brick lines are visibly softer than the parent in the native crop."
+          }
+        },
+        {
+          "case_id": "R2098",
+          "view_sha256": "319be3214d231f7db501462b85a1e1686d2e6b20c4a8a79d4ce84c2e14a689c4",
+          "versus_parent": {
+            "comparison_case_id": "R3198",
+            "classification": "clear_degradation",
+            "evidence": "Faces and shirt lettering lose substantial definition, with brick detail largely erased."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2967",
+            "classification": "clear_degradation",
+            "evidence": "V2 further softens facial boundaries and makes the shirt lettering less distinct than V1."
+          }
+        },
+        {
+          "case_id": "R1517",
+          "view_sha256": "31e85a60153e28c78bc41c61b5895a468d58f81dfbaa904ab5d9bd12e9f41b0a",
+          "versus_parent": {
+            "comparison_case_id": "R3198",
+            "classification": "clear_degradation",
+            "evidence": "Strong blur removes facial features and renders the shirt logo and background bricks indistinct."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2098",
+            "classification": "clear_degradation",
+            "evidence": "V3 erases the remaining letter and facial separation still partially visible in V2."
+          }
+        }
+      ]
+    }
+  ],
+  "review_date": "2026-11-01",
+  "review_saved_at": "2026-11-01T14:01:45.771764+00:00"
+}

@@ -33,6 +33,17 @@ Review the candidate and historical-neighbour contact sheets, record `benchmark-
 
 After all 5,500 candidate vectors finish, run `corpus_neighbours.py` with the same environment, inspect its contact sheets and complete `cross-boundary-review.json`. Confirmed historical exposure is the sole permitted reason to replace an early benchmark case; keep superseded reference provenance. Then run `corpus_finalize.py` to construct the final 4,000 manifest, including canonical-parent reconstruction for the 100 controlled families. `corpus_cluster_review.py` produces cluster exemplars, coverage counts and cross-family related-image links.
 
+The completed full-pool review confirmed one historical near-duplicate: original R0045/C0725 and C5253. `benchmark_revision.py` proposed C0004 by deterministic hash ordering within the original fresh VizWiz pool, preferring the same content cluster. After root visual acceptance of four neighbour sheets, it published `benchmark-manifest-v2.json` and `benchmark-revisions.json`. The original benchmark manifest and its reviews remain intact. Both members of the confirmed historical pair are excluded from the final corpus.
+
+The active finalization commands therefore use explicit versioned inputs:
+
+```text
+corpus_neighbours.py --benchmark-manifest /absolute/path/to/benchmark-manifest-v2.json --output-stem cross-boundary-v2
+corpus_finalize.py --benchmark-manifest /absolute/path/to/benchmark-manifest-v2.json --cross-boundary-stem cross-boundary-v2
+```
+
+The first command has already completed; do not overwrite its artifacts. The v2 review carries forward the original reviewed pairs, records the resolved replacement and documents visual checks for the newly surfaced preview pairs. Finalization pins the active benchmark, revision receipt and versioned neighbour/review paths. `corpus_validate.py` follows those declared paths by default. The original neighbour and proposal generator sources are retained in `pipeline-snapshots/` with their original hashes; pinned prepare/embed/select scripts were not altered.
+
 Image statistics use the original view environment plus the existing OpenCV dependency directory:
 
 ```sh

@@ -1,0 +1,60 @@
+{
+  "recorded_at": "2026-11-01T12:59:34.563773+00:00",
+  "stage": "before final corpus/reference binding and before any new scoring requests",
+  "paid_model_requests": 0,
+  "primary_reference_assessments_completed": 500,
+  "primary_reference_labels_changed": false,
+  "reference_coverage_check_sha256": "5699b68e72b0fd1d346aebf091ac832d9a18b53b8beb79773d4ef2a42d9bd36e",
+  "initial_local_checkpoint_commit": "1a6c758",
+  "changes": [
+    {
+      "area": "analysis admission",
+      "change": "Require95% paired task coverage and no increased missing/invalid scores before treatment can support a decision; preserve numerical estimates separately."
+    },
+    {
+      "area": "QC audit",
+      "change": "Reserve20% of fixed10% review budget for seeded random unflagged audits."
+    },
+    {
+      "area": "reference repeatability",
+      "change": "Add separate50-case blind repeat after primaryfreeze, selected without scores; do not replace primarylabels."
+    },
+    {
+      "area": "protected styles and scope",
+      "change": "Freeze12 visually confirmed style cases and all reference-excluded/uncertain cases before model outputs. Membership uses primary visible evidence and image inspection, not grader performance.",
+      "membership_sha256": "021e3de532ed6bb0d18718a0fe0f900c619de850168e2569705a5bedf188dc76"
+    },
+    {
+      "area": "controlled families",
+      "change": "Prepare blind visual comparison of all100 parent/derivative families; preserve all-family analysis alongside separately verified subsets."
+    },
+    {
+      "area": "Lite admission and durability",
+      "change": "Require complete500 references even for a benchmarksubset; fsync directory entries before dispatch and on records."
+    },
+    {
+      "area": "API retry bound",
+      "change": "Enforce at most five known pre-serve rejections perjob, rather than five retries afterinitialrejection."
+    },
+    {
+      "area": "numerical analysis",
+      "change": "Use1e-12 tolerance only for inclusive practical/QC boundaries, preserve strict CI upper<0, canonicalize decimal ensemble means for exact nominal ties."
+    },
+    {
+      "area": "billing and fair comparisons",
+      "change": "Reject orphaned API journals without a plan; add per-task all-five-common MAE,bias,rank andcoverage alongside existingcombinedcommon comparison."
+    },
+    {
+      "area": "exploratory baseline contrasts",
+      "change": "Add all five individual-model comparisons versus the fixed ensemble, with separate technical/aesthetic/combined paired-family intervals on representative and challenge panels; uncorrected secondary comparisons, no primary-endpoint change."
+    },
+    {
+      "area": "objective benchmark freshness revision",
+      "change": "A full cross-boundary visual audit confirmed C0725 repeated the historically exposed C5253 blue-carton capture. Before inference, replace R0045 with deterministically selected fresh same-stratum C0004; preserve the original manifest and all500 original reviews, obtain one fresh blinded review, and explicitly compile499 unchanged plus1 replacement. No numeric scores used for the replacement decision.",
+      "revision_path": "benchmark-revisions.json",
+      "revision_sha256": "d9a5e312f4cfc62835fb776f094ae31eb794b2a5ff6d506d7fef49211fee3be8",
+      "original_reviews_preserved": true
+    }
+  ],
+  "audit_basis": "Runner/statistical fixes used code and synthetic fixtures only. No new grader outputs existed. The primary rubric is unchanged. One objective freshness exclusion supersedes one original image/review explicitly, with all original artifacts preserved."
+}

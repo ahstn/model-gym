@@ -1,0 +1,521 @@
+{
+  "packet_sha256": "7ce558a1b7dd61dd25733c06f4a46956db253fd32ef98d44a775310c9c0d30be",
+  "reviewer": "Codex independent controlled-family review /root/lite_operations",
+  "families": [
+    {
+      "review_family_id": "F051",
+      "family_id": "megalith-837ca8bbc0dafb7899e8622b2cd0ca7d",
+      "contact_sheet_sha256": "d6f9fe534890251a1e9ebf29d6712c188a0dcc59939e97824a24c1a57a6aca6e",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R1347",
+          "view_sha256": "871086cfb50363b88c40c17940dead003b18f5b267db3e383ace40a2a1316e2d",
+          "versus_parent": {
+            "comparison_case_id": "R1065",
+            "classification": "clear_degradation",
+            "evidence": "Wheel spokes, tire texture and bicycle lettering visibly lose crispness."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1065",
+            "classification": "clear_degradation",
+            "evidence": "Wheel spokes, tire texture and bicycle lettering visibly lose crispness."
+          }
+        },
+        {
+          "case_id": "R2556",
+          "view_sha256": "c32b4413ae5d3798b571035bf5f05943cc4a8bd6312109391e2c5da379b47664",
+          "versus_parent": {
+            "comparison_case_id": "R1065",
+            "classification": "clear_degradation",
+            "evidence": "Many spokes and small lettering details merge, with strong blur on the bicycle and rider."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1347",
+            "classification": "clear_degradation",
+            "evidence": "V2 removes spoke separations and bicycle detail still visible in V1."
+          }
+        },
+        {
+          "case_id": "R2158",
+          "view_sha256": "f6cff4dab33f29ca89ec02a970919240631b9922bcf0f4bd64decf96562c4a3e",
+          "versus_parent": {
+            "comparison_case_id": "R1065",
+            "classification": "clear_degradation",
+            "evidence": "The wheel spokes nearly disappear and bicycle components become broad indistinct shapes."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2556",
+            "classification": "clear_degradation",
+            "evidence": "V3 erases most remaining fine bicycle structure and blurs the rider much more than V2."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F052",
+      "family_id": "megalith-86d39d9bbcad0ca0ea25b5c908277726",
+      "contact_sheet_sha256": "52210345ed7e30b1d421f7c6081e9fb5e5c7d554baf77f72472d092e31dd2598",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R2460",
+          "view_sha256": "d7b278376a8d42f11d7e0806bf51f33ada1d5cc29b2601cca25a09f8480d379f",
+          "versus_parent": {
+            "comparison_case_id": "R3964",
+            "classification": "clear_degradation",
+            "evidence": "Fine colored speckles appear over the plate, fork and smoother food surfaces."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3964",
+            "classification": "clear_degradation",
+            "evidence": "Fine colored speckles appear over the plate, fork and smoother food surfaces."
+          }
+        },
+        {
+          "case_id": "R1865",
+          "view_sha256": "97e6d8ce4411b9ce3e2b39c8b9368dfebd7c1579f1e6e6a0a9215fc7f7f0ad67",
+          "versus_parent": {
+            "comparison_case_id": "R3964",
+            "classification": "clear_degradation",
+            "evidence": "Noise conspicuously disrupts the fork's shading and the plate and vegetable textures."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2460",
+            "classification": "clear_degradation",
+            "evidence": "V2 has stronger colored grain than V1 across the fork and pale plate."
+          }
+        },
+        {
+          "case_id": "R2523",
+          "view_sha256": "4b2da7106ebcfa8936485ba991d4c6fd82ff07928a60d0bef4e6c35eea6ed7b2",
+          "versus_parent": {
+            "comparison_case_id": "R3964",
+            "classification": "clear_degradation",
+            "evidence": "Heavy colored noise competes with food detail and contaminates the smooth plate and metal."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1865",
+            "classification": "clear_degradation",
+            "evidence": "V3 adds substantially stronger grain than V2, reducing small surface detail."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F053",
+      "family_id": "megalith-8994d6c5e02470c4f842b21918451cc5",
+      "contact_sheet_sha256": "3c84e161e9067cc68f2087e906bcde227de5748f7d6220d0d933515fcf49e1f3",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R1031",
+          "view_sha256": "161d6b4cb49538619c6b28489c8bb7841ff6e01d209b6a84b8a1aa599cd7bcc9",
+          "versus_parent": {
+            "comparison_case_id": "R0985",
+            "classification": "clear_degradation",
+            "evidence": "Fine colored speckles are visible on the dark boots and costume, beyond the natural pavement texture."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0985",
+            "classification": "clear_degradation",
+            "evidence": "Fine colored speckles are visible on the dark boots and costume, beyond the natural pavement texture."
+          }
+        },
+        {
+          "case_id": "R2219",
+          "view_sha256": "91410ff73f3f490e79e227427894294df0495854d7f29b8752ccf7821a2b2216",
+          "versus_parent": {
+            "comparison_case_id": "R0985",
+            "classification": "clear_degradation",
+            "evidence": "Colored grain visibly contaminates the boots, clothing and pavement."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1031",
+            "classification": "clear_degradation",
+            "evidence": "V2 adds stronger colored noise than V1, most apparent on the dark footwear."
+          }
+        },
+        {
+          "case_id": "R3667",
+          "view_sha256": "00ba12f7d97b217a6fa5b8deb24d14e6ebcad9520fc67a070989290e1cbba183",
+          "versus_parent": {
+            "comparison_case_id": "R0985",
+            "classification": "clear_degradation",
+            "evidence": "Heavy colored speckling competes with costume details and the pavement's natural texture."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2219",
+            "classification": "clear_degradation",
+            "evidence": "V3 has much stronger colored grain than V2, including over lace and boot details."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F054",
+      "family_id": "megalith-8e34b40d3030cc616765fe41d6e068b4",
+      "contact_sheet_sha256": "5cfe82fbc7649701b4c04668da8a096fffb7943f3d75134fdac5415ee71dac68",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R1174",
+          "view_sha256": "58cd38548fb2c9a0b25fae67b38ee5e624c7e3cee53b0475b31330d8fd13b08b",
+          "versus_parent": {
+            "comparison_case_id": "R2793",
+            "classification": "clear_degradation",
+            "evidence": "Fine colored grain appears across the smooth wall panels and brickwork."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2793",
+            "classification": "clear_degradation",
+            "evidence": "Fine colored grain appears across the smooth wall panels and brickwork."
+          }
+        },
+        {
+          "case_id": "R1918",
+          "view_sha256": "7c5d774b133f166963fd5f41d0a73e0a4642d6f6057c62b7ba9c5958f7b60e2f",
+          "versus_parent": {
+            "comparison_case_id": "R2793",
+            "classification": "clear_degradation",
+            "evidence": "Conspicuous colored noise disrupts the building surfaces and small sign lettering."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1174",
+            "classification": "clear_degradation",
+            "evidence": "V2 is more densely speckled than V1, particularly on the pale cladding."
+          }
+        },
+        {
+          "case_id": "R2501",
+          "view_sha256": "953eecbb4fbdf9858a53962305eec2af7284a09c6c0a958a0e7c6542be78064f",
+          "versus_parent": {
+            "comparison_case_id": "R2793",
+            "classification": "clear_degradation",
+            "evidence": "Heavy colored grain obscures subtle facade texture and weakens small text and window detail."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1918",
+            "classification": "clear_degradation",
+            "evidence": "V3 produces substantially stronger noise than V2 across the walls, cars and signage."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F055",
+      "family_id": "megalith-8ed4e9d6d10ca554dc47d3a7b5ed2a6f",
+      "contact_sheet_sha256": "21e710b2f1a14698e35ecd6f3bf4fc91b0944cb509eafef9cbca30f6df8b5041",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R1961",
+          "view_sha256": "92b31d74fa16039937b56536f0834de85209564497ed67acc51f6c8a5f440bf3",
+          "versus_parent": {
+            "comparison_case_id": "R2666",
+            "classification": "not_clearly_worse",
+            "evidence": "Feather separation and the bird's outline remain similarly resolved; small background texture changes are not clearly worse."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2666",
+            "classification": "not_clearly_worse",
+            "evidence": "Feather separation and the bird's outline remain similarly resolved; small background texture changes are not clearly worse."
+          }
+        },
+        {
+          "case_id": "R2854",
+          "view_sha256": "3ec715220b1f5ba91692d226796c92e714744c4d3a92e64bc8223c42357b4342",
+          "versus_parent": {
+            "comparison_case_id": "R2666",
+            "classification": "clear_degradation",
+            "evidence": "Feather edges show ringing and the soft mountain background develops block-shaped patches."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1961",
+            "classification": "clear_degradation",
+            "evidence": "V2 has rougher feather boundaries and more blocky background texture than V1."
+          }
+        },
+        {
+          "case_id": "R2791",
+          "view_sha256": "fbf26f63d5a7402d4231a7987090313ae7cad7c97a9561a63503be1d0a9b3a56",
+          "versus_parent": {
+            "comparison_case_id": "R2666",
+            "classification": "clear_degradation",
+            "evidence": "Large background blocks and jagged feather edges substantially distort the scene."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2854",
+            "classification": "clear_degradation",
+            "evidence": "V3 introduces much coarser blocks and stronger edge breakup than V2 around the bird."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F056",
+      "family_id": "megalith-8f896861439524a51d7dea9a96576ad7",
+      "contact_sheet_sha256": "d5a6557eeefc1149b688adc2df6c7027b39908ea1f4752b99682099f2d47d106",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [
+        "R0792",
+        "R2179"
+      ],
+      "comparisons": [
+        {
+          "case_id": "R2179",
+          "view_sha256": "215c428d39419077eb0d4ba6a4841339287a759a2102e8baf191732b782de684",
+          "versus_parent": {
+            "comparison_case_id": "R0792",
+            "classification": "clear_degradation",
+            "evidence": "Exact full views show added fine colored grain on the dark bird and smoother blue areas between ripples."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0792",
+            "classification": "clear_degradation",
+            "evidence": "Exact full views show added fine colored grain on the dark bird and smoother blue areas between ripples."
+          }
+        },
+        {
+          "case_id": "R0711",
+          "view_sha256": "208716ffcdb33d5fb3534967e62ca49976f66b1da4eb042d069366743c8e6ccb",
+          "versus_parent": {
+            "comparison_case_id": "R0792",
+            "classification": "clear_degradation",
+            "evidence": "Colored grain visibly contaminates water shading and the bird's dark plumage."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2179",
+            "classification": "clear_degradation",
+            "evidence": "V2 has stronger speckling than V1 across both the bird and water."
+          }
+        },
+        {
+          "case_id": "R3364",
+          "view_sha256": "460a498a8601127c7b1d14f420e92f0fdab319476c62e4b226851e18c96bdfde",
+          "versus_parent": {
+            "comparison_case_id": "R0792",
+            "classification": "clear_degradation",
+            "evidence": "Heavy colored noise competes with the water texture and obscures subtle plumage shading."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0711",
+            "classification": "clear_degradation",
+            "evidence": "V3 substantially increases grain over V2 and makes the water's natural texture less clean."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F057",
+      "family_id": "megalith-8fcaf9b0c3662011c347d949a0b02110",
+      "contact_sheet_sha256": "45779a078a85a8f254013106d1148c27ddff9928cdaf123e403b97f3d571fbf1",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R3164",
+          "view_sha256": "51446ecfe8ad78ee19ce6c1214f167e94ba2cf2094f054dbee6e62502eb38224",
+          "versus_parent": {
+            "comparison_case_id": "R0923",
+            "classification": "not_clearly_worse",
+            "evidence": "Mask patterns, clothing seams and faces remain similarly legible; small texture changes are not a clear loss."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0923",
+            "classification": "not_clearly_worse",
+            "evidence": "Mask patterns, clothing seams and faces remain similarly legible; small texture changes are not a clear loss."
+          }
+        },
+        {
+          "case_id": "R2095",
+          "view_sha256": "bf475689fa1f07f389ba4b54de6012d675de0562a4968af1c9032ecdd99f4d46",
+          "versus_parent": {
+            "comparison_case_id": "R0923",
+            "classification": "clear_degradation",
+            "evidence": "Block-like patches appear on the wall and clothing, with rougher mask and hair edges."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3164",
+            "classification": "clear_degradation",
+            "evidence": "V2 introduces stronger edge breakup and color patching than V1 around the scarves and faces."
+          }
+        },
+        {
+          "case_id": "R2896",
+          "view_sha256": "478ca0ca186f1f2b58e94d075ad098607ffe2ad6f20aea11147dc58e698e96d1",
+          "versus_parent": {
+            "comparison_case_id": "R0923",
+            "classification": "clear_degradation",
+            "evidence": "Large blocks and stepped tones visibly distort the wall, faces and red jacket."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2095",
+            "classification": "clear_degradation",
+            "evidence": "V3 has much stronger blocking than V2 and removes further facial and clothing detail."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F058",
+      "family_id": "megalith-96a653a8d4e464eff4bdf44d54a2faa5",
+      "contact_sheet_sha256": "98017523c00e44440b4953708800f04fa4edce28bf72ccea08350c6f28276579",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R0592",
+          "view_sha256": "f5099bd699dede48b6a73477bc5bd9382449f6692ba709b77213049ca6078534",
+          "versus_parent": {
+            "comparison_case_id": "R3947",
+            "classification": "clear_degradation",
+            "evidence": "Fine colored grain is added across the dark machine panel and small labels."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3947",
+            "classification": "clear_degradation",
+            "evidence": "Fine colored grain is added across the dark machine panel and small labels."
+          }
+        },
+        {
+          "case_id": "R1017",
+          "view_sha256": "1a09bd8f70b77a798bd7aa5ac1715236fb977f53eb85ea7a09750a473849b063",
+          "versus_parent": {
+            "comparison_case_id": "R3947",
+            "classification": "clear_degradation",
+            "evidence": "Colored speckling interferes with thin lettering and clean panel surfaces."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0592",
+            "classification": "clear_degradation",
+            "evidence": "V2 has stronger grain than V1, particularly over the dark panel and pale instruction labels."
+          }
+        },
+        {
+          "case_id": "R0730",
+          "view_sha256": "643f446fe2c6dc340fdec10d8f0d7c0cfc3149a3025ddfa3a6b5abc61e3402bc",
+          "versus_parent": {
+            "comparison_case_id": "R3947",
+            "classification": "clear_degradation",
+            "evidence": "Heavy colored noise obscures fine instructions and breaks up smooth dark areas."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R1017",
+            "classification": "clear_degradation",
+            "evidence": "V3 markedly increases grain over V2 and further reduces small-text clarity."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F059",
+      "family_id": "megalith-977ba369a5f843eb10bfa77327664246",
+      "contact_sheet_sha256": "c1f66f6bbd9f53276ba4549461f81bb52e49e4e9ede027208e99e8c052832169",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R0531",
+          "view_sha256": "ed2a2940fd9470edbbb22fee449f8a0206f9c8b77522165c25dbe17ba87cd7a0",
+          "versus_parent": {
+            "comparison_case_id": "R0986",
+            "classification": "not_clearly_worse",
+            "evidence": "Brick joints, window trim and foliage remain similarly discernible; minor texture changes are not a clear loss."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0986",
+            "classification": "not_clearly_worse",
+            "evidence": "Brick joints, window trim and foliage remain similarly discernible; minor texture changes are not a clear loss."
+          }
+        },
+        {
+          "case_id": "R2085",
+          "view_sha256": "e035b552d299a0e3a1fe65358206c6edfd7eb83fa210da2a188dcce7bd92a6ec",
+          "versus_parent": {
+            "comparison_case_id": "R0986",
+            "classification": "clear_degradation",
+            "evidence": "Fine leaves and brick patterns develop rough, block-like edges and reduced texture separation."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R0531",
+            "classification": "clear_degradation",
+            "evidence": "V2 shows more ringing and smeared leaf detail than V1 around the windows."
+          }
+        },
+        {
+          "case_id": "R2364",
+          "view_sha256": "fdbef7dd2447ed6f844b923dd21ed85af215f185f8268e547704b1048721ac66",
+          "versus_parent": {
+            "comparison_case_id": "R0986",
+            "classification": "clear_degradation",
+            "evidence": "Large blocks and jagged boundaries break up the foliage, brickwork and window trim."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2085",
+            "classification": "clear_degradation",
+            "evidence": "V3 produces much coarser artifacts than V2 and obscures more fine facade and leaf detail."
+          }
+        }
+      ]
+    },
+    {
+      "review_family_id": "F060",
+      "family_id": "megalith-98582a97bc5d13e4ae8080eeec4f371e",
+      "contact_sheet_sha256": "556368dd2b5352f026d5489cdf59845c05a0cd5336a3610cce279a60df216ff3",
+      "reviewed_full_frames_and_native_crops": true,
+      "individual_views_opened": [],
+      "comparisons": [
+        {
+          "case_id": "R3419",
+          "view_sha256": "af7274e742ac43965fd3466bf730aef807b37e86b3749312801c802cda004c07",
+          "versus_parent": {
+            "comparison_case_id": "R2919",
+            "classification": "not_clearly_worse",
+            "evidence": "Mesh strands and helmet edges remain similarly resolved; small texture differences do not establish clear degradation."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R2919",
+            "classification": "not_clearly_worse",
+            "evidence": "Mesh strands and helmet edges remain similarly resolved; small texture differences do not establish clear degradation."
+          }
+        },
+        {
+          "case_id": "R3140",
+          "view_sha256": "2e6e03b32d0619320469bb39c73400f428fe4e64fc6ef3e9de91649b8459b33e",
+          "versus_parent": {
+            "comparison_case_id": "R2919",
+            "classification": "clear_degradation",
+            "evidence": "Fine mesh becomes rougher and nearby foliage and helmet edges show block-like artifacts."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3419",
+            "classification": "clear_degradation",
+            "evidence": "V2 has more visible edge ringing and patchy detail than V1 around the mesh and helmet."
+          }
+        },
+        {
+          "case_id": "R0646",
+          "view_sha256": "fa740125aec26557ddee404e8ddba2a2180bd22463e98ec51d016e85a19fe6ff",
+          "versus_parent": {
+            "comparison_case_id": "R2919",
+            "classification": "clear_degradation",
+            "evidence": "Large blocks and stepped color patches visibly distort the helmet, face and background."
+          },
+          "versus_previous": {
+            "comparison_case_id": "R3140",
+            "classification": "clear_degradation",
+            "evidence": "V3 introduces much larger patches and stronger edge breakup than V2, including across the helmet and mesh."
+          }
+        }
+      ]
+    }
+  ],
+  "reviewed_at": "2026-11-01T13:58:38.474796+00:00",
+  "blinding": "No new corpus model scores, reference scores, image statistics or transform provenance opened"
+}

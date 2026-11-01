@@ -1,0 +1,39 @@
+{
+  "candidate_embeddings_sha256": "135e260a74eb2e6b1acf73e9a82ea3139b0b5b9e1a90465a571971b3e7a62b75",
+  "candidate_manifest_sha256": "5b349f5828bcdcb6b0523ddaa099fae9808df35bddfad24056445f00a72b9935",
+  "configuration": {
+    "audio_config": null,
+    "batch_size": 4,
+    "device": "cpu",
+    "dimensions": 768,
+    "dtype": "float32",
+    "manifest_sha256": "5b349f5828bcdcb6b0523ddaa099fae9808df35bddfad24056445f00a72b9935",
+    "max_soft_tokens": 280,
+    "model": "google/embeddinggemma-2",
+    "revision": "f9972ac22e696a105c482202646979e33e4b5a1e",
+    "script_sha256": "fa4b30c1d76737e8494c14032458d3db6b681722676b0acf40bbf3acbbe62f81",
+    "shard": 0,
+    "shards": 2,
+    "threads": 6
+  },
+  "reused_identical_views": 303,
+  "shards": [
+    {
+      "path": "embedding-shard-0.json",
+      "sha256": "73a6e617edb6489d4016b9a335d90263dfabde95488ec12787badbb724853d29"
+    },
+    {
+      "path": "embedding-shard-1.json",
+      "sha256": "19990cd57211de491d48b45bb7233c1bcef96e8facd4b1391241983ef213c5ab"
+    }
+  ],
+  "software": {
+    "Pillow": "13.0.0",
+    "numpy": "2.5.4",
+    "sentence-transformers": "6.2.0",
+    "torch": "2.14.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "transformers": "5.22.1"
+  },
+  "total_embeddings": 5500
+}

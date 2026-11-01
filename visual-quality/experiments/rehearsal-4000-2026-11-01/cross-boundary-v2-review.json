@@ -1,0 +1,91 @@
+{
+  "benchmark_replacements": [],
+  "benchmark_revisions_sha256": "d9a5e312f4cfc62835fb776f094ae31eb794b2a5ff6d506d7fef49211fee3be8",
+  "decisions": [],
+  "delta_review": {
+    "added_pairs": [
+      [
+        "C0004",
+        "C4493"
+      ],
+      [
+        "C0004",
+        "C4529"
+      ],
+      [
+        "C0004",
+        "C4572"
+      ],
+      [
+        "C0386",
+        "C0725"
+      ]
+    ],
+    "new_exclusions": [],
+    "new_preview_checks": [
+      {
+        "a": "C0299",
+        "b": "C1177",
+        "decision": "distinct_related_content",
+        "evidence": "Opened both exact views: different classroom furniture, children, activities, camera position and composition."
+      },
+      {
+        "a": "C0895",
+        "b": "C3786",
+        "decision": "distinct_related_content",
+        "evidence": "Opened both exact views: different terrain formations, foreground vegetation and viewing direction; related arid landscape, not a near-duplicate view."
+      }
+    ],
+    "other_added_pairs": "Three C0004 pairs were included in the root-approved replacement neighbour sheets. C0386/C0725 involves the old carton image already excluded from the final corpus.",
+    "removed_pairs": [
+      [
+        "C0386",
+        "C4826"
+      ],
+      [
+        "C0725",
+        "C4616"
+      ],
+      [
+        "C0725",
+        "C4680"
+      ],
+      [
+        "C0725",
+        "C5253"
+      ]
+    ],
+    "reviewer": "corpus assistant",
+    "unchanged_raw_pairs": 1764
+  },
+  "excluded_candidates": [
+    "C0488",
+    "C0557",
+    "C0725",
+    "C0858",
+    "C4743",
+    "C4817",
+    "C5107",
+    "C5253"
+  ],
+  "inherited_review": {
+    "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/cross-boundary-review.json",
+    "sha256": "55a4063730df858e8a858e449b768861bf126e9e5bb90f4f175fb26ce2442122"
+  },
+  "instructions": "Visually inspect historical and full cross-boundary sheets; record confirmed duplicate exclusions and any benchmark replacements before finalization",
+  "neighbours_sha256": "5c1e28564f610ff87ae944da1b0887bf7bdb4c963c300a3dfcbd3c1877d055e5",
+  "replacement_review": {
+    "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/benchmark-replacement-review.json",
+    "sha256": "7f3a61abd1a1ea7d8328ae0d243a5cf4b363646db1f71b31215f8cf1c27e2705"
+  },
+  "resolved_benchmark_replacements": [
+    {
+      "case_id": "R0045",
+      "historical_peer_candidate_id": "C5253",
+      "previous_candidate_id": "C0725",
+      "reason": "Confirmed historical near-duplicate of the same carton and checked-cushion capture; predeclared freshness correction before any scoring calls",
+      "replacement_candidate_id": "C0004"
+    }
+  ],
+  "status": "reviewed"
+}

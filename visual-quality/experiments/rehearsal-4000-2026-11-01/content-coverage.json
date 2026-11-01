@@ -1,0 +1,1093 @@
+{
+  "candidate_families": 5500,
+  "candidate_manifest_sha256": "5b349f5828bcdcb6b0523ddaa099fae9808df35bddfad24056445f00a72b9935",
+  "clusters": [
+    {
+      "candidate_components": {
+        "megalith": 62
+      },
+      "candidate_families": 62,
+      "candidate_fraction": 0.011272727272727273,
+      "candidate_source_categories": {
+        "megalith": 62
+      },
+      "candidate_views": 62,
+      "cluster": 0,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C1952",
+        "C0919",
+        "C2707",
+        "C4270",
+        "C1643",
+        "C3296",
+        "C0651",
+        "C3372"
+      ],
+      "selected_families": 61,
+      "selected_fraction": 0.016486486486486488,
+      "selected_views": 67
+    },
+    {
+      "candidate_components": {
+        "megalith": 108,
+        "vizwiz": 3
+      },
+      "candidate_families": 111,
+      "candidate_fraction": 0.020181818181818183,
+      "candidate_source_categories": {
+        "megalith": 108,
+        "vizwiz": 3
+      },
+      "candidate_views": 111,
+      "cluster": 1,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C2129",
+        "C0314",
+        "C3582",
+        "C5302",
+        "C3002",
+        "C3096",
+        "C2445",
+        "C1414"
+      ],
+      "selected_families": 87,
+      "selected_fraction": 0.023513513513513513,
+      "selected_views": 96
+    },
+    {
+      "candidate_components": {
+        "plotqa": 108
+      },
+      "candidate_families": 108,
+      "candidate_fraction": 0.019636363636363636,
+      "candidate_source_categories": {
+        "controls": 108
+      },
+      "candidate_views": 108,
+      "cluster": 2,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C5372",
+        "C5329",
+        "C0544",
+        "C5425",
+        "C0196",
+        "C5491",
+        "C0710",
+        "C0382"
+      ],
+      "selected_families": 51,
+      "selected_fraction": 0.013783783783783784,
+      "selected_views": 51
+    },
+    {
+      "candidate_components": {
+        "vizwiz": 69
+      },
+      "candidate_families": 69,
+      "candidate_fraction": 0.012545454545454545,
+      "candidate_source_categories": {
+        "vizwiz": 69
+      },
+      "candidate_views": 69,
+      "cluster": 3,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C5049",
+        "C5215",
+        "C4825",
+        "C0763",
+        "C4563",
+        "C0514",
+        "C4712",
+        "C4940"
+      ],
+      "selected_families": 52,
+      "selected_fraction": 0.014054054054054054,
+      "selected_views": 52
+    },
+    {
+      "candidate_components": {
+        "megalith": 168,
+        "vizwiz": 2
+      },
+      "candidate_families": 170,
+      "candidate_fraction": 0.03090909090909091,
+      "candidate_source_categories": {
+        "megalith": 168,
+        "vizwiz": 2
+      },
+      "candidate_views": 170,
+      "cluster": 4,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C3237",
+        "C0267",
+        "C2399",
+        "C3767",
+        "C2630",
+        "C1764",
+        "C2544",
+        "C0150"
+      ],
+      "selected_families": 108,
+      "selected_fraction": 0.02918918918918919,
+      "selected_views": 126
+    },
+    {
+      "candidate_components": {
+        "megalith": 160,
+        "vizwiz": 2
+      },
+      "candidate_families": 162,
+      "candidate_fraction": 0.029454545454545455,
+      "candidate_source_categories": {
+        "megalith": 160,
+        "vizwiz": 2
+      },
+      "candidate_views": 162,
+      "cluster": 5,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C1837",
+        "C4074",
+        "C3179",
+        "C3350",
+        "C2393",
+        "C3449",
+        "C4486",
+        "C4342"
+      ],
+      "selected_families": 103,
+      "selected_fraction": 0.027837837837837838,
+      "selected_views": 112
+    },
+    {
+      "candidate_components": {
+        "megalith": 171
+      },
+      "candidate_families": 171,
+      "candidate_fraction": 0.03109090909090909,
+      "candidate_source_categories": {
+        "megalith": 171
+      },
+      "candidate_views": 171,
+      "cluster": 6,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C3865",
+        "C2165",
+        "C1247",
+        "C0835",
+        "C3890",
+        "C3471",
+        "C0856",
+        "C3013"
+      ],
+      "selected_families": 112,
+      "selected_fraction": 0.03027027027027027,
+      "selected_views": 127
+    },
+    {
+      "candidate_components": {
+        "megalith": 214
+      },
+      "candidate_families": 214,
+      "candidate_fraction": 0.03890909090909091,
+      "candidate_source_categories": {
+        "megalith": 214
+      },
+      "candidate_views": 214,
+      "cluster": 7,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C2979",
+        "C2168",
+        "C1807",
+        "C2384",
+        "C4466",
+        "C0158",
+        "C1453",
+        "C1011"
+      ],
+      "selected_families": 124,
+      "selected_fraction": 0.03351351351351351,
+      "selected_views": 142
+    },
+    {
+      "candidate_components": {
+        "megalith": 91
+      },
+      "candidate_families": 91,
+      "candidate_fraction": 0.016545454545454544,
+      "candidate_source_categories": {
+        "megalith": 91
+      },
+      "candidate_views": 91,
+      "cluster": 8,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C3937",
+        "C1160",
+        "C4378",
+        "C2950",
+        "C2237",
+        "C3338",
+        "C2013",
+        "C3257"
+      ],
+      "selected_families": 74,
+      "selected_fraction": 0.02,
+      "selected_views": 80
+    },
+    {
+      "candidate_components": {
+        "megalith": 169,
+        "vizwiz": 2
+      },
+      "candidate_families": 171,
+      "candidate_fraction": 0.03109090909090909,
+      "candidate_source_categories": {
+        "megalith": 169,
+        "vizwiz": 2
+      },
+      "candidate_views": 171,
+      "cluster": 9,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C2998",
+        "C2835",
+        "C1377",
+        "C0736",
+        "C3442",
+        "C3404",
+        "C0287",
+        "C3385"
+      ],
+      "selected_families": 110,
+      "selected_fraction": 0.02972972972972973,
+      "selected_views": 122
+    },
+    {
+      "candidate_components": {
+        "megalith": 10,
+        "vizwiz": 154
+      },
+      "candidate_families": 164,
+      "candidate_fraction": 0.029818181818181817,
+      "candidate_source_categories": {
+        "megalith": 10,
+        "vizwiz": 154
+      },
+      "candidate_views": 164,
+      "cluster": 10,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C5306",
+        "C4645",
+        "C0622",
+        "C0311",
+        "C4768",
+        "C4630",
+        "C5176",
+        "C4629"
+      ],
+      "selected_families": 91,
+      "selected_fraction": 0.024594594594594593,
+      "selected_views": 91
+    },
+    {
+      "candidate_components": {
+        "megalith": 90,
+        "vizwiz": 8
+      },
+      "candidate_families": 98,
+      "candidate_fraction": 0.01781818181818182,
+      "candidate_source_categories": {
+        "megalith": 90,
+        "vizwiz": 8
+      },
+      "candidate_views": 98,
+      "cluster": 11,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C1361",
+        "C3171",
+        "C1852",
+        "C3869",
+        "C0858",
+        "C3060",
+        "C0007",
+        "C1697"
+      ],
+      "selected_families": 81,
+      "selected_fraction": 0.02189189189189189,
+      "selected_views": 87
+    },
+    {
+      "candidate_components": {
+        "megalith": 46,
+        "vizwiz": 106
+      },
+      "candidate_families": 152,
+      "candidate_fraction": 0.027636363636363636,
+      "candidate_source_categories": {
+        "megalith": 46,
+        "vizwiz": 106
+      },
+      "candidate_views": 152,
+      "cluster": 12,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C5076",
+        "C5200",
+        "C4903",
+        "C5189",
+        "C4603",
+        "C4495",
+        "C0549",
+        "C4177"
+      ],
+      "selected_families": 112,
+      "selected_fraction": 0.03027027027027027,
+      "selected_views": 115
+    },
+    {
+      "candidate_components": {
+        "megalith": 118
+      },
+      "candidate_families": 118,
+      "candidate_fraction": 0.021454545454545455,
+      "candidate_source_categories": {
+        "megalith": 118
+      },
+      "candidate_views": 118,
+      "cluster": 13,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C1595",
+        "C1492",
+        "C4203",
+        "C0461",
+        "C3876",
+        "C3313",
+        "C4334",
+        "C1444"
+      ],
+      "selected_families": 88,
+      "selected_fraction": 0.023783783783783784,
+      "selected_views": 94
+    },
+    {
+      "candidate_components": {
+        "megalith": 8,
+        "vizwiz": 154
+      },
+      "candidate_families": 162,
+      "candidate_fraction": 0.029454545454545455,
+      "candidate_source_categories": {
+        "megalith": 8,
+        "vizwiz": 154
+      },
+      "candidate_views": 162,
+      "cluster": 14,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C4570",
+        "C5282",
+        "C4848",
+        "C5095",
+        "C4680",
+        "C5083",
+        "C0496",
+        "C5005"
+      ],
+      "selected_families": 90,
+      "selected_fraction": 0.024324324324324326,
+      "selected_views": 90
+    },
+    {
+      "candidate_components": {
+        "megalith": 237
+      },
+      "candidate_families": 237,
+      "candidate_fraction": 0.04309090909090909,
+      "candidate_source_categories": {
+        "megalith": 237
+      },
+      "candidate_views": 237,
+      "cluster": 15,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C3586",
+        "C3485",
+        "C2122",
+        "C1902",
+        "C2117",
+        "C3145",
+        "C1676",
+        "C3339"
+      ],
+      "selected_families": 130,
+      "selected_fraction": 0.03513513513513514,
+      "selected_views": 154
+    },
+    {
+      "candidate_components": {
+        "megalith": 117
+      },
+      "candidate_families": 117,
+      "candidate_fraction": 0.021272727272727273,
+      "candidate_source_categories": {
+        "megalith": 117
+      },
+      "candidate_views": 117,
+      "cluster": 16,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C3348",
+        "C2817",
+        "C3481",
+        "C2801",
+        "C3233",
+        "C4461",
+        "C2636",
+        "C1274"
+      ],
+      "selected_families": 85,
+      "selected_fraction": 0.022972972972972974,
+      "selected_views": 88
+    },
+    {
+      "candidate_components": {
+        "megalith": 93
+      },
+      "candidate_families": 93,
+      "candidate_fraction": 0.01690909090909091,
+      "candidate_source_categories": {
+        "megalith": 93
+      },
+      "candidate_views": 93,
+      "cluster": 17,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C0808",
+        "C3118",
+        "C0472",
+        "C0470",
+        "C0727",
+        "C4116",
+        "C1632",
+        "C2374"
+      ],
+      "selected_families": 76,
+      "selected_fraction": 0.02054054054054054,
+      "selected_views": 82
+    },
+    {
+      "candidate_components": {
+        "megalith": 146
+      },
+      "candidate_families": 146,
+      "candidate_fraction": 0.026545454545454546,
+      "candidate_source_categories": {
+        "megalith": 146
+      },
+      "candidate_views": 146,
+      "cluster": 18,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C2410",
+        "C1532",
+        "C1489",
+        "C3978",
+        "C1447",
+        "C2579",
+        "C2380",
+        "C2137"
+      ],
+      "selected_families": 102,
+      "selected_fraction": 0.027567567567567567,
+      "selected_views": 114
+    },
+    {
+      "candidate_components": {
+        "megalith": 74
+      },
+      "candidate_families": 74,
+      "candidate_fraction": 0.013454545454545455,
+      "candidate_source_categories": {
+        "megalith": 74
+      },
+      "candidate_views": 74,
+      "cluster": 19,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C3294",
+        "C1650",
+        "C1419",
+        "C3659",
+        "C1261",
+        "C3779",
+        "C3991",
+        "C1317"
+      ],
+      "selected_families": 65,
+      "selected_fraction": 0.01756756756756757,
+      "selected_views": 68
+    },
+    {
+      "candidate_components": {
+        "megalith": 194,
+        "vizwiz": 1
+      },
+      "candidate_families": 195,
+      "candidate_fraction": 0.035454545454545454,
+      "candidate_source_categories": {
+        "megalith": 194,
+        "vizwiz": 1
+      },
+      "candidate_views": 195,
+      "cluster": 20,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C4105",
+        "C3244",
+        "C2593",
+        "C3696",
+        "C0460",
+        "C4239",
+        "C2167",
+        "C2335"
+      ],
+      "selected_families": 116,
+      "selected_fraction": 0.03135135135135135,
+      "selected_views": 122
+    },
+    {
+      "candidate_components": {
+        "megalith": 109,
+        "vizwiz": 1
+      },
+      "candidate_families": 110,
+      "candidate_fraction": 0.02,
+      "candidate_source_categories": {
+        "megalith": 109,
+        "vizwiz": 1
+      },
+      "candidate_views": 110,
+      "cluster": 21,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C3992",
+        "C3396",
+        "C3628",
+        "C3054",
+        "C4115",
+        "C4216",
+        "C1125",
+        "C1799"
+      ],
+      "selected_families": 83,
+      "selected_fraction": 0.022432432432432432,
+      "selected_views": 83
+    },
+    {
+      "candidate_components": {
+        "megalith": 16,
+        "vizwiz": 116
+      },
+      "candidate_families": 132,
+      "candidate_fraction": 0.024,
+      "candidate_source_categories": {
+        "megalith": 16,
+        "vizwiz": 116
+      },
+      "candidate_views": 132,
+      "cluster": 22,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C0550",
+        "C5168",
+        "C0769",
+        "C4844",
+        "C4708",
+        "C4833",
+        "C4137",
+        "C3603"
+      ],
+      "selected_families": 84,
+      "selected_fraction": 0.022702702702702703,
+      "selected_views": 84
+    },
+    {
+      "candidate_components": {
+        "megalith": 70
+      },
+      "candidate_families": 70,
+      "candidate_fraction": 0.012727272727272728,
+      "candidate_source_categories": {
+        "megalith": 70
+      },
+      "candidate_views": 70,
+      "cluster": 23,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C4310",
+        "C2914",
+        "C4237",
+        "C3211",
+        "C2684",
+        "C4214",
+        "C2236",
+        "C2856"
+      ],
+      "selected_families": 65,
+      "selected_fraction": 0.01756756756756757,
+      "selected_views": 68
+    },
+    {
+      "candidate_components": {
+        "megalith": 141,
+        "vizwiz": 1
+      },
+      "candidate_families": 142,
+      "candidate_fraction": 0.025818181818181817,
+      "candidate_source_categories": {
+        "megalith": 141,
+        "vizwiz": 1
+      },
+      "candidate_views": 142,
+      "cluster": 24,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C4012",
+        "C1969",
+        "C3326",
+        "C3557",
+        "C2997",
+        "C2993",
+        "C3848",
+        "C1260"
+      ],
+      "selected_families": 99,
+      "selected_fraction": 0.026756756756756758,
+      "selected_views": 120
+    },
+    {
+      "candidate_components": {
+        "megalith": 135,
+        "vizwiz": 1
+      },
+      "candidate_families": 136,
+      "candidate_fraction": 0.024727272727272726,
+      "candidate_source_categories": {
+        "megalith": 135,
+        "vizwiz": 1
+      },
+      "candidate_views": 136,
+      "cluster": 25,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C1688",
+        "C1128",
+        "C4247",
+        "C1336",
+        "C1771",
+        "C2685",
+        "C1512",
+        "C4002"
+      ],
+      "selected_families": 94,
+      "selected_fraction": 0.025405405405405406,
+      "selected_views": 109
+    },
+    {
+      "candidate_components": {
+        "megalith": 168
+      },
+      "candidate_families": 168,
+      "candidate_fraction": 0.030545454545454546,
+      "candidate_source_categories": {
+        "megalith": 168
+      },
+      "candidate_views": 168,
+      "cluster": 26,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C1391",
+        "C4277",
+        "C0597",
+        "C0499",
+        "C3077",
+        "C2416",
+        "C2967",
+        "C4245"
+      ],
+      "selected_families": 106,
+      "selected_fraction": 0.028648648648648647,
+      "selected_views": 109
+    },
+    {
+      "candidate_components": {
+        "megalith": 24,
+        "vizwiz": 174
+      },
+      "candidate_families": 198,
+      "candidate_fraction": 0.036,
+      "candidate_source_categories": {
+        "megalith": 24,
+        "vizwiz": 174
+      },
+      "candidate_views": 198,
+      "cluster": 27,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C4824",
+        "C4813",
+        "C5008",
+        "C4924",
+        "C4729",
+        "C4735",
+        "C4324",
+        "C3479"
+      ],
+      "selected_families": 112,
+      "selected_fraction": 0.03027027027027027,
+      "selected_views": 115
+    },
+    {
+      "candidate_components": {
+        "megalith": 92
+      },
+      "candidate_families": 92,
+      "candidate_fraction": 0.016727272727272726,
+      "candidate_source_categories": {
+        "megalith": 92
+      },
+      "candidate_views": 92,
+      "cluster": 28,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C2023",
+        "C2906",
+        "C3311",
+        "C4436",
+        "C1641",
+        "C0900",
+        "C1071",
+        "C0445"
+      ],
+      "selected_families": 78,
+      "selected_fraction": 0.02108108108108108,
+      "selected_views": 90
+    },
+    {
+      "candidate_components": {
+        "megalith": 133
+      },
+      "candidate_families": 133,
+      "candidate_fraction": 0.024181818181818183,
+      "candidate_source_categories": {
+        "megalith": 133
+      },
+      "candidate_views": 133,
+      "cluster": 29,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C4478",
+        "C1238",
+        "C2552",
+        "C2723",
+        "C3015",
+        "C1910",
+        "C4345",
+        "C4373"
+      ],
+      "selected_families": 93,
+      "selected_fraction": 0.025135135135135135,
+      "selected_views": 102
+    },
+    {
+      "candidate_components": {
+        "megalith": 12,
+        "vizwiz": 74
+      },
+      "candidate_families": 86,
+      "candidate_fraction": 0.015636363636363636,
+      "candidate_source_categories": {
+        "megalith": 12,
+        "vizwiz": 74
+      },
+      "candidate_views": 86,
+      "cluster": 30,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C5029",
+        "C0739",
+        "C5163",
+        "C5250",
+        "C0631",
+        "C4921",
+        "C2644",
+        "C1080"
+      ],
+      "selected_families": 65,
+      "selected_fraction": 0.01756756756756757,
+      "selected_views": 65
+    },
+    {
+      "candidate_components": {
+        "clevr": 111
+      },
+      "candidate_families": 111,
+      "candidate_fraction": 0.020181818181818183,
+      "candidate_source_categories": {
+        "controls": 111
+      },
+      "candidate_views": 111,
+      "cluster": 31,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C5400",
+        "C5493",
+        "C0174",
+        "C5323",
+        "C5468",
+        "C5494",
+        "C5416",
+        "C5483"
+      ],
+      "selected_families": 49,
+      "selected_fraction": 0.013243243243243243,
+      "selected_views": 49
+    },
+    {
+      "candidate_components": {
+        "megalith": 130
+      },
+      "candidate_families": 130,
+      "candidate_fraction": 0.023636363636363636,
+      "candidate_source_categories": {
+        "megalith": 130
+      },
+      "candidate_views": 130,
+      "cluster": 32,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C2331",
+        "C0257",
+        "C1578",
+        "C2082",
+        "C1986",
+        "C3953",
+        "C2871",
+        "C1412"
+      ],
+      "selected_families": 93,
+      "selected_fraction": 0.025135135135135135,
+      "selected_views": 102
+    },
+    {
+      "candidate_components": {
+        "megalith": 95,
+        "vizwiz": 1
+      },
+      "candidate_families": 96,
+      "candidate_fraction": 0.017454545454545455,
+      "candidate_source_categories": {
+        "megalith": 95,
+        "vizwiz": 1
+      },
+      "candidate_views": 96,
+      "cluster": 33,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C1509",
+        "C1580",
+        "C1617",
+        "C0044",
+        "C3044",
+        "C2347",
+        "C0686",
+        "C3761"
+      ],
+      "selected_families": 76,
+      "selected_fraction": 0.02054054054054054,
+      "selected_views": 76
+    },
+    {
+      "candidate_components": {
+        "megalith": 118,
+        "vizwiz": 105
+      },
+      "candidate_families": 223,
+      "candidate_fraction": 0.040545454545454544,
+      "candidate_source_categories": {
+        "megalith": 118,
+        "vizwiz": 105
+      },
+      "candidate_views": 223,
+      "cluster": 34,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C4837",
+        "C0300",
+        "C0312",
+        "C4617",
+        "C0653",
+        "C5207",
+        "C0969",
+        "C2496"
+      ],
+      "selected_families": 164,
+      "selected_fraction": 0.04432432432432432,
+      "selected_views": 176
+    },
+    {
+      "candidate_components": {
+        "megalith": 229,
+        "vizwiz": 3
+      },
+      "candidate_families": 232,
+      "candidate_fraction": 0.04218181818181818,
+      "candidate_source_categories": {
+        "megalith": 229,
+        "vizwiz": 3
+      },
+      "candidate_views": 232,
+      "cluster": 35,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C0851",
+        "C3177",
+        "C2915",
+        "C1880",
+        "C4179",
+        "C4108",
+        "C1594",
+        "C2560"
+      ],
+      "selected_families": 134,
+      "selected_fraction": 0.036216216216216214,
+      "selected_views": 149
+    },
+    {
+      "candidate_components": {
+        "megalith": 95,
+        "vizwiz": 11
+      },
+      "candidate_families": 106,
+      "candidate_fraction": 0.01927272727272727,
+      "candidate_source_categories": {
+        "megalith": 95,
+        "vizwiz": 11
+      },
+      "candidate_views": 106,
+      "cluster": 36,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C2540",
+        "C2756",
+        "C3439",
+        "C3303",
+        "C4049",
+        "C3130",
+        "C2519",
+        "C3049"
+      ],
+      "selected_families": 86,
+      "selected_fraction": 0.023243243243243242,
+      "selected_views": 89
+    },
+    {
+      "candidate_components": {
+        "megalith": 124,
+        "vizwiz": 1
+      },
+      "candidate_families": 125,
+      "candidate_fraction": 0.022727272727272728,
+      "candidate_source_categories": {
+        "megalith": 124,
+        "vizwiz": 1
+      },
+      "candidate_views": 125,
+      "cluster": 37,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C0390",
+        "C1327",
+        "C1439",
+        "C3786",
+        "C2907",
+        "C1926",
+        "C3774",
+        "C1067"
+      ],
+      "selected_families": 87,
+      "selected_fraction": 0.023513513513513513,
+      "selected_views": 93
+    },
+    {
+      "candidate_components": {
+        "megalith": 141,
+        "vizwiz": 3
+      },
+      "candidate_families": 144,
+      "candidate_fraction": 0.02618181818181818,
+      "candidate_source_categories": {
+        "megalith": 141,
+        "vizwiz": 3
+      },
+      "candidate_views": 144,
+      "cluster": 38,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C3619",
+        "C1933",
+        "C3624",
+        "C1307",
+        "C2085",
+        "C3317",
+        "C2861",
+        "C3403"
+      ],
+      "selected_families": 101,
+      "selected_fraction": 0.027297297297297296,
+      "selected_views": 110
+    },
+    {
+      "candidate_components": {
+        "megalith": 181
+      },
+      "candidate_families": 181,
+      "candidate_fraction": 0.03290909090909091,
+      "candidate_source_categories": {
+        "megalith": 181
+      },
+      "candidate_views": 181,
+      "cluster": 39,
+      "review_layout": "six nearest to centroid, followed by two furthest; text names are manual descriptions only",
+      "review_representatives": [
+        "C0666",
+        "C2653",
+        "C1057",
+        "C3636",
+        "C3716",
+        "C3392",
+        "C3401",
+        "C0904"
+      ],
+      "selected_families": 113,
+      "selected_fraction": 0.03054054054054054,
+      "selected_views": 131
+    }
+  ],
+  "clusters_sha256": "919a2de23fd38906eea5bcc6d076269980e4c7c77c725a1941a24e8cbbb2e746",
+  "embeddings_sha256": "135e260a74eb2e6b1acf73e9a82ea3139b0b5b9e1a90465a571971b3e7a62b75",
+  "manifest_sha256": "57d6c46923b9ae20151bb8334373b0872f954c8af8cd0152150c1a7b76b8257a",
+  "scope": "Derived variants do not contribute additional counts to content diversity",
+  "selected_families": 3700
+}

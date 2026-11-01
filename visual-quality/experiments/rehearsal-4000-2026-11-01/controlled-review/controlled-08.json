@@ -1,0 +1,967 @@
+{
+  "packet_id": "controlled-08",
+  "manifest_sha256": "57d6c46923b9ae20151bb8334373b0872f954c8af8cd0152150c1a7b76b8257a",
+  "instructions": "Inspect every family and every derivative. Compare the full frames and identical-coordinate native crops; open exact individual delivered images when the previews do not settle the comparison. Judge visible technical degradation, not aesthetic preference. The generated order does not guarantee worsening: a transform can be imperceptible, remove distracting noise, or affect detail already absent from the parent.\nFor each derivative, independently classify it versus the parent AND versus the preceding level as clear_degradation, not_clearly_worse, or unjudgeable. V1's preceding level is the parent, so those two entries must agree. Give brief visible evidence for each decision. Use not_clearly_worse when the available views do not establish a clear loss, including similar or improved appearance; use unjudgeable when the relevant comparison cannot be assessed reliably. Do not infer a verdict from generation order or presumed parameters. Do not discard families or assign numeric reference scores.\nThese packets contain no grader scores, reference scores or image-stat text. Transform parameters are held separately in provenance.json; do not inspect that file or scoring outputs before saving this review. The full-family diagnostic remains primary; verified comparisons and fully verified adjacent-level ladders are additional subsets, reported separately.",
+  "families": [
+    {
+      "review_family_id": "F071",
+      "family_id": "megalith-b9eae8542d59ea28b609ed87b1952f3d",
+      "contact_sheet_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F071-contact-sheet.png",
+      "contact_sheet_sha256": "3ebcd6ec9fe0016c09e08be48e34dcddb3cf188d81b99544b85f27b9a6f479b7",
+      "members": [
+        {
+          "case_id": "R3532",
+          "image_id": "megalith-b9eae8542d59ea28b609ed87b1952f3d",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/08203b8bd576132124b5d32fb803abfcec1fb983fd17e51beba1c3da96b512dd.png",
+          "view_sha256": "08203b8bd576132124b5d32fb803abfcec1fb983fd17e51beba1c3da96b512dd",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/b9eae8542d59ea28b609ed87b1952f3d.image",
+          "source_sha256": "f694e86a7f734f110e5ff7b84527dce7366d69e514ca074148cf3d48f341cf39",
+          "label": "Parent",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F071-parent-crop.png",
+          "crop_sha256": "321524a16fbe1344d3fee6c9f6f06cf28d3590dbfa943d793a3fba6ce042484c",
+          "crop_box_xyxy": [
+            0,
+            194,
+            384,
+            578
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            773
+          ]
+        },
+        {
+          "case_id": "R1545",
+          "image_id": "distortion-f74ae522f797be5c55aa7146",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/a7d6315310b859cf32a0dab2b4b4b195ea5d0164c197dcd786541052c5a718a9.png",
+          "view_sha256": "a7d6315310b859cf32a0dab2b4b4b195ea5d0164c197dcd786541052c5a718a9",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-f74ae522f797be5c55aa7146.png",
+          "source_sha256": "aa2bffda53474da048a49aa34f6ad179ae5fba241fa6a76a7b656d0961833d06",
+          "label": "V1",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F071-v1-crop.png",
+          "crop_sha256": "7e0acbd92fdac2274e08b60e90423bf1657744d2c95b92e36a3c4c8873f73152",
+          "crop_box_xyxy": [
+            0,
+            194,
+            384,
+            578
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            773
+          ]
+        },
+        {
+          "case_id": "R2810",
+          "image_id": "distortion-b7ee14cad0ce8411a3a9c2e3",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/16f3bd3afe27cfbb94e8de601963c769b67ad648d3494f06bc6b8c800b7438ff.png",
+          "view_sha256": "16f3bd3afe27cfbb94e8de601963c769b67ad648d3494f06bc6b8c800b7438ff",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-b7ee14cad0ce8411a3a9c2e3.png",
+          "source_sha256": "3851dcc0e3583683df174d77966def4f1cbcc3865bd8ca68f6e1bd6c0e6f9eb1",
+          "label": "V2",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F071-v2-crop.png",
+          "crop_sha256": "033f054fe266a4dc1ed5856db071d54bdd82e94a99276c36250496c14aa3d143",
+          "crop_box_xyxy": [
+            0,
+            194,
+            384,
+            578
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            773
+          ]
+        },
+        {
+          "case_id": "R1177",
+          "image_id": "distortion-743994b6a5fbfb021efe3f46",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/55fe8a247deff20fa3dc8785a5678217c371a6a1566ecf257182cedfb2f93d0a.png",
+          "view_sha256": "55fe8a247deff20fa3dc8785a5678217c371a6a1566ecf257182cedfb2f93d0a",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-743994b6a5fbfb021efe3f46.png",
+          "source_sha256": "c9999f16aad1ed5df6c2bd37745c5ed1cfe358b3a9c09dd7257a0ee1bfa98d06",
+          "label": "V3",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F071-v3-crop.png",
+          "crop_sha256": "b79db2eb04dd96fb3821119fa2ead97d1da9d418ff4154b064fd1e00ebafce52",
+          "crop_box_xyxy": [
+            0,
+            194,
+            384,
+            578
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            773
+          ]
+        }
+      ]
+    },
+    {
+      "review_family_id": "F072",
+      "family_id": "megalith-ba6fa8c1d68789d2c038c5da62d3efad",
+      "contact_sheet_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F072-contact-sheet.png",
+      "contact_sheet_sha256": "416a0f6072d355c0b9665f233fc00cd61d022b8ae0ae04ff8f037927322f8a58",
+      "members": [
+        {
+          "case_id": "R1390",
+          "image_id": "megalith-ba6fa8c1d68789d2c038c5da62d3efad",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/6c1be4a132207cfc29af0226789ec810417b3cba49af34a76796536d37ea2d26.png",
+          "view_sha256": "6c1be4a132207cfc29af0226789ec810417b3cba49af34a76796536d37ea2d26",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/ba6fa8c1d68789d2c038c5da62d3efad.image",
+          "source_sha256": "f7a20f7525a1332af46e4cc93f88ab3e5938bf174291639eb4e7dcdcab31f3e1",
+          "label": "Parent",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F072-parent-crop.png",
+          "crop_sha256": "cba6e686716311369fda86de1868ff4da49af14d29251ab5f5ed061b83c3b5d0",
+          "crop_box_xyxy": [
+            184,
+            291,
+            568,
+            675
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            772
+          ]
+        },
+        {
+          "case_id": "R1249",
+          "image_id": "distortion-9c7c65d43378a4a7064f94fc",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/e92b167061fa5bac027b1b47947f83c0b0ecf0e4bcfa61299a3bb5d9f3938220.png",
+          "view_sha256": "e92b167061fa5bac027b1b47947f83c0b0ecf0e4bcfa61299a3bb5d9f3938220",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-9c7c65d43378a4a7064f94fc.png",
+          "source_sha256": "9a4ec2115a0b640cf94634ce5d56132c19f876dea070cf57e872268fa3f82d19",
+          "label": "V1",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F072-v1-crop.png",
+          "crop_sha256": "fe6dfca7304af9feb6549a3f6478660ae3b26275ac9df9727c1f3c2be977f03e",
+          "crop_box_xyxy": [
+            184,
+            291,
+            568,
+            675
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            772
+          ]
+        },
+        {
+          "case_id": "R0786",
+          "image_id": "distortion-316fe9f150d273c4bb48145d",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/8ff3dd2da9b4163cc3aa4917a2db3d9ef0266d6e7d0ea4ca3b3590e8aaedb5d5.png",
+          "view_sha256": "8ff3dd2da9b4163cc3aa4917a2db3d9ef0266d6e7d0ea4ca3b3590e8aaedb5d5",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-316fe9f150d273c4bb48145d.png",
+          "source_sha256": "f4f3c607e7d377853d21ea3a8e92e2bda19d872b353d7f50c4410684699fc1df",
+          "label": "V2",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F072-v2-crop.png",
+          "crop_sha256": "2aa81dde4e35cea2d49026b1e8c7d4f7e73189a37bcdd3c8b0f18256580f81c1",
+          "crop_box_xyxy": [
+            184,
+            291,
+            568,
+            675
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            772
+          ]
+        },
+        {
+          "case_id": "R0847",
+          "image_id": "distortion-fb375ea9acc35b62161b864f",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/fb3bef82f880048901c6112cc0928eaa48061c87d7e8176e6cd5ce9e46056bff.png",
+          "view_sha256": "fb3bef82f880048901c6112cc0928eaa48061c87d7e8176e6cd5ce9e46056bff",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-fb375ea9acc35b62161b864f.png",
+          "source_sha256": "3cf6240c618687e3df294ab0f312e08d23d4bf3e18fe9aa18ee7444ee8059011",
+          "label": "V3",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F072-v3-crop.png",
+          "crop_sha256": "c980fcfe009c31216225e29a99de2dd1a197f1cc86594d29b806f19c25336061",
+          "crop_box_xyxy": [
+            184,
+            291,
+            568,
+            675
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            772
+          ]
+        }
+      ]
+    },
+    {
+      "review_family_id": "F073",
+      "family_id": "megalith-bc58f396694798e16b69701c14c4602e",
+      "contact_sheet_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F073-contact-sheet.png",
+      "contact_sheet_sha256": "eba4fe3980772b44ab47043f3595fec5736555d6bfe5e299001928371c679e3c",
+      "members": [
+        {
+          "case_id": "R3483",
+          "image_id": "megalith-bc58f396694798e16b69701c14c4602e",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/4e89a6bb758d2e0cda357f22a0c95fb09760d0cb9f5f955ac895812892abe6f7.png",
+          "view_sha256": "4e89a6bb758d2e0cda357f22a0c95fb09760d0cb9f5f955ac895812892abe6f7",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/bc58f396694798e16b69701c14c4602e.image",
+          "source_sha256": "6fc279c405f385c783aea86ad434a5df0a190226faf51e0e4eccc93c9b2062ee",
+          "label": "Parent",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F073-parent-crop.png",
+          "crop_sha256": "c00e6187f0c9ebf14ed5baedd112db7abe9a9308c36e306a4c66180e3e22121e",
+          "crop_box_xyxy": [
+            998,
+            422,
+            1382,
+            806
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1382,
+            806
+          ]
+        },
+        {
+          "case_id": "R0636",
+          "image_id": "distortion-7aba47172ed427c30a4b45ae",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/22bb954d0443ab95ae43402da00a440fc4d4a8e87d8689488459a4e2c117c557.png",
+          "view_sha256": "22bb954d0443ab95ae43402da00a440fc4d4a8e87d8689488459a4e2c117c557",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-7aba47172ed427c30a4b45ae.png",
+          "source_sha256": "975c75eec2c4a80235cd9b10236546d07258ad208f4d66f10cb6a17493000be4",
+          "label": "V1",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F073-v1-crop.png",
+          "crop_sha256": "ff1279dbbee8bbcd0b86b8f1aeaedce6f3a3a33bfb46d2f20176ff050baf07cd",
+          "crop_box_xyxy": [
+            998,
+            422,
+            1382,
+            806
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1382,
+            806
+          ]
+        },
+        {
+          "case_id": "R2220",
+          "image_id": "distortion-e559fce0ceb14d8b4a2d4aac",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/63a9a5086a8642b6c4422017f06a748bb03db81b9a0d94eb0845a757352e8462.png",
+          "view_sha256": "63a9a5086a8642b6c4422017f06a748bb03db81b9a0d94eb0845a757352e8462",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-e559fce0ceb14d8b4a2d4aac.png",
+          "source_sha256": "b6c32d37641696617496841bfc3c7150727d3de329face912ccb5c369abcaed1",
+          "label": "V2",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F073-v2-crop.png",
+          "crop_sha256": "8bbfb923a92df73dbce9746c663e3e54c2829ab1cbe33b3e2e123bb10e849887",
+          "crop_box_xyxy": [
+            998,
+            422,
+            1382,
+            806
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1382,
+            806
+          ]
+        },
+        {
+          "case_id": "R3109",
+          "image_id": "distortion-85e9dc81e9969456e256f01a",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/fe52786345c700091a1bad6cb9856a59a3c596f8d7ed5d1a15e61513e244b3b8.png",
+          "view_sha256": "fe52786345c700091a1bad6cb9856a59a3c596f8d7ed5d1a15e61513e244b3b8",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-85e9dc81e9969456e256f01a.png",
+          "source_sha256": "cb7ca0f0dc824acdc284275d75a5f58b25cb77db56569bbb536727a3c9a7bb03",
+          "label": "V3",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F073-v3-crop.png",
+          "crop_sha256": "378e5ca468128b2f8153a1a201bf95ca635e54ff1e82fc494201250bbde204f5",
+          "crop_box_xyxy": [
+            998,
+            422,
+            1382,
+            806
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1382,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "review_family_id": "F074",
+      "family_id": "megalith-bff2c01c2da40e7bca15f062a6ece7db",
+      "contact_sheet_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F074-contact-sheet.png",
+      "contact_sheet_sha256": "1082747d40c1c4387c634b77abb97e82088ad9603e7fe8167401241edec0ec7b",
+      "members": [
+        {
+          "case_id": "R1168",
+          "image_id": "megalith-bff2c01c2da40e7bca15f062a6ece7db",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/cc433f69180ce9cec00015a66d60ec9a5a38bf0469e60bdb6387d6fe0e033d9e.png",
+          "view_sha256": "cc433f69180ce9cec00015a66d60ec9a5a38bf0469e60bdb6387d6fe0e033d9e",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/bff2c01c2da40e7bca15f062a6ece7db.image",
+          "source_sha256": "7cce212e64d9b213a5c172bb0899fe6e0834f9b31683a5d57d56580e36edee56",
+          "label": "Parent",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F074-parent-crop.png",
+          "crop_sha256": "d1bec84e2cdebd1080619af3e2ce4186efcbd5b7b0554070fe583155bfe588e2",
+          "crop_box_xyxy": [
+            0,
+            550,
+            384,
+            934
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            838,
+            1118
+          ]
+        },
+        {
+          "case_id": "R2233",
+          "image_id": "distortion-ef89523937bb2a6c000908c2",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/feb7af67de65cbb0c10811c66fd3707f5c4cc6659a0bea382c2bcae796977628.png",
+          "view_sha256": "feb7af67de65cbb0c10811c66fd3707f5c4cc6659a0bea382c2bcae796977628",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-ef89523937bb2a6c000908c2.png",
+          "source_sha256": "e34392a33408f95825c3d04388d65569973b9271bf7b1c019a0e4fe5954b29e6",
+          "label": "V1",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F074-v1-crop.png",
+          "crop_sha256": "4e3046c1ab9ed3197286790bb59f13db34a29686d8f8a4f309f219874fea8387",
+          "crop_box_xyxy": [
+            0,
+            550,
+            384,
+            934
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            838,
+            1118
+          ]
+        },
+        {
+          "case_id": "R0607",
+          "image_id": "distortion-ae7c47f9c5c42a35feeb566d",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/75987c41bbbf18908d563d025829bc308d2c5e072a79601d0dedcb268b10739c.png",
+          "view_sha256": "75987c41bbbf18908d563d025829bc308d2c5e072a79601d0dedcb268b10739c",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-ae7c47f9c5c42a35feeb566d.png",
+          "source_sha256": "1cb1819d853d84c93a41969cb7ba8d558b3ad200074c9b976191a86493bbad75",
+          "label": "V2",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F074-v2-crop.png",
+          "crop_sha256": "44d433a6ce56dcab1d2a50d0d41af133f959cebc09c0b1bb9240be6eb3b58a52",
+          "crop_box_xyxy": [
+            0,
+            550,
+            384,
+            934
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            838,
+            1118
+          ]
+        },
+        {
+          "case_id": "R2483",
+          "image_id": "distortion-ce22477a17dc85eb7d14c9be",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/f57c582b5685e63396a8fa58281971f32d31935f9b9c28f65288966fa6c26c75.png",
+          "view_sha256": "f57c582b5685e63396a8fa58281971f32d31935f9b9c28f65288966fa6c26c75",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-ce22477a17dc85eb7d14c9be.png",
+          "source_sha256": "a245b81748b73f1c9d0398ee6b4eb0d62a92b22088bc9594c4d2d81c00dd33b4",
+          "label": "V3",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F074-v3-crop.png",
+          "crop_sha256": "a6b652343f06601d624f1b8d39817c5c8d6edbe74f2116623dc85b02231bedab",
+          "crop_box_xyxy": [
+            0,
+            550,
+            384,
+            934
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            838,
+            1118
+          ]
+        }
+      ]
+    },
+    {
+      "review_family_id": "F075",
+      "family_id": "megalith-c546d82c0cb621f92a47d515ec3ba70f",
+      "contact_sheet_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F075-contact-sheet.png",
+      "contact_sheet_sha256": "413ae80717c011ec52bd19338f75c1ed6ec0a73f82b5b16d3281215df7a45fbf",
+      "members": [
+        {
+          "case_id": "R2409",
+          "image_id": "megalith-c546d82c0cb621f92a47d515ec3ba70f",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/2d9a24e7ac46bcd28947a7aa9b74ac37011948205e16da6b12b75bb3f577c7a9.png",
+          "view_sha256": "2d9a24e7ac46bcd28947a7aa9b74ac37011948205e16da6b12b75bb3f577c7a9",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/c546d82c0cb621f92a47d515ec3ba70f.image",
+          "source_sha256": "f47f34c77bb46618141264875712a44754b020165f5e83ab1c9010a988fad3fb",
+          "label": "Parent",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F075-parent-crop.png",
+          "crop_sha256": "1576c8cbecad227d5ba93e4d20a82aab6cf22f572cb21a864a88b1459daf4f66",
+          "crop_box_xyxy": [
+            430,
+            548,
+            814,
+            932
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1243,
+            932
+          ]
+        },
+        {
+          "case_id": "R1655",
+          "image_id": "distortion-a93f59ecdbf4710eaddc9cab",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/3a494c7c49e59625cd2b821921ace201793f471af64c6597d42e41d36af315a3.png",
+          "view_sha256": "3a494c7c49e59625cd2b821921ace201793f471af64c6597d42e41d36af315a3",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-a93f59ecdbf4710eaddc9cab.png",
+          "source_sha256": "415fefdf6a7bcc688063c01693736fccf44e36a814877e85fba94c4571595c07",
+          "label": "V1",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F075-v1-crop.png",
+          "crop_sha256": "67bc94b954396f2f3ae48a5dee75f0fdefe7ebb5fe951ccabfad58da1ac4cc8d",
+          "crop_box_xyxy": [
+            430,
+            548,
+            814,
+            932
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1243,
+            932
+          ]
+        },
+        {
+          "case_id": "R3201",
+          "image_id": "distortion-4bda8a5e0f2fe2526682f429",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/90be9dc19f00c9f6e299bf812f8692b35e5204ddca0b91bea23106d414f1bb21.png",
+          "view_sha256": "90be9dc19f00c9f6e299bf812f8692b35e5204ddca0b91bea23106d414f1bb21",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-4bda8a5e0f2fe2526682f429.png",
+          "source_sha256": "e16a45ecd4ed6b0b43d34bdefbe90016ddcf39a388a3c3242ec6f72738e4f585",
+          "label": "V2",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F075-v2-crop.png",
+          "crop_sha256": "1ee801372b68e45c50f600a7d50b0eee3f43a94cb3106d78527fc13f3f81ae4e",
+          "crop_box_xyxy": [
+            430,
+            548,
+            814,
+            932
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1243,
+            932
+          ]
+        },
+        {
+          "case_id": "R2196",
+          "image_id": "distortion-a8c056ad1f917b7bd16bc138",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/ca9a7a8e1760c8c73f9cf77ff0eff3c2e53a1811b9f17ecf53b0140732886957.png",
+          "view_sha256": "ca9a7a8e1760c8c73f9cf77ff0eff3c2e53a1811b9f17ecf53b0140732886957",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-a8c056ad1f917b7bd16bc138.png",
+          "source_sha256": "43377c32e8f035e74510aae98132601140063920dd4a80281d7a9c09e5bc9ced",
+          "label": "V3",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F075-v3-crop.png",
+          "crop_sha256": "8ed63ee5fefc0867bdae911ec80f9820ff855ef30acbd81b5a18dfad3a7c55db",
+          "crop_box_xyxy": [
+            430,
+            548,
+            814,
+            932
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1243,
+            932
+          ]
+        }
+      ]
+    },
+    {
+      "review_family_id": "F076",
+      "family_id": "megalith-c7edf62c1d595a56863834df9420b221",
+      "contact_sheet_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F076-contact-sheet.png",
+      "contact_sheet_sha256": "8bf12da3db7ae371ce571acfb9d3c54ecc459aea97d97002e50c45c492e942fb",
+      "members": [
+        {
+          "case_id": "R1094",
+          "image_id": "megalith-c7edf62c1d595a56863834df9420b221",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/1ae2e08d0378d135c0b1688f13a910a421d8ecce7cbae1284f5c4910d5876c36.png",
+          "view_sha256": "1ae2e08d0378d135c0b1688f13a910a421d8ecce7cbae1284f5c4910d5876c36",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/c7edf62c1d595a56863834df9420b221.image",
+          "source_sha256": "03ab12d2917f59b435348b437fdeea965191e1a139d1d33286a76831c014fa89",
+          "label": "Parent",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F076-parent-crop.png",
+          "crop_sha256": "0eccfa3e1172ea862e84e69267a1172ac0a0cabcd73ee7caa41bec62ec2df400",
+          "crop_box_xyxy": [
+            1152,
+            0,
+            1536,
+            384
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1152
+          ]
+        },
+        {
+          "case_id": "R3413",
+          "image_id": "distortion-c69b6da0392c66e4989841cf",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/bdaba08d74d5826d98b9618626286eb2a09b3510e0866ad4b639bcdf1afedce9.png",
+          "view_sha256": "bdaba08d74d5826d98b9618626286eb2a09b3510e0866ad4b639bcdf1afedce9",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-c69b6da0392c66e4989841cf.png",
+          "source_sha256": "984b82bd5cbbe89f04a6060620cccaa350e4f6beececd7b6b25dcd1172349646",
+          "label": "V1",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F076-v1-crop.png",
+          "crop_sha256": "5eefed652c1438d7e139604bdf068aeb2fa001024e909869d9f8d321010babbb",
+          "crop_box_xyxy": [
+            1152,
+            0,
+            1536,
+            384
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1152
+          ]
+        },
+        {
+          "case_id": "R3640",
+          "image_id": "distortion-d1ee742cb24a7923ddc2971d",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/9246dcb187ca8689e911b431e9dada85da3e88d4bd6bffa4bf7a3bde0d96ced9.png",
+          "view_sha256": "9246dcb187ca8689e911b431e9dada85da3e88d4bd6bffa4bf7a3bde0d96ced9",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-d1ee742cb24a7923ddc2971d.png",
+          "source_sha256": "3a919163d07042f4eef780e6bca2161bcbd6592c035f2911cf21fb9c556f3f8d",
+          "label": "V2",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F076-v2-crop.png",
+          "crop_sha256": "67c749ef36501ad1f8c29f7c16d0d3fe92d6ea3fb1635e5ae8cb50c5da2ba81b",
+          "crop_box_xyxy": [
+            1152,
+            0,
+            1536,
+            384
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1152
+          ]
+        },
+        {
+          "case_id": "R1201",
+          "image_id": "distortion-49a50a2834f3b5469859abac",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/e1f32e37300dcd39bab3c800c0f93675318e60ae7b2f96cb45ef8d9bd41a5a89.png",
+          "view_sha256": "e1f32e37300dcd39bab3c800c0f93675318e60ae7b2f96cb45ef8d9bd41a5a89",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-49a50a2834f3b5469859abac.png",
+          "source_sha256": "2e319694d639914376e20a03b76b295bb82a92bb94dd053ebec6012c6d7f09db",
+          "label": "V3",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F076-v3-crop.png",
+          "crop_sha256": "65e4170bc9811dee61b9083d757883f9cd84f56eb22f77d3fce394e52c251f94",
+          "crop_box_xyxy": [
+            1152,
+            0,
+            1536,
+            384
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1152
+          ]
+        }
+      ]
+    },
+    {
+      "review_family_id": "F077",
+      "family_id": "megalith-cb85fe790a46541d49dbc78aa61ddf9f",
+      "contact_sheet_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F077-contact-sheet.png",
+      "contact_sheet_sha256": "c39f0a7fc3ebb77f42a909d6d310534a46120f6e989850c2137d2347ed5ad4f1",
+      "members": [
+        {
+          "case_id": "R1291",
+          "image_id": "megalith-cb85fe790a46541d49dbc78aa61ddf9f",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/b15589f5ac848d5d5e08862073452df5c13c165abfab25397127d885c1df2ed9.png",
+          "view_sha256": "b15589f5ac848d5d5e08862073452df5c13c165abfab25397127d885c1df2ed9",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/cb85fe790a46541d49dbc78aa61ddf9f.image",
+          "source_sha256": "57721f22f9de3e727c72830e93ec3209ec173045dfba7b3b7b5987e02aae93c4",
+          "label": "Parent",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F077-parent-crop.png",
+          "crop_sha256": "7f873ebe57d06f1588a40e4273afd9d6b82635912bb86729cc338cc77be41769",
+          "crop_box_xyxy": [
+            652,
+            250,
+            1036,
+            634
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1036,
+            1382
+          ]
+        },
+        {
+          "case_id": "R3846",
+          "image_id": "distortion-107583348cda05e1b13567bd",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/f20936291cddf2051b6a92a3566a623d0391fcede8e60b7443930a85de274ce2.png",
+          "view_sha256": "f20936291cddf2051b6a92a3566a623d0391fcede8e60b7443930a85de274ce2",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-107583348cda05e1b13567bd.jpg",
+          "source_sha256": "ae5ac8e83e2b76388475eecfcf646719a19ace6c2b99f83434d52602ebbfff37",
+          "label": "V1",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F077-v1-crop.png",
+          "crop_sha256": "a19563fd69f1a65582995f737b65fc86226cdda63fc4818c4862865868b5897c",
+          "crop_box_xyxy": [
+            652,
+            250,
+            1036,
+            634
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1036,
+            1382
+          ]
+        },
+        {
+          "case_id": "R1637",
+          "image_id": "distortion-86fdaed2f670fb50661c9300",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/d2debf44d58a5d39a3cc18b95632d07d766347274a5ffc29269a0a6580d9536f.png",
+          "view_sha256": "d2debf44d58a5d39a3cc18b95632d07d766347274a5ffc29269a0a6580d9536f",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-86fdaed2f670fb50661c9300.jpg",
+          "source_sha256": "2411a8ca87d4c423b73f35e6e7a8399d0bbf37d87cdcdc8e17fd2f4ad1073e0e",
+          "label": "V2",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F077-v2-crop.png",
+          "crop_sha256": "fd740c6f5ab72f2e0322ecd17e80029e62ac739ae973b14b12320e253fccbc5a",
+          "crop_box_xyxy": [
+            652,
+            250,
+            1036,
+            634
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1036,
+            1382
+          ]
+        },
+        {
+          "case_id": "R2691",
+          "image_id": "distortion-018a7a65536c242728a14f5c",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/105faa94d44da586fd714c8129c4729f10b0e309eddb4b7ee9e4d952d5569d59.png",
+          "view_sha256": "105faa94d44da586fd714c8129c4729f10b0e309eddb4b7ee9e4d952d5569d59",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-018a7a65536c242728a14f5c.jpg",
+          "source_sha256": "792fe8262c1ce9404404cef499edc9bef63e21243449e5c82cce024b3f1dbe1a",
+          "label": "V3",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F077-v3-crop.png",
+          "crop_sha256": "7d6462ab88c66b80f418e43b063b9c4813e088f168a3844301a89991402f1bcc",
+          "crop_box_xyxy": [
+            652,
+            250,
+            1036,
+            634
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1036,
+            1382
+          ]
+        }
+      ]
+    },
+    {
+      "review_family_id": "F078",
+      "family_id": "megalith-cbb254814a45afcbd7aa519153371aba",
+      "contact_sheet_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F078-contact-sheet.png",
+      "contact_sheet_sha256": "1e10dcce8295ddb69421b283a34f5a6e97b900ada9ce4370fc2656eabbf3dce1",
+      "members": [
+        {
+          "case_id": "R1093",
+          "image_id": "megalith-cbb254814a45afcbd7aa519153371aba",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/0b06ac8f63413eb5376205e1ba976c5e9496817682bc0e1ffbb22ba197ff7631.png",
+          "view_sha256": "0b06ac8f63413eb5376205e1ba976c5e9496817682bc0e1ffbb22ba197ff7631",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/cbb254814a45afcbd7aa519153371aba.image",
+          "source_sha256": "ee70d4c89a987e29bb4da62505dfd722416f6f3ed928a7880c1b57fbdb8a4671",
+          "label": "Parent",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F078-parent-crop.png",
+          "crop_sha256": "3003ffd85b34863e55dca2946fb7437929a7fb406462d0ab78931e644f1c6ee2",
+          "crop_box_xyxy": [
+            864,
+            480,
+            1248,
+            864
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "case_id": "R1180",
+          "image_id": "distortion-716e118776f4bc066e9a85be",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/5c6ba5d939121c0c164598500456d0b3f98920ed8d8230cc7204fe6e18bae57f.png",
+          "view_sha256": "5c6ba5d939121c0c164598500456d0b3f98920ed8d8230cc7204fe6e18bae57f",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-716e118776f4bc066e9a85be.jpg",
+          "source_sha256": "d855900ff7e1c04609136f5f3d0bf12421d5a7cd58abf460c9787b67069b3d31",
+          "label": "V1",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F078-v1-crop.png",
+          "crop_sha256": "4638af0dead837d2502ce3a66796899aaa19a9880c8b10fdb2c7423d34158d7c",
+          "crop_box_xyxy": [
+            864,
+            480,
+            1248,
+            864
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "case_id": "R1255",
+          "image_id": "distortion-87a82dc144d5bc6c9e79e689",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/62b07d8a9cef82789417197e74a0c95213ec128895f1126fb2b9f759679b0b17.png",
+          "view_sha256": "62b07d8a9cef82789417197e74a0c95213ec128895f1126fb2b9f759679b0b17",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-87a82dc144d5bc6c9e79e689.jpg",
+          "source_sha256": "e8a00ad173b899c415e4f163a88458685d8b55f67eeb80efc91d7f5fe0d3c222",
+          "label": "V2",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F078-v2-crop.png",
+          "crop_sha256": "6bcb703d7b6b7198779e0929b229e29270f4eece8d1b1177339a5d5e83cfb743",
+          "crop_box_xyxy": [
+            864,
+            480,
+            1248,
+            864
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "case_id": "R1621",
+          "image_id": "distortion-b7b4eff78a04983ad94006d4",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/9995f5fe273d467b450e173dbf45c5b6e295aef18c09bbd8cc9119eefeed6a3c.png",
+          "view_sha256": "9995f5fe273d467b450e173dbf45c5b6e295aef18c09bbd8cc9119eefeed6a3c",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-b7b4eff78a04983ad94006d4.jpg",
+          "source_sha256": "fe412b38c83d1d509b871fdebc1f63124194687c5bafe48ca885d7a57cf86888",
+          "label": "V3",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F078-v3-crop.png",
+          "crop_sha256": "69c749dc9ce3b492a8d86ae01480a4ac80f550cb59c06d5463a04b59b91e937c",
+          "crop_box_xyxy": [
+            864,
+            480,
+            1248,
+            864
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "review_family_id": "F079",
+      "family_id": "megalith-cbca6b536d29215dfa3b41acdf4c07e5",
+      "contact_sheet_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F079-contact-sheet.png",
+      "contact_sheet_sha256": "a6bb3380361bc8ef60b0a082daa9ee11b06d37300c9dadb4cbb4c1932200fed4",
+      "members": [
+        {
+          "case_id": "R3239",
+          "image_id": "megalith-cbca6b536d29215dfa3b41acdf4c07e5",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/8325928aa2fc86a44b44373670283140291ca737e167ee81ba958e348d777a42.png",
+          "view_sha256": "8325928aa2fc86a44b44373670283140291ca737e167ee81ba958e348d777a42",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/cbca6b536d29215dfa3b41acdf4c07e5.image",
+          "source_sha256": "d89395153fd5ff22bb3eb263fa6877f06715a9e8351bfef56e64ebc21cd7a330",
+          "label": "Parent",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F079-parent-crop.png",
+          "crop_sha256": "27565b24da51174a3b9d5785afb7b4938b5d13573cf9f66ee764b573d77f8e47",
+          "crop_box_xyxy": [
+            576,
+            480,
+            960,
+            864
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "case_id": "R0694",
+          "image_id": "distortion-cb0745d9b4f3f046f430100f",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/609b8baafd12a4c8dce406cd366e4b43575cef33a9ebb13dad834ba9496e5ed2.png",
+          "view_sha256": "609b8baafd12a4c8dce406cd366e4b43575cef33a9ebb13dad834ba9496e5ed2",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-cb0745d9b4f3f046f430100f.jpg",
+          "source_sha256": "940980ac8644faa76cd445a72b39eda947725d57e62eeca7cf619ebe16ef3bd5",
+          "label": "V1",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F079-v1-crop.png",
+          "crop_sha256": "db5105202ca0a59a6165029e8e1cf6f49838e0975c164b6e76758706bc0161d1",
+          "crop_box_xyxy": [
+            576,
+            480,
+            960,
+            864
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "case_id": "R0846",
+          "image_id": "distortion-2cb33a6b2eb9f16dc01e4dd8",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/9fe3465b8770c9808498f7fa25d417a9475d7fe5712aae890b1a326ac11ed141.png",
+          "view_sha256": "9fe3465b8770c9808498f7fa25d417a9475d7fe5712aae890b1a326ac11ed141",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-2cb33a6b2eb9f16dc01e4dd8.jpg",
+          "source_sha256": "0c28fcc321d4b04e328be3001557085e030e78283ac218cd7c63db5a4fcbe552",
+          "label": "V2",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F079-v2-crop.png",
+          "crop_sha256": "4c2c03dc31cb735b61426d8573ed01dfc6c8380e563e8d7f38b7e9db01e60c46",
+          "crop_box_xyxy": [
+            576,
+            480,
+            960,
+            864
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "case_id": "R3724",
+          "image_id": "distortion-b06c694020d23776e530de7f",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/485983568ec7d192192960512c046911897e2f2e7337cc32752b2773740e7ffe.png",
+          "view_sha256": "485983568ec7d192192960512c046911897e2f2e7337cc32752b2773740e7ffe",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-b06c694020d23776e530de7f.jpg",
+          "source_sha256": "7502fba22fb6caa9f6a140fa0e80be72137db315790ef3eae3be95007494c2d9",
+          "label": "V3",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F079-v3-crop.png",
+          "crop_sha256": "f908cecdbcbf35da5b482cc56018fd83bd0318ddae736fc9b52434715743fb8b",
+          "crop_box_xyxy": [
+            576,
+            480,
+            960,
+            864
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1536,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "review_family_id": "F080",
+      "family_id": "megalith-ce386a975814bea62475e9e3ae195a92",
+      "contact_sheet_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F080-contact-sheet.png",
+      "contact_sheet_sha256": "39b1feb983fcfb3c1b6e0312c432b2545b928003a93f0afbcb8e7da62f338595",
+      "members": [
+        {
+          "case_id": "R2745",
+          "image_id": "megalith-ce386a975814bea62475e9e3ae195a92",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/3da4eee902dfcb104613298833501bcaa31a00b4e187ba589dff98277597bbd9.png",
+          "view_sha256": "3da4eee902dfcb104613298833501bcaa31a00b4e187ba589dff98277597bbd9",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/sources/megalith/images/ce386a975814bea62475e9e3ae195a92.image",
+          "source_sha256": "f7034a429166d9e5ff5666344cf0f769ac5474c0827fc209a325c0c5c959562e",
+          "label": "Parent",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F080-parent-crop.png",
+          "crop_sha256": "98befb22fca609886fe9ab19fcb780e05d953b5e269143dfeace3596daefcb8a",
+          "crop_box_xyxy": [
+            550,
+            181,
+            934,
+            565
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            746
+          ]
+        },
+        {
+          "case_id": "R3596",
+          "image_id": "distortion-0e8a0918c3388150d9b003b1",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/95904a366b53d70010f2b06b720eaa5fbffede28a00badb19d883303d58249ec.png",
+          "view_sha256": "95904a366b53d70010f2b06b720eaa5fbffede28a00badb19d883303d58249ec",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-0e8a0918c3388150d9b003b1.png",
+          "source_sha256": "d93abf9e629350c116212eee9c1bff81ac178808b1c00d96e86834010bf85e48",
+          "label": "V1",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F080-v1-crop.png",
+          "crop_sha256": "f6c7252f29bc36378677a0591e930ef22c0581690e82cc8d029d9c410c9794ca",
+          "crop_box_xyxy": [
+            550,
+            181,
+            934,
+            565
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            746
+          ]
+        },
+        {
+          "case_id": "R0927",
+          "image_id": "distortion-9eb3b070e7e12b5ba39ecae7",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/317d53d2fdcf1e77d49b424da241d52f30c3b24636b2d3a10a334a4c4e745e77.png",
+          "view_sha256": "317d53d2fdcf1e77d49b424da241d52f30c3b24636b2d3a10a334a4c4e745e77",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-9eb3b070e7e12b5ba39ecae7.png",
+          "source_sha256": "601ae55d7b28ec377244586488cf8976031d5e536f6e808afb5443a229f93613",
+          "label": "V2",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F080-v2-crop.png",
+          "crop_sha256": "35e4d0da30dd3bd2ef7815f25e7082b546386b0b888baa369146508320fc28eb",
+          "crop_box_xyxy": [
+            550,
+            181,
+            934,
+            565
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            746
+          ]
+        },
+        {
+          "case_id": "R1302",
+          "image_id": "distortion-5b042fbafc123096bd103c9b",
+          "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/395f2981c7ad6120527336b198d7c5ac3209aa5b5d00d0c841baf77cbdc491c7.png",
+          "view_sha256": "395f2981c7ad6120527336b198d7c5ac3209aa5b5d00d0c841baf77cbdc491c7",
+          "source_path": "/home/ahstn/git/model-gym/visual-quality/data/images/generated_distortion/distortion-5b042fbafc123096bd103c9b.png",
+          "source_sha256": "2b955ac3e2071de54f13d3d49eac8b9f839101f47d5b14871b62282e44e21c08",
+          "label": "V3",
+          "crop_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/controlled-review-assets/F080-v3-crop.png",
+          "crop_sha256": "330d4405e445d6008d8f835c05161f7127be424ca7dd83cc4b7f2bf20c55b252",
+          "crop_box_xyxy": [
+            550,
+            181,
+            934,
+            565
+          ],
+          "crop_pixel_scale": 1,
+          "delivered_dimensions": [
+            1118,
+            746
+          ]
+        }
+      ]
+    }
+  ]
+}

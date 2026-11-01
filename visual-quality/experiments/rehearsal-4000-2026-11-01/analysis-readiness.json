@@ -1,12 +1,12 @@
 {
   "status": "analysis implemented and synthetic tests passed; no fresh results loaded",
-  "checked_at": "2026-11-01T12:39:40.875641+00:00",
-  "tests": "32 analysis +21 API +18 Lite tests passed;16 subtests passed; Ruff clean",
+  "checked_at": "2026-11-01T13:05:56.420439+00:00",
+  "tests": "34 analysis +21 API +18 Lite tests passed;16 subtests passed; Ruff clean",
   "files_sha256": {
-    "analyze.py": "ad23356f7cace711713d10af38a34dd4fe1d04da2512d18a222029e032eb5ca2",
-    "analysis_metrics.py": "96ff934647d065c19232982e91be84245424bfbb300aa3ce8aaa6971c1fabdd7",
-    "test_analysis.py": "3b90313aa166006dabcd43005d8cef71a4f9904ece5b2e602bd0909412d53de4",
-    "report.py": "c5d68a1ff38da1adfd9530f275abf57c9edbab7bb4777dea6e90b8c7a96bb21f"
+    "analyze.py": "5d27053071e5f1e8e1a752325d6c7daf5d07b3ad2975ee59d42f5ad1fc79fc21",
+    "analysis_metrics.py": "d890abb54ed2685126040cdaf5a0c1611dec9901552c042c68d073b4f86168d8",
+    "test_analysis.py": "38b0389e3e3517c2de54c1d1e3593e29322bb7ab3bda06ca38fc61091d203296",
+    "report.py": "208faddbd3a87b17e8ea853a789ada7cdf9071b100fdd01e9ead9e5ee95673ec"
   },
   "expected_long_rows": 27500,
   "primary_panel": "representative",
@@ -24,5 +24,21 @@
     "Reject orphan API journals lacking their frozen plan",
     "Task-specific all-five-common MAE/bias/Spearman/coverage"
   ],
-  "ensemble_mean_arithmetic": "Decimal(str(component)) sum / component count, then float; no output rounding or fuzzy native-score ranks"
+  "ensemble_mean_arithmetic": "Decimal(str(component)) sum / component count, then float; no output rounding or fuzzy native-score ranks",
+  "baseline_comparison_policy": {
+    "panels": [
+      "representative",
+      "challenge"
+    ],
+    "contrast": "individual baseline MAE minus fixed Luna/DeepSeek mean MAE",
+    "dimensions": [
+      "technical",
+      "aesthetic",
+      "common-both combined"
+    ],
+    "paired_coverage": "task-specific; combined requires both tasks",
+    "bootstrap_repeats": 10000,
+    "seed": 20261101,
+    "status": "exploratory, uncorrected, conditional on assistant references"
+  }
 }

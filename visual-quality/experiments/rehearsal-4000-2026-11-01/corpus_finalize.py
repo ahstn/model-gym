@@ -1,6 +1,7 @@
 """Select the full4000 rehearsal after frozen500 benchmark and all candidate embeddings."""
 from __future__ import annotations
 import hashlib
+import argparse
 import io
 import json
 import math
@@ -90,25 +91,33 @@ def family_views(parent,variants):
     return records
 
 
-def main():
+def main(benchmark_path=None,cross_boundary_stem='cross-boundary'):
+    benchmark_path=benchmark_path or HERE/'benchmark-manifest.json'
     candidate_path=HERE/'candidate-manifest.json';candidate=json.loads(candidate_path.read_text())
     candidates=candidate['cases'];vec=vectors()
     assert len(vec)==len(candidates)==5500,'Wait for all candidate embeddings before selecting rehearsal'
-    review_path=HERE/'cross-boundary-review.json'
+    review_path=HERE/f'{cross_boundary_stem}-review.json'
+    neighbours_path=HERE/f'{cross_boundary_stem}-neighbours.json'
     review=json.loads(review_path.read_text())
     assert review['status']=='reviewed','Cross-boundary duplicate review must finish before the final manifest'
-    assert review['neighbours_sha256']==sha(HERE/'cross-boundary-neighbours.json')
-    neighbours=json.loads((HERE/'cross-boundary-neighbours.json').read_text())
+    assert review['neighbours_sha256']==sha(neighbours_path)
+    neighbours=json.loads(neighbours_path.read_text())
     assert neighbours['candidate_manifest_sha256']==sha(candidate_path)
-    assert neighbours['benchmark_manifest_sha256']==sha(HERE/'benchmark-manifest.json')
+    assert neighbours['benchmark_manifest_sha256']==sha(benchmark_path)
     assert not review['benchmark_replacements'],'Resolve confirmed benchmark exposure before finalization'
     excluded=set(review['excluded_candidates'])
+    revisions_path=HERE/'benchmark-revisions.json'
+    if revisions_path.exists():
+        revisions=json.loads(revisions_path.read_text())
+        assert revisions['active_manifest']['sha256']==sha(benchmark_path),'Select the explicitly revised benchmark manifest'
+        assert Path(revisions['active_manifest']['path']).resolve()==benchmark_path.resolve()
+        excluded.update(candidate for revision in revisions['revisions'] for candidate in revision['excluded_from_final_candidates'])
     matrix=np.asarray([vec[r['candidate_id']] for r in candidates])
     labels=KMeans(n_clusters=40,random_state=CLUSTER_SEED,n_init=20).fit_predict(matrix)
     clusters={r['candidate_id']:int(v) for r,v in zip(candidates,labels)}
     write(HERE/'rehearsal-clusters.json',{'clusters':clusters,'k':40,'n_init':20,'seed':CLUSTER_SEED,'experiment_seed':SEED,
                                       'counts':dict(Counter(map(int,labels)))})
-    benchmark_manifest=json.loads((HERE/'benchmark-manifest.json').read_text())
+    benchmark_manifest=json.loads(benchmark_path.read_text())
     benchmark=benchmark_manifest['cases']
     early_review=json.loads((HERE/'benchmark-candidate-review.json').read_text())
     assert sha(HERE/'benchmark-candidate-review.json')==benchmark_manifest['inputs']['candidate_review_sha256']
@@ -188,7 +197,8 @@ def main():
              'counts':{'images':4000,'families':3700,'benchmark_images':500,'benchmark_families':500,
                        'partitions':dict(Counter(r['benchmark_partition'] for r in selected)),
                        'components':dict(Counter(r['component'] for r in selected))},
-             'inputs':{'candidate_manifest_sha256':sha(candidate_path),'benchmark_manifest_sha256':sha(HERE/'benchmark-manifest.json'),
+             'inputs':{'candidate_manifest_sha256':sha(candidate_path),'benchmark_manifest_sha256':sha(benchmark_path),
+                       'benchmark_manifest_path':str(benchmark_path.resolve()),
                        'finalize_script_sha256':sha(Path(__file__))},
              'selection_policy':{'source_quotas':'3000Megalith incl100controlledparents,600VizWiz,300derivatives,100nonphotos',
                                  'content':'capacity-capped square-root cluster allocation then farthest-first within source/operator quotas',
@@ -196,10 +206,18 @@ def main():
              'preprocessing_policy':candidate['preprocessing_policy'],'family_render_rejections':family_rejections,
              'training_status':'All task masks false; experimental observations only'}
     payload['inputs']['cross_boundary_review_sha256']=sha(review_path)
+    payload['inputs']['cross_boundary_review_path']=str(review_path.resolve())
+    payload['inputs']['cross_boundary_neighbours_path']=str(neighbours_path.resolve())
+    payload['inputs']['cross_boundary_neighbours_sha256']=sha(neighbours_path)
+    if revisions_path.exists():payload['inputs']['benchmark_revisions_sha256']=sha(revisions_path)
     payload['inputs']['embedding_provenance_sha256']=sha(HERE/'embedding-provenance.json')
     payload['selection_policy']['cross_boundary_excluded_candidates']=sorted(excluded)
     write(HERE/'manifest.json',payload)
     print(json.dumps(payload['counts']),flush=True)
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--benchmark-manifest',type=Path,default=HERE/'benchmark-manifest.json')
+    parser.add_argument('--cross-boundary-stem',default='cross-boundary')
+    args=parser.parse_args();main(args.benchmark_manifest,args.cross_boundary_stem)

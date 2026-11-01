@@ -582,3 +582,47 @@ def test_decimal_chat_means_preserve_equal_ties_without_rounding_native_values()
     assert m.ranks([row["technical_score"] for row in means]).tolist() == [0.5, 0.5]
     # Exact tie semantics remain unchanged for other models' adjacent native values.
     assert m.ranks([1.2, 1.2, 1.2000000000000002]).tolist() == [0.5, 0.5, 2]
+
+
+@pytest.mark.parametrize("panel", ["representative", "challenge"])
+def test_exploratory_baseline_comparison_direction_and_sibling_coverage(panel):
+    corpus = cases(3)
+    for case in corpus:
+        case["benchmark_partition"] = panel
+    scores = {
+        "luna": (3.4, 4.4),
+        "deepseek": (3.6, 4.6),
+        "jev": (3.25, 4.1),
+        "liquid": (4.0, 4.8),
+        "qrealign_lite": (3.75, 4.25),
+    }
+    attempts = [
+        attempt(case, model, technical=technical, aesthetic=aesthetic)
+        for case in corpus
+        for model, (technical, aesthetic) in scores.items()
+    ]
+    invalid = next(
+        row for row in attempts if row["case_id"] == corpus[-1]["case_id"] and row["model"] == "jev"
+    )
+    invalid.update(status="invalid", aesthetic_score=None)
+    invalid["task_valid"]["aesthetics"] = False
+    rows = a.build_long(corpus, attempts, [reference(case) for case in corpus], frozen_at=FROZEN)
+    comparisons = m.baseline_comparisons(rows, repeats=100)
+    assert len(comparisons) == 10
+    jev = next(row for row in comparisons if row["panel"] == panel and row["model"] == "jev")
+    assert jev["technical_score"]["n_images"] == 3
+    assert jev["aesthetic_score"]["n_images"] == jev["combined_error"]["n_images"] == 2
+    assert jev["technical_score"]["estimate"] == pytest.approx(-0.25)
+    assert jev["aesthetic_score"]["estimate"] == pytest.approx(-0.4)
+    assert jev["combined_error"]["estimate"] == pytest.approx(-0.325)
+    assert jev["technical_score"]["ci95"] == pytest.approx([-0.25, -0.25])
+    liquid = next(row for row in comparisons if row["panel"] == panel and row["model"] == "liquid")
+    assert liquid["technical_score"]["estimate"] == pytest.approx(0.5)
+    assert all(row["exploratory"] and row["multiplicity_adjustment"] == "none" for row in comparisons)
+    assert jev["technical_score"]["seed"] == m.SEED
+    assert comparisons == m.baseline_comparisons(rows, repeats=100)
+    import report
+
+    rendered = report.baseline_comparison_section({"baseline_comparisons": comparisons})
+    assert "uncorrected for multiple comparisons" in rendered
+    assert "-0.250 [-0.250, -0.250] (3)" in rendered

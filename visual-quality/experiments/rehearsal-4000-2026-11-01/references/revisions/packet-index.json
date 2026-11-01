@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-01T13:33:01.785199+00:00",
+  "revisions_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/benchmark-revisions.json",
+  "revisions_sha256": "d9a5e312f4cfc62835fb776f094ae31eb794b2a5ff6d506d7fef49211fee3be8",
+  "original_packet_index_sha256": "f6e25b535be4e6c76f50d6bd22d4ac8f4cca552d4a5500d749a58a5ed045a92a",
+  "original_review_files": {
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-01.jsonl": "a04736ee11204f642a8f7ea185d904759cfdcfc39610f65a6dacf1ac5cb132f3",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-02.jsonl": "f64a85334b204b1e6f0b306200cfd718d7d53775395530cc5d475547c73b52cb",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-03.jsonl": "94540093a1566ec9284ba275d8047ea22141916ec394956795b6feec26681f87",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-04.jsonl": "6cc00014061d9136e344f04b7c6f14e8e9745b1e9a216dfa94d8adbf0efd91ab",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-05.jsonl": "7e1dfcac27fcbbd0e09b4334e8e4639b7adfea223d4aa5cf8e959d5423206f39",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-06.jsonl": "12ca9cf5ef22d819d649317a2ed61adced580497b37d2d1a74ab454571d98811",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-07.jsonl": "8561fcaf1dcf106d31ba43d3a790ce87228dfe219010f489a61e338c468c86f8",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-08.jsonl": "68d1ecc68987a744ba8fc2630832a177c92eab997e80ba75afa7045a8cb57fe2",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-09.jsonl": "7d1136ff7a8769646631cf0355eeb010eeba3e6d76889d0f1c91959ac9123090",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-10.jsonl": "f7d450ff01fe13739311bcaca109e83bc3855461e1eb47e06a2acd216a2c2158",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-11.jsonl": "681d0e3b9164fc5ab5040f3aab4d461a480fef80555e07fcd0b4bb01591ed789",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-12.jsonl": "78f74c6427132e82986aeae1c55e35e40fffb2ab4ac317f3af44e64974da0f8a",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-13.jsonl": "c4d3a5b49e5b8b2592e9acec1a9d0bacf8f50bf1bdd813006b5cffdd9cc93d31",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-14.jsonl": "0e0be723f7704223664ea5cce3496194853ac37f5b033c150d0d6190128567f2",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-15.jsonl": "754d0ef1971c734da37309b1d917cdc8e917f1041aa92d3df3205fb72ddcc8ec",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-16.jsonl": "dfe394082418a5c4040e609ec9d20697b8f825101cf3a643dc7297d811adb28a",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-17.jsonl": "62548e8195176106d6318eb5020be09b622160f354ef781419567a83e33da8c4",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-18.jsonl": "9f791eaeeb88fcba2312b8bbf7400ecfd399581683a20745d395ade66c8fe10d",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-19.jsonl": "9400800e4187f1dac6a5de4a0b8059c069b53055048e1fe4e0c8eb322c79ffc8",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/review-20.jsonl": "ac867b70b17c79f1faee194e4fc7e21b97a4952c6f35ac27f1eb7dfdc676ca6c"
+  },
+  "rubric_sha256": "15af2af0afd93316d83caecb61d92a69c8ea322433f29e06145db8cb2f9c1361",
+  "rubric_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/revisions/rubric.txt",
+  "instructions_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/revisions/review-instructions.md",
+  "instructions_sha256": "6a5581fc449210eaa5e34c91fab7c4e81639d5a81eab76af2da540039ae93e87",
+  "review_case_contract": {
+    "R0045": {
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/bebb127b24655ac1fc83045fdce51a092ee0bc53e54b3bd95ca6908a5d0a080b.png",
+      "view_sha256": "bebb127b24655ac1fc83045fdce51a092ee0bc53e54b3bd95ca6908a5d0a080b",
+      "family_id": "vizwiz:VizWiz_train_00000623.jpg",
+      "benchmark_partition": "development"
+    }
+  },
+  "packets": [
+    {
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/revisions/packet-01.json",
+      "sha256": "8bafba6a68303053a9dfda4ff2ab20d2eb54dee282ffd9e5b2b9114ba34967f2",
+      "case_id": "R0045",
+      "review_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/revisions/review-01.jsonl",
+      "timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/revisions/timings/R0045.json"
+    }
+  ]
+}

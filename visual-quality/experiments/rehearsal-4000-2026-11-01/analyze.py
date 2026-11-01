@@ -531,6 +531,7 @@ def main() -> None:
         "descriptive": metrics.descriptive(rows),
         "between_model_agreement": metrics.between_models(rows),
         "accuracy": metrics.accuracy(rows),
+        "baseline_comparisons": metrics.baseline_comparisons(rows, repeats=args.bootstrap_repeats),
         "treatments": metrics.treatment_effects(rows, repeats=args.bootstrap_repeats),
         "scope": metrics.scope_checks(rows),
         "ladders": metrics.ladders(cases, rows),

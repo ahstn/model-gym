@@ -1,0 +1,60 @@
+{
+  "manifest_sha256": "57d6c46923b9ae20151bb8334373b0872f954c8af8cd0152150c1a7b76b8257a",
+  "packets": [
+    {
+      "packet_id": "controlled-01",
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-review/controlled-01.json",
+      "sha256": "1670e7fedb3b10cdd9bb5f5fc0d6d4c3e9605f75488994b0f1bf18d60b767002"
+    },
+    {
+      "packet_id": "controlled-02",
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-review/controlled-02.json",
+      "sha256": "7c5a468227dddc2b6b821394a95cda3bdaa5e545ec5f33d388a61d4f047d0953"
+    },
+    {
+      "packet_id": "controlled-03",
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-review/controlled-03.json",
+      "sha256": "9513ed1646876d41f1d097b604175d2864f669ceb8659a3de81f0096818277b2"
+    },
+    {
+      "packet_id": "controlled-04",
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-review/controlled-04.json",
+      "sha256": "ddccd8a249647f2b629d270f0b3c0b97bd9259e93ade6bebe9b2bfe688e6690b"
+    },
+    {
+      "packet_id": "controlled-05",
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-review/controlled-05.json",
+      "sha256": "0cd075e512c52592ebd367d8090e77211c2a67b23f94c23ff1ee831312856b30"
+    },
+    {
+      "packet_id": "controlled-06",
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-review/controlled-06.json",
+      "sha256": "7ce558a1b7dd61dd25733c06f4a46956db253fd32ef98d44a775310c9c0d30be"
+    },
+    {
+      "packet_id": "controlled-07",
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-review/controlled-07.json",
+      "sha256": "cb5c32e0c62e11c061d3f798bf303f45ec9b0ffe05b9305f75380e60371007c8"
+    },
+    {
+      "packet_id": "controlled-08",
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-review/controlled-08.json",
+      "sha256": "7bc352176571a6c61112da6037c1e906bfc3bd70b0911624d66fee2600730ad6"
+    },
+    {
+      "packet_id": "controlled-09",
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-review/controlled-09.json",
+      "sha256": "90e1d3f8bd5821b3a9b54b8b968fa424a0824a36814a81c8b578d002f9250028"
+    },
+    {
+      "packet_id": "controlled-10",
+      "path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-review/controlled-10.json",
+      "sha256": "7252603026eac5fe5c7fcc20416bb4b9176b31a202c7e80cf1369bec5ffcbd39"
+    }
+  ],
+  "families": 100,
+  "derivatives": 300,
+  "comparison_entries": 600,
+  "unique_image_pairs": 500,
+  "numeric_reference_scores": false
+}

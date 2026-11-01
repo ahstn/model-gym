@@ -47,7 +47,10 @@ def read_rows() -> dict:
     grouped = defaultdict(dict)
     with (HERE / "scores-long.csv").open(newline="") as stream:
         for original in csv.DictReader(stream):
-            row = dict(original)
+            row = {
+                key: original.get(key)
+                for key in ("case_id", "model", "arm", "status", "evidence", *FIELDS)
+            }
             for field in FIELDS:
                 value = row.get(field)
                 row[field] = float(value) if value not in (None, "", "null") else None
@@ -173,9 +176,10 @@ def main():
     document = """<!doctype html><html><head><meta charset="utf-8"><title>4,000-image scoring rehearsal</title>
 <link rel="stylesheet" href="style.css"></head><body><header><h1>4,000-image scoring rehearsal</h1>
 <p>Five scorers · separate technical and aesthetic scores · 500 independent assistant references</p>
+<p><a href="../scores-long.csv">Full score export</a> · <a href="../report.md">Evaluation report</a></p>
 <p>Seconds measure HTTP request/response time. Reference has no API latency; Lite and Reference prices are assigned $0.00.
 The mean has no independent request or charge. Raw Lite has no scope gate. Prices retain six decimal places.</p>
-<nav><select id="partition"><option value="benchmark">500 reference benchmark</option><option value="all">All4,000</option>
+<nav><select id="partition"><option value="benchmark">500 reference benchmark</option><option value="all">All 4,000</option>
 <option value="representative">Representative evaluation</option><option value="challenge">Challenge evaluation</option>
 <option value="development">Development</option><option value="rehearsal">Other rehearsal</option></select>
 <select id="arm"><option value="baseline">Baseline</option><option value="own_stats">Own-image stats</option><option value="swapped_stats">Swapped-image stats</option></select>

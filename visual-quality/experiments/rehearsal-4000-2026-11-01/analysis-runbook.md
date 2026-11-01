@@ -32,3 +32,15 @@ $PY "$E/report.py"
 The renderer verifies that its manifest matches the analysis input hash, preserves missing coverage and unknown bills, and ends with the total cost-per-model table. Numerical/coverage targets remain separate from the pending protected-slice review; `advancement_ready` stays false until that independent review is documented.
 
 Preflight safeguards: inclusive technical-improvement, aesthetic-noninferiority and 0.75 QC-error boundaries use an absolute 1e-12 tolerance solely for floating-point arithmetic noise; the CI upper-bound requirement remains strictly below zero. API execution artifacts without a frozen phase plan cause analysis to stop rather than appearing as zero-cost unstarted work. Task-specific all-five-common MAE, bias, Spearman and counts retain a valid technical score when aesthetics is missing, and vice versa; the combined common-two-task comparison remains separate.
+
+The secondary `baseline_comparisons` output compares each individual baseline with the fixed Luna/DeepSeek mean on representative and challenge panels. It reports individual-minus-ensemble ΔMAE and paired source-family 95% intervals separately for technical, aesthetic and common-both combined error, with task-specific paired counts. Default resamples and seed are 10,000 and 20261101. These contrasts are exploratory, uncorrected and conditional on assistant labels; they do not alter the primary stats comparison or select favorable cases. A concise table is included in report.md.
+
+Protected review uses the explicitly rebound selection after the objective R0045 benchmark replacement. The original `protected-slices.json` remains unchanged; `protected-slices-v2.json` pins it, the declaration, and the primary reference freeze. Style and excluded/uncertain memberships are unchanged. Run after the audited score export:
+
+```sh
+$PY "$E/protected_review.py" --protected "$E/protected-slices-v2.json" --benchmark "$E/benchmark-manifest-v2.json"
+```
+
+The helper validates the exact revision receipt and refuses silent rebinding, altered original reviews, or an undeclared membership change. The rebound timestamp must precede every benchmark request.
+
+After every API driver/recovery segment stops, run `$PY "$E/api_operations_summary.py"`. It writes `operations-summary.json`, an `operations-attempt-segments.jsonl` sidecar, and `operations-report.md`. The audit validates original phase plans and recovery approval/source hashes, rejects overlapping or impossible segment membership, and separates single-request smokes, original execution, and each Jev recovery segment. Per-segment tables retain effective concurrency, valid/invalid/failure and exact503 counts, all-attempt and scored-response p50/p95 HTTP latency, known cost subtotals and unknown-bill counts. Insert the report fragment before the final total-cost table; do not interpret combined or segmented timing as a controlled speed ranking. The helper refuses execution while any recorded driver/segment remains running. Five synthetic reporting checks plus13 recovery/phase-driver checks pass.

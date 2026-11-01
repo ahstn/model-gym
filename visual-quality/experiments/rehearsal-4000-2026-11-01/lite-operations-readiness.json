@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-11-01T13:39:16.455218+00:00",
+  "pod_id": "j8qvat8tmzyhgr",
+  "pod_status": "EXITED",
+  "hourly_quote_usd": 0.89,
+  "server_source_sha256": "aaab73e53225093d30e1fbe800425c3b9754d7a5547013f735de8f358a408dbb",
+  "configured_source_matches_historical": true,
+  "token_file_mode": "600",
+  "tests_passed": 18,
+  "pytest_subtests_passed": 16,
+  "control_manifest_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/lite-operations/control-manifest.json",
+  "control_manifest_sha256": "3c1ecfc0df357b6d30a3270b9f439c944ce5de05531922685d33b22c5a43601d",
+  "runner_sha256": "dcf9ab0424fb1c3739d194ec3364fa07900948028f4497e5544703e94428b1f0",
+  "execution_status": "awaiting root launch; no new scoring requests; pod stopped"
+}

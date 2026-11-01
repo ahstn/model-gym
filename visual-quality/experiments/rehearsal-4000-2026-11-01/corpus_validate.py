@@ -1,13 +1,17 @@
 """Validate frozen family, image, statistics and donor identities before model calls."""
 import json
+import argparse
 from collections import Counter,defaultdict
 from pathlib import Path
 from corpus_prepare import HERE,PILOT,sha,read_lines,write
 
 
-def main():
-    cases=json.loads((HERE/'manifest.json').read_text())['cases'];by_id={r['case_id']:r for r in cases}
-    benchmark=json.loads((HERE/'benchmark-manifest.json').read_text())['cases']
+def main(benchmark_path=None):
+    manifest=json.loads((HERE/'manifest.json').read_text())
+    cases=manifest['cases'];by_id={r['case_id']:r for r in cases}
+    benchmark_path=benchmark_path or Path(manifest['inputs'].get('benchmark_manifest_path',str(HERE/'benchmark-manifest.json')))
+    assert sha(benchmark_path)==manifest['inputs']['benchmark_manifest_sha256']
+    benchmark=json.loads(benchmark_path.read_text())['cases']
     assert len(cases)==len(by_id)==len({r['image_id'] for r in cases})==len({r['view_sha256'] for r in cases})==4000
     assert Counter(r['benchmark_partition'] for r in cases)=={'rehearsal':3500,'development':100,'representative':300,'challenge':100}
     groups=defaultdict(list)
@@ -51,13 +55,22 @@ def main():
     assert len(percentiles)==4000 and {r['case_id'] for r in percentiles}==set(by_id)
     for row in percentiles:
         assert row['reference_sha256']==reference_sha and row['view_sha256']==by_id[row['case_id']]['view_sha256']
-    review=json.loads((HERE/'cross-boundary-review.json').read_text())
+    review_path=Path(manifest['inputs'].get('cross_boundary_review_path',str(HERE/'cross-boundary-review.json')))
+    assert sha(review_path)==manifest['inputs']['cross_boundary_review_sha256']
+    review=json.loads(review_path.read_text())
     assert review['status']=='reviewed' and not review['benchmark_replacements']
     excluded=set(review['excluded_candidates'])
+    revisions_path=HERE/'benchmark-revisions.json'
+    if revisions_path.exists():
+        revisions=json.loads(revisions_path.read_text())
+        assert revisions['active_manifest']['sha256']==sha(benchmark_path)
+        assert sha(revisions_path)==manifest['inputs']['benchmark_revisions_sha256']
+        excluded.update(candidate for revision in revisions['revisions'] for candidate in revision['excluded_from_final_candidates'])
     assert not {r.get('candidate_id') or r.get('parent_candidate_id') for r in cases}&excluded
-    artifacts=['manifest.json','benchmark-manifest.json','stats.jsonl','stats-reference.json','stats-prompts.jsonl',
+    artifacts=['manifest.json',benchmark_path.name,'stats.jsonl','stats-reference.json','stats-prompts.jsonl',
                'stats-donors.json','stats-provenance.json','qc-reference.json','stats-percentiles.jsonl',
-               'cross-boundary-review.json','candidate-embeddings.npz']
+               review_path.name,'candidate-embeddings.npz']
+    if revisions_path.exists():artifacts.append(revisions_path.name)
     write(HERE/'corpus-audit.json',{
         'status':'passed','images':4000,'families':3700,'benchmark_families':500,'calibration_families':3200,
         'unique_background_donors':500,'controlled_families':100,'all_training_masks_false':True,
@@ -67,4 +80,7 @@ def main():
     print('Corpus integrity audit passed',flush=True)
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--benchmark-manifest',type=Path)
+    args=parser.parse_args();main(args.benchmark_manifest)

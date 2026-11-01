@@ -202,6 +202,46 @@ def bootstrap_families(
     }
 
 
+def baseline_comparisons(rows: list[dict], *, repeats: int = 10000) -> list[dict]:
+    """Exploratory paired differences from the fixed ensemble; never select cases by score."""
+    lookup = {(row["case_id"], row["model"], row["arm"]): row for row in rows}
+    references = [row for row in rows if row["model"] == "reference"]
+    output = []
+    for panel in ("representative", "challenge"):
+        panel_references = [row for row in references if in_panel(row, panel)]
+        for model in BASE_MODELS:
+            item = {
+                "panel": panel,
+                "model": model,
+                "comparator": "luna_deepseek_mean",
+                "arm": "baseline",
+                "expected_panel_images": len(panel_references),
+                "contrast": "individual_mae_minus_fixed_ensemble_mae",
+                "interpretation": "Negative favors the individual point estimate; positive favors the ensemble",
+                "exploratory": True,
+                "multiplicity_adjustment": "none",
+                "reference_basis": "Conditional on assistant judgments, not human ground truth",
+            }
+            for field, tasks in ((TASKS[0], (TASKS[0],)), (TASKS[1], (TASKS[1],)), ("combined_error", TASKS)):
+                deltas, families = [], []
+                for reference in panel_references:
+                    individual = lookup[(reference["case_id"], model, "baseline")]
+                    ensemble = lookup[(reference["case_id"], "luna_deepseek_mean", "baseline")]
+                    if all(numeric(row, task) for row in (reference, individual, ensemble) for task in tasks):
+                        deltas.append(
+                            sum(
+                                abs(individual[task] - reference[task])
+                                - abs(ensemble[task] - reference[task])
+                                for task in tasks
+                            )
+                            / len(tasks)
+                        )
+                        families.append(reference["family_id"])
+                item[field] = bootstrap_families(deltas, families, repeats=repeats, seed=SEED)
+            output.append(item)
+    return output
+
+
 def treatment_effects(rows: list[dict], *, repeats: int = 10000) -> list[dict]:
     lookup = {(r["case_id"], r["model"], r["arm"]): r for r in rows}
     references = [r for r in rows if r["model"] == "reference"]

@@ -1,5 +1,7 @@
 """Audit cross-boundary neighbours before freezing the full rehearsal manifest."""
 import json
+import argparse
+from pathlib import Path
 from collections import Counter
 import numpy as np
 from PIL import Image,ImageDraw
@@ -35,8 +37,12 @@ def preview_pairs(pairs,stats,limit):
     return chosen
 
 
-def main():
-    candidate_path=HERE/'candidate-manifest.json';benchmark_path=HERE/'benchmark-manifest.json'
+def main(benchmark_path=None,output_stem='cross-boundary'):
+    candidate_path=HERE/'candidate-manifest.json';benchmark_path=benchmark_path or HERE/'benchmark-manifest.json'
+    neighbours_path=HERE/f'{output_stem}-neighbours.json'
+    review_path=HERE/f'{output_stem}-review.json'
+    if neighbours_path.exists() or review_path.exists():
+        raise ValueError('Refusing to overwrite a prior neighbour/review artifact; use a new output stem')
     cases=json.loads(candidate_path.read_text())['cases'];benchmark=json.loads(benchmark_path.read_text())['cases']
     early_review=json.loads((HERE/'benchmark-candidate-review.json').read_text())
     historical_guards={r['candidate_id'] for r in early_review['historical_guards']}
@@ -70,16 +76,20 @@ def main():
         'preview_policy':'Descending cosine, at most two pairs per target and twelve uniform/near-black/near-white target pairs; all raw candidates retained separately',
         'historical_preview_pairs':historical_preview,'all_preview_pairs':all_preview,
         'warning':'A historically exposed related scene is a benchmark replacement only after visual confirmation of duplicate-family leakage'}
-    write(HERE/'cross-boundary-neighbours.json',payload)
+    write(neighbours_path,payload)
     # The review is separate from the early benchmark review so its pinned artifact is never changed.
-    review=HERE/'cross-boundary-review.json'
+    review=review_path
     if not review.exists():write(review,{
-        'status':'pending','neighbours_sha256':sha(HERE/'cross-boundary-neighbours.json'),
+        'status':'pending','neighbours_sha256':sha(neighbours_path),
         'excluded_candidates':sorted(set(automatic+related_exclusions)),'benchmark_replacements':[], 'decisions':[],
         'instructions':'Visually inspect historical and full cross-boundary sheets; record confirmed duplicate exclusions and any benchmark replacements before finalization'})
-    pages(historical_preview,lookup,'cross-boundary-historical',48)
-    pages(all_preview,lookup,'cross-boundary-all',72)
+    pages(historical_preview,lookup,f'{output_stem}-historical',48)
+    pages(all_preview,lookup,f'{output_stem}-all',72)
     print(json.dumps({'pairs':len(all_pairs),'historical_pairs':len(historical),'automatic_diversity_exclusions':len(automatic)}),flush=True)
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--benchmark-manifest',type=Path,default=HERE/'benchmark-manifest.json')
+    parser.add_argument('--output-stem',default='cross-boundary')
+    args=parser.parse_args();main(args.benchmark_manifest,args.output_stem)
