@@ -1,0 +1,20 @@
+{
+  "status": "recorded observations; unapproved for training",
+  "records": {
+    "manifest.json": "57d6c46923b9ae20151bb8334373b0872f954c8af8cd0152150c1a7b76b8257a",
+    "references.jsonl": "4d93e9fcda5b20ba8c1e297c9c474cb1d6919b7e5cb6fa74f6a8fcb3bfabfc86",
+    "scores.csv": "7f56c8c7b9c68d0fb04e341e8ee6653966dc3af7f673fab9c64e7e61da955b0a"
+  },
+  "model_rows": {
+    "deepseek": 4000,
+    "jev": 4000,
+    "liquid": 4000,
+    "luna": 4000,
+    "luna_deepseek_mean": 4000,
+    "qrealign_lite": 4000,
+    "reference": 500
+  },
+  "source_scores_sha256": "7961f93c6036fe64fb3b7def55e653c3128db7688bfb83fcb7c32b5f6bf39485",
+  "decision_prompt_note": "Retained Liquid and Jev observations precede the revised exclusion prompts; no retroactive rescore has been applied.",
+  "image_storage": "Absolute image_path values identify local delivered views and require the local data directory."
+}

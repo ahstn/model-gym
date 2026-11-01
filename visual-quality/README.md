@@ -1,10 +1,10 @@
-# Visual-quality pilot builder
+# Visual quality
 
-This package acquires public training images and assembles the [proposed visual-quality pilot](docs/datasets/low-quality-and-controls.md). It preserves source records, creates blur/noise/JPEG variants, and writes separate training, development, and test manifests. A separate [label pilot](docs/training/label-pilot.md) prepares fixed image views and collects pending 1–5 technical-quality scores through OpenRouter.
+The [photo-labeling workspace](labeling/README.md) holds the current two-score request definitions, model routes, corpus manifest, benchmark references and recorded observations. GPT-6 Luna and DeepSeek provide the working 50/50 teacher mean; Liquid and Jev are comparison and eligibility-review models. Eligibility is assessed before quality, and clearly excluded content receives the 1.00 floor. Existing labels remain pending review.
 
-The [2026-09-27 assembly record](docs/datasets/pilot-10k-assembly.md) contains the completed 10,800-image build counts, source revisions, manifest hashes, and verification results.
+The active configuration is separate from the older technical-only `visual-pilot label` command. `visual_quality.labeling_profile` loads the current prompt and builds requests; the full current labeling runner and response-validation pipeline are not yet integrated into the package. It does not make network calls or publish labels.
 
-Before training, use the [2026-09-29 preflight](docs/training/pilot-preflight-2026-09-29.md). It identifies the missing labels, positive domain examples, and test-group review needed to turn this assembled candidate pool into a training experiment. The audit preserved the original images and manifests.
+The rest of this package acquires images, creates controlled distortions and assembles family-separated manifests for the visual-quality dataset. The [data documentation](docs/README.md) covers source terms, evaluation and training requirements.
 
 ## Run
 
@@ -28,16 +28,16 @@ uv run visual-pilot acquire --source owned_controls --root data
 uv run visual-pilot assemble --root data
 ```
 
-For the small label pilot, load `OPENROUTER_API_KEY` through your environment, then run:
+Load the current labeling profile offline with:
 
-```sh
-uv run visual-pilot prepare-views --limit 12
-uv run visual-pilot label --dry-run
-uv run visual-pilot label --max-cost-usd 1.00
-uv run visual-pilot verify-labels
+```python
+from pathlib import Path
+from visual_quality.labeling_profile import load_profile
+
+profile = load_profile(Path("labeling"))
 ```
 
-The default model is `deepseek/deepseek-v4.1-flash-1017`. The sample uses training images only. Source manifests remain unchanged; teacher observations go into `data/label-pilot-12/deepseek/`. Scores remain pending review and cannot enable training masks. See the [run guide](docs/training/label-pilot.md) for frozen settings, budget checks, and recovery rules.
+See the [labeling workspace](labeling/README.md) for the model-specific prompts, retained observations, preprocessing and review policy.
 
 `assemble` needs the completed source records written by `acquire`. It validates images, excludes exact duplicates, joins near-duplicate photo families, assigns splits, generates variants, and publishes manifests only when the quotas and split checks pass. Download failures are reported by each source adapter; they are never replaced with placeholder images.
 
