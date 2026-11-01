@@ -1,0 +1,19 @@
+docs/handover-image-stats-labelling-2026-11-01.md
+  s_341f559459c26f::t_09f9fc45a09ea2 1-229
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8d8b39fdcbf5886e549b484402a8510337563b04",
+  "prompts": {},
+  "sessions": {
+    "s_341f559459c26f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9e4b2b21-d281-467a-8023-a81af4969cef",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
