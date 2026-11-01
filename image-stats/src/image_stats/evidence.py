@@ -1,6 +1,8 @@
-"""Evidence images a multimodal teacher can inspect beside the photo (after IQA-T1's tool outputs)."""
+"""Evidence images a multimodal teacher can inspect beside the photo (after IQA-T1's and Tool-IQA's tool outputs)."""
 
 from __future__ import annotations
+
+from typing import NamedTuple
 
 import cv2
 import numpy as np
@@ -10,26 +12,64 @@ from PIL import Image
 from image_stats.loading import DEFAULT_MAX_EDGE, ImageInput, decode, fit
 from image_stats.metrics import tile_size, tiles
 
-EVIDENCE_NAMES = ("sharpness", "noise_residual", "clipping", "spectrum")
+EVIDENCE_NAMES = ("sharpness", "detail_crop", "gamma", "noise_residual", "clipping", "spectrum")
 # Tile Laplacian variance drawn at full intensity; typical sharp photo tiles reach 1e3-1e4 at 1536 px.
 _SHARPNESS_FULL_SCALE = 20_000.0
+# Native pixels on each side of the detail crop, capped by the image's short edge.
+_CROP_SIDE = 512
+# The gamma view maps median luma to mid-grey, with the exponent held within these limits.
+_GAMMA_TARGET = 0.5
+_GAMMA_LIMITS = (0.25, 4.0)
+_CROP_OUTLINE = (0, 230, 255)
+
+
+class _Box(NamedTuple):
+    top: int
+    left: int
+    side: int
 
 
 def evidence_maps(source: ImageInput, *, max_edge: int = DEFAULT_MAX_EDGE) -> dict[str, Image.Image]:
-    view = fit(decode(source).rgb, max_edge)
+    native = decode(source).rgb
+    view = fit(native, max_edge)
     luma = cv2.cvtColor(view.astype(np.float32), cv2.COLOR_RGB2GRAY)
+    tile = tile_size(luma.shape)
+    tile_var = tiles(cv2.Laplacian(luma, cv2.CV_32F), tile).var(axis=(2, 3))
+    crop = _detail_box(tile_var, tile, view.shape, native.shape)
     return {
-        "sharpness": _sharpness(view, luma),
+        "sharpness": _sharpness(luma, tile_var, tile, _scale_box(crop, native.shape, view.shape)),
+        "detail_crop": Image.fromarray(native[crop.top : crop.top + crop.side, crop.left : crop.left + crop.side]),
+        "gamma": _gamma(view, luma),
         "noise_residual": _noise_residual(luma),
         "clipping": _clipping(luma),
         "spectrum": _spectrum(luma),
     }
 
 
-def _sharpness(view: np.ndarray, luma: np.ndarray) -> Image.Image:
-    """Per-tile Laplacian variance on a fixed log scale, so a blurred frame stays dark rather than self-normalised."""
-    tile = tile_size(luma.shape)
-    tile_var = tiles(cv2.Laplacian(luma, cv2.CV_32F), tile).var(axis=(2, 3))
+def _detail_box(tile_var: np.ndarray, tile: int, view_shape: tuple[int, ...], native_shape: tuple[int, ...]) -> _Box:
+    """A native-resolution square centred on the sharpest view tile, so it keeps detail the downscale removed."""
+    row, col = np.unravel_index(np.argmax(tile_var), tile_var.shape)
+    side = min(_CROP_SIDE, *native_shape[:2])
+    y_scale, x_scale = native_shape[0] / view_shape[0], native_shape[1] / view_shape[1]
+    top = round((row + 0.5) * tile * y_scale - side / 2)
+    left = round((col + 0.5) * tile * x_scale - side / 2)
+    return _Box(
+        int(np.clip(top, 0, native_shape[0] - side)),
+        int(np.clip(left, 0, native_shape[1] - side)),
+        side,
+    )
+
+
+def _scale_box(box: _Box, native_shape: tuple[int, ...], view_shape: tuple[int, ...]) -> _Box:
+    scale = view_shape[1] / native_shape[1]
+    return _Box(round(box.top * scale), round(box.left * scale), max(1, round(box.side * scale)))
+
+
+def _sharpness(luma: np.ndarray, tile_var: np.ndarray, tile: int, crop: _Box) -> Image.Image:
+    """Per-tile Laplacian variance on a fixed log scale, so a blurred frame stays dark rather than self-normalised.
+
+    The detail crop's region is outlined in cyan.
+    """
     scaled = np.log1p(tile_var) / np.log1p(_SHARPNESS_FULL_SCALE)
     heat = cv2.resize(
         np.clip(scaled * 255, 0, 255).astype(np.uint8),
@@ -38,7 +78,19 @@ def _sharpness(view: np.ndarray, luma: np.ndarray) -> Image.Image:
     )
     colour = cv2.cvtColor(cv2.applyColorMap(heat, cv2.COLORMAP_INFERNO), cv2.COLOR_BGR2RGB)
     grey = np.repeat(luma[: heat.shape[0], : heat.shape[1], None], 3, axis=2)
-    return Image.fromarray(np.clip(0.55 * colour + 0.45 * grey, 0, 255).astype(np.uint8))
+    blended = np.clip(0.55 * colour + 0.45 * grey, 0, 255).astype(np.uint8)
+    corner = (crop.left + crop.side - 1, crop.top + crop.side - 1)
+    cv2.rectangle(blended, (crop.left, crop.top), corner, _CROP_OUTLINE, thickness=2)
+    return Image.fromarray(blended)
+
+
+def _gamma(view: np.ndarray, luma: np.ndarray) -> Image.Image:
+    """Gamma-corrected view that brings median luma to mid-grey: lifts dark frames to expose hidden noise,
+    banding, and crushed detail, and darkens bright frames toward their highlights."""
+    median = float(np.clip(np.median(luma) / 255, 1 / 255, 254 / 255))
+    exponent = float(np.clip(np.log(_GAMMA_TARGET) / np.log(median), *_GAMMA_LIMITS))
+    table = np.rint(255 * (np.arange(256) / 255) ** exponent).astype(np.uint8)
+    return Image.fromarray(table[view])
 
 
 def _noise_residual(luma: np.ndarray) -> Image.Image:

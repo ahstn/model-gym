@@ -40,7 +40,7 @@ if analysis.gate:  # "uniform_frame": apply the policy floor and skip the model
     ...
 reference = Reference.load("reference.json")
 prompt_block = render(analysis, reference)
-maps = evidence_maps(image_bytes)  # {"sharpness", "noise_residual", "clipping", "spectrum"} PIL images
+maps = evidence_maps(image_bytes)  # dict of PIL images; see "Evidence images" below
 metadata = read_metadata(original_bytes)  # EXIF camera fields, JPEG quality estimate, bytes per megapixel
 ```
 
@@ -80,6 +80,21 @@ Flags are scale-free rules in [`flags.py`](src/image_stats/flags.py): `uniform_f
 - Median tile contrast is under 2 luma levels after the noise floor is removed, so a black frame with sensor grain still counts as empty.
 
 On the 72-image reviewed trial it gates exactly the two frames Ref scored 1.0 for having no content: T0571 (black) and T0984 (red). The nearest image it does not gate is T0028, a defocused ceiling with broad shapes (Ref 1.3), at 2.74 levels.
+
+## Evidence images
+
+`evidence_maps` and `image-stats evidence` return six images that a teacher can inspect beside the photo. The first two follow Tool-IQA's magnifier and gamma corrector ([arXiv 2606.16082](https://arxiv.org/abs/2606.16082)):
+
+| Name | What it shows |
+|---|---|
+| `sharpness` | Per-tile Laplacian variance on a fixed log scale over the view, with the `detail_crop` region outlined in cyan |
+| `detail_crop` | A square of up to 512 native pixels, centred on the sharpest view tile. It keeps detail that the `max_edge` downscale (and a student's visual-token compression) removes |
+| `gamma` | The view with a gamma exponent (limited to 1/4–4) that brings median luma to mid-grey. Dark frames are lifted to expose noise, banding, and crushed detail; bright frames are darkened |
+| `noise_residual` | Difference from a 3×3 median, amplified 8× |
+| `clipping` | Crushed shadows in blue and blown highlights in red |
+| `spectrum` | Log-magnitude spectrum of a central 512-pixel square; periodic artefacts show as off-axis spots |
+
+Evidence images are not part of `ALGORITHM_VERSION`. Measure whether each one helps before attaching it to teacher prompts.
 
 ## Rules that keep the numbers comparable
 
