@@ -68,7 +68,7 @@ def main(argv: list[str] | None = None) -> int:
         parser.error("--max-edge must be from 64 to 8192")
     try:
         return _run(args, parser)
-    except ValueError as error:
+    except (ValueError, OSError) as error:  # OSError covers missing and undecodable files.
         parser.exit(2, f"{parser.prog}: error: {error}\n")
 
 
@@ -80,7 +80,10 @@ def _run(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
     if args.command == "describe":
         return _describe(args)
     if args.command == "evidence":
-        maps = evidence_maps(args.image, max_edge=args.max_edge)
+        try:
+            maps = evidence_maps(args.image, max_edge=args.max_edge)
+        except PIL.UnidentifiedImageError as error:
+            raise ValueError(f"{args.image} is not a readable image") from error
         args.output_dir.mkdir(parents=True, exist_ok=True)
         for name, image in maps.items():
             image.save(args.output_dir / f"{args.image.stem}.{name}.png")

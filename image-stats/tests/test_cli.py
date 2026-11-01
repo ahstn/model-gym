@@ -1,5 +1,6 @@
 import json
 
+import cv2
 import numpy as np
 import pytest
 
@@ -137,3 +138,39 @@ def test_evidence_maps(tmp_path, capsys):
     blurred = evidence_maps(encode(blur(texture(200, 300), 6)))["sharpness"]
     assert np.asarray(blurred).mean() < np.asarray(maps["sharpness"]).mean() - 20
     capsys.readouterr()
+
+
+def test_detail_crop_is_native_pixels_from_the_sharpest_region():
+    # A defocused 2400x3600 frame with one sharp patch; the view is downscaled to 1536 on the long edge.
+    native = blur(texture(2400, 3600), 8)
+    native[1500:2100, 2600:3200] = texture(600, 600, seed=3)
+    crop = np.asarray(evidence_maps(native)["detail_crop"])
+    assert crop.shape == (512, 512, 3)
+    match = cv2.matchTemplate(native, crop, cv2.TM_SQDIFF)
+    _, _, (left, top), _ = cv2.minMaxLoc(match)
+    assert np.array_equal(crop, native[top : top + 512, left : left + 512])
+    assert 1500 <= top + 256 < 2100 and 2600 <= left + 256 < 3200
+
+
+def test_detail_crop_is_capped_by_the_short_edge():
+    assert evidence_maps(texture(200, 300))["detail_crop"].size == (200, 200)
+
+
+def test_gamma_lifts_dark_frames_and_leaves_mid_grey_alone():
+    dark = (texture() * 0.12).astype(np.uint8)
+    lifted = np.asarray(evidence_maps(dark)["gamma"], dtype=np.float64)
+    assert np.median(lifted) == pytest.approx(128, abs=6)
+    assert lifted.std() > dark.std() * 2
+    middle = texture()
+    assert np.abs(np.asarray(evidence_maps(middle)["gamma"], dtype=np.int16) - middle).max() <= 1
+
+
+def test_missing_and_unreadable_files_are_clean_errors(tmp_path, capsys):
+    broken = tmp_path / "broken.png"
+    broken.write_bytes(b"not an image")
+    for path in (tmp_path / "missing.png", broken):
+        with pytest.raises(SystemExit) as stopped:
+            main(["evidence", str(path), "--output-dir", str(tmp_path / "out")])
+        assert stopped.value.code == 2
+        error = capsys.readouterr().err
+        assert "error:" in error and path.name in error
