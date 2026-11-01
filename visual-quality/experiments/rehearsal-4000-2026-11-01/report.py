@@ -55,7 +55,7 @@ def with_n(value: dict, field: str = "mae") -> str:
 
 def interval(value: dict) -> str:
     bounds = value.get("ci95")
-    return "Unavailable" if bounds is None else f"[{number(bounds[0])}, {number(bounds[1])}]"
+    return "Unavailable" if bounds is None else f"[{number(bounds[0], 3)}, {number(bounds[1], 3)}]"
 
 
 def target(value: bool | None) -> str:
@@ -204,6 +204,44 @@ def baseline_comparison_section(analysis: dict) -> str:
     )
 
 
+def eligible_native_section(analysis: dict) -> str:
+    rows = []
+    for panel in ("representative", "challenge"):
+        lookup = {
+            row["model"]: row
+            for row in analysis["accuracy"]["panels"]
+            if row["panel"] == panel and row["arm"] == "baseline"
+        }
+        for model in MODELS:
+            row = lookup.get(model)
+            if row is None:
+                continue
+            technical, aesthetic = (
+                row[task + "_native_on_eligible"] for task in ("technical_score", "aesthetic_score")
+            )
+            rows.append(
+                [
+                    panel.title(),
+                    NAMES[model],
+                    with_n(technical),
+                    with_n(aesthetic),
+                    number(technical["bias"]),
+                    number(aesthetic["bias"]),
+                    f"{number(technical['spearman'])} / {number(aesthetic['spearman'])}",
+                ]
+            )
+    return "\n\n".join(
+        [
+            "## Native scores on reference-eligible photographs",
+            "These descriptive results restrict the reference to eligible photographs and use each model's native scores before any separate scope adjustment. They separate photographic quality agreement from failures to reject excluded graphics. Each task retains its own available cases, shown in parentheses; these are not all-five common-case rankings. Q-ReAlign Lite has no photography-scope gate, so its all-image error includes a different failure mode from photographic quality error. No labels are altered by this diagnostic.",
+            table(
+                ("Panel", "Model", "Tech MAE (n)", "Aest MAE (n)", "Tech bias", "Aest bias", "ρ tech / aest"),
+                rows,
+            ),
+        ]
+    )
+
+
 def treatment_section(analysis: dict) -> str:
     selected = [
         row
@@ -218,11 +256,11 @@ def treatment_section(analysis: dict) -> str:
                 ARMS[row["arm"]],
                 technical["n_images"],
                 technical["n_families"],
-                number(technical["estimate"]),
+                number(technical["estimate"], 3),
                 interval(technical),
-                number(aesthetic["estimate"]),
+                number(aesthetic["estimate"], 3),
                 interval(aesthetic),
-                number(aesthetic["upper_one_sided95"]),
+                number(aesthetic["upper_one_sided95"], 3),
             ]
         )
     parts = [
@@ -279,7 +317,7 @@ def treatment_section(analysis: dict) -> str:
         technical = target(primary["technical_practical_and_interval_target_met"])
         aesthetic = target(primary["aesthetic_one_sided95_noninferiority_met"])
         parts.append(
-            f"Numerical technical target: **{technical}** (MAE reduction ≥0.05 and two-sided 95% upper bound below zero). Numerical aesthetic noninferiority: **{aesthetic}** (one-sided 95% upper bound ≤+0.03). These numerical tests are separate from the coverage gate. Advancement remains unapproved pending the independent protected-slice review."
+            f"Numerical technical target: **{technical}** (MAE reduction ≥0.05 and two-sided 95% upper bound below zero). Numerical aesthetic noninferiority: **{aesthetic}** (one-sided 95% upper bound ≤+0.03). These numerical tests are separate from the coverage gate. The numerical analysis does not adjudicate protected slices; any completed visual review is reported separately below. Neither a numerical pass nor completion of that review automatically approves labels for training."
         )
         repeat_counts = {
             row[task]["bootstrap_repeats"]
@@ -293,6 +331,30 @@ def treatment_section(analysis: dict) -> str:
     else:
         parts.append(
             "The primary contrast is unavailable in this analysis artifact; no treatment claim is made."
+        )
+    individual = [
+        row
+        for row in analysis["treatments"]
+        if row["panel"] == "representative" and row["model"] in ("luna", "deepseek")
+    ]
+    if individual:
+        parts.append(
+            "Individual-model effects below are secondary comparisons. Failure to establish aesthetic noninferiority is not itself evidence of aesthetic harm; the estimates and intervals must also be considered."
+        )
+        parts.append(
+            table(
+                ("Model", "Arm", "Tech ΔMAE [95% CI]", "Aest ΔMAE [95% CI]", "Aest noninferiority"),
+                [
+                    [
+                        NAMES[row["model"]],
+                        ARMS[row["arm"]],
+                        f"{number(row['technical_score']['estimate'], 3)} {interval(row['technical_score'])}",
+                        f"{number(row['aesthetic_score']['estimate'], 3)} {interval(row['aesthetic_score'])}",
+                        target(row["aesthetic_one_sided95_noninferiority_met"]),
+                    ]
+                    for row in individual
+                ],
+            )
         )
     return "\n\n".join(parts)
 
@@ -382,7 +444,9 @@ def ladder_section(analysis: dict) -> str:
                 ),
                 rows,
             ),
-            "This table retains the complete family set independently of the supplemental visual review. " + ladder["pace_caveat"] + ".",
+            "This table retains the complete family set independently of the supplemental visual review. "
+            + ladder["pace_caveat"]
+            + ".",
         ]
     )
 
@@ -492,6 +556,7 @@ def render(analysis: dict, manifest: dict) -> str:
     parts.extend(
         [
             baseline_comparison_section(analysis),
+            eligible_native_section(analysis),
             treatment_section(analysis),
             scope_section(analysis),
             qc_section(analysis),
@@ -523,7 +588,7 @@ def render(analysis: dict, manifest: dict) -> str:
             "## Limitations and next decisions",
             "The reference sample is selected from this corpus and represents assistant preferences. The bootstrap conditions on those labels and does not measure human-rating uncertainty. Challenge and development panels are separate from the representative primary population. Secondary comparisons are exploratory; the report does not claim that every quality issue or protected slice is unaffected. Missing or invalid labels reduce coverage and are not silently replaced. Controlled ladder results do not by themselves verify that every delivered distortion is perceptually worse. A larger labeling decision should consider the primary paired effect, aesthetic noninferiority, scope regressions, error review and coverage together.",
             "## Total cost per model",
-            "These totals count every recorded attempt once across all arms, including retries and errors when a charge is reported. Unknown receipts remain unknown; the known subtotal is not a complete total when an attempt is unpriced. Derived means add no charge. Q-ReAlign Lite and Reference prices are explicitly assigned $0.00 as requested. Runpod infrastructure is separate from that reporting override; its monetary total is not supplied in this analysis artifact.",
+            "These totals count every recorded attempt once across all arms, including retries and errors when a charge is reported. Unknown receipts remain unknown; the known subtotal is not a complete total when an attempt is unpriced. Derived means add no charge. Q-ReAlign Lite and Reference prices are explicitly assigned $0.00 as requested. Runpod infrastructure is accounted separately; consult the infrastructure supplement for posted charges and estimates.",
         ]
     )
     totals = {row["model"]: row for row in analysis["operations"]["model_totals"]}
@@ -538,6 +603,18 @@ def render(analysis: dict, manifest: dict) -> str:
         ]
         for model in (*MODELS[:-1], "reference")
     ]
+    known_sum = sum((Decimal(row["known_price_usd"]) for row in totals.values()), Decimal(0))
+    unknown_sum = sum(row["unpriced_attempts"] for row in totals.values())
+    costs.append(
+        [
+            "All reported model rows",
+            sum(row["attempts"] for row in totals.values()),
+            cost(known_sum),
+            unknown_sum,
+            cost(None if unknown_sum else known_sum),
+            "Receipts and assigned-zero rows",
+        ]
+    )
     parts.append(
         table(("Model", "All attempts", "Known subtotal", "Unknown-price attempts", "Total", "Basis"), costs)
     )
@@ -561,8 +638,10 @@ def main() -> None:
     supplements = {}
     for relative in (
         "reference-reliability/report.md",
+        "sharpness-report.md",
         "controlled-report.md",
         "protected-review/report.md",
+        "baseline-error-review.md",
         "operations-report.md",
         "lite-cost-report.md",
     ):
@@ -593,7 +672,8 @@ def main() -> None:
                 "report_sha256": hashlib.sha256(args.output.read_bytes()).hexdigest(),
             },
             indent=2,
-        ) + "\n"
+        )
+        + "\n"
     )
     print(json.dumps({"report": str(args.output.resolve()), "analysis_created_at": analysis["created_at"]}))
 

@@ -39,13 +39,13 @@ def render() -> None:
         )
         draw.text(
             (26, 84),
-            "Seconds: HTTP request to complete response  |  Lite and Reference price: assigned $0.00  |  Mean: no separate request or charge",
+            "Seconds and price: selected attempt  |  HTTP request to complete response  |  Lite / Reference: assigned $0.00  |  Mean: no new request",
             font=small,
             fill="#53697c",
         )
         draw.text(
             (26, 108),
-            "Lite uses native scores without a photography-scope gate. Runpod infrastructure cost is reported separately.",
+            "All-attempt costs and unknown bills are in the report. Lite has no photography-scope gate; Runpod infrastructure is reported separately.",
             font=small,
             fill="#53697c",
         )

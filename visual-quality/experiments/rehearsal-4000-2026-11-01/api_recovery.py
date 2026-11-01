@@ -83,7 +83,7 @@ def main() -> None:
         policy != {"maximum_consecutive_failures": 5, "rolling_window_requests": 100,
                    "maximum_failures_in_window": 20, "error_class": "exact_jev_image_processing_503"}
         or approval_doc.get("driver_sha256") != contract.file_sha(__file__)
-        or args.concurrency != 1
+        or args.concurrency != approval_doc.get("effective_concurrency", 1)
     ):
         raise ValueError("Unsupported or changed prospective quarantine policy")
     root = runner.directory("jev")
@@ -117,7 +117,10 @@ def main() -> None:
                 for row in fatal
             ):
                 raise ValueError("Unreviewed fatal attempt or changed approved receipt")
-            failure_events = [known_image_failure(row) for row in sorted(history, key=lambda row: row["request_started_at"])]
+            # Interrupted journals have no observed HTTP outcome and must not be
+            # counted as successful responses or assigned an invented timestamp.
+            observed = [row for row in history if row.get("response_received_at")]
+            failure_events = [known_image_failure(row) for row in sorted(observed, key=lambda row: row["response_received_at"])]
             if policy and circuit_breaker(failure_events, policy):
                 raise ValueError("Prospective quarantine circuit breaker already open")
             secret = os.environ.get("OPENROUTER_API_KEY")

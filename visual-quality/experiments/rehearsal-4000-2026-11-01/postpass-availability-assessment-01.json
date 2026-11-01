@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-11-01T16:03:21.331280+00:00",
+  "allowlist_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/results/api/postpass/allowlist.json",
+  "allowlist_sha256": "6c9ad4dfa616aeec35222c83f7341f01d4ed0d81a3615f7b07249583da6299b9",
+  "pilot_sha256": "111f5b0abb73d27a6c330be91675da3ef945a1144ada0302c47b9801ab0af544",
+  "stopped_segment_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/results/api/postpass/jev/segments/2026-11-01T15-58-48.296000+00-00.json",
+  "stopped_segment_sha256": "2abae0b063e2e797545f76d59c2383f56a135b9d1b32482e4493cdbb7c8c23fc",
+  "stopped_at": "2026-11-01T16:01:57.650602+00:00",
+  "recovery_attempts": 236,
+  "fully_scored_recovered": 196,
+  "recovery_known503": 40,
+  "recovery_known503_rate": 0.1694915254237288,
+  "recovery_longest_consecutive503": 3,
+  "full_history_observed": 4235,
+  "full_history_known503": 669,
+  "last100known503": 20,
+  "eligible_jobs_still_with_allowance": 429,
+  "remaining_attempt_allowances": 858,
+  "eligible_exhausted_without_completed_response": 5,
+  "accounting": {
+    "attempts": 4236,
+    "known_price_usd": "0.640252788",
+    "unpriced_attempts": 670,
+    "total_price_usd": null,
+    "full_reserve_per_unknown_attempt_usd": "0.011010048",
+    "admission_liability_usd": "8.016984948"
+  },
+  "recovery_accounting": {
+    "attempts": 236,
+    "known_price_usd": "0.034631772",
+    "unpriced_attempts": 40,
+    "total_price_usd": null,
+    "full_reserve_per_unknown_attempt_usd": "0.011010048",
+    "admission_liability_usd": "0.475033692"
+  },
+  "proposal": {
+    "scope": "Remaining previously allowed serial Jev postpass attempts only; no allowance change",
+    "maximum_consecutive_failures": 5,
+    "rolling_window": 100,
+    "maximum_failures_in_window": 30,
+    "cumulative_scope": "all observed Jev recovery responses; initial failures retained separately",
+    "cumulative_minimum_responses": 100,
+    "cumulative_stop_fraction": "0.20",
+    "cooldown_seconds": 120,
+    "concurrency": 1,
+    "original_route_cap_usd": "15",
+    "original_allowlist_unchanged": true,
+    "no_protected_response_replay": true,
+    "unknown_bills_keep_full_reserve": true,
+    "other_errors_stop": true,
+    "state": "proposed, not implemented"
+  }
+}

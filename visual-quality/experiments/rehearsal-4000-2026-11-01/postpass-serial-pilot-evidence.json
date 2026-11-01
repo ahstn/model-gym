@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-11-01T16:02:17.082040+00:00",
+  "checkpoint_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/results/api/postpass/jev-serial-pilot.json",
+  "checkpoint_sha256": "111f5b0abb73d27a6c330be91675da3ef945a1144ada0302c47b9801ab0af544",
+  "attempts": 50,
+  "known503": 7,
+  "fully_scored_recoveries": 43,
+  "latency_median_seconds": 0.7721148058772087,
+  "latency_p95_seconds": 1.273147322470322,
+  "all_attempt_accounting": {
+    "attempts": 4050,
+    "known_price_usd": "0.613453764",
+    "unpriced_attempts": 637,
+    "total_price_usd": null,
+    "full_reserve_per_unknown_attempt_usd": "0.011010048",
+    "admission_liability_usd": "7.626854340"
+  },
+  "recovery_attempt_accounting": {
+    "attempts": 50,
+    "known_price_usd": "0.007832748",
+    "unpriced_attempts": 7,
+    "total_price_usd": null,
+    "full_reserve_per_unknown_attempt_usd": "0.011010048",
+    "admission_liability_usd": "0.084903084"
+  },
+  "interpretation": "Predefined first50serialrecovery attempts, notrandomsample. Many identicalpayloads nowyieldvalidresponses, supportingtransientfailures for thosecases; otherimages maystillfail. Original unknownbills/fullreservations preserved. Continueunchangedserialpolicy; no concurrencyamendment."
+}

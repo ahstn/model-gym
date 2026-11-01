@@ -59,6 +59,7 @@ def attempt(case, model="luna", arm="baseline", technical=3.2, aesthetic=4.2, pr
         "request_started_at": START,
         "response_received_at": "2026-11-01T11:00:01+00:00",
         "latency_seconds": 1.23456,
+        "http_status": 200,
         "price_usd": "0.00" if lite else price,
         "price_basis": "user_assigned_zero; infrastructure separate" if lite else "receipt",
         "status": "valid",
@@ -626,3 +627,20 @@ def test_exploratory_baseline_comparison_direction_and_sibling_coverage(panel):
     rendered = report.baseline_comparison_section({"baseline_comparisons": comparisons})
     assert "uncorrected for multiple comparisons" in rendered
     assert "-0.250 [-0.250, -0.250] (3)" in rendered
+
+
+@pytest.mark.parametrize(("http_status", "status", "transport_error", "expected"), [
+    (200, "valid", None, "http_request_through_complete_response"),
+    (503, "failed", None, "http_request_through_complete_response"),
+    (None, "unknown", "ReadTimeout", "incomplete_or_unmeasured_http_attempt"),
+    (200, "unknown", None, "incomplete_or_unmeasured_http_attempt"),
+    (200, "failed", "ConnectionError", "incomplete_or_unmeasured_http_attempt"),
+])
+def test_latency_kind_requires_completed_http_response_but_keeps_failure_elapsed(http_status, status, transport_error, expected):
+    case = cases(1)[0]
+    row = attempt(case)
+    row.update(http_status=http_status, status=status, transport_error=transport_error)
+    normalized = a.normalize_attempt(case, row)
+    assert normalized["latency_kind"] == expected
+    assert normalized["latency_seconds"] == row["latency_seconds"]
+    assert normalized["response_received_at"] == row["response_received_at"]

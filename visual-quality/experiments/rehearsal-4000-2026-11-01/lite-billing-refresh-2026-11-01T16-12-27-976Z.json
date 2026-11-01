@@ -1,0 +1,105 @@
+{
+  "schema": "lite-billing-refresh-v1",
+  "queried_at": "2026-11-01T16:12:27.976Z",
+  "scope": "Only the two trial replacement pods; original pod queried for stopped status only.",
+  "provider_settlement_explicitly_confirmed": false,
+  "settled_total_usd": null,
+  "pods": {
+    "active": {
+      "id": "gm21jcse3yohgp",
+      "status": "EXITED",
+      "startedAt": "2026-11-01T13:46:11.489Z",
+      "dataCenterId": "EU-RO-1"
+    },
+    "startup": {
+      "id": "1e4rvgw2q4hkci",
+      "status": "EXITED",
+      "startedAt": "2026-11-01T13:42:39.928Z",
+      "dataCenterId": "US-NC-1"
+    },
+    "original": {
+      "id": "j8qvat8tmzyhgr",
+      "status": "EXITED",
+      "startedAt": "2026-10-31T23:33:50.866Z",
+      "dataCenterId": null
+    }
+  },
+  "billing_receipts": {
+    "active": {
+      "metadata": {
+        "query": {
+          "bucketSize": "hour",
+          "endTime": "2026-11-01T17:00:00Z",
+          "podId": "gm21jcse3yohgp",
+          "startTime": "2026-11-01T13:00:00Z"
+        },
+        "recordCount": 3,
+        "totals": {
+          "cpuAmount": 0,
+          "diskAmount": 0.008333334233611822,
+          "gpuAmount": 1.2619532546959817,
+          "totalAmount": 1.2702865889295936
+        },
+        "uniquePodCount": 1
+      },
+      "records": [
+        {
+          "cpuAmount": 0,
+          "diskAmount": 0.0013888890389353037,
+          "endTime": "2026-11-01T14:00:00Z",
+          "gpuAmount": 0.1493558487854898,
+          "podId": "gm21jcse3yohgp",
+          "startTime": "2026-11-01T13:00:00Z",
+          "totalAmount": 0.1507447378244251
+        },
+        {
+          "cpuAmount": 0,
+          "diskAmount": 0.005555556155741215,
+          "endTime": "2026-11-01T15:00:00Z",
+          "gpuAmount": 0.8907330110669136,
+          "podId": "gm21jcse3yohgp",
+          "startTime": "2026-11-01T14:00:00Z",
+          "totalAmount": 0.8962885672226548
+        },
+        {
+          "cpuAmount": 0,
+          "diskAmount": 0.0013888890389353037,
+          "endTime": "2026-11-01T16:00:00Z",
+          "gpuAmount": 0.22186439484357834,
+          "podId": "gm21jcse3yohgp",
+          "startTime": "2026-11-01T15:00:00Z",
+          "totalAmount": 0.22325328388251364
+        }
+      ]
+    },
+    "startup": {
+      "metadata": {
+        "query": {
+          "bucketSize": "hour",
+          "endTime": "2026-11-01T17:00:00Z",
+          "podId": "1e4rvgw2q4hkci",
+          "startTime": "2026-11-01T13:00:00Z"
+        },
+        "recordCount": 1,
+        "totals": {
+          "cpuAmount": 0,
+          "diskAmount": 0,
+          "gpuAmount": 0.025870075449347496,
+          "totalAmount": 0.025870075449347496
+        },
+        "uniquePodCount": 1
+      },
+      "records": [
+        {
+          "cpuAmount": 0,
+          "diskAmount": 0,
+          "endTime": "2026-11-01T14:00:00Z",
+          "gpuAmount": 0.025870075449347496,
+          "podId": "1e4rvgw2q4hkci",
+          "startTime": "2026-11-01T13:00:00Z",
+          "totalAmount": 0.025870075449347496
+        }
+      ]
+    }
+  }
+}

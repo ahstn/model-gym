@@ -1,0 +1,6 @@
+{
+  "purpose": "Durable provenance for the completed Luna benchmark visual adjudication; other model rows in this snapshot were incomplete and must not be treated as final",
+  "original_path": "/tmp/rehearsal-interim-20261101/scores-long.jsonl",
+  "durable_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/progress-snapshots/luna-protected-input/scores-long.jsonl",
+  "sha256": "2228180a47feb50e290446ad9060522d35a09d37037dcdc441b9db1e882b8eed"
+}

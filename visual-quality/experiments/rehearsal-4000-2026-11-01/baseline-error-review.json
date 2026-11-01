@@ -1,0 +1,1833 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-01T16:03:46.176257+00:00",
+  "reviewer": "assistant nonblind diagnostic review",
+  "selection": {
+    "method": "Top8 representative and top4 challenge by absolute baseline Luna/DeepSeek mean technical difference from frozen reference; Decimal arithmetic on stored decimal strings, descending error then ascending case_id; no eligibility filtering or manual substitutions.",
+    "panels": {
+      "representative": 8,
+      "challenge": 4
+    },
+    "case_ids": [
+      "R0317",
+      "R0356",
+      "R0357",
+      "R0302",
+      "R0206",
+      "R0260",
+      "R0200",
+      "R0109",
+      "R0463",
+      "R0444",
+      "R0481",
+      "R0490"
+    ],
+    "selection_uses_model_results": true,
+    "purpose": "Posthoc extreme-disagreement diagnostics; not a new unbiased evaluation set or an estimate of overall error prevalence."
+  },
+  "method": "Scores and frozen reference evidence were visible before inspection. Every exact delivered image was individually opened at original resolution after SHA256 validation. Image observations were written before consulting statistics. Interpretation supported means the cited visible defect or scope rationale is supported, not that the precise numeric reference is objectively validated. Ambiguous marks a scope boundary needing human adjudication. No new reference scores were assigned.",
+  "image_observations_completed_at": "2026-11-01T16:00:25.929865+00:00",
+  "initial_image_observations_sha256": "31b670edf502a720e9d5d3b54e109f0d52f7ae9f41f82c3ba0f4d5a05f47294e",
+  "stats_consulted_only_after_initial_observations": true,
+  "source_files": {
+    "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/results/api/postpass/initial-snapshot/scores-long.jsonl": "d225fc99d2b32b365d9dab961f1d3e0154c441319c0e79988f2e3a2838513059",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references.jsonl": "4d93e9fcda5b20ba8c1e297c9c474cb1d6919b7e5cb6fa74f6a8fcb3bfabfc86",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references-freeze.json": "458c370109100e45be0a3adb4b0a674fa0267296b2f2d9d9757f1690b903d24e",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/manifest.json": "57d6c46923b9ae20151bb8334373b0872f954c8af8cd0152150c1a7b76b8257a",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/api-teacher-prompt.json": "ab350c2bc039cc76785ee5ea20cc9ede31ee7b2d549616921215ddbfbddadf1c",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/stats.jsonl": "726290f348fd7796870484a30b06e33442c16c2881b6ebf896a71ae6f31efa41",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/stats-percentiles.jsonl": "d45a853109cfdbbf952e26e6bdf73ca0de919ebde77be41dc46419e53ee37dd4",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/stats-reference.json": "9dd53b3288cedcb0161eb3337ea6c96bb324932c602dd489d684431d24d3fa59",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/qc-reference.json": "a59886654c153923f39ffac1e084ccfdeef1da00a33228631232c3d6ece15d81",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/analysis_metrics.py": "d890abb54ed2685126040cdaf5a0c1611dec9901552c042c68d073b4f86168d8"
+  },
+  "qc_policy": "Unchanged shadow review: gate first; sharpness_peak percentile <=25 with technical score >=2; noise_sigma percentile >=90 with technical score >=2. The panel review budget is 10%, with 20% of slots reserved for random unflagged audits. The same frozen analysis_metrics.qc_review function and seeds are used. Flags do not overwrite labels. Fixed-budget membership is computed on each full panel, not this selected set of 12.",
+  "summary": {
+    "cases": 12,
+    "interpretation_counts": {
+      "ambiguous": 2,
+      "supported": 10
+    },
+    "scope_boundary_ambiguous_case_ids": [
+      "R0317",
+      "R0356"
+    ],
+    "any_qc_flag": 7,
+    "selected_by_fixed_budget": 3,
+    "selected_case_ids": [
+      "R0317",
+      "R0357",
+      "R0200"
+    ],
+    "selected_random_audit_case_ids": [
+      "R0317"
+    ],
+    "not_a_global_precision_or_recall_estimate": true
+  },
+  "validation": {
+    "source_score_sha256_verified": true,
+    "all12_exact_images_opened": true,
+    "all12_image_hashes_valid": true,
+    "primary_reference_file_sha256": "4d93e9fcda5b20ba8c1e297c9c474cb1d6919b7e5cb6fa74f6a8fcb3bfabfc86",
+    "primary_labels_changed": false,
+    "model_scores_changed": false,
+    "frozen_code_changed": false,
+    "training_approval": false
+  },
+  "cases": [
+    {
+      "case_id": "R0317",
+      "panel": "representative",
+      "technical_absolute_error": 2.95,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/d7973dbeb83c1577f32a4a8e9abe26f74e349503f47af69493418322ab268c97.png",
+      "view_sha256": "d7973dbeb83c1577f32a4a8e9abe26f74e349503f47af69493418322ab268c97",
+      "reference": {
+        "case_id": "R0317",
+        "view_sha256": "d7973dbeb83c1577f32a4a8e9abe26f74e349503f47af69493418322ab268c97",
+        "eligibility": "excluded",
+        "eligibility_evidence": "A nearly full frame printed graphic on cardboard dominates without meaningful surrounding photographed context.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 1,
+          "evidence": "This nearly full frame printed graphic reproduction is excluded content, so the photography eligibility rule requires the technical floor.",
+          "limitations": [
+            "unsupported_domain"
+          ]
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 1,
+          "evidence": "This typography and ornament reproduction is the principal content, so the photography eligibility rule requires the aesthetic floor.",
+          "limitations": [
+            "unsupported_domain"
+          ]
+        },
+        "review_started_at": "2026-11-01T11:57:54.717713+00:00",
+        "review_completed_at": "2026-11-01T11:58:13.932836+00:00",
+        "review_elapsed_seconds": 19.215123,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-10/R0317.json",
+        "review_timing_sha256": "0eb860424e6a587ed76325974e5e9015019dd19f3a188afb7ae92e52fc294dcb",
+        "review_completed_monotonic": 2210048.030432705,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 3.9,
+          "aesthetic_score": 3.4,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The vivid cyan sign stands out against worn cardboard, but excess blank space and edge intrusions weaken the framing.",
+            "technical_quality": "The cardboard print and lettering remain legible, though mild softness, uneven illumination, and surrounding scuffs reduce clarity slightly."
+          }
+        },
+        "deepseek": {
+          "technical_score": 4.0,
+          "aesthetic_score": 3.7,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "Centered blue stencil contrasts with brown cardboard, but stains and sticker clutter the simple composition.",
+            "technical_quality": "Cardboard texture and blue stencil edges are clearly resolved; mild softness and uneven lighting are minor."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 3.95,
+          "aesthetic_score": 3.55,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 3.3175650175978935,
+          "aesthetic_score": 2.9249248717220286,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 4.374154090881348,
+          "aesthetic_score": 2.679499626159668,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "ambiguous",
+        "confidence": "medium",
+        "failure_mode": "photography_scope_boundary",
+        "visible_observation": "The cyan graphic dominates a worn cardboard panel, but bent torn edges, creases, surface texture, a sticker and oblique lighting strongly establish a physical object. Surroundings are limited to dark margins.",
+        "assessment": "The frozen near-full-frame reproduction rule supports considering exclusion, while the physical-object exception supports eligibility. This 2.95-point gap should be human-adjudicated as a rubric boundary, not presented as a certain quality error."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 38.47682672233821,
+        "noise_sigma_percentile": 78.37991718426501,
+        "metrics": {
+          "sharpness_peak": 1452.69,
+          "noise_sigma": 1.23578,
+          "highlight_clip": 0.0,
+          "shadow_clip": 0.00313144,
+          "channel_clip": 0.000938698
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": false,
+          "noisy": false
+        },
+        "any_flag": false,
+        "in_fixed_budget": true,
+        "in_random_unflagged_audit": true
+      },
+      "reference_record_sha256": "2613dbd593cc36f8d7aba98a83589de445db693fe7bb2ccd8aec76a351e23234",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "5136f9b9eaf9b88fbc935e74e21c8cd20ebff6a841f2b6630b3613a04f4df608",
+          "attempt_id": "benchmark/baseline--R0317/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "aa22dfa63ecf9686b6ae37a1478515e5c9773877ff8e3a672274e6c43ed48e4c",
+          "attempt_id": "benchmark/baseline--R0317/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "c1307099c1053f3bc6b10a60ce9ce1a8a2e961a64cb186c0325eb1ac85c56711",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0317/01",
+            "benchmark/baseline--R0317/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "d0a7da16733721c71b93d404f14c6de503638ca5285d5916dfb642a9483613f1",
+          "attempt_id": "benchmark/baseline--R0317/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "5b92bf0590f0b146ce9ff1bb7e661f4a0ff6de4a8d7447ddc85e62b02ec784d0",
+          "attempt_id": "813354f5892f43ccfb101f78765b9471a9921ae654388bdc227b3632f8ddc5e3",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0356",
+      "panel": "representative",
+      "technical_absolute_error": 2.45,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/37eb45b8fa1a6e9b81de630df70ec925aa0b020d6a8e4a875e237f6cec5de421.png",
+      "view_sha256": "37eb45b8fa1a6e9b81de630df70ec925aa0b020d6a8e4a875e237f6cec5de421",
+      "reference": {
+        "case_id": "R0356",
+        "view_sha256": "37eb45b8fa1a6e9b81de630df70ec925aa0b020d6a8e4a875e237f6cec5de421",
+        "eligibility": "excluded",
+        "eligibility_evidence": "A printed cartoon card fills nearly the entire frame, with only narrow surrounding surface strips and no meaningful scene.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 1,
+          "evidence": "This nearly full frame cartoon card reproduction receives the technical floor under the photography eligibility rule.",
+          "limitations": [
+            "unsupported_domain"
+          ]
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 1,
+          "evidence": "The printed illustration reproduction receives the aesthetic floor because the photography eligibility rule excludes artwork presented as the image.",
+          "limitations": [
+            "unsupported_domain"
+          ]
+        },
+        "review_started_at": "2026-11-01T12:02:20.435938+00:00",
+        "review_completed_at": "2026-11-01T12:02:34.745693+00:00",
+        "review_elapsed_seconds": 14.309753,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-12/R0356.json",
+        "review_timing_sha256": "750ef752c7aab9cb4f809ed3940d547884d16be2cfba5434549604b8bee310cd",
+        "review_completed_monotonic": 2210308.843292855,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 3.5,
+          "aesthetic_score": 3.6,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The bold diagonal card, warm wood, and luminous duck create a clear focal point, though tight cropping and glare constrain balance.",
+            "technical_quality": "The oblique card remains legible, but fine print and character edges look soft beneath a pronounced printed-dot texture."
+          }
+        },
+        "deepseek": {
+          "technical_score": 3.4,
+          "aesthetic_score": 3.0,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The diagonal card placement and Donald's gesture create some energy, but the snapshot framing and cropped edges limit visual polish.",
+            "technical_quality": "The card is legible, but soft focus and visible print-screen texture reduce fine detail across Donald and the lettering."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 3.45,
+          "aesthetic_score": 3.3,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 3.4732873153088333,
+          "aesthetic_score": 2.8509475100410935,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 3.9685356616973877,
+          "aesthetic_score": 1.862980842590332,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "ambiguous",
+        "confidence": "medium",
+        "failure_mode": "photography_scope_boundary",
+        "visible_observation": "The printed cartoon card occupies most of the image at a pronounced diagonal. Card edges, wood at left and reflected light at right establish photographic context; halftone dots are visibly resolved.",
+        "assessment": "Artwork dominates, supporting the reference interpretation under the reproduction clause, but the evident card and surrounding surfaces also support the photographed-object exception. The exact scope boundary needs human examples; print dots alone are not image noise."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 65.55149076275836,
+        "noise_sigma_percentile": 34.99212055550084,
+        "metrics": {
+          "sharpness_peak": 3946.95,
+          "noise_sigma": 0.525385,
+          "highlight_clip": 0.0171692,
+          "shadow_clip": 9.42901e-05,
+          "channel_clip": 0.022388
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": false,
+          "noisy": false
+        },
+        "any_flag": false,
+        "in_fixed_budget": false,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "3d495290ac7bc229ccafd76b512b004ab49df464446bfc484cf388ea4e7cf34f",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "6be90df56fb882a14da87bf8319bc418873595e03b9c3217d42eabe4a66178b5",
+          "attempt_id": "benchmark/baseline--R0356/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "f36e6b6f0c1c1f11327d999dc700cc4c845264fbf6a7d9dbd4ac43916c374504",
+          "attempt_id": "benchmark/baseline--R0356/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "882b79578ed00577f4e10d4f39d955c396000f9f29b5ac4443b40f9e50a13c2c",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0356/01",
+            "benchmark/baseline--R0356/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "31727ac215b27132ecd67dc3868e1f3937ed217ef0fe3e4253ba29531506cd2e",
+          "attempt_id": "benchmark/baseline--R0356/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "2f7d8f33e45a9b4558c7bb4353807000de4b389db22adb86e1544c499958b0bd",
+          "attempt_id": "0d1fd7fe6eb64459bb7bfceca540c989aad2f8782c0994b0351bfd4edb8762dd",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0357",
+      "panel": "representative",
+      "technical_absolute_error": 2.35,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/5bbb1a7bf5b99b550dcf190031f0b9775bf059dc003e67e6873e3bdc1ef69550.png",
+      "view_sha256": "5bbb1a7bf5b99b550dcf190031f0b9775bf059dc003e67e6873e3bdc1ef69550",
+      "reference": {
+        "case_id": "R0357",
+        "view_sha256": "5bbb1a7bf5b99b550dcf190031f0b9775bf059dc003e67e6873e3bdc1ef69550",
+        "eligibility": "eligible",
+        "eligibility_evidence": "A blurred warm foreground glow and almost black surroundings show photographic light falloff without clear evidence of excluded graphic content.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 1,
+          "evidence": "Severe blur, a large clipped white area, and near-black surroundings remove almost all identifiable detail from the image.",
+          "limitations": []
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 1.5,
+          "evidence": "The diagonal transition between warm glow and darkness offers simple contrast, but overwhelming featureless areas leave little visual structure.",
+          "limitations": []
+        },
+        "review_started_at": "2026-11-01T12:22:38.740194+00:00",
+        "review_completed_at": "2026-11-01T12:23:04.192705+00:00",
+        "review_elapsed_seconds": 25.452515,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-17/R0357.json",
+        "review_timing_sha256": "5a54185432beb5085b298721b46b06c679aecb3d02f4214b36aa6058badc059f",
+        "review_completed_monotonic": 2211538.290311239,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 2.9,
+          "aesthetic_score": 3.7,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "A sweeping amber-white arc against near-black creates strong contrast and a restrained abstract composition, though the glow overwhelms detail.",
+            "technical_quality": "The glowing form has a smooth warm edge, but clipped white highlights and crushed shadows erase substantial tonal detail."
+          }
+        },
+        "deepseek": {
+          "technical_score": 3.8,
+          "aesthetic_score": 3.5,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "Abstract photograph uses strong diagonal warm-to-black contrast for a minimalist mood, though composition is very sparse.",
+            "technical_quality": "Abstract photograph's smooth diagonal light gradient is clean, but bright areas are heavily clipped."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 3.35,
+          "aesthetic_score": 3.6,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 1.2935074807140357,
+          "aesthetic_score": 1.858206524906811,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 1.59221613407135,
+          "aesthetic_score": 1.4830456674098969,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "lost_detail_excused_as_abstraction",
+        "visible_observation": "A large clipped white region blends through an extremely soft warm boundary into near-black surroundings. Almost no identifiable scene detail survives; small dark structures at the top provide little usable content.",
+        "assessment": "The severe technical loss described by the reference is visible. Calling the glow abstract does not establish good technical fidelity; Liquid and Lite give substantially lower technical scores. Aesthetic response to the diagonal is more subjective."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 2.0014440290388302,
+        "noise_sigma_percentile": 13.011881761978366,
+        "metrics": {
+          "sharpness_peak": 60.7073,
+          "noise_sigma": 0.328116,
+          "highlight_clip": 0.202482,
+          "shadow_clip": 0.335715,
+          "channel_clip": 0.236088
+        },
+        "gate_value": "uniform_frame",
+        "review_flags": {
+          "gate": true,
+          "soft": true,
+          "noisy": false
+        },
+        "any_flag": true,
+        "in_fixed_budget": true,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "35bfa6057ed23f58b535210592b9850efa6aac4fa6864350cee7f936a59bc8f8",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "ff2e77fc2e729962fb4c2f70f83f09a85bb2063aa752de76b84a92500379f706",
+          "attempt_id": "benchmark/baseline--R0357/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "718d6e192471764a6a434439b4bf0bbcc7c51229e1b502fd6dcc80457f18def7",
+          "attempt_id": "benchmark/baseline--R0357/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "0674c618d129afed3d83a662ff58cca248cc18c050b026a06dccf6c0e171afcc",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0357/01",
+            "benchmark/baseline--R0357/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "cda41f6fce0926df2c13a546250db6209b2e11a224fd3682a67de7d526cd05a2",
+          "attempt_id": "benchmark/baseline--R0357/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "155ad83b9e0b03c84a8c8308c6917c9d14c0256ffd9e10cd1c8aa58abcc64b6a",
+          "attempt_id": "163e5edb0ff11ff348043980856dc59ceb22974b321f6983701ab16211a353e5",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0302",
+      "panel": "representative",
+      "technical_absolute_error": 1.7,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/a3694344d9635a915df48e4859cb1f19f4eaf17568a12b8cb69b163859d5c55f.png",
+      "view_sha256": "a3694344d9635a915df48e4859cb1f19f4eaf17568a12b8cb69b163859d5c55f",
+      "reference": {
+        "case_id": "R0302",
+        "view_sha256": "a3694344d9635a915df48e4859cb1f19f4eaf17568a12b8cb69b163859d5c55f",
+        "eligibility": "eligible",
+        "eligibility_evidence": "Raised lettering and a dimensional star cast shadows on a lit physical exhibition wall.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 2.7,
+          "evidence": "Raised letter edges and smaller paragraphs appear noticeably soft, with uneven illumination further reducing readability in the central text.",
+          "limitations": []
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 3,
+          "evidence": "The red star and vertical lettering establish a clear hierarchy, though tilted framing and uneven light weaken the overall presentation.",
+          "limitations": []
+        },
+        "review_started_at": "2026-11-01T12:06:10.524889+00:00",
+        "review_completed_at": "2026-11-01T12:06:29.382303+00:00",
+        "review_elapsed_seconds": 18.857414,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-18/R0302.json",
+        "review_timing_sha256": "48010b3896bb729a43f0ffdec20fd122c95820404eb01c9af1bdf79c01388c08",
+        "review_completed_monotonic": 2210543.479902625,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 1.0,
+          "aesthetic_score": 1.0,
+          "scope_floor_applied": true,
+          "evidence": {
+            "aesthetics": "A near-full-frame photographed exhibit information panel is a graphic display reproduction, so the photography eligibility rule sets the floor.",
+            "technical_quality": "A near-full-frame photographed exhibit information panel is a graphic display reproduction, so the photography eligibility rule sets the floor."
+          }
+        },
+        "deepseek": {
+          "technical_score": 1.0,
+          "aesthetic_score": 1.0,
+          "scope_floor_applied": true,
+          "evidence": {
+            "aesthetics": "The visible content is a flat exhibition panel with typography and a star, so the photography eligibility rule sets the floor.",
+            "technical_quality": "The image is a flat museum display panel of text and graphics, so the photography eligibility rule sets the floor."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 1.0,
+          "aesthetic_score": 1.0,
+          "scope_floor_applied": true,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 3.310011763769215,
+          "aesthetic_score": 3.1810323238724005,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 3.99310302734375,
+          "aesthetic_score": 2.201313614845276,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "false_photography_scope_floor",
+        "visible_observation": "Large letters protrude from a wall and cast clear offset shadows. The red star has distinct three-dimensional facets, while the central paragraphs are soft and unevenly illuminated.",
+        "assessment": "The physical relief and lighting support photographic eligibility. Both teachers call this flat graphic content and floor both scores, losing the distinction between a flat reproduction and a dimensional display."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 19.190592452946813,
+        "noise_sigma_percentile": 60.720244894229445,
+        "metrics": {
+          "sharpness_peak": 550.514,
+          "noise_sigma": 0.863682,
+          "highlight_clip": 0.0,
+          "shadow_clip": 1.08083e-05,
+          "channel_clip": 0.0689125
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": false,
+          "noisy": false
+        },
+        "any_flag": false,
+        "in_fixed_budget": false,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "a35a6610763975f4be49e78a09798b0e0b9736f9eb0c6e2dc2baae212b576ef7",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "8602d448933159dd8798c066e3d58ff6e92c987ae0b3d831672e694b01ee21b1",
+          "attempt_id": "benchmark/baseline--R0302/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "bd8466e4fcce15aa4498a9331b4f1ea59626aa699585669acf6a98da74f6dad6",
+          "attempt_id": "benchmark/baseline--R0302/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "0c3ae83b060f6300c18a5de1f550ae94b5cd8bdf54eeb87bf0e142f53a718f23",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0302/01",
+            "benchmark/baseline--R0302/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "be4e0262c82762b044d3fa6bf650ccac7175a7b2d8e610beae76a5df92d98ea1",
+          "attempt_id": "benchmark/baseline--R0302/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "5f848816bc2c9e10d04c88e66c65ed155eb0908a624866620e8e11b5c372eb82",
+          "attempt_id": "8d8a2082033d162ccad2c8cd4f8b07146ebcd137186b78caa8e61f48b67330d4",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0206",
+      "panel": "representative",
+      "technical_absolute_error": 1.55,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/d326d73c2d521a883ae07736ebae2cc2be3848eac04a77b89cdd286f4e269d6e.png",
+      "view_sha256": "d326d73c2d521a883ae07736ebae2cc2be3848eac04a77b89cdd286f4e269d6e",
+      "reference": {
+        "case_id": "R0206",
+        "view_sha256": "d326d73c2d521a883ae07736ebae2cc2be3848eac04a77b89cdd286f4e269d6e",
+        "eligibility": "eligible",
+        "eligibility_evidence": "Flower stems and blossoms show photographic depth against a blurred green background despite strong color treatment.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 2.2,
+          "evidence": "Harsh contrast clips petal highlights and shadows, while intense red edges and visible grain degrade delicate floral detail.",
+          "limitations": []
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 3.2,
+          "evidence": "The branching flower stem creates a graceful vertical arrangement, but extreme colors and harsh tonal transitions overpower its delicate forms.",
+          "limitations": []
+        },
+        "review_started_at": "2026-11-01T12:21:50.097756+00:00",
+        "review_completed_at": "2026-11-01T12:22:13.937473+00:00",
+        "review_elapsed_seconds": 23.83972,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-14/R0206.json",
+        "review_timing_sha256": "14cc53bd446a63bca38f089f28227855e869093506b609a20618bd40f16f23bf",
+        "review_completed_monotonic": 2211488.035072334,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 3.5,
+          "aesthetic_score": 3.8,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The luminous flowers stand out against a deep green field, but severe contrast and the lower-right watermark disrupt balance.",
+            "technical_quality": "Petal contours and stamens are mostly resolved, though harsh contrast clips bright petals and buries substantial stem detail in shadow."
+          }
+        },
+        "deepseek": {
+          "technical_score": 4.0,
+          "aesthetic_score": 4.0,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "Dark green background isolates the vivid flower stalk, creating strong color contrast and clear vertical hierarchy.",
+            "technical_quality": "Flower details and anthers are resolved, though saturated reds and bright petals show minor clipping."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 3.75,
+          "aesthetic_score": 3.9,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 3.8886487339553693,
+          "aesthetic_score": 3.8625986410020317,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 3.9962267875671387,
+          "aesthetic_score": 2.5603266954421997,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "processing_damage_despite_sharp_edges",
+        "visible_observation": "The flower edges are crisply delineated, but petal highlights are near-white, large stem areas collapse to black, and vivid red-blue edge transitions look harsh across the main subject.",
+        "assessment": "The reference describes visible tonal and color-detail damage. Recognizable anthers and crisp outlines do not make those defects minor. All four compared native scorers still give technical scores near good, making this a useful review case beyond blur."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 90.43265538330252,
+        "noise_sigma_percentile": 36.7813933173182,
+        "metrics": {
+          "sharpness_peak": 11366.8,
+          "noise_sigma": 0.544938,
+          "highlight_clip": 0.0200211,
+          "shadow_clip": 0.0902611,
+          "channel_clip": 0.0278382
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": false,
+          "noisy": false
+        },
+        "any_flag": false,
+        "in_fixed_budget": false,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "95d0d8b29e79ea3067712e76da6ea4046614a1936e5f6a5f4bdebea8e5378859",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "fddd27602705c0bababbe005b590bfa8f3c263cbc6f3c869668acb70a1f06df5",
+          "attempt_id": "benchmark/baseline--R0206/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "251712eae79d6203913782d97140e12564c176d24b30b7c9a58e32461427a6bd",
+          "attempt_id": "benchmark/baseline--R0206/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "fd1cfc7307a42f3cb8390dec5f3ec524c34d233db3ee8456d858841a148a8928",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0206/01",
+            "benchmark/baseline--R0206/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "710f41d5d9a8afcf410aee06fdb6c24a8c460d70fd3ae9ec04e7cdd0625a3821",
+          "attempt_id": "benchmark/baseline--R0206/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "51cd88a9518925462894af476129cb53394bbdd661c360bc17e3d400c85ec8bd",
+          "attempt_id": "3350f91032daa5cc2f220c65cbfd2c5d9baa341787d9d4b829bb5deb9b2022f2",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0260",
+      "panel": "representative",
+      "technical_absolute_error": 1.25,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/0a4ff2d87d3785a086ccc8012fb28f5ab3ae32fc441c5d307493539fe6650158.png",
+      "view_sha256": "0a4ff2d87d3785a086ccc8012fb28f5ab3ae32fc441c5d307493539fe6650158",
+      "reference": {
+        "case_id": "R0260",
+        "view_sha256": "0a4ff2d87d3785a086ccc8012fb28f5ab3ae32fc441c5d307493539fe6650158",
+        "eligibility": "eligible",
+        "eligibility_evidence": "A locomotive and freight cars stand on visible tracks in a physical rail yard.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 2.5,
+          "evidence": "Broad softness blurs locomotive fittings, wheel detail and track texture, although the main lettering and overall form remain readable.",
+          "limitations": []
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 3.1,
+          "evidence": "The locomotive is clearly framed against contrasting freight cars, but empty sky and foreground tracks dilute its visual emphasis.",
+          "limitations": []
+        },
+        "review_started_at": "2026-11-01T11:46:41.246870+00:00",
+        "review_completed_at": "2026-11-01T11:46:52.950700+00:00",
+        "review_elapsed_seconds": 11.70384,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-03/R0260.json",
+        "review_timing_sha256": "bcea00993ad34316138e3bc92252dbdefeba87317503e87183ed14d1c591f53d",
+        "review_completed_monotonic": 2209367.048308664,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 3.5,
+          "aesthetic_score": 3.4,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The central locomotive and converging rails create a clear documentary composition, though broad areas of sky and foreground dilute its visual focus.",
+            "technical_quality": "The locomotive markings and rails remain readable, though the overall image is soft, muted, and fine mechanical detail is subdued."
+          }
+        },
+        "deepseek": {
+          "technical_score": 4.0,
+          "aesthetic_score": 3.7,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "Centered locomotive, receding tracks, and orange cars create a balanced industrial scene, though framing feels static.",
+            "technical_quality": "Main locomotive and lettering are legible, with mild softness and grain but no severe artifacts."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 3.75,
+          "aesthetic_score": 3.55,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 2.9047273664640567,
+          "aesthetic_score": 2.9756237574340125,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 3.1919970512390137,
+          "aesthetic_score": 1.4726115465164185,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "broad_subject_softness",
+        "visible_observation": "The locomotive number and silhouette are readable, but handrails, wheels, machinery and track textures are broadly soft, with subdued contrast across the scene.",
+        "assessment": "The reference technical downgrade is supported. Both teachers acknowledge softness yet retain 3.50 or 4.00, apparently weighting recognition more than the missing mechanical detail. Liquid is closer to the lower reference."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 8.9009055185375,
+        "noise_sigma_percentile": 16.410634856449658,
+        "metrics": {
+          "sharpness_peak": 240.677,
+          "noise_sigma": 0.36279,
+          "highlight_clip": 0.0,
+          "shadow_clip": 0.0,
+          "channel_clip": 0.0
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": true,
+          "noisy": false
+        },
+        "any_flag": true,
+        "in_fixed_budget": false,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "c51a869c9f537c4ec3f0ffb9f59308fd008bf9a42a2ad202c896189468f20091",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "f26b06c4e94aab10ad6cc0e0b0bf1869e5e024e43d971a32649cc48c265025a7",
+          "attempt_id": "benchmark/baseline--R0260/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "b96af3bcbed5a78d106ae5aaa50f8cd1f742a5957c3b80e83b69137a153342f0",
+          "attempt_id": "benchmark/baseline--R0260/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "b65947268d7d5efb3931821f0d1763f450df1becf7b61ec7aa69f9222bfc2fd3",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0260/01",
+            "benchmark/baseline--R0260/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "ae78160fa4a40b1e900a4ce08d4052e0e7bdda900e7c00ff4fc3450d19c239d7",
+          "attempt_id": "benchmark/baseline--R0260/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "d8245048230a6ee86e7858d6763867aa7f6e2a4685d3bdf4e4fc9b59e97041ae",
+          "attempt_id": "c0a2abc658ca9548e83a9222dc6c39c45193f9121e1128e205afdc8d73bb1098",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0200",
+      "panel": "representative",
+      "technical_absolute_error": 1.1,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/83861c4486a9f7ae24cf62e01e16c91ff751672c2b24f74f7da5f65d5853cd66.png",
+      "view_sha256": "83861c4486a9f7ae24cf62e01e16c91ff751672c2b24f74f7da5f65d5853cd66",
+      "reference": {
+        "case_id": "R0200",
+        "view_sha256": "83861c4486a9f7ae24cf62e01e16c91ff751672c2b24f74f7da5f65d5853cd66",
+        "eligibility": "eligible",
+        "eligibility_evidence": "A person wearing a headset sits inside a small aircraft, seen through its window beneath a wing.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 2.8,
+          "evidence": "The person's face is dark and noticeably soft, while aircraft edges and window reflections also lack crisp fine detail.",
+          "limitations": []
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 2.8,
+          "evidence": "The aircraft window frames the face, but the dominant wing, dim expression, and tight cropping limit the portrait's visual strength.",
+          "limitations": []
+        },
+        "review_started_at": "2026-11-01T12:22:06.166358+00:00",
+        "review_completed_at": "2026-11-01T12:22:21.444462+00:00",
+        "review_elapsed_seconds": 15.278105,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-17/R0200.json",
+        "review_timing_sha256": "73f1c15e7ff47ec27c54eec3e983bbd4c3c0cf3975725c5ef10434dc922da817",
+        "review_completed_monotonic": 2211495.542060765,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 3.8,
+          "aesthetic_score": 3.6,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The pilot framed in the cabin window gives the close aircraft view a clear focal point, though the roof and watermark weigh heavily.",
+            "technical_quality": "The aircraft surfaces retain visible rivets and edges, while the pilot is somewhat soft and muted behind reflective glass."
+          }
+        },
+        "deepseek": {
+          "technical_score": 4.0,
+          "aesthetic_score": 4.0,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The window frames the pilot well; the diagonal wing and muted hangar background create a coherent composition.",
+            "technical_quality": "Pilot’s face and aircraft surfaces remain clear, with only slight softness and window reflections limiting fine detail."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 3.9,
+          "aesthetic_score": 3.8,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 3.2237284915127344,
+          "aesthetic_score": 3.0246558284334557,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 3.0269384384155273,
+          "aesthetic_score": 2.0176247358322144,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "supported",
+        "confidence": "medium",
+        "failure_mode": "main_subject_softness_and_darkness",
+        "visible_observation": "The central pilot face behind the window is dark and soft, with weak eye and facial detail. Some rivets and aircraft boundaries remain more defined, while reflections obscure the lower portrait.",
+        "assessment": "The reference identifies a visible limitation in the same pilot focal region named by both teachers. Cleaner aircraft surfaces do not fully offset that loss. Exact severity remains a judgment, but a nearly good score understates the subject-level defect."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 3.6137592181173974,
+        "noise_sigma_percentile": 47.47486500874591,
+        "metrics": {
+          "sharpness_peak": 104.836,
+          "noise_sigma": 0.668167,
+          "highlight_clip": 0.000869115,
+          "shadow_clip": 0.000423431,
+          "channel_clip": 0.000496546
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": true,
+          "noisy": false
+        },
+        "any_flag": true,
+        "in_fixed_budget": true,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "17190bdf72f8c77d9d0226eebdc6037ea078190447cbeee39ff10e2a59f6fea2",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "987b10c259a26156425e9452731480ee59073a12dd4527ada9b1508fdf9f75bc",
+          "attempt_id": "benchmark/baseline--R0200/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "3f73bf684c30ac895a1246311c92fd5591b6b6057323b546c883adeb4ded5b24",
+          "attempt_id": "benchmark/baseline--R0200/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "e535bb15ee8898bcd18a831c26ffdb7567aeaeb8a11437e74b737c00b5deaa83",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0200/01",
+            "benchmark/baseline--R0200/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "99fd00853f4fdc379c1a56ff44e228e67c3028db543dbc9c79b2b15c085aca2b",
+          "attempt_id": "benchmark/baseline--R0200/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "fba5c1552b8689255f8e1322586004adef609e7a17ef091ce60ab35182690e60",
+          "attempt_id": "8377f2c622e93ca9c22662220db239991b7ac5e000278f6063dc4f7790cb4c63",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0109",
+      "panel": "representative",
+      "technical_absolute_error": 1.0,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/10da8a8ddfe3f33292ffb9b9c29ee922b30bbac82cfd2794cd30c07b275bf7ca.png",
+      "view_sha256": "10da8a8ddfe3f33292ffb9b9c29ee922b30bbac82cfd2794cd30c07b275bf7ca",
+      "reference": {
+        "case_id": "R0109",
+        "view_sha256": "10da8a8ddfe3f33292ffb9b9c29ee922b30bbac82cfd2794cd30c07b275bf7ca",
+        "eligibility": "eligible",
+        "eligibility_evidence": "A bird perches on a stone cross beside a large tree and a person in a courtyard.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 2.4,
+          "evidence": "The bird and person's face appear noticeably blurred, while dark exposure and reduced contrast obscure finer subject detail.",
+          "limitations": []
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 2.2,
+          "evidence": "The sideways frame and dominant tree obscure the small bird, while the stone cross creates a heavy foreground obstruction.",
+          "limitations": []
+        },
+        "review_started_at": "2026-11-01T12:10:43.356829+00:00",
+        "review_completed_at": "2026-11-01T12:10:52.054071+00:00",
+        "review_elapsed_seconds": 8.697241,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-18/R0109.json",
+        "review_timing_sha256": "bcc5d3e02aabc7d735be41152034caaf4c0624c9df8bed2b238a488f7612db3b",
+        "review_completed_monotonic": 2210806.151669777,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 3.1,
+          "aesthetic_score": 2.6,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The sideways framing, dominant tree, and intrusive stone cross crowd the scene, leaving the man and bird weakly presented.",
+            "technical_quality": "The stonework and tree retain texture, but the man and bird are noticeably soft, with subdued detail overall."
+          }
+        },
+        "deepseek": {
+          "technical_score": 3.7,
+          "aesthetic_score": 2.8,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "Rotated framing, a dominant foreground cross obscuring the small bird and man, and cluttered layering weaken visual hierarchy and impact.",
+            "technical_quality": "The scene is legible with decent exposure and texture, though the sideways orientation and slight softness on the bird reduce clarity."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 3.4,
+          "aesthetic_score": 2.7,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 2.959520912569202,
+          "aesthetic_score": 2.5719718051465246,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 3.0127274990081787,
+          "aesthetic_score": 1.9846742153167725,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "sharp_background_soft_main_subject",
+        "visible_observation": "Tree bark and stone carry visible texture, but the foreground bird head and feathers are blurred; the person behind is also soft. The whole image is sideways.",
+        "assessment": "The reference technical concern is supported by the main bird and person, independently of the compositional rotation. Whole-frame texture can conceal the focus error if the grader emphasizes the sharp tree."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 34.09289707333114,
+        "noise_sigma_percentile": 72.05996472663139,
+        "metrics": {
+          "sharpness_peak": 1237.36,
+          "noise_sigma": 1.0865,
+          "highlight_clip": 0.00129151,
+          "shadow_clip": 0.00276294,
+          "channel_clip": 0.0010318
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": false,
+          "noisy": false
+        },
+        "any_flag": false,
+        "in_fixed_budget": false,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "d199c2f07f81a29f47af5add6343475bff2fbb0736cc2e9c346fd95f7e64526d",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "1fec771f18254b2856cf00535a1cdee0bdecec063ec80591ff3fb8bd0a9a077c",
+          "attempt_id": "benchmark/baseline--R0109/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "858e6794191a1f01e0ee309649dbad018583b6991c08424c08fd4a8931f4470e",
+          "attempt_id": "benchmark/baseline--R0109/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "faeea79f8f587118a94c311e2daa27cb8bbd617598fd5ac7cf96120d01d0eb9d",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0109/01",
+            "benchmark/baseline--R0109/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "0a0c9e9e7cc0565d3160a6cd7f49b25d3ff422d60c841c851761ed613cfa0a39",
+          "attempt_id": "benchmark/baseline--R0109/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "d1b967452ba2b168431504c3295cd2534fa5008ec40c86d8fbd4dbc5c6870393",
+          "attempt_id": "20914db2156d6c57153ae1a7503e91a46727e3cd1f64fc6b00c15d3db0c4b4fb",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0463",
+      "panel": "challenge",
+      "technical_absolute_error": 1.9,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/2192d7ecebfcb517fa0bba6791b77701172017cac53a3f4edee32a5bc6bd4491.png",
+      "view_sha256": "2192d7ecebfcb517fa0bba6791b77701172017cac53a3f4edee32a5bc6bd4491",
+      "reference": {
+        "case_id": "R0463",
+        "view_sha256": "2192d7ecebfcb517fa0bba6791b77701172017cac53a3f4edee32a5bc6bd4491",
+        "eligibility": "excluded",
+        "eligibility_evidence": "A Windows login interface fills a photographed display with only its dark bezel visible around the content.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 1,
+          "evidence": "This near full frame computer interface reproduction receives the technical floor under the photography eligibility rule.",
+          "limitations": [
+            "unsupported_domain"
+          ]
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 1,
+          "evidence": "The displayed software login interface receives the aesthetic floor because the photography eligibility rule excludes interface reproductions.",
+          "limitations": [
+            "unsupported_domain"
+          ]
+        },
+        "review_started_at": "2026-11-01T12:09:18.058155+00:00",
+        "review_completed_at": "2026-11-01T12:09:30.944619+00:00",
+        "review_elapsed_seconds": 12.886474,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-13/R0463.json",
+        "review_timing_sha256": "09b68cb9d404dd9f1e07528172afc68b0230a193e223a5c797053df42e5ab8e8",
+        "review_completed_monotonic": 2210725.042227877,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 2.5,
+          "aesthetic_score": 2.7,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The tilted blue screen and sweeping diagonal create a simple color field, but extensive empty space and blur weaken the framing.",
+            "technical_quality": "The photographed monitor is heavily softened with visible moiré and grain, leaving the boot logo and text poorly resolved."
+          }
+        },
+        "deepseek": {
+          "technical_score": 3.3,
+          "aesthetic_score": 2.8,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "Tilted framing and a large empty blue field weaken hierarchy, though the retro boot screen has some nostalgic pull.",
+            "technical_quality": "Photograph of a laptop boot screen; text and logo are legible, but moiré, softness, and uneven lighting reduce fidelity."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 2.9,
+          "aesthetic_score": 2.75,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 2.868250391807652,
+          "aesthetic_score": 2.153613823435546,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 1.9206839203834534,
+          "aesthetic_score": 1.0183665566146374,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "supported",
+        "confidence": "medium",
+        "failure_mode": "near_full_frame_interface_scope",
+        "visible_observation": "The Windows login interface dominates a tilted photographed display. Moire and blur affect the lettering; only the bezel and a power light add physical context, with no surrounding scene.",
+        "assessment": "The frozen near-full-frame interface interpretation supports the reference floor. Both teachers instead rate the photographed screen as eligible. Its visible bezel should remain a human boundary-calibration example, rather than assuming every screen photograph is excluded."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 60.260355029585796,
+        "noise_sigma_percentile": 95.21344077269521,
+        "metrics": {
+          "sharpness_peak": 3333.49,
+          "noise_sigma": 2.82935,
+          "highlight_clip": 0.00139176,
+          "shadow_clip": 0.168683,
+          "channel_clip": 0.00329526
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": false,
+          "noisy": true
+        },
+        "any_flag": true,
+        "in_fixed_budget": false,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "e78a69ae7424aa2b38d1396bae946687b9d7528a1280bc8e5debc5b9e1ac94d7",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "d9698f1607ae6744dd672ca226238dfe69ea7ffcade64c08777a0b334ef6eb8c",
+          "attempt_id": "benchmark/baseline--R0463/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "dc6a0523504e45dea45c365f30f43b8bb5ddb77cffe7f07343b3f32ac96890e3",
+          "attempt_id": "benchmark/baseline--R0463/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "47fd69291adf625888f4f411fd635cc746c3afb9a59456da736f771ee5d4f78a",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0463/01",
+            "benchmark/baseline--R0463/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "a54cb30b4a093e0f44f678cebf9be322b9e1118c99fc22ed09b81c450293b74b",
+          "attempt_id": "benchmark/baseline--R0463/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "a4ebd8600394991fe4e06f25ec43e5eaa1f62d3f19593a6f966c633f9397ff99",
+          "attempt_id": "59e8f1f6c5147b0d5c65882d732cc02d7ae2976496224e982387871321227627",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0444",
+      "panel": "challenge",
+      "technical_absolute_error": 1.05,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/7030eab537d1a66fcbabbfa68f373a5863ef2ba89ac15a0f1b9b64c5ef84ce51.png",
+      "view_sha256": "7030eab537d1a66fcbabbfa68f373a5863ef2ba89ac15a0f1b9b64c5ef84ce51",
+      "reference": {
+        "case_id": "R0444",
+        "view_sha256": "7030eab537d1a66fcbabbfa68f373a5863ef2ba89ac15a0f1b9b64c5ef84ce51",
+        "eligibility": "eligible",
+        "eligibility_evidence": "A locomotive and tracks occupy a physical outdoor landscape.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 3,
+          "evidence": "Main lettering remains readable, but soft mechanical detail, dark undercarriage shadows and visible sky specks reduce fidelity.",
+          "limitations": []
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 3.7,
+          "evidence": "The angled locomotive and strong yellow-blue contrast create a clear composition, with minor distractions from wires and sky marks.",
+          "limitations": []
+        },
+        "review_started_at": "2026-11-01T11:55:50.549180+00:00",
+        "review_completed_at": "2026-11-01T11:56:04.364603+00:00",
+        "review_elapsed_seconds": 13.815421,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-11/R0444.json",
+        "review_timing_sha256": "b5101b418f9934baf67e96851707f8fe6a73804e2be6f11f1a6d12131cdb4ac0",
+        "review_completed_monotonic": 2209918.46220359,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 4.0,
+          "aesthetic_score": 4.1,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The large yellow-and-blue locomotive anchors a broad sky-and-grass setting, with strong color contrast and a purposeful horizontal composition.",
+            "technical_quality": "The locomotive's lettering and body panels remain legible, though mild softness, grain, and dense undercarriage shadows reduce fidelity."
+          }
+        },
+        "deepseek": {
+          "technical_score": 4.1,
+          "aesthetic_score": 4.2,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "Bold yellow-and-blue locomotive dominates the frame, with a low, dynamic angle and clean sky backdrop creating strong visual impact.",
+            "technical_quality": "Locomotive detail, lettering and trucks are clearly resolved; foreground grass is slightly soft and corners mildly vignetted but not distracting."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 4.05,
+          "aesthetic_score": 4.15,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 3.3006180251205883,
+          "aesthetic_score": 3.4824938477660945,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 4.023445129394531,
+          "aesthetic_score": 2.007182478904724,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "supported",
+        "confidence": "medium",
+        "failure_mode": "soft_detail_and_shadow_loss",
+        "visible_observation": "Large locomotive lettering is legible, but smaller mechanical boundaries and wheel detail are soft and dark. Specks cross the sky and the corners darken visibly.",
+        "assessment": "The defects named by the reference are visible. DeepSeek calling the trucks clearly resolved overstates fine-detail preservation. The exact fair-versus-good boundary is subjective; this review supports the defect interpretation, not the precise 3.00 value."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 22.265675278827832,
+        "noise_sigma_percentile": 39.57022185092361,
+        "metrics": {
+          "sharpness_peak": 661.642,
+          "noise_sigma": 0.577231,
+          "highlight_clip": 0.0,
+          "shadow_clip": 0.0359328,
+          "channel_clip": 5.34188e-06
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": true,
+          "noisy": false
+        },
+        "any_flag": true,
+        "in_fixed_budget": false,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "b5cefd7c5ebd0ddaf3e4c017dce5c48d83cf527d74e84628b635e1ab285bf0ee",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "6940920899a2d27ced15892debfb6f40861cab4d139341406ac3133dfa7a5321",
+          "attempt_id": "benchmark/baseline--R0444/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "fc7a75dbe6b0200d82e5b15a26c637e09bff94efbd12f75fff1f2e042a2b6c56",
+          "attempt_id": "benchmark/baseline--R0444/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "f1c7fc18d8e80f899d2d7204cfc07c96b265e7a27de7f5526250ea4e23f125c9",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0444/01",
+            "benchmark/baseline--R0444/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "12740392601acc9dd5e7984bc2a936de315e9369a7188f13cdedbab4c5844116",
+          "attempt_id": "benchmark/baseline--R0444/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "4bad0c98d8e1b70a09fa7fee096f10c53111c5f54e1f4a646c4677d8def468e7",
+          "attempt_id": "782b8a7edd5d0b2f684ff49527c3bb0d66b7b072216a538017cc1d960ae8d881",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0481",
+      "panel": "challenge",
+      "technical_absolute_error": 1.0,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/0f0b3515f4c738efd27fa94e713ceac9f64e18fd1b4a7d4d90344c27b4300dcc.png",
+      "view_sha256": "0f0b3515f4c738efd27fa94e713ceac9f64e18fd1b4a7d4d90344c27b4300dcc",
+      "reference": {
+        "case_id": "R0481",
+        "view_sha256": "0f0b3515f4c738efd27fa94e713ceac9f64e18fd1b4a7d4d90344c27b4300dcc",
+        "eligibility": "eligible",
+        "eligibility_evidence": "Antenna towers and tree silhouettes appear against a blue evening sky with red warning lights.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 1.8,
+          "evidence": "Heavy grain and motion softness obscure tower edges and foliage, while the dark lower half contains very little detail.",
+          "limitations": []
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 2.4,
+          "evidence": "Blue twilight and small red lights create some atmosphere, but the indistinct foreground and tilted silhouette weaken the composition.",
+          "limitations": []
+        },
+        "review_started_at": "2026-11-01T11:57:13.074000+00:00",
+        "review_completed_at": "2026-11-01T11:57:28.295080+00:00",
+        "review_elapsed_seconds": 15.221058,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-10/R0481.json",
+        "review_timing_sha256": "fcaa34c8cd14e433060c18b1aae0f046ba1effc11c210ab61e9f7b78b5c8a5ed",
+        "review_completed_monotonic": 2210002.392675823,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 2.6,
+          "aesthetic_score": 3.2,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "Blue twilight and jagged silhouettes create a quiet mood, though the broad black foreground and soft framing weaken focus.",
+            "technical_quality": "The twilight skyline remains recognizable, but heavy grain, softness, and nearly detail-less shadows noticeably reduce fidelity."
+          }
+        },
+        "deepseek": {
+          "technical_score": 3.0,
+          "aesthetic_score": 3.3,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "Moody blue gradient and red antenna lights create atmosphere, but the large featureless black foreground weakens balance.",
+            "technical_quality": "Pervasive grain and soft edges in the dark foreground reduce fidelity, though the antenna and sky remain legible."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 2.8,
+          "aesthetic_score": 3.25,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 1.6992983898753753,
+          "aesthetic_score": 2.008303607609424,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 1.4573272168636322,
+          "aesthetic_score": 1.0702944546937943,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "heavy_noise_and_motion_softness",
+        "visible_observation": "Strong grain covers the blue sky, antenna lines are smeared, foliage edges show directional softness, and the lower scene is nearly featureless black.",
+        "assessment": "The reference poor technical rating is visibly supported. The teachers recognize grain and softness but remain around fair. Liquid and Lite respond much more strongly to the same defects; atmosphere may be credited separately in aesthetics."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 20.292011209114296,
+        "noise_sigma_percentile": 42.15365927725478,
+        "metrics": {
+          "sharpness_peak": 589.417,
+          "noise_sigma": 0.609079,
+          "highlight_clip": 0.0,
+          "shadow_clip": 0.0344887,
+          "channel_clip": 0.00583726
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": true,
+          "noisy": false
+        },
+        "any_flag": true,
+        "in_fixed_budget": false,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "45896294f63990b4a852956227f7a905db40c571461f7e73bda2e8c10515df92",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "1ea7dffb3fd543c61f475afc80d83abea1bbb85109e0e7cf578209c721711eda",
+          "attempt_id": "benchmark/baseline--R0481/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "a423fe5b0b849a6b36d9c05040b59435f204a273202c8563c03ad52765e3fdf0",
+          "attempt_id": "benchmark/baseline--R0481/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "c46cb76d18d88d7ee0ad508229b5b79df86f874e605df99242e8c9efba206aed",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0481/01",
+            "benchmark/baseline--R0481/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "a7a8df6944c7ed9e62c05e266ee754d99bb9db7fbe954465d1b58891736f7e65",
+          "attempt_id": "benchmark/baseline--R0481/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "df9aed06ed7aa801e6e2e863385f12ff273edc7d401eb5536509aded415399a7",
+          "attempt_id": "4945b60400b55da5cbd038c2fb7540fae396dddef01f4b51a53415230767a230",
+          "component_attempt_ids": null
+        }
+      }
+    },
+    {
+      "case_id": "R0490",
+      "panel": "challenge",
+      "technical_absolute_error": 0.9,
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/a856151a2a82e4a8ffe6d973a98d889d271871d700a1e839fe4f7f77d2e3501a.png",
+      "view_sha256": "a856151a2a82e4a8ffe6d973a98d889d271871d700a1e839fe4f7f77d2e3501a",
+      "reference": {
+        "case_id": "R0490",
+        "view_sha256": "a856151a2a82e4a8ffe6d973a98d889d271871d700a1e839fe4f7f77d2e3501a",
+        "eligibility": "eligible",
+        "eligibility_evidence": "A decorated ceramic jar casts a shadow on a display surface behind reflective glass.",
+        "technical_quality": {
+          "task": "technical_quality",
+          "status": "ok",
+          "score": 3.1,
+          "evidence": "The jar silhouette remains clear, but soft painted details and strong illumination on the lid reduce fine decorative definition.",
+          "limitations": []
+        },
+        "aesthetics": {
+          "task": "aesthetics",
+          "status": "ok",
+          "score": 3.7,
+          "evidence": "The centered rounded jar stands clearly against a dark backdrop, though glass reflections and a cropped bowl slightly distract.",
+          "limitations": []
+        },
+        "review_started_at": "2026-11-01T11:50:38.178245+00:00",
+        "review_completed_at": "2026-11-01T11:50:47.267979+00:00",
+        "review_elapsed_seconds": 9.089731,
+        "review_timing_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/references/timings/packet-07/R0490.json",
+        "review_timing_sha256": "a13d5a74011fc5aa7eb58d0736e1df11da4621a237ab12f802311c3851277acd",
+        "review_completed_monotonic": 2209601.36557806,
+        "review_timing_basis": "Image-open request preparation through structured assessment; includes tool overhead",
+        "latency_seconds": null,
+        "latency_kind": "not_applicable_assistant_review",
+        "price_usd": 0.0,
+        "price_basis": "user_assigned_zero"
+      },
+      "scores": {
+        "luna": {
+          "technical_score": 3.6,
+          "aesthetic_score": 3.5,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "The centered blue-and-white vessel is visually cohesive, though the cropped bowl and display-case reflections distract from its presentation.",
+            "technical_quality": "The vessel’s patterns remain legible, but softness, visible grain, dark lower decoration, and bright lid highlights reduce fidelity."
+          }
+        },
+        "deepseek": {
+          "technical_score": 4.4,
+          "aesthetic_score": 3.8,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": "Centered jar against a dark case with clean blue-and-white contrast, though the cropped bowl at lower left slightly distracts.",
+            "technical_quality": "Porcelain detail and edges are clearly resolved with good exposure; faint glass reflections and mild background noise are minor."
+          }
+        },
+        "luna_deepseek_mean": {
+          "technical_score": 4.0,
+          "aesthetic_score": 3.65,
+          "scope_floor_applied": false,
+          "evidence": null
+        },
+        "liquid": {
+          "technical_score": 3.892328059409639,
+          "aesthetic_score": 3.5220202744313025,
+          "scope_floor_applied": false,
+          "evidence": {
+            "aesthetics": null,
+            "technical_quality": null
+          }
+        },
+        "qrealign_lite": {
+          "technical_score": 4.004657506942749,
+          "aesthetic_score": 1.9608005285263062,
+          "scope_floor_applied": null,
+          "evidence": {}
+        }
+      },
+      "visual_review": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "soft_fine_decoration",
+        "visible_observation": "The jar silhouette is readable, but fine painted figures and floral edges remain soft across the body and lid. Bright lid illumination and glass reflections further reduce clarity.",
+        "assessment": "The reference defect interpretation is supported. DeepSeek at 4.40 describes detail as clearly resolved, while Luna at 3.60 explicitly notes softness; the mean retains much of DeepSeek's overrating."
+      },
+      "qc_context": {
+        "sharpness_peak_percentile": 10.54676191664587,
+        "noise_sigma_percentile": 67.21627774615823,
+        "metrics": {
+          "sharpness_peak": 289.484,
+          "noise_sigma": 0.977505,
+          "highlight_clip": 0.0199776,
+          "shadow_clip": 6.23067e-05,
+          "channel_clip": 0.0141335
+        },
+        "gate_value": null,
+        "review_flags": {
+          "gate": false,
+          "soft": true,
+          "noisy": false
+        },
+        "any_flag": true,
+        "in_fixed_budget": false,
+        "in_random_unflagged_audit": false
+      },
+      "reference_record_sha256": "dec957367301e4b52976c396a28b2aebd2fba59ee8c72a88a452664575aea335",
+      "source_score_records": {
+        "luna": {
+          "record_sha256": "fbb57004d94c9a52b6de7d8e125485c1d350cc488e3569982ee688d162044caf",
+          "attempt_id": "benchmark/baseline--R0490/01",
+          "component_attempt_ids": null
+        },
+        "deepseek": {
+          "record_sha256": "b8da0956036f483e573b871dbbbeb3c4c6888768b8a20004cd1e4a5b2b2bc6f6",
+          "attempt_id": "benchmark/baseline--R0490/01",
+          "component_attempt_ids": null
+        },
+        "luna_deepseek_mean": {
+          "record_sha256": "6b8bec57215502a4fbaeefde6039a9a9112f1bb1e80dfa0fff181ce75c47fc50",
+          "attempt_id": null,
+          "component_attempt_ids": [
+            "benchmark/baseline--R0490/01",
+            "benchmark/baseline--R0490/01"
+          ]
+        },
+        "liquid": {
+          "record_sha256": "5a6a895aa127ca74a06d49015d4835f0735ead6dca857ad9cd3cb209d8398f91",
+          "attempt_id": "benchmark/baseline--R0490/01",
+          "component_attempt_ids": null
+        },
+        "qrealign_lite": {
+          "record_sha256": "b421bb0a21fb8cdde753abef2c92a161a05fdd9f46c91e57b8c19d43823e09b2",
+          "attempt_id": "c0bb224c30966c906afa128a76a3017ef9eab73343b05a613430bfdd9c39f6e1",
+          "component_attempt_ids": null
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "These cases were selected because the ensemble disagreed most with the assistant reference; another model looking closer here is not evidence that it wins across the corpus.",
+    "Human judgments are needed for the physical-object versus reproduction boundary, and for numeric severity. The frozen primary analysis remains unchanged.",
+    "Jev recovery was still pending in this snapshot; Jev is intentionally absent from this diagnostic comparison.",
+    "No causal effect of a statistic is inferred from a posthoc association, and no new QC threshold is fitted."
+  ],
+  "initial_image_observations": {
+    "image_observations_completed_at": "2026-11-01T16:00:25.929865+00:00",
+    "stats_consulted": false,
+    "all_12_exact_originals_individually_opened": true,
+    "view_detail": "original",
+    "observations": {
+      "R0317": {
+        "interpretation": "ambiguous",
+        "confidence": "medium",
+        "failure_mode": "photography_scope_boundary",
+        "visible_observation": "The cyan graphic dominates a worn cardboard panel, but bent torn edges, creases, surface texture, a sticker and oblique lighting strongly establish a physical object. Surroundings are limited to dark margins.",
+        "assessment": "The frozen near-full-frame reproduction rule supports considering exclusion, while the physical-object exception supports eligibility. This 2.95-point gap should be human-adjudicated as a rubric boundary, not presented as a certain quality error."
+      },
+      "R0356": {
+        "interpretation": "ambiguous",
+        "confidence": "medium",
+        "failure_mode": "photography_scope_boundary",
+        "visible_observation": "The printed cartoon card occupies most of the image at a pronounced diagonal. Card edges, wood at left and reflected light at right establish photographic context; halftone dots are visibly resolved.",
+        "assessment": "Artwork dominates, supporting the reference interpretation under the reproduction clause, but the evident card and surrounding surfaces also support the photographed-object exception. The exact scope boundary needs human examples; print dots alone are not image noise."
+      },
+      "R0357": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "lost_detail_excused_as_abstraction",
+        "visible_observation": "A large clipped white region blends through an extremely soft warm boundary into near-black surroundings. Almost no identifiable scene detail survives; small dark structures at the top provide little usable content.",
+        "assessment": "The severe technical loss described by the reference is visible. Calling the glow abstract does not establish good technical fidelity; Liquid and Lite give substantially lower technical scores. Aesthetic response to the diagonal is more subjective."
+      },
+      "R0302": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "false_photography_scope_floor",
+        "visible_observation": "Large letters protrude from a wall and cast clear offset shadows. The red star has distinct three-dimensional facets, while the central paragraphs are soft and unevenly illuminated.",
+        "assessment": "The physical relief and lighting support photographic eligibility. Both teachers call this flat graphic content and floor both scores, losing the distinction between a flat reproduction and a dimensional display."
+      },
+      "R0206": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "processing_damage_despite_sharp_edges",
+        "visible_observation": "The flower edges are crisply delineated, but petal highlights are near-white, large stem areas collapse to black, and vivid red-blue edge transitions look harsh across the main subject.",
+        "assessment": "The reference describes visible tonal and color-detail damage. Recognizable anthers and crisp outlines do not make those defects minor. All four compared native scorers still give technical scores near good, making this a useful review case beyond blur."
+      },
+      "R0260": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "broad_subject_softness",
+        "visible_observation": "The locomotive number and silhouette are readable, but handrails, wheels, machinery and track textures are broadly soft, with subdued contrast across the scene.",
+        "assessment": "The reference technical downgrade is supported. Both teachers acknowledge softness yet retain 3.50 or 4.00, apparently weighting recognition more than the missing mechanical detail. Liquid is closer to the lower reference."
+      },
+      "R0200": {
+        "interpretation": "supported",
+        "confidence": "medium",
+        "failure_mode": "main_subject_softness_and_darkness",
+        "visible_observation": "The central pilot face behind the window is dark and soft, with weak eye and facial detail. Some rivets and aircraft boundaries remain more defined, while reflections obscure the lower portrait.",
+        "assessment": "The reference identifies a visible limitation in the same pilot focal region named by both teachers. Cleaner aircraft surfaces do not fully offset that loss. Exact severity remains a judgment, but a nearly good score understates the subject-level defect."
+      },
+      "R0109": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "sharp_background_soft_main_subject",
+        "visible_observation": "Tree bark and stone carry visible texture, but the foreground bird head and feathers are blurred; the person behind is also soft. The whole image is sideways.",
+        "assessment": "The reference technical concern is supported by the main bird and person, independently of the compositional rotation. Whole-frame texture can conceal the focus error if the grader emphasizes the sharp tree."
+      },
+      "R0463": {
+        "interpretation": "supported",
+        "confidence": "medium",
+        "failure_mode": "near_full_frame_interface_scope",
+        "visible_observation": "The Windows login interface dominates a tilted photographed display. Moire and blur affect the lettering; only the bezel and a power light add physical context, with no surrounding scene.",
+        "assessment": "The frozen near-full-frame interface interpretation supports the reference floor. Both teachers instead rate the photographed screen as eligible. Its visible bezel should remain a human boundary-calibration example, rather than assuming every screen photograph is excluded."
+      },
+      "R0444": {
+        "interpretation": "supported",
+        "confidence": "medium",
+        "failure_mode": "soft_detail_and_shadow_loss",
+        "visible_observation": "Large locomotive lettering is legible, but smaller mechanical boundaries and wheel detail are soft and dark. Specks cross the sky and the corners darken visibly.",
+        "assessment": "The defects named by the reference are visible. DeepSeek calling the trucks clearly resolved overstates fine-detail preservation. The exact fair-versus-good boundary is subjective; this review supports the defect interpretation, not the precise 3.00 value."
+      },
+      "R0481": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "heavy_noise_and_motion_softness",
+        "visible_observation": "Strong grain covers the blue sky, antenna lines are smeared, foliage edges show directional softness, and the lower scene is nearly featureless black.",
+        "assessment": "The reference poor technical rating is visibly supported. The teachers recognize grain and softness but remain around fair. Liquid and Lite respond much more strongly to the same defects; atmosphere may be credited separately in aesthetics."
+      },
+      "R0490": {
+        "interpretation": "supported",
+        "confidence": "high",
+        "failure_mode": "soft_fine_decoration",
+        "visible_observation": "The jar silhouette is readable, but fine painted figures and floral edges remain soft across the body and lid. Bright lid illumination and glass reflections further reduce clarity.",
+        "assessment": "The reference defect interpretation is supported. DeepSeek at 4.40 describes detail as clearly resolved, while Luna at 3.60 explicitly notes softness; the mean retains much of DeepSeek's overrating."
+      }
+    }
+  }
+}

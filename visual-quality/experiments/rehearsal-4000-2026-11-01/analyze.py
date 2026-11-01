@@ -153,7 +153,9 @@ def normalize_attempt(case: dict, attempt: dict) -> dict:
             row[key] = attempt[key]
     row["latency_kind"] = (
         "http_request_through_complete_response"
-        if attempt.get("response_received_at")
+        if (attempt.get("response_received_at") and type(attempt.get("http_status")) is int
+            and 100 <= attempt["http_status"] <= 599 and not attempt.get("transport_error")
+            and attempt.get("status") != "unknown")
         else "incomplete_or_unmeasured_http_attempt"
     )
     task_keys = ("quality", "aesthetics") if attempt["model"] == "qrealign_lite" else api_contract.TASKS
@@ -388,10 +390,23 @@ def operational(rows: list[dict], attempts: list[dict]) -> dict:
     }
 
 
-def load_attempts(data: Path, manifest_path: Path, cases: list[dict]) -> tuple[list[dict], dict]:
+def load_attempts(
+    data: Path, manifest_path: Path, cases: list[dict], *,
+    postpass_allowlist: Path | None = None, postpass_allowlist_sha256: str | None = None,
+) -> tuple[list[dict], dict]:
     if data.resolve() != DATA.resolve():
         raise ValueError("API journal reconstruction requires its frozen absolute data root")
     attempts, inputs = [], {}
+    if bool(postpass_allowlist) != bool(postpass_allowlist_sha256):
+        raise ValueError("Postpass reconstruction requires both allowlist path and its externally pinned SHA256")
+    postpass, approval = None, None
+    if postpass_allowlist:
+        import postpass_recovery as postpass
+
+        approval = postpass.read_allowlist(postpass_allowlist, postpass_allowlist_sha256)
+        inputs[str(postpass_allowlist.resolve())] = postpass_allowlist_sha256
+        inputs.update(approval["helper_sha256"])
+        inputs[approval["policy_path"]] = approval["policy_sha256"]
     for model in api_runner.ROUTES:
         for phase in api_runner.PHASES:
             path = data / "results/api" / model / phase / "plan.json"
@@ -407,9 +422,11 @@ def load_attempts(data: Path, manifest_path: Path, cases: list[dict]) -> tuple[l
             plan = api_runner.read(path)
             api_runner.validate_plan(plan, check_payloads=True)
             inputs[str(path)] = api_contract.file_sha(path)
-            attempts.extend(
-                {**row, "admission_time": plan["created_at"]} for row in api_runner.reconstruct(plan)
-            )
+            records = postpass.reconstruct(plan, approval) if postpass else api_runner.reconstruct(plan)
+            attempts.extend({**row, "admission_time": plan["created_at"]} for row in records)
+    if postpass:
+        for path in postpass.root().glob("*/attempt-metadata/**/admission.json"):
+            inputs[str(path.resolve())] = api_contract.file_sha(path)
     by_id = {case["case_id"]: case for case in cases}
     for path in sorted((data / "results/lite").glob("**/attempts/*.json")):
         run_path = path.parent.parent / "run.json"
@@ -487,6 +504,8 @@ def main() -> None:
     parser.add_argument("--stats-percentiles", type=Path, default=HERE / "stats-percentiles.jsonl")
     parser.add_argument("--stats-reference", type=Path, default=HERE / "stats-reference.json")
     parser.add_argument("--bootstrap-repeats", type=int, default=10000)
+    parser.add_argument("--postpass-allowlist", type=Path)
+    parser.add_argument("--postpass-allowlist-sha256")
     args = parser.parse_args()
     manifest = api_runner.read(args.manifest)
     pins = api_runner.frozen_references(args.manifest, manifest, args.reference_freeze)
@@ -499,7 +518,10 @@ def main() -> None:
     for case in cases:
         if api_contract.file_sha(case["image_path"]) != case["view_sha256"]:
             raise ValueError("Delivered image changed")
-    attempts, journal_pins = load_attempts(DATA, args.manifest, cases)
+    attempts, journal_pins = load_attempts(
+        DATA, args.manifest, cases,
+        postpass_allowlist=args.postpass_allowlist, postpass_allowlist_sha256=args.postpass_allowlist_sha256,
+    )
     rows = build_long(cases, attempts, references, frozen_at=freeze["frozen_at"])
     expected = len(slots(cases)) + len(references) + len(cases) + 2 * len(references)
     if len(rows) != expected:

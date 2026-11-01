@@ -1,0 +1,69 @@
+{
+  "schema": "rehearsal-postpass-policy-v1",
+  "created_at": "2026-11-01T14:31:43.708495+00:00",
+  "amendment": "User-authorized operational amendment after initial pass began; not a preregistered retry policy.",
+  "authorization_scope": "After every one of the 18000 original API jobs has an initial attempt and every initial service has stopped: only original exact Jev image-processing HTTP503 failures may receive up to two additional attempts; the original 21 audited interrupted requests may each receive one additional attempt.",
+  "expected_initial_jobs": {
+    "deepseek": {
+      "rehearsal": 3500,
+      "benchmark": 1500
+    },
+    "luna": {
+      "rehearsal": 3500,
+      "benchmark": 1500
+    },
+    "jev": {
+      "rehearsal": 3500,
+      "benchmark": 500
+    },
+    "liquid": {
+      "rehearsal": 3500,
+      "benchmark": 500
+    }
+  },
+  "route_budgets_usd": {
+    "deepseek": "30.00",
+    "luna": "30.00",
+    "jev": "15.00",
+    "liquid": "15.00"
+  },
+  "maximum_additional_attempts": {
+    "exact_jev_image_processing_503": 2,
+    "audited_client_interruption": 1
+  },
+  "effective_concurrency": 1,
+  "global_serial_recovery": true,
+  "deterministic_order": [
+    "case_id",
+    "phase",
+    "job_id",
+    "sequence"
+  ],
+  "circuit_breaker": {
+    "maximum_consecutive_failures": 5,
+    "rolling_window_requests": 100,
+    "maximum_failures_in_window": 20,
+    "error_class": "exact_jev_image_processing_503"
+  },
+  "circuit_observations": "All observed HTTP responses per route, including frozen initial history; interrupted journals with no observed HTTP status are excluded. Breakers persist across segments and routes cannot dilute each other.",
+  "new_errors_stop_all_recovery": true,
+  "invalid_or_partial_recovery_response": "Retain once and never replay; continue independent jobs when billing is known and the original runner fatal check is false.",
+  "deepseek_billed_no_answer_exhaustions": "Retain missing with actual billed cost; never retry.",
+  "completed_response_replay": false,
+  "interruption_followed_by_503": "Consumes its only additional attempt; does not acquire the two-attempt Jev allowance.",
+  "interruption_audit_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/api-client-interruption-audit.json",
+  "interruption_audit_sha256": "95e0cfd7076e4faa259bb85fca00f047e1f06d5be27daf9c82e30505d41e955b",
+  "interruption_counts": {
+    "luna": 16,
+    "liquid": 4,
+    "jev": 1
+  },
+  "immutable_allowlist": "Created only after all initial gates pass; binds original phase plan IDs and hashes, all original request/response receipts and status snapshot, exact source history, sequence limits, policy hash, and current helper source hashes. Run requires its separately recorded SHA256.",
+  "liability": "Every attempt in both original phases remains counted. Known bills retain actual per-attempt prices. Every unknown bill reserves the full frozen context/output amount. Admit one additional attempt only if existing liability plus its full reserve stays within the original shared route cap.",
+  "frozen_contract": "Same image, payload, prompt, route, exact model and runtime; original journals and summaries remain unchanged.",
+  "selection": "Receipt error classes alone determine eligibility. No favorable score, label, category, source or partition selection.",
+  "service_gate": "Require every initial user unit inactive or failed, MainPID 0, no surviving processes in any present unit cgroup, and exclusive ownership of all four original route locks.",
+  "lite_gate": "Independent Lite work is not part of the 18000 API-job completion gate.",
+  "crash_before_request_journal": "An admission metadata file without a request journal requires audit; do not overwrite or silently reuse it.",
+  "training_ready": false
+}

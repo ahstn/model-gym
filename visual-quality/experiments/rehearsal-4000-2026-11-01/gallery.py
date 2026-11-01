@@ -151,10 +151,19 @@ def main():
     (GALLERY / "data.js").write_text("const CASES=" + json.dumps(data, ensure_ascii=False) + ";\n")
     (GALLERY / "style.css").write_text(STYLE)
     selected = choose_pages(data)
+    frozen_selection = HERE / "collage-selection.json"
+    if frozen_selection.exists():
+        frozen = json.loads(frozen_selection.read_text())
+        if (
+            frozen["case_ids"] != [case["id"] for case in selected]
+            or frozen["references_sha256"] != digest(HERE / "references.jsonl")
+        ):
+            raise ValueError("Collage selection differs from the saved reference-only selection")
     selection = {
         "method": "72 equally spaced ranks in reference technical score, case ID breaks ties; no student scores",
         "case_ids": [case["id"] for case in selected],
         "references_sha256": digest(HERE / "references.jsonl"),
+        "frozen_selection_sha256": digest(frozen_selection) if frozen_selection.exists() else None,
     }
     (GALLERY / "selection.json").write_text(json.dumps(selection, indent=2) + "\n")
     for page in range(4):
@@ -164,7 +173,7 @@ def main():
             + title
             + '</title><link rel="stylesheet" href="style.css"></head><body><header><h1>'
             + title
-            + "</h1><p>Baseline scores · Reference = assistant assessment · HTTP end-to-end seconds</p>"
+            + "</h1><p>Baseline scores · Reference = assistant assessment · Seconds and price describe the selected attempt; all-attempt costs are in the report.</p>"
             + "<p>Lite and Reference prices are assigned $0.00; Runpod infrastructure is accounted separately. "
             + "Mean and Reference have no HTTP latency. Lite uses native scores without a scope gate.</p></header><main>"
             + "".join(static_card(case) for case in selected[page * 18 : (page + 1) * 18])
@@ -177,7 +186,7 @@ def main():
 <link rel="stylesheet" href="style.css"></head><body><header><h1>4,000-image scoring rehearsal</h1>
 <p>Five scorers · separate technical and aesthetic scores · 500 independent assistant references</p>
 <p><a href="../scores-long.csv">Full score export</a> · <a href="../report.md">Evaluation report</a></p>
-<p>Seconds measure HTTP request/response time. Reference has no API latency; Lite and Reference prices are assigned $0.00.
+<p>Seconds and price describe the selected attempt; total attempt costs and unknown bills remain in the CSV/report. Seconds measure HTTP request/response time. Reference has no API latency; Lite and Reference prices are assigned $0.00.
 The mean has no independent request or charge. Raw Lite has no scope gate. Prices retain six decimal places.</p>
 <nav><select id="partition"><option value="benchmark">500 reference benchmark</option><option value="all">All 4,000</option>
 <option value="representative">Representative evaluation</option><option value="challenge">Challenge evaluation</option>

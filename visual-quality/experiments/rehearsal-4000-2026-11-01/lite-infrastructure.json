@@ -1,0 +1,357 @@
+{
+  "recorded_at": "2026-11-01T16:12:27.976Z",
+  "status": "all trial pods stopped; latest posted billing refreshed; provider settlement unconfirmed",
+  "reported_model_price_usd": "0.00",
+  "model_price_basis": "user_assigned_zero",
+  "infrastructure_total_usd": null,
+  "known_posted_subtotal_usd": "1.296156664378941096",
+  "posted_subtotal_status": "latest provisional provider receipts now include all three active-pod hour buckets; provider supplied no explicit settlement confirmation",
+  "quoted_compute_estimate_usd": "1.368519130555555555555555555",
+  "quoted_compute_estimate_basis": "Exact pod startedAt through one-second-resolution stop audit, multiplied by quoted $0.89/hour; excludes storage; not a settled charge",
+  "hourly_quote_usd": "0.89",
+  "active_pod": {
+    "id": "gm21jcse3yohgp",
+    "status": "EXITED",
+    "started_at": "2026-11-01T13:46:11.489Z",
+    "stopped_at": "2026-11-01T15:16:43Z",
+    "interval_seconds": "5431.511",
+    "data_center": "EU-RO-1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_memory_gb": 24,
+    "host_cuda_version": "13.2",
+    "runtime_torch": "2.8.0+cu128",
+    "posted_subtotal_usd": "1.2702865889295936",
+    "status_verified_at": "2026-11-01T16:12:27.976Z"
+  },
+  "startup_only_pod": {
+    "id": "1e4rvgw2q4hkci",
+    "status": "EXITED",
+    "started_at": "2026-11-01T13:42:39.928Z",
+    "stopped_at": "2026-11-01T13:44:24Z",
+    "interval_seconds": "104.072",
+    "scoring_requests": 0,
+    "posted_subtotal_usd": "0.025870075449347496",
+    "status_verified_at": "2026-11-01T16:12:27.976Z"
+  },
+  "original_pod": {
+    "id": "j8qvat8tmzyhgr",
+    "status": "EXITED",
+    "resume_result": "HTTP400 host capacity unavailable; no new compute session",
+    "status_verified_at": "2026-11-01T16:12:27.976Z"
+  },
+  "billing_receipts": {
+    "queried_at": "2026-11-01T16:12:27.976Z",
+    "active": {
+      "metadata": {
+        "query": {
+          "bucketSize": "hour",
+          "endTime": "2026-11-01T17:00:00Z",
+          "podId": "gm21jcse3yohgp",
+          "startTime": "2026-11-01T13:00:00Z"
+        },
+        "recordCount": 3,
+        "totals": {
+          "cpuAmount": 0,
+          "diskAmount": 0.008333334233611822,
+          "gpuAmount": 1.2619532546959817,
+          "totalAmount": 1.2702865889295936
+        },
+        "uniquePodCount": 1
+      },
+      "records": [
+        {
+          "cpuAmount": 0,
+          "diskAmount": 0.0013888890389353037,
+          "endTime": "2026-11-01T14:00:00Z",
+          "gpuAmount": 0.1493558487854898,
+          "podId": "gm21jcse3yohgp",
+          "startTime": "2026-11-01T13:00:00Z",
+          "totalAmount": 0.1507447378244251
+        },
+        {
+          "cpuAmount": 0,
+          "diskAmount": 0.005555556155741215,
+          "endTime": "2026-11-01T15:00:00Z",
+          "gpuAmount": 0.8907330110669136,
+          "podId": "gm21jcse3yohgp",
+          "startTime": "2026-11-01T14:00:00Z",
+          "totalAmount": 0.8962885672226548
+        },
+        {
+          "cpuAmount": 0,
+          "diskAmount": 0.0013888890389353037,
+          "endTime": "2026-11-01T16:00:00Z",
+          "gpuAmount": 0.22186439484357834,
+          "podId": "gm21jcse3yohgp",
+          "startTime": "2026-11-01T15:00:00Z",
+          "totalAmount": 0.22325328388251364
+        }
+      ]
+    },
+    "startup": {
+      "metadata": {
+        "query": {
+          "bucketSize": "hour",
+          "endTime": "2026-11-01T17:00:00Z",
+          "podId": "1e4rvgw2q4hkci",
+          "startTime": "2026-11-01T13:00:00Z"
+        },
+        "recordCount": 1,
+        "totals": {
+          "cpuAmount": 0,
+          "diskAmount": 0,
+          "gpuAmount": 0.025870075449347496,
+          "totalAmount": 0.025870075449347496
+        },
+        "uniquePodCount": 1
+      },
+      "records": [
+        {
+          "cpuAmount": 0,
+          "diskAmount": 0,
+          "endTime": "2026-11-01T14:00:00Z",
+          "gpuAmount": 0.025870075449347496,
+          "podId": "1e4rvgw2q4hkci",
+          "startTime": "2026-11-01T13:00:00Z",
+          "totalAmount": 0.025870075449347496
+        }
+      ]
+    },
+    "receipt_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/lite-billing-refresh-2026-11-01T16-12-27-976Z.json",
+    "receipt_sha256": "c87732a161ed02aa7fec5ddfef7649ab51afd73a033b12f36de6e34b568d0cbb",
+    "provider_settlement_explicitly_confirmed": false
+  },
+  "audit_events": [
+    {
+      "action": "stop",
+      "resource_id": "gm21jcse3yohgp",
+      "timestamp": "2026-11-01T15:16:43Z"
+    },
+    {
+      "action": "create",
+      "resource_id": "gm21jcse3yohgp",
+      "timestamp": "2026-11-01T13:46:11Z"
+    }
+  ],
+  "validation_artifact": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/lite-completion-validation.json",
+  "validation_sha256": "87f7ab6ce1ed747349a8393f25651852ae70487b28337dc1e291b04ce44b10b8",
+  "startup_control_validation": {
+    "status": "passed",
+    "identity_exact_match_to_prior": true,
+    "controls": [
+      {
+        "case_id": "T0231",
+        "status": "valid",
+        "score_differences_from_prior": {
+          "quality": 0.0,
+          "aesthetics": 0.0
+        },
+        "latency_seconds": 4.450315251946449,
+        "server_seconds": 0.39,
+        "peak_vram_bytes": 11282718720
+      },
+      {
+        "case_id": "T0984",
+        "status": "valid",
+        "score_differences_from_prior": {
+          "quality": 0.0,
+          "aesthetics": 0.0
+        },
+        "latency_seconds": 3.5192616968415678,
+        "server_seconds": 1.701,
+        "peak_vram_bytes": 11282718720
+      }
+    ],
+    "counts_toward_4000": false,
+    "score_tolerance": 1e-05,
+    "server_source_sha256": "aaab73e53225093d30e1fbe800425c3b9754d7a5547013f735de8f358a408dbb"
+  },
+  "startup_runtime": {
+    "pod_id": "gm21jcse3yohgp",
+    "selected_operational_lines": [
+      {
+        "source": "system",
+        "line": "create container runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+        "ts": "2026-11-01T13:46:16Z"
+      },
+      {
+        "source": "system",
+        "line": "start container for runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404: begin",
+        "ts": "2026-11-01T13:46:18Z"
+      },
+      {
+        "source": "container",
+        "line": "Successfully installed accelerate-1.15.0 annotated-doc-0.0.5 click-8.5.0 hf-xet-1.8.0 huggingface-hub-1.33.0 markdown-it-py-4.2.0 mdurl-0.1.2 regex-2026.9.29 rich-15.0.0 safetensors-0.8.0 shellingham-1.5.4 tokenizers-0.22.2 tqdm-4.70.1 transformers-5.2.0 typer-0.27.3 typer-slim-0.24.0",
+        "ts": "2026-11-01T13:46:26.518832028Z"
+      },
+      {
+        "source": "container",
+        "line": "The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d",
+        "ts": "2026-11-01T13:46:45.468222049Z"
+      },
+      {
+        "source": "container",
+        "line": "MODEL_READY",
+        "ts": "2026-11-01T13:46:47.213829509Z"
+      }
+    ],
+    "container_create_to_model_ready_seconds": 31.213829509,
+    "pod_started_to_model_ready_seconds": 35.724829509,
+    "attention": "unchanged PyTorch fallback; optional fast kernels absent"
+  },
+  "billing_receipt_history": [
+    {
+      "queried_at": "2026-11-01T15:17:49Z",
+      "active": {
+        "metadata": {
+          "query": {
+            "bucketSize": "hour",
+            "endTime": "2026-11-01T16:00:00Z",
+            "podId": "gm21jcse3yohgp",
+            "startTime": "2026-11-01T13:00:00Z"
+          },
+          "recordCount": 2,
+          "totals": {
+            "cpuAmount": 0,
+            "diskAmount": 0.003240741090849042,
+            "gpuAmount": 0.4460015050135553,
+            "totalAmount": 0.44924224610440433
+          },
+          "uniquePodCount": 1
+        },
+        "records": [
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0.0013888890389353037,
+            "endTime": "2026-11-01T14:00:00Z",
+            "gpuAmount": 0.1493558487854898,
+            "podId": "gm21jcse3yohgp",
+            "startTime": "2026-11-01T13:00:00Z",
+            "totalAmount": 0.1507447378244251
+          },
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0.0018518520519137383,
+            "endTime": "2026-11-01T15:00:00Z",
+            "gpuAmount": 0.2966456562280655,
+            "podId": "gm21jcse3yohgp",
+            "startTime": "2026-11-01T14:00:00Z",
+            "totalAmount": 0.29849750827997923
+          }
+        ]
+      },
+      "startup": {
+        "metadata": {
+          "query": {
+            "bucketSize": "hour",
+            "endTime": "2026-11-01T16:00:00Z",
+            "podId": "1e4rvgw2q4hkci",
+            "startTime": "2026-11-01T13:00:00Z"
+          },
+          "recordCount": 1,
+          "totals": {
+            "cpuAmount": 0,
+            "diskAmount": 0,
+            "gpuAmount": 0.025870075449347496,
+            "totalAmount": 0.025870075449347496
+          },
+          "uniquePodCount": 1
+        },
+        "records": [
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0,
+            "endTime": "2026-11-01T14:00:00Z",
+            "gpuAmount": 0.025870075449347496,
+            "podId": "1e4rvgw2q4hkci",
+            "startTime": "2026-11-01T13:00:00Z",
+            "totalAmount": 0.025870075449347496
+          }
+        ]
+      }
+    },
+    {
+      "queried_at": "2026-11-01T16:12:27.976Z",
+      "active": {
+        "metadata": {
+          "query": {
+            "bucketSize": "hour",
+            "endTime": "2026-11-01T17:00:00Z",
+            "podId": "gm21jcse3yohgp",
+            "startTime": "2026-11-01T13:00:00Z"
+          },
+          "recordCount": 3,
+          "totals": {
+            "cpuAmount": 0,
+            "diskAmount": 0.008333334233611822,
+            "gpuAmount": 1.2619532546959817,
+            "totalAmount": 1.2702865889295936
+          },
+          "uniquePodCount": 1
+        },
+        "records": [
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0.0013888890389353037,
+            "endTime": "2026-11-01T14:00:00Z",
+            "gpuAmount": 0.1493558487854898,
+            "podId": "gm21jcse3yohgp",
+            "startTime": "2026-11-01T13:00:00Z",
+            "totalAmount": 0.1507447378244251
+          },
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0.005555556155741215,
+            "endTime": "2026-11-01T15:00:00Z",
+            "gpuAmount": 0.8907330110669136,
+            "podId": "gm21jcse3yohgp",
+            "startTime": "2026-11-01T14:00:00Z",
+            "totalAmount": 0.8962885672226548
+          },
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0.0013888890389353037,
+            "endTime": "2026-11-01T16:00:00Z",
+            "gpuAmount": 0.22186439484357834,
+            "podId": "gm21jcse3yohgp",
+            "startTime": "2026-11-01T15:00:00Z",
+            "totalAmount": 0.22325328388251364
+          }
+        ]
+      },
+      "startup": {
+        "metadata": {
+          "query": {
+            "bucketSize": "hour",
+            "endTime": "2026-11-01T17:00:00Z",
+            "podId": "1e4rvgw2q4hkci",
+            "startTime": "2026-11-01T13:00:00Z"
+          },
+          "recordCount": 1,
+          "totals": {
+            "cpuAmount": 0,
+            "diskAmount": 0,
+            "gpuAmount": 0.025870075449347496,
+            "totalAmount": 0.025870075449347496
+          },
+          "uniquePodCount": 1
+        },
+        "records": [
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0,
+            "endTime": "2026-11-01T14:00:00Z",
+            "gpuAmount": 0.025870075449347496,
+            "podId": "1e4rvgw2q4hkci",
+            "startTime": "2026-11-01T13:00:00Z",
+            "totalAmount": 0.025870075449347496
+          }
+        ]
+      },
+      "receipt_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/lite-billing-refresh-2026-11-01T16-12-27-976Z.json",
+      "receipt_sha256": "c87732a161ed02aa7fec5ddfef7649ab51afd73a033b12f36de6e34b568d0cbb",
+      "provider_settlement_explicitly_confirmed": false
+    }
+  ],
+  "initially_recorded_at": "2026-11-01T15:19:04.769433+00:00"
+}

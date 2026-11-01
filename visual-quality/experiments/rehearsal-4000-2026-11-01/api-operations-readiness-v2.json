@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-11-01T15:55:42.570814+00:00",
+  "scope": "Later procedural operational/analysis amendments; frozen API scoring runner, plans, prompts and schemas unchanged.",
+  "tests": {
+    "passed": 227,
+    "suites": [
+      "operations",
+      "circuit_reset",
+      "postpass_analysis",
+      "postpass",
+      "analysis",
+      "api",
+      "interruption",
+      "deepseek_recovery",
+      "jev_recovery",
+      "route_driver",
+      "protected_review",
+      "first_pass_availability",
+      "serial_postpass_orchestration"
+    ]
+  },
+  "source_sha256": {
+    "analyze.py": "7ecbbe8b8b529b1bbc2366ca3169746fff998c02776b135cea4b5129bf3c0c59",
+    "api_operations_summary.py": "df9ad65b529b07ecb8a2e74e72b9920a570021146800eca34cfe51e8b65a9ae6",
+    "test_api_operations_summary.py": "22f2031df437c7052e6ccdb32ad26546298654143423372a7faea9cb709c410b",
+    "postpass_recovery.py": "e9ceac4166e157db49c6caa10ced4586bc77aca46d543180eb38a32851f11739",
+    "test_postpass_recovery.py": "c3e6eb7905799f046339ae859f0f4ca7500e67562332ce23e55d550476dbf7fc",
+    "test_postpass_analysis_integration.py": "9f82cdd6ad85e9d6f7faac31d684866390320b3b05f9b099dc4bff6f705891a8",
+    "jev_circuit_reset.py": "8af98a72db154cb44eb9b4880236b6d05966bc713bb72378f37e2a74165711ea",
+    "test_jev_circuit_reset.py": "ecf390ac14f003f509fcdf379127c7e4856df143af884028089ee70715209e5f",
+    "jev_availability.py": "c5ec2a7a2d6bd1053329c7a30c10ca2d247d6e122e291046fcb98a6d0fb7ee77",
+    "test_jev_availability.py": "8a59dca2e9d1ead413faf2ce35ed9e6f274470da9b8cec20286b98840a723c89",
+    "test_analysis.py": "48b9464f10281d14e650c48c4b2909fbdb8605c8e3e488bfd89444be06c8ab26",
+    "postpass_pilot_driver.py": "c6c3257ffdaa713d15f44d32c8e7ecf70d29f915999087601f6f14a2ca1b25b7",
+    "test_postpass_pilot_driver.py": "3b3a9d61a855161fbc3ac2934adfe386de2926b3b4187ac05d46f0ecf21c9d4e"
+  },
+  "lint": "All unfrozen API analysis/postpass helpers and tests pass Ruff. Frozen jev_circuit_reset.py has two harmless unused-local RUF059 warnings at202,279 retained to preserve controls; targeted Ruff ignoring onlyRUF059 passes.",
+  "production_readonly_audit": "Existing Jev circuit controls and all owned/historical receipts passed audit before further dispatch.",
+  "postpass_allowlist_prepared": true,
+  "previous_readiness_sha256": "7e96017ec39a127d55faa8c76e42233fc35fe2623bcfe91fcc409b9f4a910be8",
+  "postpass_allowlist_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/results/api/postpass/allowlist.json",
+  "postpass_allowlist_sha256": "6c9ad4dfa616aeec35222c83f7341f01d4ed0d81a3615f7b07249583da6299b9"
+}

@@ -1,0 +1,15 @@
+# Saved data and reproduction
+
+The report, CSV, 4,000 gallery previews and four comparison PNGs are repository artifacts. The full delivered image views remain locally under `/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/`; their exact SHA256 values are in `manifest.json`. Gallery previews preserve framing but reduce detail and are not replacements for those delivered views when repeating inference.
+
+A durable viewing copy of this experiment is saved under `/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/published/`. Its relative report/gallery links work together; original-image links target the local delivered views. The Git branch is `codex/rehearsal-4000-2026-11-01`.
+
+Execution contracts retain the original worktree path, `/tmp/model-gym-rehearsal-20261101`, and the original data root intentionally. They reject changed images, configurations and undeclared replays. The durable viewing copy is an artifact mirror, not a relocated execution environment. Reconstruct the checkout at the recorded location for strict replay on this machine. Cross-machine reproduction requires restoring the exact image files and deliberately adapting path bindings; copying only the previews is insufficient.
+
+`execution-records/index.json` lists seven deterministic archives: the four API routes, shared postpass recovery, Lite results and Lite operations. It records every included source path, file size and SHA256, each archive hash, and excluded transient lock/PID files. Source JSON timestamps and receipt bytes are unchanged. The shared recovery archive includes the original allowlist, initial complete snapshot, final benchmark snapshot and admission evidence. Unpriced attempts remain unknown rather than being assigned zero.
+
+Extract archives only into a fresh staging directory when inspecting them. The original data roots are retained in the index for provenance; do not overwrite the existing journals during review. Archive membership and credential checks are documented in the index. Full image views are not embedded in these receipt archives.
+
+`api-runbook.md`, `postpass-recovery-runbook.md`, `lite-protocol.md`, `corpus-runbook.md` and `analysis-runbook.md` describe the exact procedures and environment dependencies. Later availability changes are explicitly recorded operational amendments; they do not replace the original scoring prompts, per-image attempt limits or earlier receipts. The final operational audit reconciles every post-amendment admission with its dispatch segment and budget reservation.
+
+The score export contains 27,500 rows: 22,000 model/image/arm slots, 500 reference rows and 5,000 derived means. A valid structured response may still contain a nullable task, so use task-validity and numerical-score fields when selecting labels. The fixed benchmark contains 100 development, 300 representative and 100 challenge cases. All related distortion views stay within their source family, and no label is automatically approved for training.
