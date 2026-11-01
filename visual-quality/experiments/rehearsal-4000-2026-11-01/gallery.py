@@ -35,6 +35,18 @@ table{border-collapse:collapse;width:calc(100% - 16px);margin:4px 8px 8px;font-s
 .source{font-size:10px;padding:0 12px 9px;color:#71889b}.source a{color:#456b8b}.empty{color:#8999a7}.money{font-size:10px}footer{padding:0 24px 20px;font-size:12px;color:#53697c}
 details{padding:0 12px 10px;font-size:11px;color:#53697c}summary{cursor:pointer}details p{font-size:11px;line-height:1.4}details b{color:#172d40}
 @media(max-width:1000px){main{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){main{grid-template-columns:1fr}}@media print{nav{display:none}.card{break-inside:avoid}}
+@media screen and (min-width:1200px){
+  body.adaptive-gallery header{padding:16px 20px 12px}
+  body.adaptive-gallery nav{gap:8px;margin-top:10px}
+  body.adaptive-gallery main{grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:10px;padding:0 16px 20px}
+  body.adaptive-gallery .caption{padding:6px 10px}
+  body.adaptive-gallery .photo{height:205px}
+  body.adaptive-gallery table{margin-top:3px;margin-bottom:6px}
+  body.adaptive-gallery td{padding:2px 3px}
+  body.adaptive-gallery .source{font-size:11px;padding:0 10px 6px}
+  body.adaptive-gallery .money{font-size:11px}
+  body.adaptive-gallery details{padding:0 10px 8px}
+}
 """
 
 
@@ -182,8 +194,8 @@ def main():
         )
         (GALLERY / f"comparison-page-{page + 1}.html").write_text(document)
     models = json.dumps(MODELS)
-    document = """<!doctype html><html><head><meta charset="utf-8"><title>4,000-image scoring rehearsal</title>
-<link rel="stylesheet" href="style.css"></head><body><header><h1>4,000-image scoring rehearsal</h1>
+    document = """<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>4,000-image scoring rehearsal</title>
+<link rel="stylesheet" href="style.css?v=responsive-1"></head><body class="adaptive-gallery"><header><h1>4,000-image scoring rehearsal</h1>
 <p>Five scorers · separate technical and aesthetic scores · 500 independent assistant references</p>
 <p><a href="../scores-long.csv">Full score export</a> · <a href="../report.md">Evaluation report</a></p>
 <p>Seconds and price describe the selected attempt; total attempt costs and unknown bills remain in the CSV/report. Seconds measure HTTP request/response time. Reference has no API latency; Lite and Reference prices are assigned $0.00.
