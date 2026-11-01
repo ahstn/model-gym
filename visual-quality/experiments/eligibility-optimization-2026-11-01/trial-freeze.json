@@ -1,0 +1,22 @@
+{
+  "frozen_at": "2026-11-01T19:18:24.534222+00:00",
+  "inputs": {
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-optimization-2026-11-01/reference-manifest.json": "11e95477646c3b3ec8aa09407f172ea40b0ab9c4b80220079ecf2c410c32156d",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-optimization-2026-11-01/rounds-first.json": "46b8f74ecbc1d66552fd859f4e1ff3f7a59e197cb6a14585dd9b8a39b0b615ab",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-optimization-2026-11-01/protocol.md": "b6cee5f01dca38b610a4848926a3d5212445af798440d87f4fa6fb2260135d90",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-optimization-2026-11-01/runner.py": "adc42ada22431bb82effa1faf28459740fe93d202ed14a7cb939d8b970dc10e4",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/eligibility-optimization-2026-11-01/run-stage.zsh": "3b31c0fb43d2f42d7b56e900d9b65caf963c77fec90e68fa7c7e3436db9627d6",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/api-decision-prompts.json": "efeda1aaf70e0cfb6200100b7ea2a78cbff9f4179b8ddba9a5810f23b9f219a1",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/api-routes.json": "5d39edf4f983a4f5ff3e9489213f50a6c861048e78575369ce20f5c8d662cd08",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/api_contract.py": "510b5177d5ae02284ba44533f3412a3ef9d51706937db247cdad59d8ddbd57a9",
+    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/dual-score-trial-2026-10-27/wire.py": "ebbeed1c93208b1533c869d175301df32f49a8a8e8e04336d11c0c8c1f3e9376"
+  },
+  "status": "Frozen before any model calls in this trial",
+  "numeric_labels_changed": false,
+  "selection_model_outputs_used": "No; except natural challenge explicitly includes two previously identified disagreement cases",
+  "partitions": {
+    "development": 40,
+    "heldout": 40,
+    "natural_challenge": 20
+  }
+}

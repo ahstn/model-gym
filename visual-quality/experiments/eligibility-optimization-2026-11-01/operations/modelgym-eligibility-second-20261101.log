@@ -1,0 +1,12 @@
+Started modelgym-eligibility-second-20261101.service - Eligibility prompt rounds 6 to 10.
+{"time": "2026-11-01T19:22:12.675139+00:00", "round": "r06", "jobs": 80, "event": "start"}
+{"time": "2026-11-01T19:22:35.274696+00:00", "round": "r06", "counts": {"valid": 79, "exhausted_503": 1}, "ledger": {"liquid": {"known_usd": "0.01193866", "unpriced_attempts": 0, "liability_usd": "0.01193866"}, "jev": {"known_usd": "0.042925386", "unpriced_attempts": 59, "liability_usd": "0.692518218"}}, "stopped": false}
+{"time": "2026-11-01T19:22:35.275784+00:00", "round": "r07", "jobs": 80, "event": "start"}
+{"time": "2026-11-01T19:22:58.285076+00:00", "round": "r07", "counts": {"valid": 80}, "ledger": {"liquid": {"known_usd": "0.01365504", "unpriced_attempts": 0, "liability_usd": "0.01365504"}, "jev": {"known_usd": "0.049123284", "unpriced_attempts": 67, "liability_usd": "0.786796500"}}, "stopped": false}
+{"time": "2026-11-01T19:22:58.286173+00:00", "round": "r08", "jobs": 80, "event": "start"}
+{"time": "2026-11-01T19:23:22.192838+00:00", "round": "r08", "counts": {"valid": 80}, "ledger": {"liquid": {"known_usd": "0.01536662", "unpriced_attempts": 0, "liability_usd": "0.01536662"}, "jev": {"known_usd": "0.055305768", "unpriced_attempts": 74, "liability_usd": "0.870049320"}}, "stopped": false}
+{"time": "2026-11-01T19:23:22.193896+00:00", "round": "r09", "jobs": 80, "event": "start"}
+{"time": "2026-11-01T19:23:44.223326+00:00", "round": "r09", "counts": {"valid": 80}, "ledger": {"liquid": {"known_usd": "0.01708140", "unpriced_attempts": 0, "liability_usd": "0.01708140"}, "jev": {"known_usd": "0.061487286", "unpriced_attempts": 79, "liability_usd": "0.931281078"}}, "stopped": false}
+{"time": "2026-11-01T19:23:44.224370+00:00", "round": "r10", "jobs": 80, "event": "start"}
+{"time": "2026-11-01T19:24:12.730306+00:00", "round": "r10", "counts": {"valid": 80}, "ledger": {"liquid": {"known_usd": "0.01880578", "unpriced_attempts": 0, "liability_usd": "0.01880578"}, "jev": {"known_usd": "0.067698330", "unpriced_attempts": 84, "liability_usd": "0.992542362"}}, "stopped": false}
+modelgym-eligibility-second-20261101.service: Consumed 11.270s CPU time over 2min 211ms wall clock time, 91.5M memory peak.

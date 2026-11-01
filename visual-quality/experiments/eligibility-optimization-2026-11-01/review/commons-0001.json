@@ -1,0 +1,21 @@
+{
+  "case_id": "W0001",
+  "family_id": "commons:File:Exposition1874affiche.jpg",
+  "source": "Wikimedia Commons",
+  "source_title": "File:Exposition1874affiche.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Exposition1874affiche.jpg",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Exposition1874affiche.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "source_license": "Public domain",
+  "source_metadata": {
+    "DateTimeOriginal": "1874",
+    "Credit": "<a rel=\"nofollow\" class=\"external free\" href=\"http://www.nadar1874.net/catalogo.html\">http://www.nadar1874.net/catalogo.html</a>",
+    "Artist": "unknown / desconocido / inconnu",
+    "LicenseShortName": "Public domain"
+  },
+  "source_sha256": "2c37a4d5d889f7b76e65cd5456c7366a00f66a1d62bcbbe751c32b6ccd5431b3",
+  "image_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-optimization-2026-11-01/views/42e88bce1f87745c78b78b6a3a2b57824137961d90aaa642add3312de36dacd2.png",
+  "view_sha256": "42e88bce1f87745c78b78b6a3a2b57824137961d90aaa642add3312de36dacd2",
+  "delivered_bytes": 77957,
+  "width": 328,
+  "height": 462
+}

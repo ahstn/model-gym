@@ -1,0 +1,143 @@
+{
+  "kind": "post-hoc resolution diagnostic; not a replacement for the original held-out result",
+  "freeze_sha256": "5e4847b6b58c6f8f9608190562e050f5438ebb769545e06b0e5a8840bc760513",
+  "case": {
+    "case_id": "U0002",
+    "family_id": "commons:File:1884 Worlds Industrial Cotton Exposition poster.jpg",
+    "source": "Wikimedia Commons",
+    "source_title": "File:1884 Worlds Industrial Cotton Exposition poster.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:1884_Worlds_Industrial_Cotton_Exposition_poster.jpg",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/1884_Worlds_Industrial_Cotton_Exposition_poster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "source_license": "Public domain",
+    "source_metadata": {
+      "DateTimeOriginal": "1884",
+      "Credit": "<a rel=\"nofollow\" class=\"external free\" href=\"http://specialcollections.tulane.edu/Fairs.html\">http://specialcollections.tulane.edu/Fairs.html</a>",
+      "Artist": "Not attributed on poster",
+      "LicenseShortName": "Public domain"
+    },
+    "source_sha256": "be45160851252bbedc7058691ec50c0e75691fd208595d60d190e7d833cfa77d",
+    "image_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-optimization-2026-11-01/views/1bb5d640472f4680d89b7a698669be4592a205f4f828e044a772649ce8b587b8.png",
+    "view_sha256": "1bb5d640472f4680d89b7a698669be4592a205f4f828e044a772649ce8b587b8",
+    "delivered_bytes": 352763,
+    "width": 572,
+    "height": 280,
+    "partition": "resolution_retest",
+    "eligibility": "excluded",
+    "group": "poster_rescaled",
+    "evidence": "Same flat poster as W0002, uniformly enlarged after Jev rejected the original dimensions."
+  },
+  "rows": [
+    {
+      "case_id": "U0002",
+      "partition": "resolution_retest",
+      "group": "poster_rescaled",
+      "reference_eligibility": "excluded",
+      "family_id": "commons:File:1884 Worlds Industrial Cotton Exposition poster.jpg",
+      "model": "liquid",
+      "round": "resolution-baseline",
+      "status": "valid",
+      "exclusion_probability": 0.7813800213375628,
+      "scope_floor_applied": true,
+      "technical_score": 1.0,
+      "aesthetic_score": 1.0,
+      "technical_native": 2.9098905648864726,
+      "aesthetic_native": 2.877453967795179,
+      "latency_seconds": 0.7101774848997593,
+      "price_usd": "0.00001274",
+      "attempt_count": 1,
+      "attempts": [
+        {
+          "request_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-optimization-2026-11-01/attempts/resolution-baseline/liquid/U0002/01/request.json",
+          "request_sha256": "5e5a9ac90862f9ca30b1889f3ec5e37514f776cdb138667aea176bafbb1b4b44",
+          "result_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-optimization-2026-11-01/attempts/resolution-baseline/liquid/U0002/01/result.json",
+          "result_sha256": "c33dc48f86f69b9106c4c6acd8ccceceea9d4f71315af9047bc55006d9d09303"
+        }
+      ],
+      "display_arm": "baseline"
+    },
+    {
+      "case_id": "U0002",
+      "partition": "resolution_retest",
+      "group": "poster_rescaled",
+      "reference_eligibility": "excluded",
+      "family_id": "commons:File:1884 Worlds Industrial Cotton Exposition poster.jpg",
+      "model": "liquid",
+      "round": "resolution-selected",
+      "status": "valid",
+      "exclusion_probability": 0.9581633246300503,
+      "scope_floor_applied": true,
+      "technical_score": 1.0,
+      "aesthetic_score": 1.0,
+      "technical_native": 2.9564322409003108,
+      "aesthetic_native": 2.9044049476020675,
+      "latency_seconds": 0.5074839270673692,
+      "price_usd": "0.00001392",
+      "attempt_count": 1,
+      "attempts": [
+        {
+          "request_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-optimization-2026-11-01/attempts/resolution-selected/liquid/U0002/01/request.json",
+          "request_sha256": "4294d9ae2c9c1e4197b9101e8dcf6a373bdeb0107a83012ae9947ab77418c766",
+          "result_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-optimization-2026-11-01/attempts/resolution-selected/liquid/U0002/01/result.json",
+          "result_sha256": "a8b8019d9cc7c30bae5da68ebbf135ba36f434d95a59dca0acbfed127e65e76d"
+        }
+      ],
+      "display_arm": "candidate"
+    },
+    {
+      "case_id": "U0002",
+      "partition": "resolution_retest",
+      "group": "poster_rescaled",
+      "reference_eligibility": "excluded",
+      "family_id": "commons:File:1884 Worlds Industrial Cotton Exposition poster.jpg",
+      "model": "jev",
+      "round": "resolution-baseline",
+      "status": "valid",
+      "exclusion_probability": 0.69,
+      "scope_floor_applied": true,
+      "technical_score": 1.0,
+      "aesthetic_score": 1.0,
+      "technical_native": 3.37,
+      "aesthetic_native": 3.33,
+      "latency_seconds": 0.6715085352770984,
+      "price_usd": "0.000045696",
+      "attempt_count": 1,
+      "attempts": [
+        {
+          "request_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-optimization-2026-11-01/attempts/resolution-baseline/jev/U0002/01/request.json",
+          "request_sha256": "a373e631674ebf579bce825d5c3aa6a163e43322ef10b78013ebc26a3813b404",
+          "result_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-optimization-2026-11-01/attempts/resolution-baseline/jev/U0002/01/result.json",
+          "result_sha256": "047d6b440a21ae00fcbc0043b22e55902437ffed9b7c47af49747eed259b1c69"
+        }
+      ],
+      "display_arm": "baseline"
+    },
+    {
+      "case_id": "U0002",
+      "partition": "resolution_retest",
+      "group": "poster_rescaled",
+      "reference_eligibility": "excluded",
+      "family_id": "commons:File:1884 Worlds Industrial Cotton Exposition poster.jpg",
+      "model": "jev",
+      "round": "resolution-selected",
+      "status": "valid",
+      "exclusion_probability": 0.79,
+      "scope_floor_applied": true,
+      "technical_score": 1.0,
+      "aesthetic_score": 1.0,
+      "technical_native": 3.37,
+      "aesthetic_native": 3.3,
+      "latency_seconds": 0.6089925668202341,
+      "price_usd": "0.000047166",
+      "attempt_count": 1,
+      "attempts": [
+        {
+          "request_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-optimization-2026-11-01/attempts/resolution-selected/jev/U0002/01/request.json",
+          "request_sha256": "92722b9cfbe9aeccb395ee1652aaa0afeb3f22a8d1933179d54704c472d566bb",
+          "result_path": "/home/ahstn/git/model-gym/visual-quality/data/eligibility-optimization-2026-11-01/attempts/resolution-selected/jev/U0002/01/result.json",
+          "result_sha256": "45d8a516fc802a862529722c18f34abe738a57b49d70c798f702400cb28be76b"
+        }
+      ],
+      "display_arm": "candidate"
+    }
+  ]
+}

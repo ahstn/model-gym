@@ -17,6 +17,7 @@ class GalleryHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         path = unquote(urlsplit(self.path).path)
+        allowed_root = self.root.resolve()
         if path == "/":
             self.send_response(302)
             self.send_header("Location", "/gallery/index.html")
@@ -24,13 +25,25 @@ class GalleryHandler(BaseHTTPRequestHandler):
             return
         if re.fullmatch(r"/originals/[0-9a-f]{64}\.png", path):
             target = self.root / "views" / path.removeprefix("/originals/")
+        elif re.fullmatch(r"/eligibility-originals/[0-9a-f]{64}\.png", path):
+            allowed_root = (self.root.parent / "eligibility-optimization-2026-11-01").resolve()
+            target = allowed_root / "views" / path.removeprefix("/eligibility-originals/")
         elif path in ("/report.md", "/scores-long.csv"):
             target = self.root / "published" / path.lstrip("/")
         elif path.startswith("/gallery/"):
             relative = Path(path.removeprefix("/gallery/"))
             permitted = (
                 (
-                    relative.name in {"index.html", "high-variance.html", "style.css", "data.js"}
+                    relative.name
+                    in {
+                        "index.html",
+                        "high-variance.html",
+                        "style.css",
+                        "data.js",
+                        "eligibility-trial.html",
+                        "eligibility-trial.js",
+                        "eligibility-report.md",
+                    }
                     and len(relative.parts) == 1
                 )
                 or (
@@ -40,7 +53,7 @@ class GalleryHandler(BaseHTTPRequestHandler):
                 or (
                     len(relative.parts) == 2
                     and relative.parts[0] == "previews"
-                    and re.fullmatch(r"R[0-9]{4}\.jpg", relative.name)
+                    and re.fullmatch(r"[CRSWU][0-9]{4}\.jpg", relative.name)
                 )
             )
             if not permitted:
@@ -50,8 +63,7 @@ class GalleryHandler(BaseHTTPRequestHandler):
         else:
             self.send_error(404)
             return
-        root = self.root.resolve()
-        if not target.resolve().is_relative_to(root) or not target.is_file():
+        if not target.resolve().is_relative_to(allowed_root) or not target.is_file():
             self.send_error(404)
             return
         content = target.read_bytes()
@@ -60,9 +72,16 @@ class GalleryHandler(BaseHTTPRequestHandler):
         ):
             content = content.replace(("file://" + str(self.root / "views") + "/").encode(), b"/originals/")
         if target.name == "index.html":
+            trial_link = (
+                b' &middot; <a href="eligibility-trial.html">Eligibility prompt comparison</a>'
+                if (self.root / "published" / "gallery" / "eligibility-trial.html").is_file()
+                else b""
+            )
             content = content.replace(
                 b"<nav>",
-                b'<p><a href="high-variance.html">Explore 48 highest-disagreement images</a></p><nav>',
+                b'<p><a href="high-variance.html">Explore 48 highest-disagreement images</a>'
+                + trial_link
+                + b"</p><nav>",
                 1,
             )
         self.send_response(200)

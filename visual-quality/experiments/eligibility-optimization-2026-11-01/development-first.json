@@ -1,0 +1,2054 @@
+{
+  "generated_at": "2026-11-01T19:21:47.492571+00:00",
+  "reference_sha256": "11e95477646c3b3ec8aa09407f172ea40b0ab9c4b80220079ecf2c410c32156d",
+  "summary": {
+    "liquid": {
+      "baseline": {
+        "expected": 40,
+        "valid": 40,
+        "excluded_expected": 20,
+        "eligible_expected": 20,
+        "excluded_valid": 20,
+        "eligible_valid": 20,
+        "missed_exclusions": 10,
+        "false_floors": 0,
+        "correct_exclusions": 10,
+        "correct_eligible": 20,
+        "missing_ids": [],
+        "false_floor_ids": [],
+        "missed_exclusion_ids": [
+          "S0008",
+          "S0006",
+          "C4794",
+          "S0005",
+          "S0002",
+          "S0007",
+          "S0003",
+          "S0001",
+          "S0009",
+          "S0004"
+        ],
+        "by_group": {
+          "scene": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "context": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "renders": {
+            "expected": 4,
+            "valid": 4,
+            "errors": 0
+          },
+          "screenshot": {
+            "expected": 9,
+            "valid": 9,
+            "errors": 9
+          },
+          "poster": {
+            "expected": 2,
+            "valid": 2,
+            "errors": 0
+          },
+          "plots": {
+            "expected": 4,
+            "valid": 4,
+            "errors": 0
+          },
+          "art": {
+            "expected": 1,
+            "valid": 1,
+            "errors": 1
+          }
+        }
+      },
+      "rounds": {
+        "r01": {
+          "metrics": {
+            "expected": 40,
+            "valid": 40,
+            "excluded_expected": 20,
+            "eligible_expected": 20,
+            "excluded_valid": 20,
+            "eligible_valid": 20,
+            "missed_exclusions": 0,
+            "false_floors": 0,
+            "correct_exclusions": 20,
+            "correct_eligible": 20,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [],
+            "by_group": {
+              "scene": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "context": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "renders": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "screenshot": {
+                "expected": 9,
+                "valid": 9,
+                "errors": 0
+              },
+              "poster": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              },
+              "plots": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "art": {
+                "expected": 1,
+                "valid": 1,
+                "errors": 0
+              }
+            }
+          },
+          "paired": {
+            "paired_cases": 40,
+            "baseline_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 10,
+              "false_floors": 0,
+              "correct_exclusions": 10,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0008",
+                "S0006",
+                "C4794",
+                "S0005",
+                "S0002",
+                "S0007",
+                "S0003",
+                "S0001",
+                "S0009",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 9
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 0,
+              "false_floors": 0,
+              "correct_exclusions": 20,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 0
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.015311893537334986,
+                "mean_absolute_change": 0.07619435967287201,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 20,
+                "mean_signed_change": -0.008447354849554478,
+                "mean_absolute_change": 0.04684218329037406,
+                "changes_at_least_half_point": 0
+              }
+            }
+          }
+        },
+        "r02": {
+          "metrics": {
+            "expected": 40,
+            "valid": 40,
+            "excluded_expected": 20,
+            "eligible_expected": 20,
+            "excluded_valid": 20,
+            "eligible_valid": 20,
+            "missed_exclusions": 5,
+            "false_floors": 1,
+            "correct_exclusions": 15,
+            "correct_eligible": 19,
+            "missing_ids": [],
+            "false_floor_ids": [
+              "C5027"
+            ],
+            "missed_exclusion_ids": [
+              "S0006",
+              "S0005",
+              "S0007",
+              "S0009",
+              "S0004"
+            ],
+            "by_group": {
+              "scene": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "context": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 1
+              },
+              "renders": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "screenshot": {
+                "expected": 9,
+                "valid": 9,
+                "errors": 5
+              },
+              "poster": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              },
+              "plots": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "art": {
+                "expected": 1,
+                "valid": 1,
+                "errors": 0
+              }
+            }
+          },
+          "paired": {
+            "paired_cases": 40,
+            "baseline_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 10,
+              "false_floors": 0,
+              "correct_exclusions": 10,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0008",
+                "S0006",
+                "C4794",
+                "S0005",
+                "S0002",
+                "S0007",
+                "S0003",
+                "S0001",
+                "S0009",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 9
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 5,
+              "false_floors": 1,
+              "correct_exclusions": 15,
+              "correct_eligible": 19,
+              "missing_ids": [],
+              "false_floor_ids": [
+                "C5027"
+              ],
+              "missed_exclusion_ids": [
+                "S0006",
+                "S0005",
+                "S0007",
+                "S0009",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 5
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 20,
+                "mean_signed_change": -0.030119811728112834,
+                "mean_absolute_change": 0.0464705238682057,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.024635191337761164,
+                "mean_absolute_change": 0.0646221293946554,
+                "changes_at_least_half_point": 0
+              }
+            }
+          }
+        },
+        "r03": {
+          "metrics": {
+            "expected": 40,
+            "valid": 40,
+            "excluded_expected": 20,
+            "eligible_expected": 20,
+            "excluded_valid": 20,
+            "eligible_valid": 20,
+            "missed_exclusions": 0,
+            "false_floors": 0,
+            "correct_exclusions": 20,
+            "correct_eligible": 20,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [],
+            "by_group": {
+              "scene": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "context": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "renders": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "screenshot": {
+                "expected": 9,
+                "valid": 9,
+                "errors": 0
+              },
+              "poster": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              },
+              "plots": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "art": {
+                "expected": 1,
+                "valid": 1,
+                "errors": 0
+              }
+            }
+          },
+          "paired": {
+            "paired_cases": 40,
+            "baseline_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 10,
+              "false_floors": 0,
+              "correct_exclusions": 10,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0008",
+                "S0006",
+                "C4794",
+                "S0005",
+                "S0002",
+                "S0007",
+                "S0003",
+                "S0001",
+                "S0009",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 9
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 0,
+              "false_floors": 0,
+              "correct_exclusions": 20,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 0
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.00251747820034961,
+                "mean_absolute_change": 0.05046495652661222,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.01859685074337931,
+                "mean_absolute_change": 0.05425072167324711,
+                "changes_at_least_half_point": 0
+              }
+            }
+          }
+        },
+        "r04": {
+          "metrics": {
+            "expected": 40,
+            "valid": 40,
+            "excluded_expected": 20,
+            "eligible_expected": 20,
+            "excluded_valid": 20,
+            "eligible_valid": 20,
+            "missed_exclusions": 6,
+            "false_floors": 0,
+            "correct_exclusions": 14,
+            "correct_eligible": 20,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "C4794",
+              "S0005",
+              "S0007",
+              "S0003",
+              "S0009",
+              "S0004"
+            ],
+            "by_group": {
+              "scene": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "context": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "renders": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "screenshot": {
+                "expected": 9,
+                "valid": 9,
+                "errors": 5
+              },
+              "poster": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              },
+              "plots": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "art": {
+                "expected": 1,
+                "valid": 1,
+                "errors": 1
+              }
+            }
+          },
+          "paired": {
+            "paired_cases": 40,
+            "baseline_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 10,
+              "false_floors": 0,
+              "correct_exclusions": 10,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0008",
+                "S0006",
+                "C4794",
+                "S0005",
+                "S0002",
+                "S0007",
+                "S0003",
+                "S0001",
+                "S0009",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 9
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 6,
+              "false_floors": 0,
+              "correct_exclusions": 14,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "C4794",
+                "S0005",
+                "S0007",
+                "S0003",
+                "S0009",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 5
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 20,
+                "mean_signed_change": -0.0012631250814311267,
+                "mean_absolute_change": 0.06371979242391788,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 20,
+                "mean_signed_change": -0.005830102902835477,
+                "mean_absolute_change": 0.041890177274593765,
+                "changes_at_least_half_point": 0
+              }
+            }
+          }
+        },
+        "r05": {
+          "metrics": {
+            "expected": 40,
+            "valid": 40,
+            "excluded_expected": 20,
+            "eligible_expected": 20,
+            "excluded_valid": 20,
+            "eligible_valid": 20,
+            "missed_exclusions": 1,
+            "false_floors": 0,
+            "correct_exclusions": 19,
+            "correct_eligible": 20,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "C4794"
+            ],
+            "by_group": {
+              "scene": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "context": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "renders": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "screenshot": {
+                "expected": 9,
+                "valid": 9,
+                "errors": 0
+              },
+              "poster": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              },
+              "plots": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "art": {
+                "expected": 1,
+                "valid": 1,
+                "errors": 1
+              }
+            }
+          },
+          "paired": {
+            "paired_cases": 40,
+            "baseline_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 10,
+              "false_floors": 0,
+              "correct_exclusions": 10,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0008",
+                "S0006",
+                "C4794",
+                "S0005",
+                "S0002",
+                "S0007",
+                "S0003",
+                "S0001",
+                "S0009",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 9
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 1,
+              "false_floors": 0,
+              "correct_exclusions": 19,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "C4794"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 0
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 20,
+                "mean_signed_change": -0.021443369846637538,
+                "mean_absolute_change": 0.05278608956476779,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.0192019925406695,
+                "mean_absolute_change": 0.05227233471059915,
+                "changes_at_least_half_point": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "jev": {
+      "baseline": {
+        "expected": 40,
+        "valid": 40,
+        "excluded_expected": 20,
+        "eligible_expected": 20,
+        "excluded_valid": 20,
+        "eligible_valid": 20,
+        "missed_exclusions": 10,
+        "false_floors": 0,
+        "correct_exclusions": 10,
+        "correct_eligible": 20,
+        "missing_ids": [],
+        "false_floor_ids": [],
+        "missed_exclusion_ids": [
+          "S0008",
+          "W0001",
+          "S0006",
+          "C4794",
+          "S0005",
+          "S0002",
+          "S0007",
+          "S0003",
+          "W0003",
+          "S0004"
+        ],
+        "by_group": {
+          "scene": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "context": {
+            "expected": 10,
+            "valid": 10,
+            "errors": 0
+          },
+          "renders": {
+            "expected": 4,
+            "valid": 4,
+            "errors": 0
+          },
+          "screenshot": {
+            "expected": 9,
+            "valid": 9,
+            "errors": 7
+          },
+          "poster": {
+            "expected": 2,
+            "valid": 2,
+            "errors": 2
+          },
+          "plots": {
+            "expected": 4,
+            "valid": 4,
+            "errors": 0
+          },
+          "art": {
+            "expected": 1,
+            "valid": 1,
+            "errors": 1
+          }
+        }
+      },
+      "rounds": {
+        "r01": {
+          "metrics": {
+            "expected": 40,
+            "valid": 40,
+            "excluded_expected": 20,
+            "eligible_expected": 20,
+            "excluded_valid": 20,
+            "eligible_valid": 20,
+            "missed_exclusions": 0,
+            "false_floors": 0,
+            "correct_exclusions": 20,
+            "correct_eligible": 20,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [],
+            "by_group": {
+              "scene": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "context": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "renders": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "screenshot": {
+                "expected": 9,
+                "valid": 9,
+                "errors": 0
+              },
+              "poster": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              },
+              "plots": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "art": {
+                "expected": 1,
+                "valid": 1,
+                "errors": 0
+              }
+            }
+          },
+          "paired": {
+            "paired_cases": 40,
+            "baseline_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 10,
+              "false_floors": 0,
+              "correct_exclusions": 10,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0008",
+                "W0001",
+                "S0006",
+                "C4794",
+                "S0005",
+                "S0002",
+                "S0007",
+                "S0003",
+                "W0003",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 7
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 2
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 0,
+              "false_floors": 0,
+              "correct_exclusions": 20,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 0
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.011499999999999977,
+                "mean_absolute_change": 0.025499999999999988,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 20,
+                "mean_signed_change": -0.001000000000000023,
+                "mean_absolute_change": 0.02200000000000002,
+                "changes_at_least_half_point": 0
+              }
+            }
+          }
+        },
+        "r02": {
+          "metrics": {
+            "expected": 40,
+            "valid": 40,
+            "excluded_expected": 20,
+            "eligible_expected": 20,
+            "excluded_valid": 20,
+            "eligible_valid": 20,
+            "missed_exclusions": 2,
+            "false_floors": 0,
+            "correct_exclusions": 18,
+            "correct_eligible": 20,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "S0006",
+              "S0002"
+            ],
+            "by_group": {
+              "scene": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "context": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "renders": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "screenshot": {
+                "expected": 9,
+                "valid": 9,
+                "errors": 2
+              },
+              "poster": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              },
+              "plots": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "art": {
+                "expected": 1,
+                "valid": 1,
+                "errors": 0
+              }
+            }
+          },
+          "paired": {
+            "paired_cases": 40,
+            "baseline_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 10,
+              "false_floors": 0,
+              "correct_exclusions": 10,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0008",
+                "W0001",
+                "S0006",
+                "C4794",
+                "S0005",
+                "S0002",
+                "S0007",
+                "S0003",
+                "W0003",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 7
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 2
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 2,
+              "false_floors": 0,
+              "correct_exclusions": 18,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0006",
+                "S0002"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 2
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.008499999999999841,
+                "mean_absolute_change": 0.020499999999999897,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.0014999999999999903,
+                "mean_absolute_change": 0.016500000000000004,
+                "changes_at_least_half_point": 0
+              }
+            }
+          }
+        },
+        "r03": {
+          "metrics": {
+            "expected": 40,
+            "valid": 39,
+            "excluded_expected": 20,
+            "eligible_expected": 20,
+            "excluded_valid": 19,
+            "eligible_valid": 20,
+            "missed_exclusions": 0,
+            "false_floors": 1,
+            "correct_exclusions": 19,
+            "correct_eligible": 19,
+            "missing_ids": [
+              "C5370"
+            ],
+            "false_floor_ids": [
+              "C0646"
+            ],
+            "missed_exclusion_ids": [],
+            "by_group": {
+              "scene": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "context": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 1
+              },
+              "renders": {
+                "expected": 4,
+                "valid": 3,
+                "errors": 0
+              },
+              "screenshot": {
+                "expected": 9,
+                "valid": 9,
+                "errors": 0
+              },
+              "poster": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              },
+              "plots": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "art": {
+                "expected": 1,
+                "valid": 1,
+                "errors": 0
+              }
+            }
+          },
+          "paired": {
+            "paired_cases": 39,
+            "baseline_paired": {
+              "expected": 39,
+              "valid": 39,
+              "excluded_expected": 19,
+              "eligible_expected": 20,
+              "excluded_valid": 19,
+              "eligible_valid": 20,
+              "missed_exclusions": 10,
+              "false_floors": 0,
+              "correct_exclusions": 9,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0008",
+                "W0001",
+                "S0006",
+                "C4794",
+                "S0005",
+                "S0002",
+                "S0007",
+                "S0003",
+                "W0003",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 3,
+                  "valid": 3,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 7
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 2
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 39,
+              "valid": 39,
+              "excluded_expected": 19,
+              "eligible_expected": 20,
+              "excluded_valid": 19,
+              "eligible_valid": 20,
+              "missed_exclusions": 0,
+              "false_floors": 1,
+              "correct_exclusions": 19,
+              "correct_eligible": 19,
+              "missing_ids": [],
+              "false_floor_ids": [
+                "C0646"
+              ],
+              "missed_exclusion_ids": [],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 1
+                },
+                "renders": {
+                  "expected": 3,
+                  "valid": 3,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 0
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.005999999999999917,
+                "mean_absolute_change": 0.022999999999999955,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.01499999999999998,
+                "mean_absolute_change": 0.02799999999999997,
+                "changes_at_least_half_point": 0
+              }
+            }
+          }
+        },
+        "r04": {
+          "metrics": {
+            "expected": 40,
+            "valid": 40,
+            "excluded_expected": 20,
+            "eligible_expected": 20,
+            "excluded_valid": 20,
+            "eligible_valid": 20,
+            "missed_exclusions": 3,
+            "false_floors": 0,
+            "correct_exclusions": 17,
+            "correct_eligible": 20,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [
+              "S0006",
+              "S0007",
+              "S0003"
+            ],
+            "by_group": {
+              "scene": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "context": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "renders": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "screenshot": {
+                "expected": 9,
+                "valid": 9,
+                "errors": 3
+              },
+              "poster": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              },
+              "plots": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "art": {
+                "expected": 1,
+                "valid": 1,
+                "errors": 0
+              }
+            }
+          },
+          "paired": {
+            "paired_cases": 40,
+            "baseline_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 10,
+              "false_floors": 0,
+              "correct_exclusions": 10,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0008",
+                "W0001",
+                "S0006",
+                "C4794",
+                "S0005",
+                "S0002",
+                "S0007",
+                "S0003",
+                "W0003",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 7
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 2
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 3,
+              "false_floors": 0,
+              "correct_exclusions": 17,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0006",
+                "S0007",
+                "S0003"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 3
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.0025000000000000356,
+                "mean_absolute_change": 0.02849999999999997,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 20,
+                "mean_signed_change": -0.009000000000000041,
+                "mean_absolute_change": 0.024000000000000098,
+                "changes_at_least_half_point": 0
+              }
+            }
+          }
+        },
+        "r05": {
+          "metrics": {
+            "expected": 40,
+            "valid": 40,
+            "excluded_expected": 20,
+            "eligible_expected": 20,
+            "excluded_valid": 20,
+            "eligible_valid": 20,
+            "missed_exclusions": 0,
+            "false_floors": 0,
+            "correct_exclusions": 20,
+            "correct_eligible": 20,
+            "missing_ids": [],
+            "false_floor_ids": [],
+            "missed_exclusion_ids": [],
+            "by_group": {
+              "scene": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "context": {
+                "expected": 10,
+                "valid": 10,
+                "errors": 0
+              },
+              "renders": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "screenshot": {
+                "expected": 9,
+                "valid": 9,
+                "errors": 0
+              },
+              "poster": {
+                "expected": 2,
+                "valid": 2,
+                "errors": 0
+              },
+              "plots": {
+                "expected": 4,
+                "valid": 4,
+                "errors": 0
+              },
+              "art": {
+                "expected": 1,
+                "valid": 1,
+                "errors": 0
+              }
+            }
+          },
+          "paired": {
+            "paired_cases": 40,
+            "baseline_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 10,
+              "false_floors": 0,
+              "correct_exclusions": 10,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [
+                "S0008",
+                "W0001",
+                "S0006",
+                "C4794",
+                "S0005",
+                "S0002",
+                "S0007",
+                "S0003",
+                "W0003",
+                "S0004"
+              ],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 7
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 2
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 1
+                }
+              }
+            },
+            "candidate_paired": {
+              "expected": 40,
+              "valid": 40,
+              "excluded_expected": 20,
+              "eligible_expected": 20,
+              "excluded_valid": 20,
+              "eligible_valid": 20,
+              "missed_exclusions": 0,
+              "false_floors": 0,
+              "correct_exclusions": 20,
+              "correct_eligible": 20,
+              "missing_ids": [],
+              "false_floor_ids": [],
+              "missed_exclusion_ids": [],
+              "by_group": {
+                "scene": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "context": {
+                  "expected": 10,
+                  "valid": 10,
+                  "errors": 0
+                },
+                "renders": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "screenshot": {
+                  "expected": 9,
+                  "valid": 9,
+                  "errors": 0
+                },
+                "poster": {
+                  "expected": 2,
+                  "valid": 2,
+                  "errors": 0
+                },
+                "plots": {
+                  "expected": 4,
+                  "valid": 4,
+                  "errors": 0
+                },
+                "art": {
+                  "expected": 1,
+                  "valid": 1,
+                  "errors": 0
+                }
+              }
+            },
+            "native_quality_drift": {
+              "technical_native": {
+                "paired_photos": 20,
+                "mean_signed_change": 0.008499999999999997,
+                "mean_absolute_change": 0.024499999999999966,
+                "changes_at_least_half_point": 0
+              },
+              "aesthetic_native": {
+                "paired_photos": 20,
+                "mean_signed_change": -0.005000000000000049,
+                "mean_absolute_change": 0.023,
+                "changes_at_least_half_point": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

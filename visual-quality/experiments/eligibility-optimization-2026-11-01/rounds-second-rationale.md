@@ -1,0 +1,5 @@
+# Rounds 6–10: development-only rationale
+
+The original question missed 10 of 20 excluded development cases for each model, without false floors on the 20 eligible photographs. Most misses involved the synthetic browser-interface controls. Among the first five variants, r01 returned 0 misses and 0 false floors for both models on all 40 cases. Other variants showed that wording and ordering matter: r02 produced 5 misses and one false floor for Liquid, while r04 produced 6 Liquid misses. Jev r03 had one exhausted 503 job and one observed false floor; it is not a full-coverage perfect result.
+
+The next five variants, written after these development results and before their calls, test a shorter version of r01, explicit embedded-photo and near-full-frame language, eligible-first ordering, a screenshot-focused instruction, and a quality-independent decision with ambiguity protections. The unchanged common state, two quality questions and 0.50 threshold remain fixed. These are prompt variants, not independently measured causal effects of each sentence. No held-out or historical-challenge model output was consulted.
