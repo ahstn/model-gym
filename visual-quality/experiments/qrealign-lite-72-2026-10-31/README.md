@@ -2,6 +2,8 @@
 
 [All per-image scores](scores.csv) · [Analysis](analysis.json) · [Prior 72-image gallery](../photo-scoring-2026-10-31/gallery.html)
 
+Static image pages with both scores and per-image Lite end-to-end latency: [page 1](comparison-latency-page-1.png) · [page 2](comparison-latency-page-2.png) · [page 3](comparison-latency-page-3.png) · [page 4](comparison-latency-page-4.png). Each page contains 18 original images. The other models' consolidated records do not contain comparable per-image latency measurements.
+
 Q-ReAlign Lite 4B was evaluated on the same 72 original delivered views on a Runpod 24 GB RTX 4090. Checkpoint `q-future/Q-ReAlign-Lite-4B` revision `06add46a6bc4a7dfcf0a59a2fb1ed15a6e3d30b7`; raw responses, level probabilities, input token counts, latency and image SHA-256 are retained under `results/`. Image processor uses model defaults; no external resizing was applied. The GPU model's native five-word weighted 0–1 score is mapped to 1–5 by `1+4*score`. Scores are raw: no eligibility classifier or floor is applied.
 
 The table compares the 48 previously held-out images on common valid cases, against prior assistant references. Error is mean absolute error on the 1–5 scale; positive bias means higher than the reference. These are not human gold and the sample is small. Additional results for all 71 fresh images and 68 reference-eligible images are in `analysis.json`.
