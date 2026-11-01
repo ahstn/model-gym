@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-11-01",
+  "seed": 202611014000,
+  "status": "predeclared before candidate embeddings or grader outputs",
+  "candidate_pool": {
+    "megalith": 4500,
+    "vizwiz": 800,
+    "controls": 200,
+    "family_representatives": 5500
+  },
+  "benchmark_candidate_pool": {
+    "fresh_standalone_megalith": 800,
+    "fresh_vizwiz": 160,
+    "fresh_controls": 40
+  },
+  "rehearsal": {
+    "megalith_including_controlled_parents": 3000,
+    "vizwiz": 600,
+    "controlled_derivatives": 300,
+    "nonphotographic_controls": 100,
+    "images": 4000,
+    "families": 3700
+  },
+  "controlled_families": {
+    "gaussian_blur": 34,
+    "gaussian_noise": 33,
+    "jpeg_compression": 33,
+    "members_per_family": 4
+  },
+  "benchmark": {
+    "development": 100,
+    "representative": 300,
+    "challenge": 100,
+    "distinct_families": 500,
+    "historical_scored_or_reviewed_families_excluded": true,
+    "controlled_families_excluded": true
+  },
+  "model": {
+    "id": "google/embeddinggemma-2",
+    "revision": "f9972ac22e696a105c482202646979e33e4b5a1e",
+    "audio_config": null,
+    "dimensions": 768,
+    "dtype": "float32",
+    "max_soft_tokens": 280,
+    "normalization": "L2",
+    "device": "cpu",
+    "workers": 2,
+    "threads_per_worker": 6,
+    "batch_size": 4
+  },
+  "content_sampling": {
+    "method": "KMeans on one image per family; proportional cluster allocation plus farthest-first selection within source/defect quotas",
+    "rehearsal_clusters": 40,
+    "benchmark_clusters": 16,
+    "n_init": 20,
+    "quality_scores_or_captions_used": false,
+    "cluster_names_are_manual": true,
+    "rehearsal_method": "Capacity-capped sqrt(cluster-size) allocation plus farthest-first within source/operator quotas",
+    "benchmark_representative_method": "Proportional cluster allocation with seeded random selection within fixed source quotas"
+  },
+  "duplicates": {
+    "exact_hashes": "exclude repeated source/view/pixel identities",
+    "protected_holdouts": "exclude family/source-group/hash and dHash distance<=2 to original dev/test",
+    "review": "inspect high embedding similarities jointly with pHash/dHash and original images; semantic similarity alone is not a duplicate",
+    "historical_benchmark": "historical family or dHash<=2 matches excluded"
+  },
+  "image_contract": {
+    "max_edge": 1536,
+    "min_edge": 256,
+    "min_area": 78400,
+    "max_png_bytes": 2650000,
+    "resize": "Prior-trial full-frame LANCZOS cap1536, reduce cap by0.9steps for common2.65MBPNGbudget; no upscale/crop/padding; sharedcap percontrolledfamily",
+    "source_failures": "record and replace deterministically before inference"
+  },
+  "stats": {
+    "max_edge": 1536,
+    "calibration": "nonbenchmark family representatives only; controlled variants excluded",
+    "gate": "record for review only, no score replacement or skipped grader calls",
+    "prompt_focus_area": "omitted",
+    "donor_mapping": "seeded different-image/different-family donor with source/encoding and approximate dimensions matched; report sharpness direction balance",
+    "donor_pool": "Unique nonbenchmark nonvariant family representatives from same4000corpus"
+  },
+  "training_masks": "all false; no labels approved",
+  "candidate_pool_actual": {
+    "controls": 219,
+    "megalith": 4289,
+    "vizwiz": 992
+  }
+}

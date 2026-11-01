@@ -1,0 +1,43 @@
+{
+  "available_vectors": 2288,
+  "benchmark_sha256": "d1718a181cc1e7e46b3b37f5baae50b5809e3e0ddf715ec291a6605673c1feb6",
+  "created_at": "2026-11-01T12:07:01.364434+00:00",
+  "historical_candidates": 568,
+  "pairs": [
+    {
+      "a": "C0786",
+      "b": "C1593",
+      "benchmark_case_id": "R0083",
+      "cosine": 0.9054234027862549,
+      "dhash_distance": 24,
+      "historically_exposed_b": true
+    },
+    {
+      "a": "C0815",
+      "b": "C1545",
+      "benchmark_case_id": "R0116",
+      "cosine": 0.9004127979278564,
+      "dhash_distance": 31,
+      "historically_exposed_b": true
+    }
+  ],
+  "shown": [
+    {
+      "a": "C0786",
+      "b": "C1593",
+      "benchmark_case_id": "R0083",
+      "cosine": 0.9054234027862549,
+      "dhash_distance": 24,
+      "historically_exposed_b": true
+    },
+    {
+      "a": "C0815",
+      "b": "C1545",
+      "benchmark_case_id": "R0116",
+      "cosine": 0.9004127979278564,
+      "dhash_distance": 31,
+      "historically_exposed_b": true
+    }
+  ],
+  "status": "partial_diagnostic_only_not_final_admission"
+}

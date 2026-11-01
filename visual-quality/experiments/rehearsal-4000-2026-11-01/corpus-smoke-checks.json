@@ -1,0 +1,53 @@
+{
+  "recorded_at_utc": "2026-11-01T11:44:50.677249+00:00",
+  "selection_tests": {
+    "passed": 6,
+    "includes": "actual sklearn seed, zero-quota clusters, repeated vectors, source/family/pixel holdout exclusion"
+  },
+  "stats_cache_tests": {
+    "passed": 1,
+    "includes": "same-view different-source separation and changed-source rejection"
+  },
+  "actual_stats_prompt_render_smoke": "passed; focus_area omitted and technical-only instruction retained",
+  "actual_controlled_family_render_smoke": [
+    {
+      "operator": "gaussian_blur",
+      "candidate_id": "C1033",
+      "edge": 1536,
+      "dimensions": [
+        1536,
+        1021
+      ]
+    },
+    {
+      "operator": "gaussian_noise",
+      "candidate_id": "C1007",
+      "edge": 1118,
+      "dimensions": [
+        745,
+        1118
+      ]
+    },
+    {
+      "operator": "jpeg_compression",
+      "candidate_id": "C1013",
+      "edge": 1536,
+      "dimensions": [
+        1536,
+        1152
+      ]
+    }
+  ],
+  "control_smoke_checks": [
+    "recorded canonical-parent preprocessing matches reconstruction",
+    "four distinct decoded pixel hashes",
+    "identical final dimensions",
+    "actual source encoding retained"
+  ],
+  "benchmark_manifest_sha256": "d1718a181cc1e7e46b3b37f5baae50b5809e3e0ddf715ec291a6605673c1feb6",
+  "embedding_progress_counts": [
+    640,
+    652
+  ],
+  "pipeline_status": "500 benchmark frozen and ready; remaining candidate embeddings running; final4000 not selected yet"
+}

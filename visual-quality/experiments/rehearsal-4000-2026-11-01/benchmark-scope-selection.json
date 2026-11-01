@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-01T11:32:23.258748+00:00",
+  "reserved_candidates": [
+    "C0561",
+    "C0638",
+    "C0478",
+    "C0272",
+    "C0502",
+    "C0149"
+  ],
+  "candidate_pool": "667 available noncontrol benchmark candidates in scope-partial.jpg; final declared frame remains1000 candidates",
+  "candidate_manifest_sha256": "5b349f5828bcdcb6b0523ddaa099fae9808df35bddfad24056445f00a72b9935",
+  "queries_provenance_sha256": "aab46bc011b6f67d16a0bbab0ac5dacf38e7ef76bca6d9d0591f235bade72c9b",
+  "decision": "Root visually reviewed and approved six photographic-scope boundary cases before reference review; replaces six of ten content-diversity challenge slots, leaving four, with all ten CLEVR/PlotQA controls retained",
+  "selection_criterion": "Include full-frame artwork reproductions and photographs with physical scene context; no quality scores used",
+  "blinding": "Do not supply proposed eligibility judgments or retrieval descriptions to reference reviewers",
+  "candidate_sources": {
+    "C0561": "megalith",
+    "C0638": "megalith",
+    "C0478": "megalith",
+    "C0272": "megalith",
+    "C0502": "megalith",
+    "C0149": "vizwiz"
+  }
+}

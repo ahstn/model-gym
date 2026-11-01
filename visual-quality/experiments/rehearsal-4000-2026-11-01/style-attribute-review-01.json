@@ -1,0 +1,89 @@
+{
+  "status": "preliminary_visual_attribute_review",
+  "reviewed_at": "2026-11-01T12:23:27.604985+00:00",
+  "reviewer": "root assistant",
+  "inspection_basis": "Contact sheet confirms broad visual attributes only; no reference score changes or quality reassessment",
+  "image_path": "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/review/style-candidates-01.jpg",
+  "image_sha256": "bbf905a72a6ba7ef2be1ae1ee0504334691a564fd701dc13e1e68aecf0f6043f",
+  "cases": [
+    {
+      "case_id": "R0091",
+      "tags": [
+        "selective_focus"
+      ],
+      "visual_attribute_evidence": "Central flowers and leaves stand against visibly defocused flowers and background."
+    },
+    {
+      "case_id": "R0118",
+      "tags": [
+        "selective_focus"
+      ],
+      "visual_attribute_evidence": "Close floral structures have different focal depths across foreground petals and stamens."
+    },
+    {
+      "case_id": "R0467",
+      "tags": [
+        "selective_focus"
+      ],
+      "visual_attribute_evidence": "The plated meal remains the main focus while rear dishes and table objects are defocused."
+    },
+    {
+      "case_id": "R0180",
+      "tags": [
+        "monochrome"
+      ],
+      "visual_attribute_evidence": "The photograph is rendered in black, white and grayscale tones."
+    },
+    {
+      "case_id": "R0364",
+      "tags": [
+        "monochrome"
+      ],
+      "visual_attribute_evidence": "The photograph is rendered in black, white and grayscale tones."
+    },
+    {
+      "case_id": "R0404",
+      "tags": [
+        "monochrome"
+      ],
+      "visual_attribute_evidence": "The photograph is rendered in black, white and grayscale tones."
+    },
+    {
+      "case_id": "R0160",
+      "tags": [
+        "monochrome"
+      ],
+      "visual_attribute_evidence": "The photograph is rendered in black, white and grayscale tones."
+    },
+    {
+      "case_id": "R0240",
+      "tags": [
+        "monochrome"
+      ],
+      "visual_attribute_evidence": "The photograph is rendered in black, white and grayscale tones."
+    },
+    {
+      "case_id": "R0190",
+      "tags": [
+        "monochrome"
+      ],
+      "visual_attribute_evidence": "The photograph is rendered in black, white and grayscale tones."
+    },
+    {
+      "case_id": "R0120",
+      "tags": [
+        "silhouette",
+        "sparse_composition"
+      ],
+      "visual_attribute_evidence": "Dark rocks form the main shape against an open pastel sky and sea."
+    },
+    {
+      "case_id": "R0020",
+      "tags": [
+        "sparse_composition"
+      ],
+      "visual_attribute_evidence": "A small lunar disc occupies the upper left portion of a mostly black frame."
+    }
+  ],
+  "note": "Final tag set will include the completed primary reference evidence search before scoring calls; tags do not establish photographer intent or absence of defects."
+}

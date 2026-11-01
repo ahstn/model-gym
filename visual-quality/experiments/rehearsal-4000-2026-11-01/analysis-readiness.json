@@ -1,0 +1,28 @@
+{
+  "status": "analysis implemented and synthetic tests passed; no fresh results loaded",
+  "checked_at": "2026-11-01T12:39:40.875641+00:00",
+  "tests": "32 analysis +21 API +18 Lite tests passed;16 subtests passed; Ruff clean",
+  "files_sha256": {
+    "analyze.py": "ad23356f7cace711713d10af38a34dd4fe1d04da2512d18a222029e032eb5ca2",
+    "analysis_metrics.py": "96ff934647d065c19232982e91be84245424bfbb300aa3ce8aaa6971c1fabdd7",
+    "test_analysis.py": "3b90313aa166006dabcd43005d8cef71a4f9904ece5b2e602bd0909412d53de4",
+    "report.py": "c5d68a1ff38da1adfd9530f275abf57c9edbab7bb4777dea6e90b8c7a96bb21f"
+  },
+  "expected_long_rows": 27500,
+  "primary_panel": "representative",
+  "bootstrap_repeats": 10000,
+  "bootstrap_seed": 20261101,
+  "api_implementation_unchanged": true,
+  "pre_run_policy_changes": [
+    "At least 95% paired coverage per task with no increased missing/invalid score count versus baseline",
+    "Reserve 20% of fixed QC review budget for random unflagged audits"
+  ],
+  "inclusive_boundary_abs_tolerance": 1e-12,
+  "strict_ci_upper_bound": "less than zero without tolerance",
+  "preflight_fixes": [
+    "Stable inclusive numerical decision boundaries",
+    "Reject orphan API journals lacking their frozen plan",
+    "Task-specific all-five-common MAE/bias/Spearman/coverage"
+  ],
+  "ensemble_mean_arithmetic": "Decimal(str(component)) sum / component count, then float; no output rounding or fuzzy native-score ranks"
+}

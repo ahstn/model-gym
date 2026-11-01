@@ -1,0 +1,129 @@
+{
+  "cases": [
+    {
+      "case_id": "R0002",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/72123b070eecdf267c956588d8b63ab1263fa547876074507e557f20994b0717.png",
+      "view_sha256": "72123b070eecdf267c956588d8b63ab1263fa547876074507e557f20994b0717"
+    },
+    {
+      "case_id": "R0141",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/5f0e9c4241bc729b57d42a9fec6501bc48ecc0536e5f0a2674a9a5120d741145.png",
+      "view_sha256": "5f0e9c4241bc729b57d42a9fec6501bc48ecc0536e5f0a2674a9a5120d741145"
+    },
+    {
+      "case_id": "R0351",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/c12a0a0cf4e5621f1983620924bc6baa870a865cc3e0f13acd5eae15e8951cd0.png",
+      "view_sha256": "c12a0a0cf4e5621f1983620924bc6baa870a865cc3e0f13acd5eae15e8951cd0"
+    },
+    {
+      "case_id": "R0060",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/453124ce2d2e0f5cd8d56d0eb142801c88fb12417354ff57b1b413a74551157f.png",
+      "view_sha256": "453124ce2d2e0f5cd8d56d0eb142801c88fb12417354ff57b1b413a74551157f"
+    },
+    {
+      "case_id": "R0187",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/583ccbf4fa1b709c8964700f1d4746f330ffc830889bbd525d75f751c21b7932.png",
+      "view_sha256": "583ccbf4fa1b709c8964700f1d4746f330ffc830889bbd525d75f751c21b7932"
+    },
+    {
+      "case_id": "R0415",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/c495414ecf98a46b468e12a7e2c43525d07775f8482f729d5a0d1a389ca7b355.png",
+      "view_sha256": "c495414ecf98a46b468e12a7e2c43525d07775f8482f729d5a0d1a389ca7b355"
+    },
+    {
+      "case_id": "R0463",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/2192d7ecebfcb517fa0bba6791b77701172017cac53a3f4edee32a5bc6bd4491.png",
+      "view_sha256": "2192d7ecebfcb517fa0bba6791b77701172017cac53a3f4edee32a5bc6bd4491"
+    },
+    {
+      "case_id": "R0299",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/6fe5ab92682174cd1189cd306dab0499904e514466ea5361518d6680a4434782.png",
+      "view_sha256": "6fe5ab92682174cd1189cd306dab0499904e514466ea5361518d6680a4434782"
+    },
+    {
+      "case_id": "R0149",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/0fe843b553e5de180abf5acbaacfcea77d3c1afb894ad91df124fb075a9e575b.png",
+      "view_sha256": "0fe843b553e5de180abf5acbaacfcea77d3c1afb894ad91df124fb075a9e575b"
+    },
+    {
+      "case_id": "R0269",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/1e415167bf06a55b959e7c3fcb3fe681f1240f87bbe442e964efea690e384257.png",
+      "view_sha256": "1e415167bf06a55b959e7c3fcb3fe681f1240f87bbe442e964efea690e384257"
+    },
+    {
+      "case_id": "R0174",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/2416b8fd2eb276260df3a7dbb4a9e5d3c99a6f65d9ada1b456274b641f702b87.png",
+      "view_sha256": "2416b8fd2eb276260df3a7dbb4a9e5d3c99a6f65d9ada1b456274b641f702b87"
+    },
+    {
+      "case_id": "R0376",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/40893546b65da27f53f672f1a84cbc19c1a04ac4e2d38101a9184dd92a4a8a8d.png",
+      "view_sha256": "40893546b65da27f53f672f1a84cbc19c1a04ac4e2d38101a9184dd92a4a8a8d"
+    },
+    {
+      "case_id": "R0377",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/461269cb55297b4ab29bb491b5bf009e21c65595c8e9c4ece348f4bf713dd3dc.png",
+      "view_sha256": "461269cb55297b4ab29bb491b5bf009e21c65595c8e9c4ece348f4bf713dd3dc"
+    },
+    {
+      "case_id": "R0017",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/c9db87caef801ac6859ae33594a88f7c373d211d27a75e9fc8a5bcbf606dd51e.png",
+      "view_sha256": "c9db87caef801ac6859ae33594a88f7c373d211d27a75e9fc8a5bcbf606dd51e"
+    },
+    {
+      "case_id": "R0169",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/4f49938b9d76d4d9102775a4503da9e6a93fe0652fd898660d204394f9dccb35.png",
+      "view_sha256": "4f49938b9d76d4d9102775a4503da9e6a93fe0652fd898660d204394f9dccb35"
+    },
+    {
+      "case_id": "R0129",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/9838d340e7bee7066a065891a412a6755d5cff0ecb66296b2201798896916144.png",
+      "view_sha256": "9838d340e7bee7066a065891a412a6755d5cff0ecb66296b2201798896916144"
+    },
+    {
+      "case_id": "R0014",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/8eaedfd2217685c415ec02c0024ab5267bab1d8196534e9077f2c04887df49ac.png",
+      "view_sha256": "8eaedfd2217685c415ec02c0024ab5267bab1d8196534e9077f2c04887df49ac"
+    },
+    {
+      "case_id": "R0274",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/7eb62d8b2e356e6ded722c77ff5bfbf821f24663da281d86fefacfe4de7888b5.png",
+      "view_sha256": "7eb62d8b2e356e6ded722c77ff5bfbf821f24663da281d86fefacfe4de7888b5"
+    },
+    {
+      "case_id": "R0268",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/5e550b1931854c9e1ac9830f10399e197a08551f3c8e421d2b22261c2150ead7.png",
+      "view_sha256": "5e550b1931854c9e1ac9830f10399e197a08551f3c8e421d2b22261c2150ead7"
+    },
+    {
+      "case_id": "R0399",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/fcd9999d0087f07ae1b14b4227f2cf13617a84dfff37babcb89422580a8057f6.png",
+      "view_sha256": "fcd9999d0087f07ae1b14b4227f2cf13617a84dfff37babcb89422580a8057f6"
+    },
+    {
+      "case_id": "R0294",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/89ea4a8e996f254b626cb0cb281d66abb945dab1086b9b41c00374726848f9ec.png",
+      "view_sha256": "89ea4a8e996f254b626cb0cb281d66abb945dab1086b9b41c00374726848f9ec"
+    },
+    {
+      "case_id": "R0374",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/24ae25c4828689f9b152cafc70a0e916462029f8398154d8ec045e94da3676db.png",
+      "view_sha256": "24ae25c4828689f9b152cafc70a0e916462029f8398154d8ec045e94da3676db"
+    },
+    {
+      "case_id": "R0031",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/f7e7e9cb4d5e2c585728a031c98f1a4603cbf9dc9deeae1664195fe6d5affa98.png",
+      "view_sha256": "f7e7e9cb4d5e2c585728a031c98f1a4603cbf9dc9deeae1664195fe6d5affa98"
+    },
+    {
+      "case_id": "R0238",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/722c993cf9fb64f9cdcfc43e928de7f97cd3d1f330eaa77ee86744b0cef5638c.png",
+      "view_sha256": "722c993cf9fb64f9cdcfc43e928de7f97cd3d1f330eaa77ee86744b0cef5638c"
+    },
+    {
+      "case_id": "R0417",
+      "image_path": "/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/bbda436cc31452d963c04a153f082346b0cca67f92890672ad2ed8beca863e99.png",
+      "view_sha256": "bbda436cc31452d963c04a153f082346b0cca67f92890672ad2ed8beca863e99"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "checked_on": "2026-11-01",
+  "pod_id": "j8qvat8tmzyhgr",
+  "status_at_check": "EXITED",
+  "checkpoint": "q-future/Q-ReAlign-Lite-4B",
+  "revision": "06add46a6bc4a7dfcf0a59a2fb1ed15a6e3d30b7",
+  "configured_server_sha256": "aaab73e53225093d30e1fbe800425c3b9754d7a5547013f735de8f358a408dbb",
+  "configured_server_matches_historical_source": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "catalogue_gpu_memory_gb": 24,
+  "pod_gpu_memory_field": 31,
+  "quote_usd_per_hour": 0.89,
+  "quote_sources": [
+    "Runpod get_pod",
+    "Runpod get_gpu_type(POD,SECURE,count=1)"
+  ],
+  "concurrency": 2,
+  "model_or_server_changes": false,
+  "reported_per_image_price_usd": "0.00",
+  "price_basis": "user_assigned_zero; actual infrastructure separately accounted",
+  "tests": {
+    "unittest_passed": 18,
+    "combined_lite_analysis_pytest_passed": 35,
+    "pytest_subtests_passed": 16,
+    "ruff_check": "passed: isolated E,F,I, line length 120",
+    "ruff_format": "passed"
+  },
+  "runtime": {
+    "python": "3.13.14 (main, Jun 23 2026, 15:18:27) [Clang 22.1.3 ]",
+    "requests": "2.34.2"
+  },
+  "files": {
+    "lite_runner.py": "dcf9ab0424fb1c3739d194ec3364fa07900948028f4497e5544703e94428b1f0",
+    "test_lite_runner.py": "be26239c20fb1efd0026558ab8de46caf9c456d9465d3206ba8751aadb7b383f",
+    "lite-protocol.md": "00048a01d689f2b16b5e6ae854ae11c95aaf29d1a98cb5f612efa8214699278d"
+  },
+  "execution_status": "prepared; waiting for frozen corpus and root launch instruction; pod not started",
+  "preflight_hardening": {
+    "checked_at": "2026-11-01T12:33:10.275807+00:00",
+    "client_version": "rehearsal-lite-v2",
+    "benchmark_admission": "Any subset requires exact 500 reference case/image identities, 500 distinct families, 100/300/100 partitions, and matching full 4000-case manifest freeze",
+    "durability": "Directory creation, exclusive file creation and atomic replacement fsync parent entries before dispatch/return; unresolved attempts never replay automatically"
+  }
+}

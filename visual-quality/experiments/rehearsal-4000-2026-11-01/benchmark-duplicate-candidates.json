@@ -1,0 +1,1278 @@
+{
+  "note": "Similarity flags review, not proven duplication",
+  "pairs": [
+    {
+      "a": "C0514",
+      "b": "C0557",
+      "cosine": 0.9865559339523315,
+      "dhash_distance": 12,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0165",
+      "b": "C0763",
+      "cosine": 0.978639543056488,
+      "dhash_distance": 31,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0323",
+      "b": "C0764",
+      "cosine": 0.9740413427352905,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0388",
+      "cosine": 0.9728303551673889,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0323",
+      "b": "C0444",
+      "cosine": 0.9703333973884583,
+      "dhash_distance": 15,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0190",
+      "cosine": 0.9678746461868286,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0388",
+      "b": "C0659",
+      "cosine": 0.9672102332115173,
+      "dhash_distance": 18,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0174",
+      "cosine": 0.9661697149276733,
+      "dhash_distance": 19,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0618",
+      "b": "C0812",
+      "cosine": 0.9657527804374695,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0388",
+      "cosine": 0.9656180143356323,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0388",
+      "b": "C0987",
+      "cosine": 0.9642515182495117,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0987",
+      "cosine": 0.9636839032173157,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0987",
+      "cosine": 0.963585376739502,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0618",
+      "cosine": 0.9600757360458374,
+      "dhash_distance": 16,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0388",
+      "cosine": 0.959293782711029,
+      "dhash_distance": 20,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0190",
+      "cosine": 0.9587286710739136,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0484",
+      "b": "C0618",
+      "cosine": 0.9562046527862549,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0812",
+      "cosine": 0.956165075302124,
+      "dhash_distance": 22,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0484",
+      "b": "C0812",
+      "cosine": 0.9558011889457703,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0444",
+      "b": "C0641",
+      "cosine": 0.9542785882949829,
+      "dhash_distance": 36,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0165",
+      "b": "C0467",
+      "cosine": 0.9532198905944824,
+      "dhash_distance": 31,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0812",
+      "cosine": 0.9531643390655518,
+      "dhash_distance": 20,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0659",
+      "b": "C0987",
+      "cosine": 0.9526363611221313,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0659",
+      "cosine": 0.9524827003479004,
+      "dhash_distance": 19,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0350",
+      "b": "C0987",
+      "cosine": 0.9522189497947693,
+      "dhash_distance": 20,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0659",
+      "cosine": 0.9513078331947327,
+      "dhash_distance": 27,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0164",
+      "b": "C0764",
+      "cosine": 0.9505439400672913,
+      "dhash_distance": 30,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0484",
+      "b": "C0809",
+      "cosine": 0.9500060081481934,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0987",
+      "cosine": 0.9497638940811157,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0388",
+      "b": "C0484",
+      "cosine": 0.9496056437492371,
+      "dhash_distance": 17,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0809",
+      "cosine": 0.9493715763092041,
+      "dhash_distance": 35,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0484",
+      "cosine": 0.9490002989768982,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0618",
+      "cosine": 0.9488524794578552,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0350",
+      "b": "C0388",
+      "cosine": 0.94779372215271,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0058",
+      "b": "C0350",
+      "cosine": 0.9468898177146912,
+      "dhash_distance": 16,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0058",
+      "b": "C0241",
+      "cosine": 0.9463342428207397,
+      "dhash_distance": 27,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0484",
+      "cosine": 0.9462525248527527,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0144",
+      "b": "C0923",
+      "cosine": 0.9458266496658325,
+      "dhash_distance": 34,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0165",
+      "b": "C0514",
+      "cosine": 0.9458112716674805,
+      "dhash_distance": 22,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0444",
+      "b": "C0764",
+      "cosine": 0.9457767009735107,
+      "dhash_distance": 36,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0809",
+      "b": "C0812",
+      "cosine": 0.9456968903541565,
+      "dhash_distance": 31,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0812",
+      "cosine": 0.9454358816146851,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0218",
+      "b": "C0428",
+      "cosine": 0.9450328350067139,
+      "dhash_distance": 33,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0484",
+      "b": "C0659",
+      "cosine": 0.9448834657669067,
+      "dhash_distance": 19,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0745",
+      "b": "C0809",
+      "cosine": 0.9442653656005859,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0659",
+      "b": "C0812",
+      "cosine": 0.9436643719673157,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0241",
+      "b": "C0304",
+      "cosine": 0.9434441924095154,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0659",
+      "cosine": 0.9430915713310242,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0564",
+      "cosine": 0.9430696368217468,
+      "dhash_distance": 20,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0388",
+      "b": "C0745",
+      "cosine": 0.9430569410324097,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0467",
+      "b": "C0763",
+      "cosine": 0.9429234266281128,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0350",
+      "cosine": 0.9427318572998047,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0350",
+      "b": "C0659",
+      "cosine": 0.942403256893158,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0659",
+      "b": "C0745",
+      "cosine": 0.9421694874763489,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0350",
+      "cosine": 0.9417527914047241,
+      "dhash_distance": 27,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0659",
+      "b": "C0809",
+      "cosine": 0.9413316249847412,
+      "dhash_distance": 18,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0858",
+      "b": "C0953",
+      "cosine": 0.9411994814872742,
+      "dhash_distance": 36,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0514",
+      "b": "C0763",
+      "cosine": 0.9411345720291138,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0564",
+      "b": "C0812",
+      "cosine": 0.9410758018493652,
+      "dhash_distance": 22,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0165",
+      "b": "C0557",
+      "cosine": 0.9408745169639587,
+      "dhash_distance": 30,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0388",
+      "b": "C0809",
+      "cosine": 0.9408039450645447,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0343",
+      "cosine": 0.9406194686889648,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0745",
+      "cosine": 0.9399518966674805,
+      "dhash_distance": 28,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0484",
+      "b": "C0745",
+      "cosine": 0.9389550685882568,
+      "dhash_distance": 28,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0514",
+      "b": "C0641",
+      "cosine": 0.9380072951316833,
+      "dhash_distance": 12,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0812",
+      "b": "C0987",
+      "cosine": 0.9375172853469849,
+      "dhash_distance": 18,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0564",
+      "b": "C0618",
+      "cosine": 0.937320351600647,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0343",
+      "cosine": 0.9372726082801819,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0564",
+      "cosine": 0.9363865852355957,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0347",
+      "b": "C0444",
+      "cosine": 0.9351840019226074,
+      "dhash_distance": 35,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0388",
+      "b": "C0812",
+      "cosine": 0.9348986148834229,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0564",
+      "b": "C0745",
+      "cosine": 0.9344562292098999,
+      "dhash_distance": 22,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0564",
+      "b": "C0987",
+      "cosine": 0.9343255758285522,
+      "dhash_distance": 20,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0241",
+      "b": "C0350",
+      "cosine": 0.9342965483665466,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0618",
+      "b": "C0745",
+      "cosine": 0.9341431856155396,
+      "dhash_distance": 16,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0164",
+      "b": "C0323",
+      "cosine": 0.9339038729667664,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0618",
+      "b": "C0987",
+      "cosine": 0.9331517219543457,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0745",
+      "b": "C0812",
+      "cosine": 0.9330036044120789,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0618",
+      "cosine": 0.9327952861785889,
+      "dhash_distance": 27,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0350",
+      "b": "C0484",
+      "cosine": 0.9318657517433167,
+      "dhash_distance": 22,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0484",
+      "b": "C0987",
+      "cosine": 0.9308856129646301,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0467",
+      "b": "C0990",
+      "cosine": 0.9308457374572754,
+      "dhash_distance": 35,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0350",
+      "cosine": 0.9303680658340454,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0241",
+      "b": "C0659",
+      "cosine": 0.9300817847251892,
+      "dhash_distance": 28,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0809",
+      "b": "C0987",
+      "cosine": 0.9293193817138672,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0343",
+      "b": "C0564",
+      "cosine": 0.9291160106658936,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0763",
+      "b": "C0990",
+      "cosine": 0.929048478603363,
+      "dhash_distance": 37,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0564",
+      "cosine": 0.9289588332176208,
+      "dhash_distance": 30,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0745",
+      "cosine": 0.9282935857772827,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0739",
+      "b": "C0788",
+      "cosine": 0.9280052185058594,
+      "dhash_distance": 15,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0241",
+      "b": "C0343",
+      "cosine": 0.9278692603111267,
+      "dhash_distance": 22,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0618",
+      "b": "C0809",
+      "cosine": 0.9276638627052307,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0388",
+      "b": "C0618",
+      "cosine": 0.9274691343307495,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0557",
+      "b": "C0763",
+      "cosine": 0.9274163246154785,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0388",
+      "b": "C0564",
+      "cosine": 0.9270637035369873,
+      "dhash_distance": 19,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0467",
+      "b": "C0514",
+      "cosine": 0.9261296391487122,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0564",
+      "b": "C0659",
+      "cosine": 0.9258089065551758,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0323",
+      "b": "C0641",
+      "cosine": 0.9257665276527405,
+      "dhash_distance": 27,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0484",
+      "cosine": 0.9257292151451111,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0484",
+      "b": "C0564",
+      "cosine": 0.9249767065048218,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0467",
+      "b": "C0557",
+      "cosine": 0.9247108697891235,
+      "dhash_distance": 15,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0347",
+      "b": "C0763",
+      "cosine": 0.9243243932723999,
+      "dhash_distance": 42,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0152",
+      "b": "C0213",
+      "cosine": 0.9235756993293762,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0241",
+      "b": "C0388",
+      "cosine": 0.9232496023178101,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0564",
+      "b": "C0809",
+      "cosine": 0.9232454299926758,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0618",
+      "b": "C0659",
+      "cosine": 0.9228793978691101,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0165",
+      "b": "C0990",
+      "cosine": 0.9226502180099487,
+      "dhash_distance": 32,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0343",
+      "b": "C0659",
+      "cosine": 0.922176718711853,
+      "dhash_distance": 28,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0444",
+      "b": "C0763",
+      "cosine": 0.9212360382080078,
+      "dhash_distance": 29,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0304",
+      "b": "C0659",
+      "cosine": 0.9202031493186951,
+      "dhash_distance": 15,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0304",
+      "b": "C0484",
+      "cosine": 0.9197967052459717,
+      "dhash_distance": 18,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0174",
+      "b": "C0343",
+      "cosine": 0.9197474718093872,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0323",
+      "b": "C0763",
+      "cosine": 0.9193118810653687,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0304",
+      "cosine": 0.919203519821167,
+      "dhash_distance": 19,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0343",
+      "b": "C0618",
+      "cosine": 0.9190746545791626,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0347",
+      "b": "C0641",
+      "cosine": 0.9188919067382812,
+      "dhash_distance": 47,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0165",
+      "b": "C0323",
+      "cosine": 0.9187772274017334,
+      "dhash_distance": 35,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0809",
+      "cosine": 0.9182131290435791,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0343",
+      "b": "C0745",
+      "cosine": 0.918038547039032,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0165",
+      "b": "C0347",
+      "cosine": 0.9178212881088257,
+      "dhash_distance": 37,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0343",
+      "b": "C0388",
+      "cosine": 0.9171364903450012,
+      "dhash_distance": 22,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0304",
+      "b": "C0350",
+      "cosine": 0.9171153903007507,
+      "dhash_distance": 20,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0343",
+      "b": "C0812",
+      "cosine": 0.9169337749481201,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0241",
+      "cosine": 0.9166474938392639,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0304",
+      "b": "C0388",
+      "cosine": 0.9156472086906433,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0323",
+      "b": "C0347",
+      "cosine": 0.9155905246734619,
+      "dhash_distance": 36,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0127",
+      "b": "C0488",
+      "cosine": 0.9139823913574219,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0804",
+      "b": "C0848",
+      "cosine": 0.9137425422668457,
+      "dhash_distance": 31,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0190",
+      "b": "C0241",
+      "cosine": 0.9132077693939209,
+      "dhash_distance": 19,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0058",
+      "b": "C0388",
+      "cosine": 0.9126484990119934,
+      "dhash_distance": 17,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0165",
+      "b": "C0444",
+      "cosine": 0.9125944972038269,
+      "dhash_distance": 40,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0745",
+      "b": "C0987",
+      "cosine": 0.9124022722244263,
+      "dhash_distance": 30,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0343",
+      "b": "C0987",
+      "cosine": 0.9121667146682739,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0350",
+      "b": "C0618",
+      "cosine": 0.9117649793624878,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0350",
+      "b": "C0564",
+      "cosine": 0.9108108282089233,
+      "dhash_distance": 22,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0058",
+      "b": "C0304",
+      "cosine": 0.910189688205719,
+      "dhash_distance": 14,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0641",
+      "b": "C0764",
+      "cosine": 0.9101388454437256,
+      "dhash_distance": 28,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0641",
+      "b": "C0763",
+      "cosine": 0.9096039533615112,
+      "dhash_distance": 23,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0058",
+      "cosine": 0.9088103771209717,
+      "dhash_distance": 17,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0164",
+      "b": "C0444",
+      "cosine": 0.9081443548202515,
+      "dhash_distance": 16,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0735",
+      "b": "C0884",
+      "cosine": 0.9077479243278503,
+      "dhash_distance": 27,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0672",
+      "b": "C0855",
+      "cosine": 0.9076991677284241,
+      "dhash_distance": 29,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0304",
+      "b": "C0812",
+      "cosine": 0.9076734781265259,
+      "dhash_distance": 18,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0311",
+      "b": "C0622",
+      "cosine": 0.907180666923523,
+      "dhash_distance": 33,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0394",
+      "b": "C0990",
+      "cosine": 0.9061568379402161,
+      "dhash_distance": 32,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0343",
+      "b": "C0350",
+      "cosine": 0.9059561491012573,
+      "dhash_distance": 19,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0347",
+      "b": "C0990",
+      "cosine": 0.9055886268615723,
+      "dhash_distance": 21,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0304",
+      "b": "C0677",
+      "cosine": 0.9055733680725098,
+      "dhash_distance": 9,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0745",
+      "cosine": 0.9055540561676025,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0165",
+      "b": "C0641",
+      "cosine": 0.904809832572937,
+      "dhash_distance": 24,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0040",
+      "b": "C0809",
+      "cosine": 0.9039068222045898,
+      "dhash_distance": 26,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0350",
+      "b": "C0812",
+      "cosine": 0.9030563831329346,
+      "dhash_distance": 22,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0241",
+      "b": "C0745",
+      "cosine": 0.9025163650512695,
+      "dhash_distance": 17,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0444",
+      "b": "C0514",
+      "cosine": 0.9024724960327148,
+      "dhash_distance": 36,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0304",
+      "b": "C0987",
+      "cosine": 0.9022192358970642,
+      "dhash_distance": 14,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0058",
+      "b": "C0987",
+      "cosine": 0.9010896682739258,
+      "dhash_distance": 14,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0763",
+      "b": "C0764",
+      "cosine": 0.9007704854011536,
+      "dhash_distance": 25,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0223",
+      "b": "C0848",
+      "cosine": 0.9002812504768372,
+      "dhash_distance": 37,
+      "review_status": "pending",
+      "same_category": true
+    },
+    {
+      "a": "C0058",
+      "b": "C0343",
+      "cosine": 0.9002168774604797,
+      "dhash_distance": 19,
+      "review_status": "pending",
+      "same_category": true
+    }
+  ],
+  "threshold": 0.9
+}
