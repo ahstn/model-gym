@@ -674,7 +674,7 @@ def render(report):
     if report.get("infrastructure"):
         lines[-2:] = []
         lines += table(
-            ("Infrastructure", "Posted USD", "Posted through", "Receipt scope"),
+            ("Infrastructure", "Posted USD", "Latest bucket end", "Receipt scope"),
             [
                 (
                     name,

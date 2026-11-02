@@ -12,7 +12,9 @@ python visual-quality/experiments/labeling-10000-2026-11-01/gallery_run.py \
   --browser-check
 ```
 
-After the final export is ready, run the same command with `--exports "$RUN_DATA/exports" --output "$RUN_DATA/gallery"`. Keep the default selection file. The source export must remain stable while rendering; the generator checks its hashes before and after the build. The browser check uses the installed local Chromium and requires the environment to permit its local socket operations.
+After the final export is ready, run the same command with `--exports "$RUN_DATA/exports" --output "$RUN_DATA/gallery"`. Keep the default selection file. The source export must remain stable while rendering; the generator checks its hashes before and after the build. The browser check uses the installed local Chromium and Node.js with a native `WebSocket` implementation (Node 26 is installed here), and requires the environment to permit local socket operations. It waits for the existing assertion result through Chromium's local debugging protocol, including all 10,000 preview loads, with a bounded timeout and isolated process cleanup.
+
+For a systemd service, put the Node executable on the service's `PATH`; the user manager does not inherit the interactive shell's mise setup. This run uses `/home/ahstn/.local/share/mise/installs/node/26.13.0/bin`.
 
 The first run freezes `gallery-collage-selection.json` under run data. It selects 72 equally spaced ranks in reference technical score, breaking ties by case ID, from the first 1,000 explicit publication orders. It reads no model scores for selection. It pins the complete reference and manifest hashes and the publication identity list. Later runs fail if the selection or these inputs differ. The last 500 benchmark references never enter the collage selection.
 

@@ -2,6 +2,8 @@
 
 The [photo-labeling workspace](labeling/README.md) holds the current two-score request definitions, model routes, corpus manifest, benchmark references and recorded observations. The canonical ensemble uses **37.5% GPT-6 Luna, 37.5% DeepSeek and 25% Liquid**, separately for technical quality and aesthetics; Jev and Q-ReAlign Lite remain comparison models. Eligibility is assessed before quality, and clearly excluded content receives the 1.00 floor. Existing labels remain pending review.
 
+The completed [10,000-image rehearsal](experiments/labeling-10000-2026-11-01/README.md) includes 1,500 assistant references, actual EmbeddingGemma 2 content organization, separate image statistics and all five scorers. Only its first 1,000 benchmark images are published as active per-image records. The [agreement report](experiments/labeling-10000-2026-11-01/report.md) and [72-image collage](experiments/labeling-10000-2026-11-01/collage/README.md) summarize the run; full data remains local and ignored. This rehearsal is separate from the acquisition pilot described below.
+
 The active configuration is separate from the older technical-only `visual-pilot label` command. `visual_quality.labeling_profile` loads the current prompt and builds requests; the full current labeling runner and response-validation pipeline are not yet integrated into the package. It does not make network calls or publish labels.
 
 The rest of this package acquires images, creates controlled distortions and assembles family-separated manifests for the visual-quality dataset. The [data documentation](docs/README.md) covers source terms, evaluation and training requirements.

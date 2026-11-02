@@ -11,6 +11,8 @@ import csv
 import hashlib
 import html
 import json
+import os
+import signal
 import subprocess
 import tempfile
 from collections import Counter
@@ -277,6 +279,74 @@ out.textContent=JSON.stringify(result);document.title='GALLERY_VALIDATION_'+resu
 """
 
 
+CDP_SCRIPT = r"""
+import {spawn} from 'node:child_process';
+import {readFile} from 'node:fs/promises';
+const [rawCommand, url, profile] = process.argv.slice(1);
+const [executable, ...args] = JSON.parse(rawCommand);
+const browser = spawn(executable, args, {stdio:'ignore'});
+const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
+let socket;
+try {
+  let port;
+  for (let i=0; i<100; i++) {
+    try {port=(await readFile(profile+'/DevToolsActivePort','utf8')).split('\n')[0]; break}
+    catch {await pause(100)}
+  }
+  if (!port) throw Error('Chromium did not expose its local debugging port');
+  const response=await fetch(`http://127.0.0.1:${port}/json/new?${encodeURIComponent(url)}`,{method:'PUT'});
+  if (!response.ok) throw Error('Chromium could not create the validation page');
+  const target=await response.json();
+  socket=new WebSocket(target.webSocketDebuggerUrl);
+  await new Promise((resolve,reject)=>{socket.onopen=resolve;socket.onerror=reject});
+  let serial=0;const pending=new Map();
+  socket.onmessage=event=>{
+    const reply=JSON.parse(event.data), done=pending.get(reply.id);
+    if(done){pending.delete(reply.id);done(reply)}
+  };
+  const call=(method,params)=>new Promise(resolve=>{
+    const id=++serial;pending.set(id,resolve);socket.send(JSON.stringify({id,method,params}));
+  });
+  const deadline=Date.now()+270000;
+  while(Date.now()<deadline){
+    const reply=await call('Runtime.evaluate',{
+      expression:"document.getElementById('gallery-validation-result')?.textContent || ''",
+      returnByValue:true
+    });
+    if(reply.error || reply.result?.exceptionDetails) throw Error(JSON.stringify(reply));
+    const value=reply.result.result.value;
+    if(value){console.log(value);break}
+    await pause(100);
+  }
+  if(Date.now()>=deadline) throw Error('Browser validation result timed out');
+} catch(error){console.error(String(error));process.exitCode=1}
+finally{socket?.close();browser.kill('SIGKILL')}
+"""
+
+
+def run_browser(command: list[str], *, timeout: float = 300) -> subprocess.CompletedProcess:
+    """Bound the full preview load and stop owned descendants before profile cleanup."""
+    process = subprocess.Popen(
+        command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, start_new_session=True
+    )
+    try:
+        stdout, stderr = process.communicate(timeout=timeout)
+        return subprocess.CompletedProcess(command, process.returncode, stdout, stderr)
+    finally:
+        # Killing only the parent leaves Chrome children writing to its profile.
+        try:
+            os.killpg(process.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        try:
+            process.communicate(timeout=5)
+        except subprocess.TimeoutExpired:
+            # A child that detached into another session must not hold cleanup open.
+            process.stdout.close()
+            process.stderr.close()
+            process.wait(timeout=5)
+
+
 def browser_check(args: argparse.Namespace, *, script: str = BROWSER_SCRIPT) -> dict:
     index = (args.gallery / "index.html").read_text()
     with tempfile.TemporaryDirectory(prefix="rehearsal-gallery-check-") as directory:
@@ -295,20 +365,29 @@ def browser_check(args: argparse.Namespace, *, script: str = BROWSER_SCRIPT) -> 
             "--disable-dev-shm-usage",
             "--allow-file-access-from-files",
             "--disable-crash-reporter",
+            "--no-first-run",
             f"--user-data-dir={work / 'profile'}",
-            "--dump-dom",
-            "--virtual-time-budget=45000",
-            harness.as_uri(),
+            "--remote-debugging-port=0",
+            "about:blank",
         ]
-        completed = subprocess.run(command, capture_output=True, text=True, timeout=65, check=False)
+        # CDP waits for the actual asynchronous result; --dump-dom's virtual-time
+        # completion can stall even when the 10,000-preview harness would pass.
+        completed = run_browser(
+            [
+                "node",
+                "--input-type=module",
+                "-e",
+                CDP_SCRIPT,
+                json.dumps(command),
+                harness.as_uri(),
+                str(work / "profile"),
+            ]
+        )
         require(completed.returncode == 0, "Headless browser failed: " + completed.stderr[-800:])
-        marker = '<pre id="gallery-validation-result">'
-        require(marker in completed.stdout, "Browser harness did not start")
-        raw = completed.stdout.split(marker, 1)[1].split("</pre>", 1)[0]
-        result = json.loads(html.unescape(raw))
+        result = json.loads(completed.stdout)
         require(result.get("status") == "passed", "Browser validation failed: " + json.dumps(result))
         result["chromium_version"] = subprocess.check_output(
-            [str(args.chromium), "--version"], text=True
+            [str(args.chromium), "--version"], text=True, timeout=10
         ).strip()
         return result
 

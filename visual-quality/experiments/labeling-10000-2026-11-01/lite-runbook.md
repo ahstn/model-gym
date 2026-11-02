@@ -40,6 +40,8 @@ A disjoint 100-image benchmark phase tested three additional clients while the t
 
 ## Finish and account
 
+This run completed on 2026-11-02: the 6,002 new attempts contain 6,000 valid assessments and two retained HTTP520 failures, each recovered with the same payload. Together with 4,000 verified reused assessments, Lite covers all 10,000 images. The queue finished successfully and the owned pod was confirmed `EXITED` at 03:16:42 UTC with no retained volume mounts. The final report separates partial posted billing from the creation-to-stop GPU-rate estimate; neither is included in the $0.00 inference-row prices.
+
 The exporter combines the verified historical reuse and every executed new phase. It validates request/view identity across retries, preserves all attempt receipts and costs, and uses the sole scored assessment if present. A terminal error remains a missing score. Latency for a selected response is distinct from the sum of its failed and successful attempts.
 
 After the final phase, verify 10,000 unique Lite image slots and compare numerical coverage with the run summaries. Stop the owned Runpod worker through the plugin and retain the returned state. Report provider billing when available; otherwise report the GPU-rate estimate and state that the actual bill is unposted. Do not treat the assigned $0.00 label price as zero infrastructure spending. Leave unrelated pods and existing user gallery services untouched.

@@ -4,7 +4,11 @@ This run expands the previous 4,000-image rehearsal to 10,000 delivered views an
 
 The baseline is `9a2f7cef8265690019d41b0158a558dcfd8a0d6d`, including the requested decision-question changes. The new profile adapts `visual-rating-v2` to the established two-outcome photography contract. All four API models receive fresh calls because the technical rubric changed; compatible Q-ReAlign Lite results for the original 4,000 views are reused.
 
-The corpus, all 1,500 reference assessments and API scoring are complete. The new Q-ReAlign Lite requests are still completing. Final coverage, assistant-reference agreement, latency and cost will be recorded in `report.md` after this queue finishes. An operationally completed request may still have a null assessment.
+The corpus, all 1,500 reference assessments and inference are complete. The [agreement report](report.md) records coverage, latency, scope errors and costs; its total-cost-per-model table is last. The [72-image collage](collage/README.md) is restricted to the committed example set. The [full local gallery](../../data/labeling-10000-2026-11-01/gallery/index.html) contains all 10,000 images, separate statistics and related-image links.
+
+Luna, Liquid and Lite each have 10,000 numerical score pairs; DeepSeek has 9,999 and Jev has 9,997. The four missing assessments are one valid-unscorable DeepSeek response and three persistent Jev image-processing failures. Their nulls and every attempt remain recorded. The ensemble has 9,999 complete pairs, with no missing-component fallback. Both owned Runpod workers are stopped.
+
+On the fresh 500-image confirmation set, ensemble technical/aesthetic MAE is **0.363 / 0.275**, against Luna's **0.358 / 0.337**. The blend improves aesthetic agreement in this sample while technical agreement remains close to Luna. Lite's corresponding errors are **0.395 / 1.064**, with substantial aesthetic underprediction. These are comparisons with assistant judgments, not human-validated accuracy or statistically established population rankings. Weights and prompts were not fitted to this confirmation set.
 
 ## Where the data lives
 
@@ -70,3 +74,7 @@ PYTHONPATH=src /home/ahstn/git/model-gym/visual-quality/.venv/bin/python \
 ```
 
 The [directory rules](../../AGENTS.md) preserve the accepted ensemble, photographic scope, statistics, publication and accounting decisions for subsequent work. Historical raw responses retain their provenance; current result views use the accepted ensemble without presenting old calls as fresh results.
+
+The aggregate [validation receipt](validation.json) records the independent data audit, request and response hash checks, all 10,000 image joins, the 1,000-image publication boundary, software tests and 188 browser assertions. All 10,000 gallery previews loaded successfully. The original browser virtual-time exit stalled; explicit completion polling now preserves the same assertions with bounded process cleanup.
+
+`gallery_run.py` rebuilds the full ignored gallery and its frozen first-1,000-only collage selection; see the [gallery runbook](gallery-runbook.md). `publish_collage.py --gallery DATA/gallery --records DATA/publication-staging --destination EXPERIMENT/collage` publishes only the four validated PNGs and bounded provenance after checking final coverage, the publication allowlist and exact selected values. It rejects unfinished exports and never copies the full gallery into Git.

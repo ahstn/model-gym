@@ -1,0 +1,24 @@
+{
+  "schema_version": "labeling-collage-publication-v1",
+  "publication_limit": 1000,
+  "collage_images": 72,
+  "generation_proof_sha256": "89c1c59a98f00b2caf6f3e5b7a78fa4f59a2c8a9f4b7f824a46655f5a5e0ecc8",
+  "png_validation_sha256": "eb55061359a445572b454640f388d4dd973d70d65d5313b761ed17d372c65698",
+  "publication_provenance_sha256": "d12e04239e397de67ab6555b326fbe94576b96d0c154a42a86aee1a25c177e84",
+  "publication_records": {
+    "labelled-images.jsonl": "98b0d6b2941c671d9cc47dcf116885bfdd794ff20ceab30fcbda4013c3cc3380",
+    "manifest.json": "37a6e08305bdd4e2da10494b72f1908a74b462033827cdfb45cc7fc2693ddaec",
+    "publication-case-ids.json": "20d54e7416e8ba7d7cafedf6a5aa85f41a4301a4273f0893dae25da5fba3a905",
+    "references.jsonl": "4e75ba59d0787331cb6b0709fee338bdd6e402e9ee5fc038133b22099188ae8b",
+    "scores.csv": "3dfff0324eb27f3528322ead87b2612654b4ba90c0b554c6291fa79c48959bbe",
+    "scores.jsonl": "fbc63ea0d0c4c4f39ed9fbfdbe7ec1cf4f07be23c0b7af2ae978bba958173cb6"
+  },
+  "selection_sha256": "46fe6d457cfcdc52524759600165c06a27f16b785424567c34e35e1d8320f2cf",
+  "pngs": {
+    "comparison-page-1.png": "84a61c94e25e4e71c5a42d1974d1aa5f9b17381253ac8c32fdf297575bc82ead",
+    "comparison-page-2.png": "ce9482e71df3c19bab626973d4e401bc2ae0995c567509f854def86b5322b0ce",
+    "comparison-page-3.png": "0ee2f36a0262403b6de34a6daa3819d22d61d3b4d9c6b26f37543ecbcf9e781c",
+    "comparison-page-4.png": "b4e090d939722b8fc880f64e7bd7e5eb7454f7bea3eed24cacb700fc972d9087"
+  },
+  "training_ready": false
+}
