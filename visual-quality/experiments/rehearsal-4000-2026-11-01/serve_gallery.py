@@ -1,4 +1,4 @@
-"""Serve the frozen gallery and exact views on localhost without directory browsing."""
+"""Serve canonical result overlays and exact views on localhost without browsing."""
 
 from __future__ import annotations
 
@@ -33,6 +33,9 @@ class GalleryHandler(BaseHTTPRequestHandler):
             target = allowed_root / "views" / path.removeprefix("/expanded-originals/")
         elif path in ("/report.md", "/scores-long.csv"):
             target = self.root / "published" / path.lstrip("/")
+            canonical = self.root / "canonical" / path.lstrip("/")
+            if canonical.is_file():
+                target = canonical
         elif path.startswith("/gallery/"):
             relative = Path(path.removeprefix("/gallery/"))
             permitted = (
@@ -71,6 +74,9 @@ class GalleryHandler(BaseHTTPRequestHandler):
                 self.send_error(404)
                 return
             target = self.root / "published" / "gallery" / relative
+            canonical = self.root / "canonical" / "gallery" / relative
+            if canonical.is_file():
+                target = canonical
         else:
             self.send_error(404)
             return

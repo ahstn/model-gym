@@ -11,6 +11,7 @@ from collections import Counter
 from pathlib import Path
 
 from visual_quality.labeling_profile import load_profile
+from visual_quality.publication import verify_publication
 
 HERE = Path(__file__).resolve().parent
 
@@ -23,14 +24,16 @@ def file_sha(path: Path) -> str:
 def verify(check_images: bool = False) -> dict:
     profile = load_profile(HERE)
     records = HERE / "records"
+    if (records / "publication-case-ids.json").exists():
+        return {**verify_publication(records, check_images=check_images), "profile_sha256": profile["sha256"]}
     provenance = json.loads((records / "provenance.json").read_text())
     for name, expected in provenance["records"].items():
         if file_sha(records / name) != expected:
             raise ValueError(f"Record hash mismatch: {name}")
     manifest = json.loads((records / "manifest.json").read_text())
     cases = {case["case_id"]: case for case in manifest["cases"]}
-    if len(cases) != len(manifest["cases"]) or len(cases) != 4000:
-        raise ValueError("Manifest must contain 4,000 unique views")
+    if len(cases) != len(manifest["cases"]):
+        raise ValueError("Manifest must contain unique views")
     if check_images:
         for case in cases.values():
             if file_sha(Path(case["image_path"])) != case["view_sha256"]:

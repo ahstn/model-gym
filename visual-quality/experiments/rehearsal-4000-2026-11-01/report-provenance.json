@@ -1,16 +1,22 @@
 {
-  "analysis_sha256": "25daf3a6c5ea55f0b7ac2183264bef8b75aa62015771b91c42dbe98fa60000c9",
-  "manifest_sha256": "57d6c46923b9ae20151bb8334373b0872f954c8af8cd0152150c1a7b76b8257a",
-  "renderer_sha256": "82e29dd6b06e02f7e695722da989ab20643894cef4d5c75557c1904c22895a67",
-  "supplements": {
-    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/reference-reliability/report.md": "29fc9c4221dc9072b2f30acc45320cbed53339fe7df1089b4b8db84fd4f9a989",
-    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/sharpness-report.md": "5e0ddf42b4fdba5582d0158262205da04733a78559dad16fcd976189eb913acc",
-    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-report.md": "5b3dbf92e8ea5f97c3b17fade0cead47660d4f13ed6a0ef5a4978d51372ccbfc",
-    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/protected-review/report.md": "aa442299d51a70847c1bc83e82112ae9fbd63a7a6bf5fccaa0648023e0d10740",
-    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/baseline-error-review.md": "d4ba044264361f37b19922867c14848c93c156fb707c33bf1593c577444acaf5",
-    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/operations-report.md": "f429addff258b293fc498f30afa4112525dccd6345465a7d1969a5c8dce15f3e",
-    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/lite-cost-report.md": "597f9534282604aa1fea214d84904992cb3f15b795cdc967556de0a65059fd77",
-    "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/final-findings.md": "40647e014266111fd30170a64210966d499301d5f84644cbc7eb57d56be20dd8"
+  "status": "historical_analysis_with_current_archival_notice",
+  "historical_generation": {
+    "analysis_sha256": "25daf3a6c5ea55f0b7ac2183264bef8b75aa62015771b91c42dbe98fa60000c9",
+    "manifest_sha256": "57d6c46923b9ae20151bb8334373b0872f954c8af8cd0152150c1a7b76b8257a",
+    "renderer_sha256": "82e29dd6b06e02f7e695722da989ab20643894cef4d5c75557c1904c22895a67",
+    "supplements": {
+      "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/reference-reliability/report.md": "29fc9c4221dc9072b2f30acc45320cbed53339fe7df1089b4b8db84fd4f9a989",
+      "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/sharpness-report.md": "5e0ddf42b4fdba5582d0158262205da04733a78559dad16fcd976189eb913acc",
+      "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/controlled-report.md": "5b3dbf92e8ea5f97c3b17fade0cead47660d4f13ed6a0ef5a4978d51372ccbfc",
+      "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/protected-review/report.md": "aa442299d51a70847c1bc83e82112ae9fbd63a7a6bf5fccaa0648023e0d10740",
+      "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/baseline-error-review.md": "d4ba044264361f37b19922867c14848c93c156fb707c33bf1593c577444acaf5",
+      "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/operations-report.md": "f429addff258b293fc498f30afa4112525dccd6345465a7d1969a5c8dce15f3e",
+      "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/lite-cost-report.md": "597f9534282604aa1fea214d84904992cb3f15b795cdc967556de0a65059fd77",
+      "/tmp/model-gym-rehearsal-20261101/visual-quality/experiments/rehearsal-4000-2026-11-01/final-findings.md": "40647e014266111fd30170a64210966d499301d5f84644cbc7eb57d56be20dd8"
+    },
+    "report_sha256": "58879760f9580b8e8a7f7cb0768a6a32cff8ff177c1bb468643430f4242da5a0"
   },
-  "report_sha256": "58879760f9580b8e8a7f7cb0768a6a32cff8ff177c1bb468643430f4242da5a0"
+  "report_sha256": "7632df67003eaf05f990caba806e4126f33531801563b2009d8f1a2fe2541f82",
+  "annotation": "Only an archival notice was added to the report and final findings; numerical analysis and original provider observations are unchanged. The original generation hashes remain under historical_generation.",
+  "annotated_final_findings_sha256": "a62de06905a73a38f22b737708ffb654073d76ac06910ab1aa7b5e0790e01942"
 }

@@ -1,5 +1,7 @@
 **Keep the baseline Luna/DeepSeek average as the working labeler. Do not add the tested statistics text to its prompt.** The average has the lowest combined-error point estimate on the fresh representative panel, including the 299 images where all five scorers returned both scores. Its advantage over Liquid and Jev remains uncertain; this trial supports a practical default, not a definitive winner over every alternative.
 
+**Historical study archive:** the 50/50 Luna/DeepSeek mean below is superseded. Its metrics and study decisions retain their original provenance; they are not the current scorer. Current displays recompute 37.5% Luna + 37.5% DeepSeek + 25% Liquid independently per outcome from the original observations. See the [current canonical gallery](../../data/rehearsal-4000-2026-11-01/canonical/gallery/index.html) and [current labeling rules](../../AGENTS.md).
+
 The table shows agreement with the frozen assistant references on the 300-image representative panel. Lower MAE is better. Each model's technical/aesthetic columns use its available cases; the final column uses the same 299 cases for everyone. Scores use the 1–5 scale; aggregate errors retain extra precision for comparison.
 
 | Baseline | Available cases | Technical MAE | Aesthetic MAE | Combined MAE, common 299 |

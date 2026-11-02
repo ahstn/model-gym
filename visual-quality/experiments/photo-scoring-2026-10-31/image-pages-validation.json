@@ -25,7 +25,7 @@
         "T0539",
         "T0611"
       ],
-      "sha256": "e81eb6cf80fd5aaefad127142f03b3b52d0096f100ade994251be600deef9012",
+      "sha256": "f91a500adc0ac8b8f89a83f7eb6e20741b187dd79c43b3dc75655b7939a132e0",
       "scores": 252
     },
     {
@@ -53,7 +53,7 @@
         "T0629",
         "T0958"
       ],
-      "sha256": "5f071721015de7732f61a10888f832efd81dea132807aae4f0f9ab5c9de6133d",
+      "sha256": "4987991287c7f843f725a713ddc7db2e759e3c196e938e48a0a845352542aeaa",
       "scores": 252
     },
     {
@@ -81,7 +81,7 @@
         "T1711",
         "T0794"
       ],
-      "sha256": "73bbeb065e851c59cad781bb074ec60d0ae96d328c644092d667a0b1b3118e94",
+      "sha256": "bc346e4150d675f0e9aa09045704c696361b41942e71fdf418f6f747954a71e3",
       "scores": 252
     },
     {
@@ -109,11 +109,11 @@
         "T0790",
         "T0974"
       ],
-      "sha256": "6eeefda5bbab45b771f62db30a2819f52877cd915d9acf5438c84bf76ea53d50",
+      "sha256": "21acd822d9ebed1b4c62bea4bd53fdaeba3907084aab3f3aa589b18a1fedd664",
       "scores": 252
     }
   ],
   "total_images": 72,
   "total_score_cells": 1008,
-  "source_csv_sha256": "fd11549b5ab226db0c7b1c93eab5e721cc4416c751e27ddfb4e6cc554f137a20"
+  "source_csv_sha256": "84456bb67f2df43e03ba2ffd901f24b4a432d81f82468813cfd750b945b5c46a"
 }

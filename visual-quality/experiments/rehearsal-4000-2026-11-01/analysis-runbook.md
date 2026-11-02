@@ -1,5 +1,7 @@
 # Rehearsal analysis and export
 
+**Historical study archive:** the 50/50 Luna/DeepSeek mean below is superseded. Its metrics and study decisions retain their original provenance; they are not the current scorer. Current displays recompute 37.5% Luna + 37.5% DeepSeek + 25% Liquid independently per outcome from the original observations. See the [current canonical gallery](../../data/rehearsal-4000-2026-11-01/canonical/gallery/index.html) and [current labeling rules](../../AGENTS.md).
+
 `analyze.py` reconstructs API journals and independently reparses Lite raw responses after the 500-reference freeze. It validates view/request identities, duplicate attempts, frozen runtime/configuration, reference timing and coverage. It does not open live results during implementation; `test_analysis.py` uses synthetic fixtures.
 
 ```sh

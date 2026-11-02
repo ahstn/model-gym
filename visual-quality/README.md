@@ -1,6 +1,6 @@
 # Visual quality
 
-The [photo-labeling workspace](labeling/README.md) holds the current two-score request definitions, model routes, corpus manifest, benchmark references and recorded observations. GPT-6 Luna and DeepSeek provide the working 50/50 teacher mean; Liquid and Jev are comparison and eligibility-review models. Eligibility is assessed before quality, and clearly excluded content receives the 1.00 floor. Existing labels remain pending review.
+The [photo-labeling workspace](labeling/README.md) holds the current two-score request definitions, model routes, corpus manifest, benchmark references and recorded observations. The canonical ensemble uses **37.5% GPT-6 Luna, 37.5% DeepSeek and 25% Liquid**, separately for technical quality and aesthetics; Jev and Q-ReAlign Lite remain comparison models. Eligibility is assessed before quality, and clearly excluded content receives the 1.00 floor. Existing labels remain pending review.
 
 The active configuration is separate from the older technical-only `visual-pilot label` command. `visual_quality.labeling_profile` loads the current prompt and builds requests; the full current labeling runner and response-validation pipeline are not yet integrated into the package. It does not make network calls or publish labels.
 

@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""Render the frozen comparison as four readable PNG pages without redrawing photos."""
-import csv
+"""Render the current derived comparison as four readable PNG pages without redrawing photos."""
+from canonical_scores import load_scores
 import hashlib
 import json
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT=Path(__file__).resolve().parent
-NAMES=[('Reference','reference'),('Luna','luna'),('DeepSeek','deepseek'),('Luna + DeepSeek mean','average'),('Haiku','haiku'),('Jev 1.14','jev'),('Liquid d1.1','liquid')]
+NAMES=[('Reference','reference'),('Luna','luna'),('DeepSeek','deepseek'),('Weighted ensemble','photo_ensemble'),('Haiku','haiku'),('Jev 1.14','jev'),('Liquid d1.1','liquid')]
 FONT='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 BOLD='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 
 
 def render():
-    with (ROOT/'scores-72.csv').open(newline='') as f: rows=list(csv.DictReader(f))
+    rows=load_scores()
     rows.sort(key=lambda r:(float(r['reference_technical_quality']),r['case_id']))
     if len(rows)!=72 or len({r['case_id'] for r in rows})!=72: raise ValueError('Expected 72 distinct images')
     body=ImageFont.truetype(FONT,21); bold=ImageFont.truetype(BOLD,21)
@@ -23,7 +23,7 @@ def render():
         width,height=1544,3278
         canvas=Image.new('RGB',(width,height),'#edf1f6'); draw=ImageDraw.Draw(canvas)
         draw.text((24,18),f'Photo scoring comparison  ·  Page {page+1} / 4',font=title,fill='#14283c')
-        draw.text((26,61),'Scores: technical / aesthetic  ·  Reference = assistant assessment  ·  1.00 = non-photographic floor where flagged',font=small,fill='#4b6175')
+        draw.text((26,61),'Scores: technical / aesthetic  ·  Reference = assistant  ·  Ensemble: 37.5% Luna + 37.5% DeepSeek + 25% Liquid',font=small,fill='#4b6175')
         ids=[]
         for i,row in enumerate(rows[page*18:(page+1)*18]):
             ids.append(row['case_id']); x=24+(i%3)*506; y=91+(i//3)*530; w=484; h=512

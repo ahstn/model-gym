@@ -3,7 +3,7 @@
     {
       "page": 1,
       "filename": "comparison-latency-page-1.png",
-      "sha256": "320c9af552e6f5372d0c6584823655fe313b6d69792df8f5d2898c16e0eafb13",
+      "sha256": "b20193c47b5b13fe12e17af157e11c806b6f36fe12bb886b4da26385ce57645d",
       "width": 1604,
       "height": 3700,
       "case_ids": [
@@ -32,7 +32,7 @@
     {
       "page": 2,
       "filename": "comparison-latency-page-2.png",
-      "sha256": "b8fa0763929006f6c230bcbdfbba9ce11edbfbfb78171e279cdeec78b69f87b5",
+      "sha256": "5ae81725dafb78c34dfbb935e39c6e6100e58d1f1b60863a39960008cfcd9e66",
       "width": 1604,
       "height": 3700,
       "case_ids": [
@@ -61,7 +61,7 @@
     {
       "page": 3,
       "filename": "comparison-latency-page-3.png",
-      "sha256": "6a9fb960370b13f00ea5d2093a04fe61dc1adde0f14ca8d3211e52af983da226",
+      "sha256": "b217f0774852a28a15a31e3728e6ccc6a34e55cff4a45a5779d5ec343fff1d09",
       "width": 1604,
       "height": 3700,
       "case_ids": [
@@ -90,7 +90,7 @@
     {
       "page": 4,
       "filename": "comparison-latency-page-4.png",
-      "sha256": "5a24b3aa0ad674d922e86379f117462785a9a11743228d1cb6b286c03390b175",
+      "sha256": "f5f19607ef074e8d27049943d7e0f2d9c9fdc7ddf11a199a3f5e7bcbf392348f",
       "width": 1604,
       "height": 3700,
       "case_ids": [
@@ -117,7 +117,7 @@
       "latencies": 18
     }
   ],
-  "source_scores_sha256": "92b64723a8eb702a9916d77d131883a24452bc84c9d15ea969868efe0b7ce0e2",
+  "source_scores_sha256": "dcf5f2b91d3efe2c0d14830ff24e6a871d4ddb984992c92e1d0d53ec2412b895",
   "images": 72,
   "score_cells": 1152,
   "latencies": 72,

@@ -5,22 +5,33 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from gallery import GALLERY, HERE, MODELS, digest, money, numeric, read_rows
+from gallery import GALLERY, HERE, MODELS, digest, money, numeric, read_rows, score_text
 from PIL import Image, ImageDraw, ImageFont
 
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
 
-def render() -> None:
-    selection = json.loads((GALLERY / "selection.json").read_text())
-    if selection["references_sha256"] != digest(HERE / "references.jsonl"):
+def render(
+    *,
+    gallery: Path = GALLERY,
+    cases: dict | None = None,
+    rows: dict | None = None,
+    references_path: Path = HERE / "references.jsonl",
+    scores_path: Path = HERE / "scores-long.csv",
+    title_text: str = "Photo scoring rehearsal",
+    footer_text: str = "Exact views, evidence and stats arms in the linked gallery",
+) -> None:
+    selection = json.loads((gallery / "selection.json").read_text())
+    if selection["references_sha256"] != digest(references_path):
         raise ValueError("Reference selection changed")
     ids = selection["case_ids"]
     if len(ids) != 72 or len(set(ids)) != 72:
         raise ValueError("Expected 72 distinct comparison cases")
-    cases = {case["case_id"]: case for case in json.loads((HERE / "manifest.json").read_text())["cases"]}
-    rows = read_rows()
+    if cases is None:
+        cases = {case["case_id"]: case for case in json.loads((HERE / "manifest.json").read_text())["cases"]}
+    if rows is None:
+        rows = read_rows(scores_path)
     title = ImageFont.truetype(BOLD, 30)
     body = ImageFont.truetype(FONT, 18)
     bold = ImageFont.truetype(BOLD, 18)
@@ -30,7 +41,7 @@ def render() -> None:
         width, height = 1964, 3455
         canvas = Image.new("RGB", (width, height), "#eef2f6")
         draw = ImageDraw.Draw(canvas)
-        draw.text((24, 18), f"Photo scoring rehearsal  |  Page {page + 1} / 4", font=title, fill="#172d40")
+        draw.text((24, 18), f"{title_text}  |  Page {page + 1} / 4", font=title, fill="#172d40")
         draw.text(
             (26, 60),
             "Baseline technical / aesthetic scores: 1.00–5.00  |  Reference: independent assistant assessment",
@@ -39,13 +50,13 @@ def render() -> None:
         )
         draw.text(
             (26, 84),
-            "Seconds and price: selected attempt  |  HTTP request to complete response  |  Lite / Reference: assigned $0.00  |  Mean: no new request",
+            "Seconds and price: selected attempt  |  HTTP request to complete response  |  Lite / Reference: assigned $0.00  |  Ensemble: no new request",
             font=small,
             fill="#53697c",
         )
         draw.text(
             (26, 108),
-            "All-attempt costs and unknown bills are in the report. Lite has no photography-scope gate; Runpod infrastructure is reported separately.",
+            "Ensemble: 37.5% Luna + 37.5% DeepSeek + 25% Liquid per outcome. Unknown price: dash. Lite has no photography-scope gate.",
             font=small,
             fill="#53697c",
         )
@@ -92,7 +103,7 @@ def render() -> None:
                 arm = "reference" if model == "reference" else "baseline"
                 row = rows[case_id].get(f"{model}:{arm}", {})
                 row_top = table_top + 24 + model_index * 30
-                if model in ("reference", "luna_deepseek_mean"):
+                if model in ("reference", "photo_ensemble"):
                     draw.rectangle(
                         (x + 8, row_top - 2, x + card_width - 8, row_top + 26),
                         fill="#e4f0fb" if model == "reference" else "#f3f6f9",
@@ -103,8 +114,8 @@ def render() -> None:
                     (x + 14, row_top), label, font=bold if model == "reference" else body, fill="#172d40"
                 )
                 values = [
-                    numeric(row.get("technical_score")),
-                    numeric(row.get("aesthetic_score")),
+                    score_text(row, "technical_score"),
+                    score_text(row, "aesthetic_score"),
                     numeric(row.get("latency_seconds")),
                     money(row.get("price_usd")),
                 ]
@@ -116,7 +127,7 @@ def render() -> None:
                     )
             draw.text(
                 (x + 14, y + card_height - 24),
-                "Exact views, evidence and stats arms in the linked gallery",
+                footer_text,
                 font=small,
                 fill="#71889b",
             )
@@ -126,7 +137,7 @@ def render() -> None:
             font=small,
             fill="#53697c",
         )
-        target = GALLERY / f"comparison-page-{page + 1}.png"
+        target = gallery / f"comparison-page-{page + 1}.png"
         canvas.save(target, optimize=True)
         pages.append(
             {
@@ -140,14 +151,14 @@ def render() -> None:
         print(target.name, flush=True)
     validation = {
         "pages": pages,
-        "selection_sha256": digest(GALLERY / "selection.json"),
-        "scores_sha256": digest(HERE / "scores-long.csv"),
+        "selection_sha256": digest(gallery / "selection.json"),
+        "scores_sha256": digest(scores_path),
         "images": 72,
         "models_per_image": len(MODELS),
         "score_cells": 72 * len(MODELS) * 2,
         "source": "exact delivered image bytes; resized only for page display",
     }
-    (GALLERY / "png-validation.json").write_text(json.dumps(validation, indent=2) + "\n")
+    (gallery / "png-validation.json").write_text(json.dumps(validation, indent=2) + "\n")
 
 
 if __name__ == "__main__":

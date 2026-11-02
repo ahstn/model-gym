@@ -1,12 +1,14 @@
 # Photo scoring: consolidated 31 October results
 
-This is the working space for the 2,000-image Luna/DeepSeek trial and the follow-up decision-model comparison. The working comparison retains GPT-6 Luna, DeepSeek V4.1 Flash, their 50/50 mean, Claude Haiku 5.5, Jev 1.14 and Liquid d1.1. Reference scores are independent assistant judgments; none of these labels is approved for training.
+This preserves the 2,000-image Luna/DeepSeek trial and the follow-up decision-model comparison. The current comparison uses GPT-6 Luna, DeepSeek V4.1 Flash, the canonical weighted ensemble, Claude Haiku 5.5, Jev 1.14 and Liquid d1.1. The ensemble is **37.5% Luna + 37.5% DeepSeek + 25% Liquid**, independently for technical quality and aesthetics, recomputed from native component scores through the shared scorer. It supersedes the former 50/50 mean. Reference scores are independent assistant judgments; none of these labels is approved for training.
 
 [Comparison page 1](comparison-page-1.png) · [Page 2](comparison-page-2.png) · [Page 3](comparison-page-3.png) · [Page 4](comparison-page-4.png) · [Interactive gallery](gallery.html)
 
 Follow-up: [Q-ReAlign Lite on the same 72 images](../qrealign-lite-72-2026-10-31/README.md), with [comparison gallery](../qrealign-lite-72-2026-10-31/gallery.html), native outputs and per-image latency. The model assesses visual quality without the photography eligibility floor.
 
-The four image pages show all 72 original delivered views, sorted by reference technical score, with a `TUNING` or `HELD OUT` label. The known poster is identified separately. [scores-72.csv](scores-72.csv) contains every displayed score to two decimals, the original image SHA-256, scope probabilities and native pre-floor decision scores. [Selected responses](selected-responses-72.jsonl) preserves the actual outputs, usage, distributions and normalized scores for Jev, Liquid and Haiku in one file. The 72 PNGs under `images/` are the exact delivered views used for the evaluations.
+The four image pages show all 72 original delivered views, sorted by reference technical score, with a `TUNING` or `HELD OUT` label. The known poster is identified separately. [scores-72.csv](scores-72.csv) contains every displayed score to two decimals, the original image SHA-256, scope probabilities and pre-floor decision scores. Liquid and ensemble native-precision columns support the current derivation. `historical_luna_deepseek_mean_*` columns retain the superseded two-model values solely for provenance; galleries never display them. [Selected responses](selected-responses-72.jsonl) preserves the actual outputs, usage, distributions and normalized scores for Jev, Liquid and Haiku in one file. The 72 PNGs under `images/` are the exact delivered views used for the evaluations.
+
+The [ensemble provenance](canonical-ensemble-provenance.json) records source hashes, configuration and current held-out errors. This is an offline derivation of the original October calls and prompts, including their original eligibility policy, not a new v2 model run. The ensemble has no HTTP latency or independent API charge.
 
 ## Decision-model comparison
 
@@ -16,12 +18,12 @@ Three prompt variants were evaluated on 24 development cases, one of which was t
 |---|---:|---:|---:|
 | Liquid d1.1 | 0.370 | 0.265 | 0.317 |
 | Jev 1.14 | 0.389 | 0.247 | 0.318 |
+| Weighted ensemble | 0.433 | 0.231 | 0.332 |
 | Haiku 5.5, low requested | 0.394 | 0.306 | 0.350 |
-| Luna + DeepSeek mean | 0.469 | 0.278 | 0.373 |
 | Luna, high requested | 0.421 | 0.331 | 0.376 |
 | DeepSeek, high requested | 0.533 | 0.308 | 0.421 |
 
-These are paired comparisons against the same 48 assistant references on a 1–5 scale; lower MAE is closer. The bootstrap 95% interval for the combined-error difference from the Luna/DeepSeek mean is [-0.127, +0.005] for Liquid and [-0.119, +0.006] for Jev. Neither establishes superiority. This subset is small and deliberately varied, and reference labels are not human gold.
+These are paired comparisons against the same 48 assistant references on a 1–5 scale; lower MAE is closer. The canonical weights were adopted after this study; these retrospective results are not untouched confirmation data. Historical bootstrap comparisons against the superseded 50/50 mean remain in `results.json`; they do not describe the canonical ensemble. This subset is small and deliberately varied, and reference labels are not human gold.
 
 **Scope sensitivity:** the nearly black T0571 has uncertain medium. Liquid assigned an exclusion probability of 0.592, causing the 1.00 floor. If uncertain cases instead use native decision scores, Liquid's combined MAE becomes 0.322 and Jev remains 0.318. The tiny ordering reverses; treat them as tied. The held-out set has 46 reference-eligible images, two uncertain images and no confirmed excluded images, so it does not establish exclusion recall. All selected models floor the known development poster T2000 at 1.00/1.00. Do not apply a floor solely because a photo is blurry, dark or contains a sign or artwork.
 
@@ -36,15 +38,15 @@ Per the current decision, **Drex Max** and **Decider 1.2** are excluded from the
 | Drex Max | 0.486 | 0.225 | 0.355 | +0.437 |
 | Decider 1.2 | 0.555 | 0.240 | 0.397 | +0.476 |
 
-Both were notably less accurate on technical scoring and had a stronger positive technical bias than Liquid and Jev. Drex's aesthetic MAE was the best in this sample, and its overall mean was below the Luna/DeepSeek mean, so the decision to drop it is not evidence of uniform underperformance. Differences on 48 images are uncertain; this is a prioritization decision rather than a population-wide conclusion.
+Both were notably less accurate on technical scoring and had a stronger positive technical bias than Liquid and Jev. Drex's aesthetic MAE was the best in this sample, and its overall mean was below the historical 50/50 Luna/DeepSeek mean, so the decision to drop it is not evidence of uniform underperformance. Differences on 48 images are uncertain; this is a prioritization decision rather than a population-wide conclusion.
 
-## 2,000-image Luna/DeepSeek run
+## Archived 2,000-image Luna/DeepSeek run
 
-[scores-2000.csv](scores-2000.csv) retains per-image technical and aesthetic results, eligibility flags, the 50/50 means and request-cost fields. [manifest-2000.json](manifest-2000.json) retains the source identity, family grouping and delivered-view hashes. Source paths in the historical manifest and earlier CSVs describe the original machine and are not portable file links; the 72 comparison views are present in `images/`. [references-72.jsonl](references-72.jsonl) retains the frozen assistant scores and evidence. Two images outside the 72-image review needed deterministic source-format replacements; see [source-format-resolution.json](source-format-resolution.json).
+[scores-2000.csv](scores-2000.csv) is a frozen historical export containing the original technical and aesthetic results, eligibility flags, superseded 50/50 means and request-cost fields. Its `average_*` columns are archival only. Liquid was assessed on the 72-case subset, so a complete canonical ensemble is unavailable for the remaining 1,928 cases; there is no two-model fallback. [manifest-2000.json](manifest-2000.json) retains the source identity, family grouping and delivered-view hashes. Source paths in the historical manifest and earlier CSVs describe the original machine and are not portable file links; the 72 comparison views are present in `images/`. [references-72.jsonl](references-72.jsonl) retains the frozen assistant scores and evidence. Two images outside the 72-image review needed deterministic source-format replacements; see [source-format-resolution.json](source-format-resolution.json).
 
 The sample has 1,999 cases fresh to the recorded trials and the known poster, spanning 1,640 source families. It includes 1,279 standalone images, 240 authentic capture-failure images and 480 controlled images from 120 parent families. Both models were requested at high reasoning with the same image views, photography policy and schema-constrained JSON. All 2,000 selected responses per model and all 8,000 task scores were valid. DeepSeek reported positive reasoning tokens on every response but did not return an effort-confirmation header.
 
-On the 71 fresh reference cases, the Luna/DeepSeek mean had combined MAE 0.342, Luna 0.363 and DeepSeek 0.389. The average's technical bias was +0.304. The mean was closest on aesthetics; Luna was closest on technical quality. In the 120 controlled distortion families, technical scores were non-increasing with severity in 94 families for Luna, 78 for DeepSeek and 85 for their mean. These results do not make the mean an independent reference or prove it is best on every dimension.
+In the original analysis, on the 71 fresh reference cases the now-superseded 50/50 Luna/DeepSeek mean had combined MAE 0.342, Luna 0.363 and DeepSeek 0.389. The average's technical bias was +0.304. The mean was closest on aesthetics; Luna was closest on technical quality. In the 120 controlled distortion families, technical scores were non-increasing with severity in 94 families for Luna, 78 for DeepSeek and 85 for their mean. These results do not make the mean an independent reference or prove it is best on every dimension.
 
 The known reported 2,000-image API cost was $2.591454105 for both models; five explicit capacity refusals were unpriced. The decision trial added $0.100853056 of known cost across all four tested decision models and Haiku; two model-busy refusals were unpriced. Those are reported usage totals, not reconciled invoices.
 
@@ -59,4 +61,4 @@ The older figures are historical comparisons and include Gemini, which is not a 
 
 ## Rebuilding image pages
 
-Run `python gallery.py` and `python render_pages.py` from this directory; the latter requires Pillow. Both read only the retained 72-image CSV and local PNGs; no model calls or API keys are needed. [image-pages-validation.json](image-pages-validation.json) records the source CSV hash and image-page hashes. The consolidated workspace keeps selected native responses and summaries; repetitive per-request audit snapshots and unused candidate responses are omitted. The earlier committed raw trial bundles remain in repository history at commit `030da29`.
+Run `python canonical_scores.py`, `python gallery.py` and `python render_pages.py` from this directory; the latter requires Pillow. The adapter reads retained component responses, the original teacher CSV, the 72-image selection and exact local PNGs. Both renderers recompute through that adapter; no model calls or API keys are needed. [image-pages-validation.json](image-pages-validation.json) records the source CSV hash and image-page hashes. The consolidated workspace keeps selected native responses and summaries; repetitive per-request audit snapshots and unused candidate responses are omitted. The earlier committed raw trial bundles remain in repository history at commit `030da29`.

@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT=Path(__file__).resolve().parent
 SOURCE=ROOT.parent/'photo-scoring-2026-10-31'
-NAMES=[('Reference','reference'),('Q-ReAlign Lite','lite'),('Luna + DeepSeek','average'),('Luna','luna'),('DeepSeek','deepseek'),('Haiku','haiku'),('Jev 1.14','jev'),('Liquid d1.1','liquid')]
+NAMES=[('Reference','reference'),('Q-ReAlign Lite','lite'),('Weighted ensemble','photo_ensemble'),('Luna','luna'),('DeepSeek','deepseek'),('Haiku','haiku'),('Jev 1.14','jev'),('Liquid d1.1','liquid')]
 FONT='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 BOLD='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 
@@ -24,7 +24,7 @@ def render():
         canvas=Image.new('RGB',(width,height),'#edf1f6');d=ImageDraw.Draw(canvas)
         d.text((24,17),f'Photo scoring + Lite latency  |  Page {page+1} / 4',font=title,fill='#14283c')
         d.text((26,61),'Tech / Aest: 1.00 to 5.00  |  Reference: assistant  |  Lite: raw scores, no photography eligibility floor',font=small,fill='#486075')
-        d.text((26,84),'Lite time: end-to-end seconds for both scores, including upload and proxy; other assessors: comparable timings unavailable',font=small,fill='#486075')
+        d.text((26,84),'Ensemble: 37.5% Luna + 37.5% DeepSeek + 25% Liquid  |  Lite time: end-to-end seconds for both scores',font=small,fill='#486075')
         ids=[]
         for i,row in enumerate(rows[page*18:(page+1)*18]):
             cid=row['case_id'];ids.append(cid);x=24+(i%3)*525;y=115+(i//3)*595;w=505;h=579

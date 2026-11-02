@@ -1,0 +1,37 @@
+{
+  "version": "luna-deepseek-liquid-v1",
+  "model": "photo_ensemble",
+  "weights": {
+    "technical": {
+      "luna": "0.375",
+      "deepseek": "0.375",
+      "liquid": "0.25"
+    },
+    "aesthetic": {
+      "luna": "0.375",
+      "deepseek": "0.375",
+      "liquid": "0.25"
+    }
+  },
+  "missing_component_policy": "null_per_task; no reweighting or two-model fallback",
+  "scope_policy": "use component policy scores; no new voting or reference override",
+  "precision": "native component precision for arithmetic; two decimals for display only",
+  "latency_policy": "no independent request latency; retain component request measurements",
+  "price_policy": "no independent charge; component costs recorded separately, never double-counted",
+  "images": 72,
+  "complete_ensembles": 72,
+  "source_sha256": {
+    "scores-2000.csv": "f50f66d6d6d17eac6c1fa8676a04240d29b35c6c96d876d1cd520e606ee3e9d9",
+    "selected-responses-72.jsonl": "df15ccd6f34dfd18e7715200fd8dc603e21d32d8b92d5ee0347cd4abd4f14b7e",
+    "decision-prompts.json": "efeda1aaf70e0cfb6200100b7ea2a78cbff9f4179b8ddba9a5810f23b9f219a1",
+    "scores-72.csv": "84456bb67f2df43e03ba2ffd901f24b4a432d81f82468813cfd750b945b5c46a"
+  },
+  "recomputed_from": "Original Luna/DeepSeek schema scores and native normalized Liquid policy scores",
+  "observation_status": "Original October prompts and calls; no new model calls or relabeling as the v2 run",
+  "historical_columns": "historical_luna_deepseek_mean_* retain the superseded 50/50 study mean for provenance only",
+  "heldout_48_ensemble_mae": {
+    "technical_quality": "0.4328830713726928161458333333",
+    "aesthetics": "0.2310760524488118505208333333"
+  },
+  "heldout_48_ensemble_mean_mae": "0.3319795619107523333333333333"
+}

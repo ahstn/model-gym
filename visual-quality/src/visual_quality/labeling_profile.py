@@ -22,7 +22,7 @@ def load_profile(directory: Path) -> dict:
     }
     data = {key: json.loads(path.read_text()) for key, path in files.items()}
     versions = {value.get("version") for value in data.values()}
-    if versions != {"photo-labeling-current-v1"}:
+    if len(versions) != 1 or not versions <= {"photo-labeling-current-v1", "photo-labeling-v2-2026-11-01"}:
         raise ValueError("Current labeling profile versions do not match")
     if set(data["routes"].get("routes", {})) != set(MODELS):
         raise ValueError("Current labeling profile has missing or unexpected routes")

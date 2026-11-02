@@ -1,0 +1,25 @@
+{
+  "version": "photo-labeling-v2-2026-11-01",
+  "technical_rubric": "visual-rating-v2",
+  "source_commit": "9a2f7cef8265690019d41b0158a558dcfd8a0d6d",
+  "source_hashes": {
+    "prompts/visual-rating-v2/system.txt": "f95bf047900bb615f9d906709a46a77b64b851e771382a433d80c77877926959",
+    "prompts/visual-rating-v2/technical-quality.txt": "af89a8d7277494e1b2f2a3222565ef8c74af86b880461f36b6bf622215d351c1",
+    "prompts/visual-rating-v2/response.schema.json": "6887bb89e24c2ac8f2a644bce1fea93ac0f88bdcf51c6826d51b6c74b697d691",
+    "experiments/rehearsal-4000-2026-11-01/api-teacher-prompt.json": "ab350c2bc039cc76785ee5ea20cc9ede31ee7b2d549616921215ddbfbddadf1c"
+  },
+  "profile_hashes": {
+    "prompts/teacher.json": "2deb592d0a0aca3279d15b289c2486e3a8aa42cf7c1bd4e76ef6a0832f8abf5f",
+    "prompts/decision.json": "53fe00d8ae6ac874cd5f1825516071c599aa8be9408e00b1e8f16f8744d63b24",
+    "routes.json": "6173e37e6a6942500f766547cae5228f56870ea17b03179c8be5b64b6c090d5c"
+  },
+  "adaptations": [
+    "v2 technical rubric up to its standalone output instructions is embedded into the two-task teacher prompt",
+    "explicit photography eligibility supersedes the v2 allowance for graphics and paintings",
+    "existing independent aesthetic rubric and scoring clarifications are retained",
+    "standalone numeric output instructions are replaced by the evaluated exact two-decimal string joint schema",
+    "Liquid and Jev keep the revised model-specific Decisions questions from 9a2f7ce unchanged"
+  ],
+  "reuse_policy": "Old Luna/DeepSeek prompt hashes differ; all chat-model observations are freshly requested.",
+  "stats_sent_to_models": false
+}

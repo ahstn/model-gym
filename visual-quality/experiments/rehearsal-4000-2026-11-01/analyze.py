@@ -2,6 +2,11 @@
 
 Run only after the 500-reference freeze. Missing model responses remain explicit rows.
 The CSV contains every expected model/arm/image slot, references, and derived means.
+
+
+Historical study reconstruction only: the 50/50 Luna/DeepSeek mean is
+superseded. Current displays use visual_quality.ensemble and retain the
+original provider observations.
 """
 
 from __future__ import annotations

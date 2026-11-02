@@ -1,4 +1,9 @@
-"""Render the rehearsal report from audited analysis artifacts, without new inference."""
+"""Render the rehearsal report from audited analysis artifacts, without new inference.
+
+Historical study reconstruction only: the 50/50 Luna/DeepSeek mean is
+superseded. Current displays use visual_quality.ensemble and retain the
+original provider observations.
+"""
 
 from __future__ import annotations
 
@@ -505,6 +510,7 @@ def render(analysis: dict, manifest: dict) -> str:
     completed = sum(sum(row["status_counts"].get(status, 0) for status in COMPLETE) for row in models)
     parts = [
         "# Four-thousand-image rehearsal results",
+        "Historical study archive: the 50/50 Luna/DeepSeek mean is superseded. This report reproduces the original analysis. Current displays use 37.5% Luna + 37.5% DeepSeek + 25% Liquid independently per outcome.",
         f"Analysis generated {analysis['created_at']}. The frozen corpus has {len(cases):,} image views across {len({case['family_id'] for case in cases}):,} source families. There are {partitions['representative']} representative, {partitions['challenge']} challenge and {partitions['development']} development reference cases. Reference rows recorded as valid: {ref['status_counts'].get('valid', 0)} / {ref['expected_images']}.",
         f"Recorded completed scoring responses: **{completed:,} / {expected:,}** expected model/arm/image slots. Completion includes invalid schema responses; numeric-label coverage is shown below. {expected - completed:,} slots lack a completed scoring response. The CSV contains {analysis['long_rows']:,} rows including explicit missing slots and derived means.",
         "Reference scores are independent assistant visual judgments, not human MOS or verified human ground truth. Lower MAE means closer agreement with those judgments. All labels remain experimental. The Luna/DeepSeek mean is derived from its two components.",

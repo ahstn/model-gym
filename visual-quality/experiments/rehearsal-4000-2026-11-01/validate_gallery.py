@@ -18,19 +18,13 @@ from datetime import UTC, datetime
 from html.parser import HTMLParser
 from pathlib import Path
 
+from gallery import GALLERY, MODELS, score_text
 from PIL import Image
+
+from visual_quality.ensemble import replace_ensemble_rows
 
 HERE = Path(__file__).resolve().parent
 CHROMIUM = Path("/home/ahstn/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome")
-MODELS = (
-    ("reference", "Reference"),
-    ("luna", "Luna"),
-    ("deepseek", "DeepSeek"),
-    ("luna_deepseek_mean", "Luna + DeepSeek"),
-    ("liquid", "Liquid d1.1"),
-    ("jev", "Jev 1.14"),
-    ("qrealign_lite", "Q-ReAlign Lite"),
-)
 NUMERIC_FIELDS = (
     "technical_score",
     "aesthetic_score",
@@ -94,12 +88,16 @@ class Cards(HTMLParser):
 def read_csv(path: Path) -> dict:
     records = {}
     with path.open(newline="") as stream:
-        for row in csv.DictReader(stream):
+        for row in replace_ensemble_rows(list(csv.DictReader(stream))):
             key = (row["case_id"], row["model"] + ":" + row["arm"])
             require(key not in records, "Duplicate CSV record")
             records[key] = {
                 **{name: row.get(name) for name in ("case_id", "model", "arm", "status")},
-                "evidence": json.loads(row.get("evidence") or "{}"),
+                "evidence": (
+                    json.loads(row.get("evidence") or "{}")
+                    if isinstance(row.get("evidence"), str)
+                    else (row.get("evidence") or {})
+                ),
                 **{
                     name: float(row[name]) if row.get(name) not in (None, "", "null") else None
                     for name in NUMERIC_FIELDS
@@ -178,7 +176,11 @@ def validate_data(args: argparse.Namespace) -> tuple[list[dict], dict]:
 
 def expected_cells(label: str, record: dict) -> list[str]:
     values = [
-        "—" if record[key] is None else f"{record[key]:.2f}"
+        score_text(record, key)
+        if key != "latency_seconds"
+        else "—"
+        if record[key] is None
+        else f"{record[key]:.2f}"
         for key in ("technical_score", "aesthetic_score", "latency_seconds")
     ]
     price = record["price_usd"]
@@ -253,15 +255,15 @@ const assertCount=(p,k='all')=>assert(el('count').textContent.startsWith(expecte
 try{
 assert(el('partition').value==='benchmark','default benchmark');assertCount('benchmark');
 assert(ids().length===Math.min(24,expectedCount('benchmark')),'default first page length');
-for(const p of ['all','representative','challenge','development','rehearsal']){set('partition',p);assertCount(p)}
+for(const p of [...el('partition').options].map(o=>o.value).filter(v=>v!=='benchmark')){set('partition',p);assertCount(p)}
 set('partition','all');const first=ids();el('next').click();assert(!ids().some(x=>first.includes(x)),'next page distinct');el('prev').click();assert(JSON.stringify(ids())===JSON.stringify(first),'previous page restored');
 const clusterValues=[...new Set(CASES.map(c=>c.cluster))];assert(el('cluster').options.length===clusterValues.length+1,'all cluster options');
 for(const k of clusterValues){set('cluster',k);assertCount('all',k);assert(ids().every(id=>CASES.find(c=>c.id===id).cluster===k),'cluster membership '+k)}
 set('cluster','all');set('partition','benchmark');
 const target=CASES.find(c=>c.partition!=='rehearsal');set('query',target.id.toLowerCase());assert(JSON.stringify(ids())===JSON.stringify([target.id]),'case query case-insensitive');
-for(const arm of ['baseline','own_stats','swapped_stats']){
-set('arm',arm);const rows=[...document.querySelectorAll('#grid tbody tr')];assert(rows.length===7,'seven assessor rows '+arm);
-rows.forEach((row,i)=>{const [m,label]=MODELS[i],key=m+':'+(m==='reference'?'reference':['luna','deepseek','luna_deepseek_mean'].includes(m)?arm:'baseline'),r=target.scores[key]??{},cells=[...row.children].map(x=>x.textContent);assert(cells[0]===label,'assessor '+arm+'/'+m);for(const [j,key]of [[1,'technical_score'],[2,'aesthetic_score'],[3,'latency_seconds']]){const value=r[key]==null?'—':Number(r[key]).toFixed(2);assert(cells[j]===value,'display '+arm+'/'+m+'/'+key)}assert(cells[4]===(r.price_usd==null?'—':Number(r.price_usd)===0?'$0.00':'$'+Number(r.price_usd).toFixed(6)),'price '+arm+'/'+m)});
+for(const arm of [...el('arm').options].map(o=>o.value)){
+set('arm',arm);const rows=[...document.querySelectorAll('#grid article > table > tbody > tr')];assert(rows.length===7,'seven assessor rows '+arm);
+rows.forEach((row,i)=>{const [m,label]=MODELS[i],key=m+':'+(m==='reference'?'reference':['luna','deepseek','photo_ensemble'].includes(m)?arm:'baseline'),r=target.scores[key]??{},cells=[...row.children].map(x=>x.textContent);assert(cells[0]===label,'assessor '+arm+'/'+m);for(const [j,key]of [[1,'technical_score'],[2,'aesthetic_score'],[3,'latency_seconds']]){const value=r[key+'_display']||(r[key]==null?'—':Number(r[key]).toFixed(2));assert(cells[j]===value,'display '+arm+'/'+m+'/'+key)}assert(cells[4]===(r.price_usd==null?'—':Number(r.price_usd)===0?'$0.00':'$'+Number(r.price_usd).toFixed(6)),'price '+arm+'/'+m)});
 }
 set('query','__no_such_image__');assert(ids().length===0&&el('count').textContent==='0 images · page 1/1','empty search');
 set('query','');set('arm','baseline');set('sort','technical_score');const expected=CASES.filter(c=>c.partition!=='rehearsal').sort((a,b)=>(a.scores['reference:reference']?.technical_score??99)-(b.scores['reference:reference']?.technical_score??99)||a.id.localeCompare(b.id)).slice(0,24).map(c=>c.id);assert(JSON.stringify(ids())===JSON.stringify(expected),'reference technical sort');
@@ -275,14 +277,14 @@ out.textContent=JSON.stringify(result);document.title='GALLERY_VALIDATION_'+resu
 """
 
 
-def browser_check(args: argparse.Namespace) -> dict:
+def browser_check(args: argparse.Namespace, *, script: str = BROWSER_SCRIPT) -> dict:
     index = (args.gallery / "index.html").read_text()
     with tempfile.TemporaryDirectory(prefix="rehearsal-gallery-check-") as directory:
         work = Path(directory)
         document = index.replace(
             "<head>", '<head><base href="' + html.escape(args.gallery.as_uri() + "/", quote=True) + '">', 1
         )
-        document = document.replace("</body>", BROWSER_SCRIPT + "</body>", 1)
+        document = document.replace("</body>", script + "</body>", 1)
         harness = work / "validation.html"
         harness.write_text(document)
         command = [
@@ -321,7 +323,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     args.experiment = args.experiment.resolve()
-    args.gallery = (args.gallery or args.experiment / "gallery").resolve()
+    args.gallery = (args.gallery or GALLERY).resolve()
     args.scores = (args.scores or args.experiment / "scores-long.csv").resolve()
     args.output = args.output or args.gallery / (
         "interim-layout-validation.json" if args.interim_layout else "publication-validation.json"
