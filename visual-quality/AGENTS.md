@@ -43,6 +43,10 @@ These are the user's accepted project decisions, updated 2026-11-01. Apply them 
 
 ## Timing, accounting and operations
 
+- Keep only the current completed 10,000-image evaluation in the tracked experiments tree. Historical code, media and receipts are recoverable through `archives/experiments.md`; do not recommit restored trees.
+- Reusable execution and rendering helpers belong in `src/visual_quality/scoring/`, not dated experiment folders. Historical data paths resolve separately through `scoring.history`; the pinned Lite server and health identity live in `labeling/runtime/`.
+- Preserve immutable old source hashes and observations when moving code. New executions use new source provenance; exact historical replay uses the pinned historical checkout.
+
 - Every model/reference record contains technical score, aesthetic score, latency fields and price fields, even when an assessment or measurement is unavailable.
 - For inference, measure end-to-end time immediately around HTTP invocation through complete response receipt. Keep payload preparation and server-only timing separate. Reused rows retain their original measured latency and reuse provenance.
 - References have no HTTP request latency: record null with an explicit latency kind and separately measured visual-review duration. Never fabricate a timing measurement.

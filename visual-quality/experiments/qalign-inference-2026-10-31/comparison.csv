@@ -1,8 +1,0 @@
-case_id,role,image_sha256,qrealign_technical_quality,qrealign_technical_quality_native_0_1,reference_technical_quality,luna_technical_quality,deepseek_technical_quality,average_technical_quality,haiku_technical_quality,jev_technical_quality,liquid_technical_quality,qrealign_aesthetics,qrealign_aesthetics_native_0_1,reference_aesthetics,luna_aesthetics,deepseek_aesthetics,average_aesthetics,haiku_aesthetics,jev_aesthetics,liquid_aesthetics
-T0028,heldout photo,947df62c488848ad9d3abb43f850ce8af07297db43f6ce67ada6428842a44aa4,1.97,0.2429,1.30,2.00,1.10,1.55,1.40,1.43,1.25,2.35,0.3365,1.70,2.80,1.60,2.20,2.10,1.53,1.55
-T0192,heldout photo,43454daf9fdccb9370d32aee885d6312ff3fe2c28bf70bd8ee2436691fcfec6a,3.48,0.6189,2.10,3.00,2.90,2.95,2.50,2.68,2.71,2.88,0.4702,2.90,3.10,3.00,3.05,3.20,3.02,2.83
-T0714,heldout photo,cefa06182ef370e685a036cc0b980c33762beacee5f4482f3147161171a0215e,3.58,0.644,2.60,3.00,3.00,3.00,2.50,3.02,3.04,2.74,0.4347,2.50,2.90,2.80,2.85,2.70,3.15,2.73
-T0965,heldout photo,81ac595e0f29b7c2a9cdea00957f7a1200f4c5d50faa92b9140f26320d8dfc53,4.72,0.9292,3.50,3.80,3.70,3.75,4.20,3.42,3.52,3.09,0.5229,3.80,4.00,3.60,3.80,4.00,3.59,3.55
-T0914,heldout photo,28a2bb2e9b2e648550c6c3eb79777dc8168154e9baa1bdcab7613c5f35bad45c,4.82,0.9551,4.10,4.00,3.60,3.80,3.30,4.01,3.49,2.53,0.3813,3.10,3.40,3.20,3.30,2.90,2.99,2.93
-T0724,heldout photo,6e2da1a63e5f8a1f4db8da38f8445f80d445153b73498f373da59dab87f9f3f5,4.92,0.9789,4.50,4.40,3.70,4.05,4.00,3.98,3.94,3.21,0.5536,3.90,4.00,3.10,3.55,3.50,3.54,3.44
-T2000,poster control,5d71b8aa4fc41b722c6be384908c61eb6c49bdcdf3b8b6537634f88b74f55048,4.27,0.8178,1.00,1.00,1.00,1.00,1.00,1.00,1.00,3.56,0.6401,1.00,1.00,1.00,1.00,1.00,1.00,1.00

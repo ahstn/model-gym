@@ -16,12 +16,12 @@ It covers three uses of the metrics:
 |---|---|
 | `41b23b8` | Added the `image-stats/` package |
 | `3b528b1` | Review and verify fixes: noise-aware gate, MPO JPEG metadata, phase-agnostic blockiness, a parity test against visual-quality views |
-| `56952f4` | Mug control set, from a separate session; see [handover-mug-control-set-2026-10-31.md](handover-mug-control-set-2026-10-31.md) |
+| `56952f4` | Mug control set, from a separate session; see [mug control-set evidence](../image-stats/data/controls/mug-2026-10-31/README.md) |
 | `7c68b02` | Two new evidence views: native-resolution `detail_crop` and `gamma` |
 
 - **Nothing is wired into visual-quality yet.** No label, prompt or manifest has changed. Running image-stats and using its output is the labelling session's call.
 - **Algorithm version:** `image-stats-v2`. A `Reference` (corpus percentiles) records the version and `max_edge` it was built with, and `describe` refuses a mismatch.
-- **Labels:** still as described in [photo-scoring-2026-10-31/README.md](../visual-quality/experiments/photo-scoring-2026-10-31/README.md). None are approved for training. The reference scores are independent assistant judgments, not human gold.
+- **Labels:** still as described in [photo-scoring-2026-10-31/README.md](https://github.com/ahstn/model-gym/tree/ddcbc4d422b4d4b931bf01b2f00b7938935052fe/visual-quality/experiments/photo-scoring-2026-10-31/README.md). None are approved for training. The reference scores are independent assistant judgments, not human gold.
 
 ## What image-stats provides
 

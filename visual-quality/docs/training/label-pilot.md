@@ -4,7 +4,7 @@ This runner implements the [proposed label contract](label-specification-2026-10
 
 The [18 October run record](label-pilot-2026-10-18.md) reports the first 12-image execution and its validation results.
 
-The [visual validation audit](label-pilot-validation-2026-10-18.md) holds bulk labelling because some explanations conflict with the visible defects and the rubric. A later, explicitly requested [50+50 prompt experiment](../../experiments/prompt-calibration-2026-10-18/README.md) completed 150 calls and found better explanations but no reliable score improvement. The commands below describe the runner; they do not approve training.
+The [visual validation audit](label-pilot-validation-2026-10-18.md) holds bulk labelling because some explanations conflict with the visible defects and the rubric. A later, explicitly requested [50+50 prompt experiment](https://github.com/ahstn/model-gym/tree/ddcbc4d422b4d4b931bf01b2f00b7938935052fe/visual-quality/experiments/prompt-calibration-2026-10-18/README.md) completed 150 calls and found better explanations but no reliable score improvement. The commands below describe the runner; they do not approve training.
 
 The [reviewed score record](label-pilot-corrections-2026-10-18.md) contains seven score corrections and three evidence-only corrections. These assistant judgments remain pending human review and preserve the original teacher output.
 

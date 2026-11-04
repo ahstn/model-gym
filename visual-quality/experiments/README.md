@@ -1,9 +1,9 @@
-# Evaluation workflows and historical records
+# Current evaluation
 
-The current labeling configuration and retained example records are in [photo labeling](../labeling/README.md). The [10,000-image workflow](labeling-10000-2026-11-01/README.md) contains the completed run, final report, validation and reproduction commands.
+The [10,000-image run](labeling-10000-2026-11-01/README.md) is the retained experiment: final report, 1,500-reference benchmark, validated 72-image collage and reproduction tools. Active prompts, routes and first 1,000 example records are in [photo labeling](../labeling/README.md).
 
-Earlier dated directories preserve historical evaluation evidence. Their prompt variants do not replace the current labeling profile. Some earlier modules and evidence are still used by the latest workflow, particularly the response contract, Lite client and gallery code in `rehearsal-4000-2026-11-01`; do not delete or move those directories solely because their studies are complete.
+Shared response validation, reference review, Lite requests and gallery rendering live in [the scoring package](../src/visual_quality/scoring/README.md). They no longer import code from historical experiment folders. The pinned Lite GPU server is in [labeling/runtime](../labeling/runtime/README.md).
 
-See the [consolidation cleanup assessment](../../docs/consolidation-review-and-cleanup-2026-11-04.md) for measured storage candidates, current dependencies and the archive/restore checks required before removal.
+Thirteen earlier experiment trees were archived after a complete restore and hash check. Their findings, exact revision and recovery commands are in the [historical experiment catalogue](../archives/experiments.md). Restore historical inputs into ignored data when rebuilding the corpus; do not repopulate this directory with archived runs.
 
-The earlier 4,000-image gallery and receipt archives, and the 72 original photo-scoring PNGs, have now moved out of the tracked tree. Their [recovery guide and checksums](../archives/README.md) preserve exact retrieval from local storage or pinned Git history. Current labels and the 10,000-image comparison remain available at the links above.
+An existing uncommitted EmbeddingGemma clustering directory is local work and was preserved separately from this tracked experiment selection.

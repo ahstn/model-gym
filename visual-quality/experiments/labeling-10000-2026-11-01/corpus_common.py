@@ -11,7 +11,9 @@ HERE = Path(__file__).resolve().parent
 PACKAGE = HERE.parents[1]
 DATA_ROOT = Path("/home/ahstn/git/model-gym/visual-quality/data")
 DATA = DATA_ROOT / "labeling-10000-2026-11-01"
-PREVIOUS = HERE.parent / "rehearsal-4000-2026-11-01"
+from visual_quality.scoring.history import rehearsal_root
+
+PREVIOUS = rehearsal_root()
 SEED = 2026110110000
 
 

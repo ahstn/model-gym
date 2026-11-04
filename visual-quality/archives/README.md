@@ -1,5 +1,7 @@
 # Historical artifact recovery
 
+A second cleanup archived the complete older experiment trees and extracted their live dependencies into the scoring package. See the [experiment catalogue and second recovery bundle](experiments.md). This page documents the first media-only bundle.
+
 The 4 November cleanup removed 4,096 historical artifact files (449,353,429 bytes before replacement notices) from the tracked experiment tree. Current scoring code, current labels, exact-view manifests, final 10,000-image results and the current 72-image collage remain in place.
 
 [Archive index](historical-artifacts-2026-11-04.json) · [Per-file SHA256 checksums](historical-artifacts-2026-11-04.sha256)
@@ -41,4 +43,4 @@ For complete historical scripts, inputs and reports together, use a detached che
 
 Use the [current 72-image collage](../experiments/labeling-10000-2026-11-01/collage/README.md) or the [full local 10,000-image gallery](../data/labeling-10000-2026-11-01/gallery/index.html). The existing 4,000-image local service continues to use its independent ignored data copy.
 
-The two older static comparison galleries now provide archive notices because their inline photos were archived. Their compact score files, original rendering scripts and historical results remain available. Restored images and generated historical outputs are ignored to prevent accidental recommits. No Git history was rewritten; this cleanup reduces the tracked checkout and review diff, not historical clone storage.
+The older static galleries, score files and rendering scripts were subsequently archived together in the second bundle. Restored images and generated historical outputs are ignored to prevent accidental recommits. No Git history was rewritten; this cleanup reduces the tracked checkout and review diff, not historical clone storage.

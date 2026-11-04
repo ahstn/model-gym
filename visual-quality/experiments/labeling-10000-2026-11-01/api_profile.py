@@ -4,6 +4,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from visual_quality.scoring.history import rehearsal_root
+
 HERE = Path(__file__).resolve().parent
 PACKAGE = HERE.parents[1]
 VERSION = "photo-labeling-v2-2026-11-01"
@@ -15,7 +17,7 @@ def sha(path):
 
 def build():
     profile = PACKAGE / "labeling"
-    old = HERE.parent / "rehearsal-4000-2026-11-01/api-teacher-prompt.json"
+    old = rehearsal_root() / "api-teacher-prompt.json"
     source = PACKAGE / "prompts/visual-rating-v2"
     teacher = json.loads(old.read_text())
     technical = (source / "technical-quality.txt").read_text().split("\nReturn only a JSON object", 1)[0]

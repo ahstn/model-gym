@@ -1,5 +1,7 @@
 # 10,000-image photo-labeling rehearsal
 
+Shared execution and presentation code now lives in the [scoring package](../../src/visual_quality/scoring/README.md). Older experiment folders were [archived](../../archives/experiments.md); corpus rebuilding and historical reuse read restored inputs from ignored data. Completed observations, source receipts, report and collage retain their original hashes. This cleanup did not rescore images or rewrite the frozen validation receipt.
+
 This run expands the previous 4,000-image rehearsal to 10,000 delivered views and the assistant-reference benchmark from 500 to 1,500 images. The accepted ensemble is **37.5% Luna + 37.5% DeepSeek + 25% Liquid**, calculated separately for technical quality and aesthetics. Jev and Q-ReAlign Lite remain comparison models. All labels remain pending training review.
 
 The baseline is `9a2f7cef8265690019d41b0158a558dcfd8a0d6d`, including the requested decision-question changes. The new profile adapts `visual-rating-v2` to the established two-outcome photography contract. All four API models receive fresh calls because the technical rubric changed; compatible Q-ReAlign Lite results for the original 4,000 views are reused.

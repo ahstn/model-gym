@@ -2,7 +2,13 @@
 
 Inventory taken on 4 November 2026 at `e51fab149e13ce6cde421b3cdae5be11709cce32`, against `origin/main` at `83a9f1efb7436b9b6f9adf0428cc9f3c11b1ece7`. This is a scope and dependency assessment, not a completed correctness review or merge approval. Sizes below are tracked working-tree bytes in decimal MB, not compressed Git storage.
 
-## Cleanup completed
+## Second cleanup completed
+
+The follow-up pass archived and removed 13 older experiment trees: 1,794 tracked files and 334,193,783 bytes before retained-code extraction. Only the completed 10,000-image run remains as a tracked experiment. Shared response, reference, Lite and rendering helpers now live in `visual-quality/src/visual_quality/scoring/`; their regression tests moved with them. The exact Lite GPU server and health identity live in `visual-quality/labeling/runtime/`. Runtime imports no longer require code in removed experiment folders. Historical corpus/reuse inputs resolve through ignored restored data, with an environment override for other machines.
+
+The [experiment catalogue](../visual-quality/archives/experiments.md) preserves the findings, archive hashes, pinned Git revision and recovery instructions. The existing uncommitted clustering experiment was preserved. Source receipts and completed datasets were not rewritten. The sections below record the initial assessment and first cleanup; their removal prerequisites have now been addressed.
+
+## First cleanup completed
 
 Following the user's approval, the three bulk artifact targets below were archived and removed from the tracked tree: 4,096 files, 449,353,429 bytes. Small archive notices replace gallery entry points and directory indexes. The [recovery guide](../visual-quality/archives/README.md) supplies a local tar, pinned Git-history retrieval commands and all member checksums. A fresh-directory restore verified every file's size and SHA256 before removal. The existing local gallery, full 10,000-image dataset and committed 1,000-example dataset remain intact.
 

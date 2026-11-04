@@ -1,5 +1,0 @@
-{
-  "recorded_at": "2026-11-01T20:01:08.049335+00:00",
-  "clarification": "For ranking eligible candidates by total errors, count each candidate-missing response on a case valid under the previous prompt as one error; this prevents missing outputs from improving ranking. The previous-valid comparison pool is fixed per model. Qualification false-floor and strict total-error guards still use only matched valid pairs as stated in protocol. Ties use false floors, misses, question length, round ID. No development outputs have been inspected when this clarification was recorded.",
-  "heldout_results_used": false
-}

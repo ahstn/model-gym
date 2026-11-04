@@ -15,12 +15,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SHARED = HERE.parent / "rehearsal-4000-2026-11-01"
-sys.path.insert(0, str(SHARED))
 sys.path.insert(0, str(HERE.parents[1] / "src"))
-import gallery
-import gallery_png
-import validate_gallery
+from visual_quality.scoring import gallery, gallery_png, validate_gallery
+
+SHARED = Path(gallery.__file__).parent
 
 from visual_quality.ensemble import MODEL, configuration
 

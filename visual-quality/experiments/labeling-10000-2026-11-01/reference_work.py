@@ -3,17 +3,16 @@
 from __future__ import annotations
 
 import argparse
-import importlib.util
 import json
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-PRIOR = HERE.parent / "rehearsal-4000-2026-11-01"
-SPEC = importlib.util.spec_from_file_location("prior_reference_review", PRIOR / "reference_review.py")
-review = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(review)
+from visual_quality.scoring import reference_review as review
+from visual_quality.scoring.history import rehearsal_root
+
+PRIOR = rehearsal_root()
 
 
 def prepare(manifest: Path, output: Path, packet_size: int, expected_count: int = 1000) -> dict:

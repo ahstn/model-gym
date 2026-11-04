@@ -1,9 +1,0 @@
-Started modelgym-eligibility-expanded-holdout-20261101.service - Freeze expanded prompt selection and score heldout cases.
-{"liquid": {"round": "previous", "qualified_new_variants": 0, "selected_rank": null}, "jev": {"round": "r14", "qualified_new_variants": 6, "selected_rank": [2, 0, 2, 438, "r14"]}}
-{"time": "2026-11-01T20:10:49.153806+00:00", "round": "holdout-original", "jobs": 0, "event": "start"}
-{"time": "2026-11-01T20:10:49.154083+00:00", "round": "holdout-original", "counts": {}, "ledger": {"liquid": {"known_usd": "0.06360624", "unpriced_attempts": 0, "liability_usd": "0.06360624"}, "jev": {"known_usd": "0.228899076", "unpriced_attempts": 259, "liability_usd": "3.080501508"}}, "stopped": false}
-{"time": "2026-11-01T20:10:49.154271+00:00", "round": "holdout-previous", "jobs": 0, "event": "start"}
-{"time": "2026-11-01T20:10:49.154298+00:00", "round": "holdout-previous", "counts": {}, "ledger": {"liquid": {"known_usd": "0.06360624", "unpriced_attempts": 0, "liability_usd": "0.06360624"}, "jev": {"known_usd": "0.228899076", "unpriced_attempts": 259, "liability_usd": "3.080501508"}}, "stopped": false}
-{"time": "2026-11-01T20:10:49.156798+00:00", "round": "holdout-selected", "jobs": 0, "event": "start"}
-{"time": "2026-11-01T20:10:49.156927+00:00", "round": "holdout-selected", "counts": {}, "ledger": {"liquid": {"known_usd": "0.06360624", "unpriced_attempts": 0, "liability_usd": "0.06360624"}, "jev": {"known_usd": "0.228899076", "unpriced_attempts": 259, "liability_usd": "3.080501508"}}, "stopped": false}
-modelgym-eligibility-expanded-holdout-20261101.service: Consumed 1.500s CPU time over 5min 36.971s wall clock time, 21.2M memory peak.

@@ -41,11 +41,13 @@ The accepted three-model weights balance Liquid's complementary errors against i
 
 ## Historical result migration
 
+Restore the [historical experiment inputs](../archives/experiments.md) before running this command. Current response and rendering helpers live in `visual_quality.scoring`; they no longer import historical experiment code.
+
 Create a canonical export without changing original observations:
 
 ```sh
 PYTHONPATH=src python -m visual_quality.ensemble \
-  --input experiments/rehearsal-4000-2026-11-01/scores-long.jsonl \
+  --input data/experiment-history-2026-11-04/tree/visual-quality/experiments/rehearsal-4000-2026-11-01/scores-long.jsonl \
   --output data/rehearsal-4000-2026-11-01/canonical/scores-long.jsonl
 ```
 

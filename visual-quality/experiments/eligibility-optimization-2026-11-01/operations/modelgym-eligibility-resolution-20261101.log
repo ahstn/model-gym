@@ -1,5 +1,0 @@
-Started modelgym-eligibility-resolution-20261101.service - Eligibility poster size diagnostic.
-{"time": "2026-11-01T19:29:00.329260+00:00", "round": "resolution-baseline", "jobs": 2, "event": "start"}
-{"time": "2026-11-01T19:29:01.056505+00:00", "round": "resolution-baseline", "counts": {"valid": 2}, "ledger": {"liquid": {"known_usd": "0.02408544", "unpriced_attempts": 0, "liability_usd": "0.02408544"}, "jev": {"known_usd": "0.086839158", "unpriced_attempts": 104, "liability_usd": "1.231884150"}}, "stopped": false}
-{"time": "2026-11-01T19:29:01.057359+00:00", "round": "resolution-selected", "jobs": 2, "event": "start"}
-{"time": "2026-11-01T19:29:01.679613+00:00", "round": "resolution-selected", "counts": {"valid": 2}, "ledger": {"liquid": {"known_usd": "0.02409936", "unpriced_attempts": 0, "liability_usd": "0.02409936"}, "jev": {"known_usd": "0.086886324", "unpriced_attempts": 104, "liability_usd": "1.231931316"}}, "stopped": false}

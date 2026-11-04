@@ -3,17 +3,16 @@
 from __future__ import annotations
 
 import argparse
-import importlib.util
 import json
 from pathlib import Path
 
 import requests
 
 HERE = Path(__file__).resolve().parent
-PRIOR = HERE.parent / "rehearsal-4000-2026-11-01"
-SPEC = importlib.util.spec_from_file_location("prior_lite_runner", PRIOR / "lite_runner.py")
-client = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(client)
+from visual_quality.scoring import lite_runner as client
+from visual_quality.scoring.history import rehearsal_root
+
+PRIOR = rehearsal_root()
 
 
 def reuse_rows(cases: list[dict]) -> list[dict]:
@@ -109,7 +108,7 @@ def main():
     )
     response.raise_for_status()
     identity = response.json()
-    expected_path = HERE.parent / "qrealign-lite-72-2026-10-31/server-identity.json"
+    expected_path = HERE.parents[1] / "labeling/runtime/lite-server-identity.json"
     if identity != json.loads(expected_path.read_text()):
         raise ValueError("Live scorer identity differs from the prior validated model")
     config = {
@@ -122,7 +121,7 @@ def main():
         "concurrency": args.concurrency,
         "partition": args.partition,
         "reference_pins": pins,
-        "client_sha256": client.digest_bytes((PRIOR / "lite_runner.py").read_bytes()),
+        "client_sha256": client.digest_bytes(Path(client.__file__).read_bytes()),
         "adapter_sha256": client.digest_bytes(Path(__file__).read_bytes()),
         "server_identity_sha256": client.digest_bytes(client.canonical(identity)),
         "latency_kind": "http_request_through_complete_response",

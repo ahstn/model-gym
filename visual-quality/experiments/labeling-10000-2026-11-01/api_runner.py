@@ -6,7 +6,6 @@ import argparse
 import concurrent.futures
 import fcntl
 import hashlib
-import importlib.util
 import json
 import os
 import re
@@ -23,13 +22,10 @@ import requests
 HERE = Path(__file__).resolve().parent
 PACKAGE = HERE.parents[1]
 DATA = Path("/home/ahstn/git/model-gym/visual-quality/data/labeling-10000-2026-11-01")
-OLD = HERE.parent / "rehearsal-4000-2026-11-01"
 sys.path.insert(0, str(PACKAGE / "src"))
 from visual_quality.labeling_profile import MODELS, load_profile, request_payload
+from visual_quality.scoring import api_contract as contract
 
-SPEC = importlib.util.spec_from_file_location("labeling_10000_response_contract", OLD / "api_contract.py")
-contract = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(contract)
 POLICY = {
     "luna": {
         "workers": 16,
@@ -102,7 +98,7 @@ def code_pins():
     files = [
         Path(__file__),
         PACKAGE / "src/visual_quality/labeling_profile.py",
-        OLD / "api_contract.py",
+        Path(contract.__file__),
         contract.WIRE_PATH,
     ]
     return {str(path): sha(path) for path in files}

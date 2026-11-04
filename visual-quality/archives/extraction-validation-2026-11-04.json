@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "historical_source_commit": "ddcbc4d422b4d4b931bf01b2f00b7938935052fe",
+  "extracted_module_behavior": {
+    "api_contract": "all function/class ASTs identical",
+    "wire": "all function/class ASTs identical",
+    "lite_runner": "all function/class ASTs identical",
+    "reference_review": "all function/class ASTs identical",
+    "gallery": "all function/class ASTs identical",
+    "gallery_png": "all function/class ASTs identical",
+    "validate_gallery": "all function/class ASTs identical"
+  },
+  "lite_server_sha256": "aaab73e53225093d30e1fbe800425c3b9754d7a5547013f735de8f358a408dbb",
+  "tests_passed": 509,
+  "subtests_passed": 20,
+  "publication_views": 1000,
+  "publication_assessor_rows": 7000,
+  "publication_image_bytes_rechecked": false,
+  "current_png_byte_parity": {
+    "comparison-page-1.png": true,
+    "comparison-page-2.png": true,
+    "comparison-page-3.png": true,
+    "comparison-page-4.png": true
+  },
+  "historical_archive_members_verified": 1794,
+  "models_called": false,
+  "original_report_and_receipts_rewritten": false
+}

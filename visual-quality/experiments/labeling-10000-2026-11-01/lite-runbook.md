@@ -2,6 +2,8 @@
 
 Lite is a comparison model with an unchanged native interface. It receives the same exact delivered images as the API graders, returns separate quality and aesthetic score distributions, and retains the historical mapping to the 1–5 scale. It does not receive the chat JSON schema, the revised photography gate, or image-statistics text. Its per-row reported price is $0.00 by the user's accounting rule; paid Runpod infrastructure is separate.
 
+The retained GPU source is now `visual-quality/labeling/runtime/lite_server.py`; the adapter checks `labeling/runtime/lite-server-identity.json`. Shared request logic lives in `visual_quality.scoring.lite_runner`. Historical reuse reads the restored evidence root documented in `archives/experiments.md`.
+
 ## Pinned identity
 
 The checkpoint is `q-future/Q-ReAlign-Lite-4B`, revision `06add46a6bc4a7dfcf0a59a2fb1ed15a6e3d30b7`. The server implementation is the unchanged experiment from `0a156b4`, SHA256 `aaab73e53225093d30e1fbe800425c3b9754d7a5547013f735de8f358a408dbb`. The container is `runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404`, with Transformers 5.2.0. Each task is scored serially on the GPU using the original level tokens; returned health identity must exactly match the previously validated server.

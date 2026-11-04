@@ -1,6 +1,6 @@
 # Local gallery and reference collage
 
-`gallery_run.py` reads a saved export snapshot and reuses the rehearsal HTML and Pillow renderers. It does not call models, change observations, publish files or switch the running gallery service. The full gallery, thumbnails, four PNG pages and proof records stay under ignored run data.
+`gallery_run.py` reads a saved export snapshot and uses the shared HTML and Pillow renderers in `visual_quality.scoring`. It does not call models, change observations, publish files or switch the running gallery service. The full gallery, thumbnails, four PNG pages and proof records stay under ignored run data. Archived experiment folders are not required to render the current export.
 
 From the repository root, build the current preview:
 

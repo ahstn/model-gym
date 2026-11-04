@@ -1,7 +1,0 @@
-model,attempts,known_price_usd,unpriced_attempts,total_price_usd,price_basis
-deepseek,5001,2.66338736,1,,all_attempt_receipts
-luna,5016,3.933034375,16,,all_attempt_receipts
-jev,4736,0.716425836,749,,all_attempt_receipts
-liquid,4004,0.19634044,4,,all_attempt_receipts
-qrealign_lite,4000,0.00,0,0.00,user_assigned_zero
-reference,0,0,0,0,user_assigned_zero

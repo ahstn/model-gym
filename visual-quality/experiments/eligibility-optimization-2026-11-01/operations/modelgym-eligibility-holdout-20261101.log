@@ -1,6 +1,0 @@
-Started modelgym-eligibility-holdout-20261101.service - Eligibility prompt held-out evaluation.
-{"time": "2026-11-01T19:24:53.964348+00:00", "round": "heldout-baseline", "jobs": 120, "event": "start"}
-{"time": "2026-11-01T19:25:39.684580+00:00", "round": "heldout-baseline", "counts": {"valid": 119, "error": 1}, "ledger": {"liquid": {"known_usd": "0.02140384", "unpriced_attempts": 0, "liability_usd": "0.02140384"}, "jev": {"known_usd": "0.077195454", "unpriced_attempts": 93, "liability_usd": "1.101129918"}}, "stopped": false}
-{"time": "2026-11-01T19:25:39.685795+00:00", "round": "heldout-selected", "jobs": 120, "event": "start"}
-{"time": "2026-11-01T19:26:23.149483+00:00", "round": "heldout-selected", "counts": {"valid": 119, "error": 1}, "ledger": {"liquid": {"known_usd": "0.02407270", "unpriced_attempts": 0, "liability_usd": "0.02407270"}, "jev": {"known_usd": "0.086793462", "unpriced_attempts": 104, "liability_usd": "1.231838454"}}, "stopped": false}
-modelgym-eligibility-holdout-20261101.service: Consumed 7.194s CPU time over 1min 29.348s wall clock time, 84.6M memory peak.
