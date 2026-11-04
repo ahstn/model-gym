@@ -1,6 +1,6 @@
 # Saved data and reproduction
 
-The report, CSV, 4,000 gallery previews and four comparison PNGs are repository artifacts. The full delivered image views remain locally under `/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/`; their exact SHA256 values are in `manifest.json`. Gallery previews preserve framing but reduce detail and are not replacements for those delivered views when repeating inference.
+The report and CSV remain repository artifacts. The 4,000 gallery previews, comparison PNGs and execution archives moved to [checksummed historical storage](../../archives/README.md) on 4 November 2026. Restore them into a separate directory before using their old paths. The full delivered image views remain locally under `/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/views/`; their exact SHA256 values are in `manifest.json`. Gallery previews preserve framing but reduce detail and are not replacements for those delivered views when repeating inference.
 
 A durable viewing copy of this experiment is saved under `/home/ahstn/git/model-gym/visual-quality/data/rehearsal-4000-2026-11-01/published/`. Its relative report/gallery links work together; original-image links target the local delivered views. The Git branch is `codex/rehearsal-4000-2026-11-01`.
 

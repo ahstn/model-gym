@@ -1,6 +1,6 @@
 # Gallery validation
 
-**Final publication validation passed.** The full gallery contains 4,000 cases, all 40 content clusters and the frozen 72-image comparison selection. The final run passed 205 browser checks, loaded all 4,000 previews, matched the rendered data to all 27,500 CSV rows and verified the four static pages' 1,008 score cells. The hash-bound receipt is [gallery/publication-validation.json](gallery/publication-validation.json). All four final PNG pages were opened and inspected without observed clipping; [gallery/visual-inspection.json](gallery/visual-inspection.json) records their hashes.
+**Final publication validation passed.** The full gallery contains 4,000 cases, all 40 content clusters and the frozen 72-image comparison selection. The final run passed 205 browser checks, loaded all 4,000 previews, matched the rendered data to all 27,500 CSV rows and verified the four static pages' 1,008 score cells. The hash-bound receipt is [gallery/publication-validation.json (restore)](../../archives/README.md). All four final PNG pages were opened and inspected without observed clipping; [gallery/visual-inspection.json (restore)](../../archives/README.md) records their hashes.
 
 An earlier successful run used the 72-image layout fixture at `/tmp/rehearsal-real-layout-check/gallery`, whose model scores were incomplete. That fixture remains a layout check, not a final result.
 

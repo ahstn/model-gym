@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source_commit": "4c644bbbb96db5145c1ebff51313a87e7394f106",
+  "paths": [
+    "visual-quality/experiments/rehearsal-4000-2026-11-01/gallery",
+    "visual-quality/experiments/rehearsal-4000-2026-11-01/execution-records",
+    "visual-quality/experiments/photo-scoring-2026-10-31/images"
+  ],
+  "files": 4096,
+  "file_bytes": 449353429,
+  "local_archive": "visual-quality/data/historical-cleanup-2026-11-04/historical-artifacts.tar",
+  "archive_bytes": 452495360,
+  "archive_sha256": "abef5cf5f3ed5992c0d50aaddcac60249de74f8fb2b77a3ac70c08bd43b6a8e4",
+  "member_checksums": "historical-artifacts-2026-11-04.sha256",
+  "restore_verified": true,
+  "retrieval": "Local tar or git archive of source_commit; source commit remains in normal Git history",
+  "historical_labels": true,
+  "not_current_training_data": true
+}

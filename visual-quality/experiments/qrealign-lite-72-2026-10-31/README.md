@@ -1,5 +1,7 @@
 # Q-ReAlign Lite: 72-image Runpod trial
 
+**Historical media:** the shared 72 source PNGs have been [archived with verified recovery instructions](../../archives/README.md). Static comparison PNGs and scores remain available here. Interactive HTML now points to recovery instructions; use a restored historical checkout to browse or regenerate the original gallery.
+
 [All per-image scores](scores.csv) · [Analysis](analysis.json) · [Prior 72-image gallery](../photo-scoring-2026-10-31/gallery.html)
 
 Static image pages with both scores and per-image Lite end-to-end latency: [page 1](comparison-latency-page-1.png) · [page 2](comparison-latency-page-2.png) · [page 3](comparison-latency-page-3.png) · [page 4](comparison-latency-page-4.png). Each page contains 18 original images. The other models' consolidated records do not contain comparable per-image latency measurements.

@@ -26,3 +26,11 @@ mise.local.toml
 
 # Visual-quality source images, generated pilot, and acquisition caches
 visual-quality/data/
+
+# Historical media/receipts: recover from the pinned archive, never recommit.
+visual-quality/experiments/rehearsal-4000-2026-11-01/gallery/**
+!visual-quality/experiments/rehearsal-4000-2026-11-01/gallery/index.html
+visual-quality/experiments/rehearsal-4000-2026-11-01/execution-records/**
+!visual-quality/experiments/rehearsal-4000-2026-11-01/execution-records/README.md
+visual-quality/experiments/photo-scoring-2026-10-31/images/**
+!visual-quality/experiments/photo-scoring-2026-10-31/images/README.md

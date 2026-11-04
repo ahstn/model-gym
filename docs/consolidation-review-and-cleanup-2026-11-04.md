@@ -2,11 +2,21 @@
 
 Inventory taken on 4 November 2026 at `e51fab149e13ce6cde421b3cdae5be11709cce32`, against `origin/main` at `83a9f1efb7436b9b6f9adf0428cc9f3c11b1ece7`. This is a scope and dependency assessment, not a completed correctness review or merge approval. Sizes below are tracked working-tree bytes in decimal MB, not compressed Git storage.
 
+## Cleanup completed
+
+Following the user's approval, the three bulk artifact targets below were archived and removed from the tracked tree: 4,096 files, 449,353,429 bytes. Small archive notices replace gallery entry points and directory indexes. The [recovery guide](../visual-quality/archives/README.md) supplies a local tar, pinned Git-history retrieval commands and all member checksums. A fresh-directory restore verified every file's size and SHA256 before removal. The existing local gallery, full 10,000-image dataset and committed 1,000-example dataset remain intact.
+
+The scripts and historical manifests/score files still imported by the active workflow remain in place. Their extraction is a separate structural change, not a prerequisite for this completed media/receipt cleanup. Original report conclusions and validation receipts remain historical evidence; archive notices do not claim to be the original validated gallery pages.
+
+PRs [#3](https://github.com/ahstn/model-gym/pull/3) and [#6](https://github.com/ahstn/model-gym/pull/6) are now closed as superseded by [draft PR #7](https://github.com/ahstn/model-gym/pull/7), after confirming both tips are ancestors of the consolidation branch. Their branches were preserved. PR #5 remains separate and open.
+
+Post-cleanup checks: 385 visual-quality/current-workflow tests and four subtests passed. Documentation recovery links and exact archive member hashes were checked. This does not replace the broader correctness review of the consolidation PR.
+
 ## Review scope
 
 The branch contains 40 commits beyond main and changes 6,359 files: 6,049 in visual-quality, 256 in visual-triage, 50 in image-stats, three in docs and one gitignore. Most of the file count is experiment evidence and generated media. Main is already an ancestor, so no main merge is needed at this snapshot.
 
-There was no open PR for `codex/consolidate-model-gym-2026-10-21` at inspection. Existing PR #3 (visual-quality pilot) and #6 (visual-triage) have their current tips included in this branch. Their historical descriptions do not describe the completed consolidation. PR #5 (`feat/vq-baseline`) is separate: its tip is not included. Keep those PRs open until their owners reconcile their scope; this assessment does not close or merge them.
+There was no open PR for `codex/consolidate-model-gym-2026-10-21` at initial inspection; draft PR #7 was subsequently created. PR #3 (visual-quality pilot) and #6 (visual-triage) have their tips included in this branch. Their historical descriptions do not describe the completed consolidation. PR #5 (`feat/vq-baseline`) is separate: its tip is not included.
 
 No `.github` workflow directory exists in this checkout. The saved 10,000-image validation receipt records the earlier test and artifact checks; it is not CI evidence for the entire consolidation branch. Review the three workspaces separately, then run their documented offline checks on the final proposed merge revision.
 
@@ -58,4 +68,4 @@ The existing `experiments/README.md` called every experiment historical, althoug
 4. Remove verified archived bulk outputs from the tracked tree; update report links and reconstruction commands in the same change. Keep a compact archive index with storage location, revision, hashes and source terms. Check documentation links and offline regeneration before committing removals.
 5. Review and run the documented offline checks for visual-quality, image-stats and visual-triage on the cleaned branch. Reconcile PR #3/#6, then perform the final merge review. PR #5 needs a separate integration decision.
 
-No model calls, dataset changes, evidence deletions or PR closures were performed for this assessment. Existing uncommitted embedding documentation and experiment files were left untouched; they need their own scope decision before the working directory can be clean.
+The initial assessment made no model calls, dataset changes or evidence deletions. The authorized cleanup is recorded above. Existing uncommitted embedding documentation and experiment files were left untouched; they need their own scope decision before the working directory can be clean.
