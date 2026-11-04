@@ -1097,7 +1097,9 @@ def markdown_report(report):
                     f"{arm}: {native['valid_only']['confusion']['tp']}/{count} to {control['valid_only']['confusion']['tp']}/{count}"
                 )
             lines += [
-                "Removing C2PA changed AI detections on the same images (" + "; ".join(changes) + "). These controls show how the model used credentials. They contain only generated images, so they cannot measure false positives on real photos.",
+                "Removing C2PA changed AI detections on the same images ("
+                + "; ".join(changes)
+                + "). These controls show how the model used credentials. They contain only generated images, so they cannot measure false positives on real photos.",
                 "",
             ]
         lines += [

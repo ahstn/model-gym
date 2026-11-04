@@ -13,6 +13,7 @@ dependencies = [
 
 [dependency-groups]
 dev = ["pytest>=8.3", "ruff>=0.11"]
+corpus = ["scikit-learn>=1.5,<2"]
 
 [project.scripts]
 visual-pilot = "visual_quality.cli:main"

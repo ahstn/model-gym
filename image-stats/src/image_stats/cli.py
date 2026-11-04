@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import multiprocessing
 import os
 import platform
 import sys
@@ -109,7 +110,16 @@ def _analyse(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
     counts, flags = Counter(), Counter()
     with ExitStack() as stack:
         if args.workers > 1:
-            pool = stack.enter_context(ProcessPoolExecutor(args.workers, initializer=cv2.setNumThreads, initargs=(1,)))
+            # Forking after OpenCV has started native threads can inherit locked
+            # thread-pool state. Fresh interpreters also make library use safe.
+            pool = stack.enter_context(
+                ProcessPoolExecutor(
+                    args.workers,
+                    mp_context=multiprocessing.get_context("spawn"),
+                    initializer=cv2.setNumThreads,
+                    initargs=(1,),
+                )
+            )
             records = pool.map(_record, tasks, chunksize=8)
         else:
             records = map(_record, tasks)

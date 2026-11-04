@@ -165,6 +165,53 @@ def test_nested_nonpublic_score_is_rejected_even_with_updated_file_hash(tmp_path
         verify_publication(destination)
 
 
+@pytest.mark.parametrize("change", ["score", "missing_model", "training_ready", "task_mask", "reference"])
+def test_publication_rejects_inconsistent_training_records(tmp_path, change):
+    destination = stage(tmp_path)
+    name = "references.jsonl" if change == "reference" else "labelled-images.jsonl"
+    path = destination / name
+    record = json.loads(path.read_text())
+    if change == "score":
+        record["assessments"]["luna"]["technical_score"] = 1.0
+    elif change == "missing_model":
+        del record["assessments"]["luna"]
+    elif change == "training_ready":
+        record["training_ready"] = True
+    elif change == "task_mask":
+        record["task_masks"]["technical_quality"] = True
+    else:
+        record["technical_quality"]["score"] = 1.0
+    path.write_text(json.dumps(record) + "\n")
+    provenance_path = destination / "provenance.json"
+    provenance = json.loads(provenance_path.read_text())
+    provenance["records"][name] = sha(path)
+    provenance_path.write_text(json.dumps(provenance))
+    with pytest.raises(ValueError, match="assessments and score table differ|training masks"):
+        verify_publication(destination)
+
+
+def test_publication_requires_model_coverage_per_image_not_just_total_counts(tmp_path):
+    manifest, refs, _, _ = inputs()
+    rows, labelled, summary = build()
+    destination = tmp_path / "staged"
+    publish.write_publication(destination, manifest, refs, rows, labelled, summary, limit=2)
+    path = destination / "scores.jsonl"
+    records = [json.loads(line) for line in path.read_text().splitlines()]
+    first = records[0]
+    other = next(r for r in records if r["model"] == first["model"] and r["case_id"] != first["case_id"])
+    other.update(case_id=first["case_id"], view_sha256=first["view_sha256"], arm="duplicate_arm")
+    path.write_text("".join(json.dumps(r) + "\n" for r in records))
+    csv_path = path.with_suffix(".csv")
+    publish.write_observations(csv_path, records)
+    provenance_path = destination / "provenance.json"
+    provenance = json.loads(provenance_path.read_text())
+    provenance["records"][path.name] = sha(path)
+    provenance["records"][csv_path.name] = sha(csv_path)
+    provenance_path.write_text(json.dumps(provenance))
+    with pytest.raises(ValueError, match="every model/reference slot"):
+        verify_publication(destination)
+
+
 def test_incomplete_inputs_do_not_publish_silently(tmp_path):
     values = inputs()
     values[2]["liquid"].pop()

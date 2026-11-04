@@ -2,6 +2,8 @@
 
 Inventory taken on 4 November 2026 at `e51fab149e13ce6cde421b3cdae5be11709cce32`, against `origin/main` at `83a9f1efb7436b9b6f9adf0428cc9f3c11b1ece7`. This is a scope and dependency assessment, not a completed correctness review or merge approval. Sizes below are tracked working-tree bytes in decimal MB, not compressed Git storage.
 
+The subsequent [PR #7 review](pr-7-review-2026-11-04.md) records the correctness fixes and completed workspace checks. The [10K handover prompt](handover-photo-labeling-10000-2026-11-04.md) preserves the configuration and continuation instructions. The inventory and staged cleanup history below remain as originally assessed.
+
 ## Second cleanup completed
 
 The follow-up pass archived and removed 13 older experiment trees: 1,794 tracked files and 334,193,783 bytes before retained-code extraction. Only the completed 10,000-image run remains as a tracked experiment. Shared response, reference, Lite and rendering helpers now live in `visual-quality/src/visual_quality/scoring/`; their regression tests moved with them. The exact Lite GPU server and health identity live in `visual-quality/labeling/runtime/`. Runtime imports no longer require code in removed experiment folders. Historical corpus/reuse inputs resolve through ignored restored data, with an environment override for other machines.

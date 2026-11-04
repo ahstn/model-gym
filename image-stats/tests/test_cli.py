@@ -1,4 +1,6 @@
 import json
+import subprocess
+import sys
 
 import cv2
 import numpy as np
@@ -38,6 +40,30 @@ def test_analyse_calibrate_describe(tmp_path, capsys):
     assert len(rows) == 20
     assert "ranked against 20 images in 'tiny'" in rows[0]["prompt_block"]
     capsys.readouterr()
+
+
+def test_parallel_analysis_after_opencv_use_finishes_and_matches_serial(tmp_path):
+    images = corpus(tmp_path / "images", count=3)
+    script = tmp_path / "parallel.py"
+    script.write_text(
+        "import sys\n"
+        "from pathlib import Path\n"
+        "from image_stats import analyse_file\n"
+        "from image_stats.cli import main\n"
+        "if __name__ == '__main__':\n"
+        "    images, output = map(Path, sys.argv[1:])\n"
+        "    analyse_file(images / '00.png')\n"
+        "    for workers in (1, 2):\n"
+        "        assert main(['analyse', str(images), '--workers', str(workers),\n"
+        "                     '--output', str(output / f'{workers}.jsonl')]) == 0\n"
+    )
+    subprocess.run(
+        [sys.executable, str(script), str(images), str(tmp_path)],
+        check=True,
+        capture_output=True,
+        timeout=30,
+    )
+    assert read_jsonl(tmp_path / "1.jsonl") == read_jsonl(tmp_path / "2.jsonl")
 
 
 def test_manifest_mode_uses_ids_and_records_errors(tmp_path, capsys):

@@ -35,20 +35,32 @@ def inputs(tmp_path, monkeypatch):
         monkeypatch.setattr(study, name, value)
     monkeypatch.setattr(study.time, "sleep", lambda seconds: None)
     samples = []
-    for generator, count in (("real", 80), ("dalle2", 20), ("dalle3", 20),
-                             ("firefly", 20), ("midjourney-v5", 20)):
+    for generator, count in (
+        ("real", 80),
+        ("dalle2", 20),
+        ("dalle3", 20),
+        ("firefly", 20),
+        ("midjourney-v5", 20),
+    ):
         for index in range(count):
             case = f"{generator}-{index:03}"
             native = tmp_path / "native" / f"{case}.png"
             native.parent.mkdir(exist_ok=True)
             Image.new("RGB", (9, 7), (len(samples), index, 13)).save(native)
-            samples.append({
-                "id": case, "split": "test", "group_id": f"group-{generator}-{index // 8}",
-                "gold": generator != "real", "source": {"generator": None if generator == "real" else generator},
-                "native_image": str(native.relative_to(tmp_path)), "native_sha256": study.sha(native),
-                "image": f"delivered/{case}.jpg", "delivered_sha256": "0" * 64,
-                "features": {"provenance": {"status": "no_manifest", "manifest_present": False}},
-            })
+            samples.append(
+                {
+                    "id": case,
+                    "split": "test",
+                    "group_id": f"group-{generator}-{index // 8}",
+                    "gold": generator != "real",
+                    "source": {"generator": None if generator == "real" else generator},
+                    "native_image": str(native.relative_to(tmp_path)),
+                    "native_sha256": study.sha(native),
+                    "image": f"delivered/{case}.jpg",
+                    "delivered_sha256": "0" * 64,
+                    "features": {"provenance": {"status": "no_manifest", "manifest_present": False}},
+                }
+            )
     # A non-test record with no usable image must never enter the frozen cohort.
     samples.append({"id": "training-only", "split": "train"})
     write_json(source / "dataset.json", {"samples": samples})
@@ -63,8 +75,11 @@ def freeze_inputs(inputs):
 
 def result(case, *, success=True):
     return {
-        "input_sha256": case["native_sha256"], "started_at": datetime.now(UTC).isoformat(),
-        "success": success, "http_status": 200 if success else 429, "elapsed_seconds": 0.1,
+        "input_sha256": case["native_sha256"],
+        "started_at": datetime.now(UTC).isoformat(),
+        "success": success,
+        "http_status": 200 if success else 429,
+        "elapsed_seconds": 0.1,
         "signals": {"c2pa": {"outcome": "not_detected"}, "synthid": {"outcome": "not_detected"}},
         "error": None if success else {"kind": "http_error"},
     }
@@ -88,7 +103,11 @@ def test_freeze_pins_complete_native_cohort_and_interleaves_sources(inputs):
     assert len(cases) == len({case["case"] for case in cases}) == 160
     assert Counter(case["gold_ai"] for case in cases) == {True: 80, False: 80}
     assert Counter(case["source"] for case in cases) == {
-        "real": 80, "dalle2": 20, "dalle3": 20, "firefly": 20, "midjourney-v5": 20,
+        "real": 80,
+        "dalle2": 20,
+        "dalle3": 20,
+        "firefly": 20,
+        "midjourney-v5": 20,
     }
     assert sum(case["openai_origin"] for case in cases) == 40
     expected_order = ["dalle3", "real", "dalle2", "real", "firefly", "real", "midjourney-v5", "real"]
@@ -112,9 +131,12 @@ def test_bad_inputs_fail_before_frozen_output_or_submission(inputs, monkeypatch,
         (inputs["root"] / inputs["samples"][0]["native_image"]).write_bytes(b"changed")
     else:
         write_json(inputs["source"] / "dataset.json", {"samples": inputs["samples"][1:]})
-        write_json(inputs["source"] / "protocol.json", {
-            "dataset_sha256": study.sha(inputs["source"] / "dataset.json"),
-        })
+        write_json(
+            inputs["source"] / "protocol.json",
+            {
+                "dataset_sha256": study.sha(inputs["source"] / "dataset.json"),
+            },
+        )
     with pytest.raises(ValueError):
         study.freeze()
     assert not (inputs["track"] / "protocol.json").exists()

@@ -30,54 +30,102 @@ def cohort(tmp_path):
     track = tmp_path / "tracks/openai_provenance"
     data = tmp_path / "data/openai-provenance-v1"
     source = tmp_path / "tracks/metadata_v3"
-    for path in (track / "client.py", track / "study.py", data / "research/guide.md",
-                 source / "dataset.json", source / "protocol.json"):
+    for path in (
+        track / "client.py",
+        track / "study.py",
+        data / "research/guide.md",
+        source / "dataset.json",
+        source / "protocol.json",
+    ):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("{}")
-    cases = [{"case": name, "source": name, "gold_ai": name != "real",
-              "openai_origin": name in {"dalle2", "dalle3"}, "native_sha256": str(index) * 64,
-              "delivered_sha256": str(index + 5) * 64}
-             for index, name in enumerate(report.SOURCES)]
+    cases = [
+        {
+            "case": name,
+            "source": name,
+            "gold_ai": name != "real",
+            "openai_origin": name in {"dalle2", "dalle3"},
+            "native_sha256": str(index) * 64,
+            "delivered_sha256": str(index + 5) * 64,
+        }
+        for index, name in enumerate(report.SOURCES)
+    ]
     write(data / "manifest.json", {"cases": cases})
-    protocol = {"cases": 5, "source_counts": dict.fromkeys(report.SOURCES, 1),
-                "manifest_sha256": report.sha(data / "manifest.json"),
-                "guide_sha256": report.sha(data / "research/guide.md"),
-                "source_dataset_sha256": report.sha(source / "dataset.json"),
-                "source_protocol_sha256": report.sha(source / "protocol.json"),
-                "execution_sha256": {str(path.relative_to(tmp_path)): report.sha(path)
-                                     for path in (track / "client.py", track / "study.py")},
-                "endpoint": "https://api.openai.com/v1/content_provenance_checks",
-                "limitations": ["No current GPT-image positive controls"]}
+    protocol = {
+        "cases": 5,
+        "source_counts": dict.fromkeys(report.SOURCES, 1),
+        "manifest_sha256": report.sha(data / "manifest.json"),
+        "guide_sha256": report.sha(data / "research/guide.md"),
+        "source_dataset_sha256": report.sha(source / "dataset.json"),
+        "source_protocol_sha256": report.sha(source / "protocol.json"),
+        "execution_sha256": {
+            str(path.relative_to(tmp_path)): report.sha(path)
+            for path in (track / "client.py", track / "study.py")
+        },
+        "endpoint": "https://api.openai.com/v1/content_provenance_checks",
+        "limitations": ["No current GPT-image positive controls"],
+    }
     write(track / "protocol.json", protocol)
     rows = []
     for arm in report.ARMS:
         for case, probability in zip(cases, (0.1, 0.7, 0.8, 0.3, 0.6), strict=True):
-            rows.append({"case": case["case"], "condition": "native", "prompt_variant": "selected",
-                         "arm": arm, "native_sha256": case["native_sha256"],
-                         "delivered_sha256": case["delivered_sha256"], "gold": int(case["gold_ai"]),
-                         "prediction": probability, "valid": "True", "effective_cost_usd": 0.01,
-                         "seconds": 0.5})
+            rows.append(
+                {
+                    "case": case["case"],
+                    "condition": "native",
+                    "prompt_variant": "selected",
+                    "arm": arm,
+                    "native_sha256": case["native_sha256"],
+                    "delivered_sha256": case["delivered_sha256"],
+                    "gold": int(case["gold_ai"]),
+                    "prediction": probability,
+                    "valid": "True",
+                    "effective_cost_usd": 0.01,
+                    "seconds": 0.5,
+                }
+            )
     write_csv(source / "results/cases.csv", rows)
-    return {"root": tmp_path, "track": track, "data": data, "source": source,
-            "protocol": protocol, "cases": cases, "decider": rows}
+    return {
+        "root": tmp_path,
+        "track": track,
+        "data": data,
+        "source": source,
+        "protocol": protocol,
+        "cases": cases,
+        "decider": rows,
+    }
 
 
 def attempt(cohort, index, *, detected=False, adobe=False, success=True):
     case = cohort["cases"][index]
-    c2pa = {"type": "c2pa", "outcome": "detected" if detected else "not_detected",
-            "model": None, "generated_at": None, "issuer": "OpenAI" if detected else "Adobe Inc." if adobe else None,
-            "validation_state": "valid" if detected or adobe else "not_present"}
+    c2pa = {
+        "type": "c2pa",
+        "outcome": "detected" if detected else "not_detected",
+        "model": None,
+        "generated_at": None,
+        "issuer": "OpenAI" if detected else "Adobe Inc." if adobe else None,
+        "validation_state": "valid" if detected or adobe else "not_present",
+    }
     synthid = {"type": "synthid", "outcome": "not_detected", "model": None, "generated_at": None}
-    return {"case": case["case"], "source": case["source"], "input_sha256": case["native_sha256"],
-            "protocol_sha256": report.sha(cohort["track"] / "protocol.json"),
-            "endpoint": cohort["protocol"]["endpoint"], "attempt": index + 1,
-            "http_status": 200 if success else 502,
-            "success": success, "schema_valid": success, "elapsed_seconds": float(index + 1),
-            "cost_usd": None, "response_headers": {"openai-processing-ms": "500"},
-            "signals": {"c2pa": c2pa, "synthid": synthid} if success else {},
-            "raw_response": {"object": "content_provenance_check", "created_at": 123,
-                             "results": [c2pa, synthid]} if success else None,
-            "error": None if success else {"kind": "http_error"}}
+    return {
+        "case": case["case"],
+        "source": case["source"],
+        "input_sha256": case["native_sha256"],
+        "protocol_sha256": report.sha(cohort["track"] / "protocol.json"),
+        "endpoint": cohort["protocol"]["endpoint"],
+        "attempt": index + 1,
+        "http_status": 200 if success else 502,
+        "success": success,
+        "schema_valid": success,
+        "elapsed_seconds": float(index + 1),
+        "cost_usd": None,
+        "response_headers": {"openai-processing-ms": "500"},
+        "signals": {"c2pa": c2pa, "synthid": synthid} if success else {},
+        "raw_response": {"object": "content_provenance_check", "created_at": 123, "results": [c2pa, synthid]}
+        if success
+        else None,
+        "error": None if success else {"kind": "http_error"},
+    }
 
 
 def ledger(cohort, rows):
@@ -85,19 +133,33 @@ def ledger(cohort, rows):
 
 
 def test_partial_report_separates_unresolved_failed_and_unattempted(cohort):
-    rows = [attempt(cohort, 0), attempt(cohort, 1, detected=True), attempt(cohort, 2, success=False),
-            attempt(cohort, 3, adobe=True)]
+    rows = [
+        attempt(cohort, 0),
+        attempt(cohort, 1, detected=True),
+        attempt(cohort, 2, success=False),
+        attempt(cohort, 3, adobe=True),
+    ]
     ledger(cohort, rows)
     result = report.build_report(cohort["root"])
     summary = result["summary"]
-    assert (summary["attempted"], summary["success"], summary["failed"], summary["unattempted"]) == (4, 3, 1, 1)
+    assert (summary["attempted"], summary["success"], summary["failed"], summary["unattempted"]) == (
+        4,
+        3,
+        1,
+        1,
+    )
     assert summary["status"] == "partial"
     assert summary["openai_origin_detections"] == 1
     assert summary["by_source"]["firefly"]["c2pa_states"] == {"valid": 1}
     assert summary["by_source"]["firefly"]["openai_signals"] == 0
     assert summary["by_source"]["firefly"]["unresolved"] == 1
     assert [row["disposition"] for row in result["cases"]] == [
-        "unresolved", "openai_signal", "failed", "unresolved", "unattempted"]
+        "unresolved",
+        "openai_signal",
+        "failed",
+        "unresolved",
+        "unattempted",
+    ]
     assert result["cases"][2]["openai_signal_detected"] is None
     assert result["cases"][4]["openai_signal_detected"] is None
     assert summary["total_cost_usd"] is None
@@ -162,8 +224,12 @@ def test_corrupt_ledger_is_rejected(cohort, change):
 
 @pytest.mark.parametrize("name", ["dataset", "manifest", "guide", "client"])
 def test_changed_frozen_input_is_rejected(cohort, name):
-    paths = {"dataset": cohort["source"] / "dataset.json", "manifest": cohort["data"] / "manifest.json",
-             "guide": cohort["data"] / "research/guide.md", "client": cohort["track"] / "client.py"}
+    paths = {
+        "dataset": cohort["source"] / "dataset.json",
+        "manifest": cohort["data"] / "manifest.json",
+        "guide": cohort["data"] / "research/guide.md",
+        "client": cohort["track"] / "client.py",
+    }
     path = paths[name]
     path.write_text(path.read_text() + "\n")
     with pytest.raises(ValueError, match="frozen study input"):
@@ -202,9 +268,16 @@ def test_snapshot_is_immutable_and_unknown_costs_stay_blank(cohort, tmp_path):
 
 
 def test_historical_overlap_is_rejected(cohort):
-    write_csv(cohort["root"] / "summaries/initial_benchmark.csv", [{
-        "panel": "ai", "phase": "primary", "delivered_sha256": cohort["cases"][0]["native_sha256"],
-    }])
+    write_csv(
+        cohort["root"] / "summaries/initial_benchmark.csv",
+        [
+            {
+                "panel": "ai",
+                "phase": "primary",
+                "delivered_sha256": cohort["cases"][0]["native_sha256"],
+            }
+        ],
+    )
     with pytest.raises(ValueError, match="overlaps"):
         report.build_report(cohort["root"])
 
@@ -213,19 +286,28 @@ def amended_cohort(cohort, *, retry_success=True):
     rows = [attempt(cohort, index, success=index != 2) for index in range(5)]
     resume = cohort["track"] / "resume.py"
     resume.write_text("# frozen resume\n")
-    amendment = {"protocol_sha256": report.sha(cohort["track"] / "protocol.json"),
-                 "resume_code_sha256": report.sha(resume), "max_retries_per_case": 1,
-                 "eligible_status": 502, "max_total_attempts": 6,
-                 "observed_failures": [{"case": rows[2]["case"], "attempt": 3,
-                                        "record_sha256": report.digest(rows[2])}]}
+    amendment = {
+        "protocol_sha256": report.sha(cohort["track"] / "protocol.json"),
+        "resume_code_sha256": report.sha(resume),
+        "max_retries_per_case": 1,
+        "eligible_status": 502,
+        "max_total_attempts": 6,
+        "observed_failures": [
+            {"case": rows[2]["case"], "attempt": 3, "record_sha256": report.digest(rows[2])}
+        ],
+    }
     path = cohort["track"] / "resume-amendment.json"
     write(path, amendment)
     for row in rows[3:]:
         row["amendment_sha256"] = report.sha(path)
     ledger(cohort, rows)
     retry = attempt(cohort, 2, detected=retry_success, success=retry_success)
-    retry.update(attempt=6, amendment_sha256=report.sha(path), retry_of_attempt=3,
-                 retry_of_record_sha256=report.digest(rows[2]))
+    retry.update(
+        attempt=6,
+        amendment_sha256=report.sha(path),
+        retry_of_attempt=3,
+        retry_of_record_sha256=report.digest(rows[2]),
+    )
     (cohort["data"] / "retries.jsonl").write_text(json.dumps(retry) + "\n")
     return rows, retry
 
@@ -236,7 +318,12 @@ def test_successful_retry_recovers_case_but_keeps_failed_attempt_and_cost(cohort
     summary = result["summary"]
     assert summary["status"] == "complete"
     assert (summary["attempted"], summary["attempted_cases"], summary["success"]) == (6, 5, 5)
-    assert (summary["failed"], summary["failed_cases"], summary["retry_attempts"], summary["recovered_cases"]) == (1, 0, 1, 1)
+    assert (
+        summary["failed"],
+        summary["failed_cases"],
+        summary["retry_attempts"],
+        summary["recovered_cases"],
+    ) == (1, 0, 1, 1)
     assert summary["unknown_cost_attempts"] == 6
     assert summary["successful_latency"]["count"] == 5
     assert summary["failed_latency"]["count"] == 1
@@ -262,8 +349,20 @@ def test_failed_retry_remains_unresolved_and_is_counted_twice(cohort):
     assert "valid API cases only" in report.render_markdown(result)
 
 
-@pytest.mark.parametrize("change", ["parent", "parent_attempt", "amendment", "native", "duplicate", "resume_code",
-                                    "reviewed_failure", "primary_amendment", "success_parent"])
+@pytest.mark.parametrize(
+    "change",
+    [
+        "parent",
+        "parent_attempt",
+        "amendment",
+        "native",
+        "duplicate",
+        "resume_code",
+        "reviewed_failure",
+        "primary_amendment",
+        "success_parent",
+    ],
+)
 def test_retry_links_and_amendment_are_verified(cohort, change):
     rows, retry = amended_cohort(cohort)
     if change == "parent":
@@ -294,8 +393,11 @@ def test_rate_limit_reports_status_and_cooldown_without_error_body(cohort):
     rows[2]["error"] = {"kind": "non_json_response"}
     rows[3]["http_status"] = 429
     rows[3]["error"] = {
-        "kind": "http_error", "code": "rate_limit_exceeded",
-        "detail": json.dumps({"message": "Account private-account-marker: slow down and try again after 2932.782 seconds."}),
+        "kind": "http_error",
+        "code": "rate_limit_exceeded",
+        "detail": json.dumps(
+            {"message": "Account private-account-marker: slow down and try again after 2932.782 seconds."}
+        ),
     }
     rows[3]["response_headers"] = {}
     ledger(cohort, rows)
@@ -322,8 +424,15 @@ def test_rate_limit_reports_status_and_cooldown_without_error_body(cohort):
     assert "private-account-marker" not in prose
 
 
-@pytest.mark.parametrize("message", ["try again after 99999999 seconds", "try again after -1 seconds",
-                                    "try again after NaN seconds", "account info without cooldown"])
+@pytest.mark.parametrize(
+    "message",
+    [
+        "try again after 99999999 seconds",
+        "try again after -1 seconds",
+        "try again after NaN seconds",
+        "account info without cooldown",
+    ],
+)
 def test_unrecognised_or_unbounded_cooldown_is_not_published(cohort, message):
     row = attempt(cohort, 0, success=False)
     row.update(http_status=429, error={"kind": "http_error", "detail": message})

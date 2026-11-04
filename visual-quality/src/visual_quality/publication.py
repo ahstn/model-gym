@@ -110,14 +110,39 @@ def verify_publication(directory: Path, *, check_images: bool = False) -> dict:
         if row.get("training_ready") is not False:
             raise ValueError("Published observations must remain pending training review")
     expected_models = {"luna", "deepseek", "liquid", "jev", "qrealign_lite", "photo_ensemble", "reference"}
-    if set(counts) != expected_models or any(count != len(ids) for count in counts.values()):
+    arms = {model: "reference" if model == "reference" else "baseline" for model in expected_models}
+    expected_keys = {(identity, model, arms[model]) for identity in ids for model in expected_models}
+    if seen != expected_keys:
         raise ValueError("Publication requires every model/reference slot for every image")
+    lookup = {(r["case_id"], r["model"], r["arm"]): r for r in rows}
     for name in ("references.jsonl", "labelled-images.jsonl"):
         records = jsonlines(directory / name)
         if len(records) != len(ids) or {r["case_id"] for r in records} != allowed:
             raise ValueError(f"Publication coverage differs: {name}")
         if any(r["view_sha256"] != cases[r["case_id"]]["view_sha256"] for r in records):
             raise ValueError(f"Publication view mismatch: {name}")
+        for record in records:
+            identity = record["case_id"]
+            if name == "labelled-images.jsonl":
+                expected = {model: lookup[identity, model, arms[model]] for model in expected_models}
+                if record.get("assessments") != expected:
+                    raise ValueError("Nested assessments and score table differ")
+                masks = record.get("task_masks")
+                if (
+                    record.get("training_ready") is not False
+                    or not isinstance(masks, dict)
+                    or set(masks) != {"technical_quality", "aesthetics", "photo_domain"}
+                    or any(value is not False for value in masks.values())
+                ):
+                    raise ValueError("Published image training masks must remain disabled")
+            else:
+                reference = lookup[identity, "reference", "reference"]
+                for task, field in (
+                    ("technical_quality", "technical_score"),
+                    ("aesthetics", "aesthetic_score"),
+                ):
+                    if record[task]["score"] != reference[field]:
+                        raise ValueError("Reference assessments and score table differ")
     with (directory / "scores.csv").open(newline="") as stream:
         csv_rows = list(csv.DictReader(stream))
     if len(csv_rows) != len(rows):
@@ -125,7 +150,6 @@ def verify_publication(directory: Path, *, check_images: bool = False) -> dict:
     csv_keys = {(r["case_id"], r["model"], r["arm"]) for r in csv_rows}
     if len(csv_keys) != len(csv_rows) or csv_keys != seen:
         raise ValueError("CSV and JSONL observation identities differ")
-    lookup = {(r["case_id"], r["model"], r["arm"]): r for r in rows}
     for csv_row in csv_rows:
         original = lookup[csv_row["case_id"], csv_row["model"], csv_row["arm"]]
         for field in ("technical_score", "aesthetic_score", "latency_seconds", "price_usd"):

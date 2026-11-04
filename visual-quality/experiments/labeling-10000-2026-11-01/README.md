@@ -57,6 +57,17 @@ Each labelled image carries `sharpness_peak`, `luma_entropy`, `focus_area`, `his
 
 ## Reproduce exports and check publication
 
+For offline review, install the explicit corpus dependency group rather than borrowing packages from an embedding worker's environment:
+
+```sh
+cd visual-quality
+uv sync --locked --group dev --group corpus
+uv run --locked --group corpus pytest -q tests experiments/labeling-10000-2026-11-01
+uv run --locked --group corpus python labeling/verify.py --images
+```
+
+The corpus group supplies scikit-learn for clustering and the corpus tests. It does not install the GPU embedding or Lite model environments. The pinned historical inference environments remain described in the runbooks; the current lockfile is for maintenance and offline checks.
+
 Run from the repository root using the project environment. The [API runbook](api-runbook.md) and [Lite runbook](lite-runbook.md) describe frozen requests, bounded retries, cost accounting and the operational amendments. Do not restart scoring to reproduce an export: the recorded responses are its inputs.
 
 ```sh
