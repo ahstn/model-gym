@@ -1,0 +1,22 @@
+{
+  "python": "3.13.11",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "pillow": "12.3.0",
+    "requests": "2.34.2",
+    "remotezip": "0.12.6"
+  },
+  "files": {
+    "evidence/benchmarks/quality.json": "5d6ee801963328710f1cc37aef475507dae2fe855799d11c41b0e8dc027c117d",
+    "evidence/benchmarks/ai.json": "7d193af99aa15697f8e626f02b511b6915c3d1aeffdb85b0f6f8ee7e238d8970",
+    "evidence/assessments/quality-60.json": "120689b53ce0d3b8673058cb6d25debdc8524ea09f5be7a804f7b98d9c0a1e2b",
+    "evidence/assessments/ai-60.json": "067cba7a93319d91e743f1b223e42ec349f604d25531ea7cd21348f2eee3017a",
+    "evidence/assessments/original-30.json": "8dbf817d636a065ad4d3cbc68172f3bf338c1c75950c9f3c5ee9692526976b9d",
+    "evidence/benchmarks/freeze.json": "96a0869c0fd20bddf764b0d9215353314940525bb74f1739b9c0525a13c373d3",
+    "bench_protocol.py": "f9ced5947264caab23114dbac8a0cb33c17e195a0bd489ec420830f111a199dd",
+    "bench_runner.py": "2aeee170a6872b582d5d52bb48fd7e33d7f5db5b1bfa98194417baa31a20e9b3",
+    "final_benchmark.py": "bb8d0d5e6dc0612a07990a356a85da8d64d3da81df95bf16316041a06a4f344b",
+    "uv.lock": "8ee07b678091b9c18f1d0a4b0d07cae9e5728deeb9cc1eaac2dc3078a44f9555"
+  },
+  "note": "Snapshot after validation-only runner fixes. Each request ledger records the protocol hash actually loaded. Four trial prompts and image bytes were never changed after their first call. Final driver preflight validation was hardened while calls ran; model order and payload hashes are unchanged."
+}

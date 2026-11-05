@@ -1,0 +1,1013 @@
+{
+  "version": 1,
+  "rule": "Apply the same photographic-medium rule to both members; exclude clear painting, illustration, render or a photograph dominated by artwork or screen content. Keep imperfect photo-like images, visible generation errors, blur, noise, unrealistic objects and strong photographic processing. Reject the whole pair if either member fails. Borderline photographic cases remain eligible.",
+  "reviewer": "Assistant dataset-acquisition agent, independent of prompt optimisation; source labels visible but no detector outputs observed",
+  "split_policy": "Dataset eligibility only; test appearance and per-case details are not supplied to prompt authors before the final protocol freezes",
+  "decisions": [
+    {
+      "image_id": "r186c09e4t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-000"
+    },
+    {
+      "image_id": "r056f233bt",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-001"
+    },
+    {
+      "image_id": "r1c243af7t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-002"
+    },
+    {
+      "image_id": "r03193652t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-006"
+    },
+    {
+      "image_id": "r0b76b82ft",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "render",
+      "review_pass": 1,
+      "original_blind_id": "ai2-010"
+    },
+    {
+      "image_id": "r1aa7459at",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-011"
+    },
+    {
+      "image_id": "r1a07dd25t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-012"
+    },
+    {
+      "image_id": "r1c6b4a23t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-014"
+    },
+    {
+      "image_id": "r01d0b83bt",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-015"
+    },
+    {
+      "image_id": "r1d16ad1et",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-021"
+    },
+    {
+      "image_id": "r101e18b6t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-025"
+    },
+    {
+      "image_id": "r0ab7202ft",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 1,
+      "original_blind_id": "ai2-026"
+    },
+    {
+      "image_id": "r1b9e9917t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-029"
+    },
+    {
+      "image_id": "r07ece355t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-032"
+    },
+    {
+      "image_id": "r1ea8ccbbt",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-036"
+    },
+    {
+      "image_id": "r06836fdat",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-038"
+    },
+    {
+      "image_id": "r1d431afft",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-041"
+    },
+    {
+      "image_id": "r193b12aet",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-044"
+    },
+    {
+      "image_id": "r01474187t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-047"
+    },
+    {
+      "image_id": "r0f98115dt",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-048"
+    },
+    {
+      "image_id": "r1a7e4791t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-049"
+    },
+    {
+      "image_id": "r038922cbt",
+      "generator": "midjourney-v5",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 1,
+      "original_blind_id": "ai2-050"
+    },
+    {
+      "image_id": "r137f062ft",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 1,
+      "original_blind_id": "ai2-051"
+    },
+    {
+      "image_id": "r1bc92a89t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-052"
+    },
+    {
+      "image_id": "r04172edct",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "render",
+      "review_pass": 1,
+      "original_blind_id": "ai2-053"
+    },
+    {
+      "image_id": "r1cde4afbt",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-054"
+    },
+    {
+      "image_id": "r0905697bt",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "render",
+      "review_pass": 1,
+      "original_blind_id": "ai2-055"
+    },
+    {
+      "image_id": "r0b03e77at",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-056"
+    },
+    {
+      "image_id": "r06b7849at",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 1,
+      "original_blind_id": "ai2-058"
+    },
+    {
+      "image_id": "r0a10fe29t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 1,
+      "original_blind_id": "ai2-062"
+    },
+    {
+      "image_id": "r14902ba4t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-064"
+    },
+    {
+      "image_id": "r028896d3t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 1,
+      "original_blind_id": "ai2-068"
+    },
+    {
+      "image_id": "r0f6250d2t",
+      "generator": "midjourney-v5",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 1,
+      "original_blind_id": "ai2-069"
+    },
+    {
+      "image_id": "r05d59d7ct",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-070"
+    },
+    {
+      "image_id": "r01291f20t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-071"
+    },
+    {
+      "image_id": "r10c5fc29t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-072"
+    },
+    {
+      "image_id": "r19fe3107t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-073"
+    },
+    {
+      "image_id": "r1d00d8ect",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-076"
+    },
+    {
+      "image_id": "r1cd8d9a4t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 1,
+      "original_blind_id": "ai2-077"
+    },
+    {
+      "image_id": "r10134c59t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-078"
+    },
+    {
+      "image_id": "r04eda41ct",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-080"
+    },
+    {
+      "image_id": "r02b7536at",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-081"
+    },
+    {
+      "image_id": "r11865f77t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-084"
+    },
+    {
+      "image_id": "r0eea5a7et",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-086"
+    },
+    {
+      "image_id": "r1bddecd6t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 1,
+      "original_blind_id": "ai2-093"
+    },
+    {
+      "image_id": "r0eb7ee5ct",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-094"
+    },
+    {
+      "image_id": "r13e56300t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-095"
+    },
+    {
+      "image_id": "r05bf2f53t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 1,
+      "original_blind_id": "ai2-097"
+    },
+    {
+      "image_id": "r1f4f8a51t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-098"
+    },
+    {
+      "image_id": "r00869422t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 1,
+      "original_blind_id": "ai2-101"
+    },
+    {
+      "image_id": "r0ed844b5t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-102"
+    },
+    {
+      "image_id": "r1328ee94t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-105"
+    },
+    {
+      "image_id": "r170632f5t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-106"
+    },
+    {
+      "image_id": "r1565a7e7t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-107"
+    },
+    {
+      "image_id": "r18ea00c8t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-109"
+    },
+    {
+      "image_id": "r0b985828t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-110"
+    },
+    {
+      "image_id": "r1655a008t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-112"
+    },
+    {
+      "image_id": "r177dd68et",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 1,
+      "original_blind_id": "ai2-114"
+    },
+    {
+      "image_id": "r0288b58ct",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 1,
+      "original_blind_id": "ai2-115"
+    },
+    {
+      "image_id": "r1f23f4ddt",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 1,
+      "original_blind_id": "ai2-117"
+    },
+    {
+      "image_id": "r0c32591dt",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r11a4e1cbt",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r13a9002bt",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r179ec4e8t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r0e5b5159t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r0eedd456t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "render",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r0708431at",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r0fe7b1c6t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r1b177fe1t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r0e63ca9ft",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r1a1d24b2t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r06d3ac60t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r1ef8b85ft",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r1426cde6t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r1a343192t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r103a4f26t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r0833f646t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r0de97473t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r116fa8b7t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r18d72ab2t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r19d72b0ct",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r01c95f68t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r141e4467t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r008ed083t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r0d56c1d7t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r0ab86ea2t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 2
+    },
+    {
+      "image_id": "r103a4f26t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r0833f646t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r0de97473t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "render",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r116fa8b7t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r18d72ab2t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r19d72b0ct",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r01c95f68t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r141e4467t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r008ed083t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r12c5f70bt",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r1c4e6a62t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r1ca5a385t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r1be2a3d5t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r165fbf4ft",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r048c50d0t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r116ce066t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r09c8e042t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 3
+    },
+    {
+      "image_id": "r141e4467t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r008ed083t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r0d56c1d7t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r0ab86ea2t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r12c5f70bt",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "illustration",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r1c4e6a62t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r1ca5a385t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r079d086et",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r0d89edd8t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "render",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r1070b804t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r0f6d3b31t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r180a7062t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r052e9174t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r1a0968bft",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 4
+    },
+    {
+      "image_id": "r1c4e6a62t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 5
+    },
+    {
+      "image_id": "r1ca5a385t",
+      "generator": "dalle3",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 5
+    },
+    {
+      "image_id": "r1be2a3d5t",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 5
+    },
+    {
+      "image_id": "r165fbf4ft",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 5
+    },
+    {
+      "image_id": "r048c50d0t",
+      "generator": "midjourney-v5",
+      "eligible": false,
+      "reason": "photograph_of_art",
+      "review_pass": 5
+    },
+    {
+      "image_id": "r056d6bebt",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 5
+    },
+    {
+      "image_id": "r169a9b07t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "dominant_screen_content",
+      "review_pass": 5
+    },
+    {
+      "image_id": "r133c5a52t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 5
+    },
+    {
+      "image_id": "r07e1e8cbt",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 5
+    },
+    {
+      "image_id": "r04108c64t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 5
+    },
+    {
+      "image_id": "r165fbf4ft",
+      "generator": "dalle3",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 6
+    },
+    {
+      "image_id": "r116ce066t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 6
+    },
+    {
+      "image_id": "r09c8e042t",
+      "generator": "midjourney-v5",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 6
+    },
+    {
+      "image_id": "r059ce7d0t",
+      "generator": "stable-diffusion-xl",
+      "eligible": false,
+      "reason": "painting",
+      "review_pass": 6
+    },
+    {
+      "image_id": "r04851bf9t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 6
+    },
+    {
+      "image_id": "r033bb79dt",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 6
+    },
+    {
+      "image_id": "r16654024t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 6
+    },
+    {
+      "image_id": "r0450c4c0t",
+      "generator": "stable-diffusion-xl",
+      "eligible": true,
+      "reason": "both_members_photo_like",
+      "review_pass": 7
+    }
+  ]
+}

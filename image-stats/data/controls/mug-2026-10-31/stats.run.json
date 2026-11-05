@@ -1,0 +1,18 @@
+{
+  "version": "image-stats-v2",
+  "max_edge": 1536,
+  "images": 11,
+  "errors": 0,
+  "gated": 0,
+  "flags": {
+    "blocking": 1,
+    "highlight_clipping": 1
+  },
+  "output": "data/controls/mug-2026-10-31/stats.jsonl",
+  "software": {
+    "python": "3.13.11",
+    "numpy": "2.5.4",
+    "opencv": "4.14.0",
+    "pillow": "12.3.0"
+  }
+}

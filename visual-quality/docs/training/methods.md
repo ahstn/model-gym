@@ -110,6 +110,8 @@ Each row is a within-paper comparison. "Base" and "Change" use the same model, d
 
 ## 4. What to borrow first
 
+For the current unlabeled 10K image pool, first follow the [2026-09-29 preflight](pilot-preflight-2026-09-29.md). It puts a compact scalar student, fixed views, and independent label/evaluation gates before a VLM recipe study. LEAF and RALI are existing approaches with higher priority in that screen. HiRQA, SLIDE-IQA, SHAMISA, recent ordinal objectives, and crop-to-global transfer are additions with separate now/later decisions. The sequence below applies once the corresponding supervised targets exist.
+
 1. **Soft targets + in-dataset ranking loss (DeQA-Score).** Keep the 5 words and the expectation scorer. This changes only the target and loss. It is the cheapest method with a clean ablation.
 2. **Task-specific losses (TATAR idea).** Distribution + MOS loss for IQA and VQA. Add a within-dataset ranking loss for IAA. Use task-balanced batches.
 3. **Visual input fixes (ReLIQS, Q-Probe, VQA², LMM-VQA).** Global view plus a few native-resolution crops, some of them clean. For video, compare 8 uniform frames with short contiguous clips at the same token budget.

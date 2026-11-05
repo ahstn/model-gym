@@ -1,0 +1,1302 @@
+{
+  "as_of": "2026-09-29",
+  "repository_revision": "e9f1b86077694b92bc549919ef05166252d9eaf9",
+  "scope": "Pre-training research audit; primary-source evidence plus read-only local manifest checks",
+  "summary": {
+    "workstreams": 4,
+    "search_calls": 20,
+    "requested_result_slots": 180,
+    "returned_url_entries": 180,
+    "exact_unique_search_urls": 164,
+    "fetch_url_attempts": 55,
+    "exact_unique_successful_fetch_urls": 48
+  },
+  "counting_notes": [
+    "Search hits are leads, not independently validated papers. Exact URL deduplication does not merge paper versions or mirrors.",
+    "Successful fetches include papers, code, release metadata, and repeated publications at different URLs.",
+    "Three fetch failures are recorded; two raw-card routes were followed by successful ordinary pages, and an incorrect upstream file path was replaced by levels.py.",
+    "Only sources cited in the report support its substantive claims. No media changes, model scoring, training, or bulk download occurred."
+  ],
+  "tracks": [
+    {
+      "name": "methods_architecture_objectives",
+      "reasoning_effort": "ultra",
+      "searches": [
+        {
+          "query": "category:research paper efficient image quality assessment compact specialist frozen visual encoder label free knowledge distillation 2025 2026 LEAF pairwise ranking",
+          "objective": "Find primary papers and author repositories on inexpensive image-quality students, particularly label-free training and pairwise distillation. Prioritize methods published by September 29 2026, report dates, backbone cost, supervision assumptions and validation. Exclude general surveys and commercial blog lists.",
+          "numResults": 10,
+          "results": [
+            {
+              "url": "https://arxiv.org/html/2601.20689",
+              "title": "Decoupling Perception and Calibration: Label-Efficient Image Quality Assessment Framework"
+            },
+            {
+              "url": "https://arxiv.org/abs/2507.15680v1",
+              "title": "[2507.15680v1] Visual-Language Model Knowledge Distillation Method for Image Quality Assessment"
+            },
+            {
+              "url": "https://arxiv.org/html/2606.02002v2",
+              "title": "Low-Rank Adaptation of Frozen Vision-Language Models for Blind Image Quality Assessment"
+            },
+            {
+              "url": "https://www.alphaxiv.org/abs/2605.19776",
+              "title": "Preferences Order, Ratings Anchor: From Fused Expert Aesthetic Ground Truth to Self-Distillation | alphaXiv"
+            },
+            {
+              "url": "https://exa.ai/library/publication/b49gjrttk2z",
+              "title": "Learning Decoupled Features With Perceptual Distillation for Blind Image Quality Assessment"
+            },
+            {
+              "url": "https://link.springer.com/chapter/10.1007/978-3-032-37356-4_19",
+              "title": "ME-IQA: Memory-Enhanced Image Quality Assessment via Re-ranking | Springer Nature Link"
+            },
+            {
+              "url": "https://exa.ai/library/publication/sk58x1z09nm",
+              "title": "Patch Knowledge Transfer for Efficient AI-Generated Image Quality Assessment"
+            },
+            {
+              "url": "https://exa.ai/library/publication/rz98xfvj7g4",
+              "title": "KSIQA: A Knowledge-Sharing Model for No-Reference Image Quality Assessment"
+            },
+            {
+              "url": "https://arxiv.org/html/2507.04820v1",
+              "title": "Harnessing Pairwise Ranking Prompting Through Sample-Efficient Ranking Distillation"
+            },
+            {
+              "url": "https://exa.ai/library/publication/k01fwly65rp",
+              "title": "Decoupling Perception and Calibration: Label-Efficient Image Quality Assessment Framework"
+            }
+          ]
+        },
+        {
+          "query": "category:research paper self supervised blind image quality assessment unlabeled natural images distortion learning uncertainty rank learning 2025 2026",
+          "objective": "Find primary new self-supervised IQA work and strong overlooked non-LLM baselines, not a generic model catalog. Focus training without MOS, distortion-order labels, representation quality, need for supervised readout. Only papers dated through September 29 2026.",
+          "numResults": 10,
+          "results": [
+            {
+              "url": "https://arxiv.org/pdf/2603.13669",
+              "title": "N/A"
+            },
+            {
+              "url": "https://openreview.net/forum?id=038rEwbChh&referrer=%5Bthe+profile+of+Chenxi+Yang%5D%28%2Fprofile%3Fid%3D%7EChenxi_Yang2%29",
+              "title": "Semi-Supervised Blind Quality Assessment with Confidence-quantifiable Pseudo-label Learning for Authentic Images | OpenReview"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2602.09531",
+              "title": "N/A"
+            },
+            {
+              "url": "https://icml.cc/virtual/2025/poster/46701",
+              "title": "ICML Poster Semi-Supervised Blind Quality Assessment with Confidence-quantifiable Pseudo-label Learning for Authentic Images"
+            },
+            {
+              "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0351549",
+              "title": "Perceptual no-reference image quality assessment with meta-learning by graph representation learning and multi-scale feature fusion | PLOS One"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2601.22920",
+              "title": "N/A"
+            },
+            {
+              "url": "https://arxiv.org/html/2606.29760v2",
+              "title": "MR-IQA: A Unified Margin View of Regression and Ranking for Blind Image Quality Assessment"
+            },
+            {
+              "url": "https://arxiv.org/html/2508.15130v1",
+              "title": "HiRQA: Hierarchical Ranking and Quality Alignment for Opinion-Unaware Image Quality Assessment"
+            },
+            {
+              "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/424403b4d2553f16d8ad11635a8214b3-Paper-Conference.pdf",
+              "title": "SELF-EVOLVING VISION-LANGUAGE MODELS FOR IMAGE QUALITY ASSESSMENT VIA VOTING AND RANKING"
+            },
+            {
+              "url": "https://www.scholarfeed.org/paper/2303.00521v2",
+              "title": "Quality-aware Pre-trained Models for Blind Image Quality Assessment | Scholar Feed"
+            }
+          ]
+        },
+        {
+          "query": "category:research paper image quality assessment ordinal regression earth mover distance cumulative probability ranking label distribution uncertainty calibration 2024 2025 2026",
+          "objective": "Find author papers on loss functions for ordinal quality labels, teacher soft distributions, uncertainty and scale calibration applicable to a cheap IQA student. Distinguish human disagreement from model entropy. Prefer compact heads and direct primary evidence before September 29 2026.",
+          "numResults": 10,
+          "results": [
+            {
+              "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/You_Teaching_Large_Language_Models_to_Regress_Accurate_Image_Quality_Scores_CVPR_2025_paper.pdf",
+              "title": "Teaching Large Language Models to Regress Accurate Image Quality Scores Using Score Distribution"
+            },
+            {
+              "url": "https://arxiv.org/html/2606.29760v2",
+              "title": "MR-IQA: A Unified Margin View of Regression and Ranking for Blind Image Quality Assessment"
+            },
+            {
+              "url": "https://sah.borca.ai/papers/249465364",
+              "title": "Matching Distributions Algorithms Based on the Earth Mover’s Distance for Ordinal Quantification | SCIENCE@home"
+            },
+            {
+              "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/7f8f7bf2d357a09bdffff04b2e0f5c4e-Paper-Conference.pdf",
+              "title": "VisualQuality-R1: Reasoning-Induced Image Quality"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2509.02351v1.pdf",
+              "title": "Ordinal Adaptive Correction: A Data-Centric Approach to Ordinal Image Classification with Noisy Labels"
+            },
+            {
+              "url": "https://www.ijcai.org/proceedings/2025/0103.pdf",
+              "title": "Dual-level Fuzzy Learning with Patch Guidance for Image Ordinal Regression"
+            },
+            {
+              "url": "https://www.arxiv.org/pdf/2603.20785",
+              "title": "N/A"
+            },
+            {
+              "url": "https://arxiv.org/html/2410.15658v3",
+              "title": "1 Introduction"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2506.01738",
+              "title": "N/A"
+            },
+            {
+              "url": "https://export.arxiv.org/pdf/2607.23575",
+              "title": "D3O: Dynamic Distribution Distillation for Ordinal Regression"
+            }
+          ]
+        },
+        {
+          "query": "category:research paper image quality assessment low cost knowledge distillation pairwise learning semantic feature quality degradation native resolution 2026",
+          "objective": "Look for genuinely new efficient IQA methods published January 1 through September 29 2026, emphasizing evidence beyond Q-Align, DeQA, RALI and TOPIQ. Prefer official code and primary papers with controlled comparisons, note licensing and absent releases.",
+          "numResults": 10,
+          "results": [
+            {
+              "url": "https://arxiv.org/html/2601.20689",
+              "title": "Decoupling Perception and Calibration: Label-Efficient Image Quality Assessment Framework"
+            },
+            {
+              "url": "https://arxiv.org/html/2607.05605",
+              "title": "Patch Knowledge Transfer for Efficient AI-Generated Image Quality Assessment"
+            },
+            {
+              "url": "https://exa.ai/library/publication/b49gjrttk2z",
+              "title": "Learning Decoupled Features With Perceptual Distillation for Blind Image Quality Assessment"
+            },
+            {
+              "url": "https://exa.ai/library/publication/pz77r0jbb32",
+              "title": "Weakly-Correlated Knowledge Distillation for Blind Image Quality Assessment"
+            },
+            {
+              "url": "https://exa.ai/library/publication/8sdlj7h5932",
+              "title": "Visual-Language Model Knowledge Distillation Method for Image Quality Assessment"
+            },
+            {
+              "url": "https://www.sota2.com/research/paper/6a30d919d33dfb23e783d288",
+              "title": "Decoupling Semantics from Distortions: Multi-Scale Two-Stream Vision-Language Alignment for AI-Generated Image Quality Assessment · SOTA2 Research"
+            },
+            {
+              "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04278.pdf",
+              "title": "Pairwise Distance Distillation for Unsupervised Real-World Image Super-Resolution"
+            },
+            {
+              "url": "https://openaccess.thecvf.com/content/CVPR2026F/papers/Sun_Switch-KD_Visual-Switch_Knowledge_Distillation_for_Vision-Language_Models_CVPRF_2026_paper.pdf",
+              "title": "Switch-KD: Visual-Switch Knowledge Distillation for Vision-Language Models"
+            },
+            {
+              "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/4278_ECCV_2024_paper.php",
+              "title": "ECVA | European Computer Vision Association"
+            },
+            {
+              "url": "https://openaccess.thecvf.com/content/CVPR2026F/papers/Lappe_Another_BRIXEL_in_the_Wall_Towards_Cheaper_Dense_Features_CVPRF_2026_paper.pdf",
+              "title": "Another BRIXEL in the Wall: Towards Cheaper Dense Features"
+            }
+          ]
+        },
+        {
+          "query": "category:research paper blind image quality assessment uncertainty prediction human rating disagreement confidence calibration selective prediction 2025 2026",
+          "objective": "Find primary IQA research with calibrated uncertainty or data-selection mechanisms applicable to a compact student and an unlabeled photo pilot. Distinguish epistemic uncertainty, human opinion variance, and teacher token entropy. Prefer papers before September 29 2026; do not recommend general RL solely for uncertainty.",
+          "numResults": 10,
+          "results": [
+            {
+              "url": "https://arxiv.org/html/2606.29760v2",
+              "title": "MR-IQA: A Unified Margin View of Regression and Ranking for Blind Image Quality Assessment"
+            },
+            {
+              "url": "https://ojs.aaai.org/index.php/AAAI/article/view/37691",
+              "title": "Multitasks-based Deep Evidential Fusion Network for Blind Image Quality Assessment"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2601.22920",
+              "title": "N/A"
+            },
+            {
+              "url": "https://arxiv.org/html/2605.30269",
+              "title": "Boosting Image Quality Assessment Performance: Unsupervised Score Fusion by Deep Maximum a Posteriori Estimation"
+            },
+            {
+              "url": "https://arxiv.org/html/2602.09531v1",
+              "title": "DR.Experts: Differential Refinement of Distortion-Aware Experts for Blind Image Quality Assessment"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2608.18579v1.pdf",
+              "title": "MR-IQA-2: Faithful Image Quality Reflection via Fine-Grained Credit Assignment"
+            },
+            {
+              "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Tang_Life-IQA_Boosting_Blind_Image_Quality_Assessment_through_GCN-enhanced_Layer_Interaction_CVPR_2026_paper.pdf",
+              "title": "Life-IQA: Boosting Blind Image Quality Assessment through GCN-enhanced Layer Interaction and MoE-based Feature Decoupling"
+            },
+            {
+              "url": "https://link.springer.com/chapter/10.1007/978-3-032-37026-6_34",
+              "title": "Zoom-IQA: Image Quality Assessment with Reliable Region-Aware Reasoning | Springer Nature Link"
+            },
+            {
+              "url": "https://arxiv.org/html/2505.09591v3",
+              "title": "Variational Visual Question Answering for Uncertainty-Aware Selective Prediction"
+            },
+            {
+              "url": "https://www.researchgate.net/publication/361040847_Blind_Image_Quality_Assessment_for_Authentic_Distortions_by_Intermediary_Enhancement_and_Iterative_Training",
+              "title": "Blind Image Quality Assessment for Authentic Distortions ..."
+            }
+          ]
+        }
+      ],
+      "fetches": [
+        {
+          "url": "https://arxiv.org/html/2601.20689",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2606.02002v2",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2603.13669",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2508.15130v1",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2607.05605",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2410.15658v3",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2607.23575",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2606.29760v2",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/abs/2601.20689",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/abs/2606.02002v2",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/abs/2603.13669",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/abs/2508.15130v1",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/abs/2607.05605",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/abs/2410.15658v3",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/abs/2607.23575",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://github.com/uf-robopi/HiRQA",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://github.com/miccunifi/QualiCLIP",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://github.com/drkkgy/NR_IQA_AGM",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2510.11369v2",
+          "status": "returned_content"
+        }
+      ]
+    },
+    {
+      "name": "datasets_sampling",
+      "searches": [
+        {
+          "query": "category:research paper image aesthetics dataset low rated everyday photographs semantic content bias deliberately uglified low beauty CC0 MSC dataset",
+          "objective": "Find primary papers and official dataset releases for genuinely low aesthetics separate from technical image defects. Prefer data with raw human ratings, provenance, and clear image rights. Include semantic bias and matched comparisons. Exclude commercial stock marketing and derivative summaries.",
+          "numResults": 10,
+          "results": [
+            {
+              "title": "The Minimum Semantic Content (MSC) Dataset: A Large, Balanced Resource for Computational Aesthetics Research | Scientific Data",
+              "url": "https://www.nature.com/articles/s41597-026-06816-0"
+            },
+            {
+              "title": "Aesthetics Without Semantics Note: Parts of this work were presented in abstract format at the Vision Science of Art Conference (VSAC2016), the Iberian Conference on Perception (CIP2022), and the European Conference on Visual Perception (ECVP2022). See Perception 51, No1 (Suppl.) pp139, 2022)",
+              "url": "https://arxiv.org/html/2505.05331v2"
+            },
+            {
+              "title": "The Minimum Semantic Content (MSC) Dataset: A Large, Balanced Resource for Computational Aesthetics Research",
+              "url": "https://exa.ai/library/publication/1hbctd061b9"
+            },
+            {
+              "title": "DataMed",
+              "url": "https://datamed.org/dataset/664736"
+            },
+            {
+              "title": "N/A",
+              "url": "https://www.nature.com/articles/s41597-026-06816-0_reference.pdf"
+            },
+            {
+              "title": "The Minimum Semantic Content (MSC) Dataset: A Large, Balanced Resource for Computational Aesthetics Research · Clear Sky Science",
+              "url": "https://www.clearskyscience.com/en/10.1038/s41597-026-06816-0/"
+            },
+            {
+              "title": "The MSC dataset",
+              "url": "https://exa.ai/library/publication/7704qgfq1y9"
+            },
+            {
+              "title": "Aesthetics Without Semantics - arXiv.gg",
+              "url": "https://arxiv.gg/abs/2505.05331"
+            },
+            {
+              "title": "Minimum Semantic Content (MSC) image dataset, a balanced dataset containing \"ugly\" images (alongside more traditionally appealing ones) of objects with little semantic content",
+              "url": "https://exa.ai/library/publication/wcb3z7p7zl6"
+            },
+            {
+              "title": "Aesthetics Without Semantics",
+              "url": "https://www.catalyzex.com/paper/aesthetics-without-semantics"
+            }
+          ]
+        },
+        {
+          "query": "official image quality dataset authentic distortions native resolution local image defects open license AU-IQA UHD-IQA FLIVE Patch MOS",
+          "objective": "Find original dataset pages, papers and author repositories. Extract authentic fault types, native image sizes, split grouping, MOS or pair labels, and exact image licensing. Seek gaps beyond VizWiz, Megalith, SIDD, RealBlur. Do not confuse code license with image rights.",
+          "numResults": 10,
+          "results": [
+            {
+              "title": "Laboratory for Image and Video Engineering - The University of Texas at Austin",
+              "url": "https://live.ece.utexas.edu/research/ChallengeDB/index.html"
+            },
+            {
+              "title": "Laboratory for Image and Video Engineering - The University of Texas at Austin",
+              "url": "https://www.live.ece.utexas.edu/research/Quality/subjective.htm"
+            },
+            {
+              "title": "LIVE Image Quality Assessment Database | Laboratory for Image & Video Engineering | University of Colorado Boulder",
+              "url": "https://www.colorado.edu/lab/live/live-image-quality-assessment-database"
+            },
+            {
+              "title": "UHD-IQA Benchmark Database - Visual Quality Assessment Databases, MMSP Konstanz",
+              "url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html"
+            },
+            {
+              "title": "From Patches to Pictures (PaQ-2-PiQ): Mapping the Perceptual Space of Picture Quality",
+              "url": "https://www.live.ece.utexas.edu/publications/2020/paq2piq.pdf"
+            },
+            {
+              "title": "[1910.06180] KonIQ-10k: An ecologically valid database for deep learning of blind image quality assessment",
+              "url": "https://ar5iv.labs.arxiv.org/html/1910.06180"
+            },
+            {
+              "title": "UHD-IQA Benchmark Database: Pushing the Boundaries of Blind Photo Quality Assessment",
+              "url": "https://arxiv.org/html/2406.17472v1"
+            },
+            {
+              "title": "AIM 2024 Challenge on UHD Blind Photo Quality Assessment",
+              "url": "https://arxiv.org/abs/2409.16271"
+            },
+            {
+              "title": "AU-IQA: A Benchmark Dataset for Perceptual Quality Assessment of AI-Enhanced User-Generated Content",
+              "url": "https://arxiv.org/html/2508.05016v2"
+            },
+            {
+              "title": "WNNGGU/AU-IQA-Dataset",
+              "url": "https://github.com/WNNGGU/AU-IQA-Dataset"
+            }
+          ]
+        },
+        {
+          "query": "category:research paper dataset localized image quality distortions regional annotations authentic photographs sharp background blurred subject small local defects",
+          "objective": "Find primary research and public releases for local versus global quality defects, patch labels, spatial heatmaps and native-resolution quality. Capture licenses and whether generated patch distortions transfer to authentic faults.",
+          "numResults": 10,
+          "results": [
+            {
+              "title": "SEAGULL: No-reference Image Quality Assessment for Regions of Interest via Vision-Language Instruction Tuning | alphaXiv",
+              "url": "https://www.alphaxiv.org/abs/2411.10161"
+            },
+            {
+              "title": "From Patches to Pictures (PaQ-2-PiQ): Mapping the Perceptual Space of Picture Quality",
+              "url": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Ying_From_Patches_to_Pictures_PaQ-2-PiQ_Mapping_the_Perceptual_Space_of_CVPR_2020_paper.pdf"
+            },
+            {
+              "title": "Q-Ground: Image Quality Grounding with Large Multi-modality Models | Proceedings of the 32nd ACM International Conference on Multimedia",
+              "url": "http://dl.acm.org/doi/10.1145/3664647.3680575"
+            },
+            {
+              "title": "Stefan Winkler - Resources",
+              "url": "https://stefan.winklerbros.net/resources.html"
+            },
+            {
+              "title": "Dataset and metrics for predicting local visible differences",
+              "url": "https://visibility-metrics.mpi-inf.mpg.de/files/wolski2018local_metric.pdf"
+            },
+            {
+              "title": "Assessing Image Quality Issues for Real-World Problems",
+              "url": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Chiu_Assessing_Image_Quality_Issues_for_Real-World_Problems_CVPR_2020_paper.pdf"
+            },
+            {
+              "title": "ViDA-UGC: Detailed Image Quality Analysis via Visual Distortion Assessment for UGC Images",
+              "url": "https://arxiv.org/html/2508.12605v1"
+            },
+            {
+              "title": "[2609.08316] From Glance to Scrutiny: Progressive Distortion Reasoning for Fine-Grained Image Quality Assessment",
+              "url": "https://arxiv.org/abs/2609.08316"
+            },
+            {
+              "title": "Helping Visually Impaired People Take Better Quality Pictures",
+              "url": "https://exa.ai/library/publication/zjvw6z6tdcs"
+            },
+            {
+              "title": "Grounding-IQA: Grounding Multimodal Language Model for Image Quality Assessment",
+              "url": "https://arxiv.org/pdf/2411.17237v3.pdf"
+            }
+          ]
+        },
+        {
+          "query": "official dataset screenshots documents memes photorealistic AI generated images real photographs domain classification dataset license provenance",
+          "objective": "Find primary releases suitable for hard photo eligibility controls and near-boundary examples: screenshots, documents, memes, photos of screens, realistic renders and AI generated photos. Prefer clear image rights and split information. Avoid using image origin as technical quality labels.",
+          "numResults": 10,
+          "results": [
+            {
+              "title": "kennethnym/mai-smoke · Datasets at Hugging Face",
+              "url": "https://huggingface.co/datasets/kennethnym/mai-smoke"
+            },
+            {
+              "title": "ComplexDataLab/OpenFake · Datasets at Hugging Face",
+              "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake"
+            },
+            {
+              "title": "Columbia Photographic Images and Photorealistic Computer Graphics Dataset",
+              "url": "http://www.ee.columbia.edu/ln/dvmm/downloads/PIM_PRCG_dataset/"
+            },
+            {
+              "title": "QCRI/MemeLens · Datasets at Hugging Face",
+              "url": "https://huggingface.co/datasets/QCRI/MemeLens"
+            },
+            {
+              "title": "Classification Screenshots",
+              "url": "https://www.kaggle.com/datasets/dharshinisanapureddy/classification-screenshots"
+            },
+            {
+              "title": "README.md · OwensLab/CommunityForensics at main",
+              "url": "https://huggingface.co/datasets/OwensLab/CommunityForensics/blob/main/README.md"
+            },
+            {
+              "title": "MMLab-unitn/TrueFake-IJCNN25",
+              "url": "https://github.com/MMLab-unitn/TrueFake-IJCNN25"
+            },
+            {
+              "title": "GenImage-Dataset/GenImage",
+              "url": "https://github.com/GenImage-Dataset/GenImage"
+            },
+            {
+              "title": "Renyang/DANI · Datasets at Hugging Face",
+              "url": "https://huggingface.co/datasets/Renyang/DANI"
+            },
+            {
+              "title": "hiddeneye04/FakeImageDataset · Datasets at Hugging Face",
+              "url": "https://huggingface.co/datasets/hiddeneye04/FakeImageDataset"
+            }
+          ]
+        },
+        {
+          "query": "category:research paper blind image quality assessment semantic content bias dataset sampling leakage duplicates cross dataset generalization aesthetics quality confounds",
+          "objective": "Find original papers with evidence about semantic bias, selective collection, duplicate leakage or domain source shortcuts in IQA/IAA, with sampling or audit methods useful before a 10K pilot. Prefer actionable tests over architecture-only improvements.",
+          "numResults": 10,
+          "results": [
+            {
+              "title": "Semantic-aware blind image quality assessment",
+              "url": "https://ir.cwi.nl/pub/27432/27432.pdf"
+            },
+            {
+              "title": "Causal-IQA: Towards the Generalization of Image Quality Assessment Based on Causal Inference",
+              "url": "https://proceedings.mlr.press/v235/zhong24e.html"
+            },
+            {
+              "title": "Cross-Dataset-Robust Method for Blind Real-World",
+              "url": "https://arxiv.org/pdf/2309.14868v1.pdf"
+            },
+            {
+              "title": "N/A",
+              "url": "https://arxiv.org/pdf/2411.12791"
+            },
+            {
+              "title": "[2207.14769] Image Quality Assessment: Integrating Model-Centric and Data-Centric Approaches",
+              "url": "https://arxiv.org/abs/2207.14769"
+            },
+            {
+              "title": "Integrating Global Context Contrast and Local Sensitivity for Blind Image Quality Assessment",
+              "url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/li24ac/li24ac.pdf"
+            },
+            {
+              "title": "N/A",
+              "url": "https://arxiv.org/pdf/1910.06180"
+            },
+            {
+              "title": "N/A",
+              "url": "https://arxiv.org/pdf/2601.00225"
+            },
+            {
+              "title": "Few-label blind image quality assessment via samples chosen from new and existing scenes | Pattern Recognition",
+              "url": "https://dl.acm.org/doi/10.1016/j.patcog.2025.112747"
+            },
+            {
+              "title": "IC9600: A Benchmark Dataset for Automatic",
+              "url": "https://dengpingfan.github.io/papers/[2023][TPAMI]IC9600.pdf"
+            }
+          ]
+        }
+      ],
+      "fetches": [
+        {
+          "url": "https://www.nature.com/articles/s41597-026-06816-0",
+          "status": "returned_content",
+          "batch": 1
+        },
+        {
+          "url": "https://arxiv.org/html/2508.05016v2",
+          "status": "returned_content",
+          "batch": 1
+        },
+        {
+          "url": "https://github.com/WNNGGU/AU-IQA-Dataset",
+          "status": "returned_content",
+          "batch": 1
+        },
+        {
+          "url": "https://arxiv.org/html/2411.10161",
+          "status": "returned_content",
+          "batch": 1
+        },
+        {
+          "url": "https://arxiv.org/html/2508.12605v1",
+          "status": "returned_content",
+          "batch": 1
+        },
+        {
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake",
+          "status": "returned_content",
+          "batch": 1
+        },
+        {
+          "url": "https://huggingface.co/datasets/OwensLab/CommunityForensics/blob/main/README.md",
+          "status": "returned_content",
+          "batch": 1
+        },
+        {
+          "url": "https://github.com/GenImage-Dataset/GenImage",
+          "status": "returned_content",
+          "batch": 1
+        },
+        {
+          "url": "https://proceedings.mlr.press/v235/zhong24e.html",
+          "status": "returned_content",
+          "batch": 1
+        },
+        {
+          "url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+          "status": "returned_content",
+          "batch": 1
+        },
+        {
+          "url": "https://huggingface.co/datasets/ComplexDataLab/OpenFake/raw/main/README.md",
+          "status": "returned_content",
+          "batch": 2
+        },
+        {
+          "url": "https://arxiv.org/abs/2411.10161",
+          "status": "returned_content",
+          "batch": 2
+        },
+        {
+          "url": "https://whycantfindaname.github.io/ViDA-UGC/",
+          "status": "returned_content",
+          "batch": 2
+        },
+        {
+          "url": "https://github.com/rimchang/RealBlur",
+          "status": "returned_content",
+          "batch": 2
+        },
+        {
+          "url": "https://www.eecs.yorku.ca/~kamel/sidd/",
+          "status": "returned_content",
+          "batch": 2
+        },
+        {
+          "url": "https://visibility-metrics.mpi-inf.mpg.de/",
+          "status": "returned_content",
+          "batch": 2
+        },
+        {
+          "url": "https://live.ece.utexas.edu/research/LIVE-VI-UGC/index.html",
+          "status": "returned_content",
+          "batch": 2
+        },
+        {
+          "url": "https://arxiv.org/html/2508.12605v1",
+          "status": "returned_content",
+          "batch": 3
+        },
+        {
+          "url": "https://huggingface.co/datasets/Spawning/megalith-cc0/raw/main/README.md",
+          "status": "CRAWL_INFRASTRUCTURE_ERROR",
+          "batch": 3
+        },
+        {
+          "url": "https://huggingface.co/datasets/madebyollin/megalith-10m/raw/main/README.md",
+          "status": "CRAWL_INFRASTRUCTURE_ERROR",
+          "batch": 3
+        },
+        {
+          "url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+          "status": "returned_content",
+          "batch": 4
+        },
+        {
+          "url": "https://huggingface.co/datasets/madebyollin/megalith-10m",
+          "status": "returned_content",
+          "batch": 4
+        }
+      ]
+    },
+    {
+      "name": "evaluation",
+      "searches": [
+        {
+          "query": "category:research paper group maximum differentiation competition gMAD image quality assessment model failure human subjective validation primary paper",
+          "objective": "Find original gMAD IQA paper and author project/repository. Extract the method for selecting challenge pairs and human verification, not secondary summaries.",
+          "numResults": 5,
+          "results": [
+            {
+              "url": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Ma_Group_MAD_Competition_CVPR_2016_paper.pdf"
+            },
+            {
+              "url": "https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_Troubleshooting_Blind_Image_Quality_Models_in_the_Wild_CVPR_2021_paper.pdf"
+            },
+            {
+              "url": "https://www4.comp.polyu.edu.hk/~cslzhang/paper/cvpr16/gMAD.pdf"
+            },
+            {
+              "url": "http://arxiv.org/pdf/2105.06747v1"
+            },
+            {
+              "url": "https://ieeexplore.ieee.org/document/9399249"
+            }
+          ]
+        },
+        {
+          "query": "category:research paper PAIR image quality assessment benchmark pairwise relative quality ranking comparison authentic distortions",
+          "objective": "Find primary PAIR IQA benchmark papers or author repositories about paired image quality challenges and source-controlled evaluation. Exclude commercial product reviews.",
+          "numResults": 5,
+          "results": [
+            {
+              "url": "https://openaccess.thecvf.com/content_cvpr_2018/papers_backup/Prashnani_PieAPP_Perceptual_Image-Error_CVPR_2018_paper.pdf"
+            },
+            {
+              "url": "https://arxiv.org/html/2403.09746"
+            },
+            {
+              "url": "https://exa.ai/library/publication/nvr0bpxm12b"
+            },
+            {
+              "url": "https://arxiv.org/pdf/1309.0213v3.pdf"
+            },
+            {
+              "url": "https://www.cl.cam.ac.uk/~rkm38/pdfs/perezortiz2019unified_quality_scale.pdf"
+            }
+          ]
+        },
+        {
+          "query": "category:research paper image quality assessment benchmark undersampling distortion severity semantic content shortcuts robustness published September 2024 through September 2026",
+          "objective": "Find primary recent IQA evaluation papers testing missing distortion ranges, content/source bias, benchmark undersampling, and out-of-distribution challenge sets. Extract exact evaluation protocols, dates and versions.",
+          "numResults": 10,
+          "results": [
+            {
+              "url": "https://arxiv.org/abs/2609.08316"
+            },
+            {
+              "url": "https://arxiv.org/abs/2609.16664"
+            },
+            {
+              "url": "https://openaccess.thecvf.com/content/CVPR2026W/LoViF/papers/Li_LoViF_2026_The_First_Challenge_on_Human-Oriented_Semantic_Image_Quality_CVPRW_2026_paper.pdf"
+            },
+            {
+              "url": "https://arxiv.org/html/2508.12605v1"
+            },
+            {
+              "url": "https://www.emergentmind.com/papers/2604.03400"
+            },
+            {
+              "url": "https://arxiv.org/html/2607.22783v1"
+            },
+            {
+              "url": "https://www.alphaxiv.org/abs/2407.17035"
+            },
+            {
+              "url": "https://link.springer.com/chapter/10.1007/978-3-032-37026-6_34"
+            },
+            {
+              "url": "https://www.alphaxiv.org/abs/2506.17969"
+            },
+            {
+              "url": "https://arxiv.org/abs/2511.16908"
+            }
+          ]
+        },
+        {
+          "query": "category:research paper multimodal language models image aesthetic quality scoring human ratings reliability repeated judgments prompt sensitivity calibration bias",
+          "objective": "Find primary evaluations of VLM teacher labels against independent human technical quality or aesthetics judgments. Prefer repeated-rating reliability and low-level defects; exclude general vision benchmarks and ungrounded opinion.",
+          "numResults": 10,
+          "results": [
+            {
+              "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Slyman_Calibrating_MLLM-as-a-judge_via_Multimodal_Bayesian_Prompt_Ensembles_ICCV_2025_paper.pdf"
+            },
+            {
+              "url": "https://aclanthology.org/2026.acl-long.1162.pdf"
+            },
+            {
+              "url": "https://aclanthology.org/2025.emnlp-main.386.pdf"
+            },
+            {
+              "url": "https://genaicreativity.org/icml2026/files/36/36_paper.pdf"
+            },
+            {
+              "url": "https://exa.ai/library/publication/5zntj9zybpx"
+            },
+            {
+              "url": "https://arxiv.org/html/2401.08276v1"
+            },
+            {
+              "url": "https://arxiv.org/html/2501.09012v3"
+            },
+            {
+              "url": "https://arxiv.org/html/2601.04946v2"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2507.14533v2"
+            },
+            {
+              "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Hara_Probabilistic_Prompt_Adaptation_for_Unified_Image_Aesthetics_and_Quality_Assessment_CVPR_2026_paper.pdf"
+            }
+          ]
+        },
+        {
+          "query": "category:research paper image quality aesthetics assessment dataset curation image selection top k ranking diversity pairwise human preference evaluation benchmark",
+          "objective": "Find primary task-aligned assessment of image selection/ranking or curation balancing quality and diversity. Need held-out human pairwise judgments and source/content controlled rankings, not only pooled MOS correlation.",
+          "numResults": 10,
+          "results": [
+            {
+              "url": "https://arxiv.org/html/2512.05209v4"
+            },
+            {
+              "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_Fine-grained_Image_Aesthetic_Assessment_Learning_Discriminative_Scores_from_Relative_Ranks_CVPR_2026_paper.pdf"
+            },
+            {
+              "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Ma_HPSv3_Towards_Wide-Spectrum_Human_Preference_Score_ICCV_2025_paper.pdf"
+            },
+            {
+              "url": "https://papers.nips.cc/paper_files/paper/2024/file/baa66b34c11716bdff4854bbc8e667e4-Paper-Datasets_and_Benchmarks_Track.pdf"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2203.16754"
+            },
+            {
+              "url": "https://arxiv.org/abs/2508.03789"
+            },
+            {
+              "url": "https://huggingface.co/datasets/to-hope-we-bound/ArtiMuse-10K"
+            },
+            {
+              "url": "https://ar5iv.labs.arxiv.org/html/2605.12684"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2405.14705"
+            },
+            {
+              "url": "https://arxiv.org/pdf/2306.09341v2.pdf"
+            }
+          ]
+        }
+      ],
+      "fetches": [
+        {
+          "url": "https://openaccess.thecvf.com/content_cvpr_2016/papers/Ma_Group_MAD_Competition_CVPR_2016_paper.pdf",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2605.12684v1",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_Fine-grained_Image_Aesthetic_Assessment_Learning_Discriminative_Scores_from_Relative_Ranks_CVPR_2026_paper.pdf",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2508.14475v1",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2607.22783v1",
+          "status": "returned_content"
+        }
+      ]
+    },
+    {
+      "name": "teacher_labels_viewing_contract",
+      "searches": [
+        {
+          "query": "Research paper LEAF label efficient annotation free image quality assessment frozen teacher pseudo labels human 10 percent calibration 2601.20689",
+          "numResults": 5,
+          "objective": "Find the primary LEAF paper and code. Extract exactly how human labels are used and whether improved Spearman correlation comes from training a student or merely post-hoc score calibration. Prefer full text, exclude generic summaries.",
+          "results": [
+            {
+              "title": "Decoupling Perception and Calibration: Label-Efficient Image Quality Assessment Framework",
+              "url": "https://arxiv.org/html/2601.20689"
+            },
+            {
+              "title": "Decoupling Perception and Calibration: Label-Efficient Image Quality Assessment Framework",
+              "url": "https://pubdb.com/paper/2601.20689"
+            },
+            {
+              "title": "Decoupling Perception and Calibration: Label-Efficient Image Quality Assessment Framework - arXiv.gg",
+              "url": "https://arxiv.gg/abs/2601.20689"
+            },
+            {
+              "title": "Decoupling Perception and Calibration: Label-Efficient Image Quality Assessment Framework · Hugging Peers",
+              "url": "https://huggingpeers.co/papers/2601.20689"
+            },
+            {
+              "title": "Decoupling Perception and Calibration: Label-Efficient Image Quality Assessment Framework",
+              "url": "https://exa.ai/library/publication/k01fwly65rp"
+            }
+          ]
+        },
+        {
+          "query": "Research paper evaluates multimodal language models as image aesthetics and technical quality judges human ratings bias reliability scalar pairwise score 2025 2026",
+          "numResults": 10,
+          "objective": "Find primary empirical studies that expose failures of LLM-generated aesthetic or technical image quality labels, including content bias, calibration, and pairwise versus scalar judgments. Need named benchmarks and actionable validation checks, not general visual reasoning scores.",
+          "results": [
+            {
+              "title": "What Makes a Good Generated Image? Investigating Human and Multimodal LLM Image Preference Alignment",
+              "url": "https://ojs.aaai.org/index.php/AAAI/article/view/39666"
+            },
+            {
+              "title": "AesBiasBench: Evaluating Bias and Alignment in Multimodal Language Models for Personalized Image Aesthetic Assessment",
+              "url": "https://aclanthology.org/2025.emnlp-main.386.pdf"
+            },
+            {
+              "title": "ICML  Paper #36: Visual Aesthetic Benchmark: Can Frontier Models Judge Beauty?",
+              "url": "https://icml.cc/virtual/2026/68543"
+            },
+            {
+              "title": "Prototypicality Bias Reveals Blindspots in Multimodal Evaluation Metrics",
+              "url": "https://arxiv.org/html/2601.04946v2"
+            },
+            {
+              "title": "Calibrating MLLM-as-a-judge via Multimodal Bayesian Prompt Ensembles | alphaXiv",
+              "url": "https://www.alphaxiv.org/abs/2509.08777"
+            },
+            {
+              "title": "MM-CRITIC: A Holistic Evaluation of Large Multimodal Models as Multimodal Critique",
+              "url": "https://aclanthology.org/2025.findings-emnlp.733.pdf"
+            },
+            {
+              "title": "Mitigating Perceptual Judgment Bias in Multimodal LLM-as-a-Judge via Perceptual Perturbation and Reward Modeling | alphaXiv",
+              "url": "https://www.alphaxiv.org/abs/2606.02578"
+            },
+            {
+              "title": "Can MLLMs Critique Like Humans? Evaluating Open-Ended Aesthetic Reasoning in Multimodal Large Language Models",
+              "url": "https://exa.ai/library/publication/5zntj9zybpx"
+            },
+            {
+              "title": "MJ-BENCH: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?",
+              "url": "https://papers.nips.cc/paper_files/paper/2025/file/59d2eaa5842fa641ff9b8e4c7ff0f6ee-Paper-Datasets_and_Benchmarks_Track.pdf"
+            },
+            {
+              "title": "Regression over Classification: Assessing Image Aesthetics via Multimodal Large Language Models",
+              "url": "https://ojs.aaai.org/index.php/AAAI/article/view/37726"
+            }
+          ]
+        },
+        {
+          "query": "Research paper active learning human annotation image quality assessment aesthetics disagreement pairwise annotation efficient sampling 2024 2025 2026",
+          "numResults": 10,
+          "objective": "Find primary work on selecting human labels or auditing synthetic image quality labels under a small annotation budget. Prefer evidence comparing uncertainty/disagreement/diversity selection to random samples. Exclude image generation preference training without relevance to image quality.",
+          "results": [
+            {
+              "title": "Uncertainty-driven Sampling for Efficient Pairwise Comparison Subjective Assessment",
+              "url": "https://arxiv.org/html/2411.18372v2"
+            },
+            {
+              "title": "N/A",
+              "url": "https://arxiv.org/pdf/2601.13458"
+            },
+            {
+              "title": "Dimension-Aware Active Annotation for Aesthetic Perception via Multi-Agent Human–AI Collaboration",
+              "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38677"
+            },
+            {
+              "title": "MetaRanker: Human-in-the-loop Active Ranking for Metalens Image Quality",
+              "url": "https://arxiv.org/html/2605.29212"
+            },
+            {
+              "title": "A VLM-Driven Agentic System for Multi-Dimensional Pairwise Image Quality Comparison",
+              "url": "https://openaccess.thecvf.com/content/CVPR2026W/NTIRE/papers/Liao_A_VLM-Driven_Agentic_System_for_Multi-Dimensional_Pairwise_Image_Quality_Comparison_CVPRW_2026_paper.pdf"
+            },
+            {
+              "title": "Decreasing Annotation Burden of Pairwise Comparisons with Human-in-the-Loop Sorting: Application in Medical Image Artifact Rating",
+              "url": "https://arxiv.org/pdf/2202.04823v1.pdf"
+            },
+            {
+              "title": "N/A",
+              "url": "https://arxiv.org/pdf/2603.09692"
+            },
+            {
+              "title": "N/A",
+              "url": "https://www.arxiv.org/pdf/2602.01581"
+            },
+            {
+              "title": "When Every Label Counts: Wasserstein-Optimal Dataset Representation for Coreset Selection in Annotation-Scarce AI-Generated Image Quality Assessment",
+              "url": "https://openaccess.thecvf.com/content/CVPR2026W/DataCV/papers/Shinde_When_Every_Label_Counts_Wasserstein-Optimal_Dataset_Representation_for_Coreset_Selection_CVPRW_2026_paper.pdf"
+            },
+            {
+              "title": "Fine-grained Image Quality Assessment for Perceptual Image Restoration | alphaXiv",
+              "url": "https://www.alphaxiv.org/abs/2508.14475"
+            }
+          ]
+        },
+        {
+          "query": "Wasserstein-Characteristic Proximal Coreset WCPC image quality selection MOS labels oracle availability unlabeled 2026 Shinde Roy",
+          "numResults": 5,
+          "objective": "Read the primary CVPR2026W WCPC paper's method equations and assumptions. Does selection require ground-truth MOS values or a proxy from a small labeled seed? Distinguish evaluating existing labeled subset selection from a deployable annotation-acquisition rule for unlabeled images.",
+          "results": [
+            {
+              "title": "When Every Label Counts: Wasserstein-Optimal Dataset Representation for Coreset Selection in Annotation-Scarce AI-Generated Image Quality Assessment",
+              "url": "https://openaccess.thecvf.com/content/CVPR2026W/DataCV/papers/Shinde_When_Every_Label_Counts_Wasserstein-Optimal_Dataset_Representation_for_Coreset_Selection_CVPRW_2026_paper.pdf"
+            },
+            {
+              "title": "Diversity Preserving Coresets for Image Quality Assessment",
+              "url": "https://openaccess.thecvf.com/content/WACV2026/papers/Nema_Diversity_Preserving_Coresets_for_Image_Quality_Assessment_WACV_2026_paper.pdf"
+            },
+            {
+              "title": "Geometry-Aware Coreset Selection and Perceptual-Constrained Adversarial Attacks for Efficient and Robust Medical Imaging",
+              "url": "https://openaccess.thecvf.com/content/CVPR2026W/PHAROS-AIF-MIH/papers/Shinde_Geometry-Aware_Coreset_Selection_and_Perceptual-Constrained_Adversarial_Attacks_for_Efficient_and_CVPRW_2026_paper.pdf"
+            },
+            {
+              "title": "Zero-Shot Coreset Selection via Iterative Subspace Sampling",
+              "url": "https://openaccess.thecvf.com/content/WACV2026/papers/Griffin_Zero-Shot_Coreset_Selection_via_Iterative_Subspace_Sampling_WACV_2026_paper.pdf"
+            },
+            {
+              "title": "Holistic Coreset Selection for Data Efficient Image Quality Assessment",
+              "url": "https://exa.ai/library/publication/6x7sj04wy5c"
+            }
+          ]
+        },
+        {
+          "query": "research image quality assessment test time resizing JPEG re-encoding data shortcuts synthetic authentic distortions evaluation quality invariance 2025 2026",
+          "numResults": 10,
+          "objective": "Find primary papers on quality-changing preprocessing and training shortcuts in blind IQA. Need evidence that resizing/cropping or synthetic degradation cues change what a scorer learns, and protocols separating authentic distortion robustness from synthetic ladder success. Exclude generic object recognition robustness.",
+          "results": [
+            {
+              "title": "PeerJ A Swin transformer-based framework for digital media image quality assessment",
+              "url": "https://peerj.com/articles/cs-4093/"
+            },
+            {
+              "title": "Spatially Localized Image Degradation Embeddings for Image Quality Assessment",
+              "url": "https://arxiv.org/html/2606.29162"
+            },
+            {
+              "title": "Distilling Spatially-Heterogeneous Distortion Perception for Blind Image Quality Assessment",
+              "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Distilling_Spatially-Heterogeneous_Distortion_Perception_for_Blind_Image_Quality_Assessment_CVPR_2025_paper.pdf"
+            },
+            {
+              "title": "Learning Where to Look and How to Judge: Resolution-agnostic Image Quality Assessment with Quality-aware Saliency",
+              "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Gedik_Learning_Where_to_Look_and_How_to_Judge_Resolution-agnostic_Image_CVPR_2026_paper.pdf"
+            },
+            {
+              "title": "Examining the role of compression in influencing AI-generated image authenticity | Scientific Reports",
+              "url": "https://www.nature.com/articles/s41598-025-91545-4"
+            },
+            {
+              "title": "ICML Poster Bridging the Perceptual Gap: Residual-Enhanced Downscaling and Manifold-Aware Perception Alignment Adaptation for NR-IQA",
+              "url": "https://icml.cc/virtual/2026/poster/60964"
+            },
+            {
+              "title": "JPEG AIC2026: A large-scale dataset for fine-grained assessment of image coding",
+              "url": "https://arxiv.org/html/2607.22783v1"
+            },
+            {
+              "title": "Visual Distortion Detection in UGC Images Using Large Multimodal Models | Arxiv - DeepPaper",
+              "url": "https://arxiv.deeppaper.ai/papers/2608.09122v1"
+            },
+            {
+              "title": "Zoom-IQA: Image Quality Assessment with Reliable Region-Aware Reasoning | Springer Nature Link",
+              "url": "https://link.springer.com/chapter/10.1007/978-3-032-37026-6_34"
+            },
+            {
+              "title": "Quality-Aware Calibration for AI-Generated Image Detection in the Wild",
+              "url": "https://openaccess.thecvf.com/content/CVPR2026W/APAI/papers/Guillaro_Quality-Aware_Calibration_for_AI-Generated_Image_Detection_in_the_Wild_CVPRW_2026_paper.pdf"
+            }
+          ]
+        }
+      ],
+      "fetches": [
+        {
+          "url": "https://arxiv.org/html/2601.20689",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2411.18372v2",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://openaccess.thecvf.com/content/CVPR2026W/DataCV/papers/Shinde_When_Every_Label_Counts_Wasserstein-Optimal_Dataset_Representation_for_Coreset_Selection_CVPRW_2026_paper.pdf",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/abs/2509.08777",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/qalign/data.py",
+          "status": "fetch_failed"
+        },
+        {
+          "url": "https://arxiv.org/html/2606.29162",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://github.com/Q-Future/Q-ReAlign/blob/f5fd748399ca26e2655b210a609bdcff35953dff/qalign/levels.py",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2508.05016v2",
+          "status": "returned_content"
+        },
+        {
+          "url": "https://arxiv.org/html/2411.18372v2",
+          "status": "returned_content"
+        }
+      ]
+    }
+  ],
+  "local_manifest_observations": {
+    "counts_by_split": {
+      "train": 10000,
+      "development": 400,
+      "test": 400
+    },
+    "labels": {
+      "technical_nonnull": 0,
+      "aesthetic_nonnull": 0,
+      "photo_true": 0,
+      "photo_false": 1200
+    },
+    "formats_by_component": {
+      "clevr": {
+        ".png": 480
+      },
+      "distortions": {
+        ".png": 2043,
+        ".jpg": 957
+      },
+      "megalith": {
+        ".image": 5400
+      },
+      "owned_controls": {
+        ".png": 240
+      },
+      "plotqa": {
+        ".png": 480
+      },
+      "vizwiz": {
+        ".jpg": 1200
+      }
+    },
+    "delivered_max_edge_by_component": {
+      "clevr": {
+        "min": 480,
+        "max": 480,
+        "over1536": 0
+      },
+      "distortions": {
+        "min": 500,
+        "max": 1536,
+        "over1536": 0
+      },
+      "megalith": {
+        "min": 345,
+        "max": 7272,
+        "over1536": 5037
+      },
+      "owned_controls": {
+        "min": 640,
+        "max": 640,
+        "over1536": 0
+      },
+      "plotqa": {
+        "min": 675,
+        "max": 1396,
+        "over1536": 0
+      },
+      "vizwiz": {
+        "min": 102,
+        "max": 2592,
+        "over1536": 574
+      }
+    },
+    "holdout_generated_distortions": 0,
+    "report_pending": [
+      "Independent photo eligibility and quality-band audit",
+      "Human development audit and teacher scoring/calibration",
+      "Full external benchmark overlap audit beyond supplied exclusions and official train boundaries"
+    ],
+    "candidate_groups": {
+      "train": {
+        "candidate_families": 6850,
+        "largest": [
+          {
+            "group": "megalith-9f3214fbe410c0d45d949f6d5cd735f4",
+            "n": 4,
+            "components": {
+              "distortions": 3,
+              "megalith": 1
+            },
+            "unique_dhashes": 2
+          },
+          {
+            "group": "megalith-9d703a0e56ede33f6c6a300c5fd57722",
+            "n": 4,
+            "components": {
+              "distortions": 3,
+              "megalith": 1
+            },
+            "unique_dhashes": 1
+          },
+          {
+            "group": "megalith-5db0c6550253f033d240b7589bdea612",
+            "n": 4,
+            "components": {
+              "distortions": 3,
+              "megalith": 1
+            },
+            "unique_dhashes": 2
+          }
+        ],
+        "vizwiz_families": 1000
+      },
+      "development": {
+        "candidate_families": 385,
+        "largest": [
+          {
+            "group": "owned-20260927-000011",
+            "n": 4,
+            "components": {
+              "owned_controls": 4
+            },
+            "unique_dhashes": 3
+          },
+          {
+            "group": "owned-20260927-000015",
+            "n": 4,
+            "components": {
+              "owned_controls": 4
+            },
+            "unique_dhashes": 4
+          },
+          {
+            "group": "owned-20260927-000034",
+            "n": 4,
+            "components": {
+              "owned_controls": 4
+            },
+            "unique_dhashes": 4
+          }
+        ],
+        "vizwiz_families": 100
+      },
+      "test": {
+        "candidate_families": 298,
+        "largest": [
+          {
+            "group": "megalith-39b7a2bc034149cd7455378034b097e6",
+            "n": 83,
+            "components": {
+              "megalith": 2,
+              "vizwiz": 81
+            },
+            "unique_dhashes": 40
+          },
+          {
+            "group": "owned-20260927-000012",
+            "n": 4,
+            "components": {
+              "owned_controls": 4
+            },
+            "unique_dhashes": 3
+          },
+          {
+            "group": "owned-20260927-000018",
+            "n": 4,
+            "components": {
+              "owned_controls": 4
+            },
+            "unique_dhashes": 4
+          }
+        ],
+        "vizwiz_families": 16
+      }
+    },
+    "vizwiz_unrecognizable_votes_at_least_three": {
+      "train": {
+        "n": 1000,
+        "unrecognizable": 206
+      },
+      "development": {
+        "n": 100,
+        "unrecognizable": 23
+      },
+      "test": {
+        "n": 100,
+        "unrecognizable": 85
+      }
+    },
+    "resized_derivative_rows": 2808,
+    "resized_derivative_parents": 936,
+    "manifest_sha256": {
+      "train": "c8bc9fa7b796239739b2f7a00cd99e2051342c382ec179867658d1b702246a53",
+      "development": "131329cc408e05bca16c67a20a21ab3e67807cd060c1032be6bbf0cd1582809b",
+      "test": "fd49c03efc574c19be6c413885225a83223bd5ab3e175fb97f8dc7e6f7159c2c"
+    }
+  }
+}

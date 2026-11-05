@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "created_at": "2026-10-11T16:54:00.715256+00:00",
+  "track": "ai_detection",
+  "dataset_path": "tracks/ai_detection/dataset.json",
+  "dataset_sha256": "79a8195b82ea76d2113ba7c59b14362bc7f4574efca588bf7b3df35e48d0eec9",
+  "baseline_prompt_path": "tracks/ai_detection/prompts/baseline.json",
+  "baseline_prompt_sha256": "25e5e76cd573e2c5b15cdf6e2a676441f399d11270f4dcc0ca9a29203041f532",
+  "task": "ai",
+  "model_alias": "luna",
+  "model_id": "openai/gpt-6-luna",
+  "reasoning_effort": "low",
+  "max_output_tokens": 4096,
+  "split_counts": {
+    "dev": 30,
+    "train": 30,
+    "test": 60
+  },
+  "quality_bad_rule": "quality < 2.6",
+  "ai_rule": "ai_probability >= 0.5",
+  "review_band_open": [
+    0.2,
+    0.8
+  ],
+  "selection": "Best dev group-balanced mean reward; require gain >= 0.005 over baseline, otherwise retain baseline",
+  "minimum_gain": 0.005,
+  "context_only_mutation": true,
+  "limits": "Track total at most $2, including optimisation, reflection and final calls; parent controls the overall experiment budget"
+}

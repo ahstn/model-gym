@@ -1,0 +1,9 @@
+{
+  "track": "quality",
+  "max_calls": 300,
+  "budget_usd": 1.5,
+  "max_proposals": 3,
+  "protocol_sha256": "4f7e5428fca0ec05bd5caeae4b9a86a8c3f080f8a00525642dd123c481074daa",
+  "dataset_sha256": "0e99ab11bd939e35aab7e33a7f1ad87221950a03e5d669192068e28f439fa5f3",
+  "baseline_prompt_sha256": "0f6f9b4640bf26d534636448882a2d5c028d77a8dec31246601547110a0ffc81"
+}

@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "rule": "Try unused unique camera models in original hash-ranked order. Reject location-bound probe groups, preserving8images/device and5train/5dev/10testdevices. No detector outputs used. Replace isolated domain/shared-scene failures within accepted devices using the next URL rank.",
+  "rejected_probes": [
+    {
+      "device": "D28_Huawei_P8",
+      "decision": "reject_location_bound_device",
+      "reason": "Next-ranked probe repeatedly shows distinctive training campus/courtyard buildings; remaining probes concentrate on generic corridors or close surfaces.",
+      "reviewed_ids": [
+        "vision-D28_I_nat_0024",
+        "vision-D28_I_nat_0187",
+        "vision-D28_I_nat_0030",
+        "vision-D28_I_nat_0227",
+        "vision-D28_I_nat_0016",
+        "vision-D28_I_nat_0157",
+        "vision-D28_I_nat_0059",
+        "vision-D28_I_nat_0026"
+      ]
+    },
+    {
+      "device": "D19_Apple_iPhone6Plus",
+      "decision": "reject_location_bound_device",
+      "reason": "Next-ranked probe repeatedly shows distinctive training campus/courtyard buildings; remaining probes concentrate on generic corridors or close surfaces.",
+      "reviewed_ids": [
+        "vision-D19_I_nat_0173",
+        "vision-D19_I_nat_0205",
+        "vision-D19_I_nat_0091",
+        "vision-D19_I_nat_0008",
+        "vision-D19_I_nat_0105",
+        "vision-D19_I_nat_0215",
+        "vision-D19_I_nat_0125",
+        "vision-D19_I_nat_0079"
+      ]
+    },
+    {
+      "device": "D29_Apple_iPhone5",
+      "decision": "reject_location_bound_device",
+      "reason": "Next-ranked probe repeatedly shows distinctive training campus/courtyard buildings; remaining probes concentrate on generic corridors or close surfaces.",
+      "reviewed_ids": [
+        "vision-D29_I_nat_0119",
+        "vision-D29_I_nat_0009",
+        "vision-D29_I_nat_0071",
+        "vision-D29_I_nat_0126",
+        "vision-D29_I_nat_0162",
+        "vision-D29_I_nat_0194",
+        "vision-D29_I_nat_0142",
+        "vision-D29_I_nat_0139"
+      ]
+    },
+    {
+      "device": "D30_Huawei_Honor5c",
+      "decision": "reject_location_bound_device",
+      "reason": "Next-ranked probe repeatedly shows distinctive training campus/courtyard buildings; remaining probes concentrate on generic corridors or close surfaces.",
+      "reviewed_ids": [
+        "vision-D30_I_nat_0223",
+        "vision-D30_I_nat_0028",
+        "vision-D30_I_nat_0011",
+        "vision-D30_I_nat_0070",
+        "vision-D30_I_nat_0128",
+        "vision-D30_I_nat_0044",
+        "vision-D30_I_nat_0049",
+        "vision-D30_I_nat_0243"
+      ]
+    },
+    {
+      "device": "D23_Asus_Zenfone2Laser",
+      "decision": "reject_location_bound_device",
+      "reason": "Next-ranked probe repeatedly shows distinctive training campus/courtyard buildings; remaining probes concentrate on generic corridors or close surfaces.",
+      "reviewed_ids": [
+        "vision-D23_I_nat_0171",
+        "vision-D23_I_nat_0034",
+        "vision-D23_I_nat_0116",
+        "vision-D23_I_nat_0022",
+        "vision-D23_I_nat_0010",
+        "vision-D23_I_nat_0180",
+        "vision-D23_I_nat_0077",
+        "vision-D23_I_nat_0205"
+      ]
+    },
+    {
+      "device": "D16_Huawei_P9Lite",
+      "decision": "reject_location_bound_device",
+      "reason": "Next-ranked probe repeatedly shows distinctive training campus/courtyard buildings; remaining probes concentrate on generic corridors or close surfaces.",
+      "reviewed_ids": [
+        "vision-D16_I_nat_0212",
+        "vision-D16_I_nat_0198",
+        "vision-D16_I_nat_0006",
+        "vision-D16_I_nat_0220",
+        "vision-D16_I_nat_0063",
+        "vision-D16_I_nat_0130",
+        "vision-D16_I_nat_0054",
+        "vision-D16_I_nat_0124"
+      ]
+    }
+  ],
+  "replacements": [
+    {
+      "old_device": "D09_Apple_iPhone4",
+      "new_device": "D17_Microsoft_Lumia640LTE",
+      "reason": "Two ranked batches repeatedly show known training locations; replace the whole camera group to avoid a texture-only held-out subset.",
+      "original_ids": [
+        "vision-D09_I_nat_0090",
+        "vision-D09_I_nat_0194",
+        "vision-D09_I_nat_0143",
+        "vision-D09_I_nat_0119",
+        "vision-D09_I_nat_0161",
+        "vision-D09_I_nat_0101",
+        "vision-D09_I_nat_0014",
+        "vision-D09_I_nat_0214"
+      ]
+    },
+    {
+      "old_device": "D25_OnePlus_A3000",
+      "new_device": "D33_Huawei_Ascend",
+      "reason": "Two ranked batches repeatedly show known training locations; replace the whole camera group to avoid a texture-only held-out subset.",
+      "original_ids": [
+        "vision-D25_I_nat_0019",
+        "vision-D25_I_nat_0112",
+        "vision-D25_I_nat_0132",
+        "vision-D25_I_nat_0238",
+        "vision-D25_I_nat_0043",
+        "vision-D25_I_nat_0286",
+        "vision-D25_I_nat_0100",
+        "vision-D25_I_nat_0220"
+      ]
+    }
+  ]
+}

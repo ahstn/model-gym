@@ -183,11 +183,31 @@ Aesthetics is much weaker zero-shot. GPT-4o, prompted: AVA 0.485 / 0.509, TAD66K
 
 What this means:
 
-- Zero-shot teacher labels give about 0.75–0.86 SRCC on image quality. That is well below supervised models (about 0.94 on KonIQ). Synthetic labels alone will not match Q-Align accuracy.
-- The teacher ranks images well but gets the scale wrong. LEAF fixes the scale with a small human-labeled set. We have no private labels, so the calibration set must be an open MOS set, with its own license terms.
-- For aesthetics, a zero-shot teacher is too weak to label a training set.
-- A teacher fine-tuned on the research mix would give better labels. [INFERENCE] Its labels likely carry the same license question as its training data ([datasets/iqa.md section 6.1](../datasets/iqa.md#61-license-verdict-for-the-whole-q-realign-training-mix)).
+- LEAF's **students** trained without human MOS reach about 0.70–0.86 SRCC on the four reported sets. These are not direct teacher-scoring results. They remain below the cited supervised references; this evidence does not establish that synthetic labels alone will match Q-Align on our data.
+- LEAF's second stage fine-tunes the student with human MOS using MSE and a PLCC loss. Its reported gains are not just post-hoc score rescaling. A strictly increasing transform of a fixed score preserves its ranks. With no private ratings available, any human calibration set needs a suitable open release and independent selection/test splits. [LEAF sections 3.2–3.3](https://arxiv.org/html/2601.20689), rechecked 2026-09-29.
+- The cited zero-shot aesthetics results are too weak to justify bulk labels from those models. Newer teachers need their own human-validation gate; these results do not prove that every teacher must fail.
+- A task-tuned teacher may give better labels, but this must be measured on independent human gold. Its training sources and output-use terms also need review; dataset restrictions do not establish a universal legal rule for generated labels. See the [dataset terms review](../datasets/iqa.md#61-license-verdict-for-the-whole-q-realign-training-mix).
 - The LEAF student saw unlabeled images from the same datasets as the tests. Labels on a different image pool (for example PD12M) will likely transfer less well [INFERENCE].
+
+### 7.2 Current API teacher candidates and label costs
+
+The [prompt pack](synthetic-label-prompts.md) defines separate technical-quality and aesthetics ratings, with a joint-call variant for a cost ablation. It documents how these proposed teacher judgments differ from Q-Align's learned label probabilities.
+
+The [teacher benchmark and cost study](synthetic-label-teachers.md) compares the five leading distinct models in the checked MMMU-Pro results, with GPT-6 Luna as an extra low-cost control. It includes verified provider prices and estimates for 1K, 10K, and 250K images. These are general visual-reasoning results and planning estimates, not controlled IQA evidence.
+
+Proposed first test: Gemini 3.8 Flash for bulk labels, Claude Opus 5.5 for a second opinion, and Astra plus Luna as accuracy and cost controls. Select on a human-rated development set before generating the full dataset. Under the study's central token assumptions, 250K Gemini labels plus a 10% Opus audit cost about $1,007 batch before retries. Keep aesthetics separate, and do not equate a generated JSON distribution with Q-Align label-token probabilities.
+
+### 7.3 Filling the low-quality range and adding domain controls
+
+The [low-quality and control dataset study](../datasets/low-quality-and-controls.md) checks real capture faults, distortion sources, and diagram/CG controls through multiple Exa and Hugging Face research rounds. The strongest new sources are LIVE-Meta VI-UGC/VizWiz, RealBlur, and SIDD. PlotQA train, CLEVR train, and owned diagrams/renders supply non-photo controls.
+
+The proposed 10K pilot uses 50% diverse photos, 30% controlled variants, 10% authentic faults, and 10% domain controls. These proportions are an experiment, not established evidence of better IQA. The 250K plan preserves those shares, but the 25K authentic-fault target requires extra mined photos beyond the eligible VI-UGC training pool. Keep originals and derivatives in one split, and reserve current IQA tests.
+
+The [pilot builder](../../README.md) implements that allocation using Megalith-CC0, human defect votes from public VizWiz training images, PlotQA, CLEVR, and owned controls. It adds separate development and test reserves. The broad-photo component is initially a seeded source sample; reviewed quality bands and teacher labels remain pending. Assembly is not evidence of improved model accuracy.
+
+The [2026-09-29 preflight audit](pilot-preflight-2026-09-29.md) checks methods and evaluation gaps against the actual manifests. It identifies missing positive domain labels, a concentrated duplicate-candidate group in the test allocation, and the need for a separate labeled-data stage before supervised training.
+
+Two corrections matter for the labels. Distortion severity is not an exact perceived-quality rank; mild edits can improve an image. A clean diagram or render can also have high quality and aesthetics. Assign zero to its photo-selection target when the product excludes that domain, while keeping quality ratings separate. MSC helps test low aesthetics, not technical IQA, and its source images include CC BY/CC BY-SA despite the CC0 release label.
 
 ## 8. What this means for a Q-ReAlign re-train
 

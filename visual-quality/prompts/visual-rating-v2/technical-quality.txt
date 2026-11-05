@@ -1,0 +1,28 @@
+Assess the technical quality of the supplied image at the delivered viewing scale. Technical quality means how clearly and cleanly the image presents its content. Judge visible fidelity and useful detail, not beauty, subject interest, composition, popularity, or photographic style. A plain but clear image can score highly.
+
+Inspect the whole frame and the important subject detail. Establish what is clearly resolved before deciding which defects reduce it. Base the score on the severity, extent, and effect of visible defects; do not average a checklist or assume that every image contains damage.
+
+Distinguish these visual patterns carefully:
+- Noise is fine random grain or colored speckles, often visible across smooth areas. Strong noise can damage detail while object boundaries stay sharp.
+- Blur spreads or merges edges and removes fine detail. A clearly focused subject with a soft background is not globally blurred. Do not call a face, text block, or carving heavily smeared when useful local detail remains clear.
+- Compression damage requires visible evidence such as block-shaped tonal patches, ringing around edges, or broken local texture. Dense foliage, stone texture, fabric weave, grain, and ordinary image softness do not by themselves prove compression. Do not invent tiling, repeated text, ghosting, or broken contours. Count these only when a visible artifact supports the claim.
+- Exposure damage includes glare, clipping, or darkness that erases important content. A small bright lamp, a dark background, or a silhouette is not automatically a severe defect. Check how much useful detail is actually lost.
+- When a foreground obstruction visibly blocks important content, judge that loss of useful detail even if the exposed region is sharp. Do not infer obstruction from a smooth or defocused area alone. Distinguish obstruction from selective focus that leaves the main content visible.
+
+If the exact cause is uncertain, describe the visible loss of detail without asserting a cause. Do not infer the capture device, encoding history, synthetic operation, or an unseen reference image. Keep unusual anatomy and scene plausibility separate from technical quality; count visible rendering failures only when they damage contours or texture. Judge graphics and paintings within their visible medium rather than penalizing them for not being photographs.
+
+Use these anchors and the full scale when warranted:
+1 = bad: Severe defects dominate and leave important content very difficult to see. Near-total darkness, overwhelming blur, or a blocked view can merit 1.0 when almost no useful detail remains. The survival of broad colors or outlines alone does not make an image fair.
+2 = poor: Substantial defects damage important content, although enough remains to interpret the image.
+3 = fair: Noticeable defects reduce fidelity, but most important content remains clear enough to inspect. Use this anchor only when such loss is visible; it is not a default for uncertainty.
+4 = good: Important content is clear overall, with minor defects that have little effect on it. Mild background softness or faint grain need not push a clear image below this anchor.
+5 = excellent: Important detail is well preserved with no meaningful technical defects visible at this scale. Ordinary subject matter, natural texture, or complex detail does not prevent a high score.
+
+Choose one score from 1.0 to 5.0 in steps of 0.1. Intermediate values express judgment between anchors, not measurement precision. Do not force a distribution across images. Check that your evidence supports the selected anchor and the stated severity.
+
+Return only a JSON object with these exact fields:
+{"task":"technical_quality","status":"ok","score":4.0,"evidence":"One sentence, at most 30 words, describing the visible detail and dominant impairment, if any.","limitations":[]}
+
+The example 4.0 illustrates the numeric type, not a default score. Mention only defects you can support from the image. Do not add a generic blur-and-compression explanation to a clear image.
+
+If the image is missing, cannot be decoded, or cannot be inspected, use status "unscorable", score null, and a short reason. Visible severe blur, darkness, clipping, or obstruction is low quality and remains scorable. If inspection is possible but incomplete, score what is visible and list the limitation. Allowed limitations are "limited_detail", "partial_view", "ambiguous_style", and "unsupported_domain". Otherwise use an empty list.

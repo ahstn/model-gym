@@ -1,0 +1,119 @@
+{
+  "audit_date": "2026-10-11",
+  "scope": "Read-only offline audit; no provider calls",
+  "tracks": [
+    {
+      "track": "quality_v2",
+      "task_attempts": 1460,
+      "reflection_attempts": 20,
+      "valid_proposals": 13,
+      "rejected_proposals": 7,
+      "train_improved_candidates": 8,
+      "full_dev_candidates_including_baseline": 9,
+      "raw_response_normalisations_verified": 1459,
+      "known_reported_usd": 0.09994821499999999,
+      "reservation_usd": 0.1,
+      "unknown_cost_count": 1,
+      "all_checks_passed": true
+    },
+    {
+      "track": "ai_detection_v2",
+      "task_attempts": 2060,
+      "reflection_attempts": 20,
+      "valid_proposals": 20,
+      "rejected_proposals": 0,
+      "train_improved_candidates": 11,
+      "full_dev_candidates_including_baseline": 12,
+      "raw_response_normalisations_verified": 2060,
+      "known_reported_usd": 0.10307693,
+      "reservation_usd": 0,
+      "unknown_cost_count": 0,
+      "all_checks_passed": true
+    }
+  ],
+  "total_api_attempts": 3560,
+  "final_valid_responses": 780,
+  "known_reported_usd": 0.203025145,
+  "reserved_unverified_usd": 0.1,
+  "actual_total_usd": null,
+  "unknown_cost_count": 1,
+  "v1_reports_original_hashes_unchanged": true,
+  "v1_rebuild_checks": [
+    {
+      "track": "quality",
+      "file": "report.json",
+      "identical": true,
+      "sha256": "c7a0f4c526224195cc52485da235562c704a74a03956be44beffe27e8ed83937"
+    },
+    {
+      "track": "quality",
+      "file": "README.md",
+      "identical": true,
+      "sha256": "b959f42f585af592f198ddd968c4a242b28c11a052c1bf29de21ccac62712a9b"
+    },
+    {
+      "track": "quality",
+      "file": "per-image.md",
+      "identical": true,
+      "sha256": "387c48430fb48cf5e37610c35673acd4cb2f056ebad4f2657858111f589d6981"
+    },
+    {
+      "track": "ai_detection",
+      "file": "report.json",
+      "identical": true,
+      "sha256": "dbcf827f76cc3c82dd2aa17f669ce59cedcba75bd04482b577e7ffdf67a51249"
+    },
+    {
+      "track": "ai_detection",
+      "file": "README.md",
+      "identical": true,
+      "sha256": "085d14772fa851418dafd7795650ee2e8c5c756545e7dab36d50ab1e529c6354"
+    },
+    {
+      "track": "ai_detection",
+      "file": "per-image.md",
+      "identical": true,
+      "sha256": "59142099595bc79f525651ead34e5041568d4cd69b98cd2727d58a2b53a80a4d"
+    }
+  ],
+  "final_report_claims_verified": {
+    "file": "EXTENDED-VALIDATION.md",
+    "attempts": 3560,
+    "final_responses": 780,
+    "quality_valid_proposals": 13,
+    "quality_train_improved": 8,
+    "ai_valid_proposals": 20,
+    "ai_train_improved": 11,
+    "quality_low_quality_detected": "34/50",
+    "known_cost_rounded_6dp": "0.203025",
+    "reservation_not_billed_cost": true,
+    "costs_latency_confusion_and_metadata_percentages": true
+  },
+  "evidence_files": [
+    "final-audit.py",
+    "final-audit-baseline.json"
+  ],
+  "v1_reports_rebuild_byte_identically": true,
+  "all_750_delivered_image_hashes_verified": true,
+  "selection_and_metadata_plan_precede_all_final_requests": true,
+  "inputs": {
+    "tracks/quality_v2/protocol.json": "c9e8ddb793186d5a6126de26c210afc394e28a623bbaaf7777f8770b2266361c",
+    "tracks/quality_v2/dataset.json": "5f249c036ce445ea0b91ffa472176b66cfee64644b6fc071129da41afbfa4d9f",
+    "tracks/quality_v2/context-dataset.json": "1f2db2c7ce92f6f92695fdaff36ca0f3515836e8051c29a18f987644174a8c20",
+    "tracks/quality_v2/ablation-plan.json": "25a9e92ebed83fd0c865fdd650cae44144a706c95057ffd51b2679a1c5ea1d5e",
+    "tracks/quality_v2/prompt-selection.json": "56b197489afb71d6d5689560b3b7727805d724521b6fcbff9052b954863d74b5",
+    "tracks/quality_v2/optimisation/summary.json": "3bb043c74c0fe0c7820c848578656f6d7c2fe2fb0309a04666a32db422b36e62",
+    "tracks/quality_v2/report/report.json": "a415b5f81e1cf5bf0a3b9a7b2f4278f8725aae36071e836b34fe697dc54bd531",
+    "tracks/quality_v2/report/metadata-report.json": "7372a744d473e0cd6547670c89b9ced15b5a08260cd17dfefa38f1071fa0fe1a",
+    "tracks/ai_detection_v2/protocol.json": "8ecdcf6b0b06bcd4af10c8f3acd007d4263c6532865bebb57c486a2a9aa26fc9",
+    "tracks/ai_detection_v2/dataset.json": "4cf72dc0cf465e267d507401ae3de893ec6f32aa37b71e284454117ae9754039",
+    "tracks/ai_detection_v2/context-dataset.json": "faf155470936de42d1ab2c1aa851ce8ad107ada5ca6490e324e3d57315e0ba16",
+    "tracks/ai_detection_v2/ablation-plan.json": "873bf0cd8b84602cd44998d664d60a7c156814aa8f5920169eb9b214c17a8fa8",
+    "tracks/ai_detection_v2/prompt-selection.json": "c01ac2fb0f3d74f1f2e8ce6866c3cb00409518fa6aa910c1242a6e6483bf3c31",
+    "tracks/ai_detection_v2/optimisation/summary.json": "208b0b5bbe2d2ffdff5eab7782e7bf8bb16af1096879e26a9bbd22105c00ebff",
+    "tracks/ai_detection_v2/report/report.json": "85559b41ba146e12229a4995b2061013a621ab76e8647afa17920a54213caeb9",
+    "tracks/ai_detection_v2/report/metadata-report.json": "220d9ba6198d8b40684427a89e76cbb794ffa1425018f74f1f7475f357fb9199",
+    "EXTENDED-VALIDATION.md": "b72a9cadd06fcf839dc41d679e671eb814314dbb5c0041541f3095d1a146303b"
+  },
+  "valid_task_raw_responses_re_normalised": 3519
+}

@@ -1,0 +1,468 @@
+{
+  "retrieved_on": "2026-10-30",
+  "rounds": [
+    {
+      "round": 1,
+      "exa": "Recent releases since 2026-09-27",
+      "hf": "Official HF CLI catalogue (150 newest 9–12B image-text-to-text repositories); model_search connector failed; repository lookup available",
+      "exa_numResults": 12
+    },
+    {
+      "round": 2,
+      "exa": "Check publisher releases Oct2026",
+      "hf": "New candidate metadata: Clef, LensVLM, MiMo",
+      "exa_numResults": 12
+    },
+    {
+      "round": 3,
+      "exa": "Visual benchmark and protocol audit",
+      "hf": "Base vs post-trained checkpoint metadata",
+      "exa_numResults": 10
+    },
+    {
+      "round": 4,
+      "exa": "Verify Qwen baseline benchmark/protocol and MMMU-Pro definition",
+      "hf": "New-to-shortlist perception, omni and scoring checkpoints",
+      "exa_numResults": 8
+    },
+    {
+      "round": 5,
+      "exa": "Adversarial release-gap search",
+      "hf": "Candidate exclusions, raw base and expanded 1000-model catalogue",
+      "exa_numResults": 12
+    },
+    {
+      "round": 6,
+      "exa": "Validate catalogue-discovered portrait aesthetics specialist",
+      "hf": "PortraitAes, FLUX prompt upsampler and ZwZ2 derivation",
+      "exa_numResults": 5
+    }
+  ],
+  "results": {
+    "exa-r1": {
+      "isError": false,
+      "documents": [
+        {
+          "title": "blog/JEV-27B-VL.md · autotrust/JEV-27B-VL at main",
+          "url": "https://huggingface.co/autotrust/JEV-27B-VL/blob/main/blog/JEV-27B-VL.md",
+          "excerpt": "# JEV-27B-VL: a decision model that learned to see without a single image of training \n\nAutoTrust · 30 September 2026\n\nToday we are releasing autotrust/JEV-27B-VL, JEV-27B with vision. Show it images and text, ask a question, and it answers in one forward pass with a calibrated probability for every option. When a question needs more thought, the same model thinks it through step by step, and it can look at the images while it does.\n\nIts decision head never saw an image during training. It still makes image decisions well enough to compete with a recommender built from tens of thousands of users' behaviour.\n\nTL;DR\n\n- A strong multimodal judge: shown an image, a question and two answers, it p"
+        },
+        {
+          "title": "stepfun-ai/Step3-VL-10B",
+          "url": "https://github.com/stepfun-ai/Step3-VL-10B",
+          "excerpt": "- Stars: 413\n- Forks: 28\n- Watchers: 413\n- Open issues: 19\n- License: Apache License 2.0\n- Default branch: main\n- Created: 2026-01-13T09:13:12Z\n\n...\n\n## 🚀 Introduction\n\n**STEP3-VL-10B** is a lightweight open-source foundation model designed to redefine the trade-off between compact efficiency and frontier-level multimodal intelligence. Despite its compact **10B parameter footprint**, STEP3-VL-10B excels in **visual perception**, **complex reasoning**, and **human-centric alignment**. It consistently outperforms models under the 10B scale and rivals or surpasses significantly larger open-weights models (**10×–20× its size**), such as GLM-4.6V (106B-A12B), Qwen3-VL-Thinking (235B-A22B), and t"
+        },
+        {
+          "title": "OpenBMB Releases MiniCPM-V 4.7, Its First MoE Multimodal Model",
+          "url": "https://rits.shanghai.nyu.edu/ai/openbmb-releases-minicpm-v-4-7-its-first-moe-multimodal-model",
+          "excerpt": "OpenBMB released MiniCPM-V 4.7 on October 12, 2026 — the latest entry in its MiniCPM-V vision-language series and the first in that line to use a mixture-of-experts (MoE) architecture. The release ships two open-weight models under Apache 2.0: MiniCPM-V 4.7 35B-A3B and MiniCPM-V 4.7 1B. The headline claim is an efficiency one. OpenBMB describes the 35B-A3B variant as “the first open-source MoE model to run smoothly on-device without compromising performance,” quoting a decoding speed of 13+ tokens per second in roughly 3 GB of memory on an iPhone 17 Pro Max.\n\n...\n\nAlthough they share a name, the two models are very different underneath. Hugging Face safetensors metadata lists the 35B-A3B var"
+        },
+        {
+          "title": "Latest open-source Vision-Language models · The Open Weights",
+          "url": "https://theopenweights.com/categories/vlm",
+          "excerpt": "### NVIDIA's Nemotron 3.5 Super VL Pairs Vision With MoE Efficiency\n\nThe 120B-parameter vision-language model activates just 12B per token and ships in NVIDIA's NVFP4 format for leaner inference.\n\n...\n\n### Cloudflare's Clef brings structured decisions to open models\n\nThe new open-weight vision-language family outputs typed, structured results and arrives alongside a reinforcement-learning fine-tuning platform.\n\n...\n\nVision-Language\n\n### Xiaomi distills MiMo V2.6 into a 9B model\n\nThe new MiMo-V2.6-Distill-Qwen-9B targets agentic workloads, coding, and tool use in a size that fits on modest hardware.\n\nSep 21, 2026\n\n### Apple's LensVLM-9B targets long-context vision tasks\n\nA 9-billion-parameter"
+        },
+        {
+          "title": "LFM3-VL-2B: 1.92B Vision Model Beats a 3.1B Predecessor",
+          "url": "https://www.orcarouter.ai/blog/lfm3-vl-2b-release",
+          "excerpt": "LiquidAI/LFM3-VL-2B existed in public for eight days before Liquid AI said a word about it. The Hugging Face repository was created on October 19, 2026, and a GGUF build appeared the same evening; the vendor's announcement — a blog post, a model collection, a card with a full benchmark table — landed on October 27. The model it replaces, LFM2.5-VL-3B, is the obvious yardstick: it is 3.1B parameters to the new model's 1.92B, and on Liquid's own 62-benchmark suite the new one averages 71.4 against the old one's 57.6. The same card also records a second number that gets far less attention: with thinking disabled, LFM3-VL-2B averages 62.1. That single configuration flag is worth 9.3 points, and "
+        },
+        {
+          "title": "Update README.md · omlab/VLX-Seek-1.5-10B at d6a21eb",
+          "url": "https://huggingface.co/omlab/VLX-Seek-1.5-10B/commit/d6a21eb8d0e0704ada04a91fdbd2bc218da4d014",
+          "excerpt": "| 1 | --- |\n| --- | --- |\n| 2 | license: apache-2.0 |\n| 3 | + tags: |\n| 4 | + - vlx |\n| 5 | + - object-detection |\n| 6 | + - grounding |\n| 7 | + - multimodal |\n| 8 | + - REC |\n| 9 | + - VLM |\n| 10 | + - zero-shot-object-detection |\n| 11 | + language: |\n| 12 | + - zh |\n| 13 | + - en |\n| 14 | + pipeline_tag: image-text-to-text |\n| 15 | + library_name: transformers |\n| 16 | --- |\n| 17 | + |\n| 18 | + # VLX-Seek-1.5-10B |\n| 19 | + |\n| 20 | + VLX-Seek-1.5-10B is the open-source 10B model in the VLX-Seek 1.5 family, designed for fine-grained perception and visual grounding in embodied scenarios. It targets practical settings such as drones, robots, robotic dogs, surveillance cameras, inspection sys"
+        },
+        {
+          "title": "Best Local Vision Models (2026): Open-Weight VLMs ...",
+          "url": "https://vdf.ai/blog/best-local-vision-models/",
+          "excerpt": "Checked against the Hugging Face model cards and licence files in October 2026.\n\n| Model (vendor) | Sizes | Licence | Inputs | Context | Worth knowing |\n| --- | --- | --- | --- | --- | --- |\n| Qwen3.5 (Qwen) | 0.8B, 2B, 4B, 9B, 27B dense; 35B-A3B, 122B-A10B, 397B-A17B MoE | Apache 2.0 | Text, image, video | 262K | Vision in every size; Qwen3.6-27B and Qwen3.8-27B also take images |\n| Qwen3-VL (Qwen) | 2B to 235B, dense and MoE | Apache 2.0 | Text, image, video | 256K, expandable to 1M | The 2025 dedicated VL line, with GUI-agent and visual-coding features |\n| Gemma 4 (Google) | E2B, E4B, 12B, 26B A4B, 31B | Apache 2.0 | Text, image, video; audio on E2B, E4B and 12B | 128K on E2B and E4B; 256"
+        },
+        {
+          "title": "Index-Translate: Bringing Meaning Across Languages, from Text & Vision to Speech",
+          "url": "https://index-translate.bilibili.com/",
+          "excerpt": "📸 News 2026.10.10 \n\n Multimodal Image Translation Launched — Index-Translate full family (2B / 9B / 35B-A3B) now natively supports end-to-end multimodal image translation (powered by visual encoder mmproj, zero OCR dependency). Public API, Python scripts, and online web demo are live! Supports clipboard paste, file upload, and drag-and-drop across all model sizes.\n\n...\n\n⚡ News 2026.10.03 \n\n Official quantized models released — llama.cpp-ready GGUF, vLLM-ready FP8, and Blackwell-optimized NVFP4 (FP4) formats are now available across the family (Translate, Homura, NativeLong, and Echo). \n\n 🚀 News 2026.09.30 \n\n Official release of Index-Translate — covering text, speech, controlled dubbing, a"
+        },
+        {
+          "title": "Multimodal open d1 decision models for the edge",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+          "excerpt": "# Multimodal open d1 decision models for the edge \n\nPublished October 7, 2026 \n\nAurelien Lac\n\nLeonie Monigatti\n\nToday, we release two open decision models in our d1 decision model family: d1-3B and d1-omni-600M (experimental).\n\n- Best decision model under 10B on the Decision Index 0.2.1: d1-3B scores 48.57, ahead of every 4B and 9B model and of Decider 35B-A3B (47.11). \n- Multimodal: d1-3B supports text and images, while d1-omni-600M supports text and images or text and audio \n- Fast: d1-3B answers a question in 16 ms on an NVIDIA Jetson AGX Thor, 26 ms on a Jetson AGX Orin, and 50ms on a Jetson Orin Nano\n\n...\n\n- d1-3B is trained from LFM2.5-VL-3B, our latest VLM, which is decoder-only. It a"
+        },
+        {
+          "title": "Local Models by Task: Image, Audio, Video and Text | Local Model Watch",
+          "url": "https://localmodelwatch.tsuchitsuchi.com/en/models-by-task-en/",
+          "excerpt": "## Vision-Language and Multimodal Models\n\n→ Scroll horizontally to see all columns\n\n| Model | Task | Parameters | Smallest VRAM tier | License | Published | Article |\n| --- | --- | --- | --- | --- | --- | --- |\n| google/DiarizationLM-Gemma-4-E4B-v1 | image-text-to-text | 8.0B | 8GB | apache-2.0 | 2026-10-05 | Read |\n| Qwen/Qwen3.8-Flash-Next | image-text-to-text | 180.0B | Over 80GB | qwen-community-1.0 | 2026-10-05 | Read |\n| ggml-org/GLM-5.3-Flash-GGUF | image-text-to-text | 321.3B | Over 80GB | other | 2026-10-04 | Read |\n| Cloudflare/clef-flash | image-text-to-text | 9.4B | 4GB | apache-2.0 | 2026-10-02 | Read |\n| ggml-org/OpenJev-GGUF | image-text-to-text | 27.4B | 24GB | cc-by-nc-4.0 |"
+        },
+        {
+          "title": "vision-language",
+          "url": "https://kinonn-bot.github.io/research-vault/tags/vision-language",
+          "excerpt": "- coding\n- agentic\n- tool-calling\n- local\n...\n### NVIDIA Nemotron 3.5 Super VL 120B-A12B\n\n- huggingface\n- image-text-to-text\n- multimodal\n- vision-language\n- moe\n- hybrid\n- mamba\n- coding\n- agentic\n- tool-calling\n- long-context\n- nvidia"
+        },
+        {
+          "title": "moss",
+          "url": "https://linkedin.com/company/moss-global",
+          "excerpt": "-16 · Reshared · 12 reactions] [🤗 MOSS-VL-Realtime is now open source on Hugging Face . ... for...](https://www.linkedin.com/posts/mosiai_activity-7483445198925111296-C72l): 🤗 MOSS-VL-Realtime is now open"
+        }
+      ]
+    },
+    "exa-r2": {
+      "isError": false,
+      "documents": [
+        {
+          "title": "stepfun-ai/Step3-VL-10B",
+          "url": "https://github.com/stepfun-ai/Step3-VL-10B",
+          "excerpt": "**STEP3-VL-10B** is a lightweight open-source foundation model designed to redefine the trade-off between compact efficiency and frontier-level multimodal intelligence. Despite its compact **10B parameter footprint**, STEP3-VL-10B excels in **visual perception**, **complex reasoning**, and **human-centric alignment**. It consistently outperforms models under the 10B scale and rivals or surpasses significantly larger open-weights models (**10×–20× its size**), such as GLM-4.6V (106B-A12B), Qwen3-VL-Thinking (235B-A22B), and top-tier proprietary flagships like Gemini 2.5 Pro and Seed-1.5-VL."
+        },
+        {
+          "title": "OpenBMB Releases MiniCPM-V 4.7, Its First MoE Multimodal Model",
+          "url": "https://rits.shanghai.nyu.edu/ai/openbmb-releases-minicpm-v-4-7-its-first-moe-multimodal-model",
+          "excerpt": "OpenBMB released MiniCPM-V 4.7 on October 12, 2026 — the latest entry in its MiniCPM-V vision-language series and the first in that line to use a mixture-of-experts (MoE) architecture. The release ships two open-weight models under Apache 2.0: MiniCPM-V 4.7 35B-A3B and MiniCPM-V 4.7 1B. The headline claim is an efficiency one. OpenBMB describes the 35B-A3B variant as “the first open-source MoE model to run smoothly on-device without compromising performance,” quoting a decoding speed of 13+ tokens per second in roughly 3 GB of memory on an iPhone 17 Pro Max.\n\n...\n\nAlthough they share a name, the two models are very different underneath. Hugging Face safetensors metadata lists the 35B-A3B var"
+        },
+        {
+          "title": "Weekly Releases (Oct 09, 2026) - a merve Collection",
+          "url": "https://huggingface.co/collections/merve/weekly-releases-oct-09-2026",
+          "excerpt": "-DGX-Spark\n\n Image-Text-to-Text • 111B • Updated 18 days ago • 18.8k •\n...\nTurbo\n\n Text-to-Image • 7B • Updated 17 days ago •\n...\n#### Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit\n\n Image-Text-to-Text • 88B • Updated 24 days ago •"
+        },
+        {
+          "title": "Multimodal open d1 decision models for the edge",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+          "excerpt": "# Multimodal open d1 decision models for the edge \n\nPublished October 7, 2026 \n\nAurelien Lac\n\nLeonie Monigatti\n\nToday, we release two open decision models in our d1 decision model family: d1-3B and d1-omni-600M (experimental).\n\n- Best decision model under 10B on the Decision Index 0.2.1: d1-3B scores 48.57, ahead of every 4B and 9B model and of Decider 35B-A3B (47.11). \n- Multimodal: d1-3B supports text and images, while d1-omni-600M supports text and images or text and audio \n- Fast: d1-3B answers a question in 16 ms on an NVIDIA Jetson AGX Thor, 26 ms on a Jetson AGX Orin, and 50ms on a Jetson Orin Nano\n\n...\n\nThese open d1 decision models are built on our Liquid Foundation Models (LFMs). U"
+        },
+        {
+          "title": "openbmb/MiniCPM-o-4_5-awq · Hugging Face",
+          "url": "https://huggingface.co/openbmb/MiniCPM-o-4_5-awq",
+          "excerpt": "## MiniCPM-o 4.5 \n\nMiniCPM-o 4.5 is the latest and most capable model in the MiniCPM-o series. The model is built in an end-to-end fashion based on SigLip2, Whisper-medium, CosyVoice2, and Qwen3-8B with a total of 9B parameters. It exhibits a significant performance improvement, and introduces new features for full-duplex multimodal live streaming. Notable features of MiniCPM-o 4.5 include:\n\n- 🔥 Leading Visual Capability. MiniCPM-o 4.5 achieves an average score of 77.6 on OpenCompass, a comprehensive evaluation of 8 popular benchmarks. With only 9B parameters, it surpasses widely used proprietary models like GPT-4o, Gemini 2.0 Pro, and approaches Gemini 2.5 Flash for vision-language capabil"
+        },
+        {
+          "title": "STEP3-VL-10B Technical Report - 智源社区论文",
+          "url": "https://hub.baai.ac.cn/paper/d94d2210-df13-4257-9f5f-115889649f74",
+          "excerpt": "我们推出STEP3-VL-10B，这是一款轻量级的开源基础模型，旨在重新定义紧凑效率与前沿多模态智能之间的权衡。STEP3-VL-10B的实现基于两项关键策略：首先，采用统一且完全不冻结的预训练策略，在1.2万亿多模态token上进行训练，将语言对齐的感知编码器与Qwen3-8B解码器相结合，从而建立内在的视觉-语言协同机制；其次，构建了一个可扩展的后训练流程，包含超过1000轮的强化学习迭代。尤为重要的是，我们引入了并行协同推理（Parallel Coordinated Reasoning, PaCoRe）机制，以扩展测试阶段的计算资源，将算力集中用于可扩展的感知推理，探索并综合多种视觉假设。因此，尽管模型规模仅为100亿参数，STEP3-VL-10B的表现仍可媲美甚至超越体量大出10至20倍的模型（如GLM-4.6V-106B、Qwen3-VL-235B），以及Gemini 2.5 Pro和Seed-1.5-VL等顶级闭源旗舰模型。该模型在多项基准测试中达到业界领先水平，在MMBench上取得92.2%的成绩，在MMMU上达到80.11%；在复杂推理任务中表现尤为出色，AIME2025得分为94.43%，MathVision得分为75.95%。我们已公开完整的模型套件，旨在为学术界提供一个强大、高效且可复现的基准模型。\n\nWe present STEP3-VL-10B, a lightweight open-source foundation model designed to redefine the trade-off between compact efficienc"
+        },
+        {
+          "title": "Best Local Vision Models (2026): Open-Weight VLMs ...",
+          "url": "https://vdf.ai/blog/best-local-vision-models/",
+          "excerpt": "The best local vision model for most teams in 2026 is a Qwen3.5 or Gemma 4 checkpoint sized to your GPU: both are Apache 2.0, read images natively and run on vLLM, llama.cpp and Ollama. Ministral 3 is Mistral's Apache 2.0 option, MiniCPM-V 4.6 runs on phones, and Llama 4 withholds its multimodal licence from EU-headquartered companies.\n\n...\n\n| Model (vendor) | Sizes | Licence | Inputs | Context | Worth knowing |\n| --- | --- | --- | --- | --- | --- |\n| Qwen3.5 (Qwen) | 0.8B, 2B, 4B, 9B, 27B dense; 35B-A3B, 122B-A10B, 397B-A17B MoE | Apache 2.0 | Text, image, video | 262K | Vision in every size; Qwen3.6-27B and Qwen3.8-27B also take images |\n| Qwen3-VL (Qwen) | 2B to 235B, dense and MoE | Apac"
+        },
+        {
+          "title": "openbmb/MiniCPM-o-4_5-gguf · Hugging Face",
+          "url": "https://huggingface.co/openbmb/MiniCPM-o-4_5-gguf",
+          "excerpt": "## MiniCPM-o 4.5 \n\nMiniCPM-o 4.5 is the latest and most capable model in the MiniCPM-o series. The model is built in an end-to-end fashion based on SigLip2, Whisper-medium, CosyVoice2, and Qwen3-8B with a total of 9B parameters. It exhibits a significant performance improvement, and introduces new features for full-duplex multimodal live streaming. Notable features of MiniCPM-o 4.5 include:\n\n- 🔥 Leading Visual Capability. MiniCPM-o 4.5 achieves an average score of 77.6 on OpenCompass, a comprehensive evaluation of 8 popular benchmarks. With only 9B parameters, it surpasses widely used proprietary models like GPT-4o, Gemini 2.0 Pro, and approaches Gemini 2.5 Flash for vision-language capabil"
+        },
+        {
+          "title": "AI Image & Video Model News Roundup – October 10, 2026",
+          "url": "https://www.kombitz.com/2026/10/10/ai-image-video-model-news-roundup-october-10-2026/",
+          "excerpt": "### Qwen-Image-2.1-Turbo: official 8-step checkpoint\n\n Alibaba’s Qwen team released Qwen-Image-2.1-Turbo, an accelerated checkpoint of Qwen-Image-2.1 that generates and edits images in just 8 denoising steps at CFG 1. It keeps the same 7B architecture and supports 2K output, transparent RGBA, and natural-language editing. The key change versus the community LoRA turbo builds: the 8-step schedule ships inside the official checkpoint, so no extra LoRA is needed. Note the license changed to the Qwen Research License, which requires a separate agreement for commercial use. Grab the weights and ComfyUI-ready repacks from the official Qwen-Image-2.1 repository; background reading at AI Weekly."
+        },
+        {
+          "title": "Multimodal models you can run locally (85 models)",
+          "url": "https://localaiready.app/task/multimodal/",
+          "excerpt": "| Model | Publisher | Parameters | Family | Coverage |\n| --- | --- | --- | --- | --- |\n| Granite Docling 258M | IBM | 258M | Granite | Full |\n| LFM2.5-VL 450M | Liquid AI | 449M | Lfm | Partial |\n| LFM2.5 VL 450M Extract | Liquid AI | 449M | Lfm | Partial |\n| LFM2-VL 450M | Liquid AI | 451M | Lfm | Partial |\n| borealis 1B instruct preview | National Library of Norway AI Lab | 1000M | Borealis | Full |\n| MiniCPM-V 4.6 | OpenBMB | 1.3B | Minicpm | Partial |\n| MiniCPM-V 4.6 Thinking | OpenBMB | 1.3B | Minicpm | Partial |\n| GLM-OCR | Zhipu AI | 1.3B | Glm | Partial |\n| LFM2-VL 1.6B | Liquid AI | 1.6B | Lfm | Partial |\n| LFM2.5-VL 1.6B | Liquid AI | 1.6B | Lfm | Partial |\n| LFM2.5 VL 1.6B Extract"
+        },
+        {
+          "title": "AIDC-AI/Ovis1.6-Gemma2-9B · Hugging Face",
+          "url": "https://huggingface.co/AIDC-AI/Ovis1.6-Gemma2-9B",
+          "excerpt": "# Ovis1.6-Gemma2-9B\n\nIt is recommended to use the latest version: Ovis2.5.\n\n## Introduction\n\nWe are excited to announce the open-sourcing of Ovis-1.6, our latest multi-modal large language model. Ovis is a novel Multimodal Large Language Model (MLLM) architecture, designed to structurally align visual and textual embeddings.\n\n...\n\n## Performance\n\nWith just 10B parameters, Ovis1.6-Gemma2-9B leads the OpenCompass benchmark among open-source MLLMs within 30B parameters.\n\n...\n\nThis project is licensed under the Apache License, Version\n\n...\n\nModel size\n\n10B params"
+        },
+        {
+          "title": "Model releases — Model Tracker",
+          "url": "https://kiankyars.github.io/model-tracker/",
+          "excerpt": "| Model | Developer | Date | Type | Parameters | Weights |\n| --- | --- | --- | --- | --- | --- |\n| Clover-35B-A3B-Preview DiffuSpace | DiffuSpace | 28 Oct 2026 | Text Reasoning | 35B | Open |\n| Gemini 4 Carbon Google | Google | 28 Oct 2026 Announced | Text Reasoning | — | Closed |\n| Nemotron 3.5 Transcribe 30B A4B NVIDIA | NVIDIA | 28 Oct 2026 | Multimodal Reasoning | 34B | Open |\n| Particle-1 Particle AI | Particle AI | 28 Oct 2026 | Text Reasoning | — | Closed |\n| Granite Switch 4.1.1 30B IBM | IBM | 27 Oct 2026 | Multimodal | 30B backbone | Open |\n| Granite Switch 4.1.1 8B IBM | IBM | 27 Oct 2026 | Multimodal | 8B backbone | Open |\n| LFM3-1.7B Liquid AI | Liquid AI | 27 Oct 2026 | Text Re"
+        }
+      ]
+    },
+    "exa-r3": {
+      "isError": false,
+      "documents": [
+        {
+          "title": "Step3-VL-10B Technical Report",
+          "url": "https://arxiv.org/html/2601.09668v2",
+          "excerpt": "Crucially, we implement Parallel Coordinated Reasoning (PaCoRe) to scale test-time compute, allocating resources to scalable perceptual reasoning that explores and synthesizes diverse visual hypotheses. Consequently, despite its compact 10B footprint, Step3-VL-10B rivals or surpasses models 10$\\times$–20$\\times$ larger (e.g., GLM-4.6V-106B, Qwen3-VL-235B) and top-tier proprietary flagships like Gemini 2.5 Pro and Seed-1.5-VL. Delivering best-in-class performance, it records 92.2% on MMBench and 80.11% on MMMU, while excelling in complex reasoning with 94.43% on AIME2025 and 75.95% on MathVision. We release the\n\n...\n\nWe benchmark Step3-VL-10B against representative open-source models (7B–10B)"
+        },
+        {
+          "title": "MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark",
+          "url": "https://arxiv.org/html/2409.02813v2",
+          "excerpt": "This paper introduces MMMU-Pro, a robust version of the Massive Multi-discipline Multimodal Understanding and Reasoning (MMMU) benchmark. MMMU-Pro rigorously assesses multimodal models’ true understanding and reasoning capabilities through a three-step process based on MMMU: (1) filtering out questions answerable by text-only models, (2) augmenting candidate options, and (3) introducing a vision-only input setting where questions are embedded within images. This setting challenges AI to truly “see” and “read” simultaneously, testing a fundamental human cognitive skill of seamlessly integrating visual and textual information. Results show that model performance is substantially lower on MMMU-"
+        },
+        {
+          "title": "Step3-VL-10B: Compact Yet Frontier Multimodal Intelligence",
+          "url": "https://stepfun-ai.github.io/Step3-VL-10B/",
+          "excerpt": "Benchmark | STEP3-VL-10B | | GLM-4.6V | Qwen3-VL | Gemini-2.5 Pro | Seed-1.5-VL |\n| --- | --- | --- | --- | --- | --- | --- |\n| |\n...\n| MMMU | 78.11 | 80.11 | 75.20 | 78.70 | 83.89 | 79.11 |\n| MMMU-Pro | 64.08 | 67.18 | 65.84 | 72.37 | 76.96"
+        },
+        {
+          "title": "ZDTaichu5.0-9B · From Visual Understanding to Spatial Intelligence",
+          "url": "https://taichu-ai.github.io/ZDTaichu5.0-9B/",
+          "excerpt": "| Area | Benchmark | ZDTaichu5.0-9B | Qwen3.5-9B | STEP3-VL-10B | gemma4-8B-E4B | Gemini 3 Pro | Grok 4 | GPT-5.2 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Multi modal Reasoning | MathVista Mini | 84.50 | 85.70 | 83.97 | 65.30 | 87.90 | 72.50 | 83.10 |\n| | WeMath | 75.90 | 75.20 | 73.03 | 50.19 | 86.90 | — | 79.00 |"
+        },
+        {
+          "title": "OpenCodePapers",
+          "url": "https://opencodepapers-b7572d.gitlab.io/benchmarks/multimodal-reasoning-on-mmmu-pro.html",
+          "excerpt": "Link | 76.9 | Gemma 4 31B | 2026-07-02 |\n| Group Entropy ... Controlled Policy Optimization | | 76.6 | GEPO (Qwen3.5-9B) | 2026-07-18 |\n...\n4 12B Unified | 2026-07-\n...\n| STEP3-VL-10B Technical Report | ✓ Link | 67.18 | Step3-VL-10B"
+        },
+        {
+          "title": "README.md · zai-org/GLM-4.6V-Flash at 727d646c12be577c9a5b2501996c8c7b5e1a9d96",
+          "url": "https://huggingface.co/zai-org/GLM-4.6V-Flash/blob/727d646c12be577c9a5b2501996c8c7b5e1a9d96/README.md",
+          "excerpt": "- name: GLM-4.6V-Flash\n\n...\n\n- task:\n          type: image-text-to-text\n        dataset:\n          name: Multimodal Benchmarks\n          type: benchmark\n        metrics:\n          - name: MMBench V1.1\n            type: mmbench_v1.1\n            value: 86.9\n          - name: MMBench V1.1 (CN)\n            type: mmbench_v1.1_cn\n            value: 85.9\n          - name: MMStar\n            type: mmstar\n            value: 74.7\n          - name: BLINK (Val)\n            type: blink_val\n            value: 65.5\n          - name: MUIRBENCH\n            type: muirbench\n            value: 75.7\n          - name: MMMU (Val)\n            type: mmmu_val\n            value: 71.1\n          - name: MMMU_Pro\n       "
+        },
+        {
+          "title": "Multimodal Reasoning on MMMU Pro (Accuracy) benchmark leaderboard · SOTA2 Research",
+          "url": "https://www.sota2.com/research/sota/multimodal-reasoning-on-mmmu-pro-accuracy",
+          "excerpt": "| Method | Links | Accuracy |\n| --- | --- | --- |\n| CoT2-Meta Strategy=Ours (CoT2-Me... Strategy=Ours (CoT2-Meta), Inference Budget=C=16, Textification=OCR+Captioning 2026.03 | | 85.6 |\n| ReST-MCTS* Strategy=ReST-MCTS*, I... Strategy=ReST-MCTS*, Inference Budget=C=16, Textification=OCR+Captioning 2026.03 | | 81.3 |\n| Vanilla ToT Strategy=Vanilla ToT,... Strategy=Vanilla ToT, Inference Budget=C=16, Textification=OCR+Captioning 2026.03 | | 77.8 |\n| Gemini-2.5 (Pro) Model Tier=Pro Model Tier=Pro 2026.01 | | 76.96 |\n| Qwen3.5 Parameters=35BA3B, Int... Parameters=35BA3B, Internal Reasoning (Think mode)=false 2026.05 | | 75.1 |\n| Gemma4 Parameters=26BA4B, Int... Parameters=26BA4B, Internal Reasoni"
+        },
+        {
+          "title": "Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters",
+          "url": "https://arxiv.org/pdf/2602.10604v1.pdf",
+          "excerpt": "We introduce Step 3.5 Flash, a sparse Mixture-of-Experts (MoE) model that bridges ... frontier-level agentic intelligence and computational efficiency. We focus on what matters most when building agents: reasoning that’s sharp, and execution that’s fast"
+        },
+        {
+          "title": "STEP3-VL-10B Technical Report",
+          "url": "https://arxiv.org/pdf/2601.09668v2.pdf",
+          "excerpt": "## STEP3-VL-10B Technical Report\n\nMultimodal Intelligence Team, StepFun \nHomepage: https://stepfun-ai.github.io/Step3-VL-10B \nModelScope: https://modelscope.cn/collections/stepfun-ai/Step3-VL-10B \nHuggingface: https://huggingface.co/collections/stepfun-ai/step3-vl-10b\n\n...\n\nWe present ST EP3-VL-10B, a lightweight open-source foundation model designed to redefine the trade-off between compact efficiency and frontier-level multimodal intelligence. ST EP3-VL-10B is realized through two strategic shifts: first, a unified, fully unfrozen pre-training strategy on 1.2T multimodal tokens that integrates a language-aligned Perception Encoder with a Qwen3-8B decoder to establish intrinsic vision-langu"
+        },
+        {
+          "title": "Step3-VL-10B - stepfun-ai",
+          "url": "https://github.com/stepfun-ai/Step3-VL-10B",
+          "excerpt": "### Comparison with Open-Source Models (7B–10B)\n\n| Category | Benchmark | STEP3-VL-10B | GLM-4.6V-Flash (9B) | Qwen3-VL-Thinking (8B) | InternVL-3.5 (8B) | MiMo-VL-RL-2508 (7B) |\n|:---------|:----------|:------------:|:-------------------:|:----------------------:|:-----------------:|:--------------------:|\n| **STEM Reasoning** | MMMU | **78.11** | 71.17 | 73.53 | 71.69 | 71.14 |\n| | MathVision | **70.81** | 54.05 | 59.60 | 52.05 | 59.65 |\n| | MathVista | **83.97** | 82.85 | 78.50 | 76.78 | 79.86 |\n| | PhyX | **59.45** | 52.28 | 57.67 | 50.51 | 56.00 |\n| **Recognition** | MMBench (EN) | **92.05** | 91.04 | 90.55 | 88.20 | 89.91 |\n| | MMStar | **77.48** | 74.26 | 73.58 | 69.83 | 72.93 |\n| | R"
+        }
+      ]
+    },
+    "exa-r4": {
+      "isError": false,
+      "documents": [
+        {
+          "title": "Qwen/Qwen3.5-9B · Hugging Face",
+          "url": "https://huggingface.co/Qwen/Qwen3.5-9B",
+          "excerpt": "# Qwen3.5-9B \n\n> This repository contains model weights and configuration files for the post-trained model in the Hugging Face Transformers format. \n> \n> These artifacts are compatible with Hugging Face Transformers, vLLM, SGLang, KTransformers, etc.\n\n...\n\n## Qwen3.5 Highlights \n\nQwen3.5 features the following enhancement:\n\n- Unified Vision-Language Foundation: Early fusion training on multimodal tokens achieves cross-generational parity with Qwen3 and outperforms Qwen3-VL models across reasoning, coding, agents, and visual understanding benchmarks.\n- Efficient Hybrid Architecture: Gated Delta Networks combined with sparse Mixture-of-Experts deliver high-throughput inference with minimal lat"
+        },
+        {
+          "title": "Qwen3.5 · Hugging Face",
+          "url": "https://huggingface.co/docs/transformers/model_doc/qwen3_5",
+          "excerpt": "# Qwen3.5\n\nQwen3.5 is Qwen’s natively multimodal foundation model family, trained from scratch on interleaved text, image, and video tokens. It uses a 3:1 hybrid attention stack — three Gated DeltaNet (linear attention) layers for every one Gated Attention (full attention) layer — so long context and vision tokens can be served without paying full quadratic cost on every block.\n\nThis page covers the dense Qwen3.5 and Qwen3.6 variants (Qwen/Qwen3.5-9B, Qwen/Qwen3.5-27B, Qwen/Qwen3.6-27B). Qwen3.6 checkpoints share the same architecture and `model_type` as Qwen3.5 and are loaded with the same classes. For the sparse mixture-of-experts variants see Qwen3.5 MoE. The text backbone reuses Qwen3-Ne"
+        },
+        {
+          "title": "README.md · Qwen/Qwen3.5-9B at c202236",
+          "url": "https://huggingface.co/Qwen/Qwen3.5-9B/blob/c202236/README.md",
+          "excerpt": "| | GPT-5-Nano-2025-08-07 | Gemini-2.5-Flash-Lite | Qwen3-VL-30B-A3B | Qwen3.5-9B | Qwen3.5-4B |\n| --- | --- | --- | --- | --- | --- |\n| STEM and Puzzle | | | | | |\n| MMMU | 75.8 | 73.4 | 76.0 | 78.4 | 77.6 |\n| MMMU-Pro | 57.2 | 59.7 | 63.0 | 70.1 | 66.3 |\n| MathVision | 62.2 | 52.1 | 65.7 | 78.9 | 74.6 |\n| Mathvista(mini) | 71.5 | 72.8 | 81.9 | 85.7 | 85.1 |\n| We-Math | 62.5 | 32.1 | 70.0 | 75.2 | 75.4 |\n| DynaMath | 78.0 | 69.9 | 80.1 | 83.6 | 83.3 |\n| ZEROBench | 1.0 | 1.0 | 0.0 | 3.0 | 3.0 |\n| ZEROBench_sub | 22.2 | 19.2 | 23.7 | 31.1 | 26.3 |\n| VlmsAreBlind | 66.7 | 68.4 | 72.5 | 93.7 | 92.6 |\n| BabyVision | 14.4 | 17.5 | 18.6 | 28.6/25.8 | 16.0/19.1 |\n| General VQA | | | | | |\n| RealWo"
+        },
+        {
+          "title": "N/A",
+          "url": "https://raw.githubusercontent.com/vllm-project/recipes/main/models/Qwen/Qwen3.5-9B.yaml",
+          "excerpt": "\": 262144}}}'\n - \"--max-model-len\"\n - \"1010000\"\n env:\n VLLM_ALLOW_LONG_MAX_MODEL_LEN: \"1\"\n...\n## References\n\n - [Model card](https://huggingface.co/Qwen/Qwen3.5-9B)\n - [Base checkpoint](https://huggingface.co/Qwen/Qwen3.5-9B-Base)"
+        },
+        {
+          "title": "Qwen/Qwen3.5-9B - Demo - DeepInfra",
+          "url": "https://deepinfra.com/Qwen/Qwen3.5-9B",
+          "excerpt": "| RefCOCO(avg) | -- | -- | 89.3 | 89.7 | 88.1 |\n\n...\n\n| Hypersim | -- | -- | 11.4 | 13.5 | 12.5 |\n| Nuscene | -- | -- | 10.3 | 11.8 | 9.9 |\n| Video Understanding | | | | | |\n| VideoMME (w sub.) | 71.7 | 74.6 | 79.9 | 84.5 | 83.5 |\n| VideoMME (w/o sub.) | 66.2 | 72.7 | 73.3 | 78.4 | 76.9 |\n| VideoMMMU | 63.0 | 69.2 | 75.0 | 78.9 | 74.1 |\n| MLVU | 69.2 | 78.5 | 78.9 | 84.4 | 82.8 |\n| MVBench | -- | -- | 72.0 | 74.4 | 71.2 |\n| LVBench | -- | 60.9 | 59.2 | 70.0 | 66.4 |\n| MMVU | 63.1 | 65.3 | 66.1 | 67.8 | 64.9 |\n\n...\n\n| ScreenSpot Pro | -- | -- | 60.5 | 65.2 | 60.3 |\n| OSWorld-Verified | -- | -- | 30.6 | 41.8 | 35.6 |\n| AndroidWorld | -- | -- | 55.0 | 57.8 | 58.6 |\n\n...\n\n| TIR-Bench | 18.5 | 21"
+        },
+        {
+          "title": "Qwen3.5-9B | Awesome Agents",
+          "url": "https://awesomeagents.ai/models/qwen-3-5-9b/",
+          "excerpt": "| Specification | Details |\n\n...\n\n| Provider | Alibaba Cloud (Qwen) |\n| Model Family | Qwen 3.5 |\n| Architecture | Gated DeltaNet + Gated Attention (3:1 hybrid) |\n| Total Parameters | 9B |\n| Active Parameters | 9B (all - dense) |\n| Layers | 32 |\n| Hidden Dimension | 4,096 |\n| FFN Intermediate Dimension | 12,288 |\n| Attention Pattern | 8 x (3 x (Gated DeltaNet -> FFN) -> 1 x (Gated Attention -> FFN)) |\n| Gated DeltaNet Heads | 32 for V, 16 for QK; Head Dim: 128 |\n| Gated Attention Heads | 16 Q, 4 KV; Head Dim: 256; RoPE Dim: 64 |\n\n...\n\n| Vocabulary | 248,320 tokens |\n\n...\n\n| Training | Multi-Token Prediction (MTP), strong-to-weak distillation |\n\n...\n\n| Release Date | March 2, 2026 |\n\n...\n\n###"
+        },
+        {
+          "title": "README.md · Qwen/Qwen3.5-9B at refs/pr/35",
+          "url": "https://huggingface.co/Qwen/Qwen3.5-9B/blob/refs%2Fpr%2F35/README.md",
+          "excerpt": "| | GPT-5-Nano-2025-08-07 | Gemini-2.5-Flash-Lite | Qwen3-VL-30B-A3B | Qwen3.5-9B | Qwen3.5-4B |\n| --- | --- | --- | --- | --- | --- |\n| STEM and Puzzle | | | | | |\n| MMMU | 75.8 | 73.4 | 76.0 | 78.4 | 77.6 |\n| MMMU-Pro | 57.2 | 59.7 | 63.0 | 70.1 | 66.3 |\n| MathVision | 62.2 | 52.1 | 65.7 | 78.9 | 74.6 |\n| Mathvista(mini) | 71.5 | 72.8 | 81.9 | 85.7 | 85.1 |\n| We-Math | 62.5 | 32.1 | 70.0 | 75.2 | 75.4 |\n| DynaMath | 78.0 | 69.9 | 80.1 | 83.6 | 83.3 |\n| ZEROBench | 1.0 | 1.0 | 0.0 | 3.0 | 3.0 |\n| ZEROBench_sub | 22.2 | 19.2 | 23.7 | 31.1 | 26.3 |\n| VlmsAreBlind | 66.7 | 68.4 | 72.5 | 93.7 | 92.6 |\n| BabyVision | 14.4 | 17.5 | 18.6 | 28.6/25.8 | 16.0/19.1 |\n| General VQA | | | | | |\n| RealWo"
+        },
+        {
+          "title": "Qwen3.5-9B — Grokipedia",
+          "url": "https://grokipedia.com/page/Qwen35-9B",
+          "excerpt": "Qwen3.5-9B demonstrates strong performance across key benchmarks in reasoning, knowledge, and multimodal tasks. In scientific and multitask reasoning evaluations, the model scores 81.7 on GPQA Diamond and 82.5 on MMLU-Pro. [3] [2] [1] Multimodal capabilities are highlighted by scores of 78.4 on MMMU and 70.1 on MMMU-Pro, the latter focusing on challenging visual reasoning tasks. [3] [1] On video understanding, Qwen3.5-9B achieves 84.5 on Video-MME evaluated with subtitles. [3] The following table summarizes these key results:\n\n| Benchmark | Score | Description |\n| --- | --- | --- |\n| GPQA Diamond | 81.7 | Advanced scientific reasoning |\n| MMLU-Pro | 82.5 | Multitask language understanding (p"
+        }
+      ]
+    },
+    "exa-r5": {
+      "isError": false,
+      "documents": [
+        {
+          "title": "OpenBMB Releases MiniCPM-V 4.7, Its First MoE Multimodal Model",
+          "url": "https://rits.shanghai.nyu.edu/ai/openbmb-releases-minicpm-v-4-7-its-first-moe-multimodal-model",
+          "excerpt": "OpenBMB released MiniCPM-V 4.7 on October 12, 2026 — the latest entry in its MiniCPM-V vision-language series and the first in that line to use a mixture-of-experts (MoE) architecture. The release ships two open-weight models under Apache 2.0: MiniCPM-V 4.7 35B-A3B and MiniCPM-V 4.7 1B. The headline claim is an efficiency one. OpenBMB describes the 35B-A3B variant as “the first open-source MoE model to run smoothly on-device without compromising performance,” quoting a decoding speed of 13+ tokens per second in roughly 3 GB of memory on an iPhone 17 Pro Max.\n\n...\n\nAlthough they share a name, the two models are very different underneath. Hugging Face safetensors metadata lists the 35B-A3B var"
+        },
+        {
+          "title": "stepfun-ai/Step3-VL-10B",
+          "url": "https://github.com/stepfun-ai/Step3-VL-10B",
+          "excerpt": "- Open issues: 19\n- License: Apache License 2.0\n- Default branch: main\n\n...\n\n**STEP3-VL-10B** is a lightweight open-source foundation model designed to redefine the trade-off between compact efficiency and frontier-level multimodal intelligence. Despite its compact **10B parameter footprint**, STEP3-VL-10B excels in **visual perception**, **complex reasoning**, and **human-centric alignment**. It consistently outperforms models under the 10B scale and rivals or surpasses significantly larger open-weights models (**10×–20× its size**), such as GLM-4.6V (106B-A12B), Qwen3-VL-Thinking (235B-A22B), and top-tier proprietary flagships like Gemini 2.5 Pro and Seed-1.5-VL.\n\n...\n\n1. **Unified Pre-tra"
+        },
+        {
+          "title": "NVIDIA open-sources PixelUMM, an encoder-free model that reads and writes raw pixels to understand and generate images and video · AGI Pulse",
+          "url": "https://agipulse.org/e/802",
+          "excerpt": "NVIDIA researchers and the University of Waterloo open-sourced PixelUMM, one model that both understands and generates images and video. The paper went up on Sept 29, followed by Apache 2.0 code on GitHub and weights on Hugging Face. It drops two standard parts of today's multimodal models: no VAE latent space and no separate vision encoder (ViT). It reads and writes raw pixels directly.\n\n...\n\nPer the paper and model card, PixelUMM builds on Qwen3-8B as a Mixture-of-Transformers: understanding and generation have separate experts but share one self-attention over text, clean pixels and noisy pixels. Images become 16x16 patches and videos 16x16x4-frame tubelets, each fed in through a single l"
+        },
+        {
+          "title": "Best Local Vision Models (2026): Open-Weight VLMs ...",
+          "url": "https://vdf.ai/blog/best-local-vision-models/",
+          "excerpt": "The best local vision model for most teams in 2026 is a Qwen3.5 or Gemma 4 checkpoint sized to your GPU: both are Apache 2.0, read images natively and run on vLLM, llama.cpp and Ollama. Ministral 3 is Mistral's Apache 2.0 option, MiniCPM-V 4.6 runs on phones, and Llama 4 withholds its multimodal licence from EU-headquartered companies.\n\n...\n\n| Job | Pick | Why |\n| --- | --- | --- |\n| General image and video questions on one 16 GB GPU | Qwen3.5-9B | Image and video input, 262K context, published results on charts, documents and screens |\n| Larger single-GPU deployments, 24–32 GB | Qwen3.5-27B or Gemma 4 31B at 4-bit | Apache 2.0, about 17–19 GB of weights at Q4_K_M |\n| Laptops and edge boxes "
+        },
+        {
+          "title": "MiniCPM-V 4.7: OpenBMB's On-Device MoE Vision Model | AI/TLDR",
+          "url": "https://ai-tldr.dev/models/minicpm-v-4-7/",
+          "excerpt": "# MiniCPM-V 4.7\n\nOpenBMB's first mixture-of-experts vision model, a 35B-A3B that reads images and video on a phone\n\nMiniCPM-V Open weights Generally available\n\nReleased\n\n12 Oct 2026\n\nParameters\n\n35B total (35B-A3B MoE); a separate 1B variant\n\nLicense\n\nApache-2.0\n\n...\n\nMiniCPM-V 4.7 is a vision-language model family from OpenBMB, announced on 12 October 2026 under Apache-2.0. It comes in two sizes: a 35B-A3B mixture-of-experts model, the first MoE in the MiniCPM-V series, and a 1B model that OpenBMB says improves on MiniCPM-V 4.6. Both take single images, several images or video as input and answer in text.\n\nAverage over MMStar, MMMU-Pro, CharXiv Reasoning, BLINK and MathVista against inferen"
+        },
+        {
+          "title": "AIDC-AI/Ovis1.6-Gemma2-9B · Hugging Face",
+          "url": "https://huggingface.co/AIDC-AI/Ovis1.6-Gemma2-9B",
+          "excerpt": "# Ovis1.6-Gemma2-9B\n\nIt is recommended to use the latest version: Ovis2.5.\n\n## Introduction\n\nWe are excited to announce the open-sourcing of Ovis-1.6, our latest multi-modal large language model. Ovis is a novel Multimodal Large Language Model (MLLM) architecture, designed to structurally align visual and textual embeddings.\n\n## Model\n\nBuilt upon Ovis1.5, Ovis1.6 further enhances high-resolution image processing, is trained on a larger, more diverse, and higher-quality dataset, and refines the training process with DPO training following instruction-tuning.\n\n...\n\n## Performance\n\nWith just 10B parameters, Ovis1.6-Gemma2-9B leads the OpenCompass benchmark among open-source MLLMs within 30B par"
+        },
+        {
+          "title": "Nemotron 3.5 Super VL Is Now the Top US Open-Weight Model",
+          "url": "https://www.orcarouter.ai/blog/nemotron-3-5-super-vl-us-open-weight-leader",
+          "excerpt": "The timestamp is the part nobody has written down. The BF16 repository for N​VIDIA N​emotron 3.5 Super VL — full name nvidia/N​VIDIA-N​emotron-3.5-Super-VL-120B-A12B-BF16 — was created on Hugging Face at 15:32:06 UTC on 12 October 2026, alongside an NVFP4 build twenty-four seconds later and a base checkpoint nineteen seconds before that. N​VIDIA's blog post announcing the model is dated 15 October. So for roughly seventy-two hours, the weights of N​VIDIA's strongest open vision-language model were downloadable, indexed, and being quantized by third parties while the company that trained it had published nothing at all. That is not a leak and it is not a scandal. It is a release pipeline wher"
+        },
+        {
+          "title": "Multimodal open d1 decision models for the edge",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+          "excerpt": "Published October 7, 2026 \n\nAurelien Lac\n\nLeonie Monigatti\n\nToday, we release two open decision models in our d1 decision model family: d1-3B and d1-omni-600M (experimental).\n\n- Best decision model under 10B on the Decision Index 0.2.1: d1-3B scores 48.57, ahead of every 4B and 9B model and of Decider 35B-A3B (47.11). \n- Multimodal: d1-3B supports text and images, while d1-omni-600M supports text and images or text and audio \n- Fast: d1-3B answers a question in 16 ms on an NVIDIA Jetson AGX Thor, 26 ms on a Jetson AGX Orin, and 50ms on a Jetson Orin Nano\n\n...\n\nThese open d1 decision models are built on our Liquid Foundation Models (LFMs). Unlike our generative models, decision models don’t p"
+        },
+        {
+          "title": "LFM3-VL-2B: 1.92B Vision Model Beats a 3.1B Predecessor",
+          "url": "https://www.orcarouter.ai/blog/lfm3-vl-2b-release",
+          "excerpt": "LiquidAI/LFM3-VL-2B existed in public for eight days before Liquid AI said a word about it. The Hugging Face repository was created on October 19, 2026, and a GGUF build appeared the same evening; the vendor's announcement — a blog post, a model collection, a card with a full benchmark table — landed on October 27. The model it replaces, LFM2.5-VL-3B, is the obvious yardstick: it is 3.1B parameters to the new model's 1.92B, and on Liquid's own 62-benchmark suite the new one averages 71.4 against the old one's 57.6.\n\n...\n\n• Total parameters — 1.92B: a 1.73B language model, a 164M vision encoder, and a 25M projector.\n\n• Encoder — built in-house, convolution plus attention, replacing the SigLIP"
+        },
+        {
+          "title": "thelamapi/next-12b · Hugging Face",
+          "url": "https://huggingface.co/thelamapi/next-12b",
+          "excerpt": "Next 12B is a 12-billion parameter multimodal Vision-Language Model (VLM) based on Gemma 3, fine-tuned to deliver exceptional performance in both text and image understanding. This is Türkiye's most advanced open-source vision-language model, designed for: \n\n- Superior understanding and generation of text and image descriptions.\n- Advanced reasoning and context-aware multimodal outputs.\n- Professional-grade Turkish support with extensive multilingual capabilities.\n- Enterprise-ready deployment with optimized quantization options.\n\n...\n\n## 📐 Model Specifications \n\n| Specification | Details |\n| --- | --- |\n| Base Model | Gemma 3 |\n| Parameter Count | 12 Billion |\n| Architecture | Transformer,"
+        },
+        {
+          "title": "FLUX 3 Image Klein: open weights, 5.6B parameters | Black Forest Labs",
+          "url": "https://bfl.ai/blog/flux-3-image-klein",
+          "excerpt": "# FLUX 3 Image Klein\n\nOctober 15, 2026 4 min read\n\nToday we are releasing FLUX 3 Image Klein, a 5.6B parameter open weights model for text-to-image generation, image editing and multi-reference generation with up to 10 reference images. It shares core capabilities with the full FLUX 3 Image model: native 4K generation, pixel-perfect editing, and bounding boxes that control where elements are placed or confine edits to a defined area.\n\n...\n\nThe release includes a base model for fine-tuning and a step distilled model for low-latency generation, along with FP8, INT8 and NVFP4 builds developed with NVIDIA support, under the FLUX Kommunity License.\n\n...\n\nIn internal evaluations, FLUX 3 Image Klei"
+        },
+        {
+          "title": "Step3-VL-10B Technical Report",
+          "url": "https://arxiv.org/html/2601.09668v2",
+          "excerpt": "###### Abstract\n\nWe present Step3-VL-10B, a lightweight open-source foundation model designed to redefine the trade-off between compact efficiency and frontier-level multimodal intelligence. Step3-VL-10B is realized through two strategic shifts: first, a unified, fully unfrozen pre-training strategy on 1.2T multimodal tokens that integrates a language-aligned Perception Encoder with a Qwen3-8B decoder to establish intrinsic vision-language synergy; and second, a scaled post-training pipeline featuring over 1k iterations of reinforcement learning. Crucially, we implement Parallel Coordinated Reasoning (PaCoRe) to scale test-time compute, allocating resources to scalable perceptual reasoning t"
+        }
+      ]
+    },
+    "exa-r6": {
+      "isError": false,
+      "documents": [
+        {
+          "title": "PortraitAes: Intent-Conditioned Structured Portrait Aesthetic Assessment",
+          "url": "https://arxiv.org/abs/2610.05010",
+          "excerpt": "# PortraitAes: Intent-Conditioned Structured Portrait Aesthetic Assessment\n\nPublished: 2026-10-04.\n\n## Authors\n\nJunzhou Xie, Haozhong Xiong, Xunyun Tian, Kaile Du, Tianchen Yu, Qiang Li, Wei Liu, Jiaming Liu, Ruihua Huang, Yang Shi and Guangcan Liu\n\n...\n\nsuffers from the absence of consistent photographic standards and criterion-aligned optimization tar gets. The missing supervision is not another global preference score, but an executable account of which evidence matters under a given intent and how the resulting judgments should be combined. We introduce PortraitAes-Bench, an 11K-scale benchmark that operationalizes expert-authored rubrics through a router–specialist–fusion workflow. A ro"
+        },
+        {
+          "title": "PortraitAes: Intent-Conditioned Structured Portrait Aesthetic Assessment",
+          "url": "https://arxiv.org/html/2610.05010",
+          "excerpt": "# PortraitAes: Intent-Conditioned Structured Portrait Aesthetic Assessment\n\n Junzhou Xie 1,2,‡ Haozhong Xiong 2,‡ Xunyun Tian 2 Kaile Du 1 Tianchen Yu 2 Qiang Li 2 Wei Liu 2 Jiaming Liu 2 Ruihua Huang 2 Yang Shi 2,∗,† Guangcan Liu 1,∗ 1 Southeast University 2 Qwen Business Unit of Alibaba newsy0106@gmail.com, guangcanliu@seu.edu.cn\n\n...\n\nPortrait aesthetic assessment assigns comparable scores according to how effectively human-centered images fulfill their photographic intent. These scores support data filtering, candidate selection, and preference modeling in image-generation pipelines. Existing methods typically predict a single aesthetic score or use general-purpose MLLMs without conditio"
+        },
+        {
+          "title": "Paper page - PortraitAes: Intent-Conditioned Structured Portrait Aesthetics Assessment",
+          "url": "https://huggingface.co/papers/2610.05010",
+          "excerpt": "# PortraitAes: Intent-Conditioned Structured Portrait Aesthetics Assessment\n\nPublished on Oct 4\n\nAuthors:\n\nJunzhou\n...\n-agnostic aesthetic priors and yield inconsistent, inaccurate, misleading judgments for portraits with distinct photographic"
+        },
+        {
+          "title": "PortraitAes: Intent-Conditioned Structured Portrait Aesthetic Assessment | arXiv Science",
+          "url": "https://arxiv.science/abs/2610.05010",
+          "excerpt": "Portrait aesthetic assessment assigns comparable scores according to how effectively human-centered images fulfill their photographic intent. These scores support data filtering, candidate selection, and preference modeling in image-generation pipelines. Existing methods typically predict a single aesthetic score or use general-purpose MLLMs without conditioning on photographic intent. This omission matters because the same blur, pose, lighting, or framing choice may serve one photographic intent but undermine another. These models thus learn context-agnostic aesthetic priors and yield inconsistent, inaccurate, misleading judgments for portraits with distinct photographic objectives. We intr"
+        },
+        {
+          "title": "PortraitAes: Intent-Conditioned Structured Portrait Aesthetic Assessment · Pith Review",
+          "url": "https://pith.science/paper/2610.05010",
+          "excerpt": "Computer Vision and Pattern Recognition · Submitted 4 Oct 2026 \n\nPith's verdict: A coherent structured benchmark with clean ablations, undermined by ground truth that is an unvalidated same-family machine judge; conditional until human-agreement stats and data release.\n\n...\n\nSoft spots, in proportion. The main one: Section 3.3 labels come from a proprietary MLLM, screened by Qwen3.5 Flash, with expert spot-checks that report no verification rate and no inter-annotator agreement. The evaluated model is Qwen3.5-VL-9B, and the authors sit in the Qwen Business Unit. So the reported 0.924 PLCC and the SOTA-over-baselines comparisons measure agreement with a machine judge, partly by construction. "
+        }
+      ]
+    },
+    "hf-r1": {
+      "content": [
+        {
+          "type": "text",
+          "text": "McpServerError: Tool model_search not found"
+        }
+      ],
+      "structuredContent": {
+        "error": "McpServerError: Tool model_search not found",
+        "error_code": "INVALID_ARGUMENT",
+        "error_data": {
+          "type": "json_rpc_error",
+          "code": -32602,
+          "message": "Tool model_search not found"
+        }
+      },
+      "isError": true
+    },
+    "hf-r2": {
+      "content": [
+        {
+          "type": "text",
+          "text": "# Cloudflare/clef-flash\n\n## Overview\n- **Author:** Cloudflare\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 46.8K | **Likes:** 891\n- **Updated:** 19 Oct, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 9409.8M\n- **Architecture:** qwen3_5\n\n## Tags\n`transformers` `safetensors` `qwen3_5` `image-text-to-text` `clef` `cloudflare` `systemone` `decision-model` `qwen3.5` `post-train` `image-text-to-typed-output` `multimodal` `structured-output` `classification` `custom-code` `conversational` `base_model:Qwen/Qwen3.5-9B` `base_model:finetune:Qwen/Qwen3.5-9B` `license:apache-2.0` `eval-results` `endpoints_compatible` `region:us`\n\n## Metadata\n- **License:** apache-2.0\n\n## Demo Spaces\n- [jev-decision-index](https://hf.co/spaces/multimodalart/jev-decision-index)\n- [S1MB-leaderboard](https://hf.co/spaces/hotchpotch/S1MB-leaderboard)\n- [jev-decision-index](https://hf.co/spaces/assix-research/jev-decision-index)\n- [vram-and-gpu-cost-calculator](https://hf.co/spaces/fastgpu/vram-and-gpu-cost-calculator)\n- [JevBench](https://hf.co/spaces/benchmarkheaven/JevBench)\n- [TurkishDecisionBenchmark](https://hf.co/spaces/muratcanlaloglu/TurkishDecisionBenchmark)\n- [clef-flash](https://hf.co/spaces/hugging-apps/clef-flash)\n- [clef](https://hf.co/spaces/mrfakename/clef)\n- [clef-flash](https://hf.co/spaces/henrybit/clef-flash)\n- [clef-flash](https://hf.co/spaces/Zhulang/clef-flash)\n- [jev-mini-bench](https://hf.co/spaces/iamdgarcia/jev-mini-bench)\n- [mithril-crystal-orbit](https://hf.co/spaces/com-kotobalabs/mithril-crystal-orbit)\n- *... and 1 more spaces*\n\n**Link:** [https://hf.co/Cloudflare/clef-flash](https://hf.co/Cloudflare/clef-flash)\n\n---\n\n# apple/LensVLM-9B\n\n## Overview\n- **Author:** apple\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 3.0K | **Likes:** 292\n- **Updated:** 22 Sep, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 9409.8M\n- **Architecture:** qwen3_5\n\n## Tags\n`transformers` `safetensors` `qwen3_5` `image-text-to-text` `vision-language-model` `long-context` `visual-text-compression` `conversational` `arxiv:2605.07019` `base_model:Qwen/Qwen3.5-9B` `base_model:finetune:Qwen/Qwen3.5-9B` `license:apple-amlr` `endpoints_compatible` `region:us`\n\n## Metadata\n- **License:** apple-amlr\n\n## Demo Spaces\n- [lensvlm-9b-demo](https://hf.co/spaces/hugging-apps/lensvlm-9b-demo)\n- [LensVLM-9B-demo](https://hf.co/spaces/Mike0021/LensVLM-9B-demo)\n\n**Link:** [https://hf.co/apple/LensVLM-9B](https://hf.co/apple/LensVLM-9B)\n\n---\n\n# XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B\n\n## Overview\n- **Author:** XiaomiMiMo\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 31.9K | **Likes:** 683\n- **Updated:** 28 Oct, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 9409.8M\n- **Architecture:** qwen3_5\n\n## Tags\n`transformers` `safetensors` `qwen3_5` `image-text-to-text` `mimo_v2` `agentic` `distillation` `supervised-fine-tuning` `code` `tool-use` `conversational` `base_model:Qwen/Qwen3.5-9B` `base_model:finetune:Qwen/Qwen3.5-9B` `license:mit` `eval-results` `endpoints_compatible` `region:us`\n\n## Metadata\n- **License:** mit\n\n## Demo Spaces\n- [vram-and-gpu-cost-calculator](https://hf.co/spaces/fastgpu/vram-and-gpu-cost-calculator)\n- [WebGPU-MiMo-V2.6-Distill-Qwen-9B](https://hf.co/spaces/localellm/WebGPU-MiMo-V2.6-Distill-Qwen-9B)\n- [mimo-v2.6-distill-qwen9b-webdev-chunk00-explorer](https://hf.co/spaces/mindchain/mimo-v2.6-distill-qwen9b-webdev-chunk00-explorer)\n- [mimo-brain-engine](https://hf.co/spaces/Beexly/mimo-brain-engine)\n- [sjalannala](https://hf.co/spaces/kagesa/sjalannala)\n\n**Link:** [https://hf.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B](https://hf.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B)"
+        }
+      ],
+      "isError": false
+    },
+    "hf-r3": {
+      "content": [
+        {
+          "type": "text",
+          "text": "# Qwen/Qwen3.5-9B-Base\n\n## Overview\n- **Author:** Qwen\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 2.2M | **Likes:** 137\n- **Updated:** 23 Apr, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 9653.1M\n- **Architecture:** qwen3_5\n\n## Tags\n`transformers` `safetensors` `qwen3_5` `image-text-to-text` `conversational` `license:apache-2.0` `endpoints_compatible` `deploy:sagemaker` `region:us`\n\n## Metadata\n- **License:** apache-2.0\n\n## Demo Spaces\n- [prelude-evaluations](https://hf.co/spaces/openeurollm/prelude-evaluations)\n- [negentropy-9b-eval](https://hf.co/spaces/KyleHessling1/negentropy-9b-eval)\n- [easyocr-phi3](https://hf.co/spaces/credent007/easyocr-phi3)\n- [spar-demo](https://hf.co/spaces/tobiso/spar-demo)\n- [humanizer-r10-stage1-9b](https://hf.co/spaces/erickkwangg/humanizer-r10-stage1-9b)\n- [vlm-format-viewer](https://hf.co/spaces/jxsai/vlm-format-viewer)\n- [jacobian-lens-playground](https://hf.co/spaces/ktangri/jacobian-lens-playground)\n- [pinocchio-inventory-explorer](https://hf.co/spaces/hplisiecki/pinocchio-inventory-explorer)\n- [kev-9b](https://hf.co/spaces/DerAuctor/kev-9b)\n- [kev-9b](https://hf.co/spaces/quaky-duck/kev-9b)\n- [decision-model-playground](https://hf.co/spaces/mrfakename/decision-model-playground)\n- [OELLM-eval-leaderboard](https://hf.co/spaces/varisd/OELLM-eval-leaderboard)\n- *... and 5 more spaces*\n\n**Link:** [https://hf.co/Qwen/Qwen3.5-9B-Base](https://hf.co/Qwen/Qwen3.5-9B-Base)\n\n---\n\n# stepfun-ai/Step3-VL-10B\n\n## Overview\n- **Author:** stepfun-ai\n- **Task:** image-text-to-text\n- **Downloads:** 1.9M | **Likes:** 419\n- **Updated:** 4 Feb, 2026\n\n## Technical Details\n- **Parameters:** 10171.8M\n- **Architecture:** step_robotics\n\n## Tags\n`safetensors` `step_robotics` `image-text-to-text` `conversational` `custom_code` `arxiv:2601.09668` `base_model:stepfun-ai/Step3-VL-10B-Base` `base_model:finetune:stepfun-ai/Step3-VL-10B-Base` `license:apache-2.0` `region:us`\n\n## Metadata\n- **License:** apache-2.0\n\n## Demo Spaces\n- [Step3-VL-10B](https://hf.co/spaces/stepfun-ai/Step3-VL-10B)\n- [Step3-VL-10B](https://hf.co/spaces/fzjmt25/Step3-VL-10B)\n\n**Link:** [https://hf.co/stepfun-ai/Step3-VL-10B](https://hf.co/stepfun-ai/Step3-VL-10B)\n\n---\n\n# stepfun-ai/Step3-VL-10B-Base\n\n## Overview\n- **Author:** stepfun-ai\n- **Task:** image-text-to-text\n- **Downloads:** 11.8K | **Likes:** 52\n- **Updated:** 29 Jan, 2026\n\n## Technical Details\n- **Parameters:** 10171.8M\n- **Architecture:** step_robotics\n\n## Tags\n`safetensors` `step_robotics` `image-text-to-text` `custom_code` `arxiv:2601.09668` `license:apache-2.0` `region:us`\n\n## Metadata\n- **License:** apache-2.0\n\n**Link:** [https://hf.co/stepfun-ai/Step3-VL-10B-Base](https://hf.co/stepfun-ai/Step3-VL-10B-Base)\n\n---\n\n# zai-org/GLM-4.6V-Flash\n\n## Overview\n- **Author:** zai-org\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 1.4M | **Likes:** 632\n- **Updated:** 9 Dec, 2025\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 10292.8M\n- **Architecture:** glm4v\n\n## Tags\n`transformers` `safetensors` `glm4v` `image-text-to-text` `conversational` `zh` `en` `arxiv:2507.01006` `license:mit` `eval-results` `endpoints_compatible` `deploy:azure` `region:us`\n\n## Metadata\n- **Language:** zh, en\n- **License:** mit\n\n## Demo Spaces\n- [ai](https://hf.co/spaces/hadadxyz/ai)\n- [GLM-4.6V-Flash](https://hf.co/spaces/anycoderapps/GLM-4.6V-Flash)\n- [GLM-4.6V-Flash](https://hf.co/spaces/Prabudh07/GLM-4.6V-Flash)\n- [GLM-4.6V-Flash](https://hf.co/spaces/Open-Hat-Lab/GLM-4.6V-Flash)\n- [myyy-woof](https://hf.co/spaces/YuZijie123/myyy-woof)\n- [NayanaOCRBench](https://hf.co/spaces/AdithyaSK/NayanaOCRBench)\n- [zai-org-GLM-4.6V-Flash](https://hf.co/spaces/Y6d7wi55s8s73/zai-org-GLM-4.6V-Flash)\n- [describe-my-room](https://hf.co/spaces/mrfakename/describe-my-room)\n- [zai-org-GLM-4.6V-Flash](https://hf.co/spaces/macheatoo/zai-org-GLM-4.6V-Flash)\n- [zai-org-GLM-4.6V-Flash](https://hf.co/spaces/kpapus/zai-org-GLM-4.6V-Flash)\n- [doab-title-extraction-eval](https://hf.co/spaces/davanstrien/doab-title-extraction-eval)\n- [ai](https://hf.co/spaces/vakilrathod67/ai)\n- *... and 40 more spaces*\n\n## Inference Providers\n- **novita** (live)\n- **zai-org** (live)\n\nTry this model in the [playground](https://hf.co/playground?modelId=zai-org/GLM-4.6V-Flash)\n\n**Link:** [https://hf.co/zai-org/GLM-4.6V-Flash](https://hf.co/zai-org/GLM-4.6V-Flash)\n\n---\n\n# google/gemma-4-12B-it\n\n## Overview\n- **Author:** google\n- **Task:** any-to-any\n- **Library:** transformers\n- **Downloads:** 13.3M | **Likes:** 1701\n- **Updated:** 20 Jul, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 11959.7M\n- **Architecture:** gemma4_unified\n\n## Tags\n`transformers` `safetensors` `gemma4_unified` `image-text-to-text` `any-to-any` `arxiv:2607.02770` `base_model:google/gemma-4-12B` `base_model:finetune:google/gemma-4-12B` `license:apache-2.0` `eval-results` `endpoints_compatible` `deploy:sagemaker` `region:us`\n\n## Metadata\n- **License:** apache-2.0\n\n## Demo Spaces\n- [gemma-4-12b-it](https://hf.co/spaces/huggingface-projects/gemma-4-12b-it)\n- [Metacognition-Leaderboard-Space](https://hf.co/spaces/ginigen-ai/Metacognition-Leaderboard-Space)\n- [Campus_Assistant](https://hf.co/spaces/JakoBob/Campus_Assistant)\n- [claim-ready](https://hf.co/spaces/build-small-hackathon/claim-ready)\n- [tutori](https://hf.co/spaces/build-small-hackathon/tutori)\n- [euroeval_leaderboard](https://hf.co/spaces/EuroEval/euroeval_leaderboard)\n- [vram-and-gpu-cost-calculator](https://hf.co/spaces/fastgpu/vram-and-gpu-cost-calculator)\n- [jackailocal](https://hf.co/spaces/build-small-hackathon/jackailocal)\n- [multi-agent-lab](https://hf.co/spaces/build-small-hackathon/multi-agent-lab)\n- [talk-to-gemma-4](https://hf.co/spaces/plubo/talk-to-gemma-4)\n- [gemma-4-12B-it](https://hf.co/spaces/Monster/gemma-4-12B-it)\n- [gemma4vramestimator](https://hf.co/spaces/lgusm/gemma4vramestimator)\n- *... and 82 more spaces*\n\n**Link:** [https://hf.co/google/gemma-4-12B-it](https://hf.co/google/gemma-4-12B-it)"
+        }
+      ],
+      "isError": false
+    },
+    "hf-r4": {
+      "content": [
+        {
+          "type": "text",
+          "text": "# TaichuAI/ZDTaichu5.0-9B\n\n## Overview\n- **Author:** TaichuAI\n- **Task:** image-text-to-text\n- **Downloads:** 14.4K | **Likes:** 3043\n- **Updated:** 20 Sep, 2026\n\n## Technical Details\n- **Parameters:** 9794.2M\n- **Architecture:** zdtaichu5_0\n\n## Tags\n`safetensors` `zdtaichu5_0` `multimodal` `vision-language-model` `spatial-reasoning` `agent` `video-understanding` `image-text-to-text` `conversational` `custom_code` `en` `zh` `region:us`\n\n## Metadata\n- **Language:** en, zh\n\n## Demo Spaces\n- [zdtaichu5-9b-demo](https://hf.co/spaces/hugging-apps/zdtaichu5-9b-demo)\n- [eyay](https://hf.co/spaces/FarelDeveloper/eyay)\n- [zdtaichu5.0-9b](https://hf.co/spaces/mrfakename/zdtaichu5.0-9b)\n\n**Link:** [https://hf.co/TaichuAI/ZDTaichu5.0-9B](https://hf.co/TaichuAI/ZDTaichu5.0-9B)\n\n---\n\n# openbmb/MiniCPM-o-4_5\n\n## Overview\n- **Author:** openbmb\n- **Task:** any-to-any\n- **Library:** transformers\n- **Downloads:** 3.5M | **Likes:** 1556\n- **Updated:** 24 Oct, 2026\n\n## Technical Details\n- **Model Class:** AutoModel\n- **Parameters:** 9371.8M\n- **Architecture:** minicpmo\n\n## Tags\n`transformers` `onnx` `safetensors` `minicpmo` `feature-extraction` `minicpm-o` `minicpm-v` `multimodal` `full-duplex` `any-to-any` `custom_code` `arxiv:2604.27393` `arxiv:2408.01800` `license:apache-2.0` `eval-results` `region:us`\n\n## Metadata\n- **License:** apache-2.0\n\n## Demo Spaces\n- [PicQ](https://hf.co/spaces/sitammeur/PicQ)\n- [VidiQA](https://hf.co/spaces/sitammeur/VidiQA)\n- [grandpas-bedtime-stories](https://hf.co/spaces/build-small-hackathon/grandpas-bedtime-stories)\n- [multi-agent-lab](https://hf.co/spaces/build-small-hackathon/multi-agent-lab)\n- [bharat_voice_assistant](https://hf.co/spaces/build-small-hackathon/bharat_voice_assistant)\n- [toy-room-v3](https://hf.co/spaces/build-small-hackathon/toy-room-v3)\n- [ai-avatar-assistant](https://hf.co/spaces/build-small-hackathon/ai-avatar-assistant)\n- [Animism-AI-Project](https://hf.co/spaces/build-small-hackathon/Animism-AI-Project)\n- [lesson-agent](https://hf.co/spaces/build-small-hackathon/lesson-agent)\n- [amnesiac](https://hf.co/spaces/build-small-hackathon/amnesiac)\n- [F1-Paddock-Oracle](https://hf.co/spaces/build-small-hackathon/F1-Paddock-Oracle)\n- [omniAI](https://hf.co/spaces/hasimjaneef/omniAI)\n- *... and 6 more spaces*\n\n**Link:** [https://hf.co/openbmb/MiniCPM-o-4_5](https://hf.co/openbmb/MiniCPM-o-4_5)\n\n---\n\n# Mapika/decider-12b-vision\n\n## Overview\n- **Author:** Mapika\n- **Task:** image-text-to-text\n- **Downloads:** 56\n- **Updated:** 20 Oct, 2026\n\n## Technical Details\n- **Parameters:** 11959.7M\n- **Architecture:** gemma4_unified\n\n## Tags\n`safetensors` `gemma4_unified` `decision-model` `calibrated` `structured-output` `system-one` `one-pass` `vision` `image-text-to-text` `conversational` `en` `base_model:google/gemma-4-12B-it` `base_model:finetune:google/gemma-4-12B-it` `license:apache-2.0` `region:us`\n\n## Metadata\n- **Language:** en\n- **License:** apache-2.0\n\n**Link:** [https://hf.co/Mapika/decider-12b-vision](https://hf.co/Mapika/decider-12b-vision)\n\n---\n\n# autotrust/JEV-9B\n\n## Overview\n- **Author:** autotrust\n- **Task:** text-classification\n- **Library:** transformers\n- **Downloads:** 803.2K | **Likes:** 114\n- **Updated:** 11 Oct, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForCausalLM\n- **Parameters:** 8953.8M\n- **Architecture:** qwen3_5_text\n\n## Tags\n`transformers` `safetensors` `qwen3_5_text` `text-generation` `system-one` `system-two` `blocks-of-experts` `typed-decisions` `decision-model` `calibrated-probabilities` `knowledge-distillation` `jev` `noul` `choice` `score` `lora` `qwen3_5` `dual-head` `vllm` `multimodal` `vision` `computer-use` `robotics` `text-classification` `en` `dataset:SargeDev/jev-distill-corpus-v3` `base_model:Qwen/Qwen3.5-9B` `base_model:finetune:Qwen/Qwen3.5-9B` `license:apache-2.0` `model-index` `endpoints_compatible` `region:us`\n\n## Metadata\n- **Language:** en\n- **License:** apache-2.0\n- **Datasets:** SargeDev/jev-distill-corpus-v3\n\n## Demo Spaces\n- [jev-decision-index](https://hf.co/spaces/multimodalart/jev-decision-index)\n- [jev-decision-index](https://hf.co/spaces/assix-research/jev-decision-index)\n- [jev-9b-decision-demo](https://hf.co/spaces/autotrust/jev-9b-decision-demo)\n- [jev-9b-decision-demo](https://hf.co/spaces/evo817/jev-9b-decision-demo)\n- [jev-decision](https://hf.co/spaces/StrangerInAStrangeLand/jev-decision)\n- [jev-9b-decision-demo](https://hf.co/spaces/Issam-blcayd/jev-9b-decision-demo)\n- [jev-9b-decision-demo](https://hf.co/spaces/lalaninj/jev-9b-decision-demo)\n- [jev-9b-decision-demo](https://hf.co/spaces/ikaraoha/jev-9b-decision-demo)\n\n**Link:** [https://hf.co/autotrust/JEV-9B](https://hf.co/autotrust/JEV-9B)"
+        }
+      ],
+      "isError": false
+    },
+    "hf-r5": {
+      "content": [
+        {
+          "type": "text",
+          "text": "# PrismML/Bonsai-2-9B\n\n- Error: Model 'PrismML/Bonsai-2-9B' not found. Please check the model ID.\n\n---\n\n# ibm-granite/granite-switch-4.1-8b\n\n## Overview\n- **Author:** ibm-granite\n- **Task:** text-generation\n- **Library:** transformers\n- **Downloads:** 3.7K | **Likes:** 54\n- **Updated:** 28 Oct, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForCausalLM\n- **Parameters:** 8776.4M\n- **Architecture:** granite_switch\n\n## Tags\n`transformers` `safetensors` `granite_switch` `text-generation` `language` `granite-switch` `granite-4.1` `conversational` `license:apache-2.0` `endpoints_compatible` `region:us`\n\n## Metadata\n- **License:** apache-2.0\n\n## Demo Spaces\n- [speech-to-decisions](https://hf.co/spaces/ibm-granite/speech-to-decisions)\n- [vram-and-gpu-cost-calculator](https://hf.co/spaces/fastgpu/vram-and-gpu-cost-calculator)\n\n**Link:** [https://hf.co/ibm-granite/granite-switch-4.1-8b](https://hf.co/ibm-granite/granite-switch-4.1-8b)\n\n---\n\n# omlab/VLX-Seek-1.5-10B\n\n## Overview\n- **Author:** omlab\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 361.3K | **Likes:** 33\n- **Updated:** 23 Jul, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForCausalLM\n- **Parameters:** 10016.9M\n- **Architecture:** vlx_seek_1_5\n\n## Tags\n`transformers` `safetensors` `vlx_seek_1_5` `text-generation` `vlx` `object-detection` `grounding` `multimodal` `REC` `VLM` `zero-shot-object-detection` `image-text-to-text` `conversational` `zh` `en` `license:apache-2.0` `endpoints_compatible` `region:us`\n\n## Metadata\n- **Language:** zh, en\n- **License:** apache-2.0\n\n## Demo Spaces\n- [vlx-seek-1-5-10b-demo](https://hf.co/spaces/hugging-apps/vlx-seek-1-5-10b-demo)\n\n**Link:** [https://hf.co/omlab/VLX-Seek-1.5-10B](https://hf.co/omlab/VLX-Seek-1.5-10B)\n\n---\n\n# Qwen/Qwen3.5-9B-Base\n\n## Overview\n- **Author:** Qwen\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 2.2M | **Likes:** 137\n- **Updated:** 23 Apr, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 9653.1M\n- **Architecture:** qwen3_5\n\n## Tags\n`transformers` `safetensors` `qwen3_5` `image-text-to-text` `conversational` `license:apache-2.0` `endpoints_compatible` `deploy:sagemaker` `region:us`\n\n## Metadata\n- **License:** apache-2.0\n\n## Demo Spaces\n- [prelude-evaluations](https://hf.co/spaces/openeurollm/prelude-evaluations)\n- [negentropy-9b-eval](https://hf.co/spaces/KyleHessling1/negentropy-9b-eval)\n- [easyocr-phi3](https://hf.co/spaces/credent007/easyocr-phi3)\n- [spar-demo](https://hf.co/spaces/tobiso/spar-demo)\n- [humanizer-r10-stage1-9b](https://hf.co/spaces/erickkwangg/humanizer-r10-stage1-9b)\n- [vlm-format-viewer](https://hf.co/spaces/jxsai/vlm-format-viewer)\n- [jacobian-lens-playground](https://hf.co/spaces/ktangri/jacobian-lens-playground)\n- [pinocchio-inventory-explorer](https://hf.co/spaces/hplisiecki/pinocchio-inventory-explorer)\n- [kev-9b](https://hf.co/spaces/DerAuctor/kev-9b)\n- [kev-9b](https://hf.co/spaces/quaky-duck/kev-9b)\n- [decision-model-playground](https://hf.co/spaces/mrfakename/decision-model-playground)\n- [OELLM-eval-leaderboard](https://hf.co/spaces/varisd/OELLM-eval-leaderboard)\n- *... and 5 more spaces*\n\n**Link:** [https://hf.co/Qwen/Qwen3.5-9B-Base](https://hf.co/Qwen/Qwen3.5-9B-Base)"
+        }
+      ],
+      "isError": false
+    },
+    "hf-r6": {
+      "content": [
+        {
+          "type": "text",
+          "text": "# Junzou/PortraitAes\n\n## Overview\n- **Author:** Junzou\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 371 | **Likes:** 1\n- **Updated:** 22 Oct, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 9409.8M\n- **Architecture:** qwen3_5\n\n## Tags\n`transformers` `safetensors` `qwen3_5` `image-text-to-text` `multimodal` `vision-language-model` `image-aesthetics` `portrait-aesthetics` `image-quality-assessment` `qwen3.5` `conversational` `en` `zh` `arxiv:2610.05010` `base_model:Qwen/Qwen3.5-9B` `base_model:finetune:Qwen/Qwen3.5-9B` `license:apache-2.0` `model-index` `endpoints_compatible` `region:us`\n\n## Metadata\n- **Language:** en, zh\n- **License:** apache-2.0\n\n**Link:** [https://hf.co/Junzou/PortraitAes](https://hf.co/Junzou/PortraitAes)\n\n---\n\n# black-forest-labs/flux-3-image-klein-pup\n\n## Overview\n- **Author:** black-forest-labs\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 59.4K | **Likes:** 69\n- **Updated:** 15 Oct, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 9409.8M\n- **Architecture:** qwen3_5\n\n## Tags\n`transformers` `safetensors` `qwen3_5` `image-text-to-text` `prompt-upsampling` `prompt-rewriting` `text-to-image` `image-editing` `flux` `flux-3` `black-forest-labs` `conversational` `en` `base_model:Qwen/Qwen3.5-9B` `base_model:finetune:Qwen/Qwen3.5-9B` `license:apache-2.0` `endpoints_compatible` `region:us`\n\n## Metadata\n- **Language:** en\n- **License:** apache-2.0\n\n## Demo Spaces\n- [flux-3-image-klein](https://hf.co/spaces/black-forest-labs/flux-3-image-klein)\n- [ImageGen](https://hf.co/spaces/RioShiina/ImageGen)\n- [ImageGennew](https://hf.co/spaces/Gramlin/ImageGennew)\n- [flux-3-image-klein](https://hf.co/spaces/Diskfo/flux-3-image-klein)\n- [ImageGen-32](https://hf.co/spaces/ItNero/ImageGen-32)\n- [flux-3-image-klein-loras-fast](https://hf.co/spaces/prithivMLmods/flux-3-image-klein-loras-fast)\n- [model-pulse](https://hf.co/spaces/BIGJUTT/model-pulse)\n- [LP12](https://hf.co/spaces/Or1290/LP12)\n- [hero-frame-rig-release](https://hf.co/spaces/metababa/hero-frame-rig-release)\n- [flux3-klein-halloween-card](https://hf.co/spaces/maanavdalal/flux3-klein-halloween-card)\n- [graphics-studio](https://hf.co/spaces/vrishv/graphics-studio)\n- [image-to-fragrance-v2](https://hf.co/spaces/fffiloni/image-to-fragrance-v2)\n- *... and 11 more spaces*\n\n**Link:** [https://hf.co/black-forest-labs/flux-3-image-klein-pup](https://hf.co/black-forest-labs/flux-3-image-klein-pup)\n\n---\n\n# inclusionAI/ZwZ2-9B\n\n## Overview\n- **Author:** inclusionAI\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 244 | **Likes:** 14\n- **Updated:** 28 Oct, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 9409.8M\n- **Architecture:** qwen3_5\n\n## Tags\n`transformers` `safetensors` `qwen3_5` `image-text-to-text` `zwz2` `vision-language` `visual-reasoning` `reinforcement-learning` `grpo` `conversational` `en` `dataset:inclusionAI/ZwZ2-RL-VQA` `arxiv:2610.37037` `arxiv:2602.11858` `base_model:Qwen/Qwen3.5-9B` `base_model:finetune:Qwen/Qwen3.5-9B` `endpoints_compatible` `region:us`\n\n## Metadata\n- **Language:** en\n- **Datasets:** inclusionAI/ZwZ2-RL-VQA\n\n**Link:** [https://hf.co/inclusionAI/ZwZ2-9B](https://hf.co/inclusionAI/ZwZ2-9B)"
+        }
+      ],
+      "isError": false
+    }
+  },
+  "root_exa_result_slots_requested": 59,
+  "root_exa_result_documents_extracted": 59,
+  "root_exa_unique_urls": 47,
+  "hf_bonsai_corrected": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# prism-ml/Ternary-Bonsai-2-9B-gguf\n\n## Overview\n- **Author:** prism-ml\n- **Task:** image-text-to-text\n- **Library:** llama.cpp\n- **Downloads:** 373.4K | **Likes:** 138\n- **Updated:** 15 Oct, 2026\n\n## Tags\n`llama.cpp` `gguf` `ternary` `2-bit` `llama-cpp` `cuda` `metal` `on-device` `hybrid-attention` `vision` `prismml` `bonsai` `image-text-to-text` `base_model:Qwen/Qwen3.5-9B` `base_model:quantized:Qwen/Qwen3.5-9B` `license:apache-2.0` `endpoints_compatible` `region:us` `conversational`\n\n## Metadata\n- **License:** apache-2.0\n\n## Demo Spaces\n- [model-pulse](https://hf.co/spaces/BIGJUTT/model-pulse)\n- [ternary-bonsai-2-hermes-webgpu](https://hf.co/spaces/webml-community/ternary-bonsai-2-hermes-webgpu)\n- [vram-and-gpu-cost-calculator](https://hf.co/spaces/fastgpu/vram-and-gpu-cost-calculator)\n- [WebGPU-Ternary-Bonsai-2-9B](https://hf.co/spaces/localellm/WebGPU-Ternary-Bonsai-2-9B)\n- [prince-hermes-agent](https://hf.co/spaces/Princeking001/prince-hermes-agent)\n- [hermes](https://hf.co/spaces/awrbnu/hermes)\n\n**Link:** [https://hf.co/prism-ml/Ternary-Bonsai-2-9B-gguf](https://hf.co/prism-ml/Ternary-Bonsai-2-9B-gguf)\n\n---\n\n# prism-ml/Ternary-Bonsai-2-9B-mlx-2bit\n\n## Overview\n- **Author:** prism-ml\n- **Task:** image-text-to-text\n- **Library:** mlx\n- **Downloads:** 10.0K | **Likes:** 22\n- **Updated:** 14 Oct, 2026\n\n## Technical Details\n- **Parameters:** 9410.9M\n- **Architecture:** prism_hadamard_qwen35\n\n## Tags\n`mlx` `safetensors` `prism_hadamard_qwen35` `ternary` `2-bit` `metal` `on-device` `hybrid-attention` `vision` `prismml` `bonsai` `image-text-to-text` `conversational` `base_model:Qwen/Qwen3.5-9B` `base_model:finetune:Qwen/Qwen3.5-9B` `license:apache-2.0` `region:us`\n\n## Metadata\n- **License:** apache-2.0\n\n**Link:** [https://hf.co/prism-ml/Ternary-Bonsai-2-9B-mlx-2bit](https://hf.co/prism-ml/Ternary-Bonsai-2-9B-mlx-2bit)\n\n---\n\n# jonathan-kellerai/Ternary-Bonsai-2-9B-hf-bf16\n\n## Overview\n- **Author:** jonathan-kellerai\n- **Task:** image-text-to-text\n- **Library:** transformers\n- **Downloads:** 50\n- **Updated:** 16 Oct, 2026\n\n## Technical Details\n- **Model Class:** AutoModelForMultimodalLM\n- **Parameters:** 9409.8M\n- **Architecture:** qwen3_5\n\n## Tags\n`transformers` `safetensors` `qwen3_5` `image-text-to-text` `bonsai` `ternary` `prismml` `conversational` `base_model:Qwen/Qwen3.5-9B` `base_model:finetune:Qwen/Qwen3.5-9B` `license:apache-2.0` `endpoints_compatible` `region:us`\n\n## Metadata\n- **License:** apache-2.0\n\n**Link:** [https://hf.co/jonathan-kellerai/Ternary-Bonsai-2-9B-hf-bf16](https://hf.co/jonathan-kellerai/Ternary-Bonsai-2-9B-hf-bf16)"
+      }
+    ],
+    "isError": false
+  },
+  "workstreams": [
+    {
+      "name": "root",
+      "exa_search_calls": 6,
+      "requested_result_slots": 59
+    },
+    {
+      "name": "new_candidate_verification",
+      "exa_search_calls": 7,
+      "requested_result_slots": 35
+    },
+    {
+      "name": "visual_benchmark_verification",
+      "exa_search_calls": 14,
+      "requested_result_slots": 75
+    },
+    {
+      "name": "previous_model_decisions",
+      "exa_search_calls": 6,
+      "requested_result_slots": 30
+    }
+  ],
+  "total_exa_search_calls": 33,
+  "total_exa_requested_result_slots": 199,
+  "counting_note": "Result slots include duplicates and are not a count of unique sources independently verified. Root results were deduplicated by exact URL; candidate identities were merged across workstreams."
+}

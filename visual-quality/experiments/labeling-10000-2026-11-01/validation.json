@@ -1,0 +1,265 @@
+{
+  "schema_version": "labeling-run-validation-v1",
+  "data_validation_status": "passed",
+  "artifact_audit": {
+    "completed_at": "2026-11-02T03:23:13.332767+00:00",
+    "status": "passed",
+    "publication": {
+      "verifier": "src.visual_quality.publication.verify_publication(check_images=True)",
+      "views": 1000,
+      "rows": 7000,
+      "image_bytes_checked": true,
+      "models": {
+        "luna": 1000,
+        "deepseek": 1000,
+        "liquid": 1000,
+        "jev": 1000,
+        "qrealign_lite": 1000,
+        "photo_ensemble": 1000,
+        "reference": 1000
+      },
+      "first_explicit_benchmark_orders": [
+        1,
+        1000
+      ],
+      "publication_orders_match_benchmark_orders": true,
+      "provenance_hashes_and_csv_jsonl_joins_verified": true
+    },
+    "full_export": {
+      "images": 10000,
+      "unique_delivered_view_hashes": 10000,
+      "benchmark_images": 1500,
+      "references": 1500,
+      "statistics": 10000,
+      "score_rows": 61500,
+      "coverage": {
+        "luna": {
+          "expected": 10000,
+          "status_counts": {
+            "valid": 10000
+          },
+          "numeric_pairs": 10000
+        },
+        "deepseek": {
+          "expected": 10000,
+          "status_counts": {
+            "valid": 10000
+          },
+          "numeric_pairs": 9999
+        },
+        "liquid": {
+          "expected": 10000,
+          "status_counts": {
+            "valid": 10000
+          },
+          "numeric_pairs": 10000
+        },
+        "jev": {
+          "expected": 10000,
+          "status_counts": {
+            "valid": 9997,
+            "failed": 3
+          },
+          "numeric_pairs": 9997
+        },
+        "qrealign_lite": {
+          "expected": 10000,
+          "status_counts": {
+            "valid": 10000
+          },
+          "numeric_pairs": 10000
+        },
+        "photo_ensemble": {
+          "expected": 10000,
+          "status_counts": {
+            "valid": 9999,
+            "missing_or_invalid_components": 1
+          },
+          "numeric_pairs": 9999
+        },
+        "reference": {
+          "expected": 1500,
+          "status_counts": {
+            "valid": 1500
+          },
+          "numeric_pairs": 1500
+        }
+      },
+      "csv_scalar_values_match_jsonl": true,
+      "nested_assessments_equal_long_rows": 61500,
+      "benchmark_family_separation_verified": true,
+      "statistics_view_joins_verified": 10000,
+      "statistics_outside_assessments": true,
+      "statistics_disabled_for_inference_and_training": true,
+      "statistics_definitions_and_source_versions_present": true,
+      "histogram_entropy_alias_verified": 10000,
+      "training_masks_disabled": 10000,
+      "source_license_hash_and_split_metadata_present": true
+    },
+    "terminal_gaps": {
+      "deepseek": {
+        "schema_valid_unscorable_records": 1,
+        "unscorable_tasks": [
+          "technical_quality",
+          "aesthetics"
+        ],
+        "assessment_schema_validity_retained": true
+      },
+      "jev": {
+        "failed_records": 3
+      },
+      "photo_ensemble": {
+        "missing_component_records": 1
+      }
+    },
+    "timing": {
+      "model_rows_with_finite_nonnegative_http_latency": 50000,
+      "retained_attempt_latencies_finite_nonnegative": true,
+      "reference_rows_without_http_latency": 1500,
+      "reference_rows_with_measured_review_duration": 1500,
+      "benchmark_attempts_after_independent_review_or_freeze": 7791,
+      "reference_freeze_hashes_checked": 20,
+      "ensemble_rows_without_independent_request": 10000
+    },
+    "ensemble": {
+      "rows_checked": 10000,
+      "outcomes_checked": 20000,
+      "weights": {
+        "luna": "0.375",
+        "deepseek": "0.375",
+        "liquid": "0.25"
+      },
+      "arithmetic_matches_native_precision_policy_scores": true,
+      "native_to_policy_differences_all_explained_by_existing_scope_floor": 818,
+      "missing_component_outcomes_remain_null": 2,
+      "component_provenance_retained": true,
+      "independent_charges_counted": 0
+    },
+    "api_attempt_accounting": {
+      "attempts_checked": 42066,
+      "all_request_and_result_sha256_verified": true,
+      "all_attempts_reconciled_to_export_histories": true,
+      "duplicate_or_omitted_attempts": 0,
+      "cost_per_model": {
+        "luna": {
+          "attempts": 10000,
+          "known_price_usd": "8.093620750",
+          "unpriced_attempts": 0,
+          "total_price_usd": "8.093620750"
+        },
+        "deepseek": {
+          "attempts": 10083,
+          "known_price_usd": "6.55242845",
+          "unpriced_attempts": 81,
+          "total_price_usd": null
+        },
+        "liquid": {
+          "attempts": 10000,
+          "known_price_usd": "0.50219912",
+          "unpriced_attempts": 0,
+          "total_price_usd": "0.50219912"
+        },
+        "jev": {
+          "attempts": 11983,
+          "known_price_usd": "1.813157262",
+          "unpriced_attempts": 1986,
+          "total_price_usd": null
+        }
+      },
+      "known_price_usd": "16.961405582",
+      "unknown_charges_remain_null": true,
+      "ensemble_costs_not_added_again": true
+    },
+    "lite": {
+      "selected_rows": 10000,
+      "new_images": 6000,
+      "new_result_folders": 5,
+      "new_attempts": 6002,
+      "valid_http_200_attempts": 6000,
+      "http_520_attempts": 2,
+      "unchanged_payload_retries": 2,
+      "single_valid_assessment_per_new_image": true,
+      "reused_images": 4000,
+      "reuse_preserves_source_view_payload_scores_attempt_timestamps_latency_and_raw_hash": true,
+      "frozen_reuse_source_sha256_verified": true,
+      "new_and_historical_model_revision_client_and_server_identity_match": true,
+      "selected_raw_response_hashes_verified": 10000,
+      "all_attempt_prices_zero": true,
+      "infrastructure_accounting_separate": true
+    },
+    "reference_prices_zero": true,
+    "artifact_sha256": {
+      "manifest.json": "65f4df78e3e9d7aea62a0695f386462e3363957773eace00848c61bb5a75e859",
+      "references-all.jsonl": "5c756959292c851872d5d4316cbe523fba5b92526c0cceb7ad4cf5b1a7863cee",
+      "stats.jsonl": "8a78052a21b1ddba69f0c01418745e8b2bb658d91b73bd5e1c3e0f4e6e659302",
+      "exports/summary.json": "9cce309f246c0582b96b95309496af67d565aea21d69d32fe6556e90f34ec50a",
+      "exports/scores-long.jsonl": "8159441f5cd5f4d876e993d1b93f26b19c7bc1cd6611c363109918a7a08ec1f7",
+      "exports/scores-long.csv": "149ad7aa08f0a94f31dd50a0d88279398cb84dc129f3a74edd809ea2de1482d8",
+      "exports/labelled-images.jsonl": "276b5bf8f277a619bbe7f674df6f2cd2935de26f8787766207d97fdcfa64d033",
+      "publication-staging/scores.csv": "3dfff0324eb27f3528322ead87b2612654b4ba90c0b554c6291fa79c48959bbe",
+      "publication-staging/provenance.json": "d12e04239e397de67ab6555b326fbe94576b96d0c154a42a86aee1a25c177e84",
+      "publication-staging/publication-case-ids.json": "20d54e7416e8ba7d7cafedf6a5aa85f41a4301a4273f0893dae25da5fba3a905",
+      "publication-staging/scores.jsonl": "fbc63ea0d0c4c4f39ed9fbfdbe7ec1cf4f07be23c0b7af2ae978bba958173cb6",
+      "publication-staging/manifest.json": "37a6e08305bdd4e2da10494b72f1908a74b462033827cdfb45cc7fc2693ddaec",
+      "publication-staging/labelled-images.jsonl": "98b0d6b2941c671d9cc47dcf116885bfdd794ff20ceab30fcbda4013c3cc3380",
+      "publication-staging/references.jsonl": "4e75ba59d0787331cb6b0709fee338bdd6e402e9ee5fc038133b22099188ae8b"
+    }
+  },
+  "independent_audit_receipt_sha256": "0a545188ad28af6bfc0262a819f4ecffdd5c27949bd8f77bdab7ff9b6f3d5452",
+  "corpus_integrity": {
+    "all_delivered_hashes_verified": true,
+    "all_training_masks_false": true,
+    "benchmark": 1500,
+    "embedding_shape": [
+      10000,
+      768
+    ],
+    "explicit_family_partition_crossings": 0,
+    "families": 9250,
+    "manifest_sha256": "65f4df78e3e9d7aea62a0695f386462e3363957773eace00848c61bb5a75e859",
+    "note": "Identity checks do not establish exhaustive visual deduplication; consult the separate reviewed candidate ledger.",
+    "preserved_previous_views": 4000,
+    "publication_allowlist_images": 1000,
+    "status": "passed",
+    "views": 10000
+  },
+  "software_checks": {
+    "main_suite_passed": 382,
+    "main_suite_subtests_passed": 4,
+    "scope": "visual-quality/tests and labeling-10000 experiment tests before the final browser process-lifecycle fix; focused checks for that fix recorded separately when complete",
+    "final_browser_and_publication_focused_tests_passed": 44,
+    "ruff": "passed",
+    "format": "passed"
+  },
+  "paid_compute": {
+    "embedding": {
+      "status": "EXITED",
+      "retained_volume_mounts": 0
+    },
+    "qrealign_lite": {
+      "status": "EXITED",
+      "retained_volume_mounts": 0
+    }
+  },
+  "gallery_validation_status": "passed",
+  "training_ready": false,
+  "completed_at": "2026-11-02T03:38:28.241970+00:00",
+  "gallery": {
+    "generation_proof_sha256": "89c1c59a98f00b2caf6f3e5b7a78fa4f59a2c8a9f4b7f824a46655f5a5e0ecc8",
+    "images": 10000,
+    "references": 1500,
+    "collage_images": 72,
+    "collage_within_first_1000": true,
+    "score_rows": 61500,
+    "preview_hashes_checked": 10000,
+    "browser_status": "passed",
+    "browser_assertions_passed": 188,
+    "browser_previews_loaded": 10000,
+    "chromium_version": "Google Chrome for Testing 156.0.8078.4",
+    "static_pages": 4,
+    "static_assessor_rows": 504,
+    "static_score_cells": 1008,
+    "scores_preserved": true,
+    "service_changed": false
+  }
+}

@@ -1,0 +1,490 @@
+{
+  "assessor": "Codex primary agent, direct visual inspection",
+  "created_at": "2026-10-11T15:20:12.149609+00:00",
+  "status": "Model-reference judgments, not human gold. Original images and prior model outputs were seen in the earlier session, so these are not blind independent judgments.",
+  "view": "Delivered 512px max-edge images shown six per sheet at native delivered size.",
+  "scale": "Quality and aesthetics 1..5. Poor visibility is a valid low quality score. ai_probability is an uncalibrated visual suspicion, not provenance.",
+  "frozen_before": "New Decider prompt trials and new Gemini 3.8 / GPT6 Luna calls",
+  "samples": [
+    {
+      "id": "sample-000",
+      "delivered_sha256": "8423bb67fc04e99f744ea867eb28d197a05257c17c1d150bc4e5745ab14787b1",
+      "technical_quality": 3.4,
+      "aesthetics": 3.2,
+      "ai_probability": 0.1,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.2
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Recognizable buildings and textured dusk sky; dark facades lose detail, but the tonal mood remains coherent.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-001",
+      "delivered_sha256": "e72a1945be5840cc4519b6ba336ec54e874af880118c823c0859d69680cbb2f8",
+      "technical_quality": 3.0,
+      "aesthetics": 3.1,
+      "ai_probability": 0.1,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.2
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Mild global softness reduces window detail; the same dusk composition remains readable.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-002",
+      "delivered_sha256": "c0220505cad575d542329ee112f344d20e129704897829ce1b8cda3933cd604b",
+      "technical_quality": 2.1,
+      "aesthetics": 2.7,
+      "ai_probability": 0.12,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0.01999999999999999,
+        0.22
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Strong whole-frame blur removes facade detail; building masses and the sky still organize the frame.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-003",
+      "delivered_sha256": "74be4487750385b97b00e82b793353f1513236063dd87016b10dcb1fe8a426d7",
+      "technical_quality": 1.4,
+      "aesthetics": 2.1,
+      "ai_probability": 0.15,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0.04999999999999999,
+        0.25
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Severe blur leaves only broad building shapes and a muted sky; useful fine detail is lost.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-004",
+      "delivered_sha256": "d0dea15e2088b7f1f0d49a3f0e50b9bb4fb637d74aa50d28be6a6f152d69836f",
+      "technical_quality": 4.1,
+      "aesthetics": 3.4,
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.18
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Cyclists are clear with natural shadows; bright daylight and road depth support a competent documentary composition.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-005",
+      "delivered_sha256": "6bf75cac145ffa8b724e98853bbbcf2d254af4eb4dfe209f375270143515e88a",
+      "technical_quality": 3.9,
+      "aesthetics": 3.3,
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.18
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Light grain is visible, while cyclists and road markings remain clear; composition is unchanged.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-006",
+      "delivered_sha256": "eb685a2e1c25711a81090386bee7ca2b59dfb117abf638551cb7d9a467374399",
+      "technical_quality": 3.4,
+      "aesthetics": 3.1,
+      "ai_probability": 0.1,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.2
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Visible grain affects sky and road surfaces; the subjects remain recognizable and well placed.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-007",
+      "delivered_sha256": "a197dceeba766384c777ad83e119a98e5bf11ea8b1f9212cd493595e7066e9c0",
+      "technical_quality": 2.7,
+      "aesthetics": 2.8,
+      "ai_probability": 0.12,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0.01999999999999999,
+        0.22
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Heavy colored noise reduces clean surfaces and small detail; the cycling scene remains understandable.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-008",
+      "delivered_sha256": "6736fcab36a22aa9fc57cf0830ab1caf040981e51b8feb1c787ada6c62a9b316",
+      "technical_quality": 4.2,
+      "aesthetics": 3.2,
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.18
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Aircraft markings and hangar edges are crisp; the tight rear crop is informative but visually ordinary.",
+      "development_partition": "check"
+    },
+    {
+      "id": "sample-009",
+      "delivered_sha256": "bad9dc8b8aecac257050c8b432bd2fcdc0d1da62073e4da835f3947de24ccc39",
+      "technical_quality": 3.8,
+      "aesthetics": 3.1,
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.18
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Slight block and edge damage is visible; the aircraft silhouette and markings remain useful.",
+      "development_partition": "check"
+    },
+    {
+      "id": "sample-010",
+      "delivered_sha256": "3c2b773e6da01ff7617a71973cdfbe48c60ceee167da3855d908e2b9ee432b85",
+      "technical_quality": 3.2,
+      "aesthetics": 2.9,
+      "ai_probability": 0.1,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.2
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Compression flattens surfaces and damages fine edges; the aircraft is still easy to identify.",
+      "development_partition": "check"
+    },
+    {
+      "id": "sample-011",
+      "delivered_sha256": "d53138bb0c67d1e20b28b82e5927afb5c8ad63d22060f851febda66f68dc6ae7",
+      "technical_quality": 2.1,
+      "aesthetics": 2.5,
+      "ai_probability": 0.12,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0.01999999999999999,
+        0.22
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Large sky bands and blocks across the aircraft and ground are conspicuous, despite readable major shapes.",
+      "development_partition": "check"
+    },
+    {
+      "id": "sample-012",
+      "delivered_sha256": "7495aeb46067bd7e6ebc40663e08339299d51b1c48c90527d2fd62c8be81f5d6",
+      "technical_quality": 2.0,
+      "aesthetics": 1.5,
+      "ai_probability": 0.06,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.16
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "A close finger obscures most of the object; warm color cast and awkward crop limit usefulness.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-013",
+      "delivered_sha256": "01275f7a063e38c95b96979eafe757eff6fff47c6d06cb0e64a6de7ebb402958",
+      "technical_quality": 3.2,
+      "aesthetics": 1.9,
+      "ai_probability": 0.05,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.15000000000000002
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "The bottle label remains readable, but is upside down and tightly cropped; composition is incidental.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-014",
+      "delivered_sha256": "75f4011ba23518ab262c7dc9331cecf9943334a56655f2f847c866b8fbb7ec54",
+      "technical_quality": 1.8,
+      "aesthetics": 1.4,
+      "ai_probability": 0.08,
+      "medium": "photo",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.18
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Large blurred fingers obstruct the frame and light is weak; only part of a barcode remains visible.",
+      "development_partition": "check"
+    },
+    {
+      "id": "sample-015",
+      "delivered_sha256": "ae3ab0064a652b00287c127a8d8bdd62c4a2aaaab286d7f04d3b6d75b13c29e6",
+      "technical_quality": 1.0,
+      "aesthetics": 1.0,
+      "ai_probability": 0.5,
+      "medium": "unknown",
+      "confidence": "low",
+      "ai_probability_interval": [
+        0.25,
+        0.75
+      ],
+      "sexual_content": "unknown",
+      "evidence": "The frame is almost black with faint noise. Quality can be rated as very poor, but origin cannot be judged.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-016",
+      "delivered_sha256": "457097aabb6a32d7f8e0d28027df0510c45491e02ca56fc278e5f181340fe7fb",
+      "technical_quality": 1.0,
+      "aesthetics": 1.1,
+      "ai_probability": 0.25,
+      "medium": "unknown",
+      "confidence": "low",
+      "ai_probability_interval": [
+        0,
+        0.5
+      ],
+      "sexual_content": "unknown",
+      "evidence": "Severe blur and a clipped white region leave little scene information; origin remains uncertain.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-017",
+      "delivered_sha256": "f0cc86f3a7735a63d7e8f7f1db779e137c7a477b0a5239c0d032029ea5e46d1a",
+      "technical_quality": 1.6,
+      "aesthetics": 1.3,
+      "ai_probability": 0.1,
+      "medium": "photo",
+      "confidence": "medium",
+      "ai_probability_interval": [
+        0,
+        0.35
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "A finger covers most of the lens; the remaining fabric-like surface has clipped highlights and noise.",
+      "development_partition": "check"
+    },
+    {
+      "id": "sample-018",
+      "delivered_sha256": "07eb0949ffdfb6573f2244cae58a2d2c615653a505b116e16dd9b8e8e988ebbe",
+      "technical_quality": 4.3,
+      "aesthetics": 2.8,
+      "ai_probability": 0.03,
+      "medium": "render",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.13
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Simple rendered solids have clean edges and consistent shadows; the sparse arrangement is functional.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-019",
+      "delivered_sha256": "6db42282066d80d5a18fe8d069e7e33080cddb313eba1138fe5e70202e338201",
+      "technical_quality": 4.4,
+      "aesthetics": 3.0,
+      "ai_probability": 0.03,
+      "medium": "render",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.13
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "A reflective cube and small spheres are cleanly rendered; lighting and spacing are simple but coherent.",
+      "development_partition": "check"
+    },
+    {
+      "id": "sample-020",
+      "delivered_sha256": "35346324f72fd45911a40c2a8306f625ab382223347617f7f2de861b2de7bf19",
+      "technical_quality": 4.1,
+      "aesthetics": 2.7,
+      "ai_probability": 0.02,
+      "medium": "graphic",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.12000000000000001
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "The horizontal bar chart is clean, though text is small and white space dominates the composition.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-021",
+      "delivered_sha256": "b826c273874219f94e8b2658918c4be2bc9f02e98a8b0bf482c03f8baff36998",
+      "technical_quality": 4.2,
+      "aesthetics": 2.7,
+      "ai_probability": 0.02,
+      "medium": "graphic",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.12000000000000001
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Readable chart geometry and consistent colors; dense small labels and a routine layout limit visual appeal.",
+      "development_partition": "check"
+    },
+    {
+      "id": "sample-022",
+      "delivered_sha256": "a06eef1690f64341a019033485dc3a2be3b49c50e705d7233855c4aff1b6f7ad",
+      "technical_quality": 4.6,
+      "aesthetics": 3.0,
+      "ai_probability": 0.02,
+      "medium": "graphic",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.12000000000000001
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "The chart has clean edges, restrained color and clear spacing; generic labeling limits expressive interest.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-023",
+      "delivered_sha256": "9819dffb7eff3d14f2cb7425c946fdc6698032c21a8661bfbee58aae26b3be57",
+      "technical_quality": 4.5,
+      "aesthetics": 2.8,
+      "ai_probability": 0.02,
+      "medium": "graphic",
+      "confidence": "high",
+      "ai_probability_interval": [
+        0,
+        0.12000000000000001
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "The flowchart is legible with tidy shapes; the diagonal connector and generic labels make the design basic.",
+      "development_partition": "check"
+    },
+    {
+      "id": "sample-024",
+      "delivered_sha256": "da28e1a0cce35419724f7234023977bdc32b5c6679411ca1bb0f2c0762a998ac",
+      "technical_quality": 2.3,
+      "aesthetics": 1.5,
+      "ai_probability": 0.95,
+      "medium": "unknown",
+      "confidence": "medium",
+      "ai_probability_interval": [
+        0.7,
+        1
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "The statue-like scene has fused and inconsistent forms, streaked textures and unclear spatial structure.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-025",
+      "delivered_sha256": "b215afd824ee78e16f678ddb52a6849f9dffa6dabda90f9c47f195c22600852a",
+      "technical_quality": 4.0,
+      "aesthetics": 3.5,
+      "ai_probability": 0.35,
+      "medium": "photo",
+      "confidence": "low",
+      "ai_probability_interval": [
+        0.09999999999999998,
+        0.6
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "A stone bust has coherent material texture and soft light; a polished appearance alone does not establish synthesis.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-026",
+      "delivered_sha256": "f9db1fb53baf02a4c673a51830bc46a307c2a7df5b722616e56d0b72bd109e9e",
+      "technical_quality": 2.1,
+      "aesthetics": 2.0,
+      "ai_probability": 0.6,
+      "medium": "photo",
+      "confidence": "low",
+      "ai_probability_interval": [
+        0.35,
+        0.85
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Dark statue details merge into crushed shadows; harsh contrast and irregular forms leave origin uncertain.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-027",
+      "delivered_sha256": "d617351e19ad7742eecf3293ccd7a7664fbad8ee49d881fd5b37bad945789e40",
+      "technical_quality": 4.4,
+      "aesthetics": 4.0,
+      "ai_probability": 0.35,
+      "medium": "photo",
+      "confidence": "low",
+      "ai_probability_interval": [
+        0.09999999999999998,
+        0.6
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "Drapery and architecture are detailed with dramatic light; the stylized finish is not sufficient proof of AI origin.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-028",
+      "delivered_sha256": "81530f9393029b053b772fddcea4dabc4de8bcbb8d0d8a9dd72fb4ab21417c16",
+      "technical_quality": 1.1,
+      "aesthetics": 1.4,
+      "ai_probability": 0.5,
+      "medium": "unknown",
+      "confidence": "low",
+      "ai_probability_interval": [
+        0.25,
+        0.75
+      ],
+      "sexual_content": "unknown",
+      "evidence": "A heavily blurred silhouette lacks enough structural evidence for an origin judgment.",
+      "development_partition": "tune"
+    },
+    {
+      "id": "sample-029",
+      "delivered_sha256": "32b5c2e8a8d128ee20c058674e7c77290ac8e4c63323b90cf8e63b39f096e7c9",
+      "technical_quality": 4.3,
+      "aesthetics": 3.9,
+      "ai_probability": 0.3,
+      "medium": "photo",
+      "confidence": "low",
+      "ai_probability_interval": [
+        0.04999999999999999,
+        0.55
+      ],
+      "sexual_content": "no_visible_explicit_content",
+      "evidence": "A statue against blue sky has clear edges and a lively pose; its unusual balance may be intentional sculpture.",
+      "development_partition": "tune"
+    }
+  ]
+}

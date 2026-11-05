@@ -1,0 +1,99 @@
+{
+  "version": "photo-labeling-v2-2026-11-01",
+  "routes": {
+    "luna": {
+      "kind": "chat",
+      "provider": "openrouter",
+      "requested_model": "openai/gpt-6-luna",
+      "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+      "key_env": "OPENROUTER_API_KEY",
+      "settings": {
+        "model": "openai/gpt-6-luna",
+        "max_tokens": 16384,
+        "reasoning": {
+          "effort": "high",
+          "exclude": true
+        },
+        "stream": false,
+        "provider": {
+          "only": [
+            "openai"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "max_price": {
+            "prompt": 0.2,
+            "completion": 0.75
+          }
+        }
+      },
+      "headers": {},
+      "accepted_models": [
+        "openai/gpt-6-luna",
+        "openai/gpt-6-luna-20260922"
+      ],
+      "accepted_providers": [
+        "OpenAI"
+      ]
+    },
+    "deepseek": {
+      "kind": "chat",
+      "provider": "runinfra",
+      "requested_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "endpoint": "https://api.runinfra.ai/v1/chat/completions",
+      "key_env": "RUN_INFRA_API_KEY",
+      "settings": {
+        "model": "deepseek-v4-1-flash-1017",
+        "max_tokens": 16384,
+        "temperature": 0,
+        "reasoning_effort": "high",
+        "stream": false
+      },
+      "headers": {},
+      "accepted_models": [
+        "deepseek-v4-1-flash-1017",
+        "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      ]
+    },
+    "liquid": {
+      "kind": "decisions",
+      "provider": "openrouter",
+      "requested_model": "liquid/d1.1",
+      "endpoint": "https://openrouter.ai/api/alpha/decisions",
+      "key_env": "OPENROUTER_API_KEY",
+      "settings": {
+        "model": "liquid/d1.1"
+      },
+      "headers": {
+        "TypeSafe-Danger-Zone-Long-Context": "true",
+        "TypeSafe-Danger-Zone-Images": "true"
+      },
+      "accepted_models": [
+        "liquid/d1.1-20261027"
+      ],
+      "accepted_providers": [
+        "Liquid"
+      ]
+    },
+    "jev": {
+      "kind": "decisions",
+      "provider": "openrouter",
+      "requested_model": "typesafe/jev-1.14",
+      "endpoint": "https://openrouter.ai/api/alpha/decisions",
+      "key_env": "OPENROUTER_API_KEY",
+      "settings": {
+        "model": "typesafe/jev-1.14"
+      },
+      "headers": {
+        "TypeSafe-Danger-Zone-Long-Context": "true",
+        "TypeSafe-Danger-Zone-Images": "true"
+      },
+      "accepted_models": [
+        "typesafe/jev-1.14-20261014"
+      ],
+      "accepted_providers": [
+        "TypeSafe"
+      ]
+    }
+  }
+}

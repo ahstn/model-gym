@@ -1,0 +1,21 @@
+{
+  "version": "luna-deepseek-liquid-v1",
+  "model": "photo_ensemble",
+  "weights": {
+    "technical": {
+      "luna": "0.375",
+      "deepseek": "0.375",
+      "liquid": "0.25"
+    },
+    "aesthetic": {
+      "luna": "0.375",
+      "deepseek": "0.375",
+      "liquid": "0.25"
+    }
+  },
+  "missing_component_policy": "null_per_task; no reweighting or two-model fallback",
+  "scope_policy": "use component policy scores; no new voting or reference override",
+  "precision": "native component precision for arithmetic; two decimals for display only",
+  "latency_policy": "no independent request latency; retain component request measurements",
+  "price_policy": "no independent charge; component costs recorded separately, never double-counted"
+}

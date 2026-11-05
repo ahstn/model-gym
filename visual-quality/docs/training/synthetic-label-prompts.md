@@ -1,0 +1,11 @@
+# Current photo-labeling prompts
+
+The active request definitions, model routes, output formats and retained observations are in the [photo-labeling workspace](../../labeling/README.md). GPT-6 Luna and DeepSeek independently score technical quality and aesthetics; their 50/50 mean is the working teacher judgment. Liquid and Jev provide comparison and eligibility-review decisions. The scores are not human MOS and are not yet approved for training.
+
+The shared teacher prompt applies the photography eligibility rule before both quality rubrics. Clearly non-photographic content receives 1.00 for both dimensions; an actual photographed object or scene with meaningful physical context remains eligible. Missing or unreadable input remains unscorable. Technical quality and aesthetics are judged independently, and raw teacher responses and native decision scores are retained.
+
+The decision questions now state that **YES means excluded** and protect photographs containing printed material, screens or artwork. On the 120-view held-out panel, the prior explicit questions missed 3 of 60 exclusions for Liquid and 5 of 60 for Jev, versus 36 for each original question; no eligible photos were floored under the frozen labels. Three boundary labels are debatable, and treating them as eligible produces one Liquid false floor. The panel includes synthetic screenshots and previously scored artwork, so these counts do not establish deployment error rates.
+
+The selected prompt uses separate technical and aesthetic anchors because a clean image can be visually uninteresting and an expressive image can have technical defects. The Luna/DeepSeek average is the working choice because it gave the closest combined agreement to assistant references in the representative comparison. Adding image-statistics text did not improve overall accuracy and introduced regressions, so stats stay out of the prompt and remain review cues. A candidate with an ambiguous yes/no opening nearly reversed decisions in development; extra instructions need a polarity check and independent validation.
+
+Use the [current workspace](../../labeling/README.md) for the exact model-specific wording, schema, route settings, preprocessing expectations and review policy. The technical-only `visual-pilot label` runner does not implement this current joint workflow.

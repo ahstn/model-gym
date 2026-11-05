@@ -1,0 +1,1947 @@
+{
+  "review_date": "2026-10-16",
+  "status": "research_and_proposed_contract_only",
+  "question": "Which constructs, values and annotation representations should the photo IQA pilot use before collecting labels?",
+  "decision": {
+    "primary": "Technical quality; continuous canonical score1-5 with separate accepted training normalization0-1",
+    "human_collection": "Integer1-5 votes retained individually; computed mean and counts retained without rounding",
+    "generic_teacher": "Existing1-5tenths prompt remains a candidate; compare with five words/probability expectation and a bounded continuous-scale arm",
+    "aesthetics": "Independent optional1-5target, audit first and bulk disabled until separately validated",
+    "domain": "Boolean or null photo eligibility; never use exclusion zero as quality regression target",
+    "confidence": "High in construct/provenance separation; moderate in human five-category interface; local teacher performance and tolerances unmeasured"
+  },
+  "search_accounting": {
+    "parallel_research_workstreams": 4,
+    "local_contract_audit_agents": 1,
+    "root_followup_workstream": true,
+    "exa_search_calls": 25,
+    "exa_requested_result_slots": 139,
+    "by_workstream": {
+      "scales": 45,
+      "models": 33,
+      "scope": 25,
+      "eval": 26,
+      "root": 10
+    },
+    "unique_source_urls_in_ledger": 63,
+    "meaning": "Result slots count requested search results, including overlap. Unique URLs are not necessarily unique papers and include discovery indexes, metadata-only reads and partial passages. Read depth is recorded per source; no claim of exhaustive coverage."
+  },
+  "root_followup": {
+    "queries": [
+      {
+        "round": 1,
+        "numResults": 5,
+        "query": "category:research paper Q-Probe Scaling Image Quality Assessment High Resolution Context Aware Agentic Probing 2601.15356 score scale crops"
+      },
+      {
+        "round": 2,
+        "numResults": 5,
+        "query": "KADID-10k KADIS-700k official database 700000 unlabeled images 30 ratings degradation category rating higher quality"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://github.com/chaofengc/Awesome-Image-Quality-Assessment",
+        "method": "Exa fetch",
+        "read": "README discovery map"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/chaofengc/Awesome-Image-Quality-Assessment/main/README.md",
+        "method": "Firecrawl scrape maxAge=0",
+        "read": "Fresh README including Agentic IQA and source links; index claims checked separately"
+      },
+      {
+        "url": "https://huggingface.co/datasets/q-future/q-align-datasets",
+        "method": "Hugging Face hub_repo_details",
+        "read": "Release metadata only"
+      },
+      {
+        "url": "https://huggingface.co/q-future/one-align",
+        "method": "Hugging Face hub_repo_details",
+        "read": "Release metadata only"
+      },
+      {
+        "url": "https://huggingface.co/papers/2312.17090",
+        "method": "Exa fetch",
+        "read": "Author release comments and entry-point example; noisy HTML extraction"
+      },
+      {
+        "url": "https://huggingface.co/papers/2501.11561.md",
+        "method": "Firecrawl scrape",
+        "read": "DeQA primary paper methods and distribution motivation"
+      },
+      {
+        "url": "https://arxiv.org/html/2601.15356v5",
+        "method": "Exa fetch",
+        "read": "Q-Probe methods, view/crop bias and local-defect context"
+      },
+      {
+        "url": "https://arxiv.org/html/2606.16082",
+        "method": "Firecrawl research_read_paper arxiv:2606.16082",
+        "read": "Four targeted passages: tool/rubric ablations, 1-5 numeric output; not full paper"
+      },
+      {
+        "url": "https://database.mmsp-kn.de/kadid-10k-database.html",
+        "method": "Exa search and fetch",
+        "read": "Dataset scale direction and correction of KADIS/KADID rating attribution"
+      }
+    ],
+    "tool_limits": [
+      "Hugging Face paper_search returned UNAVAILABLE; exact hub_repo_details succeeded. Public Hugging Face paper pages were read with Firecrawl/Exa.",
+      "Q-Probe Hugging Face paper page returned404, and Exa could not fetch its HF API/markdown URLs or Tool-IQA HF markdown. The primary arXiv sources were read instead.",
+      "No new model evaluation, image labelling, annotation reliability measurement, dataset download or training run occurred."
+    ]
+  },
+  "local_evidence": [
+    "visual-quality/prompts/visual-rating-v1/technical-quality.txt",
+    "visual-quality/prompts/visual-rating-v1/aesthetics.txt",
+    "visual-quality/prompts/visual-rating-v1/response.schema.json",
+    "visual-quality/docs/training/synthetic-label-prompts.md",
+    "visual-quality/docs/training/pilot-preflight-2026-09-29.md",
+    "visual-quality/docs/datasets/low-quality-and-controls.md",
+    "visual-quality/src/visual_quality/assemble.py",
+    "visual-quality/src/visual_quality/validation.py"
+  ],
+  "review_corrections": [
+    "Separate rubric-development families from teacher-selection families; do not pool votes across rubric revisions.",
+    "Require absolute teacher acceptance tolerances as well as relative format comparison; no bulk if all candidates fail.",
+    "Add filtering errors and valid coverage alongside correlation and regression error.",
+    "Restrict rank-invariance claim to strictly increasing transforms; clipping, rounding and binning can introduce ties."
+  ],
+  "workstreams": {
+    "scales": {
+      "date": "2026-10-16",
+      "workstream": "rating_scales",
+      "scope": "No-reference technical image quality labels, human collection scales, dataset imports, uncertainty, and aesthetic separation.",
+      "search_accounting": {
+        "exa_queries": 8,
+        "exa_requested_result_slots": 45,
+        "rounds": 3,
+        "rounds_detail": [
+          {
+            "round": 1,
+            "queries": 3,
+            "requested_slots": 15,
+            "focus": "KonIQ, SPAQ, ITU protocols"
+          },
+          {
+            "round": 2,
+            "queries": 4,
+            "requested_slots": 25,
+            "focus": "LIVE, KADID, AVA, cross-dataset alignment"
+          },
+          {
+            "round": 3,
+            "queries": 1,
+            "requested_slots": 5,
+            "focus": "Direct scale-comparison counterevidence"
+          }
+        ],
+        "unique_source_urls_opened": 15,
+        "unique_logical_source_documents": 14,
+        "notes": "Search slots count requests, not unique reviewed sources. KonIQ HTML and PDF are duplicate document URLs. Firecrawl targeted queries and paper passages count as opened, not complete reading. No bulk datasets downloaded."
+      },
+      "findings": [
+        {
+          "id": "acr",
+          "status": "established_protocol",
+          "source_ids": [
+            "itu",
+            "koniq"
+          ],
+          "claim": "ACR uses one stimulus judged independently: integers 1 bad, 2 poor, 3 fair, 4 good, 5 excellent. KonIQ uses this technical-quality scale. Mean ratings can be fractional; preserving raw votes permits histograms, mean and disagreement estimates."
+        },
+        {
+          "id": "continuous",
+          "status": "established_protocol",
+          "source_ids": [
+            "spaq",
+            "spaq-supp"
+          ],
+          "claim": "SPAQ uses continuous 0–100 overall quality, higher better, with five verbal quality regions. Its attributes are separate 0–100 brightness, colourfulness, contrast, noisiness and sharpness. Attributes are not interchangeable quality components: high noisiness is worse, high colourfulness or contrast is not automatically better. Raters are explicitly told to focus on quality rather than aesthetics; at least 15 ratings/image."
+        },
+        {
+          "id": "scale_choice",
+          "status": "bounded_empirical_evidence",
+          "source_ids": [
+            "scale-comparison",
+            "itu"
+          ],
+          "claim": "A direct HD-video experiment with 24 viewers per condition and 128 processed videos found no significant overall differences between five-point discrete, nine-point discrete and continuous scales after rescaling. This does not prove equivalence for our photo/teacher pipeline. More numeric bins alone do not establish more precision."
+        },
+        {
+          "id": "ordinal",
+          "status": "established_measurement_caveat",
+          "source_ids": [
+            "national",
+            "unified-scale"
+          ],
+          "claim": "Five verbal grades are ordered categories. Treating their numeric codes as equally spaced is a modelling convention, not a physical measurement fact. National response styles and category thresholds can differ. MOS is relative to a study and viewing protocol; it is not a percentage of photographic perfection."
+        },
+        {
+          "id": "kadid_direction",
+          "status": "verified_import_trap",
+          "source_ids": [
+            "kadid",
+            "kadid-paper"
+          ],
+          "claim": "KADID shows a reference and distorted image, using degradation categories: 5 imperceptible, 4 perceptible but not annoying, 3 slightly annoying, 2 annoying, 1 very annoying. Official file dmos.csv is [1,5], higher better. Do not invert it merely because the column is named DMOS."
+        },
+        {
+          "id": "live_dmos",
+          "status": "verified_import_trap",
+          "source_ids": [
+            "live"
+          ],
+          "claim": "LIVE collected raw 1–100 quality ratings, then formed each reference rating minus distorted-image rating, removed outliers, computed per-subject z-scores, and applied cross-session scale realignment. Published DMOS is higher worse. Realigned values need their documented observed range; do not assume nominal raw 1–100 bounds survive processing or clip them without an explicit policy."
+        },
+        {
+          "id": "aesthetics",
+          "status": "established_distinct_target",
+          "source_ids": [
+            "ava",
+            "spaq-supp"
+          ],
+          "claim": "AVA measures aesthetic preference with scores 1–10 and raw distributions; 78–549 votes/image, mean 210. Its mean alone loses consensus information. Aesthetic appeal and technical quality should remain separate targets, even where they correlate. Photo contest judgements are not a neutral technical quality scale."
+        },
+        {
+          "id": "normalization",
+          "status": "established_and_replicated_methodological_risk",
+          "source_ids": [
+            "live",
+            "unique",
+            "unified-scale",
+            "mosaiq"
+          ],
+          "claim": "Putting all datasets into [0,1] or [0,100] does not align perceptual quality. Even independent sessions on the same LIVE collection required realignment. Options include common human-rated anchors and monotonic mappings, dataset-specific heads/mappings, or within-source ranking objectives. Do not construct cross-source ranking pairs solely from rescaled MOS."
+        },
+        {
+          "id": "distribution_loss",
+          "status": "empirical_counterargument",
+          "source_ids": [
+            "koniq"
+          ],
+          "claim": "KonIQ tested scalar and distribution targets. MSE on scalar MOS was marginally best in-domain; Huber on rating distributions was best cross-tested on LIVE-in-the-Wild (0.836 SROCC). Retaining distributions is valuable, but does not prove a distribution head/loss always wins."
+        },
+        {
+          "id": "uncertainty",
+          "status": "project_inference_from_sources",
+          "source_ids": [
+            "koniq",
+            "ava",
+            "unique",
+            "national"
+          ],
+          "claim": "Record raw human votes, rater count, sample SD and bootstrap confidence interval for the mean when justified. SD describes disagreement; standard error/CI describes estimate precision. Teacher repeat spread and token distributions are model-derived uncertainty, not human vote counts or human confidence intervals."
+        },
+        {
+          "id": "mosaiq",
+          "status": "new_preprint_claim",
+          "source_ids": [
+            "mosaiq"
+          ],
+          "claim": "MOSAIQ-500K proposes common-scale mapping of 23 IQA datasets using 919 images and 36,760 retained ratings from 40 subjects. It collects 0–100 technical-quality ratings and fits monotonic mappings. Useful corroboration and future candidate; inspected paper says code/data will be made public upon acceptance. Its inclusion of AVA does not prove aesthetic and technical constructs equivalent."
+        }
+      ],
+      "recommendation": {
+        "confidence": "High for separate constructs, explicit score direction, raw provenance and calibration; moderate for selecting five-level raw collection over a continuous slider.",
+        "human_labels": "For a new broad-photo reference set, collect technical_quality_grade in {1,2,3,4,5} with named ACR anchors and fixed viewing instructions. Collect aesthetic_appeal_grade separately only if this product axis remains in scope; five grades for a consistent new rubric are a project choice, not the native AVA protocol. Preserve every vote. Compute mean_1_5 and distribution rather than rounding the aggregate.",
+        "canonical_values": "Use continuous 1–5 per target as the canonical score, with human integer votes retained separately. Derived training value q01=(score_1_5-1)/4 and optional 0–100 display 25*(score_1_5-1) are exact unit conversions. They add no information and are not cross-dataset calibration. Preserve original source value, bounds, direction, study and aggregation metadata.",
+        "teacher_values": "A direct continuous 1–5 score in tenths is a provisional teacher protocol to compare with named five-level grades on held-out human data. Tenths are an output precision choice, not demonstrated perceptual resolution. If using five-level token logits, retain logits/probabilities and derive expected score, but label it model-derived. Never call self-reported probability a measured human distribution. Do not mechanically bin continuous specialist predictions when the raw value can be retained.",
+        "scope_gate": "Missing, unreadable, ineligible and abstained observations use explicit status plus null score, not zero. Diagram/render controls should train domain eligibility separately; source identity does not justify a low technical-quality or aesthetic label.",
+        "core_test": "Before bulk labelling, compare the proposed five-level and continuous teacher protocol against a stratified human reference set, evaluating ordering and calibrated error on the same processed views. This is a calibration experiment, not a guarantee of training success.",
+        "strongest_counterargument": "A five-class output collapses differences needed for fine ranking when only one teacher vote is retained. SPAQ and MOSAIQ demonstrate viable continuous ratings. We should preserve continuous specialist predictions and human means, and test five-level expectations versus direct continuous teacher scoring rather than declaring a universal winner.",
+        "unresolved_gap": "We have no task-specific human calibration evidence showing that our chosen teacher distinguishes subtle defects, respects intentional blur, separates aesthetics, or orders near-ties better on five versus continuous scales. Source protocols cannot settle that locally."
+      },
+      "sources": [
+        {
+          "id": "awesome",
+          "url": "https://github.com/chaofengc/Awesome-Image-Quality-Assessment",
+          "method": "Firecrawl scrape",
+          "quality": "Maintainer index; discovery only, primary papers used for claims.",
+          "status": "opened",
+          "notes": "README sections included NR, FR, IAA and datasets; commit 803594f0d2e3de24cc640e5d545b352834d7f2c1 visible."
+        },
+        {
+          "id": "koniq-html",
+          "url": "https://arxiv.org/html/1910.06180v2",
+          "method": "Exa fetch",
+          "quality": "Original authors paper, but extraction returned mainly metadata/references.",
+          "status": "opened_partial"
+        },
+        {
+          "id": "koniq",
+          "url": "https://arxiv.org/pdf/1910.06180",
+          "method": "Exa fetch",
+          "quality": "Original dataset authors; protocol and method experiments read.",
+          "status": "opened"
+        },
+        {
+          "id": "spaq",
+          "url": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Fang_Perceptual_Quality_Assessment_of_Smartphone_Photography_CVPR_2020_paper.pdf",
+          "method": "Exa fetch",
+          "quality": "CVPR original dataset paper; protocol and scale definitions.",
+          "status": "opened"
+        },
+        {
+          "id": "spaq-supp",
+          "url": "https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Fang_Perceptual_Quality_Assessment_CVPR_2020_supplemental.pdf",
+          "method": "Exa fetch",
+          "quality": "Authors supplement with rater instructions and QC procedures.",
+          "status": "opened"
+        },
+        {
+          "id": "itu",
+          "url": "https://www.itu.int/epublications/publication/itu-t-p-910-2023-10-subjective-video-quality-assessment-methods-for-multimedia-applications",
+          "method": "Exa fetch then Firecrawl directQuote query",
+          "quality": "Official standard. Covers multimedia/video methods with explicit still-image considerations; precision examples are not a universal image guarantee.",
+          "status": "opened_targeted"
+        },
+        {
+          "id": "kadid",
+          "url": "https://database.mmsp-kn.de/kadid-10k-database.html",
+          "method": "Firecrawl scrape",
+          "quality": "Dataset authors official documentation, explicit published dmos.csv direction.",
+          "status": "opened"
+        },
+        {
+          "id": "kadid-paper",
+          "url": "https://datasets.vqa.mmsp-kn.de/archives/papers/kadid10k.pdf",
+          "method": "Exa fetch",
+          "quality": "Original authors paper; PDF reading order noisy but anchors and relative-reference protocol clear.",
+          "status": "opened"
+        },
+        {
+          "id": "live",
+          "url": "https://live.ece.utexas.edu/publications/2006/hrs-transIP-06.pdf",
+          "method": "Exa fetch",
+          "quality": "Original authors evaluation study with detailed raw-score processing and realignment.",
+          "status": "opened"
+        },
+        {
+          "id": "ava",
+          "url": "http://www.cat.uab.cat/Public/Publications/2012/MMP2012/Murray2012.pdf",
+          "method": "Exa fetch",
+          "quality": "Original authors aesthetic dataset paper and rating-distribution analysis.",
+          "status": "opened"
+        },
+        {
+          "id": "unique",
+          "url": "https://arxiv.org/abs/2005.13983",
+          "method": "Firecrawl research_read_paper",
+          "quality": "Original method authors; targeted full-text passages, not full paper read.",
+          "status": "opened_targeted"
+        },
+        {
+          "id": "mosaiq",
+          "url": "https://arxiv.org/pdf/2609.20247",
+          "method": "Firecrawl research_read_paper then Exa fetch",
+          "quality": "Recent author preprint; methods and claims read; says release after acceptance, not a ready acquired source.",
+          "status": "opened"
+        },
+        {
+          "id": "unified-scale",
+          "url": "https://www.cl.cam.ac.uk/~rkm38/pdfs/perezortiz2019unified_quality_scale.pdf",
+          "method": "Exa fetch",
+          "quality": "Authors peer-reviewed method combining ratings and pairwise comparisons; original experiments.",
+          "status": "opened"
+        },
+        {
+          "id": "national",
+          "url": "https://database.mmsp-kn.de/uploads/1/1/9/4/119489445/saupe2024national.pdf",
+          "method": "Exa fetch",
+          "quality": "Original researcher analysis of KonIQ/KADID/NIVD with country-specific ordinal threshold models.",
+          "status": "opened"
+        },
+        {
+          "id": "scale-comparison",
+          "url": "https://vqeg.org/umbraco/surface/FolderList/GetFile?directory=2009_05_DT_Germany&filename=VQEG_JEG_6_24_09_08_RatingScales.pdf&m=0&pageId=1669",
+          "method": "Exa fetch",
+          "quality": "Original experiment presentation at VQEG, preliminary conclusions, 24 viewers per experiment and 128 processed HD videos; limited transfer to still photos.",
+          "status": "opened"
+        }
+      ]
+    },
+    "models": {
+      "workstream": "label_models",
+      "as_of": "2026-10-16",
+      "scope": "Label semantics, output representations, and training targets in IQA/IAA models; no inference or model downloads.",
+      "research_audit": {
+        "exa_search_calls": 6,
+        "exa_requested_result_slots": 33,
+        "exa_query_rounds": 4,
+        "exa_fetch_calls": 6,
+        "exa_fetch_url_attempts": 19,
+        "firecrawl_scrape_calls": 5,
+        "successful_unique_fetched_urls_read": 22,
+        "coverage_note": "Read relevant methods, source code, model card and comparison passages. Search result slots are not a count of independently verified sources.",
+        "hugging_face": "paper_search failed with 'MCP tool paper_search was not returned by tools/list'. hub_repo_details succeeded over three calls for four exact repositories. Firecrawl successfully read the public NIMA paper markdown; LEAF's HF paper page returned404, so its arXiv full text was used.",
+        "shell_fetch": "Public GitHub API attempt failed due restricted network DNS; no fallback circumvention or model downloads."
+      },
+      "decision": {
+        "primary_targets": "Separate continuous technical/perceptual quality and aesthetics scalars. Keep source human votes, source MOS/variance, teacher outputs and scale provenance as distinct records.",
+        "canonical_scale": "Continuous1–5 is a defensible common application scale; a display0–100 is derived as25*(score1to5-1). Choice of numeric range does not itself add signal.",
+        "human_collection": "For new discrete human ratings, bad=1, poor=2, fair=3, good=4, excellent=5. Preserve all votes and count; compute mean/variance later. A slider protocol is a separate explicitly versioned alternative.",
+        "generic_teacher": "Keep current anchored1–5 tenths as a provisional elicitation arm, not a claim of0.1 accuracy. Compare it with five verbal levels plus real token logprobs on the human calibration set before bulk promotion. Do not switch all master labels to hard ordinal solely because Q-Align uses words.",
+        "specialist_teacher": "Preserve continuous expectation and, where available, the five actual level-token logits/probabilities. Adapter MUST name checkpoint revision, API entry point, token order, weights, preprocessing and output range.",
+        "optional_distribution": "Use empirical human vote distributions or provenance-labelled model token distributions. Never relabel a JSON-elicited probability vector as human vote uncertainty or token softmax. Do not fabricate human variance from an isolated scalar.",
+        "qalign_adapter": "Equal-width five-bin conversion is legitimate in a separately versioned Q-Align replication arm. It is NOT nearest-integer rounding or the original human vote. For[1,5], Q-ReAlign boundaries are1.8,2.6,3.4,4.2, with4.2 entering excellent. Retain the scalar master target.",
+        "compact_student": "Start with separate scalar heads and masked losses; optional empirical distribution supervision/ordinal EMD only where reliable targets exist. Add within-source or calibrated pairwise ranking after pointwise baseline; do not equate uncalibrated cross-dataset MOS.",
+        "certainty": "High confidence that IQA and IAA should remain separate and continuous source information should be preserved; moderate confidence in exact generic-teacher1–5 tenths prompt until measured on the target views and human gold.",
+        "promotion": "Teacher validation must be task-specific: success on IQA does not qualify it for aesthetics. Five-level convention does not prove current general API model has calibrated quality probabilities."
+      },
+      "models": [
+        {
+          "name": "Q-Align / OneAlign",
+          "supervision": "Continuous dataset MOS is converted to five equal-width word classes; next-token cross entropy. Distinct task prompts for quality, aesthetics and video.",
+          "inference": "Restricted softmax of five level-token logits, weighted expectation. Paper and HF AutoModel use[5,4,3,2,1] ->[1,5]. Current GitHub QAlignScorer uses[1,.75,.5,.25,0] ->[0,1].",
+          "evidence": "Original Table11 compares level-trained vs direct-score-trained mPLUG-Owl2. It supports that training recipe, not a universal superiority of hard ordinal collection or zero-shot prompts.",
+          "sources": [
+            "https://arxiv.org/html/2312.17090",
+            "https://raw.githubusercontent.com/Q-Future/Q-Align/main/q_align/evaluate/scorer.py",
+            "https://huggingface.co/q-future/one-align/raw/dcc603b95aa0ebd82afa696d4a1e20d11fc80ddb/modeling_mplug_owl2.py",
+            "https://huggingface.co/q-future/one-align"
+          ],
+          "quality": "Original paper, authors' implementation and checkpoint code; direct API range discrepancy verified."
+        },
+        {
+          "name": "Q-ReAlign",
+          "supervision": "Q-Align-style five word labels for IQA/IAA/VQA. map_score normalizes source range then bins floor(t*5); optional DMOS direction inversion.",
+          "inference": "Default names excellent,good,fair,poor,bad; weights1,.75,.5,.25,0. Current scorer appends answer stem, extracts next-position logits and softmaxes the five first token IDs.",
+          "prompt_examples": {
+            "iqa": "How would you rate the quality of this image?",
+            "iaa": "How would you rate the aesthetics of this image?"
+          },
+          "caveat": "Model card calls scores dataset-conditioned and asks recalibration before mixing scales. Token matching uses first token; adapter must validate correct, distinct tokens for chosen tokenizer.",
+          "sources": [
+            "https://raw.githubusercontent.com/Q-Future/Q-ReAlign/main/qalign/levels.py",
+            "https://raw.githubusercontent.com/Q-Future/Q-ReAlign/main/qalign/prompts.py",
+            "https://raw.githubusercontent.com/Q-Future/Q-ReAlign/main/qalign/scorer.py",
+            "https://huggingface.co/q-future/Q-ReAlign-Mini-0.8B/raw/main/README.md"
+          ],
+          "quality": "Authors' executable source and official HF model card; model card benchmark claims not reproduced."
+        },
+        {
+          "name": "DeQA-Score",
+          "supervision": "Five-bin soft target from human MOS and standard deviation, Gaussian discretization with expectation/mass adjustment; fallback adjacent-bin interpolation for very small variance. Soft loss plus within-dataset Thurstone fidelity relationships.",
+          "inference": "Five level probabilities weighted[5,4,3,2,1] ->continuous1–5.",
+          "label_fields": "Source generator preserves gt_score, gt_score_norm, level_probs, std, std_norm.",
+          "findings": "Hard one-hot quantization loses mean precision, boundary relationships and uncertainty. Paper shows identical linearly rescaled scores can still have different perceptual meanings across studies; within-dataset ranking addresses this.",
+          "caveat": "Gaussian labels are a fitted representation from human statistics, not raw vote histograms or self-reported model confidence. Source generator uses observed dataset extrema; do not blindly inherit this preprocessing in a held-out production protocol.",
+          "sources": [
+            "https://arxiv.org/html/2501.11561",
+            "https://raw.githubusercontent.com/zhiyuanyou/DeQA-Score/main/build_soft_labels/gen_soft_label.py",
+            "https://raw.githubusercontent.com/zhiyuanyou/DeQA-Score/main/src/evaluate/scorer.py",
+            "https://github.com/zhiyuanyou/DeQA-Score"
+          ],
+          "quality": "CVPR paper, original distribution generator and inference implementation; no reproduction."
+        },
+        {
+          "name": "NIMA",
+          "supervision": "Predict a ten-bin rating distribution with ordered Earth Mover's Distance loss. AVA aesthetic bins1–10; TID2013 technical bins0–9. When raw distributions unavailable, reconstruct by maximum entropy using MOS and std.",
+          "inference": "Expected rating and standard deviation from distribution.",
+          "findings": "Technical and aesthetic models share architecture but train on different target datasets. It does not train one merged quality+aesthetics label. Ratings and source scale remain task-specific.",
+          "caveat": "A synthetic model-provided distribution is not an empirical histogram. Number of bins is a representation choice and does not establish100-point annotations are better.",
+          "sources": [
+            "https://huggingface.co/papers/1709.05424.md",
+            "https://arxiv.org/html/1709.05424v2"
+          ],
+          "quality": "Original author paper read through HF markdown and Exa excerpts."
+        },
+        {
+          "name": "Q-Insight",
+          "supervision": "GRPO with score-regression reward plus degradation type and intensity rewards. Needs MOS and defect labels, not labelled reasoning chains.",
+          "inference": "Official demo asks a float1–5 rounded to two decimal places in JSON rating, with generated reasoning.",
+          "findings": "Joint defect training improves sensitivity to subtle faults such as JPEG. Direct numeric generation can work after task-specific RL, providing counterevidence to a blanket prohibition on scalar targets.",
+          "caveat": "Two decimal formatting is not evidence of0.01 perceptual accuracy; task-trained results do not validate an unadapted generic teacher prompt.",
+          "sources": [
+            "https://raw.githubusercontent.com/bytedance/Q-Insight/main/src/eval/demo_score.py",
+            "https://proceedings.neurips.cc/paper_files/paper/2025/file/3479362c2eb7321ba0490d98eb032772-Paper-Conference.pdf",
+            "https://huggingface.co/ByteDance/Q-Insight"
+          ],
+          "quality": "Original paper substantive search passages, official demo code and HF model metadata."
+        },
+        {
+          "name": "LEAF",
+          "supervision": "Frozen InternVL3.5-8B provides five-word token-logprob expectation1–5; pair A/B decisions from token logprobs; reliability1-H(p)/log2. ConvNeXt student learns SmoothL1 point targets plus weighted pairwise BCE. Human MOS calibration uses MSE+PLCC.",
+          "findings": "Supports compact scalar scorer and final human calibration; pairwise-only did less well than pointwise+pairwise in paper ablation. Pair number approximately dataset size, not all pairs.",
+          "caveat": "Preprint; inspected text says code will be released on publication. Prompt appendix was referenced but absent from fetched main body, so exact unobserved templates are not claimed. Token entropy is not proof of error calibration.",
+          "sources": [
+            "https://arxiv.org/html/2601.20689"
+          ],
+          "quality": "Author preprint methods and ablations; lower reproducibility confidence than released source-backed methods."
+        },
+        {
+          "name": "VisualQuality-R1",
+          "supervision": "Generates multiple1–5 scalar scores, computes within-batch comparative probabilities from means and sample variances under Thurstone, and trains with fidelity rewards derived from human preference.",
+          "inference": "Scalar1–5 after reasoning; not simply an A/B ranking classifier.",
+          "findings": "Ranking-aware training handles relative quality and mixed study scales. Paper explicitly reports high inference cost and risk of confidently wrong reasoning.",
+          "caveat": "Training target is a ranking relationship, but published model still emits numeric scores. Does not require our compact deployed student to generate reasoning.",
+          "sources": [
+            "https://arxiv.org/html/2505.14460"
+          ],
+          "quality": "Original paper methods, ablations and limitations."
+        },
+        {
+          "name": "RALI",
+          "supervision": "Q-Insight generates image-text-score triples; freeze text encoder, contrastively adapt CLIP vision encoder to quality text, compress features and score with quality-labelled prototypes.",
+          "inference": "Weighted prototype-score scalar; prototype score artifacts determine output range. Demo uses softmax similarity weights and learned prototype scores.",
+          "findings": "Supports avoiding a large reasoning model at deployment. Distilled brief quality descriptions may be useful later as auxiliary supervision.",
+          "caveat": "Paper reports approximately4% of Q-Insight parameter/time cost in its setup; not a performance guarantee for our data or EmbeddingGemma. Does not justify broad mandatory descriptions in v1.",
+          "sources": [
+            "https://arxiv.org/html/2510.11369",
+            "https://github.com/xuanyuzhang21/RALI",
+            "https://raw.githubusercontent.com/xuanyuzhang21/RALI/main/demo_rali_score.py"
+          ],
+          "quality": "Original paper plus released inference implementation; benchmark claims not reproduced."
+        }
+      ],
+      "source_inventory": [
+        "https://github.com/chaofengc/Awesome-Image-Quality-Assessment",
+        "https://github.com/Q-Future/Q-Align",
+        "https://huggingface.co/q-future/one-align",
+        "https://github.com/zhiyuanyou/DeQA-Score",
+        "https://arxiv.org/html/2601.20689",
+        "https://raw.githubusercontent.com/Q-Future/Q-ReAlign/main/qalign/levels.py",
+        "https://raw.githubusercontent.com/Q-Future/Q-ReAlign/main/qalign/prompts.py",
+        "https://raw.githubusercontent.com/Q-Future/Q-ReAlign/main/qalign/scorer.py",
+        "https://raw.githubusercontent.com/Q-Future/Q-Align/main/q_align/evaluate/scorer.py",
+        "https://raw.githubusercontent.com/zhiyuanyou/DeQA-Score/main/build_soft_labels/gen_soft_label.py",
+        "https://raw.githubusercontent.com/bytedance/Q-Insight/main/src/eval/demo_score.py",
+        "https://arxiv.org/html/2510.11369",
+        "https://arxiv.org/html/2501.11561",
+        "https://huggingface.co/papers/1709.05424.md",
+        "https://arxiv.org/html/2312.17090",
+        "https://arxiv.org/html/2505.14460",
+        "https://huggingface.co/q-future/Q-ReAlign-Mini-0.8B/raw/main/README.md",
+        "https://huggingface.co/q-future/one-align/tree/main",
+        "https://github.com/xuanyuzhang21/RALI",
+        "https://raw.githubusercontent.com/zhiyuanyou/DeQA-Score/main/src/evaluate/scorer.py",
+        "https://huggingface.co/q-future/one-align/raw/dcc603b95aa0ebd82afa696d4a1e20d11fc80ddb/modeling_mplug_owl2.py",
+        "https://raw.githubusercontent.com/xuanyuzhang21/RALI/main/demo_rali_score.py"
+      ]
+    },
+    "scope": {
+      "date": "2026-10-16",
+      "workstream": "C: technical quality, aesthetics, domain controls, and auxiliary targets",
+      "scope": "Read-only research; no repo edits or labelling runs.",
+      "search_accounting": {
+        "exa_search_calls": 5,
+        "exa_requested_result_slots": 25,
+        "sources_reviewed_legacy_skill_metric": 25,
+        "unique_source_records": 14,
+        "unique_sources_read_beyond_search_highlights": 13,
+        "adaptive_rounds": 6,
+        "note": "Requested result slots are not the count of verified sources; duplicates and failed fetches excluded from evidence count."
+      },
+      "tool_notes": [
+        "Hugging Face paper_search and dataset_search were unavailable (tool not returned by tools/list). Public HF paper markdown was successfully read with Firecrawl, and Hugging Face hub_repo_details successfully inspected q-align and ArtiMuse repositories.",
+        "One guessed ArtiMuse/ArtiMuse model ID was not found; the exact Thunderbolt215215 IDs were then obtained from official repository links and verified.",
+        "Exa could not parse the ArtiMuse .md endpoint; Firecrawl fetched it successfully.",
+        "Firecrawl had no full text for SIQAD DOI, so its record is labelled primary abstract/search excerpt only."
+      ],
+      "sources": [
+        {
+          "id": "seed",
+          "url": "https://github.com/chaofengc/Awesome-Image-Quality-Assessment",
+          "read": "README via Exa and Firecrawl",
+          "quality": "Maintained research index; discovery only, primary studies checked separately.",
+          "claims": [
+            "Distinct sections cover spatial-aware IQA, unified IQA, AIGC IQA, IAA, no-reference and full-reference assessment."
+          ]
+        },
+        {
+          "id": "nima",
+          "url": "https://huggingface.co/papers/1709.05424.md",
+          "canonical_url": "https://arxiv.org/html/1709.05424v2",
+          "read": "Full paper markdown via Firecrawl",
+          "quality": "Original paper and experiments.",
+          "claims": [
+            "Separate models are trained for high-level aesthetics and low-level technical quality.",
+            "AVA uses 1–10 ratings, around 200 raters per image, and full rating distributions.",
+            "TID2013 0–9 ratings derive from reference-assisted forced-choice experiments, so its raw target is not the same measurement protocol as an image-alone Likert question.",
+            "Predicted distribution mean and variance preserve more information than a hard class; model probabilities are not observed human vote counts."
+          ]
+        },
+        {
+          "id": "aadb",
+          "url": "https://arxiv.org/abs/1606.01621",
+          "read": "Original paper passages via Firecrawl plus Exa primary-paper excerpts",
+          "quality": "Original dataset, annotation protocol and model experiments.",
+          "claims": [
+            "AADB provides 10,000 photographic images, five raters per image, a 1–5 aesthetic rating, and 11 attributes.",
+            "Ratings are averaged then rescaled to [0,1] for training; this transformation does not change the rated construct.",
+            "Attributes include shallow depth of field and motion blur; their positive/negative/null labels express effect on aesthetics, not mere defect presence.",
+            "Attribute contribution depends on content; symmetry and repetition do not have negative labels in the protocol.",
+            "Nonphotographic images were excluded from the photo dataset, not assigned aesthetic zero."
+          ]
+        },
+        {
+          "id": "aadb_repo",
+          "url": "https://github.com/aimerykong/deepImageAestheticsAnalysis",
+          "read": "Official repository via Exa",
+          "quality": "Author implementation and dataset release.",
+          "claims": [
+            "Supports the AADB paper, rating and attribute release."
+          ]
+        },
+        {
+          "id": "agiqa",
+          "url": "https://arxiv.org/html/2306.04717v2",
+          "read": "Full paper via Exa",
+          "quality": "Original AGIQA-3K subjective experiment.",
+          "claims": [
+            "Two separate sliders collect perception and text-to-image alignment at 0–5 with 0.1 intervals.",
+            "The perception target explicitly includes technical issues, AI artifacts, deepfake issues and aesthetics. It is not a pure technical-quality label.",
+            "21 raters scored 2,982 images; individual/session score processing is used.",
+            "AI-generated origin does not imply low perceptual quality; image quality varies across generated samples."
+          ]
+        },
+        {
+          "id": "richhf",
+          "url": "https://arxiv.org/html/2312.10240v2",
+          "read": "Original paper passages via Firecrawl",
+          "quality": "Original human-feedback dataset and model experiments.",
+          "claims": [
+            "Plausibility, alignment, aesthetics and overall quality are four separate 1–5 ratings.",
+            "Three annotators per image; scores are averaged and optionally transformed to [0,1] using (score-1)/4.",
+            "Spatial artifact and prompt-misalignment regions are distinct annotations.",
+            "FID/IS are distribution metrics, not individual-image labels."
+          ]
+        },
+        {
+          "id": "richhf_repo",
+          "url": "https://github.com/google-research-datasets/richhf-18k",
+          "read": "Official repository via Exa",
+          "quality": "Released data schema and author implementation.",
+          "claims": [
+            "17,760 released examples contain aesthetics_score, artifact_score, misalignment_score, overall_score, artifact_map, misalignment_map and prompt_misalignment_label.",
+            "All scores are higher-is-better, including artifact_score; preserve source naming and direction."
+          ]
+        },
+        {
+          "id": "artimuse",
+          "url": "https://huggingface.co/papers/2507.14533.md",
+          "canonical_url": "https://arxiv.org/abs/2507.14533",
+          "read": "Full paper markdown via Firecrawl",
+          "quality": "Original expert annotation and supervised-model experiments; claimed gains are within its protocol.",
+          "claims": [
+            "Defines eight aesthetic attributes plus a holistic score; not six attributes.",
+            "Covers graphic design, 3D design, AIGC, photography, painting and calligraphy. These domains can have aesthetic merit.",
+            "Aesthetic dimensions include composition, visual structure, technical execution, originality, theme, emotion, gestalt and comprehensive evaluation.",
+            "Uses 101 learned score tokens for 0–100 with expected-value inference; this does not establish 100-category reliability for a generic VLM prompt.",
+            "Authors report a positive-assessment bias in MLLM annotation, motivating professional human evaluations."
+          ]
+        },
+        {
+          "id": "artimuse_repo",
+          "url": "https://github.com/thunderbolt215/ArtiMuse",
+          "read": "Official repository via Exa and link retrieval with Firecrawl",
+          "quality": "Author model release and dataset access instructions.",
+          "claims": [
+            "Dataset images require an access request and stated research/noncommercial terms in repository; inspect media terms separately from Hub metadata.",
+            "Paper checkpoints differ by score-finetuning dataset.",
+            "Exact Hugging Face repository links verified before metadata inspection."
+          ]
+        },
+        {
+          "id": "paq2piq",
+          "url": "https://arxiv.org/abs/1912.10088",
+          "read": "Original paper passages via Firecrawl",
+          "quality": "Original full-image and patch human quality study.",
+          "claims": [
+            "Local patch quality is related to, but not identical to, global image quality.",
+            "Equal distortion parameters across different content do not imply equal perceived quality.",
+            "Local-to-global prediction uses context; prominent damaged subjects can dominate overall judgement.",
+            "Do not inherit image-wide MOS blindly onto random training crops, or derive score directly from JPEG/blur severity."
+          ]
+        },
+        {
+          "id": "siqad",
+          "url": "https://doi.org/10.1109/TIP.2015.2465145",
+          "read": "Primary abstract and paper search excerpts only; Firecrawl full text unavailable",
+          "quality": "Original screen-content quality study; limited to abstract-level verification.",
+          "claims": [
+            "SIQAD evaluates whole screen images and textual/pictorial regions using an 11-point numerical scale.",
+            "Screen content has a quality continuum; being a diagram or screen image is not equivalent to technical failure."
+          ]
+        },
+        {
+          "id": "hf_qalign",
+          "url": "https://huggingface.co/datasets/q-future/q-align-datasets",
+          "read": "Hugging Face hub_repo_details",
+          "quality": "Primary release metadata only; no source-level licence conclusions inferred.",
+          "claims": [
+            "Repository exists; Hub metadata has MIT tag, but this is not a universal media licence."
+          ]
+        },
+        {
+          "id": "hf_artimuse",
+          "url": "https://huggingface.co/Thunderbolt215215/ArtiMuse",
+          "read": "Hugging Face hub_repo_details",
+          "quality": "Primary model release metadata.",
+          "claims": [
+            "InternVL3-8B-based model, about 7,944.4M parameters, Apache-2.0 tag."
+          ]
+        },
+        {
+          "id": "hf_artimuse_data",
+          "url": "https://huggingface.co/datasets/Thunderbolt215215/ArtiMuse-10K",
+          "read": "Hugging Face hub_repo_details",
+          "quality": "Primary dataset metadata; image access terms still require repository review.",
+          "claims": [
+            "Official dataset repo has multimodal/image-aesthetics tags and JSON format."
+          ]
+        }
+      ],
+      "recommendation": {
+        "status": "Proposed protocol, not experimentally proven best.",
+        "core_constructs": [
+          "Technical image quality: perceptual impairment of visible image information under fixed display/view conditions.",
+          "Aesthetic appeal: visual composition, colour/light use and overall visual impact; a separate judgement.",
+          "Photo-domain eligibility: suitability for the intended real-world-photo collection; a policy/coverage decision, not an IQA score."
+        ],
+        "pilot_targets": {
+          "technical_quality_level": {
+            "type": "integer or null",
+            "allowed": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              null
+            ],
+            "priority": "primary",
+            "anchors": {
+              "1": "Bad: severe impairment; essential visual information is largely lost.",
+              "2": "Poor: major visible defects substantially reduce clarity.",
+              "3": "Fair: noticeable defects, but the main content remains adequately visible.",
+              "4": "Good: minor defects with little effect on perceived clarity.",
+              "5": "Excellent: no material defect visible in the specified view."
+            }
+          },
+          "aesthetics_level": {
+            "type": "integer or null",
+            "allowed": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              null
+            ],
+            "priority": "separate secondary target, initially validate on human calibration subset",
+            "anchors": {
+              "1": "Very weak visual organisation or impact.",
+              "2": "Weak composition or visual coherence.",
+              "3": "Ordinary or moderately pleasing appearance.",
+              "4": "Strong, coherent and pleasing visual presentation.",
+              "5": "Exceptional visual presentation and impact within the stated photo scope."
+            }
+          },
+          "photo_domain_eligible": {
+            "type": "boolean or null",
+            "allowed": [
+              true,
+              false,
+              null
+            ],
+            "note": "Use null for unresolved scope. Known charts/renders are false for a real-photo corpus. This field is not a claim about AI origin inferred from pixels."
+          },
+          "per_axis_status": {
+            "allowed": [
+              "rated",
+              "not_requested",
+              "out_of_scope",
+              "unscorable",
+              "error"
+            ],
+            "note": "Every null score needs a reason. Errors and absent evidence never become low scores."
+          },
+          "derived_scores": {
+            "internal": "(mean_level-1)/4 -> [0,1]",
+            "display": "25*(mean_level-1) -> [0,100]",
+            "note": "Keep original individual ordinal ratings and counts. A display conversion adds no measurement precision. If product requires 1–100 use 1+99*q01 explicitly; avoid ambiguous mappings."
+          }
+        },
+        "edge_cases": [
+          "A sharp but dull photograph can receive high technical quality and ordinary aesthetics.",
+          "A deliberate soft-focus portrait, shallow depth of field, film grain or motion treatment is not automatically a technical failure. Judge whether visible detail is impaired where it matters; do not claim hidden artistic intent.",
+          "A black-and-white or low-key image is not automatically a colour/exposure defect; judge visible loss of required information.",
+          "A valid, severely damaged photograph must receive a low technical score rather than be removed as unscorable merely for looking bad.",
+          "Unreadable bytes or failed model requests get null with error, never quality zero.",
+          "Charts/renders can be excellent within their own domains. For a photo-only scorer, mask photo quality/aesthetics as out_of_scope and set photo eligibility false; an application may reject them with a separate utility score of zero.",
+          "Known AI-generated origin is provenance. Do not silently equate AI-generated, visually implausible, nonphotographic, low aesthetic and poor technical quality.",
+          "Blank controls require an explicit scope rule: either rate a decoded blank as extreme visual failure under a broad quality target, or treat it as out_of_scope for a photo-only target. Do not mix those conventions without an explicit target definition.",
+          "Do not call a single model rating a human MOS, and do not treat self-reported confidence or prompted probabilities as observed rater disagreement."
+        ],
+        "defer_for_first_pilot": [
+          "Full eight-attribute aesthetics analyses",
+          "Per-pixel/region heatmap labelling",
+          "Prompt-image alignment without a prompt-based product goal",
+          "AI-origin classifier as part of IQA",
+          "A second ambiguous overall-quality target",
+          "One scalar that silently averages quality, aesthetics and domain eligibility"
+        ],
+        "useful_low_cost_auxiliary": [
+          "Preserve known synthetic distortion parameters as provenance, not target quality.",
+          "Preserve existing VizWiz human defect votes.",
+          "Use brief structured defect evidence on a small audit set to detect teacher mistakes and style penalties; add full auxiliary training only after ablation.",
+          "Record labelled view hash, display/crop policy, assessor identity/version, rubric version and status as data provenance."
+        ],
+        "validation": [
+          "Evaluate technical score against independent human technical ratings, not only aesthetics or broad VLM benchmarks.",
+          "Measure technical and aesthetic performance separately.",
+          "Include sharp-boring versus blurred-beautiful pairs, intentional blur, low-key/monochrome styles, readable diagrams, clean renders and authentic severe defects.",
+          "Choose whether to label aesthetics at scale only after human agreement and benefit to intended ranking are established."
+        ]
+      }
+    },
+    "eval": {
+      "date": "2026-10-16",
+      "workstream": "D: label representation and evaluation challenge",
+      "scope": "Read-only research; no repository edits; recommendations below are proposals, not validated results for this project.",
+      "search_accounting": {
+        "exa_requested_result_slots": 26,
+        "exa_search_calls": 4,
+        "exa_rounds": 3,
+        "exa_queries": [
+          {
+            "key": "round1_2",
+            "round": 1,
+            "query": "image quality assessment mean opinion score distribution ratings pairwise comparisons human preference subjective reliability discrete continuous scale",
+            "numResults": 8,
+            "returned_results": 8,
+            "result_urls": [
+              "https://doi.org/10.1109/tip.2019.2936103",
+              "https://doi.org/10.1109/tmm.2013.2292590",
+              "https://doi.org/10.2352/issn.2470-1173.2018.14.hvei-517",
+              "https://www.cl.cam.ac.uk/~rkm38/pdfs/mikhailiuk2018tid_psych_scaling.pdf",
+              "https://www.imaging.org/common/uploaded%20files/pdfs/Papers/2001/PICS-0-251/4604.pdf",
+              "https://arxiv.org/pdf/1712.03686",
+              "https://library.imaging.org/admin/apis/public/api/ist/website/downloadArticle/print4fab/14/1/art00057_2",
+              "https://doi.org/10.1111/j.1467-8659.2012.03188.x"
+            ]
+          },
+          {
+            "key": "round2_scale",
+            "round": 2,
+            "query": "comparison continuous discrete rating scales five point 100 point image quality assessment reliability bias subjective",
+            "numResults": 6,
+            "returned_results": 6,
+            "result_urls": [
+              "https://vqeg.org/umbraco/surface/FolderList/GetFile?directory=2009_05_DT_Germany&filename=VQEG_JEG_6_24_09_08_RatingScales.pdf&m=0&pageId=1669",
+              "https://doi.org/10.1109/tbc.2010.2086750",
+              "https://www.its.ntia.gov/publications/download/PinsonIEEEPrecisionRepeatability.pdf",
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC5257322/",
+              "https://arxiv.org/pdf/2410.00817",
+              "https://ceur-ws.org/Vol-3271/Paper14_CVCS2022.pdf"
+            ]
+          },
+          {
+            "key": "round2_metrics",
+            "round": 2,
+            "query": "image quality assessment evaluation metrics SROCC PLCC logistic regression test set leakage ranking content bias",
+            "numResults": 6,
+            "returned_results": 6,
+            "result_urls": [
+              "https://doi.org/10.1371/journal.pone.0269715",
+              "https://ar5iv.labs.arxiv.org/html/1907.02096",
+              "https://arxiv.org/html/2603.07119v2",
+              "https://ar5iv.labs.arxiv.org/html/2304.03766",
+              "https://doi.org/10.1007/s11042-022-13416-8",
+              "https://arxiv.org/pdf/2209.01760v4.pdf"
+            ]
+          },
+          {
+            "key": "round3_ties",
+            "round": 3,
+            "query": "image quality assessment pairwise comparisons ties uncertainty subjective disagreement preference equal quality",
+            "numResults": 6,
+            "returned_results": 6,
+            "result_urls": [
+              "https://dl.acm.org/doi/10.1145/2072298.2071994",
+              "https://www.kennyshirley.com/papers/reibman_shirley_tian_2013.pdf",
+              "https://www.imaging.org/common/uploaded%20files/pdfs/Papers/2001/PICS-0-251/4604.pdf",
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC11213789/",
+              "http://dl.acm.org/doi/10.1109/TMM.2013.2292590",
+              "https://doi.org/10.1109/tbc.2023.3236528"
+            ]
+          }
+        ],
+        "firecrawl_paper_search_calls": 2,
+        "firecrawl_requested_paper_results": 9,
+        "successful_unique_source_retrievals": 11,
+        "source_retrieval_definition": "Unique URLs/papers for which page content or question-specific body passages were retrieved and inspected. Includes README seed, which is a discovery index rather than primary validation.",
+        "failed_retrievals": [
+          {
+            "url": "https://vqeg.org/umbraco/surface/FolderList/GetFile?directory=2009_05_DT_Germany&filename=VQEG_JEG_6_24_09_08_RatingScales.pdf&m=0&pageId=1669",
+            "provider": "Firecrawl",
+            "result": "File is not available despite HTTP 200; scale-study conclusions use separate DOI source."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "seed",
+          "url": "https://github.com/chaofengc/Awesome-Image-Quality-Assessment",
+          "read": "Firecrawl Markdown; FR, Others, perceptual-similarity sections inspected",
+          "quality": "Maintainer-curated discovery list; not itself validation. Seed commit shown803594f0d2e3de24cc640e5d545b352834d7f2c1.",
+          "findings_verified": [
+            "FR branch links LPIPS, PieAPP, DISTS, SSIM, content-diverse comparisons; Others includes IISA and adversarial attacks."
+          ]
+        },
+        {
+          "id": "boosted",
+          "url": "https://arxiv.org/abs/2108.00201",
+          "read": "Firecrawl abstract plus four body passages",
+          "quality": "Primary methodological and experimental paper; mostly controlled full-reference distortions, not broad NR photo aesthetics.",
+          "findings_verified": [
+            "Five-level ACR uses Bad1/Poor2/Fair3/Good4/Excellent5; MOS averages integer ratings.",
+            "Authors describe category interpretation differences, saturation and ordinal rather than equal perceptual interval scales.",
+            "Pairwise or triplet results require latent-scale reconstruction; very large differences with unanimous preferences are unstable for quantitative distance estimation.",
+            "General triplet reconstruction assumes one-dimensional additive perceptual distances."
+          ],
+          "inference": [
+            "Do not present a 0.1-point teacher score as demonstrated psychophysical precision; keep raw human votes and view conditions.",
+            "Use pairwise tasks for close calls, not to claim exact absolute score gaps."
+          ]
+        },
+        {
+          "id": "tid_scaling",
+          "url": "https://www.cl.cam.ac.uk/~rkm38/pdfs/mikhailiuk2018tid_psych_scaling.pdf",
+          "read": "Exa 10000-character primary PDF extract",
+          "quality": "Primary TID2013 reanalysis and added validation experiments.",
+          "findings_verified": [
+            "Original within-content comparison graphs had25disconnected components and no pristine-reference comparisons.",
+            "Cross-content and reference comparisons plus psychometric scaling improved consistency; averaging wins is not equivalent to a shared latent quality scale."
+          ],
+          "inference": [
+            "Keep distortion families intact in splits, but connect contents in an independent pairwise evaluation panel.",
+            "Pairwise-only synthetic supervision without cross-content anchors cannot by itself specify a global 1–5 scale."
+          ]
+        },
+        {
+          "id": "i isa",
+          "url": "https://arxiv.org/html/2502.06476v2",
+          "read": "Exa 11000-character article extract",
+          "quality": "Primary IISA paper and dataset design.",
+          "findings_verified": [
+            "Perceived quality changes with image scale: downsampling can hide degradation but also lose useful detail.",
+            "Dataset uses785images, repeated expert labels, and treats quality as a latent expectation estimated by finite human observations."
+          ],
+          "inference": [
+            "Label processed views, not only original image hashes; freeze display/resize/crop policy before gathering labels.",
+            "Human and teacher must inspect equivalent evidence."
+          ]
+        },
+        {
+          "id": "lpips",
+          "url": "https://richzhang.github.io/PerceptualSimilarity/",
+          "read": "Exa full short project page",
+          "quality": "Original authors' LPIPS/BAPPS project page.",
+          "findings_verified": [
+            "Task is human perceptual similarity and deep-feature distance between images, rather than reference-free absolute technical-quality grading."
+          ],
+          "inference": [
+            "LPIPS can diagnose changes to a common reference; it should not supply universal raw-photo quality labels."
+          ]
+        },
+        {
+          "id": "content_diverse",
+          "url": "https://arxiv.org/html/2211.05215v2",
+          "read": "Exa 11000-character article extract",
+          "quality": "Primary paper testing content-diverse pair/list comparisons.",
+          "findings_verified": [
+            "Authors test content-diverse pair and listwise comparisons and report improvements across benchmarks.",
+            "Same distortion type/severity can have different perceptual effects across content."
+          ],
+          "inference": [
+            "Generator parameter or severity index is not a human MOS; validate monotonic pairs and stratify by content."
+          ]
+        },
+        {
+          "id": "nima",
+          "url": "https://arxiv.org/abs/1709.05424",
+          "read": "Firecrawl abstract plus four body passages",
+          "quality": "Primary NIMA paper; architecture evidence, not proof it is optimal now.",
+          "findings_verified": [
+            "Predicts ordered rating distributions; derives mean and standard deviation.",
+            "Uses CDF-based Earth Mover loss and evaluates distributions separately from mean correlations.",
+            "Trains separate models for technical quality and aesthetics; paper notes crop changes can change composition."
+          ],
+          "inference": [
+            "Store vote counts and number of raters when available, so distributional training remains possible.",
+            "Do not invent a human-vote histogram from a mean alone; teacher probabilities need their own origin tag."
+          ]
+        },
+        {
+          "id": "niqe",
+          "url": "https://live.ece.utexas.edu/research/Quality/niqe_spl.pdf",
+          "read": "Exa 10000-character original PDF extract",
+          "quality": "Original NIQE authors' paper.",
+          "findings_verified": [
+            "NIQE uses deviations from natural-scene statistics and does not train on human opinion labels.",
+            "Paper explicitly states the natural-image model is violated by computer graphics as well as distortions."
+          ],
+          "inference": [
+            "NIQE is a diagnostic baseline, not proof that a clean chart/render deserves a low perceptual-quality grade.",
+            "Photo eligibility and perceptual quality need separate labels."
+          ]
+        },
+        {
+          "id": "reproducibility",
+          "url": "https://doi.org/10.1371/journal.pone.0269715",
+          "read": "Exa article extract plus search passages",
+          "quality": "Primary reproducibility study, detailed leakage demonstrations.",
+          "findings_verified": [
+            "Reports inflated IQA/VQA results from test leakage in multistage feature learning.",
+            "Discusses crops, frames and artificial variants sharing source content as leakage routes."
+          ],
+          "inference": [
+            "Split by source/family before feature fitting or sampling, and exclude independent human-test labels from all calibration decisions."
+          ]
+        },
+        {
+          "id": "rating_scales",
+          "url": "https://doi.org/10.1109/tbc.2010.2086750",
+          "read": "Exa DOI abstract and metadata/references; not full PDF",
+          "quality": "Primary controlled scale-comparison study; HD video, not still-image task-specific proof.",
+          "findings_verified": [
+            "Compared four discrete/continuous rating scales and reported no overall statistical differences."
+          ],
+          "inference": [
+            "No basis here for claiming that100possible values are inherently more accurate than5anchored categories.",
+            "Treat transfer from HD-video results to our photos as supporting evidence only."
+          ]
+        },
+        {
+          "id": "p4",
+          "url": "https://www.kennyshirley.com/papers/reibman_shirley_tian_2013.pdf",
+          "read": "Exa first8000characters of author PDF",
+          "quality": "Primary probabilistic preference predictor paper with held-out reference-content test.",
+          "findings_verified": [
+            "Models probability a random viewer prefers one image, rather than only deterministic ordering.",
+            "Separates point probability from uncertainty interval and notes individual viewers can disagree.",
+            "A fixed score-difference threshold for equality requires validation."
+          ],
+          "inference": [
+            "Keep tie/no-discernible-difference separate from cannot-assess; do not label all tiny MOS gaps as reliable strict preferences.",
+            "Predicted class probabilities, human disagreement and epistemic confidence are different fields."
+          ]
+        }
+      ],
+      "additional_search_evidence": [
+        {
+          "url": "https://doi.org/10.1109/tip.2019.2936103",
+          "title": "From Pairwise Comparisons and Rating to a Unified Quality Scale",
+          "read": "Exa search abstract",
+          "finding": "Probabilistic fusion framework for rating and pairwise experiments; study says scaling is necessary."
+        },
+        {
+          "url": "https://doi.org/10.2352/issn.2470-1173.2018.14.hvei-517",
+          "title": "The Relation Between MOS and Pairwise Comparisons and the Importance of Cross-Content Comparisons",
+          "read": "Extensive Exa search passages",
+          "finding": "Cross-content comparisons reduce confidence intervals and align content-dependent scales."
+        },
+        {
+          "url": "https://dl.acm.org/doi/10.1145/2072298.2071994",
+          "title": "A new analysis method for paired comparison and its application to3Dquality assessment",
+          "read": "Exa search abstract",
+          "finding": "Proposes tie-aware analysis; scope is3Dimages, not a universal best design."
+        }
+      ],
+      "recommendation": {
+        "canonical_human_observation": "One anchored integer grade1..5 per axis; technical quality first, aesthetics collected independently with its own anchors when required. Also an explicit unassessable/missing value, never a quality zero.",
+        "aggregation": "Retain every vote, per-image counts[1..5], n, mean and observed spread; fractional mean in[1,5] is derived, not another human response category. Do not round stored means to tenths. Display values can be rounded.",
+        "teacher_observation": "Store model/prompt/version/view and label_source. A teacher can emit one anchored grade; if retaining model-derived probabilities, mark them as model probabilities, not measured human-vote frequencies or confidence. Direct scalar scores are a competing pilot arm, not assumed better.",
+        "display_mapping": "0..100 display may be25*(mean1to5-1). If1..100 is a product requirement use1+99*(mean1to5-1)/4. Either is an affine transform and adds no information.",
+        "pairwise": "Optional targeted supervision/evaluation with A_better/B_better/no_discernible_difference/cannot_assess, randomized presentation side. Tie-aware analysis required if ties are retained. Do not derive strict wins from any nonzero MOS gap without uncertainty checks.",
+        "metrics": {
+          "labels": "Human ordinal votes, empirical rating distributions, aggregate MOS, preference outcomes. MOS means mean opinion score; DMOS meaning/direction must be checked for each source.",
+          "score_models": "PSNR/SSIM/LPIPS/DISTS are reference-based diagnostics; NIQE/BRISQUE are learned/statistical no-reference predictors. None are human labels just because they output a number.",
+          "model_evaluation": "SRCC/SROCC tests ranking; Kendall tau-b handles ordinal concordance with ties; PLCC measures linear association but not absolute calibration; MAE/RMSE measure numeric error on a common declared scale.",
+          "plan": [
+            "Primary held-out family-disjoint SRCC for technical quality and aesthetics separately, with source-family bootstrap intervals.",
+            "Report raw PLCC and calibrated MAE on the same scale. Fit any mapping on calibration/dev only, lock it before held-out evaluation; label benchmark-style post-fit PLCC separately.",
+            "Report per-source, per-defect, severity, content/style, and resolution slices; overall correlation can conceal failures.",
+            "Use held-out human pairwise agreement and probability calibration, split by same-content vs cross-content and near-tie cases. Check left/right order bias.",
+            "Use EMD/CDF distance only where empirical human-vote distributions exist and report number of raters.",
+            "Test quality-based filtering precision/recall at thresholds selected from use-case costs on development data; domain eligibility has separate metrics and does not enter photo-quality correlation.",
+            "Measure repeat-rater and split-half human reliability; do not call model disagreement confidence or a known human ceiling."
+          ]
+        },
+        "proposed_human_pilot": {
+          "status": "Planning proposal, not a literature-mandated minimum or sufficient-power claim.",
+          "images": 200,
+          "raters_per_image_per_axis": 5,
+          "axes": 2,
+          "scalar_decisions": 2000,
+          "additional_pairs": 100,
+          "ratings_per_pair": 5,
+          "pairwise_decisions": 500,
+          "repeat_fraction": 0.1,
+          "design": "Stratify photos across authentic and controlled defects, content/style and broad quality. Include attractive-but-defective and sharp-but-dull cases. Partition source families into calibration and held-out sets before selection. Five ratings are an initial screening budget; add raters for unstable means/distributions before treating them as gold. Present axes in separate randomized blocks to reduce anchoring."
+        },
+        "representation_decision_rule": "Use one frozen encoder/student architecture and identical splits/views to compare scalar regression to mean, ordered/distributional target, and mean-plus-pairwise loss. Compare paired bootstrap deltas on held-out rank, calibrated error, filtering outcomes and defect slices. Prefer the simpler representation when uncertainty spans no practically relevant gain. Select thresholds and practical margins before opening final test results. Do not promise an arbitrary SRCC target."
+      }
+    }
+  },
+  "source_index": [
+    {
+      "url": "http://www.cat.uab.cat/Public/Publications/2012/MMP2012/Murray2012.pdf",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "ava",
+          "method": "Exa fetch",
+          "quality": "Original authors aesthetic dataset paper and rating-distribution analysis.",
+          "status": "opened"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/1606.01621",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "aadb",
+          "read": "Original paper passages via Firecrawl plus Exa primary-paper excerpts",
+          "quality": "Original dataset, annotation protocol and model experiments.",
+          "claims": [
+            "AADB provides 10,000 photographic images, five raters per image, a 1–5 aesthetic rating, and 11 attributes.",
+            "Ratings are averaged then rescaled to [0,1] for training; this transformation does not change the rated construct.",
+            "Attributes include shallow depth of field and motion blur; their positive/negative/null labels express effect on aesthetics, not mere defect presence.",
+            "Attribute contribution depends on content; symmetry and repetition do not have negative labels in the protocol.",
+            "Nonphotographic images were excluded from the photo dataset, not assigned aesthetic zero."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/1709.05424",
+      "observations": [
+        {
+          "workstream": "eval",
+          "id": "nima",
+          "read": "Firecrawl abstract plus four body passages",
+          "quality": "Primary NIMA paper; architecture evidence, not proof it is optimal now.",
+          "findings_verified": [
+            "Predicts ordered rating distributions; derives mean and standard deviation.",
+            "Uses CDF-based Earth Mover loss and evaluates distributions separately from mean correlations.",
+            "Trains separate models for technical quality and aesthetics; paper notes crop changes can change composition."
+          ],
+          "inference": [
+            "Store vote counts and number of raters when available, so distributional training remains possible.",
+            "Do not invent a human-vote histogram from a mean alone; teacher probabilities need their own origin tag."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/1912.10088",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "paq2piq",
+          "read": "Original paper passages via Firecrawl",
+          "quality": "Original full-image and patch human quality study.",
+          "claims": [
+            "Local patch quality is related to, but not identical to, global image quality.",
+            "Equal distortion parameters across different content do not imply equal perceived quality.",
+            "Local-to-global prediction uses context; prominent damaged subjects can dominate overall judgement.",
+            "Do not inherit image-wide MOS blindly onto random training crops, or derive score directly from JPEG/blur severity."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2005.13983",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "unique",
+          "method": "Firecrawl research_read_paper",
+          "quality": "Original method authors; targeted full-text passages, not full paper read.",
+          "status": "opened_targeted"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2108.00201",
+      "observations": [
+        {
+          "workstream": "eval",
+          "id": "boosted",
+          "read": "Firecrawl abstract plus four body passages",
+          "quality": "Primary methodological and experimental paper; mostly controlled full-reference distortions, not broad NR photo aesthetics.",
+          "findings_verified": [
+            "Five-level ACR uses Bad1/Poor2/Fair3/Good4/Excellent5; MOS averages integer ratings.",
+            "Authors describe category interpretation differences, saturation and ordinal rather than equal perceptual interval scales.",
+            "Pairwise or triplet results require latent-scale reconstruction; very large differences with unanimous preferences are unstable for quantitative distance estimation.",
+            "General triplet reconstruction assumes one-dimensional additive perceptual distances."
+          ],
+          "inference": [
+            "Do not present a 0.1-point teacher score as demonstrated psychophysical precision; keep raw human votes and view conditions.",
+            "Use pairwise tasks for close calls, not to claim exact absolute score gaps."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/1910.06180v2",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "koniq-html",
+          "method": "Exa fetch",
+          "quality": "Original authors paper, but extraction returned mainly metadata/references.",
+          "status": "opened_partial"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2211.05215v2",
+      "observations": [
+        {
+          "workstream": "eval",
+          "id": "content_diverse",
+          "read": "Exa 11000-character article extract",
+          "quality": "Primary paper testing content-diverse pair/list comparisons.",
+          "findings_verified": [
+            "Authors test content-diverse pair and listwise comparisons and report improvements across benchmarks.",
+            "Same distortion type/severity can have different perceptual effects across content."
+          ],
+          "inference": [
+            "Generator parameter or severity index is not a human MOS; validate monotonic pairs and stratify by content."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2306.04717v2",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "agiqa",
+          "read": "Full paper via Exa",
+          "quality": "Original AGIQA-3K subjective experiment.",
+          "claims": [
+            "Two separate sliders collect perception and text-to-image alignment at 0–5 with 0.1 intervals.",
+            "The perception target explicitly includes technical issues, AI artifacts, deepfake issues and aesthetics. It is not a pure technical-quality label.",
+            "21 raters scored 2,982 images; individual/session score processing is used.",
+            "AI-generated origin does not imply low perceptual quality; image quality varies across generated samples."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2312.10240v2",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "richhf",
+          "read": "Original paper passages via Firecrawl",
+          "quality": "Original human-feedback dataset and model experiments.",
+          "claims": [
+            "Plausibility, alignment, aesthetics and overall quality are four separate 1–5 ratings.",
+            "Three annotators per image; scores are averaged and optionally transformed to [0,1] using (score-1)/4.",
+            "Spatial artifact and prompt-misalignment regions are distinct annotations.",
+            "FID/IS are distribution metrics, not individual-image labels."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2312.17090",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2501.11561",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2502.06476v2",
+      "observations": [
+        {
+          "workstream": "eval",
+          "id": "i isa",
+          "read": "Exa 11000-character article extract",
+          "quality": "Primary IISA paper and dataset design.",
+          "findings_verified": [
+            "Perceived quality changes with image scale: downsampling can hide degradation but also lose useful detail.",
+            "Dataset uses785images, repeated expert labels, and treats quality as a latent expectation estimated by finite human observations."
+          ],
+          "inference": [
+            "Label processed views, not only original image hashes; freeze display/resize/crop policy before gathering labels.",
+            "Human and teacher must inspect equivalent evidence."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2505.14460",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2510.11369",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2601.15356v5",
+      "observations": [
+        {
+          "workstream": "root",
+          "method": "Exa fetch",
+          "read": "Q-Probe methods, view/crop bias and local-defect context"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2601.20689",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2606.16082",
+      "observations": [
+        {
+          "workstream": "root",
+          "method": "Firecrawl research_read_paper arxiv:2606.16082",
+          "read": "Four targeted passages: tool/rubric ablations, 1-5 numeric output; not full paper"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/1910.06180",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "koniq",
+          "method": "Exa fetch",
+          "quality": "Original dataset authors; protocol and method experiments read.",
+          "status": "opened"
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/pdf/2609.20247",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "mosaiq",
+          "method": "Firecrawl research_read_paper then Exa fetch",
+          "quality": "Recent author preprint; methods and claims read; says release after acceptance, not a ready acquired source.",
+          "status": "opened"
+        }
+      ]
+    },
+    {
+      "url": "https://database.mmsp-kn.de/kadid-10k-database.html",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "kadid",
+          "method": "Firecrawl scrape",
+          "quality": "Dataset authors official documentation, explicit published dmos.csv direction.",
+          "status": "opened"
+        },
+        {
+          "workstream": "root",
+          "method": "Exa search and fetch",
+          "read": "Dataset scale direction and correction of KADIS/KADID rating attribution"
+        }
+      ]
+    },
+    {
+      "url": "https://database.mmsp-kn.de/uploads/1/1/9/4/119489445/saupe2024national.pdf",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "national",
+          "method": "Exa fetch",
+          "quality": "Original researcher analysis of KonIQ/KADID/NIVD with country-specific ordinal threshold models.",
+          "status": "opened"
+        }
+      ]
+    },
+    {
+      "url": "https://datasets.vqa.mmsp-kn.de/archives/papers/kadid10k.pdf",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "kadid-paper",
+          "method": "Exa fetch",
+          "quality": "Original authors paper; PDF reading order noisy but anchors and relative-reference protocol clear.",
+          "status": "opened"
+        }
+      ]
+    },
+    {
+      "url": "https://doi.org/10.1109/TIP.2015.2465145",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "siqad",
+          "read": "Primary abstract and paper search excerpts only; Firecrawl full text unavailable",
+          "quality": "Original screen-content quality study; limited to abstract-level verification.",
+          "claims": [
+            "SIQAD evaluates whole screen images and textual/pictorial regions using an 11-point numerical scale.",
+            "Screen content has a quality continuum; being a diagram or screen image is not equivalent to technical failure."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://doi.org/10.1109/tbc.2010.2086750",
+      "observations": [
+        {
+          "workstream": "eval",
+          "id": "rating_scales",
+          "read": "Exa DOI abstract and metadata/references; not full PDF",
+          "quality": "Primary controlled scale-comparison study; HD video, not still-image task-specific proof.",
+          "findings_verified": [
+            "Compared four discrete/continuous rating scales and reported no overall statistical differences."
+          ],
+          "inference": [
+            "No basis here for claiming that100possible values are inherently more accurate than5anchored categories.",
+            "Treat transfer from HD-video results to our photos as supporting evidence only."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://doi.org/10.1371/journal.pone.0269715",
+      "observations": [
+        {
+          "workstream": "eval",
+          "id": "reproducibility",
+          "read": "Exa article extract plus search passages",
+          "quality": "Primary reproducibility study, detailed leakage demonstrations.",
+          "findings_verified": [
+            "Reports inflated IQA/VQA results from test leakage in multistage feature learning.",
+            "Discusses crops, frames and artificial variants sharing source content as leakage routes."
+          ],
+          "inference": [
+            "Split by source/family before feature fitting or sampling, and exclude independent human-test labels from all calibration decisions."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Q-Future/Q-Align",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/aimerykong/deepImageAestheticsAnalysis",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "aadb_repo",
+          "read": "Official repository via Exa",
+          "quality": "Author implementation and dataset release.",
+          "claims": [
+            "Supports the AADB paper, rating and attribute release."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/chaofengc/Awesome-Image-Quality-Assessment",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "awesome",
+          "method": "Firecrawl scrape",
+          "quality": "Maintainer index; discovery only, primary papers used for claims.",
+          "status": "opened",
+          "notes": "README sections included NR, FR, IAA and datasets; commit 803594f0d2e3de24cc640e5d545b352834d7f2c1 visible."
+        },
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        },
+        {
+          "workstream": "scope",
+          "id": "seed",
+          "read": "README via Exa and Firecrawl",
+          "quality": "Maintained research index; discovery only, primary studies checked separately.",
+          "claims": [
+            "Distinct sections cover spatial-aware IQA, unified IQA, AIGC IQA, IAA, no-reference and full-reference assessment."
+          ]
+        },
+        {
+          "workstream": "eval",
+          "id": "seed",
+          "read": "Firecrawl Markdown; FR, Others, perceptual-similarity sections inspected",
+          "quality": "Maintainer-curated discovery list; not itself validation. Seed commit shown803594f0d2e3de24cc640e5d545b352834d7f2c1.",
+          "findings_verified": [
+            "FR branch links LPIPS, PieAPP, DISTS, SSIM, content-diverse comparisons; Others includes IISA and adversarial attacks."
+          ]
+        },
+        {
+          "workstream": "root",
+          "method": "Exa fetch",
+          "read": "README discovery map"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/google-research-datasets/richhf-18k",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "richhf_repo",
+          "read": "Official repository via Exa",
+          "quality": "Released data schema and author implementation.",
+          "claims": [
+            "17,760 released examples contain aesthetics_score, artifact_score, misalignment_score, overall_score, artifact_map, misalignment_map and prompt_misalignment_label.",
+            "All scores are higher-is-better, including artifact_score; preserve source naming and direction."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/thunderbolt215/ArtiMuse",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "artimuse_repo",
+          "read": "Official repository via Exa and link retrieval with Firecrawl",
+          "quality": "Author model release and dataset access instructions.",
+          "claims": [
+            "Dataset images require an access request and stated research/noncommercial terms in repository; inspect media terms separately from Hub metadata.",
+            "Paper checkpoints differ by score-finetuning dataset.",
+            "Exact Hugging Face repository links verified before metadata inspection."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/xuanyuzhang21/RALI",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/zhiyuanyou/DeQA-Score",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/Thunderbolt215215/ArtiMuse",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "hf_artimuse",
+          "read": "Hugging Face hub_repo_details",
+          "quality": "Primary model release metadata.",
+          "claims": [
+            "InternVL3-8B-based model, about 7,944.4M parameters, Apache-2.0 tag."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/Thunderbolt215215/ArtiMuse-10K",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "hf_artimuse_data",
+          "read": "Hugging Face hub_repo_details",
+          "quality": "Primary dataset metadata; image access terms still require repository review.",
+          "claims": [
+            "Official dataset repo has multimodal/image-aesthetics tags and JSON format."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/q-future/q-align-datasets",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "hf_qalign",
+          "read": "Hugging Face hub_repo_details",
+          "quality": "Primary release metadata only; no source-level licence conclusions inferred.",
+          "claims": [
+            "Repository exists; Hub metadata has MIT tag, but this is not a universal media licence."
+          ]
+        },
+        {
+          "workstream": "root",
+          "method": "Hugging Face hub_repo_details",
+          "read": "Release metadata only"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/papers/1709.05424.md",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        },
+        {
+          "workstream": "scope",
+          "id": "nima",
+          "canonical_url": "https://arxiv.org/html/1709.05424v2",
+          "read": "Full paper markdown via Firecrawl",
+          "quality": "Original paper and experiments.",
+          "claims": [
+            "Separate models are trained for high-level aesthetics and low-level technical quality.",
+            "AVA uses 1–10 ratings, around 200 raters per image, and full rating distributions.",
+            "TID2013 0–9 ratings derive from reference-assisted forced-choice experiments, so its raw target is not the same measurement protocol as an image-alone Likert question.",
+            "Predicted distribution mean and variance preserve more information than a hard class; model probabilities are not observed human vote counts."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/papers/2312.17090",
+      "observations": [
+        {
+          "workstream": "root",
+          "method": "Exa fetch",
+          "read": "Author release comments and entry-point example; noisy HTML extraction"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/papers/2501.11561.md",
+      "observations": [
+        {
+          "workstream": "root",
+          "method": "Firecrawl scrape",
+          "read": "DeQA primary paper methods and distribution motivation"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/papers/2507.14533.md",
+      "observations": [
+        {
+          "workstream": "scope",
+          "id": "artimuse",
+          "canonical_url": "https://arxiv.org/abs/2507.14533",
+          "read": "Full paper markdown via Firecrawl",
+          "quality": "Original expert annotation and supervised-model experiments; claimed gains are within its protocol.",
+          "claims": [
+            "Defines eight aesthetic attributes plus a holistic score; not six attributes.",
+            "Covers graphic design, 3D design, AIGC, photography, painting and calligraphy. These domains can have aesthetic merit.",
+            "Aesthetic dimensions include composition, visual structure, technical execution, originality, theme, emotion, gestalt and comprehensive evaluation.",
+            "Uses 101 learned score tokens for 0–100 with expected-value inference; this does not establish 100-category reliability for a generic VLM prompt.",
+            "Authors report a positive-assessment bias in MLLM annotation, motivating professional human evaluations."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/q-future/Q-ReAlign-Mini-0.8B/raw/main/README.md",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/q-future/one-align",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        },
+        {
+          "workstream": "root",
+          "method": "Hugging Face hub_repo_details",
+          "read": "Release metadata only"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/q-future/one-align/raw/dcc603b95aa0ebd82afa696d4a1e20d11fc80ddb/modeling_mplug_owl2.py",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/q-future/one-align/tree/main",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://live.ece.utexas.edu/publications/2006/hrs-transIP-06.pdf",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "live",
+          "method": "Exa fetch",
+          "quality": "Original authors evaluation study with detailed raw-score processing and realignment.",
+          "status": "opened"
+        }
+      ]
+    },
+    {
+      "url": "https://live.ece.utexas.edu/research/Quality/niqe_spl.pdf",
+      "observations": [
+        {
+          "workstream": "eval",
+          "id": "niqe",
+          "read": "Exa 10000-character original PDF extract",
+          "quality": "Original NIQE authors' paper.",
+          "findings_verified": [
+            "NIQE uses deviations from natural-scene statistics and does not train on human opinion labels.",
+            "Paper explicitly states the natural-image model is violated by computer graphics as well as distortions."
+          ],
+          "inference": [
+            "NIQE is a diagnostic baseline, not proof that a clean chart/render deserves a low perceptual-quality grade.",
+            "Photo eligibility and perceptual quality need separate labels."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Fang_Perceptual_Quality_Assessment_of_Smartphone_Photography_CVPR_2020_paper.pdf",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "spaq",
+          "method": "Exa fetch",
+          "quality": "CVPR original dataset paper; protocol and scale definitions.",
+          "status": "opened"
+        }
+      ]
+    },
+    {
+      "url": "https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Fang_Perceptual_Quality_Assessment_CVPR_2020_supplemental.pdf",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "spaq-supp",
+          "method": "Exa fetch",
+          "quality": "Authors supplement with rater instructions and QC procedures.",
+          "status": "opened"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Q-Future/Q-Align/main/q_align/evaluate/scorer.py",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Q-Future/Q-ReAlign/main/qalign/levels.py",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Q-Future/Q-ReAlign/main/qalign/prompts.py",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Q-Future/Q-ReAlign/main/qalign/scorer.py",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/bytedance/Q-Insight/main/src/eval/demo_score.py",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/chaofengc/Awesome-Image-Quality-Assessment/main/README.md",
+      "observations": [
+        {
+          "workstream": "root",
+          "method": "Firecrawl scrape maxAge=0",
+          "read": "Fresh README including Agentic IQA and source links; index claims checked separately"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/xuanyuzhang21/RALI/main/demo_rali_score.py",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zhiyuanyou/DeQA-Score/main/build_soft_labels/gen_soft_label.py",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zhiyuanyou/DeQA-Score/main/src/evaluate/scorer.py",
+      "observations": [
+        {
+          "workstream": "models",
+          "read": "See workstream evidence"
+        }
+      ]
+    },
+    {
+      "url": "https://richzhang.github.io/PerceptualSimilarity/",
+      "observations": [
+        {
+          "workstream": "eval",
+          "id": "lpips",
+          "read": "Exa full short project page",
+          "quality": "Original authors' LPIPS/BAPPS project page.",
+          "findings_verified": [
+            "Task is human perceptual similarity and deep-feature distance between images, rather than reference-free absolute technical-quality grading."
+          ],
+          "inference": [
+            "LPIPS can diagnose changes to a common reference; it should not supply universal raw-photo quality labels."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://vqeg.org/umbraco/surface/FolderList/GetFile?directory=2009_05_DT_Germany&filename=VQEG_JEG_6_24_09_08_RatingScales.pdf&m=0&pageId=1669",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "scale-comparison",
+          "method": "Exa fetch",
+          "quality": "Original experiment presentation at VQEG, preliminary conclusions, 24 viewers per experiment and 128 processed HD videos; limited transfer to still photos.",
+          "status": "opened"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cl.cam.ac.uk/~rkm38/pdfs/mikhailiuk2018tid_psych_scaling.pdf",
+      "observations": [
+        {
+          "workstream": "eval",
+          "id": "tid_scaling",
+          "read": "Exa 10000-character primary PDF extract",
+          "quality": "Primary TID2013 reanalysis and added validation experiments.",
+          "findings_verified": [
+            "Original within-content comparison graphs had25disconnected components and no pristine-reference comparisons.",
+            "Cross-content and reference comparisons plus psychometric scaling improved consistency; averaging wins is not equivalent to a shared latent quality scale."
+          ],
+          "inference": [
+            "Keep distortion families intact in splits, but connect contents in an independent pairwise evaluation panel.",
+            "Pairwise-only synthetic supervision without cross-content anchors cannot by itself specify a global 1–5 scale."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.cl.cam.ac.uk/~rkm38/pdfs/perezortiz2019unified_quality_scale.pdf",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "unified-scale",
+          "method": "Exa fetch",
+          "quality": "Authors peer-reviewed method combining ratings and pairwise comparisons; original experiments.",
+          "status": "opened"
+        }
+      ]
+    },
+    {
+      "url": "https://www.itu.int/epublications/publication/itu-t-p-910-2023-10-subjective-video-quality-assessment-methods-for-multimedia-applications",
+      "observations": [
+        {
+          "workstream": "scales",
+          "id": "itu",
+          "method": "Exa fetch then Firecrawl directQuote query",
+          "quality": "Official standard. Covers multimedia/video methods with explicit still-image considerations; precision examples are not a universal image guarantee.",
+          "status": "opened_targeted"
+        }
+      ]
+    },
+    {
+      "url": "https://www.kennyshirley.com/papers/reibman_shirley_tian_2013.pdf",
+      "observations": [
+        {
+          "workstream": "eval",
+          "id": "p4",
+          "read": "Exa first8000characters of author PDF",
+          "quality": "Primary probabilistic preference predictor paper with held-out reference-content test.",
+          "findings_verified": [
+            "Models probability a random viewer prefers one image, rather than only deterministic ordering.",
+            "Separates point probability from uncertainty interval and notes individual viewers can disagree.",
+            "A fixed score-difference threshold for equality requires validation."
+          ],
+          "inference": [
+            "Keep tie/no-discernible-difference separate from cannot-assess; do not label all tiny MOS gaps as reliable strict preferences.",
+            "Predicted class probabilities, human disagreement and epistemic confidence are different fields."
+          ]
+        }
+      ]
+    }
+  ]
+}

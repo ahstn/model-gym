@@ -1,0 +1,19 @@
+{
+  "decisions": {
+    "evidence_corrected": 3,
+    "retained": 2,
+    "score_and_evidence_corrected": 7
+  },
+  "observations": 12,
+  "review_id": "label-pilot-12-assistant-review-v1-2026-10-18",
+  "review_plan_sha256": "de46aa19493f0e507d7fd6275a0cbafa530a901f031f78d95685bfea27901ba2",
+  "review_status": "pending_human_review",
+  "reviewed_observations_sha256": "3464f9a7c3f0fa2824d50779e99a61df2d92fe92e629620b226883dfd14206bc",
+  "rubric_sha256": "1eb3ba4333b6651fa5ecaceb2305c9f28cc4516e851683e9de0caa871a9f1858",
+  "schema_version": "label-review-report-v1",
+  "scored": 12,
+  "source_observations_sha256": "153a1e5df5317ed890e49e0435d769f2eaac35480a66d6b8aacbfc5df6a950d4",
+  "source_run_id": "08d02f26720b16eb16419f4fbedb3f460f8128db13fc8f0e813f98c1ab2d2ceb",
+  "source_views_sha256": "1514b1167207a0ab6b319ed9e83351d971091f911da1a8f6468468453c43cb9a",
+  "training_ready": false
+}

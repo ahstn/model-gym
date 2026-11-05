@@ -1,8 +1,8 @@
 # Visual quality docs
 
-This folder stores research notes for image quality (IQA), image aesthetics (IAA), and video quality (VQA) models. It covers existing models, datasets, training methods, and evaluation. The goal is to re-train or improve [Q-ReAlign](https://github.com/Q-Future/Q-ReAlign) and compare it fairly with other assessors.
+The [photo-labeling workspace](../labeling/README.md) is the current source for model routes, two-score prompts, eligibility decisions, corpus records and review rules. GPT-6 Luna and DeepSeek form the working teacher mean. Liquid and Jev remain comparison and eligibility-review models. All recorded labels are pending review before training.
 
-Last verified: 2026-09-27
+The [prompt and labeling summary](training/synthetic-label-prompts.md) records the current decisions and their evidence. Model, dataset and evaluation research below provides background for the next dataset and training work; historical experiments are not alternative active labeling setups.
 
 ## Index
 
@@ -12,14 +12,25 @@ Last verified: 2026-09-27
 | Models | [models/iaa.md](models/iaa.md) | Aesthetics models. PLCC / SRCC on AVA, TAD66K, PARA, ArtiMuse-10K. |
 | Models | [models/vqa.md](models/vqa.md) | Video quality models: natural UGC, AI-generated video, HDR. |
 | Models | [models/unified-and-backbones.md](models/unified-and-backbones.md) | Unified LMM assessors (Q-Align, Q-ReAlign, UniPercept) and VLM backbones to fine-tune. |
+| Models | [models/backbone-refresh-2026-10-30.md](models/backbone-refresh-2026-10-30.md) | Six-round Exa/HF refresh of 9–12B checkpoints, new releases, MMMU-Pro/perception evidence, and proposed training shortlist. |
 | Datasets | [datasets/iqa.md](datasets/iqa.md) | IQA datasets: synthetic, authentic, AIGC, instruction data. |
+| Datasets | [datasets/candidate-review-2026-10-15.md](datasets/candidate-review-2026-10-15.md) | Candidate ranking, Kaggle release checks, UHD/AU refresh, and component coverage audit. |
+| Datasets | [datasets/inventory-and-adoption-review-2026-10-29.md](datasets/inventory-and-adoption-review-2026-10-29.md) | Acquired image/label inventory, missing human aesthetics and partial-edit supervision, and prioritized additions. |
+| Datasets | [datasets/iqa-collection-coverage-2026-10-15.md](datasets/iqa-collection-coverage-2026-10-15.md) | All 31 supported collection entries, prior catalogue gaps, source terms, and task-specific priorities. |
+| Datasets | [datasets/low-quality-and-controls.md](datasets/low-quality-and-controls.md) | Authentic faults, controlled damage, diagram/CG controls, and proposed 10K/250K sampling plans. |
+| Datasets | [datasets/pilot-10k-assembly.md](datasets/pilot-10k-assembly.md) | Completed local pilot: source snapshots, image counts, manifest hashes, verification, and pending label work. |
 | Datasets | [datasets/iaa.md](datasets/iaa.md) | Aesthetics and preference datasets. |
 | Datasets | [datasets/vqa.md](datasets/vqa.md) | Video quality datasets: UGC, streaming, HDR, AIGC video. |
 | Training | [training/methods.md](training/methods.md) | Training-method papers and what to borrow. |
+| Training | [training/pilot-preflight-2026-09-29.md](training/pilot-preflight-2026-09-29.md) | Exa and ultra-agent audit: compact students, actual label/split gaps, added evaluation probes, and the first-run gate. |
 | Training | [training/data-mixture-evidence.md](training/data-mixture-evidence.md) | Controlled evidence that adding or choosing data helps or hurts. |
+| Training | [../labeling/README.md](../labeling/README.md) | Current photo-labeling configuration, records and review policy. |
+| Training | [training/synthetic-label-prompts.md](training/synthetic-label-prompts.md) | Current two-score prompts, eligibility rules and the reasons for their selection. |
 | Training | [training/experiment-plan.md](training/experiment-plan.md) | Staged experiment plan and compute assumptions. |
+| Training | [training/corpus-size-estimate-2026-10-31.md](training/corpus-size-estimate-2026-10-31.md) | Proposed 50K source-family corpus, fixed holdouts, learning curves, human evaluation and teacher-label cost estimate. |
 | Evaluation | [evaluation/protocol.md](evaluation/protocol.md) | Metrics, split rules, calibration, and the Q-ReAlign code audit. |
 | Evaluation | [evaluation/benchmarks.md](evaluation/benchmarks.md) | Diagnostic benchmarks and the standard held-out test suite. |
+| Library | [papers.md](papers.md) | Papers of interest, source identifiers, reading notes, and relevance to the pilot. |
 
 ## Quick summary
 
@@ -41,7 +52,7 @@ Found during the 2026-09-27 checks. Details and links are in each file.
 | Q-Align, DOVER, Q-Instruct, Co-Instruct, DIVIDE-MaxWell | Repos use S-Lab License 1.0 (non-commercial). HF cards say MIT or Apache-2.0. | The licenses conflict. Treat as non-commercial until the authors clarify. |
 | Datasets | Many are research-only or by request: SPAQ, PARA, PIQ23, DiffIQA, ArtiMuse-10K (full), FineVD, VGA-Bench data (CC BY-NC 4.0), BrightVQ (CC BY-NC-SA 4.0), LongVQUBench (CC BY-NC-SA 4.0). | A model trained on them may inherit use limits. Check before any commercial release. |
 | Q-ReAlign training mix | Only AGIQA-20K is clearly permissive. SPAQ is research-only. The Q-Align label JSONs are S-Lab (non-commercial). KonIQ, KADID, AVA, LSVQ have no formal license. MIT tags on HF mirrors do not relicense the source data. | Fine for research and evaluation. A shipped model needs permission or a clean-data mix. See [datasets/iqa.md section 6.1](datasets/iqa.md#61-license-verdict-for-the-whole-q-realign-training-mix). |
-| Open exceptions | AIGIQA-20K (Apache-2.0 on ModelScope), UHD-IQA images (CC0), MSC (CC0), Waterloo SQoE-III/IV (CC BY 4.0), JPEG AIC2026 (CC BY-SA 4.0). | Still check media rights for each source. |
+| Open exceptions | AIGIQA-20K (Apache-2.0 on ModelScope), UHD-IQA images (CC0), MSC release (CC0, but images include CC BY/CC BY-SA), Waterloo SQoE-III/IV (CC BY 4.0), JPEG AIC2026 (CC BY-SA 4.0). | Keep source-image terms. The [low-quality and control study](datasets/low-quality-and-controls.md) adds SIDD, RealBlur, PlotQA, and CLEVR with explicit dataset terms. |
 
 ## Corrections to the earlier dossiers
 

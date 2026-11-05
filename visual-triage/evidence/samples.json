@@ -1,0 +1,1323 @@
+{
+  "version": 1,
+  "pilot_manifest_sha256": "c8bc9fa7b796239739b2f7a00cd99e2051342c382ec179867658d1b702246a53",
+  "selection": "First sorted parent per distortion operator; 3 VizWiz rows per recognizability stratum; 2 per control source; AGIQA normal_000 from each generator.",
+  "delivery": "EXIF transpose, RGB, full frame, max edge 512, no upscaling, JPEG quality 92 subsampling 0; no metadata sent to models",
+  "samples": [
+    {
+      "id": "sample-000",
+      "image": "data/images/sample-000.jpg",
+      "source": {
+        "id": "megalith-022cd779510bc6e08b27f6d474f7aa0c",
+        "component": "megalith",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": "https://megalith-8m.s3.us-west-2.amazonaws.com/images/de339bb1-c89a-569e-b0d7-b14b0260b49b.jpeg",
+        "source_revision": "3aa3a5760d944af63939db9eaf94fdd6c68af888",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1434820,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {
+          "aesthetic_score": {
+            "calibration": "Not established by this builder",
+            "human_ground_truth": false,
+            "kind": "source_model_score",
+            "source_revision": "3aa3a5760d944af63939db9eaf94fdd6c68af888",
+            "value": 10
+          }
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-022cd779510bc6e08b27f6d474f7aa0c",
+        "pilot_split": "train"
+      },
+      "original_sha256": "652d8e67943c079fe69b44faa4a30ebda717a79328e6e4b67cc356866f57cd18",
+      "delivered_sha256": "8423bb67fc04e99f744ea867eb28d197a05257c17c1d150bc4e5745ab14787b1",
+      "original_size": [
+        5472,
+        3080
+      ],
+      "delivered_size": [
+        512,
+        288
+      ],
+      "delivered_bytes": 27156
+    },
+    {
+      "id": "sample-001",
+      "image": "data/images/sample-001.jpg",
+      "source": {
+        "id": "distortion-0eebac0c6406b6f4e473c441",
+        "component": "distortions",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": null,
+        "source_revision": "photo-distortions-v1",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1434820,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {},
+        "parent_id": "megalith-022cd779510bc6e08b27f6d474f7aa0c",
+        "transform": {
+          "operator": "gaussian_blur",
+          "parameters": {
+            "radius_pixels": 1.6895
+          },
+          "seed": 17331035728193832912,
+          "severity_index": 1,
+          "software": {
+            "numpy": "2.5.3",
+            "pillow": "12.3.0"
+          },
+          "version": "photo-distortions-v1"
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-022cd779510bc6e08b27f6d474f7aa0c",
+        "pilot_split": "train"
+      },
+      "original_sha256": "5e24ab58cdcbed59fcb42181e6938ff69b77f64d3154fbd631bbf5d327cf6c2e",
+      "delivered_sha256": "e72a1945be5840cc4519b6ba336ec54e874af880118c823c0859d69680cbb2f8",
+      "original_size": [
+        1536,
+        865
+      ],
+      "delivered_size": [
+        512,
+        288
+      ],
+      "delivered_bytes": 24418
+    },
+    {
+      "id": "sample-002",
+      "image": "data/images/sample-002.jpg",
+      "source": {
+        "id": "distortion-c86fdab29a7d3337ea84cb42",
+        "component": "distortions",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": null,
+        "source_revision": "photo-distortions-v1",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1434820,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {},
+        "parent_id": "megalith-022cd779510bc6e08b27f6d474f7aa0c",
+        "transform": {
+          "operator": "gaussian_blur",
+          "parameters": {
+            "radius_pixels": 5.0684
+          },
+          "seed": 17331035728193832912,
+          "severity_index": 2,
+          "software": {
+            "numpy": "2.5.3",
+            "pillow": "12.3.0"
+          },
+          "version": "photo-distortions-v1"
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-022cd779510bc6e08b27f6d474f7aa0c",
+        "pilot_split": "train"
+      },
+      "original_sha256": "239b2becd557743f266bc1468ae8a9cf464048da8d9d3ea6b897ea36a7141db2",
+      "delivered_sha256": "c0220505cad575d542329ee112f344d20e129704897829ce1b8cda3933cd604b",
+      "original_size": [
+        1536,
+        865
+      ],
+      "delivered_size": [
+        512,
+        288
+      ],
+      "delivered_bytes": 17380
+    },
+    {
+      "id": "sample-003",
+      "image": "data/images/sample-003.jpg",
+      "source": {
+        "id": "distortion-cce62d74c81ec5f55a86b0c5",
+        "component": "distortions",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": null,
+        "source_revision": "photo-distortions-v1",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1434820,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {},
+        "parent_id": "megalith-022cd779510bc6e08b27f6d474f7aa0c",
+        "transform": {
+          "operator": "gaussian_blur",
+          "parameters": {
+            "radius_pixels": 13.5156
+          },
+          "seed": 17331035728193832912,
+          "severity_index": 3,
+          "software": {
+            "numpy": "2.5.3",
+            "pillow": "12.3.0"
+          },
+          "version": "photo-distortions-v1"
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-022cd779510bc6e08b27f6d474f7aa0c",
+        "pilot_split": "train"
+      },
+      "original_sha256": "e6b2a7710936e08452413f5d033e7c0d5071906ce48e6133aaf648c3638968ba",
+      "delivered_sha256": "74be4487750385b97b00e82b793353f1513236063dd87016b10dcb1fe8a426d7",
+      "original_size": [
+        1536,
+        865
+      ],
+      "delivered_size": [
+        512,
+        288
+      ],
+      "delivered_bytes": 12360
+    },
+    {
+      "id": "sample-004",
+      "image": "data/images/sample-004.jpg",
+      "source": {
+        "id": "megalith-0185ba0f9b2f07fbde5955b7ce4615da",
+        "component": "megalith",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": "https://megalith-8m.s3.us-west-2.amazonaws.com/images/a9fc0690-8a78-5d47-a10d-96814111a6e3.jpeg",
+        "source_revision": "3aa3a5760d944af63939db9eaf94fdd6c68af888",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1435754,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {
+          "aesthetic_score": {
+            "calibration": "Not established by this builder",
+            "human_ground_truth": false,
+            "kind": "source_model_score",
+            "source_revision": "3aa3a5760d944af63939db9eaf94fdd6c68af888",
+            "value": 8
+          }
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-0185ba0f9b2f07fbde5955b7ce4615da",
+        "pilot_split": "train"
+      },
+      "original_sha256": "88a96264c17ff19e63213be1ca6671d1bf025d79bcf4dd7574f45cb8befcf8d1",
+      "delivered_sha256": "d0dea15e2088b7f1f0d49a3f0e50b9bb4fb637d74aa50d28be6a6f152d69836f",
+      "original_size": [
+        4608,
+        3456
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 72961
+    },
+    {
+      "id": "sample-005",
+      "image": "data/images/sample-005.jpg",
+      "source": {
+        "id": "distortion-9b12bf653aaab3e7b04ad008",
+        "component": "distortions",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": null,
+        "source_revision": "photo-distortions-v1",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1435754,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {},
+        "parent_id": "megalith-0185ba0f9b2f07fbde5955b7ce4615da",
+        "transform": {
+          "operator": "gaussian_noise",
+          "parameters": {
+            "sigma_8bit": 5.0
+          },
+          "seed": 16011867147453501961,
+          "severity_index": 1,
+          "software": {
+            "numpy": "2.5.3",
+            "pillow": "12.3.0"
+          },
+          "version": "photo-distortions-v1"
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-0185ba0f9b2f07fbde5955b7ce4615da",
+        "pilot_split": "train"
+      },
+      "original_sha256": "daf2d343c7ae8a29c69cc3cb8dc4d34274be981bbb89761e76c45cdc4fedd311",
+      "delivered_sha256": "6bf75cac145ffa8b724e98853bbbcf2d254af4eb4dfe209f375270143515e88a",
+      "original_size": [
+        1536,
+        1152
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 77407
+    },
+    {
+      "id": "sample-006",
+      "image": "data/images/sample-006.jpg",
+      "source": {
+        "id": "distortion-4c7658b337e379fedf74cd75",
+        "component": "distortions",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": null,
+        "source_revision": "photo-distortions-v1",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1435754,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {},
+        "parent_id": "megalith-0185ba0f9b2f07fbde5955b7ce4615da",
+        "transform": {
+          "operator": "gaussian_noise",
+          "parameters": {
+            "sigma_8bit": 15.0
+          },
+          "seed": 16011867147453501961,
+          "severity_index": 2,
+          "software": {
+            "numpy": "2.5.3",
+            "pillow": "12.3.0"
+          },
+          "version": "photo-distortions-v1"
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-0185ba0f9b2f07fbde5955b7ce4615da",
+        "pilot_split": "train"
+      },
+      "original_sha256": "7f1ef513f654d15ad9a97bc6e02e1361ccef552450304596fbe6419d1407c440",
+      "delivered_sha256": "eb685a2e1c25711a81090386bee7ca2b59dfb117abf638551cb7d9a467374399",
+      "original_size": [
+        1536,
+        1152
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 94747
+    },
+    {
+      "id": "sample-007",
+      "image": "data/images/sample-007.jpg",
+      "source": {
+        "id": "distortion-f9e8c2f4111c7f28e7afa3b0",
+        "component": "distortions",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": null,
+        "source_revision": "photo-distortions-v1",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1435754,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {},
+        "parent_id": "megalith-0185ba0f9b2f07fbde5955b7ce4615da",
+        "transform": {
+          "operator": "gaussian_noise",
+          "parameters": {
+            "sigma_8bit": 35.0
+          },
+          "seed": 16011867147453501961,
+          "severity_index": 3,
+          "software": {
+            "numpy": "2.5.3",
+            "pillow": "12.3.0"
+          },
+          "version": "photo-distortions-v1"
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-0185ba0f9b2f07fbde5955b7ce4615da",
+        "pilot_split": "train"
+      },
+      "original_sha256": "d7bd4c32a41892df106dfc7fa2ef5eeb3388bde92853e58ecb8f337cee230401",
+      "delivered_sha256": "a197dceeba766384c777ad83e119a98e5bf11ea8b1f9212cd493595e7066e9c0",
+      "original_size": [
+        1536,
+        1152
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 155639
+    },
+    {
+      "id": "sample-008",
+      "image": "data/images/sample-008.jpg",
+      "source": {
+        "id": "megalith-000ddae4f64fcd612132c0119c417c52",
+        "component": "megalith",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": "https://megalith-8m.s3.us-west-2.amazonaws.com/images/2d0ac5d2-5439-58d8-8878-6e43a30a9738.jpeg",
+        "source_revision": "3aa3a5760d944af63939db9eaf94fdd6c68af888",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1391130,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {
+          "aesthetic_score": {
+            "calibration": "Not established by this builder",
+            "human_ground_truth": false,
+            "kind": "source_model_score",
+            "source_revision": "3aa3a5760d944af63939db9eaf94fdd6c68af888",
+            "value": 8
+          }
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-000ddae4f64fcd612132c0119c417c52",
+        "pilot_split": "train"
+      },
+      "original_sha256": "0c14f45ca27ae0e53f694da9fe8d62eb95401e32cd6c2a76fb9ed6e9a6dd8d01",
+      "delivered_sha256": "6736fcab36a22aa9fc57cf0830ab1caf040981e51b8feb1c787ada6c62a9b316",
+      "original_size": [
+        2288,
+        1712
+      ],
+      "delivered_size": [
+        512,
+        383
+      ],
+      "delivered_bytes": 62656
+    },
+    {
+      "id": "sample-009",
+      "image": "data/images/sample-009.jpg",
+      "source": {
+        "id": "distortion-05645950b473fbbb23bbe2ac",
+        "component": "distortions",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": null,
+        "source_revision": "photo-distortions-v1",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1391130,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {},
+        "parent_id": "megalith-000ddae4f64fcd612132c0119c417c52",
+        "transform": {
+          "operator": "jpeg_compression",
+          "parameters": {
+            "quality": 70,
+            "subsampling": 2
+          },
+          "seed": 11159618966231318795,
+          "severity_index": 1,
+          "software": {
+            "numpy": "2.5.3",
+            "pillow": "12.3.0"
+          },
+          "version": "photo-distortions-v1"
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-000ddae4f64fcd612132c0119c417c52",
+        "pilot_split": "train"
+      },
+      "original_sha256": "607a9e17d4f3df74d1a5d5d3c05b8c3c065f933c97621f82050c4a585b6b1d73",
+      "delivered_sha256": "bad9dc8b8aecac257050c8b432bd2fcdc0d1da62073e4da835f3947de24ccc39",
+      "original_size": [
+        1536,
+        1149
+      ],
+      "delivered_size": [
+        512,
+        383
+      ],
+      "delivered_bytes": 62529
+    },
+    {
+      "id": "sample-010",
+      "image": "data/images/sample-010.jpg",
+      "source": {
+        "id": "distortion-39a17d7d21697a40945c7268",
+        "component": "distortions",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": null,
+        "source_revision": "photo-distortions-v1",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1391130,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {},
+        "parent_id": "megalith-000ddae4f64fcd612132c0119c417c52",
+        "transform": {
+          "operator": "jpeg_compression",
+          "parameters": {
+            "quality": 30,
+            "subsampling": 2
+          },
+          "seed": 11159618966231318795,
+          "severity_index": 2,
+          "software": {
+            "numpy": "2.5.3",
+            "pillow": "12.3.0"
+          },
+          "version": "photo-distortions-v1"
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-000ddae4f64fcd612132c0119c417c52",
+        "pilot_split": "train"
+      },
+      "original_sha256": "bdc9212b4d9430ea86afe0aa99ea08b23e2327abd5bbcd0b1125a31fb14d9256",
+      "delivered_sha256": "3c2b773e6da01ff7617a71973cdfbe48c60ceee167da3855d908e2b9ee432b85",
+      "original_size": [
+        1536,
+        1149
+      ],
+      "delivered_size": [
+        512,
+        383
+      ],
+      "delivered_bytes": 61160
+    },
+    {
+      "id": "sample-011",
+      "image": "data/images/sample-011.jpg",
+      "source": {
+        "id": "distortion-e2d872a2ddaf929fb696df68",
+        "component": "distortions",
+        "source_url": "https://huggingface.co/datasets/Spawning/megalith-cc0",
+        "download_url": null,
+        "source_revision": "photo-distortions-v1",
+        "license": {
+          "attribution": "Original creator absent from source metadata; CC0 requires no attribution",
+          "evidence_path": "sources/megalith/metadata/README.md",
+          "id": "CC0-1.0",
+          "row_evidence": {
+            "global_row_index": 1391130,
+            "shard": "megalith-cc0.part05.parquet"
+          },
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        "source_labels": {},
+        "parent_id": "megalith-000ddae4f64fcd612132c0119c417c52",
+        "transform": {
+          "operator": "jpeg_compression",
+          "parameters": {
+            "quality": 8,
+            "subsampling": 2
+          },
+          "seed": 11159618966231318795,
+          "severity_index": 3,
+          "software": {
+            "numpy": "2.5.3",
+            "pillow": "12.3.0"
+          },
+          "version": "photo-distortions-v1"
+        },
+        "content_kind": "photo",
+        "split_group": "megalith-000ddae4f64fcd612132c0119c417c52",
+        "pilot_split": "train"
+      },
+      "original_sha256": "23971dbf6e027b4cb8b3dc10eb32ef8d388921f0d3ed57c9f9ee40f08717ad10",
+      "delivered_sha256": "d53138bb0c67d1e20b28b82e5927afb5c8ad63d22060f851febda66f68dc6ae7",
+      "original_size": [
+        1536,
+        1149
+      ],
+      "delivered_size": [
+        512,
+        383
+      ],
+      "delivered_bytes": 53813
+    },
+    {
+      "id": "sample-012",
+      "image": "data/images/sample-012.jpg",
+      "source": {
+        "id": "vizwiz:VizWiz_train_00000011.jpg",
+        "component": "vizwiz",
+        "source_url": "https://vizwiz.org/tasks-and-datasets/image-quality-issues/",
+        "download_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/images/train.zip#train/VizWiz_train_00000011.jpg",
+        "source_revision": "annotations:736265e64805685d8595bc43c01364e8e51efae2;media-etag:\"2a1703b5e-59afdc1e58080\"",
+        "license": {
+          "attribution": "VizWiz-Captions: Danna Gurari, Yinan Zhao, Meng Zhang, Nilavra Bhattacharya (ECCV 2020); contributing VizWiz photographers.",
+          "evidence_path": "sources/vizwiz/evidence/provenance.json",
+          "id": "CC-BY-4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source_labels": {
+          "annotation_license": "MIT (official repository)",
+          "human_flaw_votes": {
+            "BLR": 2,
+            "BRT": 1,
+            "DRK": 1,
+            "FRM": 2,
+            "NON": 0,
+            "OBS": 4,
+            "OTH": 0,
+            "ROT": 1
+          },
+          "human_unrecognizable_votes": 0,
+          "raters": 5,
+          "selection": "At least 3/5 votes for one named defect, with fewer than 3/5 no-flaw votes; balanced dominant defects."
+        },
+        "content_kind": "photo",
+        "split_group": "vizwiz:VizWiz_train_00000011.jpg",
+        "pilot_split": "train"
+      },
+      "original_sha256": "222d39b56338197c88428b6e6b0e7aad35bd843a48aa9a550d9daadfb2a3f438",
+      "delivered_sha256": "7495aeb46067bd7e6ebc40663e08339299d51b1c48c90527d2fd62c8be81f5d6",
+      "original_size": [
+        1224,
+        1632
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 50309
+    },
+    {
+      "id": "sample-013",
+      "image": "data/images/sample-013.jpg",
+      "source": {
+        "id": "vizwiz:VizWiz_train_00000058.jpg",
+        "component": "vizwiz",
+        "source_url": "https://vizwiz.org/tasks-and-datasets/image-quality-issues/",
+        "download_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/images/train.zip#train/VizWiz_train_00000058.jpg",
+        "source_revision": "annotations:736265e64805685d8595bc43c01364e8e51efae2;media-etag:\"2a1703b5e-59afdc1e58080\"",
+        "license": {
+          "attribution": "VizWiz-Captions: Danna Gurari, Yinan Zhao, Meng Zhang, Nilavra Bhattacharya (ECCV 2020); contributing VizWiz photographers.",
+          "evidence_path": "sources/vizwiz/evidence/provenance.json",
+          "id": "CC-BY-4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source_labels": {
+          "annotation_license": "MIT (official repository)",
+          "human_flaw_votes": {
+            "BLR": 0,
+            "BRT": 0,
+            "DRK": 0,
+            "FRM": 3,
+            "NON": 1,
+            "OBS": 0,
+            "OTH": 0,
+            "ROT": 2
+          },
+          "human_unrecognizable_votes": 0,
+          "raters": 5,
+          "selection": "At least 3/5 votes for one named defect, with fewer than 3/5 no-flaw votes; balanced dominant defects."
+        },
+        "content_kind": "photo",
+        "split_group": "vizwiz:VizWiz_train_00000058.jpg",
+        "pilot_split": "train"
+      },
+      "original_sha256": "1c2321d2485e4bb93a5d23b149898725bf0a0094d495d6f2a9b2491bd0f2b826",
+      "delivered_sha256": "01275f7a063e38c95b96979eafe757eff6fff47c6d06cb0e64a6de7ebb402958",
+      "original_size": [
+        1224,
+        1632
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 70141
+    },
+    {
+      "id": "sample-014",
+      "image": "data/images/sample-014.jpg",
+      "source": {
+        "id": "vizwiz:VizWiz_train_00000121.jpg",
+        "component": "vizwiz",
+        "source_url": "https://vizwiz.org/tasks-and-datasets/image-quality-issues/",
+        "download_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/images/train.zip#train/VizWiz_train_00000121.jpg",
+        "source_revision": "annotations:736265e64805685d8595bc43c01364e8e51efae2;media-etag:\"2a1703b5e-59afdc1e58080\"",
+        "license": {
+          "attribution": "VizWiz-Captions: Danna Gurari, Yinan Zhao, Meng Zhang, Nilavra Bhattacharya (ECCV 2020); contributing VizWiz photographers.",
+          "evidence_path": "sources/vizwiz/evidence/provenance.json",
+          "id": "CC-BY-4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source_labels": {
+          "annotation_license": "MIT (official repository)",
+          "human_flaw_votes": {
+            "BLR": 1,
+            "BRT": 0,
+            "DRK": 0,
+            "FRM": 1,
+            "NON": 0,
+            "OBS": 4,
+            "OTH": 0,
+            "ROT": 1
+          },
+          "human_unrecognizable_votes": 1,
+          "raters": 5,
+          "selection": "At least 3/5 votes for one named defect, with fewer than 3/5 no-flaw votes; balanced dominant defects."
+        },
+        "content_kind": "photo",
+        "split_group": "vizwiz:VizWiz_train_00000121.jpg",
+        "pilot_split": "train"
+      },
+      "original_sha256": "d19e8696c8d7da4dde7020c7b2bacf6d65d56b73deb40af04d89f3c1e9cffb5e",
+      "delivered_sha256": "75f4011ba23518ab262c7dc9331cecf9943334a56655f2f847c866b8fbb7ec54",
+      "original_size": [
+        1224,
+        1632
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 32084
+    },
+    {
+      "id": "sample-015",
+      "image": "data/images/sample-015.jpg",
+      "source": {
+        "id": "vizwiz:VizWiz_train_00000027.jpg",
+        "component": "vizwiz",
+        "source_url": "https://vizwiz.org/tasks-and-datasets/image-quality-issues/",
+        "download_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/images/train.zip#train/VizWiz_train_00000027.jpg",
+        "source_revision": "annotations:736265e64805685d8595bc43c01364e8e51efae2;media-etag:\"2a1703b5e-59afdc1e58080\"",
+        "license": {
+          "attribution": "VizWiz-Captions: Danna Gurari, Yinan Zhao, Meng Zhang, Nilavra Bhattacharya (ECCV 2020); contributing VizWiz photographers.",
+          "evidence_path": "sources/vizwiz/evidence/provenance.json",
+          "id": "CC-BY-4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source_labels": {
+          "annotation_license": "MIT (official repository)",
+          "human_flaw_votes": {
+            "BLR": 0,
+            "BRT": 0,
+            "DRK": 4,
+            "FRM": 1,
+            "NON": 0,
+            "OBS": 0,
+            "OTH": 0,
+            "ROT": 0
+          },
+          "human_unrecognizable_votes": 4,
+          "raters": 5,
+          "selection": "At least 3/5 votes for one named defect, with fewer than 3/5 no-flaw votes; balanced dominant defects."
+        },
+        "content_kind": "photo",
+        "split_group": "vizwiz:VizWiz_train_00000027.jpg",
+        "pilot_split": "train"
+      },
+      "original_sha256": "5f8f56524b40fdc7cc04734689a5765a9ded486e74617a2abaa0127830b5af64",
+      "delivered_sha256": "ae3ab0064a652b00287c127a8d8bdd62c4a2aaaab286d7f04d3b6d75b13c29e6",
+      "original_size": [
+        768,
+        1024
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 18338
+    },
+    {
+      "id": "sample-016",
+      "image": "data/images/sample-016.jpg",
+      "source": {
+        "id": "vizwiz:VizWiz_train_00000030.jpg",
+        "component": "vizwiz",
+        "source_url": "https://vizwiz.org/tasks-and-datasets/image-quality-issues/",
+        "download_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/images/train.zip#train/VizWiz_train_00000030.jpg",
+        "source_revision": "annotations:736265e64805685d8595bc43c01364e8e51efae2;media-etag:\"2a1703b5e-59afdc1e58080\"",
+        "license": {
+          "attribution": "VizWiz-Captions: Danna Gurari, Yinan Zhao, Meng Zhang, Nilavra Bhattacharya (ECCV 2020); contributing VizWiz photographers.",
+          "evidence_path": "sources/vizwiz/evidence/provenance.json",
+          "id": "CC-BY-4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source_labels": {
+          "annotation_license": "MIT (official repository)",
+          "human_flaw_votes": {
+            "BLR": 2,
+            "BRT": 5,
+            "DRK": 0,
+            "FRM": 1,
+            "NON": 0,
+            "OBS": 0,
+            "OTH": 0,
+            "ROT": 0
+          },
+          "human_unrecognizable_votes": 5,
+          "raters": 5,
+          "selection": "At least 3/5 votes for one named defect, with fewer than 3/5 no-flaw votes; balanced dominant defects."
+        },
+        "content_kind": "photo",
+        "split_group": "vizwiz:VizWiz_train_00000030.jpg",
+        "pilot_split": "train"
+      },
+      "original_sha256": "f29d6ffa1003eef708b051649035091ce8cfc7ce84b46a0df9c571755c84d7ef",
+      "delivered_sha256": "457097aabb6a32d7f8e0d28027df0510c45491e02ca56fc278e5f181340fe7fb",
+      "original_size": [
+        1224,
+        1632
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 13845
+    },
+    {
+      "id": "sample-017",
+      "image": "data/images/sample-017.jpg",
+      "source": {
+        "id": "vizwiz:VizWiz_train_00000126.jpg",
+        "component": "vizwiz",
+        "source_url": "https://vizwiz.org/tasks-and-datasets/image-quality-issues/",
+        "download_url": "https://vizwiz.cs.colorado.edu/VizWiz_final/images/train.zip#train/VizWiz_train_00000126.jpg",
+        "source_revision": "annotations:736265e64805685d8595bc43c01364e8e51efae2;media-etag:\"2a1703b5e-59afdc1e58080\"",
+        "license": {
+          "attribution": "VizWiz-Captions: Danna Gurari, Yinan Zhao, Meng Zhang, Nilavra Bhattacharya (ECCV 2020); contributing VizWiz photographers.",
+          "evidence_path": "sources/vizwiz/evidence/provenance.json",
+          "id": "CC-BY-4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source_labels": {
+          "annotation_license": "MIT (official repository)",
+          "human_flaw_votes": {
+            "BLR": 4,
+            "BRT": 2,
+            "DRK": 0,
+            "FRM": 1,
+            "NON": 0,
+            "OBS": 5,
+            "OTH": 0,
+            "ROT": 0
+          },
+          "human_unrecognizable_votes": 3,
+          "raters": 5,
+          "selection": "At least 3/5 votes for one named defect, with fewer than 3/5 no-flaw votes; balanced dominant defects."
+        },
+        "content_kind": "photo",
+        "split_group": "vizwiz:VizWiz_train_00000126.jpg",
+        "pilot_split": "train"
+      },
+      "original_sha256": "a159bbe34963d0dc60c47a9acb03e3887de41293e35e98bbb317b93916c78719",
+      "delivered_sha256": "f0cc86f3a7735a63d7e8f7f1db779e137c7a477b0a5239c0d032029ea5e46d1a",
+      "original_size": [
+        1224,
+        1632
+      ],
+      "delivered_size": [
+        384,
+        512
+      ],
+      "delivered_bytes": 42460
+    },
+    {
+      "id": "sample-018",
+      "image": "data/images/sample-018.jpg",
+      "source": {
+        "id": "clevr:CLEVR_train_000153",
+        "component": "clevr",
+        "source_url": "https://cs.stanford.edu/people/jcjohns/clevr/",
+        "download_url": "https://dl.fbaipublicfiles.com/clevr/CLEVR_v1.0.zip",
+        "source_revision": "v1.0;s3-version=B2HsawCh6GoabZXQDbLoboNXB4FrlnvC;etag=\"3426f0a360618fcf2179966a8d1428c3-1210\"",
+        "license": {
+          "attribution": "CLEVR (c) 2017 Facebook, Inc.; Johnson et al. (2017)",
+          "evidence_path": "sources/clevr/evidence/COPYRIGHT.txt",
+          "id": "CC-BY-4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source_labels": {
+          "scene_id": "CLEVR_train_000153"
+        },
+        "content_kind": "render",
+        "split_group": "clevr:CLEVR_train_000153",
+        "pilot_split": "train"
+      },
+      "original_sha256": "2a1cdc3bc8e257e39f982f154125ca1700e557af1283f766e56effe66eb2b5c4",
+      "delivered_sha256": "07eb0949ffdfb6573f2244cae58a2d2c615653a505b116e16dd9b8e8e988ebbe",
+      "original_size": [
+        480,
+        320
+      ],
+      "delivered_size": [
+        480,
+        320
+      ],
+      "delivered_bytes": 12552
+    },
+    {
+      "id": "sample-019",
+      "image": "data/images/sample-019.jpg",
+      "source": {
+        "id": "clevr:CLEVR_train_000298",
+        "component": "clevr",
+        "source_url": "https://cs.stanford.edu/people/jcjohns/clevr/",
+        "download_url": "https://dl.fbaipublicfiles.com/clevr/CLEVR_v1.0.zip",
+        "source_revision": "v1.0;s3-version=B2HsawCh6GoabZXQDbLoboNXB4FrlnvC;etag=\"3426f0a360618fcf2179966a8d1428c3-1210\"",
+        "license": {
+          "attribution": "CLEVR (c) 2017 Facebook, Inc.; Johnson et al. (2017)",
+          "evidence_path": "sources/clevr/evidence/COPYRIGHT.txt",
+          "id": "CC-BY-4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source_labels": {
+          "scene_id": "CLEVR_train_000298"
+        },
+        "content_kind": "render",
+        "split_group": "clevr:CLEVR_train_000298",
+        "pilot_split": "train"
+      },
+      "original_sha256": "5a52a4904babad011270ccf8ec97d7ef9e6217a3c5a025f569b5e4a8fa82e336",
+      "delivered_sha256": "6db42282066d80d5a18fe8d069e7e33080cddb313eba1138fe5e70202e338201",
+      "original_size": [
+        480,
+        320
+      ],
+      "delivered_size": [
+        480,
+        320
+      ],
+      "delivered_bytes": 11046
+    },
+    {
+      "id": "sample-020",
+      "image": "data/images/sample-020.jpg",
+      "source": {
+        "id": "plotqa:train:108998",
+        "component": "plotqa",
+        "source_url": "https://huggingface.co/datasets/achang/plot_qa/tree/e9da2cdb45c671f3faf63449e6c329f0c3281aa0",
+        "download_url": "https://datasets-server.huggingface.co/cached-assets/achang/plot_qa/--/e9da2cdb45c671f3faf63449e6c329f0c3281aa0/--/default/train/108998/image/image.png?Expires=1790537588&Signature=nMBjOYyDTMz1vC3aLjeCLemk7Mjp86E1gXKN96fxLg8UcfpitUtjpHBHCRpcpTUQflnwncgT9WETw4m8h1ikUeSuJ993YPY38As1LqSHqh-Nyc8I4Q9yfbbm6vQwDPjVL9W4zOHBsrsoRn1d3Xs8Lfntq2qY3rBG7JRRDQMQydmQ-kVrgIW8NoD3zR~KfA6eWaVsjwbrCbAT-9fyEkyeGkW~uKa6EX3yY235Cm8jv11Hr8sLLrspshkWDYG6PWWK5xT7e5leKV7xNVTc-GCtriSmjclKWdCIbNe3sTm5kHHbyRjgJrpPd1Ow5ogj8mwx7fF-9iizlY486VGjEIyRCQ__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "source_revision": "e9da2cdb45c671f3faf63449e6c329f0c3281aa0",
+        "license": {
+          "attribution": "PlotQA \u2014 Nitesh Methani, Pritha Ganguly, Mitesh M. Khapra, Pratyush Kumar (2020)",
+          "evidence_path": "sources/plotqa/evidence/upstream-license-readme.md",
+          "id": "CC-BY-4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source_labels": {
+          "group_status": "derived from series tokens; canonical template group unknown",
+          "series_tokens": "<s><s_y>1996<sep/>1998<sep/>1999<sep/>2002</s_y><s_x>500000.0<sep/>60000.0<sep/>70000.0<sep/>50000.0</s_x><s_width>0.15</s_width><s_name>Cabo Verde</s_name><s_labels>Cabo Verde</s_labels><s_colors>#D2B48C</s_colors><s_bboxes><s_y>562</s_y><s_x>62</s_x><s_w>16</s_w><s_h>22</s_h><sep/><s_y>416</s_y><s_x>62</s_x><s_w>2</s_w><s_h>22</s_h><sep/><s_y>269</s_y><s_x>62</s_x><s_w>2</s_w><s_h>22</s_h><sep/><s_y>123</s_y><s_x>62</s_x><s_w>2</s_w><s_h>22</s_h></s_bboxes><sep/><s_y>1996<sep/>1998<sep/>1999<sep/>2002</s_y><s_x>15160000.0<sep/>22630000.0<sep/>28360000.0<sep/>7780000.0</s_x><s_width>0.15</s_width><s_name>Malawi</s_name><s_labels>Malawi</s_labels><s_colors>#9ACD32</s_colors><s_bboxes><s_y>540</s_y><s_x>62</s_x><s_w>483</s_w><s_h>22</s_h><sep/><s_y>394</s_y><s_x>62</s_x><s_w>720</s_w><s_h>22</s_h><sep/><s_y>247</s_y><s_x>62</s_x><s_w>903</s_w><s_h>22</s_h><sep/><s_y>101</s_y><s_x>62</s_x><s_w>248</s_w><s_h>22</s_h></s_bboxes><sep/><s_y>1996<sep/>1998<sep/>1999<sep/>2002</s_y><s_x>470000.0<sep/>810000.0<sep/>140000.0<sep/>1470000.0</s_x><s_width>0.15</s_width><s_name>Moldova</s_name><s_labels>Moldova</s_labels><s_colors>#4682B4</s_colors><s_bboxes><s_y>518</s_y><s_x>62</s_x><s_w>15</s_w><s_h>22</s_h><sep/><s_y>372</s_y><s_x>62</s_x><s_w>26</s_w><s_h>22</s_h><sep/><s_y>225</s_y><s_x>62</s_x><s_w>4</s_w><s_h>22</s_h><sep/><s_y>79</s_y><s_x>62</s_x><s_w>47</s_w><s_h>22</s_h></s_bboxes><sep/><s_y>1996<sep/>1998<sep/>1999<sep/>2002</s_y><s_x>460000.0<sep/>5070000.0<sep/>9330000.0<sep/>5970000.0</s_x><s_width>0.15</s_width><s_name>Romania</s_name><s_labels>Romania</s_labels><s_colors>#BC8F8F</s_colors><s_bboxes><s_y>496</s_y><s_x>62</s_x><s_w>15</s_w><s_h>22</s_h><sep/><s_y>350</s_y><s_x>62</s_x><s_w>161</s_w><s_h>22</s_h><sep/><s_y>203</s_y><s_x>62</s_x><s_w>297</s_w><s_h>22</s_h><sep/><s_y>57</s_y><s_x>62</s_x><s_w>190</s_w><s_h>22</s_h></s_bboxes></s>"
+        },
+        "content_kind": "chart",
+        "split_group": "plotqa:train:108998",
+        "pilot_split": "train"
+      },
+      "original_sha256": "191cba2547c6ae531e9b689fb2a3ca1b0db1931ddb111e5cd27e07b941415a1d",
+      "delivered_sha256": "35346324f72fd45911a40c2a8306f625ab382223347617f7f2de861b2de7bf19",
+      "original_size": [
+        1015,
+        700
+      ],
+      "delivered_size": [
+        512,
+        353
+      ],
+      "delivered_bytes": 22464
+    },
+    {
+      "id": "sample-021",
+      "image": "data/images/sample-021.jpg",
+      "source": {
+        "id": "plotqa:train:109000",
+        "component": "plotqa",
+        "source_url": "https://huggingface.co/datasets/achang/plot_qa/tree/e9da2cdb45c671f3faf63449e6c329f0c3281aa0",
+        "download_url": "https://datasets-server.huggingface.co/cached-assets/achang/plot_qa/--/e9da2cdb45c671f3faf63449e6c329f0c3281aa0/--/default/train/109000/image/image.png?Expires=1790537588&Signature=e0M41KXYcKaKMOz3J3fPjswYvXb5nOqyRgkVf4j2MSrvwnJF5c3lyfvc0VZxbA0eu-1cGyK3~et3Digz5tBI5wLZsEN9b412X~DrPZ2HVpEaJ80cBdhZEbDbbBpMUezWPuJCYnW5Hn41MujfSaJAv69l3yX5K6QjUG1FzJwGxpBj9UmpT7Jue-RD0rOxYb3wjEd-tsf0g-Z1ThzhLJ5L-BDY00dUL7Sk2YrxIlPPyzJEqfITX6RyyInY28vCoF9uVyWM-GxSbM1tKsQ9txXV~jV5wUyxgiaWmT0k9Apbdu8KVt0BE9yqSnEaxfu3hHwVNxXKK93-pE21jRn35yt28g__&Key-Pair-Id=K3C0L9WB6U5DUC",
+        "source_revision": "e9da2cdb45c671f3faf63449e6c329f0c3281aa0",
+        "license": {
+          "attribution": "PlotQA \u2014 Nitesh Methani, Pritha Ganguly, Mitesh M. Khapra, Pratyush Kumar (2020)",
+          "evidence_path": "sources/plotqa/evidence/upstream-license-readme.md",
+          "id": "CC-BY-4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "source_labels": {
+          "group_status": "derived from series tokens; canonical template group unknown",
+          "series_tokens": "<s><s_y>2005<sep/>2006<sep/>2007<sep/>2008</s_y><s_x>1.52938665315344e-05<sep/>5.16849671469394e-06<sep/>0.000111310702373502<sep/>0.0003521094603651</s_x><s_width>0.15</s_width><s_name>Coal</s_name><s_labels>Coal</s_labels><s_colors>#2F4F4F</s_colors><s_bboxes><s_y>516</s_y><s_x>62</s_x><s_w>0</s_w><s_h>20</s_h><sep/><s_y>383</s_y><s_x>62</s_x><s_w>0</s_w><s_h>20</s_h><sep/><s_y>249</s_y><s_x>62</s_x><s_w>1</s_w><s_h>20</s_h><sep/><s_y>115</s_y><s_x>62</s_x><s_w>2</s_w><s_h>20</s_h></s_bboxes><sep/><s_y>2005<sep/>2006<sep/>2007<sep/>2008</s_y><s_x>0.143838845261778<sep/>0.11976687715989<sep/>0.0922654491476173<sep/>0.120263689415928</s_x><s_width>0.15</s_width><s_name>Natural Gas</s_name><s_labels>Natural Gas</s_labels><s_colors>#C71585</s_colors><s_bboxes><s_y>496</s_y><s_x>62</s_x><s_w>897</s_w><s_h>20</s_h><sep/><s_y>362</s_y><s_x>62</s_x><s_w>747</s_w><s_h>20</s_h><sep/><s_y>229</s_y><s_x>62</s_x><s_w>575</s_w><s_h>20</s_h><sep/><s_y>95</s_y><s_x>62</s_x><s_w>750</s_w><s_h>20</s_h></s_bboxes><sep/><s_y>2005<sep/>2006<sep/>2007<sep/>2008</s_y><s_x>0.110828887907276<sep/>0.120992185110379<sep/>0.119172838397915<sep/>0.134846393856365</s_x><s_width>0.15</s_width><s_name>Oil</s_name><s_labels>Oil</s_labels><s_colors>#BA55D3</s_colors><s_bboxes><s_y>476</s_y><s_x>62</s_x><s_w>691</s_w><s_h>20</s_h><sep/><s_y>342</s_y><s_x>62</s_x><s_w>755</s_w><s_h>20</s_h><sep/><s_y>208</s_y><s_x>62</s_x><s_w>743</s_w><s_h>20</s_h><sep/><s_y>75</s_y><s_x>62</s_x><s_w>841</s_w><s_h>20</s_h></s_bboxes><sep/><s_y>2005<sep/>2006<sep/>2007<sep/>2008</s_y><s_x>5.19978483060913e-05<sep/>0.000123730663033115<sep/>0.000309454062841387<sep/>0.000357369187837262</s_x><s_width>0.15</s_width><s_name>Other Minerals</s_name><s_labels>Other Minerals</s_labels><s_colors>#191970</s_colors><s_bboxes><s_y>456</s_y><s_x>62</s_x><s_w>0</s_w><s_h>20</s_h><sep/><s_y>322</s_y><s_x>62</s_x><s_w>1</s_w><s_h>20</s_h><sep/><s_y>188</s_y><s_x>62</s_x><s_w>2</s_w><s_h>20</s_h><sep/><s_y>54</s_y><s_x>62</s_x><s_w>2</s_w><s_h>20</s_h></s_bboxes></s>"
+        },
+        "content_kind": "chart",
+        "split_group": "plotqa:train:109000",
+        "pilot_split": "train"
+      },
+      "original_sha256": "e3b7e421fa6a2b276649c1d98d8a1626a7aba50f3bbf0bb8bbf225d8348586df",
+      "delivered_sha256": "b826c273874219f94e8b2658918c4be2bc9f02e98a8b0bf482c03f8baff36998",
+      "original_size": [
+        1009,
+        650
+      ],
+      "delivered_size": [
+        512,
+        330
+      ],
+      "delivered_bytes": 28687
+    },
+    {
+      "id": "sample-022",
+      "image": "data/images/sample-022.jpg",
+      "source": {
+        "id": "owned-20260927-000000",
+        "component": "owned_controls",
+        "source_url": "local-generator://owned-controls-v1/chart-00/0",
+        "download_url": null,
+        "source_revision": "owned-controls-v1",
+        "license": {
+          "evidence": "Original geometry and text generated by this project; no external image assets.",
+          "font": {
+            "name": "Pillow embedded Aileron Regular",
+            "terms": "No Rights Reserved",
+            "url": "https://dotcolon.net/fonts/aileron/"
+          },
+          "id": "LicenseRef-Project-Owned",
+          "renderer_license_url": "https://github.com/python-pillow/Pillow/blob/12.3.0/LICENSE",
+          "url": null
+        },
+        "source_labels": {},
+        "parent_id": null,
+        "content_kind": "chart",
+        "split_group": "owned-20260927-000000",
+        "pilot_split": "train"
+      },
+      "original_sha256": "23fcc77f6ac4899c270d799c72ecfae2d106936ec671beea5e2764d48afef40a",
+      "delivered_sha256": "a06eef1690f64341a019033485dc3a2be3b49c50e705d7233855c4aff1b6f7ad",
+      "original_size": [
+        640,
+        480
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 14295
+    },
+    {
+      "id": "sample-023",
+      "image": "data/images/sample-023.jpg",
+      "source": {
+        "id": "owned-20260927-000001",
+        "component": "owned_controls",
+        "source_url": "local-generator://owned-controls-v1/flowchart-00/0",
+        "download_url": null,
+        "source_revision": "owned-controls-v1",
+        "license": {
+          "evidence": "Original geometry and text generated by this project; no external image assets.",
+          "font": {
+            "name": "Pillow embedded Aileron Regular",
+            "terms": "No Rights Reserved",
+            "url": "https://dotcolon.net/fonts/aileron/"
+          },
+          "id": "LicenseRef-Project-Owned",
+          "renderer_license_url": "https://github.com/python-pillow/Pillow/blob/12.3.0/LICENSE",
+          "url": null
+        },
+        "source_labels": {},
+        "parent_id": null,
+        "content_kind": "flowchart",
+        "split_group": "owned-20260927-000001",
+        "pilot_split": "train"
+      },
+      "original_sha256": "e3a280c816394b91651a01fced2525909498b0457c7e54deb62b47a67e5f3f5c",
+      "delivered_sha256": "9819dffb7eff3d14f2cb7425c946fdc6698032c21a8661bfbee58aae26b3be57",
+      "original_size": [
+        640,
+        480
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 17269
+    },
+    {
+      "id": "sample-024",
+      "image": "data/images/sample-024.jpg",
+      "source": {
+        "id": "AttnGAN_normal_000.jpg",
+        "component": "agiqa",
+        "source_revision": "bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae",
+        "source_url": "https://github.com/lcysyzxdxc/AGIQA-3k-Database",
+        "download_url": "https://huggingface.co/datasets/strawhat/agiqa-3k/resolve/bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae/images/AttnGAN_normal_000.jpg",
+        "license": {
+          "id": "MIT",
+          "note": "Upstream database license; HF mirror"
+        },
+        "source_labels": {
+          "name": "AttnGAN_normal_000.jpg",
+          "prompt": "statue of a man",
+          "adj1": "",
+          "adj2": "",
+          "style": "",
+          "mos_quality": "0.965602553",
+          "std_quality": "0.223270101",
+          "mos_align": "0.40889324",
+          "std_align": "0.615607722"
+        },
+        "known_ai_generated": true,
+        "generator": "AttnGAN"
+      },
+      "original_sha256": "5701043cadef05bcff6539098902e098e2f1ba4ba35ab430311319846128d6bb",
+      "delivered_sha256": "da28e1a0cce35419724f7234023977bdc32b5c6679411ca1bb0f2c0762a998ac",
+      "original_size": [
+        512,
+        512
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 33412
+    },
+    {
+      "id": "sample-025",
+      "image": "data/images/sample-025.jpg",
+      "source": {
+        "id": "DALLE2_normal_000.jpg",
+        "component": "agiqa",
+        "source_revision": "bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae",
+        "source_url": "https://github.com/lcysyzxdxc/AGIQA-3k-Database",
+        "download_url": "https://huggingface.co/datasets/strawhat/agiqa-3k/resolve/bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae/images/DALLE2_normal_000.jpg",
+        "license": {
+          "id": "MIT",
+          "note": "Upstream database license; HF mirror"
+        },
+        "source_labels": {
+          "name": "DALLE2_normal_000.jpg",
+          "prompt": "statue of a man",
+          "adj1": "",
+          "adj2": "",
+          "style": "",
+          "mos_quality": "3.058757207",
+          "std_quality": "0.538696487",
+          "mos_align": "3.481534167",
+          "std_align": "0.46101074"
+        },
+        "known_ai_generated": true,
+        "generator": "DALLE2"
+      },
+      "original_sha256": "719cab8cb762cf620f1e8d1948f89f68638f26c4afb07d7773035ca7c1c3e049",
+      "delivered_sha256": "b215afd824ee78e16f678ddb52a6849f9dffa6dabda90f9c47f195c22600852a",
+      "original_size": [
+        512,
+        512
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 48344
+    },
+    {
+      "id": "sample-026",
+      "image": "data/images/sample-026.jpg",
+      "source": {
+        "id": "glide_normal_000.jpg",
+        "component": "agiqa",
+        "source_revision": "bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae",
+        "source_url": "https://github.com/lcysyzxdxc/AGIQA-3k-Database",
+        "download_url": "https://huggingface.co/datasets/strawhat/agiqa-3k/resolve/bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae/images/glide_normal_000.jpg",
+        "license": {
+          "id": "MIT",
+          "note": "Upstream database license; HF mirror"
+        },
+        "source_labels": {
+          "name": "glide_normal_000.jpg",
+          "prompt": "statue of a man",
+          "adj1": "",
+          "adj2": "",
+          "style": "",
+          "mos_quality": "1.478221045",
+          "std_quality": "0.512782138",
+          "mos_align": "1.511295292",
+          "std_align": "1.049921294"
+        },
+        "known_ai_generated": true,
+        "generator": "glide"
+      },
+      "original_sha256": "1a5ecc952c74a8fa05fc060f341b99791199af6d6eff31dd38ec829bdfedd64a",
+      "delivered_sha256": "f9db1fb53baf02a4c673a51830bc46a307c2a7df5b722616e56d0b72bd109e9e",
+      "original_size": [
+        512,
+        512
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 58877
+    },
+    {
+      "id": "sample-027",
+      "image": "data/images/sample-027.jpg",
+      "source": {
+        "id": "midjourney_normal_000.jpg",
+        "component": "agiqa",
+        "source_revision": "bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae",
+        "source_url": "https://github.com/lcysyzxdxc/AGIQA-3k-Database",
+        "download_url": "https://huggingface.co/datasets/strawhat/agiqa-3k/resolve/bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae/images/midjourney_normal_000.jpg",
+        "license": {
+          "id": "MIT",
+          "note": "Upstream database license; HF mirror"
+        },
+        "source_labels": {
+          "name": "midjourney_normal_000.jpg",
+          "prompt": "statue of a man",
+          "adj1": "",
+          "adj2": "",
+          "style": "",
+          "mos_quality": "4.324875409",
+          "std_quality": "0.596421622",
+          "mos_align": "4.04858855",
+          "std_align": "0.2982765"
+        },
+        "known_ai_generated": true,
+        "generator": "midjourney"
+      },
+      "original_sha256": "0b1b440579d8412393a3aff1c8b8174c3225865123fabe7c9077c649c6957700",
+      "delivered_sha256": "d617351e19ad7742eecf3293ccd7a7664fbad8ee49d881fd5b37bad945789e40",
+      "original_size": [
+        512,
+        512
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 51940
+    },
+    {
+      "id": "sample-028",
+      "image": "data/images/sample-028.jpg",
+      "source": {
+        "id": "sd1.5_normal_000.jpg",
+        "component": "agiqa",
+        "source_revision": "bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae",
+        "source_url": "https://github.com/lcysyzxdxc/AGIQA-3k-Database",
+        "download_url": "https://huggingface.co/datasets/strawhat/agiqa-3k/resolve/bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae/images/sd1.5_normal_000.jpg",
+        "license": {
+          "id": "MIT",
+          "note": "Upstream database license; HF mirror"
+        },
+        "source_labels": {
+          "name": "sd1.5_normal_000.jpg",
+          "prompt": "statue of a man",
+          "adj1": "",
+          "adj2": "",
+          "style": "",
+          "mos_quality": "0.44999057",
+          "std_quality": "0.319877891",
+          "mos_align": "0.678198368",
+          "std_align": "0.488624139"
+        },
+        "known_ai_generated": true,
+        "generator": "sd1.5"
+      },
+      "original_sha256": "a4bbb2c0e3910d3dd90909e36e7f10424fd640e21a19e18f1c0b1a73c4ead3b7",
+      "delivered_sha256": "81530f9393029b053b772fddcea4dabc4de8bcbb8d0d8a9dd72fb4ab21417c16",
+      "original_size": [
+        512,
+        512
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 7925
+    },
+    {
+      "id": "sample-029",
+      "image": "data/images/sample-029.jpg",
+      "source": {
+        "id": "xl2.2_normal_000.jpg",
+        "component": "agiqa",
+        "source_revision": "bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae",
+        "source_url": "https://github.com/lcysyzxdxc/AGIQA-3k-Database",
+        "download_url": "https://huggingface.co/datasets/strawhat/agiqa-3k/resolve/bf9b7bb8d633f44832d6ba51ff496a25d8e8e2ae/images/xl2.2_normal_000.jpg",
+        "license": {
+          "id": "MIT",
+          "note": "Upstream database license; HF mirror"
+        },
+        "source_labels": {
+          "name": "xl2.2_normal_000.jpg",
+          "prompt": "statue of a man",
+          "adj1": "",
+          "adj2": "",
+          "style": "",
+          "mos_quality": "3.088457462",
+          "std_quality": "0.495642922",
+          "mos_align": "3.458082253",
+          "std_align": "0.571191471"
+        },
+        "known_ai_generated": true,
+        "generator": "xl2.2"
+      },
+      "original_sha256": "51f2328272182d736ad0b9b0666448ee1a4efbd2cda921dba1bc954d17fffbf5",
+      "delivered_sha256": "32b5c2e8a8d128ee20c058674e7c77290ac8e4c63323b90cf8e63b39f096e7c9",
+      "original_size": [
+        512,
+        512
+      ],
+      "delivered_size": [
+        512,
+        512
+      ],
+      "delivered_bytes": 44974
+    }
+  ]
+}

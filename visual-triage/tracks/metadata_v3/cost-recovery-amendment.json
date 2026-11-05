@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "frozen_at": "2026-10-12T00:32:40.892596+00:00",
+  "original_protocol_path": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/tracks/metadata_v3/protocol.json",
+  "original_protocol_sha256": "d7b505fe004141e7ea41d5af756f80209bf5ff18dfa0303a192c33f3e8d02080",
+  "runs_root": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/data/metadata-v3/runs",
+  "pricing_capture_path": "/Users/ahstn/.codex/worktrees/d187/model-gym/visual-triage/data/metadata-v3/research/decider-catalog.json",
+  "pricing_capture_sha256": "b57aa8e99edfc1e465ed496b0d60b76731a5de8e5bf0203592dacbf551c7c304",
+  "recovery_code_sha256": {
+    "cost_recovery.py": "02b2945f54c9e4c570f03cf3c40fc5089cfb75945c8e083f017027ab39166162",
+    "recover_study.py": "ff77c9b0ed6650ba9595fcc0452ca0c3366632b1d29dfbb9a17ce905f60a07bf"
+  },
+  "review_reason": "Reviewed Decider ConnectionError policy: preserve unknown actual costs and zero rewards; reserve $0.05 per eligible failed task with no retry, using the pinned catalogue and a three-question context assumption, not a proven billing ceiling.",
+  "allowance_usd": 0.05,
+  "eligible_model": "perplexity/pplx-decider-v1.1-27b",
+  "eligible_transport_error": "ConnectionError",
+  "no_retry": true,
+  "actual_cost_remains_unknown": true,
+  "prospective_policy": true,
+  "initial_ledger_prefixes": {
+    "image_only/candidates/27d44941884859a0a019a306e689557f077c117013dec167138303497c57d106/train.jsonl": {
+      "prefix_bytes": 170793,
+      "prefix_sha256": "e1e523bd5adc6977bbc7b6a43fb1a0799ca4b12195bf481689c1e9972f1faae5"
+    },
+    "image_only/candidates/30aac61a9ec2068f313042faa38988fe9f46fcfdf8587bfdecfa4631a7876854/dev.jsonl": {
+      "prefix_bytes": 213434,
+      "prefix_sha256": "d4ec3928d9c0e40e9784d429bff27ac58d8724b90b0ef3a2bcd095ea8c1a2d0c"
+    },
+    "image_only/candidates/30aac61a9ec2068f313042faa38988fe9f46fcfdf8587bfdecfa4631a7876854/train.jsonl": {
+      "prefix_bytes": 213405,
+      "prefix_sha256": "4fd97f530ae4fe712e0a8670baf79e52364d38b9c8a6ddcbd66b185bc260b971"
+    },
+    "image_only/candidates/3f3df63089c1bc59eeb674f16e8a5be48ce561cd6c0906a195937062c1039c5c/dev.jsonl": {
+      "prefix_bytes": 215278,
+      "prefix_sha256": "a28f4b1d588f70d32556a1f34c0645483b0c502f44eadf8873b07a88b1dc6d0e"
+    },
+    "image_only/candidates/3f3df63089c1bc59eeb674f16e8a5be48ce561cd6c0906a195937062c1039c5c/train.jsonl": {
+      "prefix_bytes": 215600,
+      "prefix_sha256": "bd4e4dd0747418fd5c512877dad07a5b5edbfe5211971f30e4089cb7684b37e1"
+    },
+    "image_only/candidates/66f88669bb8259cad7c4b5c43dcb695e971941ba8816bebd1dfdeade52cf7387/dev.jsonl": {
+      "prefix_bytes": 213875,
+      "prefix_sha256": "49e647596c725d83e0e645348bf9264027330f132bd7c30737eeb15d7db8d2f4"
+    },
+    "image_only/candidates/66f88669bb8259cad7c4b5c43dcb695e971941ba8816bebd1dfdeade52cf7387/train.jsonl": {
+      "prefix_bytes": 192569,
+      "prefix_sha256": "58e7ef020b66d7f6b4642988be9c13585d946df4116e24f90caee9f72394971b"
+    },
+    "image_only/candidates/c5965f14b5e9b40bf74a388fcb9ed39443229599e7584d4cee8d26b03ab63d99/dev.jsonl": {
+      "prefix_bytes": 27870,
+      "prefix_sha256": "b898d1f91c88ab9dc21af3bba1d6abfffc8308b97198183c51d3d2e53418d182"
+    },
+    "image_only/candidates/c5965f14b5e9b40bf74a388fcb9ed39443229599e7584d4cee8d26b03ab63d99/train.jsonl": {
+      "prefix_bytes": 127593,
+      "prefix_sha256": "5f09977e711d86932e07b6415042236533edaf14a8989074d1549ef57ec12eda"
+    },
+    "image_only/reflection.jsonl": {
+      "prefix_bytes": 32689,
+      "prefix_sha256": "0a0a4d50100e1648524779fb148b10e9e275241566720102cbfadb103c38ab70"
+    }
+  },
+  "pricing_assumption": {
+    "input_usd_per_token": 2e-08,
+    "context_tokens": 262144,
+    "completion_usd_per_token": 0,
+    "question_multiplier_assumption": 3,
+    "estimated_three_context_cost_usd": 0.01572864,
+    "proven_billing_ceiling": false
+  },
+  "cost_interpretation": "Unverified budget allowance; not a provider charge or proven upper bound",
+  "global_budget_usd": 5.0,
+  "arm_budget_usd": 0.65
+}

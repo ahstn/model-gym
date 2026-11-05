@@ -23,3 +23,21 @@ data/synthetic/
 
 # Per-machine credentials
 mise.local.toml
+
+# Visual-quality source images, generated pilot, and acquisition caches
+visual-quality/data/
+
+# Historical experiments: restore into ignored data via archives/experiments.md.
+visual-quality/experiments/dual-score-trial-2026-10-27/
+visual-quality/experiments/eligibility-expanded-120-2026-11-01/
+visual-quality/experiments/eligibility-optimization-2026-11-01/
+visual-quality/experiments/jev14-2026-10-18/
+visual-quality/experiments/jev14-calibration-2026-10-18/
+visual-quality/experiments/photo-scoring-2026-10-31/
+visual-quality/experiments/prompt-ablation-2026-10-30/
+visual-quality/experiments/prompt-calibration-2026-10-18/
+visual-quality/experiments/qalign-inference-2026-10-31/
+visual-quality/experiments/qrealign-lite-72-2026-10-31/
+visual-quality/experiments/rehearsal-4000-2026-11-01/
+visual-quality/experiments/runinfra-comparison-2026-10-25/
+visual-quality/experiments/runinfra-string-trial-2026-10-26/

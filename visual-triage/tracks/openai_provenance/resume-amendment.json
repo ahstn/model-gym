@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "created_at": "2026-10-12T14:25:44.537713+00:00",
+  "protocol_sha256": "81c07524e4168d40ea3f0642d0ddb27ce7c620f5fe678c546f0357fbb6570dee",
+  "resume_code_sha256": "ed879471768e37d1de3f683ab415323e9ee6d52d67705f9666886ad258b4a384",
+  "observed_failures": [
+    {
+      "case": "vision-D01_I_nat_0183",
+      "attempt": 16,
+      "record_sha256": "127245cbeeffe7219c54f920a98924d120d89f0ecf48e9643ab45946c04d6f76"
+    }
+  ],
+  "reason": "The official guide allows transient server retries; preserve original failures",
+  "eligible_status": 502,
+  "max_retries_per_case": 1,
+  "max_total_attempts": 176,
+  "minimum_interval_seconds": 6.2,
+  "minimum_retry_delay_seconds": 30,
+  "unchanged": "Cohort, native bytes, API request, labels, order and interpretations",
+  "retry_ledger": "data/openai-provenance-v1/retries.jsonl",
+  "cost": "Failed and successful request charges remain unreported, not zero"
+}

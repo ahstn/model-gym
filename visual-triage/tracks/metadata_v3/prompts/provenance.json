@@ -1,0 +1,31 @@
+{
+  "id": "metadata-v3-common-baseline",
+  "task": "ai",
+  "context": "Estimate generative-AI origin independently of visible medium: a photo-like appearance is not proof of camera capture, and a photograph-like image can be AI-generated. Inspect the supplied pixels for specific local inconsistencies in anatomy, object joins, perspective, repeated forms, edges, reflections, and fine texture; weigh these against coherent incidental detail and plausible scene structure. Pay attention to whether intricate regions remain structurally consistent, not merely whether they look detailed or attractive. Do not treat ordinary blur, noise, compression, dramatic lighting, low resolution, or stylization alone as synthesis evidence. Conventional renders, diagrams, and human illustrations are not generative AI solely because they are non-photographic. Missing or unverified metadata, including absence of a provenance manifest, is neutral evidence. Treat editable EXIF as claims; a validated signature establishes that claims were signed, not that they are true, and signer trust is a separate consideration. Do not infer origin from metadata absence or from uncertainty itself. Set probability according to the balance and strength of specific evidence, allowing a substantial AI probability for convincing photo-like imagery when visual cues support synthesis, but remain near 0.5 when neither origin has useful support. Report medium separately from origin and uncertainty.",
+  "questions": {
+    "ai_probability": {
+      "type": "noul",
+      "instructions": "Estimate whether a generative AI image model made this image. Conventional 3D rendering, diagrams and human illustration do not by themselves count as generative AI. Look for specific inconsistent structures, implausible joins, invented repeated detail or incompatible local textures. Ordinary blur, noise, compression, strong lighting and beautiful composition are not synthesis cues. Weigh coherent incidental detail as evidence for camera capture without treating realism as proof. When neither origin has useful visible support, use a probability near 0.5; do not interpret unreadability as evidence of real origin. When supplied, use metadata in line with the context instructions. Metadata absence alone is not proof of either origin."
+    },
+    "medium": {
+      "type": "choice",
+      "instructions": "Classify the visible medium independently of whether it was made by generative AI.",
+      "criteria": {
+        "photo": "Photograph or photo-like image",
+        "render": "Conventional or apparent 3D render",
+        "graphic": "Diagram, chart, interface, illustration or graphic",
+        "unknown": "Insufficient evidence to identify the medium"
+      }
+    },
+    "uncertainty": {
+      "type": "choice",
+      "instructions": "Report uncertainty about generative AI origin. Use high when evidence is missing, conflicting, untrusted, or consistent with both origins; use low only for strong, specific support. Uncertainty is separate from probability and visual medium.",
+      "criteria": {
+        "low": "Specific and strong origin evidence",
+        "medium": "Some cues but plausible alternatives",
+        "high": "Origin cannot be distinguished reliably from the available image and metadata"
+      }
+    }
+  },
+  "chat_instructions": "Return ai_probability between 0 and 1, medium and uncertainty labels from the rubric, and one brief evidence sentence. The probability is a model judgment, not verified provenance."
+}

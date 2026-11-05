@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "created_at": "2026-10-15T20:53:52.015387+00:00",
+  "protocol_sha256": "3647ba27bec4bca3d9ccaf4aaf325ca95ce921a9ab3a797e841526002b8c9c79",
+  "prefix_rows": 31,
+  "prefix_sha256": "d605ee206ae78fb4acabdecc5ecea13c6bf766eb5dbd02c062547ecfefb2a14b",
+  "parser_sha256": "89de1cffcc237de0313488b98ff180a1a3b750e0bc965fcdb708af6f2873ac28",
+  "resume_sha256": "941f4491bb35168da5ccb686598e10deaacd848fc554f4d2e72e9f2c133e68d3",
+  "maximum_attempts": 126,
+  "reason": "Two-decimal probability rounding produced sum0.99; preserve native scores",
+  "rule": "Apply bounded rounding-aware validation to every response, including saved rows",
+  "unchanged": "Images, prompts, native values, classification thresholds, order and budget",
+  "retries": "None; continue unattempted cases only. Original evidence remains unchanged."
+}

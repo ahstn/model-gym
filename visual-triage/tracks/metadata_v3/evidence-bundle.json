@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "notice": "Local unpublished evidence archive. Image bytes were excluded and remain local; this is not a full image backup.",
+  "archive": {
+    "path": "data/metadata-v3/evidence-bundles/final-v2/evidence.tar.gz",
+    "size_bytes": 12882895,
+    "sha256": "f164382da37f83363f42ce1e8647f045816023bdee7545dfb1c0c028b172b8f1"
+  },
+  "index": {
+    "path": "data/metadata-v3/evidence-bundles/final-v2/index.json",
+    "size_bytes": 2146664,
+    "sha256": "32ad38943149468ad12f8cf6be5aa88415154d41dc60e62066ea2d04593b9fa6"
+  },
+  "member_count": 8010,
+  "excluded_image_count": 1043,
+  "excluded_image_bytes": 1715209190,
+  "completion": {
+    "protocol_sha256": "d7b505fe004141e7ea41d5af756f80209bf5ff18dfa0303a192c33f3e8d02080",
+    "selection_count": 7,
+    "attempts_complete": true
+  }
+}

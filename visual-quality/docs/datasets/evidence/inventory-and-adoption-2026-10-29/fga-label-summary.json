@@ -1,0 +1,83 @@
+[
+  {
+    "name": "label/aigc_test.txt",
+    "rows": 847,
+    "series": 339,
+    "referenced_images": 995,
+    "column_counts": [
+      6
+    ]
+  },
+  {
+    "name": "label/aigc_train.txt",
+    "rows": 4592,
+    "series": 2634,
+    "referenced_images": 6586,
+    "column_counts": [
+      6
+    ]
+  },
+  {
+    "name": "label/aigc_val.txt",
+    "rows": 585,
+    "series": 448,
+    "referenced_images": 1004,
+    "column_counts": [
+      6
+    ]
+  },
+  {
+    "name": "label/crop_test.txt",
+    "rows": 2088,
+    "series": 168,
+    "referenced_images": 990,
+    "column_counts": [
+      6
+    ]
+  },
+  {
+    "name": "label/crop_train.txt",
+    "rows": 22258,
+    "series": 1275,
+    "referenced_images": 8555,
+    "column_counts": [
+      6
+    ]
+  },
+  {
+    "name": "label/crop_val.txt",
+    "rows": 1297,
+    "series": 259,
+    "referenced_images": 1009,
+    "column_counts": [
+      6
+    ]
+  },
+  {
+    "name": "label/natural_test.txt",
+    "rows": 824,
+    "series": 403,
+    "referenced_images": 996,
+    "column_counts": [
+      6
+    ]
+  },
+  {
+    "name": "label/natural_train.txt",
+    "rows": 11196,
+    "series": 3862,
+    "referenced_images": 10522,
+    "column_counts": [
+      6
+    ]
+  },
+  {
+    "name": "label/natural_val.txt",
+    "rows": 538,
+    "series": 490,
+    "referenced_images": 1004,
+    "column_counts": [
+      6
+    ]
+  }
+]

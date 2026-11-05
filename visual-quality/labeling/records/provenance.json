@@ -1,0 +1,171 @@
+{
+  "schema_version": "labeling-publication-v1",
+  "status": "pending training review",
+  "records": {
+    "labelled-images.jsonl": "98b0d6b2941c671d9cc47dcf116885bfdd794ff20ceab30fcbda4013c3cc3380",
+    "manifest.json": "37a6e08305bdd4e2da10494b72f1908a74b462033827cdfb45cc7fc2693ddaec",
+    "publication-case-ids.json": "20d54e7416e8ba7d7cafedf6a5aa85f41a4301a4273f0893dae25da5fba3a905",
+    "references.jsonl": "4e75ba59d0787331cb6b0709fee338bdd6e402e9ee5fc038133b22099188ae8b",
+    "scores.csv": "3dfff0324eb27f3528322ead87b2612654b4ba90c0b554c6291fa79c48959bbe",
+    "scores.jsonl": "fbc63ea0d0c4c4f39ed9fbfdbe7ec1cf4f07be23c0b7af2ae978bba958173cb6"
+  },
+  "model_rows": {
+    "luna": 1000,
+    "deepseek": 1000,
+    "liquid": 1000,
+    "jev": 1000,
+    "qrealign_lite": 1000,
+    "photo_ensemble": 1000,
+    "reference": 1000
+  },
+  "ensemble": {
+    "version": "luna-deepseek-liquid-v1",
+    "model": "photo_ensemble",
+    "weights": {
+      "technical": {
+        "luna": "0.375",
+        "deepseek": "0.375",
+        "liquid": "0.25"
+      },
+      "aesthetic": {
+        "luna": "0.375",
+        "deepseek": "0.375",
+        "liquid": "0.25"
+      }
+    },
+    "missing_component_policy": "null_per_task; no reweighting or two-model fallback",
+    "scope_policy": "use component policy scores; no new voting or reference override",
+    "precision": "native component precision for arithmetic; two decimals for display only",
+    "latency_policy": "no independent request latency; retain component request measurements",
+    "price_policy": "no independent charge; component costs recorded separately, never double-counted"
+  },
+  "full_run_summary": {
+    "images": 10000,
+    "benchmark_images": 1500,
+    "statistics_images": 10000,
+    "reference_records": 1500,
+    "coverage": {
+      "luna": {
+        "expected": 10000,
+        "status_counts": {
+          "valid": 10000
+        },
+        "numeric_pairs": 10000
+      },
+      "deepseek": {
+        "expected": 10000,
+        "status_counts": {
+          "valid": 10000
+        },
+        "numeric_pairs": 9999
+      },
+      "liquid": {
+        "expected": 10000,
+        "status_counts": {
+          "valid": 10000
+        },
+        "numeric_pairs": 10000
+      },
+      "jev": {
+        "expected": 10000,
+        "status_counts": {
+          "valid": 9997,
+          "failed": 3
+        },
+        "numeric_pairs": 9997
+      },
+      "qrealign_lite": {
+        "expected": 10000,
+        "status_counts": {
+          "valid": 10000
+        },
+        "numeric_pairs": 10000
+      },
+      "photo_ensemble": {
+        "expected": 10000,
+        "status_counts": {
+          "valid": 9999,
+          "missing_or_invalid_components": 1
+        },
+        "numeric_pairs": 9999
+      },
+      "reference": {
+        "expected": 1500,
+        "status_counts": {
+          "valid": 1500
+        },
+        "numeric_pairs": 1500
+      }
+    },
+    "ensemble": {
+      "version": "luna-deepseek-liquid-v1",
+      "model": "photo_ensemble",
+      "weights": {
+        "technical": {
+          "luna": "0.375",
+          "deepseek": "0.375",
+          "liquid": "0.25"
+        },
+        "aesthetic": {
+          "luna": "0.375",
+          "deepseek": "0.375",
+          "liquid": "0.25"
+        }
+      },
+      "missing_component_policy": "null_per_task; no reweighting or two-model fallback",
+      "scope_policy": "use component policy scores; no new voting or reference override",
+      "precision": "native component precision for arithmetic; two decimals for display only",
+      "latency_policy": "no independent request latency; retain component request measurements",
+      "price_policy": "no independent charge; component costs recorded separately, never double-counted"
+    },
+    "training_ready": false,
+    "stats_in_inference": false,
+    "cost_per_model": {
+      "luna": {
+        "attempts": 10000,
+        "known_price_usd": "8.093620750",
+        "unpriced_attempts": 0,
+        "total_price_usd": "8.093620750"
+      },
+      "deepseek": {
+        "attempts": 10083,
+        "known_price_usd": "6.55242845",
+        "unpriced_attempts": 81,
+        "total_price_usd": null
+      },
+      "liquid": {
+        "attempts": 10000,
+        "known_price_usd": "0.50219912",
+        "unpriced_attempts": 0,
+        "total_price_usd": "0.50219912"
+      },
+      "jev": {
+        "attempts": 11983,
+        "known_price_usd": "1.813157262",
+        "unpriced_attempts": 1986,
+        "total_price_usd": null
+      },
+      "qrealign_lite": {
+        "price_usd": "0.00",
+        "infrastructure_separate": true
+      },
+      "reference": {
+        "price_usd": "0.00",
+        "no_external_request": true
+      }
+    },
+    "input_provenance": {
+      "/home/ahstn/git/model-gym/visual-quality/data/labeling-10000-2026-11-01/manifest.json": "65f4df78e3e9d7aea62a0695f386462e3363957773eace00848c61bb5a75e859",
+      "/home/ahstn/git/model-gym/visual-quality/data/labeling-10000-2026-11-01/references-all.jsonl": "5c756959292c851872d5d4316cbe523fba5b92526c0cceb7ad4cf5b1a7863cee",
+      "/home/ahstn/git/model-gym/visual-quality/data/labeling-10000-2026-11-01/stats.jsonl": "8a78052a21b1ddba69f0c01418745e8b2bb658d91b73bd5e1c3e0f4e6e659302",
+      "/home/ahstn/git/model-gym/visual-quality/data/labeling-10000-2026-11-01/results/lite/reused.jsonl": "274cf312cddb419d9235593340b321a32e380f9be101d38db56f9e72a4af647f"
+    }
+  },
+  "incomplete_models_reason": "One valid DeepSeek unscorable response and three persistent Jev image-dimension errors remain after bounded identical-request recovery. Their assessments stay null; the corresponding ensemble outcome is missing with no fallback. All requested images have terminal observations, and no valid assessment was retried for a different score.",
+  "input_provenance": {
+    "/home/ahstn/git/model-gym/visual-quality/data/labeling-10000-2026-11-01/manifest.json": "65f4df78e3e9d7aea62a0695f386462e3363957773eace00848c61bb5a75e859",
+    "/home/ahstn/git/model-gym/visual-quality/data/labeling-10000-2026-11-01/references-all.jsonl": "5c756959292c851872d5d4316cbe523fba5b92526c0cceb7ad4cf5b1a7863cee",
+    "/home/ahstn/git/model-gym/visual-quality/data/labeling-10000-2026-11-01/stats.jsonl": "8a78052a21b1ddba69f0c01418745e8b2bb658d91b73bd5e1c3e0f4e6e659302",
+    "/home/ahstn/git/model-gym/visual-quality/data/labeling-10000-2026-11-01/results/lite/reused.jsonl": "274cf312cddb419d9235593340b321a32e380f9be101d38db56f9e72a4af647f"
+  }
+}

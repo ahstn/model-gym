@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:visual-quality:label-observation-v1",
+  "title": "Pending technical-quality teacher observation v1",
+  "description": "A versioned sidecar joined to an immutable image view. This pilot artifact is pending review and cannot enable training task masks. Source manifests and accepted training labels are separate. Scores are elicited teacher scalars, not human MOS or probabilities. Enforce exact decimal steps and finite JSON numbers in ingestion.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "label_kind", "image_id", "view_id", "source_sha256", "view_sha256",
+    "split", "split_group", "technical_quality", "aesthetics", "photo_domain_eligible",
+    "review_status", "task_masks", "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": "label-observation-v1"},
+    "label_kind": {"const": "teacher_scalar"},
+    "image_id": {"$ref": "#/$defs/nonempty_string"},
+    "view_id": {"$ref": "#/$defs/nonempty_string"},
+    "source_sha256": {"$ref": "#/$defs/sha256"},
+    "view_sha256": {"$ref": "#/$defs/sha256"},
+    "split": {"$ref": "#/$defs/nonempty_string"},
+    "split_group": {"$ref": "#/$defs/nonempty_string"},
+    "technical_quality": {"$ref": "#/$defs/technical_quality"},
+    "aesthetics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "score"],
+      "properties": {
+        "status": {"const": "not_requested"},
+        "score": {"type": "null"}
+      }
+    },
+    "photo_domain_eligible": {"type": ["boolean", "null"]},
+    "review_status": {"const": "pending"},
+    "task_masks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["technical_quality", "aesthetics", "photo_domain"],
+      "properties": {
+        "technical_quality": {"type": "boolean", "const": false},
+        "aesthetics": {"type": "boolean", "const": false},
+        "photo_domain": {"type": "boolean", "const": false}
+      }
+    },
+    "provenance": {"$ref": "#/$defs/provenance"}
+  },
+  "$defs": {
+    "nonempty_string": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "sha256": {"type": "string", "minLength": 64, "maxLength": 64, "pattern": "^[0-9a-fA-F]{64}$"},
+    "technical_quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "score", "evidence", "limitations"],
+      "properties": {
+        "status": {"enum": ["ok", "unscorable"]},
+        "score": {"type": ["number", "null"], "minimum": 1, "maximum": 5, "multipleOf": 0.1},
+        "evidence": {"type": "string", "pattern": "^\\s*\\S+(?:\\s+\\S+){0,29}\\s*$"},
+        "limitations": {
+          "type": "array",
+          "items": {"enum": ["limited_detail", "partial_view", "ambiguous_style", "unsupported_domain"]},
+          "uniqueItems": true,
+          "maxItems": 4
+        }
+      },
+      "oneOf": [
+        {"properties": {"status": {"const": "ok"}, "score": {"type": "number"}}},
+        {"properties": {"status": {"const": "unscorable"}, "score": {"type": "null"}}}
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id", "attempt_id", "provider", "model_requested", "model_returned", "provider_returned",
+        "prompt_version", "prompt_sha256", "request_sha256", "created_at", "usage"
+      ],
+      "properties": {
+        "run_id": {"$ref": "#/$defs/nonempty_string"},
+        "attempt_id": {"$ref": "#/$defs/nonempty_string"},
+        "provider": {"const": "openrouter"},
+        "model_requested": {"$ref": "#/$defs/nonempty_string"},
+        "model_returned": {"$ref": "#/$defs/nonempty_string"},
+        "provider_returned": {"anyOf": [{"$ref": "#/$defs/nonempty_string"}, {"type": "null"}]},
+        "prompt_version": {"$ref": "#/$defs/nonempty_string"},
+        "prompt_sha256": {"$ref": "#/$defs/sha256"},
+        "request_sha256": {"$ref": "#/$defs/sha256"},
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-](?:[01]\\d|2[0-3]):[0-5]\\d)$"
+        },
+        "usage": {"type": "object"}
+      }
+    }
+  }
+}

@@ -1,0 +1,3566 @@
+{
+  "version": 1,
+  "benchmark": "quality",
+  "dataset": "UHD-IQA",
+  "selection_seed": 20261011,
+  "selection": "Official test only; six seeded samples from each MOS decile; shuffle IDs; no model output used",
+  "delivery": "EXIF transpose, RGB, full frame, max edge 512, no upscaling, JPEG92 subsampling0 optimize",
+  "metadata_zip_sha256": "a020225f5972776c66249eac316e0dd5e605e90e9addd5fd4f0ca4df52cd0850",
+  "metadata_csv_sha256": "90a46279b4532689efb7959f44c53ffdd902d43870d6532de87291909ccd2940",
+  "archive": {
+    "url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+    "etag": "\"67093f54-27d6c14ac\"",
+    "bytes": 10694169772
+  },
+  "source_certificate_verified": false,
+  "source_certificate_note": "Official archive server certificate expired on acquisition; request-only exception, no credentials",
+  "near_duplicate_candidates_dhash_distance_lte2": [],
+  "limitations": [
+    "Human MOS was collected at width3840; delivered512 judgments are a different view",
+    "Native human aesthetic scores are unavailable; assistant ratings are a separate model reference",
+    "Dataset favors high-aesthetic stock photos; low-MOS strata are relative to this curated population",
+    "No exact matches to prior30; dHash is only a candidate screen, not proof of independent scenes"
+  ],
+  "samples": [
+    {
+      "id": "quality-000",
+      "image": "data/benchmarks/quality/quality-000.jpg",
+      "original_sha256": "f584e0fde89df2930da081fc85d4fc3c99822fa2b195eb71fa9e0f5d869bd41c",
+      "delivered_sha256": "0a6f328ecf4d947a40a9c3c61d6bafa48b897cb14d6579f408a0b75e32e7cf55",
+      "original_size": [
+        3840,
+        1619
+      ],
+      "delivered_size": [
+        512,
+        216
+      ],
+      "delivered_bytes": 29945,
+      "dhash": "012b010101071d7b",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5636.jpg",
+        "group_id": "uhd-iqa:5636.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5636.jpg",
+        "archive_member_crc32": "a8c33e6a",
+        "page_url": "https://pixabay.com/photos/landscape-sunrise-hills-summer-1115428/",
+        "author": "dannymoore1973",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          7224,
+          3045
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.736,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.933333333333333,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.736,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.933333333333333,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 7
+      }
+    },
+    {
+      "id": "quality-001",
+      "image": "data/benchmarks/quality/quality-001.jpg",
+      "original_sha256": "f6fc78fbfa7d3e20fc8395187d03e80bbc60338705517e94d49cec1007030d3c",
+      "delivered_sha256": "b6663915eb42bc068d95ac0ea3d41bed2ed17a3a4d51dc949bdc6d9ad15a829a",
+      "original_size": [
+        3840,
+        2906
+      ],
+      "delivered_size": [
+        512,
+        387
+      ],
+      "delivered_bytes": 95275,
+      "dhash": "1d0d13333383e33e",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4709.jpg",
+        "group_id": "uhd-iqa:4709.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4709.jpg",
+        "archive_member_crc32": "6c880303",
+        "page_url": "https://pixabay.com/photos/mansion-castle-medieval-2958234/",
+        "author": "Montvalent",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4000,
+          3027
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.6175,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.4545454545454546,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.6175,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.4545454545454546,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 2
+      }
+    },
+    {
+      "id": "quality-002",
+      "image": "data/benchmarks/quality/quality-002.jpg",
+      "original_sha256": "d375d53634b6a5da67c7e09845179c9b92db04f23d08a513bd306f60d319fcbb",
+      "delivered_sha256": "891686c93f8735385ba6b3d0c1b5e7aca218c5e62d4f0f7fdd1cf6692367405d",
+      "original_size": [
+        3840,
+        2732
+      ],
+      "delivered_size": [
+        512,
+        364
+      ],
+      "delivered_bytes": 59962,
+      "dhash": "e6261ecf61147666",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4686.jpg",
+        "group_id": "uhd-iqa:4686.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4686.jpg",
+        "archive_member_crc32": "fc818f20",
+        "page_url": "https://pixabay.com/photos/wal-clouds-jump-humpback-whale-2722172/",
+        "author": "SarahRichterArt",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          3980,
+          2832
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.666,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.6505050505050507,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.666,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.6505050505050507,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 4
+      }
+    },
+    {
+      "id": "quality-003",
+      "image": "data/benchmarks/quality/quality-003.jpg",
+      "original_sha256": "789d982228bb33b8306fc705e8938a38750298fe6605e2e7fb8a64fa32b47a6f",
+      "delivered_sha256": "460737c320a35439db11efe07b8a04957960212db0e5c30fffb9d02fcacfcfd6",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 59851,
+      "dhash": "4b23b4544636654d",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5759.jpg",
+        "group_id": "uhd-iqa:5759.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5759.jpg",
+        "archive_member_crc32": "b37169d4",
+        "page_url": "https://pixabay.com/photos/pocket-watch-time-of-sand-time-3156771/",
+        "author": "annca",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          6000,
+          4000
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.77,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.070707070707071,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.77,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.070707070707071,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 8
+      }
+    },
+    {
+      "id": "quality-004",
+      "image": "data/benchmarks/quality/quality-004.jpg",
+      "original_sha256": "3b393c9385f6d55f516b27305e340b4223be06bdc7872c5c3dde4b7e19dd9373",
+      "delivered_sha256": "0431f9a71bdf589e29871ff2f35a2195b2d77d86df707e8ed72801ad59a6c434",
+      "original_size": [
+        3840,
+        2430
+      ],
+      "delivered_size": [
+        512,
+        324
+      ],
+      "delivered_bytes": 65918,
+      "dhash": "1c3030313c281818",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3902.jpg",
+        "group_id": "uhd-iqa:3902.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3902.jpg",
+        "archive_member_crc32": "698cce16",
+        "page_url": "https://pixabay.com/photos/pancake-schaumomelette-omelette-1984716/",
+        "author": "RitaE",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4853,
+          3071
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.758,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.022222222222222,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.758,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.022222222222222,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 8
+      }
+    },
+    {
+      "id": "quality-005",
+      "image": "data/benchmarks/quality/quality-005.jpg",
+      "original_sha256": "e0bba171023dab7ec26c6cd99266d9ad5405cebd33357b449256e10e553fc437",
+      "delivered_sha256": "257b35823922754409f37d6202882d81c4c0c05e864bc486f415af71785848e8",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 106833,
+      "dhash": "4d57ee4e2f495f4f",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4478.jpg",
+        "group_id": "uhd-iqa:4478.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4478.jpg",
+        "archive_member_crc32": "4785b056",
+        "page_url": "https://pixabay.com/photos/sand-desert-drought-heiss-dry-2329153/",
+        "author": "cinelina",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4619,
+          3079
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7045,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.806060606060606,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7045,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.806060606060606,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 5
+      }
+    },
+    {
+      "id": "quality-006",
+      "image": "data/benchmarks/quality/quality-006.jpg",
+      "original_sha256": "b65a62e81ac0d0ca4bf65d4776dad4235828a1ed3a5cd74992bd1855b7592202",
+      "delivered_sha256": "365794b276b902cdde44cb7efaf005339c08ff867b8992dc1f6c41597f135941",
+      "original_size": [
+        3840,
+        2482
+      ],
+      "delivered_size": [
+        512,
+        331
+      ],
+      "delivered_bytes": 85113,
+      "dhash": "333ba1939b991b4b",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "843.jpg",
+        "group_id": "uhd-iqa:843.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/843.jpg",
+        "archive_member_crc32": "26e4cb09",
+        "page_url": "https://pixabay.com/photos/swan-mute-swan-cygnus-olor-chicks-1476802/",
+        "author": "Myriams-Fotos",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5013,
+          3240
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.583,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.315151515151515,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.583,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.315151515151515,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 2
+      }
+    },
+    {
+      "id": "quality-007",
+      "image": "data/benchmarks/quality/quality-007.jpg",
+      "original_sha256": "6b6efbcb9ad94db5dbfb814e86c50c51afb9a72556a3d490ef77a9c84db63b2f",
+      "delivered_sha256": "3d6361e30cdf8bfaf652c3f208608d36ed9af6e7cc1512b6676e2345bff53c0b",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 92288,
+      "dhash": "7939383c2d4e5656",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4211.jpg",
+        "group_id": "uhd-iqa:4211.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4211.jpg",
+        "archive_member_crc32": "04d321ca",
+        "page_url": "https://pixabay.com/photos/grapes-sun-sunbeam-fruit-vines-3550729/",
+        "author": "Bru-nO",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          6000,
+          4000
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7295,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.9070707070707074,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7295,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.9070707070707074,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 6
+      }
+    },
+    {
+      "id": "quality-008",
+      "image": "data/benchmarks/quality/quality-008.jpg",
+      "original_sha256": "fa99901bf23957410bc46065687f26f8d740e9a8d751308af09187040f9645fc",
+      "delivered_sha256": "b4ff1b0bc935a2c913a6024cc9793155027509505bce418294aae41ff4e4a34f",
+      "original_size": [
+        3840,
+        2563
+      ],
+      "delivered_size": [
+        512,
+        342
+      ],
+      "delivered_bytes": 56179,
+      "dhash": "6524222b34160f0f",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4707.jpg",
+        "group_id": "uhd-iqa:4707.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4707.jpg",
+        "archive_member_crc32": "e11d8f57",
+        "page_url": "https://pixabay.com/photos/strawberries-fruit-soft-fruit-red-1339969/",
+        "author": "Pezibear",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          6016,
+          4016
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.789,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.147474747474748,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.789,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.147474747474748,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 9
+      }
+    },
+    {
+      "id": "quality-009",
+      "image": "data/benchmarks/quality/quality-009.jpg",
+      "original_sha256": "4e46f315168521e2efe707f77b3d1b5c5e5c43418823bafb22eda64b1f3a4a32",
+      "delivered_sha256": "04bb8c9e9d4d2c4e48038390148a66b570a5e44b1fe258c53279181f56aec42f",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 18223,
+      "dhash": "1c1209183ce8d82f",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3870.jpg",
+        "group_id": "uhd-iqa:3870.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3870.jpg",
+        "archive_member_crc32": "c892f74f",
+        "page_url": "https://pixabay.com/photos/mt-fuji-japan-1346096/",
+        "author": "AG2016",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4525,
+          3017
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.821,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.276767676767676,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.821,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.276767676767676,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 10
+      }
+    },
+    {
+      "id": "quality-010",
+      "image": "data/benchmarks/quality/quality-010.jpg",
+      "original_sha256": "7c0103e0e5128bb5762a97c07ae3409c4e2e5cf7d1ceff5358fc52d2bd833e02",
+      "delivered_sha256": "a600e2e7f4bc3a80bab72855c7976ed7a81c894c8b4d12c8b9f9a370733be8b4",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 57221,
+      "dhash": "a4b4d29a8ba9e561",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2897.jpg",
+        "group_id": "uhd-iqa:2897.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2897.jpg",
+        "archive_member_crc32": "d70d9e4e",
+        "page_url": "https://pixabay.com/photos/amethyst-violet-purple-quartz-265347/",
+        "author": "stux",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4752,
+          3168
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.609,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.4202020202020202,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.609,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.4202020202020202,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 2
+      }
+    },
+    {
+      "id": "quality-011",
+      "image": "data/benchmarks/quality/quality-011.jpg",
+      "original_sha256": "760a31dc30464926868e1b541266402600ddc51f6f4f316e29a0163cf4cc37b0",
+      "delivered_sha256": "6a323af53fcae138547a2e931e458c1e5619077d87e3e046e184d28791e02a7b",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 69280,
+      "dhash": "031316641e170f0f",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "339.jpg",
+        "group_id": "uhd-iqa:339.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/339.jpg",
+        "archive_member_crc32": "4d5234f6",
+        "page_url": "https://pixabay.com/photos/valentine-s-day-chocolates-candy-2057745/",
+        "author": "JillWellington",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5760,
+          3840
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.755,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.01010101010101,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.755,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.01010101010101,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 8
+      }
+    },
+    {
+      "id": "quality-012",
+      "image": "data/benchmarks/quality/quality-012.jpg",
+      "original_sha256": "f40e194b9a5484e65fc75fdac687c80339a5f690933dcc4efafdfeefa10c22bc",
+      "delivered_sha256": "9c73a216dd985074f3233d283bf04e5ac32331bbe51d1729c25ea1179cd33201",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 181141,
+      "dhash": "08000103070f1f3b",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4319.jpg",
+        "group_id": "uhd-iqa:4319.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4319.jpg",
+        "archive_member_crc32": "8491bf74",
+        "page_url": "https://pixabay.com/photos/butterfly-exotic-south-america-200280/",
+        "author": "stux",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4752,
+          3168
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.5565,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.208080808080808,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.5565,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.208080808080808,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 1
+      }
+    },
+    {
+      "id": "quality-013",
+      "image": "data/benchmarks/quality/quality-013.jpg",
+      "original_sha256": "7a31863e494475940404db3ce249ccbf97262f5a6eb442b0f5a5e5012cb9527d",
+      "delivered_sha256": "cdcfd6e0967a8330f351af6f652b9b56f02346adaac6603fc8a4db0a412eb792",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 121387,
+      "dhash": "9b4b3b19312d5d43",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "1176.jpg",
+        "group_id": "uhd-iqa:1176.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/1176.jpg",
+        "archive_member_crc32": "6b625af6",
+        "page_url": "https://pixabay.com/photos/boat-rowing-boat-lake-water-1620452/",
+        "author": "hschmider",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          6000,
+          4000
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7005,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.78989898989899,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7005,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.78989898989899,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 5
+      }
+    },
+    {
+      "id": "quality-014",
+      "image": "data/benchmarks/quality/quality-014.jpg",
+      "original_sha256": "6dd529f27ac47c164f24c17ba00ac5dcca6d0bfa51d88018789090c99dd64205",
+      "delivered_sha256": "22a500af85b9d9e0c44b76bd837d6d1f2264737ac0c73b2206b6ac2a25885d5d",
+      "original_size": [
+        3840,
+        2553
+      ],
+      "delivered_size": [
+        512,
+        340
+      ],
+      "delivered_bytes": 25760,
+      "dhash": "888c47272333b1f0",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3661.jpg",
+        "group_id": "uhd-iqa:3661.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3661.jpg",
+        "archive_member_crc32": "e99addf2",
+        "page_url": "https://pixabay.com/photos/water-nature-swimming-underwater-3309091/",
+        "author": "Gab_riel_P",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          7520,
+          5000
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.533,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.1131313131313134,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.533,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.1131313131313134,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 1
+      }
+    },
+    {
+      "id": "quality-015",
+      "image": "data/benchmarks/quality/quality-015.jpg",
+      "original_sha256": "456f2e1cf889f89e803a46caa42b32d1ced5ed92b0847f1d74fa9f04ebe1c67f",
+      "delivered_sha256": "abea5a2265bbfe48a7e027388c03d53bfed015d3d7abdc7de870b09c35afa852",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 24033,
+      "dhash": "0501494b03130407",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2332.jpg",
+        "group_id": "uhd-iqa:2332.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2332.jpg",
+        "archive_member_crc32": "1f2f20fc",
+        "page_url": "https://pixabay.com/photos/cherries-inject-fruity-refreshment-2905964/",
+        "author": "Sponchia",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5212,
+          3474
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.8465,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.37979797979798,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.8465,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.37979797979798,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 10
+      }
+    },
+    {
+      "id": "quality-016",
+      "image": "data/benchmarks/quality/quality-016.jpg",
+      "original_sha256": "4f17db1a3eae7ad5744b77721aa7b2f4d6b5cd86b1fd2bf64adc0e2cf0cb6a22",
+      "delivered_sha256": "97a257249f93a7aa13dc416cc455722950bb0a94fadb2a9e6e06a034859ad841",
+      "original_size": [
+        3840,
+        2562
+      ],
+      "delivered_size": [
+        512,
+        342
+      ],
+      "delivered_bytes": 44299,
+      "dhash": "0e0e8ecb49040d0f",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2125.jpg",
+        "group_id": "uhd-iqa:2125.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2125.jpg",
+        "archive_member_crc32": "aabb8b10",
+        "page_url": "https://pixabay.com/photos/home-office-computer-desk-display-1867761/",
+        "author": "Pexels",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4000,
+          2669
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.6655,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.6484848484848484,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.6655,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.6484848484848484,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 3
+      }
+    },
+    {
+      "id": "quality-017",
+      "image": "data/benchmarks/quality/quality-017.jpg",
+      "original_sha256": "7993aeb4d251e5e5265c13a1d93444441dfae4006f00fb9a15063d5882bc9990",
+      "delivered_sha256": "a8cc3b6aaa485e2185d6da24807b70cdae2010c30757ff10154c8b8924659710",
+      "original_size": [
+        3840,
+        2346
+      ],
+      "delivered_size": [
+        512,
+        313
+      ],
+      "delivered_bytes": 101927,
+      "dhash": "a8ceccabb2aab2aa",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3853.jpg",
+        "group_id": "uhd-iqa:3853.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3853.jpg",
+        "archive_member_crc32": "dd0a0246",
+        "page_url": "https://pixabay.com/photos/boxes-drawers-mailboxes-1834406/",
+        "author": "Pexels",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5256,
+          3211
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.556,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.206060606060606,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.556,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.206060606060606,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 1
+      }
+    },
+    {
+      "id": "quality-018",
+      "image": "data/benchmarks/quality/quality-018.jpg",
+      "original_sha256": "436a23c019733101eb4ba90eb7feb3de8c429343a4001b1cb0c77d33c106ecb4",
+      "delivered_sha256": "4c514727273f7ef3ac436655930251752f61eb25a641e7acce75e9243b66ee40",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 89162,
+      "dhash": "9c9c1c1c9d9d9cb4",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "1046.jpg",
+        "group_id": "uhd-iqa:1046.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/1046.jpg",
+        "archive_member_crc32": "898f0785",
+        "page_url": "https://pixabay.com/photos/alley-historic-center-historically-2995354/",
+        "author": "Tama66",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          6000,
+          4000
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7175,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.8585858585858586,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7175,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.8585858585858586,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 6
+      }
+    },
+    {
+      "id": "quality-019",
+      "image": "data/benchmarks/quality/quality-019.jpg",
+      "original_sha256": "cda5f301c2bbdba3c71def262d23a0bf46e89a473ad7ead52aa26d106ab9ebc0",
+      "delivered_sha256": "26c77bd4b5f971f7116ba91e0600768f4b31be2ed34572df2cbf4f1436f47eb9",
+      "original_size": [
+        3840,
+        1280
+      ],
+      "delivered_size": [
+        512,
+        171
+      ],
+      "delivered_bytes": 32061,
+      "dhash": "1b1baeb4331b4d62",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3578.jpg",
+        "group_id": "uhd-iqa:3578.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3578.jpg",
+        "archive_member_crc32": "b9eeec44",
+        "page_url": "https://pixabay.com/photos/landscape-mountains-wilderness-1622739/",
+        "author": "skeeze",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          9000,
+          3000
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7465,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.975757575757576,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7465,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.975757575757576,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 7
+      }
+    },
+    {
+      "id": "quality-020",
+      "image": "data/benchmarks/quality/quality-020.jpg",
+      "original_sha256": "0506458d4537ec30fdbd31f1a1171f521c9e6061988799304725b2b6f4ad3865",
+      "delivered_sha256": "b49bf2ced2400cdc2edb9fbb4f7c5b03ca9e3e26d539fd6bf4739abbdf183fa1",
+      "original_size": [
+        3840,
+        2442
+      ],
+      "delivered_size": [
+        512,
+        326
+      ],
+      "delivered_bytes": 55979,
+      "dhash": "1611259591291916",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3139.jpg",
+        "group_id": "uhd-iqa:3139.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3139.jpg",
+        "archive_member_crc32": "3be9fb72",
+        "page_url": "https://pixabay.com/photos/buildings-cn-tower-canada-colorful-2297210/",
+        "author": "jameswheeler",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5391,
+          3428
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7775,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.1010101010101,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7775,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.1010101010101,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 8
+      }
+    },
+    {
+      "id": "quality-021",
+      "image": "data/benchmarks/quality/quality-021.jpg",
+      "original_sha256": "507215ed6fcafd1df8242fda336448303e3e7cc1698645e5ea7fb75a4d8f0b98",
+      "delivered_sha256": "f92c5a67764561dd73ddc4e26ca7c5221cd40f8f25cef31e272bb1919898665b",
+      "original_size": [
+        3840,
+        2156
+      ],
+      "delivered_size": [
+        512,
+        287
+      ],
+      "delivered_bytes": 32634,
+      "dhash": "4060601a27074000",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2824.jpg",
+        "group_id": "uhd-iqa:2824.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2824.jpg",
+        "archive_member_crc32": "4287d99a",
+        "page_url": "https://pixabay.com/photos/sea-sailing-vessel-ocean-sunset-1101168/",
+        "author": "cocoparisienne",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4000,
+          2246
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.626,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.488888888888889,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.626,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.488888888888889,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 2
+      }
+    },
+    {
+      "id": "quality-022",
+      "image": "data/benchmarks/quality/quality-022.jpg",
+      "original_sha256": "cc7127f7a1b7db79dfad63c6f020494263c9f674ff56a786f730a6968c4a6983",
+      "delivered_sha256": "d3e8de392bdda6ae944f21e37b4def5434ca6640c32f2c3a0586c14b5c79f1b0",
+      "original_size": [
+        3840,
+        2555
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 94454,
+      "dhash": "1f0f0e0f0f3f353b",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4958.jpg",
+        "group_id": "uhd-iqa:4958.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4958.jpg",
+        "archive_member_crc32": "eb4bc005",
+        "page_url": "https://pixabay.com/photos/stairway-wooden-bridge-wooden-1149473/",
+        "author": "Free-Photos",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4256,
+          2832
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.6965,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.7737373737373736,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.6965,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.7737373737373736,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 5
+      }
+    },
+    {
+      "id": "quality-023",
+      "image": "data/benchmarks/quality/quality-023.jpg",
+      "original_sha256": "3607ccb1106e5a8924699b3215fbf948aec4638bd89dc47159ded2e37e03ce54",
+      "delivered_sha256": "0731455b22debc4b7a9f00dfe426a52f6e972d176504415f26fd81cc1cd7053a",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 56554,
+      "dhash": "f0f8803f5360304e",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "1043.jpg",
+        "group_id": "uhd-iqa:1043.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/1043.jpg",
+        "archive_member_crc32": "677098ef",
+        "page_url": "https://pixabay.com/photos/sea-ocean-flow-reef-rocks-shore-3025268/",
+        "author": "Quangpraha",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5760,
+          3840
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.791,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.155555555555556,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.791,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.155555555555556,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 9
+      }
+    },
+    {
+      "id": "quality-024",
+      "image": "data/benchmarks/quality/quality-024.jpg",
+      "original_sha256": "01cf61033e6f2ae410723ebc4d7253fd0851ef3da0f7734f5c75b890534f31fc",
+      "delivered_sha256": "e2cda38b894c8a8cc8a76d43199e8fa076dbb63c9d8cc3ccda34a7423c1217d5",
+      "original_size": [
+        3840,
+        2167
+      ],
+      "delivered_size": [
+        512,
+        289
+      ],
+      "delivered_bytes": 49376,
+      "dhash": "7e6c36b1706a7072",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3647.jpg",
+        "group_id": "uhd-iqa:3647.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3647.jpg",
+        "archive_member_crc32": "c4ee8701",
+        "page_url": "https://pixabay.com/photos/sydney-opera-house-opera-house-3381786/",
+        "author": "RobertDychto",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5768,
+          3255
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.709,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.824242424242424,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.709,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.824242424242424,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 5
+      }
+    },
+    {
+      "id": "quality-025",
+      "image": "data/benchmarks/quality/quality-025.jpg",
+      "original_sha256": "f6eb6ce8e031fd9b208a7e57ce07455c3ae349a1fa45ff2f64a1dde6d13a2f33",
+      "delivered_sha256": "3c2ad2be46d00923950a52d6e60bebcfcc0ecde57ee1630a44adffe5bb4bc632",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 91159,
+      "dhash": "4dcda9fcf7d988d7",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5500.jpg",
+        "group_id": "uhd-iqa:5500.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5500.jpg",
+        "archive_member_crc32": "bcfc0c46",
+        "page_url": "https://pixabay.com/photos/garden-sculpture-greer-the-angel-2351652/",
+        "author": "RonPorter",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5184,
+          3456
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7695,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.068686868686869,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7695,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.068686868686869,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 8
+      }
+    },
+    {
+      "id": "quality-026",
+      "image": "data/benchmarks/quality/quality-026.jpg",
+      "original_sha256": "56ec109665c6fea12d02d622803e673b0c4a30df2f0b4e7bced3f2179a2fe3c6",
+      "delivered_sha256": "b1cb0fb22caeb8b091022ea3b7725bca53b5c7efdde5a4b29a5056e21b31624a",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 19912,
+      "dhash": "3f3f3f3f3f3e3e1f",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4313.jpg",
+        "group_id": "uhd-iqa:4313.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4313.jpg",
+        "archive_member_crc32": "e0a053c2",
+        "page_url": "https://pixabay.com/photos/fog-bridge-foggy-railway-landscape-1209447/",
+        "author": "Free-Photos",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5184,
+          3456
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.532,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.1090909090909093,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.532,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.1090909090909093,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 1
+      }
+    },
+    {
+      "id": "quality-027",
+      "image": "data/benchmarks/quality/quality-027.jpg",
+      "original_sha256": "2f307ce5deb551bb06c2cf56815cfcfd8a797deed089182a9b872d163f81e52f",
+      "delivered_sha256": "276b4b9a7798b806deb5dd82e896668281fd43b59e1b474ae0cd4a838563259b",
+      "original_size": [
+        3840,
+        2543
+      ],
+      "delivered_size": [
+        512,
+        339
+      ],
+      "delivered_bytes": 63582,
+      "dhash": "9e97a2028282030e",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5083.jpg",
+        "group_id": "uhd-iqa:5083.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5083.jpg",
+        "archive_member_crc32": "45c45333",
+        "page_url": "https://pixabay.com/photos/jam-jars-fruit-natural-food-428094/",
+        "author": "jarmoluk",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4928,
+          3264
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.634,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.521212121212121,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.634,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.521212121212121,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 3
+      }
+    },
+    {
+      "id": "quality-028",
+      "image": "data/benchmarks/quality/quality-028.jpg",
+      "original_sha256": "5b26c1a4dee6d8a190aedb7de5e5245118f2ad84703f1e9f8ba13fe2ff48f5ee",
+      "delivered_sha256": "ca165ce5141f340d480f92e9417d913749cd668a35ee7942986292a5e92843d4",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 51676,
+      "dhash": "2613792251180b9b",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2657.jpg",
+        "group_id": "uhd-iqa:2657.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2657.jpg",
+        "archive_member_crc32": "419e3762",
+        "page_url": "https://pixabay.com/photos/leaf-rip-paper-blank-pattern-3155438/",
+        "author": "KatinkavomWolfenmond",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5184,
+          3456
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.794,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.167676767676768,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.794,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.167676767676768,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 9
+      }
+    },
+    {
+      "id": "quality-029",
+      "image": "data/benchmarks/quality/quality-029.jpg",
+      "original_sha256": "0abc883063e580851224f8712d77fc4e2160eb3017075a693cc8268e5b348e29",
+      "delivered_sha256": "fbd197ab331b81f7c4acbeb25c18e07b60ca142805b94de0ac6ec436d4d857f7",
+      "original_size": [
+        3840,
+        2552
+      ],
+      "delivered_size": [
+        512,
+        340
+      ],
+      "delivered_bytes": 22468,
+      "dhash": "0f070f0f0f070f1f",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5824.jpg",
+        "group_id": "uhd-iqa:5824.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5824.jpg",
+        "archive_member_crc32": "f51c784e",
+        "page_url": "https://pixabay.com/photos/underwater-blue-ocean-sea-diving-802092/",
+        "author": "Free-Photos",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4912,
+          3264
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.4375,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 2.7272727272727275,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.4375,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 2.7272727272727275,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 1
+      }
+    },
+    {
+      "id": "quality-030",
+      "image": "data/benchmarks/quality/quality-030.jpg",
+      "original_sha256": "e41e6e19359a9e8a472c7655ce238a0f1e9f301a23183eda4bbc476a538dfc72",
+      "delivered_sha256": "fe51bd1ca993718800f8981cb0c9583d0b2e9bc23a598341bf6d196a7116fd16",
+      "original_size": [
+        3840,
+        2561
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 71229,
+      "dhash": "0c7a2423d35c4bda",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3223.jpg",
+        "group_id": "uhd-iqa:3223.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3223.jpg",
+        "archive_member_crc32": "9b3a2983",
+        "page_url": "https://pixabay.com/photos/budapest-church-architecture-495752/",
+        "author": "Bergadder",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5820,
+          3881
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7375,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.9393939393939394,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7375,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.9393939393939394,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 7
+      }
+    },
+    {
+      "id": "quality-031",
+      "image": "data/benchmarks/quality/quality-031.jpg",
+      "original_sha256": "430615c35d14aa301419c6f3534221d20a77b4fb74835d7ec4ed184a5e751538",
+      "delivered_sha256": "850f38a98c590c0fbe52667727ac31efe9377793a5499e18e1e359ab90cc951d",
+      "original_size": [
+        3840,
+        2571
+      ],
+      "delivered_size": [
+        512,
+        343
+      ],
+      "delivered_bytes": 55625,
+      "dhash": "0a089629d6366966",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2170.jpg",
+        "group_id": "uhd-iqa:2170.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2170.jpg",
+        "archive_member_crc32": "ff77aaa8",
+        "page_url": "https://pixabay.com/photos/whales-ocean-diving-water-seas-1149978/",
+        "author": "Free-Photos",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          3872,
+          2592
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.6575,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.616161616161616,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.6575,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.616161616161616,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 3
+      }
+    },
+    {
+      "id": "quality-032",
+      "image": "data/benchmarks/quality/quality-032.jpg",
+      "original_sha256": "d04295fc604b175d1815acf67ab430ec255b2bf99ecba81bf8c6ba3590a22d05",
+      "delivered_sha256": "15348618e8b6f45c9a263525c3ae560bbcbc25aecafd34d2b4a050cf64c54e90",
+      "original_size": [
+        3840,
+        2498
+      ],
+      "delivered_size": [
+        512,
+        333
+      ],
+      "delivered_bytes": 51109,
+      "dhash": "3ddaedcd0d6f1994",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5720.jpg",
+        "group_id": "uhd-iqa:5720.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5720.jpg",
+        "archive_member_crc32": "d4e8545d",
+        "page_url": "https://pixabay.com/photos/tea-set-teapot-2064504/",
+        "author": "4537668",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          7174,
+          4667
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.821,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.276767676767676,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.821,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.276767676767676,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 10
+      }
+    },
+    {
+      "id": "quality-033",
+      "image": "data/benchmarks/quality/quality-033.jpg",
+      "original_sha256": "707bfc9002cfefec250b64160e9c7cb0027d2678d90ed014c94499a236c44157",
+      "delivered_sha256": "34222af5a6cc7d21cafc34711e822872f5c630f65f8aafc851cf9b094234005f",
+      "original_size": [
+        3840,
+        2546
+      ],
+      "delivered_size": [
+        512,
+        339
+      ],
+      "delivered_bytes": 91238,
+      "dhash": "1733336547434307",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3540.jpg",
+        "group_id": "uhd-iqa:3540.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3540.jpg",
+        "archive_member_crc32": "6c0fe1d9",
+        "page_url": "https://pixabay.com/photos/water-waterfall-nature-landscape-1788712/",
+        "author": "Valiphotos",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5348,
+          3546
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7225,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.878787878787879,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7225,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.878787878787879,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 6
+      }
+    },
+    {
+      "id": "quality-034",
+      "image": "data/benchmarks/quality/quality-034.jpg",
+      "original_sha256": "c54c67dc028cb7e864c91e0270ee96b31c0a029a82e1f0f08f39fc2157a9155f",
+      "delivered_sha256": "5d041cd9e505dc77742396d0e996ee61a51d108f8ccda8e4ece265c9ef6de3dd",
+      "original_size": [
+        3840,
+        2563
+      ],
+      "delivered_size": [
+        512,
+        342
+      ],
+      "delivered_bytes": 41869,
+      "dhash": "0ca4d165e0c3cdcc",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2831.jpg",
+        "group_id": "uhd-iqa:2831.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2831.jpg",
+        "archive_member_crc32": "10e4aec4",
+        "page_url": "https://pixabay.com/photos/workspace-wooden-table-lamp-book-2985783/",
+        "author": "rawpixel",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          6000,
+          4004
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7905,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.153535353535354,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7905,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.153535353535354,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 9
+      }
+    },
+    {
+      "id": "quality-035",
+      "image": "data/benchmarks/quality/quality-035.jpg",
+      "original_sha256": "9de533baa3848400c517afeb920df2266b13bc66e59337a7a6d7bc3264075c07",
+      "delivered_sha256": "6ab2861e56bf517b2c0208715b959fb01fa43f580da14fb757e26210a024c421",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 78885,
+      "dhash": "1e9ed95b2f1f1cbe",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "192.jpg",
+        "group_id": "uhd-iqa:192.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/192.jpg",
+        "archive_member_crc32": "2f804499",
+        "page_url": "https://pixabay.com/photos/road-sky-desert-landscape-nature-3133502/",
+        "author": "jplenio",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4297,
+          2865
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7645,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.048484848484849,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7645,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.048484848484849,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 8
+      }
+    },
+    {
+      "id": "quality-036",
+      "image": "data/benchmarks/quality/quality-036.jpg",
+      "original_sha256": "082db45c7f9819e3bee310ae99451702506252a28ff601c1233f46d604a52d82",
+      "delivered_sha256": "bee0d49112aa0f4d9c108412becc67d24033ec04e05aacbc4286faa78d08bb62",
+      "original_size": [
+        3840,
+        3206
+      ],
+      "delivered_size": [
+        512,
+        427
+      ],
+      "delivered_bytes": 64499,
+      "dhash": "08a686266fe7c703",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "1862.jpg",
+        "group_id": "uhd-iqa:1862.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/1862.jpg",
+        "archive_member_crc32": "738ab10e",
+        "page_url": "https://pixabay.com/photos/skull-dark-pirate-book-gun-death-1193784/",
+        "author": "volfdrag",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4479,
+          3740
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.809,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.228282828282829,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.809,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.228282828282829,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 10
+      }
+    },
+    {
+      "id": "quality-037",
+      "image": "data/benchmarks/quality/quality-037.jpg",
+      "original_sha256": "287ad9736bee4b7351fc2b6db4e2365e36b343d062dd71674e0b487eb4a3c3d2",
+      "delivered_sha256": "6ba68a11938b27ea85fc4dbe56c834db88c4f6b48270957657f0631b798f2b32",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 33567,
+      "dhash": "0303010103096053",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2337.jpg",
+        "group_id": "uhd-iqa:2337.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2337.jpg",
+        "archive_member_crc32": "3c4bed04",
+        "page_url": "https://pixabay.com/photos/fog-mist-nature-ocean-outdoors-1850228/",
+        "author": "Pexels",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4096,
+          2731
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.713,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.84040404040404,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.713,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.84040404040404,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 6
+      }
+    },
+    {
+      "id": "quality-038",
+      "image": "data/benchmarks/quality/quality-038.jpg",
+      "original_sha256": "acd48ddc6fc9947f29242971704b455ce45cc9de1cce8f43a7cc6631582433be",
+      "delivered_sha256": "444679d1abf71d83c60fef313ab9b4b3105b67b8011e5b02db93fc7f64c88f0c",
+      "original_size": [
+        3840,
+        2561
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 74004,
+      "dhash": "7e3f3d3d094d6052",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2706.jpg",
+        "group_id": "uhd-iqa:2706.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2706.jpg",
+        "archive_member_crc32": "2a3ca1f8",
+        "page_url": "https://pixabay.com/photos/coast-algae-sea-beach-shore-3358820/",
+        "author": "Quangpraha",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          7103,
+          4738
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7855,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.133333333333333,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7855,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.133333333333333,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 9
+      }
+    },
+    {
+      "id": "quality-039",
+      "image": "data/benchmarks/quality/quality-039.jpg",
+      "original_sha256": "bfebd88f8855af6eeed469ca43db4edbd672b86c1faa824ad7e933cc3124a650",
+      "delivered_sha256": "4fdefa6ac8917b4d12def7e6c06380bb98e4be0c545b596f25b31cbee8efa56b",
+      "original_size": [
+        3840,
+        2160
+      ],
+      "delivered_size": [
+        512,
+        288
+      ],
+      "delivered_bytes": 10528,
+      "dhash": "0004002d2d2d0f12",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3509.jpg",
+        "group_id": "uhd-iqa:3509.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3509.jpg",
+        "archive_member_crc32": "1bd72fda",
+        "page_url": "https://pixabay.com/photos/human-silhouette-the-door-to-hell-1725041/",
+        "author": "xusenru",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          6000,
+          3375
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.525,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.080808080808081,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.525,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.080808080808081,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 1
+      }
+    },
+    {
+      "id": "quality-040",
+      "image": "data/benchmarks/quality/quality-040.jpg",
+      "original_sha256": "147249c8c875ae2702aaac16a46443980ad8a98f5d616ee11f52f003dc69088c",
+      "delivered_sha256": "a8f9d058847df582d070574204d102dcd27ffcad611ba9edcc4eda5d432991d7",
+      "original_size": [
+        3840,
+        2571
+      ],
+      "delivered_size": [
+        512,
+        343
+      ],
+      "delivered_bytes": 84072,
+      "dhash": "0f0f0f1d353d0f0f",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5934.jpg",
+        "group_id": "uhd-iqa:5934.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5934.jpg",
+        "archive_member_crc32": "907c1f79",
+        "page_url": "https://pixabay.com/photos/church-door-castle-bolt-front-door-1927074/",
+        "author": "PIRO4D",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          3872,
+          2592
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.5835,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.317171717171717,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.5835,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.317171717171717,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 2
+      }
+    },
+    {
+      "id": "quality-041",
+      "image": "data/benchmarks/quality/quality-041.jpg",
+      "original_sha256": "5b017fa8e410c7c945ab32689d2dd96e13aa17c3fab078681d94b8fcc757724d",
+      "delivered_sha256": "0bbb1ccbc2a2f71f731d5e70ff7f6d94a765e2c54da670b02bb415add579b450",
+      "original_size": [
+        3840,
+        2555
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 77490,
+      "dhash": "157339253d3d3e3f",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "441.jpg",
+        "group_id": "uhd-iqa:441.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/441.jpg",
+        "archive_member_crc32": "e0607562",
+        "page_url": "https://pixabay.com/photos/beauty-asia-seductive-pretty-1822517/",
+        "author": "sasint",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4256,
+          2832
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7885,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.1454545454545455,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7885,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.1454545454545455,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 9
+      }
+    },
+    {
+      "id": "quality-042",
+      "image": "data/benchmarks/quality/quality-042.jpg",
+      "original_sha256": "ed151fc4c0c85784f40bebb07447da31b47fb2e3317e74b4b40e5c6d19fbd95d",
+      "delivered_sha256": "8f3c98fd721ec08c29bf3ed801c69a5107d6399ef0b273b0566fa1e0d9ff2397",
+      "original_size": [
+        3840,
+        2160
+      ],
+      "delivered_size": [
+        512,
+        288
+      ],
+      "delivered_bytes": 71687,
+      "dhash": "a44951fcf9f36acf",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5905.jpg",
+        "group_id": "uhd-iqa:5905.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5905.jpg",
+        "archive_member_crc32": "55937df1",
+        "page_url": "https://pixabay.com/photos/nature-landscape-ka%C3%A7kars-3150822/",
+        "author": "kareni",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          8991,
+          5057
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7395,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.9474747474747476,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7395,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.9474747474747476,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 7
+      }
+    },
+    {
+      "id": "quality-043",
+      "image": "data/benchmarks/quality/quality-043.jpg",
+      "original_sha256": "6b20ccd1fb36cb3e3cafd6d50a929509e128c6fb7485c7e950f566e72bbc0480",
+      "delivered_sha256": "eedc7815504f1fb850dc7958a45b9b9358c49a100ecc4a42d51a252e143ac4ba",
+      "original_size": [
+        3840,
+        2558
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 71201,
+      "dhash": "d949ca3e3b595ed8",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4888.jpg",
+        "group_id": "uhd-iqa:4888.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4888.jpg",
+        "archive_member_crc32": "13e36cfd",
+        "page_url": "https://pixabay.com/photos/birch-mushroom-mushroom-forest-2638687/",
+        "author": "adege",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4528,
+          3016
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.702,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.7959595959595958,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.702,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.7959595959595958,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 5
+      }
+    },
+    {
+      "id": "quality-044",
+      "image": "data/benchmarks/quality/quality-044.jpg",
+      "original_sha256": "e324a0c38c7ecac7a09e68f5a78c62522932c848ba7147506fd4dc2c8df3c84e",
+      "delivered_sha256": "7b6fc6c885509e226687c37c39680b0c52e2bd61c943ac73b890326faeeeff00",
+      "original_size": [
+        3840,
+        2543
+      ],
+      "delivered_size": [
+        512,
+        339
+      ],
+      "delivered_bytes": 56307,
+      "dhash": "1b0b0b0b294dce9c",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2917.jpg",
+        "group_id": "uhd-iqa:2917.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2917.jpg",
+        "archive_member_crc32": "9eb1449a",
+        "page_url": "https://pixabay.com/photos/squirrel-digging-earth-balcony-box-1228610/",
+        "author": "asundermeier",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4928,
+          3264
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.6755,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.6888888888888887,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.6755,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.6888888888888887,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 4
+      }
+    },
+    {
+      "id": "quality-045",
+      "image": "data/benchmarks/quality/quality-045.jpg",
+      "original_sha256": "a05d1234da90b00209320430d2ea2559119167c5bb03722b704d96d0221e285c",
+      "delivered_sha256": "84a7feb12dfb6d6d9ccd49fa027ca170d2199bc66fb99021af0a70934186c96d",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 46916,
+      "dhash": "86e47198fe631318",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "1573.jpg",
+        "group_id": "uhd-iqa:1573.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/1573.jpg",
+        "archive_member_crc32": "603b3518",
+        "page_url": "https://pixabay.com/photos/brush-watercolor-paint-art-color-3445376/",
+        "author": "ulleo",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          6000,
+          4000
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.814,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.248484848484848,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.814,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.248484848484848,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 10
+      }
+    },
+    {
+      "id": "quality-046",
+      "image": "data/benchmarks/quality/quality-046.jpg",
+      "original_sha256": "1872fff7e86d264b2a024354484515667f4112250c96cda4c3ab983fc4711082",
+      "delivered_sha256": "6206c84c67f9a3547a45ce4fcd177046c2b28b7d2442fc3d1770574b6ab72035",
+      "original_size": [
+        3840,
+        2555
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 42482,
+      "dhash": "030f07230f0f0303",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5203.jpg",
+        "group_id": "uhd-iqa:5203.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5203.jpg",
+        "archive_member_crc32": "ad4457b3",
+        "page_url": "https://pixabay.com/photos/wood-floor-backdrop-background-1866667/",
+        "author": "Pexels",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4256,
+          2832
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.733,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.921212121212121,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.733,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.921212121212121,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 7
+      }
+    },
+    {
+      "id": "quality-047",
+      "image": "data/benchmarks/quality/quality-047.jpg",
+      "original_sha256": "e212007c84fe82a996a614f6c529a7a28b17e9f0531a7a694521652a22eea0c3",
+      "delivered_sha256": "3b1e94e7e4c4fac8f7e4ba87f5722e57e92fedfd0876f6320161c3c91045e2b3",
+      "original_size": [
+        3840,
+        2635
+      ],
+      "delivered_size": [
+        512,
+        351
+      ],
+      "delivered_bytes": 87173,
+      "dhash": "8fede9f2f07969d3",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4455.jpg",
+        "group_id": "uhd-iqa:4455.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4455.jpg",
+        "archive_member_crc32": "b6b48c4c",
+        "page_url": "https://pixabay.com/photos/lost-places-rooms-abandoned-2096316/",
+        "author": "MichaelGaida",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4322,
+          2966
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.641,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.5494949494949495,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.641,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.5494949494949495,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 3
+      }
+    },
+    {
+      "id": "quality-048",
+      "image": "data/benchmarks/quality/quality-048.jpg",
+      "original_sha256": "4b14d3478a916206e9753b5d51160e51671e1f1812a0d918548f21a2a6227e3a",
+      "delivered_sha256": "eb004c8ebd574e318aa691aa3de3ff3c390dabea416496acbb08d80d5900bac2",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 49055,
+      "dhash": "0d152b17356978a1",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "321.jpg",
+        "group_id": "uhd-iqa:321.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/321.jpg",
+        "archive_member_crc32": "a5ed6480",
+        "page_url": "https://pixabay.com/photos/stranded-ships-wrecks-abandoned-918933/",
+        "author": "Free-Photos",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5760,
+          3840
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.667,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.6545454545454548,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.667,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.6545454545454548,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 4
+      }
+    },
+    {
+      "id": "quality-049",
+      "image": "data/benchmarks/quality/quality-049.jpg",
+      "original_sha256": "bf4420a764269abe8589f8260e18a8f76956261756055225258ec13f1728f4ab",
+      "delivered_sha256": "2f93978f8413bdaebb8ac424ebfe5fa2c4b9d1477a67e590ca3c13ca9f76ac7d",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 69204,
+      "dhash": "567474dc51c8f0f0",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5019.jpg",
+        "group_id": "uhd-iqa:5019.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5019.jpg",
+        "archive_member_crc32": "2b81957f",
+        "page_url": "https://pixabay.com/photos/christmas-christmas-eve-hot-cocoa-3000057/",
+        "author": "JillWellington",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5434,
+          3623
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7215,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.874747474747475,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7215,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.874747474747475,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 6
+      }
+    },
+    {
+      "id": "quality-050",
+      "image": "data/benchmarks/quality/quality-050.jpg",
+      "original_sha256": "82d17d4eec7ecd1f5b721399b580239450a828003c8a75d806d25cea7459f679",
+      "delivered_sha256": "20924ba9643a90a4d3898105e6e1bdb2d02e26a3b9e626cdf5ca9fa7e215e370",
+      "original_size": [
+        3840,
+        2158
+      ],
+      "delivered_size": [
+        512,
+        288
+      ],
+      "delivered_bytes": 66903,
+      "dhash": "01a3cbcbe9e9cbcb",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2427.jpg",
+        "group_id": "uhd-iqa:2427.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2427.jpg",
+        "archive_member_crc32": "a1fa2b21",
+        "page_url": "https://pixabay.com/photos/singapore-river-skyline-building-255116/",
+        "author": "cegoh",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          4000,
+          2248
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.6615,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.632323232323232,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.6615,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.632323232323232,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 3
+      }
+    },
+    {
+      "id": "quality-051",
+      "image": "data/benchmarks/quality/quality-051.jpg",
+      "original_sha256": "63fd1da3f469914270f46b697fc02eec771c3b099ad0433a58afd14c4ffff688",
+      "delivered_sha256": "5471495bf2013332000a653b37b647ae86b16cd225a0637223abb3535f1873ae",
+      "original_size": [
+        3840,
+        3464
+      ],
+      "delivered_size": [
+        512,
+        462
+      ],
+      "delivered_bytes": 76901,
+      "dhash": "20aaa4b1d9786443",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "2287.jpg",
+        "group_id": "uhd-iqa:2287.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/2287.jpg",
+        "archive_member_crc32": "9db142b1",
+        "page_url": "https://pixabay.com/photos/traffic-lights-traffic-3612455/",
+        "author": "pixel2013",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5184,
+          4676
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.672,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.674747474747475,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.672,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.674747474747475,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 4
+      }
+    },
+    {
+      "id": "quality-052",
+      "image": "data/benchmarks/quality/quality-052.jpg",
+      "original_sha256": "4a600960f973e269ea8ff8870dcbf08c29117f08c14ba0dc17e37dada7a72ca1",
+      "delivered_sha256": "7b1aa315de2a72f09af28414b69394eaab4fff9b162415561f99d77e1f5d2af7",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 135975,
+      "dhash": "9dfe7dfbedd5af4d",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "1154.jpg",
+        "group_id": "uhd-iqa:1154.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/1154.jpg",
+        "archive_member_crc32": "716969a9",
+        "page_url": "https://pixabay.com/photos/peacock-peacock-feathers-feather-3465442/",
+        "author": "analogicus",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          3888,
+          2592
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.683,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.7191919191919194,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.683,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.7191919191919194,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 4
+      }
+    },
+    {
+      "id": "quality-053",
+      "image": "data/benchmarks/quality/quality-053.jpg",
+      "original_sha256": "c1f1e68c88bb7ce8ed4cae08bf9360b4466c22383cec89dbd30ce140078110fc",
+      "delivered_sha256": "1296981a184d0181720a52ef5fe20228ff0d535039a9713a1b577ade3d8ef897",
+      "original_size": [
+        3840,
+        2621
+      ],
+      "delivered_size": [
+        512,
+        349
+      ],
+      "delivered_bytes": 75718,
+      "dhash": "777bde4e9e96a627",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "1761.jpg",
+        "group_id": "uhd-iqa:1761.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/1761.jpg",
+        "archive_member_crc32": "fd2908f8",
+        "page_url": "https://pixabay.com/photos/bird-feeder-tree-wood-rural-feeder-2344414/",
+        "author": "brenkee",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          7672,
+          5236
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.6755,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.6888888888888887,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.6755,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.6888888888888887,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 4
+      }
+    },
+    {
+      "id": "quality-054",
+      "image": "data/benchmarks/quality/quality-054.jpg",
+      "original_sha256": "ec5c88455cdbcb1151cc7daae403fe3e628b6b9a39293c22812f4abfb5f00549",
+      "delivered_sha256": "fface2b5a0e728d6163a7d4ed5ad1f4b242324c08a2c31d86bd48dc0df34c6cb",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 89367,
+      "dhash": "d629503333d31273",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "4475.jpg",
+        "group_id": "uhd-iqa:4475.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/4475.jpg",
+        "archive_member_crc32": "083fe2b8",
+        "page_url": "https://pixabay.com/photos/man-move-back-view-weapons-coat-2198528/",
+        "author": "Fuchsia",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5184,
+          3456
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.5805,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.305050505050505,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.5805,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.305050505050505,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 2
+      }
+    },
+    {
+      "id": "quality-055",
+      "image": "data/benchmarks/quality/quality-055.jpg",
+      "original_sha256": "6978889112abfed9176f7463e629dee8c018b4f6a7dc9ccb495b11d81300d762",
+      "delivered_sha256": "065bbd90610e5d673a59b95bdd0903a7fb173cc6aa1f52ddf5a5885b8d6b419a",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 14996,
+      "dhash": "1468694969cccc4a",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5469.jpg",
+        "group_id": "uhd-iqa:5469.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5469.jpg",
+        "archive_member_crc32": "d1ff22d6",
+        "page_url": "https://pixabay.com/photos/poster-mockup-mockup-poster-frame-2853845/",
+        "author": "BUMIPUTRA",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5184,
+          3456
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.809,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 4.228282828282829,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.809,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 4.228282828282829,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 10
+      }
+    },
+    {
+      "id": "quality-056",
+      "image": "data/benchmarks/quality/quality-056.jpg",
+      "original_sha256": "e2ca8dc00667a63d40218e405ee333aa411591cd950dd509415da44a369aabc2",
+      "delivered_sha256": "f9512d58fe9b2f4ea756ea7048454b0ae0d7f9562e4265e0cc0ed96028d59bbb",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 71324,
+      "dhash": "284f471577f623cf",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "1736.jpg",
+        "group_id": "uhd-iqa:1736.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/1736.jpg",
+        "archive_member_crc32": "5983af7e",
+        "page_url": "https://pixabay.com/photos/new-zealand-path-trail-corum-andel-583174/",
+        "author": "holgerheinze0",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5182,
+          3454
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.6975,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.7777777777777777,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.6975,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.7777777777777777,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 5
+      }
+    },
+    {
+      "id": "quality-057",
+      "image": "data/benchmarks/quality/quality-057.jpg",
+      "original_sha256": "da78607186050821ac7b6ac6ef05c19d0e593fd881b4440cdd5e974e2ee0b1f4",
+      "delivered_sha256": "2027ce026fb401151cda2fede369b2dbc1fd0bc8a3c0c82814f902d9de376756",
+      "original_size": [
+        3840,
+        2560
+      ],
+      "delivered_size": [
+        512,
+        341
+      ],
+      "delivered_bytes": 61875,
+      "dhash": "1d5ed8fc3c3849f9",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "3344.jpg",
+        "group_id": "uhd-iqa:3344.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/3344.jpg",
+        "archive_member_crc32": "b7bcf0c8",
+        "page_url": "https://pixabay.com/photos/map-of-the-world-compass-antique-429784/",
+        "author": "schaeffler",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          6000,
+          4000
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.665,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.6464646464646466,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.665,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.6464646464646466,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 3
+      }
+    },
+    {
+      "id": "quality-058",
+      "image": "data/benchmarks/quality/quality-058.jpg",
+      "original_sha256": "43adfa12d225999b3309c0abc90c37abd1bbed1a39733a98ce3a8c46a6576e52",
+      "delivered_sha256": "19436401dd8d7bf8592080b4ada4fd437694a9c60fbf5ae86818c60870cee5dd",
+      "original_size": [
+        3840,
+        2160
+      ],
+      "delivered_size": [
+        512,
+        288
+      ],
+      "delivered_bytes": 44343,
+      "dhash": "6870c0730eb93e9e",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "5088.jpg",
+        "group_id": "uhd-iqa:5088.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/5088.jpg",
+        "archive_member_crc32": "0ca5274d",
+        "page_url": "https://pixabay.com/photos/landscape-autumn-twilight-mountains-615428/",
+        "author": "jpeter2",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          7032,
+          3956
+        ],
+        "subset": "exclusive"
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.7195,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.8666666666666667,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.7195,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.8666666666666667,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 6
+      }
+    },
+    {
+      "id": "quality-059",
+      "image": "data/benchmarks/quality/quality-059.jpg",
+      "original_sha256": "abe73adf30269b45758c3bc4ab72e0357f27b7e200f7ffa6558cc4e4d4529c79",
+      "delivered_sha256": "92530f82d3b51079c6b94c2f75584e0e18578e4733318d7ad8ffd10e7288f71f",
+      "original_size": [
+        3840,
+        2880
+      ],
+      "delivered_size": [
+        512,
+        384
+      ],
+      "delivered_bytes": 76762,
+      "dhash": "d958f0b2f2c6cce1",
+      "source": {
+        "dataset": "UHD-IQA",
+        "id": "1315.jpg",
+        "group_id": "uhd-iqa:1315.jpg",
+        "split": "test",
+        "source_url": "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+        "archive_url": "https://datasets.vqa.mmsp-kn.de/archives/UHD-IQA/UHD-IQA-database.zip",
+        "archive_etag": "\"67093f54-27d6c14ac\"",
+        "archive_member": "UHD-IQA-database/test/1315.jpg",
+        "archive_member_crc32": "67a4adae",
+        "page_url": "https://pixabay.com/photos/gold-ingots-golden-treasure-513062/",
+        "author": "Stevebidmead",
+        "license": "CC0-1.0 (photos; primary dataset page)",
+        "source_original_size": [
+          5120,
+          3840
+        ],
+        "subset": ""
+      },
+      "labels": {
+        "technical_quality": {
+          "value": 0.741,
+          "scale": [
+            0.01,
+            1
+          ],
+          "normalized_1_to_5": 3.9535353535353535,
+          "kind": "human_mos",
+          "caveat": "Human image quality at 3840px; delivered 512px; affine normalized, not calibrated technical-quality gold"
+        },
+        "quality_mos": 0.741,
+        "quality_mos_native_scale": [
+          0.01,
+          1.0
+        ],
+        "quality_mos_1_5": 3.9535353535353535,
+        "quality_mos_1_5_mapping": "1 + 4 * (native_mos - 0.01) / 0.99; affine, not fitted",
+        "quality_ratings_per_image": 20,
+        "quality_raters": 10,
+        "quality_reference_width": 3840,
+        "aesthetics_mos": null,
+        "sampling_decile": 7
+      }
+    }
+  ]
+}

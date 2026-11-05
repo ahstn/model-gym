@@ -1,0 +1,25 @@
+{
+  "source_commit": "ddcbc4d422b4d4b931bf01b2f00b7938935052fe",
+  "roots": [
+    "visual-quality/experiments/dual-score-trial-2026-10-27",
+    "visual-quality/experiments/eligibility-expanded-120-2026-11-01",
+    "visual-quality/experiments/eligibility-optimization-2026-11-01",
+    "visual-quality/experiments/jev14-2026-10-18",
+    "visual-quality/experiments/jev14-calibration-2026-10-18",
+    "visual-quality/experiments/photo-scoring-2026-10-31",
+    "visual-quality/experiments/prompt-ablation-2026-10-30",
+    "visual-quality/experiments/prompt-calibration-2026-10-18",
+    "visual-quality/experiments/qalign-inference-2026-10-31",
+    "visual-quality/experiments/qrealign-lite-72-2026-10-31",
+    "visual-quality/experiments/rehearsal-4000-2026-11-01",
+    "visual-quality/experiments/runinfra-comparison-2026-10-25",
+    "visual-quality/experiments/runinfra-string-trial-2026-10-26"
+  ],
+  "file_count": 1794,
+  "file_bytes": 334193783,
+  "archive_sha256": "15ec76d697df833d93de8efe6ff12dc71bdba7f4062faefba47412a3db60650d",
+  "restoration_verified": true,
+  "local_archive": "visual-quality/data/experiment-history-2026-11-04/experiments.tar",
+  "restored_tree": "visual-quality/data/experiment-history-2026-11-04/tree",
+  "member_checksums": "experiments-2026-11-04.sha256"
+}

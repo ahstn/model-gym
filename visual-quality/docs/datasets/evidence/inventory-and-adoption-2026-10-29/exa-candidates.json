@@ -1,0 +1,454 @@
+{
+  "date": "2026-10-29",
+  "audit": {
+    "date": "2026-10-29",
+    "service": "Exa selected plugin",
+    "rounds": [
+      {
+        "round": 1,
+        "search_calls": 3,
+        "requested_results": 30,
+        "queries": [
+          {
+            "query": "Official research datasets for image quality assessment published 2025 2026 with human technical quality scores authentic photographs and individual distortion attributes dataset download",
+            "objective": "Find primary author project repositories and publications with new human-rated IQA datasets not simply KonIQ SPAQ FLIVE or KADID. Extract names counts labels and releases.",
+            "numResults": 10
+          },
+          {
+            "query": "Official image aesthetics assessment dataset human aesthetic ratings 2025 2026 diverse photographs composition lighting attributes aesthetic evaluation dataset",
+            "objective": "Find new aesthetics datasets and verified author pages beyond AVA AADB PARA TAD66K. Prefer releases with human attributes and commercial-compatible terms; report concrete counts.",
+            "numResults": 10
+          },
+          {
+            "query": "Official benchmark dataset AI generated AI edited real images detection 2025 2026 semantic matched realistic recent generators FLUX GPT image dataset release",
+            "objective": "Find primary author repositories of new origin detection datasets beyond GenImage Synthbuster SynthCLIC Community Forensics. Look for partially AI edited images and generator-disjoint robust evaluation.",
+            "numResults": 10
+          }
+        ],
+        "returned_titles": 30
+      },
+      {
+        "round": 2,
+        "search_calls": 4,
+        "requested_results": 25,
+        "queries": [
+          {
+            "query": "MMP-2k ViDA-UGC official dataset github download license human quality scores source images",
+            "objective": "Locate original GitHub and release metadata for MMP-2k and ViDA-UGC; extract actual licenses, download locations and source overlap.",
+            "numResults": 5
+          },
+          {
+            "query": "BBC PAIR OpenSDID RealHD official dataset access download licensing research image manipulation benchmark",
+            "objective": "Find primary dataset cards and repositories for matched local editing detection datasets, with source photo terms and access requirements.",
+            "numResults": 10
+          },
+          {
+            "query": "REPID DEAR image rendering quality dataset human preference 30000 100 subset official Hugging Face license",
+            "objective": "Determine whether REPID is renamed DEAR, actual publicly released size, label protocol and license; use author paper/card.",
+            "numResults": 5
+          },
+          {
+            "query": "Fine grained aesthetic image datasets released FGAesthetics dataset 32217 series 2026 AesCanvas human labels Github benchmark",
+            "objective": "Find newly accessible official datasets for same-scene fine-grained aesthetic judgments and whether labels are human or synthetic. Check FGAesthetics actual data release.",
+            "numResults": 5
+          }
+        ],
+        "returned_titles": 25
+      },
+      {
+        "round": 3,
+        "search_calls": 3,
+        "requested_results": 15,
+        "queries": [
+          {
+            "query": "RealHD dataset real-hd github license 730000 2025 download official",
+            "objective": "Verify author dataset repo count and dataset-specific license including source images and inpainting masks.",
+            "numResults": 5
+          },
+          {
+            "query": "RRDataset Real World Robustness Dataset 14963880 Zenodo license 2025 images 3000 download",
+            "objective": "Verify original Zenodo release count, transmission recapture design, file sizes and reuse license.",
+            "numResults": 5
+          },
+          {
+            "query": "OpenFake dataset 2025 2026 official github partial edited images commercial license 43 generators FLUX GPT",
+            "objective": "Find official OpenFake data card, count and partial-edit metadata as a potentially practical alternative to institution-restricted BBC PAIR.",
+            "numResults": 5
+          }
+        ],
+        "returned_titles": 15
+      },
+      {
+        "round": 4,
+        "search_calls": 5,
+        "requested_results": 25,
+        "queries": [
+          {
+            "query": "OpenFake v2 dataset corrections repaired duplicate prompt image mismatch September October 2026 held out test source leakage",
+            "objective": "Find the dataset authors' current correction/audit notes. Verify whether label or prompt mismatch issues remain, exact current split counts, license and real-source matching.",
+            "numResults": 5
+          },
+          {
+            "query": "OpenSDI OpenSDID dataset license Megalith train test masks partial real image overlap source copyright academic",
+            "objective": "Read primary card, repo and paper for inherited image rights, train-test or source overlap, manipulation mask fields, exact partial and full counts; avoid mirrors as license evidence.",
+            "numResults": 5
+          },
+          {
+            "query": "FGAesthetics annotation human annotators pairwise Gemini Rank Calibration release dataset source labels",
+            "objective": "Verify whether ranks are human judgments or synthetic Gemini labels and inherited source overlap; inspect primary paper and supplement.",
+            "numResults": 5
+          },
+          {
+            "query": "MMP-2k image quality report ChatGPT human annotation 17 raters license source study 512 1024 macro distortion",
+            "objective": "Verify human MOS versus model-written report distinction, rated resolution, and important intentional depth-of-field failure mode using primary paper.",
+            "numResults": 5
+          },
+          {
+            "query": "SIDA Social Media Image Deepfake Detection Localization Explanation SID Set 300000 240000 OpenImages generated tampered official dataset license",
+            "objective": "Cross-check HF agent candidate saberzl/SID_Set against primary SIDA paper/repository; verify counts 210k train 30k validation 60k held-out test, actual image origin labels/masks, source rights, and overlap risk.",
+            "numResults": 5
+          }
+        ],
+        "returned_titles": 25
+      }
+    ],
+    "sources_reviewed": 95,
+    "requested_results": 95,
+    "returned_titles": 95,
+    "unique_search_urls": 79,
+    "unique_urls": [
+      "https://arxiv.org/html/2505.19065v1",
+      "https://live.ece.utexas.edu/research/LIVE-VI-UGC/index.html",
+      "https://zenodo.org/records/16903690",
+      "https://database.mmsp-kn.de/koniq-10k-database.html",
+      "https://database.mmsp-kn.de/koniq-image-defects-database.html",
+      "https://arxiv.org/html/2508.12605v1",
+      "https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+      "https://www.nature.com/articles/s41598-026-54744-1",
+      "https://kops.uni-konstanz.de/server/api/core/bitstreams/f930d114-eda6-40b2-a750-4e01256630ac/content",
+      "https://www.colorado.edu/lab/live/live-wild-image-quality-challenge-database",
+      "https://openaccess.thecvf.com/content/CVPR2025W/CVEU/papers/Maerten_LAPIS_A_novel_dataset_for_personalized_image_aesthetic_assessment_CVPRW_2025_paper.pdf",
+      "https://arxiv.org/html/2608.26713v1",
+      "https://ai.sony/publications/uhd-iqa-benchmark-database-pushing-the-boundaries-of-blind-photo-quality-assessment",
+      "https://huggingface.co/datasets/TPagent/AVA",
+      "https://huggingface.co/datasets/Thunderbolt215215/ArtiMuse-10K",
+      "https://openaccess.thecvf.com/content/CVPR2026/html/Cao_ArtiMuse_Fine-Grained_Image_Aesthetics_Assessment_with_Joint_Scoring_and_Expert-Level_CVPR_2026_paper.html",
+      "https://www.nature.com/articles/s41597-026-06816-0",
+      "https://arxiv.org/html/2503.06141",
+      "https://openaccess.thecvf.com/content/CVPR2026/papers/Cao_ArtiMuse_Fine-Grained_Image_Aesthetics_Assessment_with_Joint_Scoring_and_Expert-Level_CVPR_2026_paper.pdf",
+      "https://arxiv.org/html/2512.05209v4",
+      "https://huggingface.co/datasets/Shanmuk4622/ai-detection-dataset-v3",
+      "https://doi.org/10.21227/rcrm-bk73",
+      "https://www.bbc.co.uk/rd/publications/pair-dataset-training-detection-ai",
+      "https://arxiv.org/html/2608.01258",
+      "https://arxiv.org/html/2601.00553v1",
+      "https://dl.acm.org/doi/10.1145/3746027.3755207",
+      "https://openaccess.thecvf.com/content/ICCV2025/html/Li_Bridging_the_Gap_Between_Ideal_and_Real-world_Evaluation_Benchmarking_AI-Generated_ICCV_2025_paper.html",
+      "https://arxiv.org/html/2506.03007v1",
+      "https://huggingface.co/datasets/aman213/aidetector-data",
+      "https://iamwangyabin.github.io/OpenSDI/",
+      "https://huggingface.co/datasets/MMP-2k/MMP-2k",
+      "https://arxiv.org/html/2505.19065",
+      "https://github.com/Future-IQA/MMP-2k",
+      "https://arxiv.org/abs/2508.12605",
+      "https://whycantfindaname.github.io/ViDA-UGC/",
+      "https://bbc-pair.datasets.bbctest01.uk/",
+      "https://bbc-pair.datasets.bbctest01.uk/dataset_information.html",
+      "https://github.com/bbc/PAIR",
+      "https://downloads.bbc.co.uk/rd/pubs/whp/whp-pdf-files/WHP430.pdf",
+      "https://proceedings.neurips.cc/paper_files/paper/2025/file/36721d1209a059dcb7a090dd543f34c4-Paper-Conference.pdf",
+      "https://huggingface.co/datasets/KhangTruong/OpenSDID",
+      "https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_OpenSDI_Spotting_Diffusion-Generated_Images_in_the_Open_World_CVPR_2025_paper.pdf",
+      "https://huggingface.co/datasets/vsevolodpl/REPID/blame/main/LICENSE.md",
+      "https://huggingface.co/datasets/vsevolodpl/REPID/blob/305f8e53603b658679da41c579612dac97aea80c/README.md",
+      "https://huggingface.co/datasets/vsevolodpl/REPID",
+      "https://huggingface.co/datasets/vsevolodpl/REPID?duplicate=true",
+      "https://huggingface.co/datasets/yzc002/FGAesthetics",
+      "https://openaccess.thecvf.com/content/CVPR2026/html/Yang_Fine-grained_Image_Aesthetic_Assessment_Learning_Discriminative_Scores_from_Relative_Ranks_CVPR_2026_paper.html",
+      "https://yzc-ippl.github.io/FG-IAA/",
+      "https://arxiv.org/html/2608.26713",
+      "https://openaccess.thecvf.com/content/CVPR2026/supplemental/Yang_Fine-grained_Image_Aesthetic_CVPR_2026_supplemental.pdf",
+      "https://real-hd.github.io/",
+      "https://github.com/Hanzhe-yu/RealHD/issues/1",
+      "https://github.com/Hanzhe-yu/RealHD/issues/3",
+      "https://arxiv.org/abs/2602.10546",
+      "https://github.com/ChunXiaostudy/RRDataset",
+      "https://openaccess.thecvf.com/content/ICCV2025/supplemental/Li_Bridging_the_Gap_ICCV_2025_supplemental.pdf",
+      "https://arxiv.org/html/2509.09172v1",
+      "https://arxiv.org/pdf/2509.09172",
+      "https://huggingface.co/datasets/ComplexDataLab/OpenFake",
+      "https://huggingface.co/datasets/ComplexDataLab/OpenFake/blob/12cd4b18df9417cd86eaa76aebcebdc70a35b1ee/README.md",
+      "https://arxiv.org/html/2509.09495v2",
+      "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/main",
+      "https://github.com/vicliv/OpenFake",
+      "https://huggingface.co/datasets/ComplexDataLab/OpenFake/discussions/2",
+      "https://huggingface.co/datasets/ComplexDataLab/OpenFake/commit/a2d0d4e924b96c26dfc581998ea9a4388541a709",
+      "https://openaccess.thecvf.com/content/CVPR2025/supplemental/Wang_OpenSDI_Spotting_Diffusion-Generated_CVPR_2025_supplemental.pdf",
+      "https://github.com/iamwangyabin/opensdi",
+      "https://arxiv.org/html/2503.19653v3",
+      "https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_Fine-grained_Image_Aesthetic_Assessment_Learning_Discriminative_Scores_from_Relative_Ranks_CVPR_2026_paper.pdf",
+      "https://cvpr.thecvf.com/virtual/2026/oral/40349",
+      "https://arxiv.org/abs/2505.19065",
+      "https://arxiv.org/pdf/2505.19065",
+      "https://discovery.dundee.ac.uk/ws/portalfiles/portal/164006812/ICIP2025_MMP2K.pdf",
+      "https://huggingface.co/datasets/saberzl/SID_Set",
+      "https://huggingface.co/datasets/saberzl/SID_Set/blob/ab8deed7e2db62eb42d567e307c66cc7867d0447/README.md",
+      "https://openaccess.thecvf.com/content/CVPR2025/html/Huang_SIDA_Social_Media_Image_Deepfake_Detection_Localization_and_Explanation_with_CVPR_2025_paper.html",
+      "https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_SIDA_Social_Media_Image_Deepfake_Detection_Localization_and_Explanation_with_CVPR_2025_paper.pdf",
+      "https://doi.org/10.1109/cvpr52734.2025.02685"
+    ],
+    "note": "sources_reviewed follows Exa skill definition=sum(numResults); this is requested search results, not 95 independent validated sources. Full fetches additional."
+  },
+  "candidates": [
+    {
+      "name": "SID-Set (SIDA)",
+      "category": "AI-generated / AI-edited origin",
+      "repo_status": "New lead: no prose-doc match found in visual-quality/docs or visual-triage/research (evidence directories excluded).",
+      "priority": "First edit-detection pilot, conditional on source and parent audit",
+      "size": "300,000 in paper: 100,000 real OpenImages V7; 100,000 FLUX synthetic; 100,000 tampered (80,000 object-tampered + 20,000 partially tampered). Public HF train210,000+val30,000; test60,000 is separate official download.",
+      "labels": "Three classes: real=0, full_synthetic=1, tampered=2; binary manipulation masks. Real img_id links OpenImages. Separate 3K descriptions are GPT-4o generated, not human gold.",
+      "access": "Official public Hugging Face release and linked Drive train/validation/test; no media downloaded in this research.",
+      "terms": "Official card CC BY4.0; source rights must be kept separately. Card's blanket description of COCO/OpenImages/Flickr30k as CC BY4.0 does not establish each photo's rights.",
+      "limitations": [
+        "Full synthetic mostly FLUX, so retain other-generator external tests.",
+        "Real source differs from some generation/tampering parents; prevent shortcut learning on source provenance.",
+        "Group all derivatives by original photograph; no random per-image split.",
+        "Mask identifies altered support, not subjective quality."
+      ],
+      "sources": [
+        "https://huggingface.co/datasets/saberzl/SID_Set",
+        "https://github.com/hzlsaber/SIDA",
+        "https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_SIDA_Social_Media_Image_Deepfake_Detection_Localization_and_Explanation_with_CVPR_2025_paper.pdf"
+      ],
+      "quality": "Author card, code repository and conference paper cross-checked."
+    },
+    {
+      "name": "OpenSDID / OpenSDI",
+      "category": "AI-generated / AI-edited origin",
+      "repo_status": "New lead: no prose-doc match found.",
+      "priority": "First cross-generator edit/localization evaluation after release terms clarified",
+      "size": "300,000 per official repo and paper Table2: 100k real+100k SD1.5 fake train; test50k real+50k fake across SD1.5, SD2.1, SDXL, SD3, FLUX.1. Paper Table1 has inconsistent 300k/450k entry; use release manifest, not that table.",
+      "labels": "Real/fake, global versus partial generation, manipulation localization masks; VLM editing instructions; no human IQA or aesthetic MOS.",
+      "access": "Author repo links separate HF train and test packages. Parent/HF agent should pin actual Hub release.",
+      "terms": "Repo states CC BY-SA4.0 and also 'academic use'; clarify scope before commercial adoption. Authors source Megalith10M public-domain/CC0/government/no-known-restrictions images; preserve per-image provenance.",
+      "limitations": [
+        "Train generator is SD1.5; modern held-out generations are evaluation, not free extra training rows.",
+        "Need source-family isolation and matching of real/edited derivatives.",
+        "Do not mistake local editing support for detection of arbitrary editing tools."
+      ],
+      "sources": [
+        "https://github.com/iamwangyabin/OpenSDI",
+        "https://iamwangyabin.github.io/OpenSDI/",
+        "https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_OpenSDI_Spotting_Diffusion-Generated_Images_in_the_Open_World_CVPR_2025_paper.pdf"
+      ],
+      "quality": "Author repo, project and CVPR paper agree on principal release design; license wording and one paper count conflict retained."
+    },
+    {
+      "name": "OpenFake v2",
+      "category": "AI-generated origin; recent generator holdout",
+      "repo_status": "Previously mentioned in pilot-preflight-2026-09-29.md; newly verified v2 repair/schema/counts, not wholly new dataset.",
+      "priority": "Small pinned external evaluation, not bulk training",
+      "size": "Current raw README metadata: core/train2,300,034; validation58,453; test91,397; reddit/test36,087. These are card counts, not our byte-level recount.",
+      "labels": "real/fake; model; type; release_date; row_id; image_sha256; prompt_kind; prompt_model/revision/version.",
+      "access": "Public HF; several TB for full core—select bounded strata.",
+      "terms": "Current raw README both YAML and prose CC BY-NC4.0; source-specific proprietary/image terms remain. Exa blob cache had older conflicting prose, superseded by raw read.",
+      "limitations": [
+        "Test changes both generator and real-source distribution; cannot attribute generalization solely to unseen generator.",
+        "Reddit real/fake inferred from subreddit, expected noise; audit labels before gold evaluation.",
+        "Known historical image/prompt mismatch. Current prompt_kind may be corrected generation prompt OR Qwen recaption, which are not equivalent provenance.",
+        "No authoritative source-pair field established here; do not claim exact caption-matched real/fake pairs."
+      ],
+      "sources": [
+        "https://huggingface.co/datasets/ComplexDataLab/OpenFake/raw/main/README.md",
+        "https://huggingface.co/datasets/ComplexDataLab/OpenFake/discussions/2",
+        "https://huggingface.co/datasets/ComplexDataLab/OpenFake/tree/main"
+      ],
+      "quality": "Author card and maintainer issue response; raw current card preferred over stale indexed blob."
+    },
+    {
+      "name": "MMP-2k",
+      "category": "Technical image quality",
+      "repo_status": "New lead: no prose-doc match found.",
+      "priority": "Small human-rated macro/intentional depth-of-field robustness panel",
+      "size": "2,000 macro photographs from Flickr, Unsplash, Pixabay, selected from15,700; 17 retained ratings per image from21 participants.",
+      "labels": "Human five-point ACR values0/25/50/75/100, MOS and raw17 ratings; two humans agree defect type, magnitude and location. Reports are deterministic text templates from MOS+defect annotations, not LLM teacher text.",
+      "access": "Author GitHub v1.0.0 release and public HF MMP-2k/MMP-2k. Author card lists 512x384/384x512 and1024x768/768x1024 variants; study-view mapping needs care.",
+      "terms": "Official repository CC BY-NC-SA4.0; source photo grants separate. Author paper says source images selected under terms permitting modification/commercial use but this does not override release NC restriction.",
+      "limitations": [
+        "Macro-specific, not broad ordinary-photo coverage.",
+        "Deliberate shallow depth of field must not automatically count as defect.",
+        "Resolution variants are the same2,000 sources, not4,000 independent images.",
+        "KonCept512 used for sampling, but target ratings are human."
+      ],
+      "sources": [
+        "https://github.com/Future-IQA/MMP-2k",
+        "https://huggingface.co/datasets/MMP-2k/MMP-2k",
+        "https://arxiv.org/html/2505.19065v1"
+      ],
+      "quality": "Original dataset repo, author HF card, full paper."
+    },
+    {
+      "name": "FGAesthetics",
+      "category": "Fine-grained aesthetics",
+      "repo_status": "Already catalogued; old catalog says data not found. HF agent/root checking newly available archives and small labels; Exa alone cannot prove archive contents.",
+      "priority": "High-value same-scene ranking evaluation after label/archive and terms validation",
+      "size": "32,217 images in10,028 series; 44,863 pairs per primary supplement.",
+      "labels": "Human pairwise comparisons and calibrated within-series ranks. Metrics/MLLMs/Gemini help filter series; ranks themselves human. Ambiguous comparisons filtered out.",
+      "access": "Author-linked yzc002/FGAesthetics HF advertises19.6GB but viewer only1 illustration row. Do not infer absence from viewer; inspect file tree/labels (parallel HF work).",
+      "terms": "No dataset-specific terms established by Exa pages. Inherits eight source datasets, including Q-Eval100K, Pick-a-Pic, NIGHTS, Midjourney, SPS, LSVQ, CPC, GAIC.",
+      "limitations": [
+        "Overlaps existing image pools; split by original/source series and cross-reference source IDs.",
+        "Filtered ambiguous pairs overstate discrimination on near ties; retain a separately human-rated tie panel.",
+        "Ranks are not absolute MOS."
+      ],
+      "sources": [
+        "https://huggingface.co/datasets/yzc002/FGAesthetics",
+        "https://yzc-ippl.github.io/FG-IAA/",
+        "https://openaccess.thecvf.com/content/CVPR2026/supplemental/Yang_Fine-grained_Image_Aesthetic_CVPR_2026_supplemental.pdf"
+      ],
+      "quality": "Author project states human comparison protocol; primary supplement enumerates original sources and pair counts."
+    },
+    {
+      "name": "REPID (formerly DEAR)",
+      "category": "Rendering aesthetics",
+      "repo_status": "DEAR already catalogued. Rename/expanded release should be deduplicated, not new independent dataset.",
+      "priority": "Conditional small same-scene style preference evaluation",
+      "size": "Card claims5,000 scenes×6 renderings=30,000 images; >2.5M votes from13,648 evaluators. Official card still has100-scene-sample pretty_name; validate exact downloadable scope with HF manifests.",
+      "labels": "Human left/right/tie comparisons of rendering styles, at least25 votes per pair; scene groups and processing attributes. Named mos field is pairwise preference, not technical MOS.",
+      "access": "Public author HF card with train/test/full annotation configurations; linked MIT-Adobe FiveK source photographs.",
+      "terms": "Annotations CC BY4.0; photographs research-only under separate MIT/Adobe FiveK licenses.",
+      "limitations": [
+        "Not independent of DEAR or FiveK-derived experiments.",
+        "Group six styles per scene; retain ties and raw votes if released.",
+        "Photo processing preference ≠ technical degradation quality."
+      ],
+      "sources": [
+        "https://huggingface.co/datasets/vsevolodpl/REPID/raw/main/README.md",
+        "https://huggingface.co/datasets/vsevolodpl/REPID/blame/main/LICENSE.md",
+        "https://www.nature.com/articles/s41598-026-54744-1"
+      ],
+      "quality": "Author current card, original license file and peer-reviewed paper; metadata conflict called out."
+    },
+    {
+      "name": "RRDataset",
+      "category": "AI-origin robustness after transmission/recapture",
+      "repo_status": "New lead: no prose-doc match found.",
+      "priority": "Conditional external stress test; lower priority than source-paired edit sets",
+      "size": "Paper describes10k real+10k AI originals, plus transmitted and re-digitized versions; actual archive image count not recounted. Zenodo files2.2GB original train/val and20.1GB test.",
+      "labels": "Real/fake; original, social-transmitted, re-digitized; seven scenario groups. Four recapture methods include scan/photograph print, screen, projection.",
+      "access": "Official Zenodo14963880 public tar.gz files, primary repo.",
+      "terms": "Zenodo CC BY4.0, code MIT. Paper sources include Reuters/AP/BBC/Getty/news sources and Chameleon; repository/deposit tag does not settle inherited photo restrictions.",
+      "limitations": [
+        "Keep all transformations of a source in one split.",
+        "Real-world source claims need audit before commercial use.",
+        "Content and source selection may make an easier/harder distribution rather than pure detector robustness."
+      ],
+      "sources": [
+        "https://zenodo.org/records/14963880",
+        "https://github.com/ChunXiaostudy/RRDataset",
+        "https://openaccess.thecvf.com/content/ICCV2025/papers/Li_Bridging_the_Gap_Between_Ideal_and_Real-world_Evaluation_Benchmarking_AI-Generated_ICCV_2025_paper.pdf"
+      ],
+      "quality": "Official deposit confirms real files and license; paper supplies collection and transformation protocol."
+    },
+    {
+      "name": "DFBench",
+      "category": "AI-origin with edits and distorted real controls",
+      "repo_status": "New lead: no prose-doc match found.",
+      "priority": "Reserve; source overlap likely more work than benefit initially",
+      "size": "Paper540,000 across real/edited/generated;480k generated from12 models×40k Flickr8k prompts; edited images from EPAIQA15K.",
+      "labels": "Real/AI-edited/AI-generated origin; latest-at-paper-time12 models including Flux, SD3.5, AR models.",
+      "access": "Author GitHub links public IntMeGroup/DFBench HF with released train/test JSON and image data.",
+      "terms": "Dataset-specific license not established on primary GitHub page; source dataset terms apply.",
+      "limitations": [
+        "Reuses LIVE, CSIQ, TID2013, KADID, CLIVE, KonIQ and Flickr8k; large overlap risk with our technical quality collection.",
+        "Five captions per Flickr8k image can create related prompt leakage; isolate source image rather than text row.",
+        "Useful real distorted controls, but origin labels never substitute for IQA labels."
+      ],
+      "sources": [
+        "https://arxiv.org/html/2506.03007v1",
+        "https://github.com/IntMeGroup/DFBench"
+      ],
+      "quality": "Original paper explicitly lists inherited IQA sources; original repo release confirmed."
+    },
+    {
+      "name": "BBC PAIR",
+      "category": "Paired fully generated and locally edited images",
+      "repo_status": "New lead: no prose-doc match found.",
+      "priority": "Defer under current eligibility; investigate only if approved institutional use exists",
+      "size": "15,200 OpenImagesV7 real bases;9 whole generators and10 inpainting models; theoretical440,800 generated counterparts, actual slightly fewer due mask failures. Do not count this as440,800 independently sourced scenes.",
+      "labels": "Real base relationship, whole-generated and two inpainted versions per model, region masks and generation metadata.",
+      "access": "Signed license submitted by email; approved institution credentials required. No access request sent.",
+      "terms": "Strictly approved university/academic/public research institutions for noncommercial research. Explicitly excludes independent researchers and commercial organisations; no redistribution.",
+      "limitations": [
+        "Excellent design does not make access available for this workspace.",
+        "BBC download reconstruction/source terms and storage large.",
+        "Keep15,200 parent families intact across split; authors' test last200 image_number15000–15199."
+      ],
+      "sources": [
+        "https://bbc-pair.datasets.bbctest01.uk/",
+        "https://bbc-pair.datasets.bbctest01.uk/dataset_information.html",
+        "https://github.com/bbc/PAIR"
+      ],
+      "quality": "BBC's own access page is decisive for eligibility; count from official dataset information."
+    },
+    {
+      "name": "RealHD",
+      "category": "AI-origin, inpainting/refinement/faceswaps",
+      "repo_status": "New lead: no prose-doc match found.",
+      "priority": "Watchlist; not adoption-ready",
+      "size": "Paper claims>730,000 real/generated images; no actual archive count verified.",
+      "labels": "Generation method/category; inpainting masks.",
+      "access": "Paper claims public release, but original GitHub issues as recently asMarch2026 still say future release; current usable download not verified.",
+      "terms": "No dataset-specific license established.",
+      "limitations": [
+        "Do not let paper 'publicly available' promise masquerade as verified accessible media.",
+        "Revisit only with actual authoritative files and terms."
+      ],
+      "sources": [
+        "https://real-hd.github.io/",
+        "https://github.com/Hanzhe-yu/RealHD/issues/1",
+        "https://github.com/Hanzhe-yu/RealHD/issues/3",
+        "https://arxiv.org/abs/2602.10546"
+      ],
+      "quality": "Original authors' issue replies contradict earlier release promise; treated as unavailable/unverified rather than assuming."
+    },
+    {
+      "name": "ViDA-UGC",
+      "category": "Technical quality grounding/explanation",
+      "repo_status": "Already catalogued as ViDA-UGC-Bench in evaluation/benchmarks.md.",
+      "priority": "Known specialized reserve, not new human-MOS corpus",
+      "size": "Updated project11,534 images,36k bounding boxes,534k instructions; bench476 images,6149 QA entries (2567 perception,3106 grounding,476 descriptions).",
+      "labels": "Human distortion locations/quality annotations plus GPT-4o-generated reasoning and instruction answers; professional reviewed benchmark.",
+      "access": "Project says dataset/code will be released; challenge release separately exists in existing inventory; current full training release not established.",
+      "terms": "Data-specific terms not established here; challenge code license not image/annotation license.",
+      "limitations": [
+        "Model-generated text must not become human gold.",
+        "Possible inherited image-source overlaps require original identifiers.",
+        "Already known in repo; catalog refresh only."
+      ],
+      "sources": [
+        "https://whycantfindaname.github.io/ViDA-UGC/",
+        "https://arxiv.org/abs/2508.12605"
+      ],
+      "quality": "Current author project distinguishes human evidence from GPT-derived instructions."
+    },
+    {
+      "name": "LIVE-Meta VI-UGC",
+      "category": "Authentic technical defects",
+      "repo_status": "Already shortlisted in existing quality docs; not new source.",
+      "priority": "Existing reserve remains useful if poor real capture coverage needed",
+      "size": "39,660 images+39,660 patches;2.7M human quality judgments and2.7M distortion labels; additional roughly2.2k ORBIT frames with75k ratings.",
+      "labels": "Human quality and distortions for visually impaired photographers' user-generated photos.",
+      "access": "Author access form, download link/password after form; no access request sent.",
+      "terms": "Author says free research-community access; precise per-image and label terms need source review.",
+      "limitations": [
+        "VizWiz/VizWiz-family overlap; patches and originals share parent split.",
+        "Domain-specific user/capture distribution; do not claim broad ordinary-phone representativeness."
+      ],
+      "sources": [
+        "https://live.ece.utexas.edu/research/LIVE-VI-UGC/index.html"
+      ],
+      "quality": "Original laboratory dataset page; existing local source shortlist already warned about overlap."
+    }
+  ]
+}

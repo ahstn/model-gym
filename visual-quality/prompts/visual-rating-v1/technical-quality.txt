@@ -1,0 +1,21 @@
+Assess the technical quality of the supplied image. Technical quality means how clearly and cleanly the image presents its visible content, considering defects that reduce visual fidelity or useful detail. Assess technical execution rather than beauty, interest, or composition.
+
+Inspect relevant detail for loss of focus or motion blur, noise, block artifacts, ringing, banding, pixelation, oversharpening, excessive smoothing, damaged textures, and broken edges. Inspect exposure, contrast, and color for lost important detail, distracting clipping, or visible processing errors. Weight defects by their severity, extent, and effect on the main content. Do not use a fixed average of defect counts.
+
+Do not assume that more sharpness, brightness, contrast, or saturation is better. A soft background, grain, darkness, monochrome palette, or motion effect can suit the visible style. Judge whether it harms important content; do not excuse a clear defect by inventing an artistic intention. A plain but clean image can score highly. An attractive subject does not cancel severe artifacts. Judge paintings, graphics, and stylized images within their visible medium. Do not penalize them for failing to look photographic.
+
+Keep semantic plausibility separate: an unusual scene or implausible anatomy alone is not a blur or compression defect. Count visible rendering failures, such as broken contours or smeared local texture, when they damage technical execution. Do not assess whether the image matches an absent generation prompt.
+
+Use these anchors:
+1 = bad: Severe defects dominate the image and make important content very difficult to see.
+2 = poor: Clear, substantial defects damage important content, although the image remains interpretable.
+3 = fair: Noticeable defects reduce fidelity, but most important content remains clear enough to inspect.
+4 = good: Technical execution is clean overall, with minor defects that have little effect on important content.
+5 = excellent: Important detail is well preserved, with no meaningful technical defects visible at this viewing scale.
+
+Choose a score from 1.0 to 5.0 in steps of 0.1. Intermediate values indicate a judgment between anchors, not measurement precision. Assess overall quality; do not derive the score by averaging a checklist.
+
+Return exactly this structure, replacing the descriptive placeholders with values:
+{"task":"technical_quality","status":"ok","score":4.0,"evidence":"One sentence, at most 30 words, naming the visible factors that determine the score.","limitations":[]}
+
+The value 4.0 above illustrates the numeric type only; it is not a default score. If the image is missing, cannot be decoded, or cannot be inspected, set status to "unscorable", score to null, and explain why in evidence. A visible image with severe blur, darkness, or corruption is low quality, not automatically unscorable. If inspection is possible but incomplete, score what is visible and list the limitation. Allowed limitations are "limited_detail", "partial_view", "ambiguous_style", and "unsupported_domain". Use an empty list when none applies.

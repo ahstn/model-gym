@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "track": "quality_v2",
+  "no_retry": true,
+  "review_reason": "Reviewed ConnectionError without response or generation ID; catalogue maximum input cost is $0.00524288 with zero output cost; reserve $0.10 for the exact failed attempt, keep actual cost unknown, score zero and never retry.",
+  "protocol_sha256": "c9e8ddb793186d5a6126de26c210afc394e28a623bbaaf7777f8770b2266361c",
+  "run_sha256": "663ddfbe38bfd07ea412678798f5d1dff0082b11af522ddf74557a06e850aa3a",
+  "evidence_path": "evidence/cost-recovery.json",
+  "evidence_sha256": "8a3b1efa2913614e2f45cb62adbab63fba56494c40450c6e6f2a442de6e48f5d",
+  "reservations": [
+    {
+      "ledger_path": "optimisation/candidates/fa05ed2f71926fad612a30f31c4a412e494147a01b9907ff9329b884c6220119/train.jsonl",
+      "sample": "koniq-v2-316",
+      "request_sha256": "fa69785daf881a08a5c921e00c38312583882535e1bcada81788378758bfd757",
+      "record_sha256": "7973cfbff954a39cecd26ce126530a8053e407927b305ac22ca49d8dfc6186cb",
+      "ledger_prefix_bytes": 145631,
+      "ledger_prefix_sha256": "37192902942623f6a439b710d662917f21288ff1e7762c3c2842f0d5dfdc3ed0",
+      "reservation_usd": 0.1,
+      "actual_cost_usd": null,
+      "basis": "reviewed_budget_reservation_not_provider_reported_cost"
+    }
+  ]
+}
