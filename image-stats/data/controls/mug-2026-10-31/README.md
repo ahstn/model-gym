@@ -2,7 +2,12 @@
 
 Generated mug photographs from fal and OpenRouter, made from the prompt in [the protocol](../../../../docs/mug-provenance-protocol-2026-10-31.md), with the reference image they edit. [manifest.jsonl](manifest.jsonl) records route, endpoint, request ID, arm, origin label, prompt and reference SHA-256 and file SHA-256. [requests.jsonl](requests.jsonl) holds the fal request records and the OpenRouter responses, with image data elided.
 
+The [consolidated candidate and trial record](../../../candidate/TRIALS.md)
+records the detector comparison on these eleven originals and the broader
+50-real/50-generated trial, which led to Smaug plus AI-declaration review flags.
+
 The set has three parts:
+
 
 - **Web UI saves (6).** Saved from each service's web UI. The fal files are byte-identical to the fal API outputs: each matches the CDN file in its fal request record. The OpenRouter files' requests and prompt are not recorded.
 - **OpenRouter API outputs (4).** Generated through the API on the same day to separate provider behaviour from the web UI. Each output is stored as decoded from the response. The prompt is the protocol prompt without its trailing newline, which is exactly what the fal requests sent.

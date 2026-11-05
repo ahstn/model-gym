@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "images": 100,
+  "real": 50,
+  "fake": 50,
+  "views": 500,
+  "asset_bytes": 1251542471,
+  "source_manifest_sha256": "dd0407915df1feb5b8ab6f040e33a5c7c94901d310d81f060a046406e190d195",
+  "source_scores_sha256": "e8f2fc3d50261ecf04bce531e1fd90fb5ebc7b74b28614d716aa7bbc5bffe352",
+  "provenance_observation_audit": {
+    "manifest_sha256": "dd0407915df1feb5b8ab6f040e33a5c7c94901d310d81f060a046406e190d195",
+    "source_sha256": {
+      "image-stats/experiments/decision-authenticity-2026-11-05/metadata_checks.py": "8df0b35742160e389451b26c1fa5bd56be33110dd802a949a039f1261ef27c30",
+      "visual-triage/tracks/metadata_v3/provenance.py": "1023b617e5b2692e1552a0f7bd99df87f1bfc1d6c7b9193e14bbf49ac08867c7",
+      "image-stats/data/controls/mug-2026-10-31/scan_provenance.py": "753baffafeb371101b4b584ed3e3ff8afafb9ea2c28af1d7a211e9228042213b"
+    }
+  },
+  "image_stats_observation_audit": {
+    "manifest_sha256": "dd0407915df1feb5b8ab6f040e33a5c7c94901d310d81f060a046406e190d195",
+    "source_sha256": {
+      "image-stats/experiments/decision-authenticity-2026-11-05/metadata_checks.py": "8df0b35742160e389451b26c1fa5bd56be33110dd802a949a039f1261ef27c30",
+      "visual-triage/tracks/metadata_v3/provenance.py": "1023b617e5b2692e1552a0f7bd99df87f1bfc1d6c7b9193e14bbf49ac08867c7",
+      "image-stats/data/controls/mug-2026-10-31/scan_provenance.py": "753baffafeb371101b4b584ed3e3ff8afafb9ea2c28af1d7a211e9228042213b",
+      "image-stats/src/image_stats/__init__.py": "bd74915ddf172d42d9d47fc92549c69bb824b25c28524a4f5b17ee252e6a00d5",
+      "image-stats/src/image_stats/analysis.py": "98ee4bd91d92d6c170625069175a027862ed7ed2e009ccfefb5b441133d7a7e0",
+      "image-stats/src/image_stats/cli.py": "964ef2b81970d096402a4e2ba0c8a70d2411da1f8c908c6e969d62d3687b2b59",
+      "image-stats/src/image_stats/describe.py": "0a74263f71e13f60187b8136bff428e46d020bf04c1fa255910bdc720439be05",
+      "image-stats/src/image_stats/evidence.py": "3b133694ab2a2eb3a982b40ad749e212db0f850ff53a048629583c376c452afa",
+      "image-stats/src/image_stats/flags.py": "f1881868dde5951ba6a01e613750eccf0ced80bfa226bf92e2faa870dc3fb14f",
+      "image-stats/src/image_stats/loading.py": "3a3b91573045cdb2445d5aeb8284a57fbf14671bc280a1ec2b01a3f2e2d42cee",
+      "image-stats/src/image_stats/metadata.py": "6483a11aea9891197452a314b6cb381e9faf5616e594ed05ad05dc3da923b010",
+      "image-stats/src/image_stats/metrics.py": "28c4781fb822a90e62185a74ed4b3b38e8a8994bb91590aa4e3082a059b45833",
+      "image-stats/src/image_stats/reference.py": "1268d68e89d2121a46338b9a34f36bfc0211676f4cd689a6fbfe1d86b02b42a5"
+    }
+  },
+  "exporter_sha256": "c2d2a9753da347a5bf715767ccc1f8a1308347f20bd2c5551c2949b526ed6067",
+  "summary": {
+    "native": {
+      "real": 50,
+      "fake": 50,
+      "smaug_fake_caught": 24,
+      "combined_fake_caught": 46,
+      "combined_real_flagged": 0
+    },
+    "metadata_stripped": {
+      "real": 50,
+      "fake": 50,
+      "smaug_fake_caught": 24,
+      "combined_fake_caught": 24,
+      "combined_real_flagged": 0
+    },
+    "jpeg_q75_1024": {
+      "real": 50,
+      "fake": 50,
+      "smaug_fake_caught": 24,
+      "combined_fake_caught": 24,
+      "combined_real_flagged": 0
+    },
+    "webp_q75_768": {
+      "real": 50,
+      "fake": 50,
+      "smaug_fake_caught": 29,
+      "combined_fake_caught": 29,
+      "combined_real_flagged": 3
+    },
+    "raster_copy_1280x960": {
+      "real": 50,
+      "fake": 50,
+      "smaug_fake_caught": 24,
+      "combined_fake_caught": 24,
+      "combined_real_flagged": 0
+    }
+  }
+}

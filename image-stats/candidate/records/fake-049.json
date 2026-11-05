@@ -1,0 +1,965 @@
+{
+  "schema_version": 1,
+  "id": "fake-049",
+  "pair_id": "pair-049",
+  "label": "fake",
+  "label_basis": "direct text-to-image generation receipt",
+  "native_sha256": "ae256b91a1a40b5e1cb985bb7fb2e4fe718514ebd6423ac0fa886670dedeb2e8",
+  "training_allowed": false,
+  "evaluation_partition": "dev",
+  "partition_note": "Previously examined retrospective evaluation",
+  "source": {},
+  "generation_record": {
+    "path": "generation.json",
+    "image_id": "fake-049"
+  },
+  "views": [
+    {
+      "view": "native",
+      "image_path": "assets/native/fake-049.png",
+      "sha256": "ae256b91a1a40b5e1cb985bb7fb2e4fe718514ebd6423ac0fa886670dedeb2e8",
+      "decoded_rgb_sha256": "0afe894a5aa99ae3066742baae260a2e6c49163813fca1b5881e46653c72a29e",
+      "width": 1200,
+      "height": 896,
+      "transformation": {
+        "method": "native",
+        "changed": false
+      },
+      "provenance": {
+        "c2pa": {
+          "status": "valid",
+          "manifest_present": true,
+          "signature_valid": true,
+          "hard_binding_valid": true,
+          "trust_status": "untrusted",
+          "ai_generation_claim": true,
+          "state": "untrusted",
+          "declared_ai": true,
+          "digital_source_types": [
+            "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia"
+          ],
+          "actions": [
+            {
+              "action": "c2pa.created",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "description": "Created by Google Generative AI."
+            },
+            {
+              "action": "c2pa.edited",
+              "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+              "description": "Applied imperceptible SynthID watermark."
+            }
+          ],
+          "validation_results": {
+            "activeManifest": {
+              "success": [
+                {
+                  "code": "timeStamp.validated",
+                  "url": "self#jumbf=/c2pa/urn:c2pa:2b84a424-2729-288c-4338-41d7c9048600/c2pa.signature",
+                  "explanation": "timestamp message digest matched: Google Core Time Stamping Authority T12"
+                },
+                {
+                  "code": "claimSignature.insideValidity",
+                  "url": "self#jumbf=/c2pa/urn:c2pa:2b84a424-2729-288c-4338-41d7c9048600/c2pa.signature",
+                  "explanation": "claim signature valid"
+                },
+                {
+                  "code": "claimSignature.validated",
+                  "url": "self#jumbf=/c2pa/urn:c2pa:2b84a424-2729-288c-4338-41d7c9048600/c2pa.signature",
+                  "explanation": "claim signature valid"
+                },
+                {
+                  "code": "assertion.hashedURI.match",
+                  "url": "self#jumbf=/c2pa/urn:c2pa:2b84a424-2729-288c-4338-41d7c9048600/c2pa.assertions/c2pa.actions.v2",
+                  "explanation": "hashed uri matched: self#jumbf=c2pa.assertions/c2pa.actions.v2"
+                },
+                {
+                  "code": "assertion.hashedURI.match",
+                  "url": "self#jumbf=/c2pa/urn:c2pa:2b84a424-2729-288c-4338-41d7c9048600/c2pa.assertions/c2pa.hash.data",
+                  "explanation": "hashed uri matched: self#jumbf=c2pa.assertions/c2pa.hash.data"
+                },
+                {
+                  "code": "assertion.dataHash.match",
+                  "url": "self#jumbf=/c2pa/urn:c2pa:2b84a424-2729-288c-4338-41d7c9048600/c2pa.assertions/c2pa.hash.data",
+                  "explanation": "data hash valid"
+                }
+              ],
+              "informational": [
+                {
+                  "code": "timeStamp.untrusted",
+                  "url": "self#jumbf=/c2pa/urn:c2pa:2b84a424-2729-288c-4338-41d7c9048600/c2pa.signature",
+                  "explanation": "timestamp cert untrusted: Google Core Time Stamping Authority T12"
+                }
+              ],
+              "failure": [
+                {
+                  "code": "signingCredential.untrusted",
+                  "url": "self#jumbf=/c2pa/urn:c2pa:2b84a424-2729-288c-4338-41d7c9048600/c2pa.signature",
+                  "explanation": "signing certificate untrusted"
+                }
+              ]
+            },
+            "specVersion": "2.4.0"
+          },
+          "validation_state": "Valid",
+          "claim_generator_info": [
+            {
+              "name": "Google C2PA Core Generator Library",
+              "version": "1009824800:1011624869"
+            }
+          ]
+        },
+        "containers": [
+          {
+            "container": "TEXT",
+            "id": "Raw profile type iptc",
+            "bytes": 137
+          },
+          {
+            "container": "XMP",
+            "id": "XML:com.adobe.xmp",
+            "bytes": 760
+          },
+          {
+            "container": "JUMBF",
+            "id": "caBX",
+            "bytes": 7655
+          }
+        ],
+        "exif": {
+          "tag_count": 0
+        },
+        "exif_present": false,
+        "xmp_present": true,
+        "xmp": [
+          {
+            "fields": {
+              "DigitalSourceType": [
+                "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia"
+              ]
+            },
+            "parse_error": null
+          }
+        ],
+        "unsigned_ai_declarations": [
+          {
+            "source": "XMP",
+            "field": "DigitalSourceType",
+            "value": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia"
+          }
+        ],
+        "policy": {
+          "python_sdk": "0.38.0",
+          "rust_sdk": "0.91.0",
+          "trust_policy": "c2pa-python-0.38.0-rs-0.91.0-default-anchors-offline",
+          "trust_overrides": null,
+          "settings": {
+            "core": {
+              "allowed_network_hosts": []
+            },
+            "verify": {
+              "remote_manifest_fetch": false,
+              "ocsp_fetch": false,
+              "verify_after_reading": true,
+              "verify_trust": true,
+              "verify_timestamp_trust": true
+            }
+          }
+        }
+      },
+      "image_stats": {
+        "analysis": {
+          "version": "image-stats-v2",
+          "max_edge": 1536,
+          "native_dimensions": [
+            1200,
+            896
+          ],
+          "analysed_dimensions": [
+            1200,
+            896
+          ],
+          "colour_action": "missing ICC assumed sRGB",
+          "exif_orientation": 1,
+          "metrics": {
+            "luma_mean": 0.468338,
+            "luma_median": 0.408733,
+            "luma_p01": 0.0490039,
+            "luma_p99": 0.934675,
+            "shadow_clip": 0.000105097,
+            "highlight_clip": 4.6503e-06,
+            "channel_clip": 3.44122e-05,
+            "dark_channel_mean": 0.300889,
+            "rms_contrast": 0.293104,
+            "dynamic_range": 0.885671,
+            "michelson_contrast": 0.900366,
+            "local_contrast": 0.0938681,
+            "luma_entropy": 7.69786,
+            "laplacian_var": 1198.37,
+            "sharpness_peak": 3960.76,
+            "sharpness_median": 855.847,
+            "focus_area": 0.465909,
+            "tenengrad": 9804.12,
+            "high_frequency_ratio": 0.29736,
+            "edge_density": 0.184762,
+            "gradient_anisotropy": 0.123206,
+            "noise_sigma": 1.38965,
+            "chroma_noise_sigma": 0.287307,
+            "colourfulness": 29.9242,
+            "saturation_mean": 0.364055,
+            "chroma_p99": 37.0424,
+            "cast_a": -0.488386,
+            "cast_b": 9.29596,
+            "flat_area": 0.0,
+            "palette_size": 105.0,
+            "top_colour_share": 0.071569,
+            "blockiness": 1.09002
+          },
+          "flags": [],
+          "gate": null
+        },
+        "file_facts": {
+          "format": "PNG",
+          "mode": "RGB",
+          "stored_dimensions": [
+            1200,
+            896
+          ],
+          "frames": 1,
+          "file_bytes": 1982991,
+          "bytes_per_megapixel": 1844299.7,
+          "has_alpha": false,
+          "has_icc_profile": false,
+          "exif_present": false,
+          "exif_orientation": null,
+          "camera_make": null,
+          "camera_model": null,
+          "software": null,
+          "exposure_time_s": null,
+          "f_number": null,
+          "iso": null,
+          "focal_length_mm": null,
+          "jpeg_quality_estimate": null,
+          "jpeg_subsampling": null
+        }
+      },
+      "smaug": {
+        "model": "abacusai/Smaug-AI-Image-Detector",
+        "revision": "c7c95951e04a87b884a4ad479401b1128c3903bd",
+        "threshold": 0.5,
+        "crops": 3,
+        "crop_size": 528,
+        "vision_tokens": 140,
+        "precision": "bfloat16",
+        "device": "cuda",
+        "probability_ai": 0.10570184886455536,
+        "seconds": 0.09334625210613012,
+        "latency_kind": "measured_from_decoded_RGB",
+        "reused_from": null,
+        "observation_kind": "frozen_trial_observation",
+        "source_run_sha256": "e8f2fc3d50261ecf04bce531e1fd90fb5ebc7b74b28614d716aa7bbc5bffe352"
+      },
+      "decision": {
+        "candidate": "smaug-ai-declarations-image-stats-v1",
+        "threshold": 0.5,
+        "smaug_flag": false,
+        "ai_declaration_flag": true,
+        "verified_ai_declaration": false,
+        "review_flag": true,
+        "credential_state": "untrusted",
+        "rule": "smaug_score >= threshold OR explicit AI declaration",
+        "image_stats_role": "diagnostic_only"
+      }
+    },
+    {
+      "view": "metadata_stripped",
+      "image_path": "assets/metadata_stripped/fake-049.png",
+      "sha256": "026dfa56babb744e1264a521ae0803d907938a63235f3e62f7b16cf71f978e91",
+      "decoded_rgb_sha256": "0afe894a5aa99ae3066742baae260a2e6c49163813fca1b5881e46653c72a29e",
+      "width": 1200,
+      "height": 896,
+      "transformation": {
+        "method": "metadata_stripped",
+        "settings": {
+          "format": "PNG",
+          "compress_level": 6
+        },
+        "source_dimensions": [
+          1200,
+          896
+        ],
+        "output_dimensions": [
+          1200,
+          896
+        ],
+        "actual_desktop_screenshot": false
+      },
+      "provenance": {
+        "c2pa": {
+          "status": "no_manifest",
+          "manifest_present": false,
+          "signature_valid": null,
+          "hard_binding_valid": null,
+          "trust_status": "unknown",
+          "ai_generation_claim": null,
+          "state": "missing",
+          "declared_ai": false,
+          "digital_source_types": [],
+          "actions": [],
+          "validation_results": {},
+          "validation_state": null
+        },
+        "containers": [],
+        "exif": {
+          "tag_count": 0
+        },
+        "exif_present": false,
+        "xmp_present": false,
+        "xmp": [],
+        "unsigned_ai_declarations": [],
+        "policy": {
+          "python_sdk": "0.38.0",
+          "rust_sdk": "0.91.0",
+          "trust_policy": "c2pa-python-0.38.0-rs-0.91.0-default-anchors-offline",
+          "trust_overrides": null,
+          "settings": {
+            "core": {
+              "allowed_network_hosts": []
+            },
+            "verify": {
+              "remote_manifest_fetch": false,
+              "ocsp_fetch": false,
+              "verify_after_reading": true,
+              "verify_trust": true,
+              "verify_timestamp_trust": true
+            }
+          }
+        }
+      },
+      "image_stats": {
+        "analysis": {
+          "version": "image-stats-v2",
+          "max_edge": 1536,
+          "native_dimensions": [
+            1200,
+            896
+          ],
+          "analysed_dimensions": [
+            1200,
+            896
+          ],
+          "colour_action": "missing ICC assumed sRGB",
+          "exif_orientation": 1,
+          "metrics": {
+            "luma_mean": 0.468338,
+            "luma_median": 0.408733,
+            "luma_p01": 0.0490039,
+            "luma_p99": 0.934675,
+            "shadow_clip": 0.000105097,
+            "highlight_clip": 4.6503e-06,
+            "channel_clip": 3.44122e-05,
+            "dark_channel_mean": 0.300889,
+            "rms_contrast": 0.293104,
+            "dynamic_range": 0.885671,
+            "michelson_contrast": 0.900366,
+            "local_contrast": 0.0938681,
+            "luma_entropy": 7.69786,
+            "laplacian_var": 1198.37,
+            "sharpness_peak": 3960.76,
+            "sharpness_median": 855.847,
+            "focus_area": 0.465909,
+            "tenengrad": 9804.12,
+            "high_frequency_ratio": 0.29736,
+            "edge_density": 0.184762,
+            "gradient_anisotropy": 0.123206,
+            "noise_sigma": 1.38965,
+            "chroma_noise_sigma": 0.287307,
+            "colourfulness": 29.9242,
+            "saturation_mean": 0.364055,
+            "chroma_p99": 37.0424,
+            "cast_a": -0.488386,
+            "cast_b": 9.29596,
+            "flat_area": 0.0,
+            "palette_size": 105.0,
+            "top_colour_share": 0.071569,
+            "blockiness": 1.09002
+          },
+          "flags": [],
+          "gate": null
+        },
+        "file_facts": {
+          "format": "PNG",
+          "mode": "RGB",
+          "stored_dimensions": [
+            1200,
+            896
+          ],
+          "frames": 1,
+          "file_bytes": 2017993,
+          "bytes_per_megapixel": 1876853.6,
+          "has_alpha": false,
+          "has_icc_profile": false,
+          "exif_present": false,
+          "exif_orientation": null,
+          "camera_make": null,
+          "camera_model": null,
+          "software": null,
+          "exposure_time_s": null,
+          "f_number": null,
+          "iso": null,
+          "focal_length_mm": null,
+          "jpeg_quality_estimate": null,
+          "jpeg_subsampling": null
+        }
+      },
+      "smaug": {
+        "model": "abacusai/Smaug-AI-Image-Detector",
+        "revision": "c7c95951e04a87b884a4ad479401b1128c3903bd",
+        "threshold": 0.5,
+        "crops": 3,
+        "crop_size": 528,
+        "vision_tokens": 140,
+        "precision": "bfloat16",
+        "device": "cuda",
+        "probability_ai": 0.10570184886455536,
+        "seconds": null,
+        "latency_kind": "reused_exact_decoded_pixels",
+        "reused_from": "fake-049:native",
+        "observation_kind": "frozen_trial_observation",
+        "source_run_sha256": "e8f2fc3d50261ecf04bce531e1fd90fb5ebc7b74b28614d716aa7bbc5bffe352"
+      },
+      "decision": {
+        "candidate": "smaug-ai-declarations-image-stats-v1",
+        "threshold": 0.5,
+        "smaug_flag": false,
+        "ai_declaration_flag": false,
+        "verified_ai_declaration": false,
+        "review_flag": false,
+        "credential_state": "missing",
+        "rule": "smaug_score >= threshold OR explicit AI declaration",
+        "image_stats_role": "diagnostic_only"
+      }
+    },
+    {
+      "view": "jpeg_q75_1024",
+      "image_path": "assets/jpeg_q75_1024/fake-049.jpg",
+      "sha256": "eca858446ecf582ac155d9f25ae6c1441190b7c7b9e3ffbe882dd10829b05113",
+      "decoded_rgb_sha256": "d004e8dd6989f3ef7a3729a59b8604251b22ea43bdb8a3091394784de11b5e1f",
+      "width": 1024,
+      "height": 765,
+      "transformation": {
+        "method": "jpeg_q75_1024",
+        "settings": {
+          "format": "JPEG",
+          "quality": 75,
+          "subsampling": 2
+        },
+        "source_dimensions": [
+          1200,
+          896
+        ],
+        "output_dimensions": [
+          1024,
+          765
+        ],
+        "actual_desktop_screenshot": false
+      },
+      "provenance": {
+        "c2pa": {
+          "status": "no_manifest",
+          "manifest_present": false,
+          "signature_valid": null,
+          "hard_binding_valid": null,
+          "trust_status": "unknown",
+          "ai_generation_claim": null,
+          "state": "missing",
+          "declared_ai": false,
+          "digital_source_types": [],
+          "actions": [],
+          "validation_results": {},
+          "validation_state": null
+        },
+        "containers": [
+          {
+            "container": "APP0",
+            "id": "JFIF",
+            "bytes": 14
+          }
+        ],
+        "exif": {
+          "tag_count": 0
+        },
+        "exif_present": false,
+        "xmp_present": false,
+        "xmp": [],
+        "unsigned_ai_declarations": [],
+        "policy": {
+          "python_sdk": "0.38.0",
+          "rust_sdk": "0.91.0",
+          "trust_policy": "c2pa-python-0.38.0-rs-0.91.0-default-anchors-offline",
+          "trust_overrides": null,
+          "settings": {
+            "core": {
+              "allowed_network_hosts": []
+            },
+            "verify": {
+              "remote_manifest_fetch": false,
+              "ocsp_fetch": false,
+              "verify_after_reading": true,
+              "verify_trust": true,
+              "verify_timestamp_trust": true
+            }
+          }
+        }
+      },
+      "image_stats": {
+        "analysis": {
+          "version": "image-stats-v2",
+          "max_edge": 1536,
+          "native_dimensions": [
+            1024,
+            765
+          ],
+          "analysed_dimensions": [
+            1024,
+            765
+          ],
+          "colour_action": "missing ICC assumed sRGB",
+          "exif_orientation": 1,
+          "metrics": {
+            "luma_mean": 0.468465,
+            "luma_median": 0.408424,
+            "luma_p01": 0.0467451,
+            "luma_p99": 0.934227,
+            "shadow_clip": 0.000696998,
+            "highlight_clip": 3.82966e-05,
+            "channel_clip": 1.78717e-05,
+            "dark_channel_mean": 0.29755,
+            "rms_contrast": 0.292509,
+            "dynamic_range": 0.887482,
+            "michelson_contrast": 0.904696,
+            "local_contrast": 0.0912819,
+            "luma_entropy": 7.69866,
+            "laplacian_var": 1143.08,
+            "sharpness_peak": 4445.05,
+            "sharpness_median": 712.546,
+            "focus_area": 0.431818,
+            "tenengrad": 10166.3,
+            "high_frequency_ratio": 0.306653,
+            "edge_density": 0.185327,
+            "gradient_anisotropy": 0.126248,
+            "noise_sigma": 0.201781,
+            "chroma_noise_sigma": 0.00164687,
+            "colourfulness": 29.1428,
+            "saturation_mean": 0.358412,
+            "chroma_p99": 35.6148,
+            "cast_a": -0.399023,
+            "cast_b": 9.07035,
+            "flat_area": 0.0397727,
+            "palette_size": 105.0,
+            "top_colour_share": 0.0729537,
+            "blockiness": 1.19035
+          },
+          "flags": [],
+          "gate": null
+        },
+        "file_facts": {
+          "format": "JPEG",
+          "mode": "RGB",
+          "stored_dimensions": [
+            1024,
+            765
+          ],
+          "frames": 1,
+          "file_bytes": 138266,
+          "bytes_per_megapixel": 176503.8,
+          "has_alpha": false,
+          "has_icc_profile": false,
+          "exif_present": false,
+          "exif_orientation": null,
+          "camera_make": null,
+          "camera_model": null,
+          "software": null,
+          "exposure_time_s": null,
+          "f_number": null,
+          "iso": null,
+          "focal_length_mm": null,
+          "jpeg_quality_estimate": 74.8,
+          "jpeg_subsampling": "4:2:0"
+        }
+      },
+      "smaug": {
+        "model": "abacusai/Smaug-AI-Image-Detector",
+        "revision": "c7c95951e04a87b884a4ad479401b1128c3903bd",
+        "threshold": 0.5,
+        "crops": 3,
+        "crop_size": 528,
+        "vision_tokens": 140,
+        "precision": "bfloat16",
+        "device": "cuda",
+        "probability_ai": 0.8344069123268127,
+        "seconds": 0.08795179426670074,
+        "latency_kind": "measured_from_decoded_RGB",
+        "reused_from": null,
+        "observation_kind": "frozen_trial_observation",
+        "source_run_sha256": "e8f2fc3d50261ecf04bce531e1fd90fb5ebc7b74b28614d716aa7bbc5bffe352"
+      },
+      "decision": {
+        "candidate": "smaug-ai-declarations-image-stats-v1",
+        "threshold": 0.5,
+        "smaug_flag": true,
+        "ai_declaration_flag": false,
+        "verified_ai_declaration": false,
+        "review_flag": true,
+        "credential_state": "missing",
+        "rule": "smaug_score >= threshold OR explicit AI declaration",
+        "image_stats_role": "diagnostic_only"
+      }
+    },
+    {
+      "view": "webp_q75_768",
+      "image_path": "assets/webp_q75_768/fake-049.webp",
+      "sha256": "eea74f5aceb59938f917fbe451d59faba6271cbe7e71185baaccff5336a57a7f",
+      "decoded_rgb_sha256": "4478190a90d844c5002d0d3a3a1576f5e7eb416d713dc9d45a6e3295f890295e",
+      "width": 768,
+      "height": 573,
+      "transformation": {
+        "method": "webp_q75_768",
+        "settings": {
+          "format": "WEBP",
+          "quality": 75,
+          "method": 6
+        },
+        "source_dimensions": [
+          1200,
+          896
+        ],
+        "output_dimensions": [
+          768,
+          573
+        ],
+        "actual_desktop_screenshot": false
+      },
+      "provenance": {
+        "c2pa": {
+          "status": "no_manifest",
+          "manifest_present": false,
+          "signature_valid": null,
+          "hard_binding_valid": null,
+          "trust_status": "unknown",
+          "ai_generation_claim": null,
+          "state": "missing",
+          "declared_ai": false,
+          "digital_source_types": [],
+          "actions": [],
+          "validation_results": {},
+          "validation_state": null
+        },
+        "containers": [
+          {
+            "container": "VP8",
+            "id": "VP8",
+            "bytes": 60572
+          }
+        ],
+        "exif": {
+          "tag_count": 0
+        },
+        "exif_present": false,
+        "xmp_present": false,
+        "xmp": [],
+        "unsigned_ai_declarations": [],
+        "policy": {
+          "python_sdk": "0.38.0",
+          "rust_sdk": "0.91.0",
+          "trust_policy": "c2pa-python-0.38.0-rs-0.91.0-default-anchors-offline",
+          "trust_overrides": null,
+          "settings": {
+            "core": {
+              "allowed_network_hosts": []
+            },
+            "verify": {
+              "remote_manifest_fetch": false,
+              "ocsp_fetch": false,
+              "verify_after_reading": true,
+              "verify_trust": true,
+              "verify_timestamp_trust": true
+            }
+          }
+        }
+      },
+      "image_stats": {
+        "analysis": {
+          "version": "image-stats-v2",
+          "max_edge": 1536,
+          "native_dimensions": [
+            768,
+            573
+          ],
+          "analysed_dimensions": [
+            768,
+            573
+          ],
+          "colour_action": "missing ICC assumed sRGB",
+          "exif_orientation": 1,
+          "metrics": {
+            "luma_mean": 0.468948,
+            "luma_median": 0.409533,
+            "luma_p01": 0.0508784,
+            "luma_p99": 0.935847,
+            "shadow_clip": 0.000402214,
+            "highlight_clip": 3.4086e-05,
+            "channel_clip": 2.49964e-05,
+            "dark_channel_mean": 0.299468,
+            "rms_contrast": 0.291657,
+            "dynamic_range": 0.884969,
+            "michelson_contrast": 0.896874,
+            "local_contrast": 0.0874168,
+            "luma_entropy": 7.64621,
+            "laplacian_var": 1358.45,
+            "sharpness_peak": 5427.34,
+            "sharpness_median": 818.109,
+            "focus_area": 0.431818,
+            "tenengrad": 10053.6,
+            "high_frequency_ratio": 0.292327,
+            "edge_density": 0.182767,
+            "gradient_anisotropy": 0.13991,
+            "noise_sigma": 0.0371688,
+            "chroma_noise_sigma": 0.0147187,
+            "colourfulness": 28.894,
+            "saturation_mean": 0.360868,
+            "chroma_p99": 35.0346,
+            "cast_a": -0.66243,
+            "cast_b": 9.31461,
+            "flat_area": 0.0568182,
+            "palette_size": 101.0,
+            "top_colour_share": 0.0720077,
+            "blockiness": 1.14397
+          },
+          "flags": [],
+          "gate": null
+        },
+        "file_facts": {
+          "format": "WEBP",
+          "mode": "RGB",
+          "stored_dimensions": [
+            768,
+            573
+          ],
+          "frames": 1,
+          "file_bytes": 60592,
+          "bytes_per_megapixel": 137689.1,
+          "has_alpha": false,
+          "has_icc_profile": false,
+          "exif_present": false,
+          "exif_orientation": null,
+          "camera_make": null,
+          "camera_model": null,
+          "software": null,
+          "exposure_time_s": null,
+          "f_number": null,
+          "iso": null,
+          "focal_length_mm": null,
+          "jpeg_quality_estimate": null,
+          "jpeg_subsampling": null
+        }
+      },
+      "smaug": {
+        "model": "abacusai/Smaug-AI-Image-Detector",
+        "revision": "c7c95951e04a87b884a4ad479401b1128c3903bd",
+        "threshold": 0.5,
+        "crops": 3,
+        "crop_size": 528,
+        "vision_tokens": 140,
+        "precision": "bfloat16",
+        "device": "cuda",
+        "probability_ai": 0.57646244764328,
+        "seconds": 0.08495280425995588,
+        "latency_kind": "measured_from_decoded_RGB",
+        "reused_from": null,
+        "observation_kind": "frozen_trial_observation",
+        "source_run_sha256": "e8f2fc3d50261ecf04bce531e1fd90fb5ebc7b74b28614d716aa7bbc5bffe352"
+      },
+      "decision": {
+        "candidate": "smaug-ai-declarations-image-stats-v1",
+        "threshold": 0.5,
+        "smaug_flag": true,
+        "ai_declaration_flag": false,
+        "verified_ai_declaration": false,
+        "review_flag": true,
+        "credential_state": "missing",
+        "rule": "smaug_score >= threshold OR explicit AI declaration",
+        "image_stats_role": "diagnostic_only"
+      }
+    },
+    {
+      "view": "raster_copy_1280x960",
+      "image_path": "assets/raster_copy_1280x960/fake-049.png",
+      "sha256": "32a25f33ef7f9aee6c5687467cb13409c762f42d4793d7a79dd174ec5b0ebe4d",
+      "decoded_rgb_sha256": "ad0a56b792109c164bc5131d2705862ba3b983feeac5d37ee62c009358ca5ba1",
+      "width": 1280,
+      "height": 960,
+      "transformation": {
+        "method": "raster_copy_1280x960",
+        "settings": {
+          "format": "PNG",
+          "compress_level": 6
+        },
+        "source_dimensions": [
+          1200,
+          896
+        ],
+        "output_dimensions": [
+          1280,
+          960
+        ],
+        "actual_desktop_screenshot": false
+      },
+      "provenance": {
+        "c2pa": {
+          "status": "no_manifest",
+          "manifest_present": false,
+          "signature_valid": null,
+          "hard_binding_valid": null,
+          "trust_status": "unknown",
+          "ai_generation_claim": null,
+          "state": "missing",
+          "declared_ai": false,
+          "digital_source_types": [],
+          "actions": [],
+          "validation_results": {},
+          "validation_state": null
+        },
+        "containers": [],
+        "exif": {
+          "tag_count": 0
+        },
+        "exif_present": false,
+        "xmp_present": false,
+        "xmp": [],
+        "unsigned_ai_declarations": [],
+        "policy": {
+          "python_sdk": "0.38.0",
+          "rust_sdk": "0.91.0",
+          "trust_policy": "c2pa-python-0.38.0-rs-0.91.0-default-anchors-offline",
+          "trust_overrides": null,
+          "settings": {
+            "core": {
+              "allowed_network_hosts": []
+            },
+            "verify": {
+              "remote_manifest_fetch": false,
+              "ocsp_fetch": false,
+              "verify_after_reading": true,
+              "verify_trust": true,
+              "verify_timestamp_trust": true
+            }
+          }
+        }
+      },
+      "image_stats": {
+        "analysis": {
+          "version": "image-stats-v2",
+          "max_edge": 1536,
+          "native_dimensions": [
+            1280,
+            960
+          ],
+          "analysed_dimensions": [
+            1280,
+            960
+          ],
+          "colour_action": "missing ICC assumed sRGB",
+          "exif_orientation": 1,
+          "metrics": {
+            "luma_mean": 0.56377,
+            "luma_median": 0.550122,
+            "luma_p01": 0.0513059,
+            "luma_p99": 0.960784,
+            "shadow_clip": 0.000108236,
+            "highlight_clip": 1.05794e-05,
+            "channel_clip": 3.74349e-05,
+            "dark_channel_mean": 0.393844,
+            "rms_contrast": 0.327158,
+            "dynamic_range": 0.909478,
+            "michelson_contrast": 0.898614,
+            "local_contrast": 0.104006,
+            "luma_entropy": 6.9112,
+            "laplacian_var": 967.688,
+            "sharpness_peak": 3454.71,
+            "sharpness_median": 919.876,
+            "focus_area": 0.515625,
+            "tenengrad": 10002.9,
+            "high_frequency_ratio": 0.293122,
+            "edge_density": 0.151593,
+            "gradient_anisotropy": 0.0932443,
+            "noise_sigma": 0.464807,
+            "chroma_noise_sigma": 0.0968372,
+            "colourfulness": 27.3844,
+            "saturation_mean": 0.292008,
+            "chroma_p99": 36.2225,
+            "cast_a": -0.388489,
+            "cast_b": 7.48565,
+            "flat_area": 0.0,
+            "palette_size": 97.0,
+            "top_colour_share": 0.199162,
+            "blockiness": 1.1969
+          },
+          "flags": [],
+          "gate": null
+        },
+        "file_facts": {
+          "format": "PNG",
+          "mode": "RGB",
+          "stored_dimensions": [
+            1280,
+            960
+          ],
+          "frames": 1,
+          "file_bytes": 1848643,
+          "bytes_per_megapixel": 1504429.5,
+          "has_alpha": false,
+          "has_icc_profile": false,
+          "exif_present": false,
+          "exif_orientation": null,
+          "camera_make": null,
+          "camera_model": null,
+          "software": null,
+          "exposure_time_s": null,
+          "f_number": null,
+          "iso": null,
+          "focal_length_mm": null,
+          "jpeg_quality_estimate": null,
+          "jpeg_subsampling": null
+        }
+      },
+      "smaug": {
+        "model": "abacusai/Smaug-AI-Image-Detector",
+        "revision": "c7c95951e04a87b884a4ad479401b1128c3903bd",
+        "threshold": 0.5,
+        "crops": 3,
+        "crop_size": 528,
+        "vision_tokens": 140,
+        "precision": "bfloat16",
+        "device": "cuda",
+        "probability_ai": 0.908833920955658,
+        "seconds": 0.09411667566746473,
+        "latency_kind": "measured_from_decoded_RGB",
+        "reused_from": null,
+        "observation_kind": "frozen_trial_observation",
+        "source_run_sha256": "e8f2fc3d50261ecf04bce531e1fd90fb5ebc7b74b28614d716aa7bbc5bffe352"
+      },
+      "decision": {
+        "candidate": "smaug-ai-declarations-image-stats-v1",
+        "threshold": 0.5,
+        "smaug_flag": true,
+        "ai_declaration_flag": false,
+        "verified_ai_declaration": false,
+        "review_flag": true,
+        "credential_state": "missing",
+        "rule": "smaug_score >= threshold OR explicit AI declaration",
+        "image_stats_role": "diagnostic_only"
+      }
+    }
+  ]
+}
