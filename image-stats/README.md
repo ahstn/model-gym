@@ -1,5 +1,11 @@
 # image-stats
 
+The optional [authenticity candidate](candidate/README.md) combines pinned
+Smaug inference with explicit AI-declaration review flags and these diagnostic
+statistics. Its retained images use Git LFS; per-image JSON includes full
+provenance validation, metrics and file facts. The default package remains
+model-free.
+
 Deterministic, model-free image statistics for three jobs:
 
 1. **Labelling.** Store the statistics next to every image so you can stratify samples, audit teacher scores (for example a 4.0 on a frame with almost no detail), and check that synthetic blur, noise, and JPEG variants move the metrics in the expected order.

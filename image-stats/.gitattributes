@@ -1,0 +1,2 @@
+# Retained authenticity benchmark: original bytes and every delivery variant.
+candidate/assets/** filter=lfs diff=lfs merge=lfs -text

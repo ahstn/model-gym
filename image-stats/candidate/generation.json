@@ -1,0 +1,936 @@
+{
+  "schema_version": 1,
+  "generation": "text_only",
+  "images": [
+    {
+      "id": "fake-001",
+      "pair_id": "pair-001",
+      "provider": "openrouter",
+      "model": "sourceful/riverflow-v2.6-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Five adult friends standing beside a green rice field under heavy grey clouds, a single leafy tree behind them, candid travel snapshot, imperfect spacing and ordinary casual clothes. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "26900250aadab7274f1f196b383bcf8298b7a4a463e850cf9f3160af75211de8",
+      "request_body_sha256": "ef76990372e15e444ea8a0b8e864e77c6358419a38b89de08d7cc1cb5fc894fe",
+      "settings": {
+        "resolution": "1K",
+        "output_format": "png",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "4f153cd9afcb62df0966a01c6e18f605d13b5379e52b0c671a5107ffbd162b5b",
+      "record": "records/fake-001.json"
+    },
+    {
+      "id": "fake-002",
+      "pair_id": "pair-002",
+      "provider": "fal",
+      "model": "bytedance/seedream/v5/pro/text-to-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A small blue-and-white tube of hand cream lying upside down on cream bathroom tiles, close oblique smartphone view, direct indoor light, mildly soft focus. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "94e1b41493d512d461d9477a5c5e328f1e6dda2133f6d5b2aab32a88b9cfa593",
+      "request_body_sha256": "25360b8a6ed6427539f15c8ebfbb4cce02e099dde7179889335c2445ededbd5a",
+      "settings": {
+        "num_images": 1,
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 864,
+          "height": 1152
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "d72ef81557713fef29aa05d4abad135e02166a1e9b313c77cf0741a63684864b",
+      "record": "records/fake-002.json"
+    },
+    {
+      "id": "fake-003",
+      "pair_id": "pair-003",
+      "provider": "fal",
+      "model": "fal-ai/flux-2-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A large recreational kayaking group wearing life jackets and holding colourful paddles beside yellow and red kayaks on a gravel riverbank, green hillside, ordinary group snapshot in summer daylight. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "7453539c979a643b5953f61ed31e56839fc4585bf283d6dc82426822c31863cb",
+      "request_body_sha256": "3ff48019865a2f80306954b56610bc5e3dcd6bd875b12cad9ab5365fdcc31fb6",
+      "settings": {
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1152,
+          "height": 864
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "16e4f63e68e1e4d3cb39e2050e9ef55ecc2d39ba1b7b540f41895a5529195a97",
+      "record": "records/fake-003.json"
+    },
+    {
+      "id": "fake-004",
+      "pair_id": "pair-004",
+      "provider": "openrouter",
+      "model": "google/gemini-3-pro-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A grey short-haired dog looking up at a hand holding a small brown paper treat bag, wooden tabletop at the edge, playful candid home snapshot with natural window light. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "75cbae5f112b435f612685df2082e39b364074508732264b1e0abf9c95f171db",
+      "request_body_sha256": "c4e8a4b273fed12d4fcc38d903340342feb4bcc951859dc1d0e17b581d51309c",
+      "settings": {
+        "resolution": "1K",
+        "aspect_ratio": "4:3"
+      },
+      "reference_images": [],
+      "native_sha256": "223db2040c7a8de6ea04760af4698b0a170ecfba52d4ce12731102020f1e7acb",
+      "record": "records/fake-004.json"
+    },
+    {
+      "id": "fake-005",
+      "pair_id": "pair-005",
+      "provider": "fal",
+      "model": "fal-ai/flux-2-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Three narrow old Dutch townhouses with bay windows and cream and brown brick facades, photographed upward from the pavement, blue sky, ordinary city travel photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "0c661f2be8f7cc0f39d7af3ce5f6587cd3b00c7cc9db9e70bed2c6936d511e7a",
+      "request_body_sha256": "332c3779d964c3fcd464c62975400057c1d46a076afee0054fdbce5f8f625788",
+      "settings": {
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 864,
+          "height": 1152
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "5f943a2dae04c55742bb0cfa7b8ba30baf6242a0baff5590490f8a71a3fc6e70",
+      "record": "records/fake-005.json"
+    },
+    {
+      "id": "fake-006",
+      "pair_id": "pair-006",
+      "provider": "fal",
+      "model": "bytedance/seedream/v5/pro/text-to-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A red panda sitting on a dark mossy rock in a leafy zoo habitat, sunlight filtering through green leaves, realistic fur and relaxed animal posture, casual telephoto photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "cfd596bd1443321b5860664207c922492c4ab02d7a804454ed91b3a79598c480",
+      "request_body_sha256": "2a537aaae4ca7a762eae235d4fe08e9e01752d19e790cdc3a374bad14fd00b51",
+      "settings": {
+        "num_images": 1,
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1248,
+          "height": 832
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "1a1e1f4f3f165ddb1f4f3872b38f054fc73d827ef780b9bf14c88acf6043aeaf",
+      "record": "records/fake-006.json"
+    },
+    {
+      "id": "fake-007",
+      "pair_id": "pair-007",
+      "provider": "openrouter",
+      "model": "sourceful/riverflow-v2.6-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A cluttered home computer desk with a black desktop monitor, loose cables and a closed black laptop in the foreground, tilted close smartphone framing, uneven indoor daylight and some screen glare. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "28fee4e78a27e567545b7f06c5d2553d1c8ad174ee1f4ca2cd39ef395d2cc095",
+      "request_body_sha256": "66d61537aeec77c2b39fb675ddf2a7323502812ee0457bf6317a1a79ecefc1b0",
+      "settings": {
+        "resolution": "1K",
+        "output_format": "png",
+        "aspect_ratio": "3:4"
+      },
+      "reference_images": [],
+      "native_sha256": "b4f0496a692283fb60307c0657ac493bf8c073b3a5b8f5670600dde15161a532",
+      "record": "records/fake-007.json"
+    },
+    {
+      "id": "fake-008",
+      "pair_id": "pair-008",
+      "provider": "openrouter",
+      "model": "openai/gpt-image-2",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Top-down photograph of a green ceramic bowl containing noodles, vegetables and chopped herbs with a metal spoon, on a pale dining table, warm yellow indoor light, ordinary home-cooked meal. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "bae916314eb57b409e7a0d3160105faa2cd0a249863a851cad7fe450f2902e44",
+      "request_body_sha256": "c014afe11c381b857f0ba9e2244d764df5cd2bc195c82cf3203ba666431c12d3",
+      "settings": {
+        "quality": "high",
+        "aspect_ratio": "4:3"
+      },
+      "reference_images": [],
+      "native_sha256": "a6d2b940556c8c9d3820d0608ed6e069fb22c88dd59320d91679cb3d059e33ec",
+      "record": "records/fake-008.json"
+    },
+    {
+      "id": "fake-009",
+      "pair_id": "pair-009",
+      "provider": "openrouter",
+      "model": "sourceful/riverflow-v2.6-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Two fictional adult men in dark business suits smiling during a small conference awards ceremony, wooden stage and a blurred projection screen behind them, candid event photograph, no identifiable public figures. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "854156de90778d72fe063a42b4042a7852ca17d8e8b7d6e377e2bb1b60248516",
+      "request_body_sha256": "5f5d28dfa2e39edd37453d4570377f544580c43a812808a3308e215b68d4995f",
+      "settings": {
+        "resolution": "1K",
+        "output_format": "png",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "0fcc6a1afc73f90056a347b46a695e81a46ff8ac8dcb73d08eb8a30689eb59d6",
+      "record": "records/fake-009.json"
+    },
+    {
+      "id": "fake-010",
+      "pair_id": "pair-010",
+      "provider": "fal",
+      "model": "fal-ai/flux-2-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A quiet neighbourhood lake with small houses and trees along the opposite shore, gentle ripples, slightly hazy blue sky, casual midday travel photograph from the water's edge. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "71fdef473370e89e6947c4e735eda769e1beb80d582d019bf990426bbdf7cd96",
+      "request_body_sha256": "f748ba03ed81a433d151d04b435922030050e7d02bfc64ea2807dda8e807d219",
+      "settings": {
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1152,
+          "height": 864
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "898ed44d94829e7b59064559ed52c95560e2569b503079c4194452873e39b003",
+      "record": "records/fake-010.json"
+    },
+    {
+      "id": "fake-011",
+      "pair_id": "pair-011",
+      "provider": "fal",
+      "model": "fal-ai/flux-2-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Four old flat iron hand tools arranged horizontally inside a museum display on beige woven fabric, photographed through glass with slight reflections, realistic aged metal texture. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "c3d5127295c38bb35a5222409ce14ccedde85bbda96b21aab0914af0e70aa814",
+      "request_body_sha256": "e82e34a83a7c9f341a4b8962e9e18829e83259b4a58a92d7e0bb7b5432503cd6",
+      "settings": {
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1248,
+          "height": 832
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "cd0012bed8a6e6fed7106e71d01f5472ceecc765b99ee37dda21498abbc50e4b",
+      "record": "records/fake-011.json"
+    },
+    {
+      "id": "fake-012",
+      "pair_id": "pair-012",
+      "provider": "openrouter",
+      "model": "openai/gpt-image-2",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. An older couple posing in front of a flower-covered red-and-yellow event wall while holding a large colourful hand-shaped prop, ordinary visitor snapshot, relaxed expressions and daylight. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "db1c741a6f7beeff459ea117a1dac7e05e28286be4be1266ccb5c2167aef29cb",
+      "request_body_sha256": "3a09cfc3e2b1fa1ef79bae880914dc0b3ae297eb6bd5a86c13349e6ff843b4a7",
+      "settings": {
+        "quality": "high",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "2823057e9bdef6993af244904ee077beae87696bb72fec626991be046a6e797f",
+      "record": "records/fake-012.json"
+    },
+    {
+      "id": "fake-013",
+      "pair_id": "pair-013",
+      "provider": "openrouter",
+      "model": "sourceful/riverflow-v2.6-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A small crumbling dry-stone ruin beside a grassy rural track, weeds growing around the rough wall, cloudy blue sky, unpolished countryside travel photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "216db361ec1264efe7af582e7bc694482d2b82433486ad3f2389980da69bcd2d",
+      "request_body_sha256": "9007c832bba6dc961f0d1809364c248491d54d2cb23b84863e339b432bfb87ac",
+      "settings": {
+        "resolution": "1K",
+        "output_format": "png",
+        "aspect_ratio": "4:3"
+      },
+      "reference_images": [],
+      "native_sha256": "ee556ef7a0460572c08b2c1347b73294a6cb91f765df375a909075e0f775b712",
+      "record": "records/fake-013.json"
+    },
+    {
+      "id": "fake-014",
+      "pair_id": "pair-014",
+      "provider": "openrouter",
+      "model": "google/gemini-3-pro-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A leafy green grapevine in a small garden with a weathered wooden plant marker near the soil, dappled sunlight, close handheld garden photograph with a naturally cluttered background. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "6fc59c0a75e664d2f11a7863220b60cfc1a26d74b692ead224c4880e2f25c25c",
+      "request_body_sha256": "9f833348bccca6754ac38d50d3094fdd1e7edf5b1f2c29fb7e2a9607394b4a82",
+      "settings": {
+        "resolution": "1K",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "30773ca3b30e94057ceaffb1020fda2854d4a7b471a1cbab18f07f8ceb33086a",
+      "record": "records/fake-014.json"
+    },
+    {
+      "id": "fake-015",
+      "pair_id": "pair-015",
+      "provider": "openrouter",
+      "model": "google/gemini-3-pro-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Three adult riders on white horses crossing dry coastal grassland, the sea in the distance, breezy pale afternoon light, candid recreational riding photograph rather than a fashion shoot. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "57c6be9af57992ba8fcc168552391e20c6e1434a66db6fa5038c8450487e4f0c",
+      "request_body_sha256": "f91a568c73151b15ee7cc07abcbd98b9d2cc49ce2d8f91c65681e26b75102d04",
+      "settings": {
+        "resolution": "1K",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "e208df62601eaa6edcdbf3d74cbb67bca183d3119ff0835892da69d12919568f",
+      "record": "records/fake-015.json"
+    },
+    {
+      "id": "fake-016",
+      "pair_id": "pair-016",
+      "provider": "openrouter",
+      "model": "google/gemini-3-pro-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A fictional bride and groom receiving a glass from a family guest at a wedding reception, warmly lit restaurant room, other guests close by, ordinary direct-flash event photograph with slight highlight clipping. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "99b23bd54f711f4a25750a2689137bc6ef32c7326c070ff2eecc731e4f523683",
+      "request_body_sha256": "1bba14e3cb30f658a1a2e7279cc9a70b7d9b9d4bdb3d8f80c37218e9ed030424",
+      "settings": {
+        "resolution": "1K",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "e6d9776346a0f381afe4d36bfdc9e7a3770b02629f1f7a3a36d94af88b16b3ad",
+      "record": "records/fake-016.json"
+    },
+    {
+      "id": "fake-017",
+      "pair_id": "pair-017",
+      "provider": "openrouter",
+      "model": "openai/gpt-image-2",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A row of small bronze religious statues inside a warmly lit museum glass cabinet, beige walls and visible reflections, oblique visitor photograph with realistic carved details. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "6ce5c0869cebd80a76eccee76868393c9449df8797faeded848bd006e5c2e91c",
+      "request_body_sha256": "4482563c99870061a70f7d1d6d9fb5faadc53e306e3342f2bceff1fab51a10e7",
+      "settings": {
+        "quality": "high",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "25d543f06a53c71971d9d03456018f4e74fbf7e0bee3080cbf2e980883604104",
+      "record": "records/fake-017.json"
+    },
+    {
+      "id": "fake-018",
+      "pair_id": "pair-018",
+      "provider": "fal",
+      "model": "bytedance/seedream/v5/pro/text-to-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A dry dirt path winding between tall pine trees in a quiet forest picnic area, a rustic wooden fence in the middle distance, bright natural summer light, casual hiking photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "90fd841f856a9a96ebe4cac4f3e7f9c6f7b26907514d248792dd9cf54101ef5f",
+      "request_body_sha256": "7ced194773706bb3406495f932d703edc5671ca0d84b97cf60041861ea37bc03",
+      "settings": {
+        "num_images": 1,
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1248,
+          "height": 832
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "bd920bf5a343b75a953ca2e6bc7770a23d29dd07e340291af6ca6c47168eaa4c",
+      "record": "records/fake-018.json"
+    },
+    {
+      "id": "fake-019",
+      "pair_id": "pair-019",
+      "provider": "openrouter",
+      "model": "sourceful/riverflow-v2.6-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A group of adult kayakers wearing helmets and life jackets standing on a stony lakeshore beside blue and red kayaks, overcast sky and calm grey water, ordinary group holiday photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "ebd3754f5eb5b562a1c0e919764f7361d9442184e25fc5518ad5226918cb7ee4",
+      "request_body_sha256": "51c5149d19a47af70ffacd58e2baf565bb6c3840e13d48add0c9d754dc384bc2",
+      "settings": {
+        "resolution": "1K",
+        "output_format": "png",
+        "aspect_ratio": "4:3"
+      },
+      "reference_images": [],
+      "native_sha256": "7d618be5154e078afcf7cf7aa81e2550d7473c412ba5f67e40e03fc03187b719",
+      "record": "records/fake-019.json"
+    },
+    {
+      "id": "fake-020",
+      "pair_id": "pair-020",
+      "provider": "openrouter",
+      "model": "openai/gpt-image-2",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A small professional workshop in a wood-panelled meeting room, adults seated around a long table with papers and laptops while one person stands speaking, mixed window and ceiling light, candid event snapshot. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "ad668fce6946fbbedea36eeca7b97fea70f8ec0a5d135a24ff7072aed880e73e",
+      "request_body_sha256": "41ab7f31a28990e3bb3cad44bf7f8fb3963a9c1a1d365adf8ab1b102a25e5e9e",
+      "settings": {
+        "quality": "high",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "8c1ec89086b318a8941b72cfe82899c245ef25cfd42a3e0235892829afb34fdf",
+      "record": "records/fake-020.json"
+    },
+    {
+      "id": "fake-021",
+      "pair_id": "pair-021",
+      "provider": "openrouter",
+      "model": "openai/gpt-image-2",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A close photograph of thin magenta star-shaped garden flowers and small green leaves, shallow depth of field, bright natural light, a few softly out-of-focus stems crossing the frame. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "d4a9715a49a0a32a93989b8334565e0ea39f99e64e75bf3acc8923d32c682828",
+      "request_body_sha256": "8db948bca53d0dba66e1f9c1801cbb4ccdb91ab967d16a86689aa79851224d82",
+      "settings": {
+        "quality": "high",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "127e2cbfb690f2a05398e1e443bee9e2a3881c0f01cc30c2a5107cbcc30d9fce",
+      "record": "records/fake-021.json"
+    },
+    {
+      "id": "fake-022",
+      "pair_id": "pair-022",
+      "provider": "openrouter",
+      "model": "sourceful/riverflow-v2.6-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A hand holding a yellow plastic inhaler very close to a smartphone camera in a dim room, direct flash, a little motion softness and realistic skin texture, ordinary household documentation photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "3f7c11c85abfa9d9e0e31ea88ee7a0006d39e5d6d9a44cb91ed25cc63358eb11",
+      "request_body_sha256": "966d8a69393b86444b4837167711c5e5d4c0a7d56561c3b1e7cbf24318933e0f",
+      "settings": {
+        "resolution": "1K",
+        "output_format": "png",
+        "aspect_ratio": "3:4"
+      },
+      "reference_images": [],
+      "native_sha256": "a97b5542ff3be0a048ee0e54fe637fa8e91558cf5a89799a017fc638b4fed59c",
+      "record": "records/fake-022.json"
+    },
+    {
+      "id": "fake-023",
+      "pair_id": "pair-023",
+      "provider": "fal",
+      "model": "bytedance/seedream/v5/pro/text-to-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. An empty desert dune with fine wind-rippled sand at sunset, a softly glowing orange horizon and a darkening sky, restrained colours and physically natural sand texture, travel photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "83072a00f6c7a306d16525d5120c6fa0f22d939135f17b5cc0ceaa0276113e9d",
+      "request_body_sha256": "d9be9bcd9dcbf437a509fb4e5df1737913c12442a81ae1ed3bad7bac07c1b460",
+      "settings": {
+        "num_images": 1,
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1248,
+          "height": 832
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "4d7c9ee33f4b7c10f649f0718f6d8e123a759649e16bea0902d313efdd38bd14",
+      "record": "records/fake-023.json"
+    },
+    {
+      "id": "fake-024",
+      "pair_id": "pair-024",
+      "provider": "openrouter",
+      "model": "openai/gpt-image-2",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A lively street gathering outside a small cafe with adults seated and standing around tables, an old olive tree and overhead string lights, black-and-white documentary photograph with natural candid poses. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "1387881a0906f340c1a59543ab26068f3d0f691f48d95023282d4389a032eb3d",
+      "request_body_sha256": "88e50874f1d3ae4ce61249a91418de41ca45be00417cc8c11032c0242fe21ae2",
+      "settings": {
+        "quality": "high",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "ee6b8d99b6f971991043a53f480204f735f4f274e77c05c7bfd396fbe6a2d8b3",
+      "record": "records/fake-024.json"
+    },
+    {
+      "id": "fake-025",
+      "pair_id": "pair-025",
+      "provider": "openrouter",
+      "model": "openai/gpt-image-2",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. An amateur baseball pitcher mid-throw on a grassy sports field, teammates and spectators along the fence behind, natural afternoon light, a touch of movement blur, ordinary local sports photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "e91a6a4cdfe3420c659a9b2f8bc81862ac38ef91a2e0f1376c0adaab94c3b5d5",
+      "request_body_sha256": "832059d0925a34487b68823f83221faa4845371939f2a29f79ef37fa39c33e84",
+      "settings": {
+        "quality": "high",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "8c183da2c0f484e965116573044cc68842b2eab66088b127aadead0676181c65",
+      "record": "records/fake-025.json"
+    },
+    {
+      "id": "fake-026",
+      "pair_id": "pair-026",
+      "provider": "fal",
+      "model": "bytedance/seedream/v5/pro/text-to-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A shallow stream of rainwater running beside an old brick wall and green shrubs on a wet paved path, close ground-level urban detail photograph, cloudy daylight and believable reflections. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "d95ac784c207768f9975ef41a46fac1cc9fa57f028922cb09f37860c89b1f7eb",
+      "request_body_sha256": "38fb3347b623d50b9f92961d38f595a05774538e70af4d8b0a7dc4108f932c8b",
+      "settings": {
+        "num_images": 1,
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1024,
+          "height": 1024
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "980cccc3eb1debf7b0f269d4093d759baabd0e5549e19522d6822571b81769ca",
+      "record": "records/fake-026.json"
+    },
+    {
+      "id": "fake-027",
+      "pair_id": "pair-027",
+      "provider": "openrouter",
+      "model": "google/gemini-3-pro-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A low modern office building behind a trimmed green lawn and flowering shrubs, a dark stone company sign with indistinct lettering in the foreground, broad daylight, ordinary corporate campus photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "4c1765ef13f445657f41e8e1f03a8ee1173d711649b88c2ec0830f872813f2b3",
+      "request_body_sha256": "23bc1ea91da0a3b3688c61703cb9d9112a51d7771d42fe44afe4387059e1eef6",
+      "settings": {
+        "resolution": "1K",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "3d0bcd89e1b0eca7477ec02e6e7be4234d504c2cb03c19b3228b7c3c27d26f03",
+      "record": "records/fake-027.json"
+    },
+    {
+      "id": "fake-028",
+      "pair_id": "pair-028",
+      "provider": "openrouter",
+      "model": "openai/gpt-image-2",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Two older recreational runners on a paved park path during a small charity race, autumn trees and other participants in the background, cheerful candid gestures, slightly imperfect sports snapshot. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "db1190bddd2ea58ab7b8dc9f110346632fe4539a0964ee0bdd5a85a8f9797091",
+      "request_body_sha256": "cb61236c3240a99756473ee9144e9d4c8334bbc45ed99f0b2f28ed3853499ceb",
+      "settings": {
+        "quality": "high",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "d711aa4cc1f33c8f8d51fe7b1ddbd642a17cfb9a13a87534fc7a1cda8d8f26eb",
+      "record": "records/fake-028.json"
+    },
+    {
+      "id": "fake-029",
+      "pair_id": "pair-029",
+      "provider": "openrouter",
+      "model": "google/gemini-3-pro-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Rows of ordinary adult attendees seated closely in a church hall listening to someone outside the frame, candid side view of faces, mixed indoor light, realistic unposed community-event photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "4ae982566033ffd2156114042f75ad1894571a4e2caa68aaac097d7f89008c0f",
+      "request_body_sha256": "931b275bdd06502d64756829f2e45fb1f6a3f4de8bf2aee24b6cb72a75488d2f",
+      "settings": {
+        "resolution": "1K",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "c6bf694752335db8b7d64d75a188030eaa63b8e8a885d24fb3b9360f3954806a",
+      "record": "records/fake-029.json"
+    },
+    {
+      "id": "fake-030",
+      "pair_id": "pair-030",
+      "provider": "fal",
+      "model": "bytedance/seedream/v5/pro/text-to-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. An adult canoe slalom paddler in a blue kayak moving through choppy river water, white helmet and numbered race bib with indistinct digits, candid side-on sports photograph with natural spray. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "02fec1e5412fc80da4281d6ce14b964b57b0282c871b1cb9341e5e994dfb306a",
+      "request_body_sha256": "be261c606e62ad443caebac595e59a84660f3d0d3fed2ecc56ff91eb6bd186c6",
+      "settings": {
+        "num_images": 1,
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1248,
+          "height": 832
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "88316a37eb91aa32191f78b749ee9287c3124fda2f85d14dfb3091211dc404a2",
+      "record": "records/fake-030.json"
+    },
+    {
+      "id": "fake-031",
+      "pair_id": "pair-031",
+      "provider": "openrouter",
+      "model": "google/gemini-3-pro-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. An antique silver table service with plates, small vessels and an ornate decanter arranged in a museum case, warm low light and reflections in the glass, handheld visitor photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "a0a396e26f9f16b58f2dff99d460f75566fb071cfd3fcf2af0c01edac73fa2ee",
+      "request_body_sha256": "b808e0ec9e24163a3a9c4327c4c42888ba94f8e3cbe6995c6b5bf0b5237216be",
+      "settings": {
+        "resolution": "1K",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "653ca5f4c6af1a5f08ed95889a40971a42cfd9c1edf6a8d4c8761ce653151468",
+      "record": "records/fake-031.json"
+    },
+    {
+      "id": "fake-032",
+      "pair_id": "pair-032",
+      "provider": "fal",
+      "model": "bytedance/seedream/v5/pro/text-to-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A quiet forest path beside an old stone wall after a light snowfall, tall straight trees and filtered winter light, natural muted colours, ordinary hiking photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "4602944a6bc3d98ebb58332f2a8445777923e4086d7ddcd08e7feafd8ed3f6ca",
+      "request_body_sha256": "0af601f031acb675d968d9f45a6da2c1cb86e1797f63d06ed8232a98143204ec",
+      "settings": {
+        "num_images": 1,
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 832,
+          "height": 1248
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "e7f7bb16a65bdea45c457863191600bf92388c47248a4d7d7e590db9be94f052",
+      "record": "records/fake-032.json"
+    },
+    {
+      "id": "fake-033",
+      "pair_id": "pair-033",
+      "provider": "fal",
+      "model": "fal-ai/flux-2-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. The carved wooden interior of a small traditional Japanese temple, warm reddish beams, paper ritual streamers and a modest shrine, oblique visitor viewpoint, realistic low indoor light. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "57632de56a544badfcfdd0450c6b932b3662c33571998608c3e410cc02fe6ad4",
+      "request_body_sha256": "036806bbf93d2c14342d028fbaeefa362f014165fad6a046dfe536b3be5d08c2",
+      "settings": {
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1152,
+          "height": 864
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "57ba9aaf2dbff222e5acc34007bbc663e44ffb6b578cf6f1020af2857e9fdcd6",
+      "record": "records/fake-033.json"
+    },
+    {
+      "id": "fake-034",
+      "pair_id": "pair-034",
+      "provider": "openrouter",
+      "model": "google/gemini-3-pro-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A mixed group of adult friends chatting around a buffet table at a restaurant gathering, warm yellow ceiling light, candid overlapping poses, ordinary indoor party snapshot without studio lighting. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "0d1b9bf1cd72b152ab37dffb958dae453a2949384b3ea6c18e6c49198a4c4b79",
+      "request_body_sha256": "1b35252a13bb0a97e270f39722377cd69e442a07335ea96006729da3bf8c4bbb",
+      "settings": {
+        "resolution": "1K",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "bc7f344e986f6762a1c6416cfd54e81ca1f77e7e312edf0f1beffc304140121e",
+      "record": "records/fake-034.json"
+    },
+    {
+      "id": "fake-035",
+      "pair_id": "pair-035",
+      "provider": "openrouter",
+      "model": "sourceful/riverflow-v2.6-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Two fictional school-age boys in casual T-shirts standing on a garden path holding a small tray with a toy, house and shrubs behind them, ordinary family snapshot in soft daylight. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "431e4ba3e10b3ad571fc5d101d1670f89f124793d2b1a8a7e1b0710f75b08b39",
+      "request_body_sha256": "d80c86a92d0d7743e62a1fcef55e5947f7bd1ebb0f04ef02d46c8826564cfed5",
+      "settings": {
+        "resolution": "1K",
+        "output_format": "png",
+        "aspect_ratio": "3:4"
+      },
+      "reference_images": [],
+      "native_sha256": "9dc71f6147dff60096d1260ceb53de49e630740abb049355714ef01a319dd2c9",
+      "record": "records/fake-035.json"
+    },
+    {
+      "id": "fake-036",
+      "pair_id": "pair-036",
+      "provider": "fal",
+      "model": "fal-ai/flux-2-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A small stone monument in an open cobbled city square, low buildings in the distance, hazy afternoon light and a slightly elevated tourist viewpoint, restrained realistic travel photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "7264717d8fa83718cfff2975706301fdcd06acac5ecb25f3d21181917a54a726",
+      "request_body_sha256": "e628c03f8430f244784a2e06d643f38edca97a64f49917458d3570a48e20ab8e",
+      "settings": {
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 864,
+          "height": 1152
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "6165f0751e8a84c74c3d0e82670cd29c7a7f82afdd99a8c71436fb584f59f68b",
+      "record": "records/fake-036.json"
+    },
+    {
+      "id": "fake-037",
+      "pair_id": "pair-037",
+      "provider": "openrouter",
+      "model": "sourceful/riverflow-v2.6-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Several small wasps eating a damaged green apple on rough dry soil with tiny leaves and pebbles, close natural-history photograph, soft outdoor light and realistic shallow depth of field. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "427ea861e3e045ab51cf87950815408691492eb93388b24965be473efd619e64",
+      "request_body_sha256": "c5bbcd6595b8e6dc648ab20837514c81268414b9efb385c82da419ab8dd5df62",
+      "settings": {
+        "resolution": "1K",
+        "output_format": "png",
+        "aspect_ratio": "4:3"
+      },
+      "reference_images": [],
+      "native_sha256": "b57ce3c20599951bbb3ab2cf10fb7b22e6d01a689e529b096619e24adb05d07b",
+      "record": "records/fake-037.json"
+    },
+    {
+      "id": "fake-038",
+      "pair_id": "pair-038",
+      "provider": "fal",
+      "model": "bytedance/seedream/v5/pro/text-to-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. An old carved wooden choir stall in a quiet church, patterned cream wall behind it, visitor snapshot under dim warm ambient light, naturally worn wood and modest perspective distortion. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "7c03fd926914413af5851f0938367a88a5b7757c5cbf8544e3265ea6d4f95d9f",
+      "request_body_sha256": "ddb9d3e7d388759c93394b9e24f3744b96d1e23a1f913576b603b04b746093bd",
+      "settings": {
+        "num_images": 1,
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1248,
+          "height": 832
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "5a9c2b6b13374ab0338254a06243d5369ddd403a97dfb7ffec5b5373d9fc1c16",
+      "record": "records/fake-038.json"
+    },
+    {
+      "id": "fake-039",
+      "pair_id": "pair-039",
+      "provider": "fal",
+      "model": "fal-ai/flux-2-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A modest brick house with blue window shutters and a small planted front garden, overhead utility wires against a partly cloudy sky, candid residential street photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "d8f9fa05a859ac03f58b15bd84806de73473a46118b037d8c19639c4de63fef6",
+      "request_body_sha256": "f27cee24dc5373deac36ce39e9dc0ad68b78398201eaa682094a47bf11984218",
+      "settings": {
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1152,
+          "height": 864
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "305be2591796d0781ffc5eadc704b5cb1ed867397e096434d45720760119eb4e",
+      "record": "records/fake-039.json"
+    },
+    {
+      "id": "fake-040",
+      "pair_id": "pair-040",
+      "provider": "openrouter",
+      "model": "openai/gpt-image-2",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A group of young adult dancers performing on a small community stage in pink and purple costumes, coloured stage lighting, one dancer partly cropped, natural movement blur and candid audience viewpoint. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "8eb86fa489c4a4faf0c00cf830134b667f2d20b2519b4317070ac118ca6c26e8",
+      "request_body_sha256": "604b0c683ecdaf30e6ae240ea4142f753d1c270896ee1a1b13c978e62211ef6f",
+      "settings": {
+        "quality": "high",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "ca0cc21fca9d8f9590e491f5e761c6d94feb9a73a83f650f842d5455495f922d",
+      "record": "records/fake-040.json"
+    },
+    {
+      "id": "fake-041",
+      "pair_id": "pair-041",
+      "provider": "fal",
+      "model": "bytedance/seedream/v5/pro/text-to-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. An amateur ice hockey match at a local indoor rink, players in white and dark jerseys moving toward a loose puck, grey rink boards and bright ice, ordinary spectator photograph with slight motion blur. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "3e1ccae338b1d0078aa0d39ffe47f388f52d773c9e36fef4c21ed5fe976bfc9f",
+      "request_body_sha256": "cf045a22cf401136c1cc1488f2197ff1cb80f2d106e2aad7e1ffefdd2afe50af",
+      "settings": {
+        "num_images": 1,
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1248,
+          "height": 832
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "25d8ef597856a600589a7ef5b0b882faa99b902a86874e83c14016780f6950b8",
+      "record": "records/fake-041.json"
+    },
+    {
+      "id": "fake-042",
+      "pair_id": "pair-042",
+      "provider": "openrouter",
+      "model": "openai/gpt-image-2",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Two fictional children making a simple paper craft at a classroom table, one using child-safe scissors with adult supervision outside the frame, colourful cups and paper nearby, candid everyday classroom photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "3495b59011ec5eea6143781aeec43e12ff7623c70cff5b8d3fb023626e5c87c3",
+      "request_body_sha256": "136d070cb34f84f68c306f5ec30d9043d40580acd018da472299e52e802937b5",
+      "settings": {
+        "quality": "high",
+        "aspect_ratio": "4:3"
+      },
+      "reference_images": [],
+      "native_sha256": "9d2f755ce3959b4fd4752e499ad6a4dfaa5159ae1565e0148619fd16f204b019",
+      "record": "records/fake-042.json"
+    },
+    {
+      "id": "fake-043",
+      "pair_id": "pair-043",
+      "provider": "fal",
+      "model": "fal-ai/flux-2-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A fictional adult woman wearing sunglasses at a scenic overlook above a coastal city, railing and blue water behind her, casual travel portrait with natural facial texture and ordinary sunlight. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "72f35a357e030d83f9c0a6981f84822cf1e4c0e288161708a6481295dab3053b",
+      "request_body_sha256": "8d51627c0e173ef4c48ae0ac5236a7922eaf80c959c2efe72bcb769a16bc08e2",
+      "settings": {
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1248,
+          "height": 832
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "0d2500b5594d604adfc069ed6b7f29a42dde719639fcae5359cc558a5e800027",
+      "record": "records/fake-043.json"
+    },
+    {
+      "id": "fake-044",
+      "pair_id": "pair-044",
+      "provider": "fal",
+      "model": "bytedance/seedream/v5/pro/text-to-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. Two hands holding a small orange compact camera above an open cardboard box and instruction sheet on a table, close smartphone product-unboxing snapshot, natural indoor window light. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "1a1657f2f3b4b7d9abb5fbd60e694f4959c7456d03f864fe8a89eac752443a4d",
+      "request_body_sha256": "5fd81e8ceb4e692f9d7fcd44cacc399fd8c62d2ee6b34150d07b9d7e37ea3676",
+      "settings": {
+        "num_images": 1,
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1152,
+          "height": 864
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "82b6da635a9d0dc041d9e06aacbfaeef5c8b001b116f58610bafcb46d410f577",
+      "record": "records/fake-044.json"
+    },
+    {
+      "id": "fake-045",
+      "pair_id": "pair-045",
+      "provider": "fal",
+      "model": "fal-ai/flux-2-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A fictional adult convention attendee in a red traditional-inspired costume holding a paper parasol at an outdoor fan event, greenery and other visitors behind, candid festival portrait with realistic fabric. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "3bab7449d3c0e5fb7f58f50be1a6cadf02e6316161fff7b49cfba5726ffb7cde",
+      "request_body_sha256": "7ecc6fd4858f46bf0246a28c1578f591c54157dac4d77587e90ebdf497c9ebd7",
+      "settings": {
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 832,
+          "height": 1248
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "aa98465dfe5e03604f8b4c98f6e15d219a46ad86f6d9073e7979050939a2f6e5",
+      "record": "records/fake-045.json"
+    },
+    {
+      "id": "fake-046",
+      "pair_id": "pair-046",
+      "provider": "fal",
+      "model": "fal-ai/flux-2-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A fictional adult man in a grey hoodie standing beside a wooden railing on a sunny wooded hiking trail, slightly high handheld camera angle and dappled light, ordinary outdoor selfie photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "d93c8e13a84e44d492aaeeb81e45e6743785556eaff96ec99247d5a0fa09af34",
+      "request_body_sha256": "5a6af594403828faa18ca8e365c2fd13f2acc446024916eafa20dbe1f103705c",
+      "settings": {
+        "output_format": "jpeg",
+        "image_size": {
+          "width": 1152,
+          "height": 864
+        }
+      },
+      "reference_images": [],
+      "native_sha256": "8dd3c971f0be4311f6334567946cdeb7a5aa59c485cf2e9295556bc2ba736d75",
+      "record": "records/fake-046.json"
+    },
+    {
+      "id": "fake-047",
+      "pair_id": "pair-047",
+      "provider": "openrouter",
+      "model": "sourceful/riverflow-v2.6-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A red-brick corner shop beside a quiet urban road, overhead tram wires and a grey cloudy sky, slightly tilted street-level travel photograph, shop lettering small and out of focus. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "a3c57be58d5666edd19397893b408642a44424ed6fea544026bd651e784e02ab",
+      "request_body_sha256": "e34d63e136a86041af2bf0166352bbba1c7a8a9859188193529bfe9683144f93",
+      "settings": {
+        "resolution": "1K",
+        "output_format": "png",
+        "aspect_ratio": "3:4"
+      },
+      "reference_images": [],
+      "native_sha256": "6185b8a85b2e1cc887c8810a4545dc0d80ada3b211a0b7c2f3048217a9e852b9",
+      "record": "records/fake-047.json"
+    },
+    {
+      "id": "fake-048",
+      "pair_id": "pair-048",
+      "provider": "openrouter",
+      "model": "sourceful/riverflow-v2.6-pro",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A rocky coastline with gentle surf under a dark blue dusk sky, a narrow orange strip of sunset near the horizon, natural low-light grain and restrained colour, ordinary handheld landscape photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "8789a6ef7f8f660056913cc319f19efcb3a1c88ce7489b751c2ee33d515eb9e1",
+      "request_body_sha256": "be75c4b76807d9cebc0e0c939d91b47cf6e560824164fb4b5e2b594e8bb0bb02",
+      "settings": {
+        "resolution": "1K",
+        "output_format": "png",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "da8eb45dc676b84d3e063600913e58742b03b5741c357e10929086db2aac2b40",
+      "record": "records/fake-048.json"
+    },
+    {
+      "id": "fake-049",
+      "pair_id": "pair-049",
+      "provider": "openrouter",
+      "model": "google/gemini-3-pro-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A narrow muddy hiking path leading toward a rocky mountain ridge partly hidden by low cloud, wet grass and grey mist, realistic subdued outdoor light, candid hillwalking photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "6a14d8e52843270b56ddf7455f69c6a2f9b0a3d4a8a8c57fe00804ee56653fa7",
+      "request_body_sha256": "9257c6b0b431507e31f10de7a469c78c889dc4051e948d298f4f2a38dd05ab21",
+      "settings": {
+        "resolution": "1K",
+        "aspect_ratio": "4:3"
+      },
+      "reference_images": [],
+      "native_sha256": "ae256b91a1a40b5e1cb985bb7fb2e4fe718514ebd6423ac0fa886670dedeb2e8",
+      "record": "records/fake-049.json"
+    },
+    {
+      "id": "fake-050",
+      "pair_id": "pair-050",
+      "provider": "openrouter",
+      "model": "google/gemini-3-pro-image",
+      "provider_model_revision": null,
+      "prompt": "Create a single photorealistic camera photograph of this ordinary scene. A dark green vintage car parked on grass at a small outdoor classic-car gathering, another pale car partly visible, leafy trees and natural sunny reflections, ordinary enthusiast photograph. Keep plausible anatomy, materials, perspective and lighting. Preserve everyday photographic imperfections; avoid an illustration, render, collage or added caption. Any people are fictional and are not intended to resemble named individuals.",
+      "prompt_sha256": "7fbca6f98eecc866ed35729cb1d9ddf287ad1acf277568238d8dac88f876adf3",
+      "request_body_sha256": "73e2a995f9b2d9fcaa1d146942bc04a272b754c4cf45203d9f0b3c1c1a887f69",
+      "settings": {
+        "resolution": "1K",
+        "aspect_ratio": "3:2"
+      },
+      "reference_images": [],
+      "native_sha256": "f94a073d949bbec16e376cc44d4f176bc8cd3a5cbabe23862170e53879ed22c6",
+      "record": "records/fake-050.json"
+    }
+  ]
+}

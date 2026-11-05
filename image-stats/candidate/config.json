@@ -1,0 +1,34 @@
+{
+  "candidate": "smaug-ai-declarations-image-stats-v1",
+  "smaug": {
+    "model": "abacusai/Smaug-AI-Image-Detector",
+    "revision": "c7c95951e04a87b884a4ad479401b1128c3903bd",
+    "threshold": 0.5,
+    "crops": 3,
+    "crop_size": 528,
+    "vision_tokens": 140,
+    "precision": "bfloat16",
+    "device": "cuda"
+  },
+  "c2pa_policy": {
+    "python_sdk": "0.38.0",
+    "rust_sdk": "0.91.0",
+    "trust_policy": "c2pa-python-0.38.0-rs-0.91.0-default-anchors-offline",
+    "trust_overrides": null,
+    "settings": {
+      "core": {
+        "allowed_network_hosts": []
+      },
+      "verify": {
+        "remote_manifest_fetch": false,
+        "ocsp_fetch": false,
+        "verify_after_reading": true,
+        "verify_trust": true,
+        "verify_timestamp_trust": true
+      }
+    }
+  },
+  "rule": "smaug_score >= 0.5 OR explicit AI declaration",
+  "image_stats_role": "diagnostic_only",
+  "training_allowed": false
+}
