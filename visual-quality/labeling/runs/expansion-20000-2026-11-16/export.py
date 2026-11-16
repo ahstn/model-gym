@@ -222,6 +222,8 @@ def main():
         "",
         "OpenRouter returned per-image HTTP403 content-filter denials for some Liquid/Jev inline-image requests. These were retained as missing assessments and not retried or bypassed. Their counts are included in the aggregate JSON. Other credential, billing and service-failure stops remained active. A missing Liquid outcome also leaves its ensemble outcome missing.",
         "",
+        "The completed Decisions failure audit found 2,855 identical image denials in each model. Jev additionally rejected one delivered view with HTTP400, `Invalid image dimensions`. The exact view remains unchanged across graders, and that Jev assessment is missing.",
+        "",
         "## Files and infrastructure",
         "",
         f"Full local data: `{DATA}`. The combined image records are `exports/labelled-images.jsonl`; `exports/new-labelled-images.jsonl` contains only the added 10K. `exports/scores-long.jsonl` and `.csv` contain assessor rows. `stats.jsonl` contains new image measurements, also joined separately into image-level exports. None of the added per-image labels is committed to Git.",
