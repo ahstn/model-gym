@@ -20,6 +20,16 @@ from visual_quality.ensemble import MODEL
 MODELS = ("luna", "deepseek", "liquid", "jev")
 
 
+def finalized_observation(row, plans):
+    """Exhausted transport failures stay missing, but unfinished work cannot export."""
+    if row["status"] in ("valid", "partial", "invalid", "failed"):
+        return True
+    if row["status"] != "retryable_failure":
+        return False
+    plan = plans.get(row.get("source_request_plan_id"))
+    return bool(plan and row.get("attempt_count", 0) >= plan["policy"]["max_attempts"])
+
+
 def append_export(old_path, new_rows, target):
     temporary = target.with_suffix(".tmp")
     with temporary.open("wb") as out:
@@ -43,9 +53,12 @@ def main():
         expected_images=10000,
         expected_references=0,
     )
-    if any(
-        r["status"] not in ("valid", "partial", "invalid", "failed") for r in rows if r["model"] in MODELS
-    ):
+    plans = {
+        plan["plan_id"]: plan
+        for path in (DATA / "results/api").glob("*/plans/*.json")
+        for plan in [json.loads(path.read_text())]
+    }
+    if any(not finalized_observation(r, plans) for r in rows if r["model"] in MODELS):
         raise ValueError("Unfinished or missing model observations; do not publish a final export")
     if summary["statistics_images"] != 10000:
         raise ValueError("Statistics incomplete")
@@ -163,8 +176,10 @@ def main():
     ]
     for r in table:
         latency = "—" if r["median_latency_seconds"] is None else f"{r['median_latency_seconds']:.2f}"
+        technical = "—" if r["mean_technical"] is None else f"{r['mean_technical']:.3f}"
+        aesthetic = "—" if r["mean_aesthetic"] is None else f"{r['mean_aesthetic']:.3f}"
         lines.append(
-            f"| {r['model']} | {r['valid_score_pairs']:,} / {r['new_images']:,} | {r['mean_technical']:.3f} | {r['mean_aesthetic']:.3f} | {latency} |"
+            f"| {r['model']} | {r['valid_score_pairs']:,} / {r['new_images']:,} | {technical} | {aesthetic} | {latency} |"
         )
     lines += [
         "",

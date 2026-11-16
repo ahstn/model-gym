@@ -46,6 +46,16 @@ def test_append_preserves_original_bytes(tmp_path):
     ]
 
 
+def test_export_distinguishes_exhausted_failures_from_pending_work():
+    plans = {"p": {"policy": {"max_attempts": 5}}}
+    row = {"status": "retryable_failure", "source_request_plan_id": "p", "attempt_count": 4}
+    assert not export.finalized_observation(row, plans)
+    assert export.finalized_observation({**row, "attempt_count": 5}, plans)
+    assert not export.finalized_observation({**row, "source_request_plan_id": "unknown"}, plans)
+    assert not export.finalized_observation({**row, "status": "observation_not_finalized"}, plans)
+    assert export.finalized_observation({"status": "failed"}, plans)
+
+
 def test_expansion_has_no_lite_route():
     import score
 
