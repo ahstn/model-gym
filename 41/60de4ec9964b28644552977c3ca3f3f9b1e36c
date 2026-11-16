@@ -1,0 +1,31 @@
+visual-quality/labeling/runs/expansion-20000-2026-11-16/finalize.py
+  s_a985f77760d967::t_a03f290358d8a8 34-35,40
+visual-quality/labeling/runs/expansion-20000-2026-11-16/gateway_recovery.py
+  s_a985f77760d967::t_268d184078fcc7 1-38
+visual-quality/labeling/runs/expansion-20000-2026-11-16/test_guardrail_recovery.py
+  s_997467bd4b4123::t_1d44ec6d9b0170 4,19-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "4160de4ec9964b28644552977c3ca3f3f9b1e36c",
+  "prompts": {},
+  "sessions": {
+    "s_997467bd4b4123": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e4ed-c2e0-7221-a25b-55ef6916e1e6",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
