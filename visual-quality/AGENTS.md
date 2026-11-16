@@ -1,6 +1,6 @@
 # Visual-quality labeling rules
 
-These are the user's accepted project decisions, updated 2026-11-01. Apply them to the active labeling workspace and future runs. Historical raw observations retain their provenance; they are not evidence that an old configuration is still current.
+These are the user's accepted project decisions, updated 2026-11-16. Apply them to the active labeling workspace and future runs. Historical raw observations retain their provenance; they are not evidence that an old configuration is still current.
 
 ## Canonical ensemble
 
@@ -10,6 +10,8 @@ These are the user's accepted project decisions, updated 2026-11-01. Apply them 
 - Calculate from native precision and round only for presentation. Keep both scores on the 1–5 scale. Do not combine technical and aesthetic into one training target.
 - Derived ensembles have no independent HTTP latency or billable API call. Keep component timing/cost provenance and avoid counting their costs twice.
 
+The 2026-11-13 500-image diagnostic comparison did not justify replacing this ensemble with Perplexity Decider or Gemini Decision. The user reaffirmed the existing ensemble on 2026-11-16; do not add either new model to routine labeling.
+
 ## Models and prompts
 
 - GPT-6 Luna: `openai/gpt-6-luna`, OpenRouter, high reasoning.
@@ -18,13 +20,13 @@ These are the user's accepted project decisions, updated 2026-11-01. Apply them 
 - Use the `visual-rating-v2` technical rubric in a versioned, two-outcome profile with the existing aesthetic rubric and photography eligibility rule. Keep schema-constrained JSON and validate outcome status, score bounds, decimal increments, evidence and limitations. Preserve native Decisions precision separately from displayed scores.
 - The photography eligibility rule overrides any generic rubric wording permitting artwork to score highly. Clearly excluded flat reproductions, posters, screenshots/interfaces, illustrations and obvious renders receive both scores 1.00. Photographed packaging, signage, artwork or objects with meaningful physical context remain eligible. Do not infer excluded origin from blur, darkness, compression or unusual content alone.
 - Preserve each model's eligibility evidence and the evaluated Decisions threshold; do not invent a new ensemble voting or floor rule. Uncertain scope requires review. Missing images and failed requests are missing assessments, not low-quality scores.
-- Q-ReAlign Lite uses the unchanged model/checkpoint, two task prompts and score mapping from `0a156b4` / the 4,000-image rehearsal. Its native scoring interface is not a chat JSON-schema interface. Record that distinction; do not pretend it follows a prompt it never received.
+- No new Q-ReAlign Lite inference or comparisons for the 20K expansion or subsequent labeling. Retain the initial 10K observations as historical comparison data. Historically, Q-ReAlign Lite uses the unchanged model/checkpoint, two task prompts and score mapping from `0a156b4` / the 4,000-image rehearsal. Its native scoring interface is not a chat JSON-schema interface. Record that distinction; do not pretend it follows a prompt it never received.
 - Reuse an inference result only with an explicit view/model/prompt/settings provenance check. A different prompt is a different observation. The 10,000-image expansion must rerun Liquid and Jev with the revised questions; Luna and DeepSeek also need fresh calls when adopting the different v2 rubric.
 - Do not apply experimental prompt additions merely because they were suggested in a discussion. The proposed poor/fair wording remains an experiment until explicitly adopted.
 
 ## Corpus, references and publication
 
-- The current expansion targets **10,000 total images**, including a **1,500-image reference benchmark**. Reusing prior images and compatible observations is permitted.
+- The current expansion adds **10,000 new images**, bringing the dataset to **20,000 total images**. Preserve the initial 10K and its **1,500-image reference benchmark** unchanged; do not automatically expand assistant references. New images receive Luna, DeepSeek, Liquid and Jev observations plus the canonical ensemble. Exclude already labeled source identities, exact duplicates and protected evaluation families before selection.
 - Use actual EmbeddingGemma 2 image embeddings for content clustering, overrepresentation checks, varied sampling, related-image retrieval and duplicate candidates. Record checkpoint, processor, inference configuration and any reuse. Similar content does not establish equal image quality.
 - Preserve source licenses, byte hashes, exact delivered views, transformations, source families and split identity. Review likely duplicates and keep a family within one evaluation partition.
 - References are independent assistant visual assessments, not human opinion scores. Reuse the original 500 with provenance and assess the additional benchmark images without viewing model scores. Freeze reference records before admitting those images to inference.
@@ -43,7 +45,7 @@ These are the user's accepted project decisions, updated 2026-11-01. Apply them 
 
 ## Timing, accounting and operations
 
-- Keep only the current completed 10,000-image evaluation in the tracked experiments tree. Historical code, media and receipts are recoverable through `archives/experiments.md`; do not recommit restored trees.
+- Keep the completed 10,000-image evaluation as the frozen comparison baseline. Keep current expansion orchestration and aggregate reports under `labeling/runs/`, and the accepted 500-image Decisions comparison under `labeling/trials/`. Historical code, media and receipts are recoverable through `archives/experiments.md`; do not recommit restored trees.
 - Reusable execution and rendering helpers belong in `src/visual_quality/scoring/`, not dated experiment folders. Historical data paths resolve separately through `scoring.history`; the pinned Lite server and health identity live in `labeling/runtime/`.
 - Preserve immutable old source hashes and observations when moving code. New executions use new source provenance; exact historical replay uses the pinned historical checkout.
 
@@ -51,7 +53,7 @@ These are the user's accepted project decisions, updated 2026-11-01. Apply them 
 - For inference, measure end-to-end time immediately around HTTP invocation through complete response receipt. Keep payload preparation and server-only timing separate. Reused rows retain their original measured latency and reuse provenance.
 - References have no HTTP request latency: record null with an explicit latency kind and separately measured visual-review duration. Never fabricate a timing measurement.
 - Q-ReAlign Lite and Reference rows have `price_usd=0.00` as the user's accounting rule. Track actual Runpod infrastructure cost separately. Unknown API charges are null, never zero. Retain retries and failed-call cost accounting.
-- The user approved Runpod and OpenRouter spend for all models and necessary requests in this 10,000-image session; RunInfra credential use was previously authorized. Do not ask again for routine authorized calls. Credentials may be sourced quietly from `~/.config/zsh/.zsh-private`; never print or commit them.
+- The user approved Runpod and OpenRouter spend for all models and necessary requests for the 20,000-image expansion and necessary requests in this session; RunInfra credential use was previously authorized. Do not ask again for routine authorized calls. Credentials may be sourced quietly from `~/.config/zsh/.zsh-private`; never print or commit them.
 - Prefer the Runpod plugin for provisioning and lifecycle operations. Prepare workloads before starting paid compute, retain receipts, and stop owned trial pods when work completes or fails. Do not modify unrelated pods.
 - Use resumable, hashed requests and raw response records; retry bounded transient failures without retrying merely because a valid score is surprising. Account for ambiguous in-flight calls honestly.
 - Validate schema, exact image joins, benchmark separation, score completeness, publication allowlist and actual cleanup before reporting completion. Report partial coverage and unresolved errors explicitly.
