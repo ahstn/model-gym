@@ -1,0 +1,33 @@
+visual-quality/labeling/runs/expansion-20000-2026-11-16/README.md
+  s_7e6c07495f9181::t_1cf3850115b354 36-39
+visual-quality/labeling/runs/expansion-20000-2026-11-16/audit.py
+  s_a985f77760d967::t_d211d380b3eded 29-37,56
+visual-quality/labeling/runs/expansion-20000-2026-11-16/decision_continuation.py
+  s_a985f77760d967::t_e7519a0182881c 1-126
+visual-quality/labeling/runs/expansion-20000-2026-11-16/teacher_continuation.py
+  s_a985f77760d967::t_41da0cfd960265 1-46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "8d276aa59c8c12075eb55b0a69c381523ce30939",
+  "prompts": {},
+  "sessions": {
+    "s_7e6c07495f9181": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e475-bd90-7fd1-9f51-8df3f4174e38",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
