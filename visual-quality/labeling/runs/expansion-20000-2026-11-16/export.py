@@ -171,6 +171,9 @@ def main():
                     "additional_known_price_usd": str(Decimal(accounting[model]["known_price_usd"]) - Decimal(before["accounting"][model]["known_price_usd"])),
                     "additional_http_attempts": accounting[model]["attempts"] - before["accounting"][model]["attempts"],
                 }
+                gateway_path = DATA / "results/api" / model / "missing-output-postpass-status.json"
+                if gateway_path.exists():
+                    recovery[model]["gateway_postpass"] = json.loads(gateway_path.read_text())
     summary.update(
         images=20000,
         total_images=20000,
@@ -251,6 +254,8 @@ def main():
         "The first pass retained 2,855 shared OpenRouter secret-scanner denials per decision model: 2,757 compressed Bitcoin-key patterns, 85 uncompressed Bitcoin-key patterns and 13 Google API-key patterns. The user subsequently disabled their secret-redaction guardrail and explicitly approved resending these flagged image payloads. The recovery uses identical images and prompts, keeps all original receipts, preserves other assessments, and stops on a new 403. Earlier exports remain in the local pre-recovery snapshot. Unknown original charges remain unknown.",
         "",
         "Recovery results: " + "; ".join(f"{m}: {v['status']}, {v.get('outcomes', {})}, additional known cost ${Decimal(v['additional_known_price_usd']):.6f}" for m, v in recovery.items()) if recovery else "No guardrail recovery has been executed.",
+        "",
+        "A separate, single-request HTTP520 recovery is recorded where needed: " + "; ".join(f"{m}: {v['gateway_postpass']['status']}, {v['gateway_postpass'].get('outcomes', {})}" for m, v in recovery.items() if "gateway_postpass" in v),
         "",
         "Jev's original HTTP400 `Invalid image dimensions` rejection is outside the secret-scanner recovery and remains missing. The exact view stays unchanged across graders. Current coverage and any additional failures are retained in the aggregate JSON.",
         "",

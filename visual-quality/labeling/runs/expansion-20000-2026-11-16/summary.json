@@ -7,16 +7,16 @@
       "unpriced_attempts": 248
     },
     "jev": {
-      "attempts": 10034,
-      "known_price_usd": "1.275112482",
+      "attempts": 12889,
+      "known_price_usd": "1.816232166",
       "total_price_usd": null,
       "unpriced_attempts": 2890
     },
     "liquid": {
-      "attempts": 10039,
-      "known_price_usd": "0.35354216",
+      "attempts": 12895,
+      "known_price_usd": "0.50333790",
       "total_price_usd": null,
-      "unpriced_attempts": 2894
+      "unpriced_attempts": 2895
     },
     "luna": {
       "attempts": 10165,
@@ -33,14 +33,14 @@
       "unpriced_attempts": 329
     },
     "jev": {
-      "known_price_usd": "3.088889664",
+      "known_price_usd": "3.630009348",
       "total_price_usd": null,
       "unpriced_attempts": 4877
     },
     "liquid": {
-      "known_price_usd": "0.85591246",
+      "known_price_usd": "1.00570820",
       "total_price_usd": null,
-      "unpriced_attempts": 2895
+      "unpriced_attempts": 2896
     },
     "luna": {
       "known_price_usd": "16.220088200",
@@ -613,18 +613,17 @@
     },
     "jev": {
       "expected": 20000,
-      "numeric_pairs": 17141,
+      "numeric_pairs": 19996,
       "status_counts": {
-        "failed": 2859,
-        "valid": 17141
+        "failed": 4,
+        "valid": 19996
       }
     },
     "liquid": {
       "expected": 20000,
-      "numeric_pairs": 17145,
+      "numeric_pairs": 20000,
       "status_counts": {
-        "failed": 2855,
-        "valid": 17145
+        "valid": 20000
       }
     },
     "luna": {
@@ -636,10 +635,10 @@
     },
     "photo_ensemble": {
       "expected": 20000,
-      "numeric_pairs": 17144,
+      "numeric_pairs": 19997,
       "status_counts": {
-        "missing_or_invalid_components": 2856,
-        "valid": 17144
+        "missing_or_invalid_components": 3,
+        "valid": 19997
       }
     },
     "qrealign_lite": {
@@ -658,7 +657,7 @@
     }
   },
   "embedding_billing": {
-    "queried_at": "2026-11-16 16:52:12 UTC",
+    "queried_at": "2026-11-16 21:15:10 UTC",
     "receipt": {
       "metadata": {
         "query": {
@@ -718,10 +717,69 @@
     }
   },
   "exports": {
-    "labelled-images.jsonl": "cb305471c125d58171cacf156e646cdcb00661de22b10cf9d07677f1f4c9e10b",
-    "new-labelled-images.jsonl": "6b8b1273b3ea4965adb23553de9147f9dd716fb79cd3098d9cceac35e0bb8deb",
-    "new-scores-long.jsonl": "1598d66401eef0b844faa8b8e1703fb36ed25636dfb297da2fe83787ccbd8618",
-    "scores-long.jsonl": "9b20ae76020c60cd67444d0021b11e08458405f191ec8f31f542778d3213959e"
+    "labelled-images.jsonl": "dd6a664512076eb56babc76780179a14c22297a0b1d6f27165527024eb871cf4",
+    "new-labelled-images.jsonl": "e8479084bd8e3370715ae524ce68c0aa2d8b615d39223db31ae287b0452c270c",
+    "new-scores-long.jsonl": "069d2a0f9f803844593eaf6f00dea9fb5487433a5f9673b2eef08f098da6459c",
+    "scores-long.jsonl": "20f257200beab0384a482fa349f37e9cb466ad9c7a3f30dd5607b581e7e18036"
+  },
+  "guardrail_recovery": {
+    "jev": {
+      "active_worker_limit": 16,
+      "additional_http_attempts": 2855,
+      "additional_known_price_usd": "0.541119684",
+      "admission_liability_usd": "33.635270886",
+      "budget_usd": "60.00",
+      "http_attempts": 12889,
+      "known_price_usd": "1.816232166",
+      "model": "jev",
+      "outcomes": {
+        "valid": 2855
+      },
+      "phase": "secret-guardrail-disabled",
+      "plan_id": "147e188ef67f3917de96a200cac1ee22fd424162cd0628c42459362563c4899e",
+      "planned_cases": 2855,
+      "started_at": "2026-11-16T20:50:01.570184+00:00",
+      "status": "complete",
+      "unpriced_attempts": 2890,
+      "updated_at": "2026-11-16T21:12:50.790130+00:00"
+    },
+    "liquid": {
+      "active_worker_limit": 16,
+      "additional_http_attempts": 2856,
+      "additional_known_price_usd": "0.14979574",
+      "admission_liability_usd": "4.29781716",
+      "budget_usd": "10.00",
+      "gateway_postpass": {
+        "admission_liability_usd": "4.29787230",
+        "budget_usd": "5.00",
+        "http_attempts": 12895,
+        "known_price_usd": "0.50333790",
+        "model": "liquid",
+        "outcomes": {
+          "valid": 1
+        },
+        "phase": "missing-output-postpass",
+        "plan_id": "31d8a681bc0e230b5d696c0b5f78c682ee40222f516880dcdbbf8275bc715063",
+        "started_at": "2026-11-16T21:16:01.278365+00:00",
+        "status": "complete",
+        "unpriced_attempts": 2895,
+        "updated_at": "2026-11-16T21:16:04.096389+00:00"
+      },
+      "http_attempts": 12894,
+      "known_price_usd": "0.50328276",
+      "model": "liquid",
+      "outcomes": {
+        "failed": 1,
+        "valid": 2854
+      },
+      "phase": "secret-guardrail-disabled",
+      "plan_id": "179aa0be91aec6fb44f1dbf95df7e8043c5e7bb0eda71ee0bd2f65c5fd9fd1dd",
+      "planned_cases": 2855,
+      "started_at": "2026-11-16T20:50:02.634080+00:00",
+      "status": "complete",
+      "unpriced_attempts": 2895,
+      "updated_at": "2026-11-16T21:13:41.772591+00:00"
+    }
   },
   "images": 20000,
   "incremental_coverage": {
@@ -735,18 +793,17 @@
     },
     "jev": {
       "expected": 10000,
-      "numeric_pairs": 7144,
+      "numeric_pairs": 9999,
       "status_counts": {
-        "failed": 2856,
-        "valid": 7144
+        "failed": 1,
+        "valid": 9999
       }
     },
     "liquid": {
       "expected": 10000,
-      "numeric_pairs": 7145,
+      "numeric_pairs": 10000,
       "status_counts": {
-        "failed": 2855,
-        "valid": 7145
+        "valid": 10000
       }
     },
     "luna": {
@@ -758,10 +815,10 @@
     },
     "photo_ensemble": {
       "expected": 10000,
-      "numeric_pairs": 7145,
+      "numeric_pairs": 9998,
       "status_counts": {
-        "missing_or_invalid_components": 2855,
-        "valid": 7145
+        "missing_or_invalid_components": 2,
+        "valid": 9998
       }
     },
     "reference": {
@@ -824,56 +881,55 @@
     },
     {
       "accounting": {
-        "attempts": 10039,
-        "known_price_usd": "0.35354216",
+        "attempts": 12895,
+        "known_price_usd": "0.50333790",
         "total_price_usd": null,
-        "unpriced_attempts": 2894
+        "unpriced_attempts": 2895
       },
-      "content_denials": 2855,
+      "content_denials": 0,
       "high_reasoning_observations": 0,
-      "mean_aesthetic": 2.97527638517936,
-      "mean_technical": 3.2698131282478506,
-      "median_all_final_attempt_latency_seconds": 11.71223914111033,
+      "mean_aesthetic": 3.003518300696304,
+      "mean_technical": 3.301315274569807,
+      "median_all_final_attempt_latency_seconds": 9.90429594204761,
       "median_latency_scope": "final HTTP attempts with both outcome scores available",
-      "median_latency_seconds": 11.749377405270934,
+      "median_latency_seconds": 9.90429594204761,
       "model": "liquid",
       "new_images": 10000,
       "positive_reasoning_token_receipts": 0,
       "statuses": {
-        "failed": 2855,
-        "valid": 7145
+        "valid": 10000
       },
-      "valid_score_pairs": 7145
+      "valid_score_pairs": 10000
     },
     {
       "accounting": {
-        "attempts": 10034,
-        "known_price_usd": "1.275112482",
+        "attempts": 12889,
+        "known_price_usd": "1.816232166",
         "total_price_usd": null,
         "unpriced_attempts": 2890
       },
-      "content_denials": 2855,
+      "content_denials": 0,
       "high_reasoning_observations": 0,
-      "mean_aesthetic": 2.958218085106383,
-      "mean_technical": 3.4425153975363942,
-      "median_all_final_attempt_latency_seconds": 11.523069366347045,
+      "mean_aesthetic": 2.9862066206620663,
+      "mean_technical": 3.4717691769176917,
+      "median_all_final_attempt_latency_seconds": 9.496281374944374,
       "median_latency_scope": "final HTTP attempts with both outcome scores available",
-      "median_latency_seconds": 11.389010480837896,
+      "median_latency_seconds": 9.497987119015306,
       "model": "jev",
       "new_images": 10000,
       "positive_reasoning_token_receipts": 0,
       "statuses": {
-        "failed": 2856,
-        "valid": 7144
+        "failed": 1,
+        "valid": 9999
       },
-      "valid_score_pairs": 7144
+      "valid_score_pairs": 9999
     },
     {
       "accounting": null,
       "content_denials": 0,
       "high_reasoning_observations": 0,
-      "mean_aesthetic": 3.225033232054112,
-      "mean_technical": 3.5051457243292825,
+      "mean_aesthetic": 3.2525791811202867,
+      "mean_technical": 3.5348931728399458,
       "median_all_final_attempt_latency_seconds": null,
       "median_latency_scope": "final HTTP attempts with both outcome scores available",
       "median_latency_seconds": null,
@@ -881,10 +937,10 @@
       "new_images": 10000,
       "positive_reasoning_token_receipts": 0,
       "statuses": {
-        "missing_or_invalid_components": 2855,
-        "valid": 7145
+        "missing_or_invalid_components": 2,
+        "valid": 9998
       },
-      "valid_score_pairs": 7145
+      "valid_score_pairs": 9998
     }
   ],
   "possible_duplicate_pairs": 339,
