@@ -1,0 +1,900 @@
+{
+  "accounting": {
+    "deepseek": {
+      "attempts": 10248,
+      "known_price_usd": "6.48999903",
+      "total_price_usd": null,
+      "unpriced_attempts": 248
+    },
+    "jev": {
+      "attempts": 10034,
+      "known_price_usd": "1.275112482",
+      "total_price_usd": null,
+      "unpriced_attempts": 2890
+    },
+    "liquid": {
+      "attempts": 10039,
+      "known_price_usd": "0.35354216",
+      "total_price_usd": null,
+      "unpriced_attempts": 2894
+    },
+    "luna": {
+      "attempts": 10165,
+      "known_price_usd": "8.123163625",
+      "total_price_usd": null,
+      "unpriced_attempts": 165
+    }
+  },
+  "benchmark_images": 1500,
+  "combined_cost_per_model": {
+    "deepseek": {
+      "known_price_usd": "13.04645922",
+      "total_price_usd": null,
+      "unpriced_attempts": 329
+    },
+    "jev": {
+      "known_price_usd": "3.088889664",
+      "total_price_usd": null,
+      "unpriced_attempts": 4877
+    },
+    "liquid": {
+      "known_price_usd": "0.85591246",
+      "total_price_usd": null,
+      "unpriced_attempts": 2895
+    },
+    "luna": {
+      "known_price_usd": "16.220088200",
+      "total_price_usd": null,
+      "unpriced_attempts": 165
+    }
+  },
+  "compatibility_probe_accounting": {
+    "deepseek": {
+      "attempts": 4,
+      "known_price_usd": "0.00403174",
+      "total_price_usd": "0.00403174",
+      "unpriced_attempts": 0
+    },
+    "jev": {
+      "attempts": 4,
+      "known_price_usd": "0.000619920",
+      "total_price_usd": null,
+      "unpriced_attempts": 1
+    },
+    "liquid": {
+      "attempts": 4,
+      "known_price_usd": "0.00017118",
+      "total_price_usd": null,
+      "unpriced_attempts": 1
+    },
+    "luna": {
+      "attempts": 4,
+      "known_price_usd": "0.003303825",
+      "total_price_usd": "0.003303825",
+      "unpriced_attempts": 0
+    }
+  },
+  "corpus_coverage": {
+    "categories": {
+      "controls": 250,
+      "distortions": 750,
+      "megalith": 7500,
+      "vizwiz": 1500
+    },
+    "clusters": [
+      {
+        "candidate_count": 244,
+        "cluster": 0,
+        "initial_count": 164,
+        "new_count": 187,
+        "theme": "Household electronics and appliances",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 25,
+        "cluster": 1,
+        "initial_count": 65,
+        "new_count": 31,
+        "theme": "Zoo mammals",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 295,
+        "cluster": 2,
+        "initial_count": 105,
+        "new_count": 79,
+        "theme": "Synthetic geometric renders",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 176,
+        "cluster": 3,
+        "initial_count": 187,
+        "new_count": 191,
+        "theme": "Outdoor groups and camping",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 185,
+        "cluster": 4,
+        "initial_count": 185,
+        "new_count": 203,
+        "theme": "Birds",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 199,
+        "cluster": 5,
+        "initial_count": 210,
+        "new_count": 215,
+        "theme": "Outdoor textures and construction details",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 80,
+        "cluster": 6,
+        "initial_count": 44,
+        "new_count": 58,
+        "theme": "Mixed charts and plots",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 261,
+        "cluster": 7,
+        "initial_count": 270,
+        "new_count": 203,
+        "theme": "Workshops and conference groups",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 222,
+        "cluster": 8,
+        "initial_count": 201,
+        "new_count": 231,
+        "theme": "Urban streets",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 112,
+        "cluster": 9,
+        "initial_count": 160,
+        "new_count": 117,
+        "theme": "Dark interiors and glare",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 249,
+        "cluster": 10,
+        "initial_count": 208,
+        "new_count": 235,
+        "theme": "Social gatherings and crowds",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 181,
+        "cluster": 11,
+        "initial_count": 138,
+        "new_count": 146,
+        "theme": "Obstructed interior views",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 185,
+        "cluster": 12,
+        "initial_count": 179,
+        "new_count": 203,
+        "theme": "Modern buildings and construction",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 225,
+        "cluster": 13,
+        "initial_count": 110,
+        "new_count": 149,
+        "theme": "Food packages",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 123,
+        "cluster": 14,
+        "initial_count": 151,
+        "new_count": 135,
+        "theme": "Kayaking",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 109,
+        "cluster": 15,
+        "initial_count": 154,
+        "new_count": 121,
+        "theme": "Flowers and blossoms",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 47,
+        "cluster": 16,
+        "initial_count": 88,
+        "new_count": 43,
+        "theme": "Nearly black frames",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 106,
+        "cluster": 17,
+        "initial_count": 144,
+        "new_count": 115,
+        "theme": "Cats",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 146,
+        "cluster": 18,
+        "initial_count": 152,
+        "new_count": 161,
+        "theme": "Ice hockey",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 179,
+        "cluster": 19,
+        "initial_count": 173,
+        "new_count": 194,
+        "theme": "Cars",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 231,
+        "cluster": 20,
+        "initial_count": 214,
+        "new_count": 225,
+        "theme": "Youth outdoor groups",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 120,
+        "cluster": 21,
+        "initial_count": 138,
+        "new_count": 132,
+        "theme": "Running and walking",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 169,
+        "cluster": 22,
+        "initial_count": 181,
+        "new_count": 184,
+        "theme": "Rural paths and fields",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 89,
+        "cluster": 23,
+        "initial_count": 138,
+        "new_count": 98,
+        "theme": "Prepared food",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 175,
+        "cluster": 24,
+        "initial_count": 168,
+        "new_count": 190,
+        "theme": "Rocky mountains",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 151,
+        "cluster": 25,
+        "initial_count": 163,
+        "new_count": 166,
+        "theme": "Coasts and seascapes",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 188,
+        "cluster": 26,
+        "initial_count": 188,
+        "new_count": 206,
+        "theme": "Aircraft",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 98,
+        "cluster": 27,
+        "initial_count": 129,
+        "new_count": 110,
+        "theme": "Rivers and lakes",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 155,
+        "cluster": 28,
+        "initial_count": 178,
+        "new_count": 170,
+        "theme": "Buddhist temples and ceremonies",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 166,
+        "cluster": 29,
+        "initial_count": 175,
+        "new_count": 181,
+        "theme": "Sculptures and carvings",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 156,
+        "cluster": 30,
+        "initial_count": 169,
+        "new_count": 171,
+        "theme": "Sports ceremonies and medals",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 284,
+        "cluster": 31,
+        "initial_count": 113,
+        "new_count": 161,
+        "theme": "Canned and boxed food",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 161,
+        "cluster": 32,
+        "initial_count": 194,
+        "new_count": 176,
+        "theme": "Church interiors",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 148,
+        "cluster": 33,
+        "initial_count": 181,
+        "new_count": 163,
+        "theme": "Cycling and motorbikes",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 172,
+        "cluster": 34,
+        "initial_count": 126,
+        "new_count": 132,
+        "theme": "Blurred or overexposed obstructions",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 150,
+        "cluster": 35,
+        "initial_count": 137,
+        "new_count": 165,
+        "theme": "Children doing classroom crafts",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 89,
+        "cluster": 36,
+        "initial_count": 78,
+        "new_count": 89,
+        "theme": "Screens and keyboards",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 114,
+        "cluster": 37,
+        "initial_count": 59,
+        "new_count": 62,
+        "theme": "Horizontal bar charts",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 283,
+        "cluster": 38,
+        "initial_count": 230,
+        "new_count": 238,
+        "theme": "Residential architecture",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 96,
+        "cluster": 39,
+        "initial_count": 127,
+        "new_count": 108,
+        "theme": "Cosplay gatherings",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 135,
+        "cluster": 40,
+        "initial_count": 160,
+        "new_count": 150,
+        "theme": "Forests",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 216,
+        "cluster": 41,
+        "initial_count": 189,
+        "new_count": 231,
+        "theme": "Plants, leaves and ground details",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 137,
+        "cluster": 42,
+        "initial_count": 170,
+        "new_count": 152,
+        "theme": "Museum tools and artifacts",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 115,
+        "cluster": 43,
+        "initial_count": 138,
+        "new_count": 127,
+        "theme": "Contrails and cloudy skies",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 174,
+        "cluster": 44,
+        "initial_count": 165,
+        "new_count": 189,
+        "theme": "Formal conference meetings",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 303,
+        "cluster": 45,
+        "initial_count": 260,
+        "new_count": 234,
+        "theme": "Street festivals and public gatherings",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 80,
+        "cluster": 46,
+        "initial_count": 136,
+        "new_count": 89,
+        "theme": "Christian church ceremonies",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 197,
+        "cluster": 47,
+        "initial_count": 182,
+        "new_count": 215,
+        "theme": "Ruins and old stone buildings",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 143,
+        "cluster": 48,
+        "initial_count": 164,
+        "new_count": 158,
+        "theme": "Landmarks, monuments and squares",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 151,
+        "cluster": 49,
+        "initial_count": 161,
+        "new_count": 166,
+        "theme": "Museum vessels",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 206,
+        "cluster": 50,
+        "initial_count": 206,
+        "new_count": 210,
+        "theme": "Team sports",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 177,
+        "cluster": 51,
+        "initial_count": 121,
+        "new_count": 121,
+        "theme": "Close fabric textures",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 102,
+        "cluster": 52,
+        "initial_count": 118,
+        "new_count": 114,
+        "theme": "Weddings and formal gatherings",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 159,
+        "cluster": 53,
+        "initial_count": 150,
+        "new_count": 174,
+        "theme": "Live music",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 129,
+        "cluster": 54,
+        "initial_count": 139,
+        "new_count": 144,
+        "theme": "Historic urban buildings",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 60,
+        "cluster": 55,
+        "initial_count": 43,
+        "new_count": 51,
+        "theme": "Scatter plots",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 306,
+        "cluster": 56,
+        "initial_count": 136,
+        "new_count": 166,
+        "theme": "Bottles, jars and containers",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 198,
+        "cluster": 57,
+        "initial_count": 174,
+        "new_count": 216,
+        "theme": "Portraits",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 162,
+        "cluster": 58,
+        "initial_count": 177,
+        "new_count": 177,
+        "theme": "Children posing in groups",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 335,
+        "cluster": 59,
+        "initial_count": 231,
+        "new_count": 220,
+        "theme": "Books, documents and printed material",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 165,
+        "cluster": 60,
+        "initial_count": 192,
+        "new_count": 180,
+        "theme": "People posed and candid",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 203,
+        "cluster": 61,
+        "initial_count": 193,
+        "new_count": 213,
+        "theme": "Buildings and street furniture",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 286,
+        "cluster": 62,
+        "initial_count": 181,
+        "new_count": 131,
+        "theme": "Labeled household products",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      },
+      {
+        "candidate_count": 22,
+        "cluster": 63,
+        "initial_count": 40,
+        "new_count": 28,
+        "theme": "Horses and riders",
+        "theme_provenance": "initial10K reviewed theme, assigned via frozen prototype"
+      }
+    ],
+    "embedding_model": "google/embeddinggemma-2",
+    "embedding_modes": {
+      "exact_view": 9111,
+      "family_representative": 889
+    },
+    "revision": "f9972ac22e696a105c482202646979e33e4b5a1e"
+  },
+  "coverage": {
+    "deepseek": {
+      "expected": 20000,
+      "numeric_pairs": 19997,
+      "status_counts": {
+        "invalid": 1,
+        "valid": 19999
+      }
+    },
+    "jev": {
+      "expected": 20000,
+      "numeric_pairs": 17141,
+      "status_counts": {
+        "failed": 2859,
+        "valid": 17141
+      }
+    },
+    "liquid": {
+      "expected": 20000,
+      "numeric_pairs": 17145,
+      "status_counts": {
+        "failed": 2855,
+        "valid": 17145
+      }
+    },
+    "luna": {
+      "expected": 20000,
+      "numeric_pairs": 20000,
+      "status_counts": {
+        "valid": 20000
+      }
+    },
+    "photo_ensemble": {
+      "expected": 20000,
+      "numeric_pairs": 17144,
+      "status_counts": {
+        "missing_or_invalid_components": 2856,
+        "valid": 17144
+      }
+    },
+    "qrealign_lite": {
+      "expected": 10000,
+      "numeric_pairs": 10000,
+      "status_counts": {
+        "valid": 10000
+      }
+    },
+    "reference": {
+      "expected": 1500,
+      "numeric_pairs": 1500,
+      "status_counts": {
+        "valid": 1500
+      }
+    }
+  },
+  "embedding_billing": {
+    "queried_at": "2026-11-16 16:52:12 UTC",
+    "receipt": {
+      "metadata": {
+        "query": {
+          "bucketSize": "day",
+          "endTime": "2026-11-17T00:00:00Z",
+          "podId": "46dyqrae0is684",
+          "startTime": "2026-11-16T00:00:00Z"
+        },
+        "recordCount": 1,
+        "totals": {
+          "cpuAmount": 0,
+          "diskAmount": 0.005555556155741215,
+          "gpuAmount": 0.6215745098888874,
+          "totalAmount": 0.6271300660446286
+        },
+        "uniquePodCount": 1
+      },
+      "records": [
+        {
+          "cpuAmount": 0,
+          "diskAmount": 0.005555556155741215,
+          "endTime": "2026-11-17T00:00:00Z",
+          "gpuAmount": 0.6215745098888874,
+          "podId": "46dyqrae0is684",
+          "startTime": "2026-11-16T00:00:00Z",
+          "totalAmount": 0.6271300660446286
+        }
+      ]
+    }
+  },
+  "embedding_cleanup": {
+    "disk_retained": true,
+    "gpu_compute_released": true,
+    "pod_id": "46dyqrae0is684",
+    "reason": "Permanent disk deletion requires explicit authorization. Stopped state is the safer cleanup alternative.",
+    "status": "stopped",
+    "termination": "automatic_approval_review_rejected; not retried"
+  },
+  "ensemble": {
+    "latency_policy": "no independent request latency; retain component request measurements",
+    "missing_component_policy": "null_per_task; no reweighting or two-model fallback",
+    "model": "photo_ensemble",
+    "precision": "native component precision for arithmetic; two decimals for display only",
+    "price_policy": "no independent charge; component costs recorded separately, never double-counted",
+    "scope_policy": "use component policy scores; no new voting or reference override",
+    "version": "luna-deepseek-liquid-v1",
+    "weights": {
+      "aesthetic": {
+        "deepseek": "0.375",
+        "liquid": "0.25",
+        "luna": "0.375"
+      },
+      "technical": {
+        "deepseek": "0.375",
+        "liquid": "0.25",
+        "luna": "0.375"
+      }
+    }
+  },
+  "exports": {
+    "labelled-images.jsonl": "cb305471c125d58171cacf156e646cdcb00661de22b10cf9d07677f1f4c9e10b",
+    "new-labelled-images.jsonl": "6b8b1273b3ea4965adb23553de9147f9dd716fb79cd3098d9cceac35e0bb8deb",
+    "new-scores-long.jsonl": "1598d66401eef0b844faa8b8e1703fb36ed25636dfb297da2fe83787ccbd8618",
+    "scores-long.jsonl": "9b20ae76020c60cd67444d0021b11e08458405f191ec8f31f542778d3213959e"
+  },
+  "images": 20000,
+  "incremental_coverage": {
+    "deepseek": {
+      "expected": 10000,
+      "numeric_pairs": 9998,
+      "status_counts": {
+        "invalid": 1,
+        "valid": 9999
+      }
+    },
+    "jev": {
+      "expected": 10000,
+      "numeric_pairs": 7144,
+      "status_counts": {
+        "failed": 2856,
+        "valid": 7144
+      }
+    },
+    "liquid": {
+      "expected": 10000,
+      "numeric_pairs": 7145,
+      "status_counts": {
+        "failed": 2855,
+        "valid": 7145
+      }
+    },
+    "luna": {
+      "expected": 10000,
+      "numeric_pairs": 10000,
+      "status_counts": {
+        "valid": 10000
+      }
+    },
+    "photo_ensemble": {
+      "expected": 10000,
+      "numeric_pairs": 7145,
+      "status_counts": {
+        "missing_or_invalid_components": 2855,
+        "valid": 7145
+      }
+    },
+    "reference": {
+      "expected": 0,
+      "numeric_pairs": 0,
+      "status_counts": {}
+    }
+  },
+  "initial_exports": {
+    "labelled-images.jsonl": "276b5bf8f277a619bbe7f674df6f2cd2935de26f8787766207d97fdcfa64d033",
+    "scores-long.jsonl": "8159441f5cd5f4d876e993d1b93f26b19c7bc1cd6611c363109918a7a08ec1f7"
+  },
+  "initial_images_unchanged": true,
+  "new_images": 10000,
+  "new_model_metrics": [
+    {
+      "accounting": {
+        "attempts": 10165,
+        "known_price_usd": "8.123163625",
+        "total_price_usd": null,
+        "unpriced_attempts": 165
+      },
+      "content_denials": 0,
+      "high_reasoning_observations": 10000,
+      "mean_aesthetic": 3.37774,
+      "mean_technical": 3.5457899999999998,
+      "median_all_final_attempt_latency_seconds": 15.275037943851203,
+      "median_latency_scope": "final HTTP attempts with both outcome scores available",
+      "median_latency_seconds": 15.275037943851203,
+      "model": "luna",
+      "new_images": 10000,
+      "positive_reasoning_token_receipts": 10000,
+      "statuses": {
+        "valid": 10000
+      },
+      "valid_score_pairs": 10000
+    },
+    {
+      "accounting": {
+        "attempts": 10248,
+        "known_price_usd": "6.48999903",
+        "total_price_usd": null,
+        "unpriced_attempts": 248
+      },
+      "content_denials": 0,
+      "high_reasoning_observations": 9998,
+      "mean_aesthetic": 3.2930886177235448,
+      "mean_technical": 3.6794558911782356,
+      "median_all_final_attempt_latency_seconds": 15.407389716478065,
+      "median_latency_scope": "final HTTP attempts with both outcome scores available",
+      "median_latency_seconds": 15.409257183084264,
+      "model": "deepseek",
+      "new_images": 10000,
+      "positive_reasoning_token_receipts": 9998,
+      "statuses": {
+        "invalid": 1,
+        "valid": 9999
+      },
+      "valid_score_pairs": 9998
+    },
+    {
+      "accounting": {
+        "attempts": 10039,
+        "known_price_usd": "0.35354216",
+        "total_price_usd": null,
+        "unpriced_attempts": 2894
+      },
+      "content_denials": 2855,
+      "high_reasoning_observations": 0,
+      "mean_aesthetic": 2.97527638517936,
+      "mean_technical": 3.2698131282478506,
+      "median_all_final_attempt_latency_seconds": 11.71223914111033,
+      "median_latency_scope": "final HTTP attempts with both outcome scores available",
+      "median_latency_seconds": 11.749377405270934,
+      "model": "liquid",
+      "new_images": 10000,
+      "positive_reasoning_token_receipts": 0,
+      "statuses": {
+        "failed": 2855,
+        "valid": 7145
+      },
+      "valid_score_pairs": 7145
+    },
+    {
+      "accounting": {
+        "attempts": 10034,
+        "known_price_usd": "1.275112482",
+        "total_price_usd": null,
+        "unpriced_attempts": 2890
+      },
+      "content_denials": 2855,
+      "high_reasoning_observations": 0,
+      "mean_aesthetic": 2.958218085106383,
+      "mean_technical": 3.4425153975363942,
+      "median_all_final_attempt_latency_seconds": 11.523069366347045,
+      "median_latency_scope": "final HTTP attempts with both outcome scores available",
+      "median_latency_seconds": 11.389010480837896,
+      "model": "jev",
+      "new_images": 10000,
+      "positive_reasoning_token_receipts": 0,
+      "statuses": {
+        "failed": 2856,
+        "valid": 7144
+      },
+      "valid_score_pairs": 7144
+    },
+    {
+      "accounting": null,
+      "content_denials": 0,
+      "high_reasoning_observations": 0,
+      "mean_aesthetic": 3.225033232054112,
+      "mean_technical": 3.5051457243292825,
+      "median_all_final_attempt_latency_seconds": null,
+      "median_latency_scope": "final HTTP attempts with both outcome scores available",
+      "median_latency_seconds": null,
+      "model": "photo_ensemble",
+      "new_images": 10000,
+      "positive_reasoning_token_receipts": 0,
+      "statuses": {
+        "missing_or_invalid_components": 2855,
+        "valid": 7145
+      },
+      "valid_score_pairs": 7145
+    }
+  ],
+  "possible_duplicate_pairs": 339,
+  "publication_images": 1000,
+  "qrealign_new_inferences": 0,
+  "reference_images": 1500,
+  "reference_records": 1500,
+  "statistics_images": 20000,
+  "stats_in_inference": false,
+  "total_images": 20000,
+  "training_ready": false
+}

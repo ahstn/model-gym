@@ -33,6 +33,7 @@ def finalize():
             count = len(list((root / "observations").glob("*.json")))
             if state["status"] != "complete" or count != 10000:
                 raise RuntimeError(f"{model}: stopped or incomplete ({state['status']}, {count} observations)")
+        write_json(DATA / "operations/finalization-status.json", {"status": "exporting_and_auditing", "updated_unix": time.time()})
         for script in ("export.py", "audit.py"):
             subprocess.run([sys.executable, str(Path(__file__).with_name(script))], check=True)
     return True

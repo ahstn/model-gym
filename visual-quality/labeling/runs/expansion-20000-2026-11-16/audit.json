@@ -1,0 +1,22 @@
+{
+  "exports_sha256": "cb305471c125d58171cacf156e646cdcb00661de22b10cf9d07677f1f4c9e10b",
+  "image_statistics_joins": 10000,
+  "initial_records_unchanged": 10000,
+  "new_images": 10000,
+  "new_qrealign_calls": 0,
+  "new_statuses": {
+    "deepseek:invalid": 1,
+    "deepseek:valid": 9999,
+    "jev:failed": 2856,
+    "jev:valid": 7144,
+    "liquid:failed": 2855,
+    "liquid:valid": 7145,
+    "luna:valid": 10000
+  },
+  "passed": true,
+  "publication_images": 1000,
+  "raw_observations_reparsed": 40000,
+  "reference_images": 1500,
+  "total_images": 20000,
+  "training_ready": false
+}

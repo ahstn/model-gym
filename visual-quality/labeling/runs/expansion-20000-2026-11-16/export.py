@@ -45,6 +45,7 @@ def main():
     manifest = json.loads((DATA / "manifest.json").read_text())
     observations, accounting = publication.load_api(DATA / "results/api")
     _, probe_accounting = publication.load_api(DATA / "compatibility-probe/results/api")
+    _, historical_cost = publication.load_api(OLD / "results/api")
     publication.MODELS = MODELS
     rows, images, summary = publication.build_exports(
         manifest,
@@ -123,11 +124,18 @@ def main():
     duplicates = json.loads((DATA / "possible-duplicates.json").read_text())
     embedding_billing = json.loads((DATA / "embedding-operations/billing-receipt.json").read_text())
     embedding_cleanup = json.loads((DATA / "embedding-operations/cleanup-status.json").read_text())
-    historical_cost = initial_summary["cost_per_model"]
+    historical_coverage = {}
+    for row in read_lines(OLD / "exports/scores-long.jsonl"):
+        entry = historical_coverage.setdefault(
+            row["model"], {"expected": 0, "numeric_pairs": 0, "status_counts": Counter()}
+        )
+        entry["expected"] += 1
+        entry["numeric_pairs"] += int(all(row.get(d + "_score") is not None for d in ("technical", "aesthetic")))
+        entry["status_counts"][row["status"]] += 1
     incremental_coverage = summary["coverage"]
     combined_coverage = {}
-    for model in sorted(set(initial_summary["coverage"]) | set(incremental_coverage)):
-        parts = [initial_summary["coverage"].get(model, {}), incremental_coverage.get(model, {})]
+    for model in sorted(set(historical_coverage) | set(incremental_coverage)):
+        parts = [historical_coverage.get(model, {}), incremental_coverage.get(model, {})]
         statuses = Counter()
         for part in parts:
             statuses.update(part.get("status_counts", {}))

@@ -85,7 +85,15 @@ def main():
     with (DATA / "exports/labelled-images.jsonl").open() as stream:
         assert sum(1 for _ in stream) == 20000
     with (DATA / "exports/scores-long.jsonl").open() as stream:
-        assert sum(1 for _ in stream) == 111500
+        actual = {}
+        for line in stream:
+            row = json.loads(line)
+            entry = actual.setdefault(row["model"], {"expected": 0, "numeric_pairs": 0, "status_counts": Counter()})
+            entry["expected"] += 1
+            entry["numeric_pairs"] += int(all(row.get(d + "_score") is not None for d in ("technical", "aesthetic")))
+            entry["status_counts"][row["status"]] += 1
+        assert sum(r["expected"] for r in actual.values()) == 111500
+        assert actual == json.loads((DATA / "exports/summary.json").read_text())["coverage"]
     result = {
         "passed": True,
         "new_images": 10000,

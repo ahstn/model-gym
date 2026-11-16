@@ -6,7 +6,7 @@ Add 10,000 previously unlabeled images with EmbeddingGemma 2 content clustering,
 
 Store image-stats measurements separately from model responses; do not feed them to graders or use them to change labels. No training masks are enabled. All new per-image data stays under ignored `visual-quality/data/labeling-20000-2026-11-16/` in the primary checkout. Source code and aggregate reports are tracked here.
 
-Status: all 10,000 new images, embeddings and statistics are prepared and the corpus audit passed. API scoring is in progress; this document does not claim complete labels. The owned embedding GPU has been stopped.
+Status: all four graders completed the new 10,000-image traversal. The 20K corpus and 40,000 new response audit passed. There are **17,144 complete ensemble score pairs across 20,000 images**; missing provider outcomes remain missing. See [report.md](report.md), [summary.json](summary.json), and [audit.json](audit.json). The owned embedding GPU is stopped; disk deletion awaits explicit approval.
 
 ## Reproduction and data boundaries
 
