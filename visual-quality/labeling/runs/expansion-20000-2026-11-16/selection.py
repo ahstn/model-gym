@@ -5,6 +5,7 @@
 from __future__ import annotations
 import json
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, UTC
 import numpy as np
 from PIL import Image
@@ -117,10 +118,11 @@ def main():
     )
     parent_ids = {r["image_id"] for r in parents}
     final = [dict(r) for r in chosen if r["image_id"] not in parent_ids]
-    for i, parent in enumerate(parents, 1):
-        final.extend(legacy.family(parent))
-        if i % 25 == 0:
-            print(f"Generated controlled families {i}/250", flush=True)
+    with ThreadPoolExecutor(8) as pool:
+        for i, members in enumerate(pool.map(legacy.family, parents), 1):
+            final.extend(members)
+            if i % 25 == 0:
+                print(f"Generated controlled families {i}/250", flush=True)
     assert len(final) == 10000
     final.sort(key=lambda r: stable_key("case-order", r["image_id"]))
     for i, row in enumerate(final, 10001):
@@ -133,8 +135,8 @@ def main():
             expansion_run="2026-11-16",
         )
         if row["category"] == "distortions":
-            row["source_format"] = "PNG"
             with Image.open(row["source_path"]) as image:
+                row["source_format"] = image.format
                 row["source_metadata"] = {
                     "format": image.format,
                     "frames": getattr(image, "n_frames", 1),
