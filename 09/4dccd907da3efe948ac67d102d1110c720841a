@@ -1,0 +1,27 @@
+visual-quality/AGENTS.md
+  s_a985f77760d967::t_afacdb1ce3208f 62-68
+visual-quality/labeling/backups/README.md
+  s_a985f77760d967::t_6992ed462aa4b5 1-87
+visual-quality/labeling/backups/prepare.py
+  s_a985f77760d967::t_5da71677978388 1-206
+visual-quality/labeling/backups/restore.py
+  s_a985f77760d967::t_f41d3213780111 1-67
+visual-quality/labeling/backups/transfer.py
+  s_a985f77760d967::t_288eced7781b91 1-144
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "094dccd907da3efe948ac67d102d1110c720841a",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
