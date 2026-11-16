@@ -226,6 +226,8 @@ def main():
         "",
         "## Operational limitations",
         "",
+        "DeepSeek returned 9,998 numeric pairs, one schema-valid unscorable response, and one invalid aesthetic response retaining its technical score. Both affected images also lack Liquid scores. The added set has 7,145 complete ensemble pairs; the combined set has 17,144.",
+        "",
         "The initial teacher phase encountered connection errors and rate limits. A separately frozen continuation reduced concurrency to 16 and allowed bounded additional transient retries while preserving valid responses and all unknown-charge reserves. The rubric, image bytes, high reasoning and response validation were unchanged.",
         "",
         "OpenRouter returned per-image HTTP403 content-filter denials for some Liquid/Jev inline-image requests. These were retained as missing assessments and not retried or bypassed. Their counts are included in the aggregate JSON. Other credential, billing and service-failure stops remained active. A missing Liquid outcome also leaves its ensemble outcome missing.",
