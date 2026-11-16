@@ -94,7 +94,20 @@ def main():
                 "accounting": accounting.get(model),
             }
         )
-    historical_cost = json.loads((OLD / "exports/summary.json").read_text())["cost_per_model"]
+    initial_summary = json.loads((OLD / "exports/summary.json").read_text())
+    historical_cost = initial_summary["cost_per_model"]
+    incremental_coverage = summary["coverage"]
+    combined_coverage = {}
+    for model in sorted(set(initial_summary["coverage"]) | set(incremental_coverage)):
+        parts = [initial_summary["coverage"].get(model, {}), incremental_coverage.get(model, {})]
+        statuses = Counter()
+        for part in parts:
+            statuses.update(part.get("status_counts", {}))
+        combined_coverage[model] = {
+            "expected": sum(p.get("expected", 0) for p in parts),
+            "numeric_pairs": sum(p.get("numeric_pairs", 0) for p in parts),
+            "status_counts": dict(statuses),
+        }
     combined_cost = {}
     for model in MODELS:
         parts = [historical_cost[model], accounting[model], probe_accounting[model]]
@@ -106,7 +119,13 @@ def main():
             "total_price_usd": None if missing else str(known),
         }
     summary.update(
+        images=20000,
         total_images=20000,
+        benchmark_images=1500,
+        statistics_images=initial_summary["statistics_images"] + summary["statistics_images"],
+        reference_records=1500,
+        coverage=combined_coverage,
+        incremental_coverage=incremental_coverage,
         new_images=10000,
         reference_images=1500,
         publication_images=1000,
