@@ -1,6 +1,7 @@
 import json
 import threading
 
+import gateway_recovery
 import guardrail_recovery as recovery
 
 
@@ -13,6 +14,18 @@ def test_only_the_confirmed_secret_scanner_is_eligible():
     assert recovery.secret_scanner_denial(response("Request blocked by content filter: [SECRET:google-api-key]"))
     assert not recovery.secret_scanner_denial(response("Request blocked by content filter: other restriction"))
     assert not recovery.secret_scanner_denial(response("Invalid API key"))
+
+
+def test_gateway_recovery_does_not_repeat_scores_or_content_denials(tmp_path):
+    path = tmp_path / "result.json"
+    row = {"status": "failed", "raw_response_path": str(path)}
+    path.write_text(json.dumps({"http_status": 520}))
+    assert gateway_recovery.eligible(row)
+    assert not gateway_recovery.eligible({**row, "technical_score": 3.0})
+    assert not gateway_recovery.eligible({**row, "status": "valid"})
+    for status in (400, 401, 403):
+        path.write_text(json.dumps({"http_status": status}))
+        assert not gateway_recovery.eligible(row)
 
 
 def test_recovery_preserves_old_denial_and_never_repeats_new_terminal_result(tmp_path, monkeypatch):

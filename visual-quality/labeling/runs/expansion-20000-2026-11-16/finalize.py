@@ -31,11 +31,13 @@ def finalize():
             root = DATA / "results/api" / model
             if (root / "plans/secret-guardrail-disabled.json").exists():
                 phase = "secret-guardrail-disabled"
+            if (root / "plans/missing-output-postpass.json").exists():
+                phase = "missing-output-postpass"
             plan = json.loads((root / "plans" / (phase + ".json")).read_text())
             state = json.loads((root / (phase + "-status.json")).read_text())
             count = len(list((root / "observations").glob("*.json")))
             if (state["status"] != "complete" or count != 10000
-                    or state["planned_cases"] != len(plan["cases"])
+                    or state.get("planned_cases", len(plan["cases"])) != len(plan["cases"])
                     or sum(state["outcomes"].values()) != len(plan["cases"])):
                 raise RuntimeError(f"{model}: stopped or incomplete ({state['status']}, {count} observations)")
         write_json(DATA / "operations/finalization-status.json", {"status": "exporting_and_auditing", "updated_unix": time.time()})
