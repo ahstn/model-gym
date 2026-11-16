@@ -1,0 +1,19 @@
+visual-quality/labeling/runs/expansion-20000-2026-11-16/export.py
+  s_997467bd4b4123::t_03a2f3bb9e3f0e 116-117,125,169,230-232
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "eea9ec06006cfac06652a1b5f9fd18fdecf1f27a",
+  "prompts": {},
+  "sessions": {
+    "s_997467bd4b4123": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e4ed-c2e0-7221-a25b-55ef6916e1e6",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
