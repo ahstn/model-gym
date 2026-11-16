@@ -1,0 +1,23 @@
+visual-quality/AGENTS.md
+  s_a985f77760d967::t_e458deb9985493 59
+visual-quality/labeling/runs/expansion-20000-2026-11-16/guardrail_recovery.py
+  s_a985f77760d967::t_4db1dc41ea071f 1-111
+visual-quality/labeling/runs/expansion-20000-2026-11-16/test_guardrail_recovery.py
+  s_a985f77760d967::t_3cf691eb3e745e 1-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "66c4991bd6d6a517b6a9a103b3e685cbb4ac994d",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
