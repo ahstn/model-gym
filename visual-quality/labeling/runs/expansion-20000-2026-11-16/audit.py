@@ -26,6 +26,15 @@ def main():
         m: runner.read(DATA / "results/api" / m / "plans/expansion.json")
         for m in ["luna", "deepseek", "liquid", "jev"]
     }
+    all_plans = {
+        m: [runner.read(p) for p in sorted((DATA / "results/api" / m / "plans").glob("*.json"))]
+        for m in plans
+    }
+    for model, model_plans in all_plans.items():
+        for plan in model_plans:
+            runner.validate_plan(plan)
+            assert plan["profile"]["sha256"] == plans[model]["profile"]["sha256"]
+            assert plan["manifest_sha256"] == digest(DATA / "manifest.json")
     for plan in plans.values():
         runner.validate_plan(plan)
         assert plan["manifest_sha256"] == digest(DATA / "manifest.json")
@@ -44,6 +53,7 @@ def main():
             row = group[model]
             route = plans[model]["profile"]["routes"]["routes"][model]
             assert row["view_sha256"] == case["view_sha256"]
+            assert row["source_request_plan_id"] in {p["plan_id"] for p in all_plans[model]}
             path = corpus_path(row["raw_response_path"])
             assert digest(path) == row["raw_response_sha256"]
             result = runner.read(path)
