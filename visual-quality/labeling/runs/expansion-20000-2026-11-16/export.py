@@ -159,6 +159,18 @@ def main():
             "unpriced_attempts": missing,
             "total_price_usd": None if missing else str(known),
         }
+    recovery = {}
+    before_path = DATA / "snapshots/before-guardrail-recovery/exports/summary.json"
+    if before_path.exists():
+        before = json.loads(before_path.read_text())
+        for model in ("liquid", "jev"):
+            state_path = DATA / "results/api" / model / "secret-guardrail-disabled-status.json"
+            if state_path.exists():
+                recovery[model] = {
+                    **json.loads(state_path.read_text()),
+                    "additional_known_price_usd": str(Decimal(accounting[model]["known_price_usd"]) - Decimal(before["accounting"][model]["known_price_usd"])),
+                    "additional_http_attempts": accounting[model]["attempts"] - before["accounting"][model]["attempts"],
+                }
     summary.update(
         images=20000,
         total_images=20000,
@@ -180,6 +192,7 @@ def main():
         possible_duplicate_pairs=len(duplicates["pairs"]),
         embedding_billing=embedding_billing,
         embedding_cleanup=embedding_cleanup,
+        guardrail_recovery=recovery,
         initial_exports={
             n: digest(OLD / "exports" / n) for n in ["labelled-images.jsonl", "scores-long.jsonl"]
         },
@@ -231,13 +244,15 @@ def main():
         "",
         "## Operational limitations",
         "",
-        "DeepSeek returned 9,998 numeric pairs, one schema-valid unscorable response, and one invalid aesthetic response retaining its technical score. Both affected images also lack Liquid scores. The added set has 7,145 complete ensemble pairs; the combined set has 17,144.",
+        f"DeepSeek returned 9,998 numeric pairs, one schema-valid unscorable response, and one invalid aesthetic response retaining its technical score. The added set has {incremental_coverage[MODEL]['numeric_pairs']:,} complete ensemble pairs; the combined set has {combined_coverage[MODEL]['numeric_pairs']:,}.",
         "",
         "The initial teacher phase encountered connection errors and rate limits. A separately frozen continuation reduced concurrency to 16 and allowed bounded additional transient retries while preserving valid responses and all unknown-charge reserves. The rubric, image bytes, high reasoning and response validation were unchanged.",
         "",
-        "OpenRouter returned per-image HTTP403 content-filter denials for some Liquid/Jev inline-image requests. These were retained as missing assessments and not retried or bypassed. Their counts are included in the aggregate JSON. Other credential, billing and service-failure stops remained active. A missing Liquid outcome also leaves its ensemble outcome missing.",
+        "The first pass retained 2,855 shared OpenRouter secret-scanner denials per decision model: 2,757 compressed Bitcoin-key patterns, 85 uncompressed Bitcoin-key patterns and 13 Google API-key patterns. The user subsequently disabled their secret-redaction guardrail and explicitly approved resending these flagged image payloads. The recovery uses identical images and prompts, keeps all original receipts, preserves other assessments, and stops on a new 403. Earlier exports remain in the local pre-recovery snapshot. Unknown original charges remain unknown.",
         "",
-        "The completed Decisions failure audit found 2,855 identical image denials in each model. Jev additionally rejected one delivered view with HTTP400, `Invalid image dimensions`. The exact view remains unchanged across graders, and that Jev assessment is missing.",
+        "Recovery results: " + "; ".join(f"{m}: {v['status']}, {v.get('outcomes', {})}, additional known cost ${Decimal(v['additional_known_price_usd']):.6f}" for m, v in recovery.items()) if recovery else "No guardrail recovery has been executed.",
+        "",
+        "Jev's original HTTP400 `Invalid image dimensions` rejection is outside the secret-scanner recovery and remains missing. The exact view stays unchanged across graders. Current coverage and any additional failures are retained in the aggregate JSON.",
         "",
         "## Files and infrastructure",
         "",

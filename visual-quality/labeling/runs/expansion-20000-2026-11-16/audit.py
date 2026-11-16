@@ -39,6 +39,14 @@ def main():
         runner.validate_plan(plan)
         assert plan["manifest_sha256"] == digest(DATA / "manifest.json")
         assert plan["stats_sent_to_models"] is False and plan["reference_scores_sent_to_models"] is False
+    recovery = {
+        m: p for m, values in all_plans.items() for p in values
+        if p.get("phase") == "secret-guardrail-disabled"
+    }
+    before = {
+        r["case_id"]: r for r in read_lines(DATA / "snapshots/before-guardrail-recovery/exports/new-labelled-images.jsonl")
+    } if recovery else {}
+    unchanged = recovered = 0
     parsed = 0
     statuses = Counter()
     for case, label in zip(manifest, labels, strict=True):
@@ -51,6 +59,15 @@ def main():
         assert set(group) == {"luna", "deepseek", "liquid", "jev", "photo_ensemble"}
         for model in plans:
             row = group[model]
+            baseline = recovery.get(model, {}).get("policy", {}).get("authorized_denials", {}).get(case["case_id"])
+            if recovery and not baseline:
+                assert row == before[case["case_id"]]["assessments"][model]
+                unchanged += 1
+            elif baseline:
+                paths = runner.attempts_for(DATA / "results/api" / model, case["case_id"])
+                assert len(paths) > baseline["attempt_count"]
+                assert digest(paths[baseline["attempt_count"] - 1].with_name("result.json")) == baseline["result_sha256"]
+                recovered += 1
             route = plans[model]["profile"]["routes"]["routes"][model]
             assert row["view_sha256"] == case["view_sha256"]
             assert row["source_request_plan_id"] in {p["plan_id"] for p in all_plans[model]}
@@ -99,6 +116,8 @@ def main():
         "new_images": 10000,
         "total_images": 20000,
         "raw_observations_reparsed": parsed,
+        "recovery_observations": recovered,
+        "unchanged_pre_recovery_observations": unchanged,
         "new_statuses": dict(statuses),
         "image_statistics_joins": 10000,
         "initial_records_unchanged": 10000,
