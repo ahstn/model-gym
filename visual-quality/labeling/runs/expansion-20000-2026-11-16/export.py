@@ -113,6 +113,8 @@ def main():
                 "median_latency_seconds": median(times) if times else None,
                 "median_latency_scope": "final HTTP attempts with both outcome scores available",
                 "median_all_final_attempt_latency_seconds": median(all_times) if all_times else None,
+                "high_reasoning_observations": sum(r.get("requested_reasoning") == "high" for r in numeric),
+                "positive_reasoning_token_receipts": sum((r.get("reasoning_tokens") or 0) > 0 for r in numeric),
                 "accounting": accounting.get(model),
             }
         )
@@ -120,6 +122,7 @@ def main():
     content = json.loads((DATA / "content-coverage.json").read_text())
     duplicates = json.loads((DATA / "possible-duplicates.json").read_text())
     embedding_billing = json.loads((DATA / "embedding-operations/billing-receipt.json").read_text())
+    embedding_cleanup = json.loads((DATA / "embedding-operations/cleanup-status.json").read_text())
     historical_cost = initial_summary["cost_per_model"]
     incremental_coverage = summary["coverage"]
     combined_coverage = {}
@@ -163,6 +166,7 @@ def main():
         corpus_coverage=content,
         possible_duplicate_pairs=len(duplicates["pairs"]),
         embedding_billing=embedding_billing,
+        embedding_cleanup=embedding_cleanup,
         initial_exports={
             n: digest(OLD / "exports" / n) for n in ["labelled-images.jsonl", "scores-long.jsonl"]
         },
@@ -223,6 +227,9 @@ def main():
         f"Full local data: `{DATA}`. The combined image records are `exports/labelled-images.jsonl`; `exports/new-labelled-images.jsonl` contains only the added 10K. `exports/scores-long.jsonl` and `.csv` contain assessor rows. `stats.jsonl` contains new image measurements, also joined separately into image-level exports. None of the added per-image labels is committed to Git.",
         "",
         f"The owned embedding GPU was stopped after vectors were saved. Runpod reported ${embedding_billing['receipt']['metadata']['totals']['totalAmount']:.6f} for that pod as of {embedding_billing['queried_at']}; billing may settle later. This infrastructure charge is separate from the API table below and does not change the historical Q-ReAlign/reference zero-price reporting rule.",
+        "The pod's disk remains retained while permission for permanent deletion is pending; storage charges may continue. Automatic approval review rejected irreversible disk deletion without explicit authorization."
+        if embedding_cleanup.get("disk_retained")
+        else "The temporary embedding pod and disk have been removed after explicit authorization; all required outputs remain local.",
         "",
         "## Total API cost by model",
         "",
