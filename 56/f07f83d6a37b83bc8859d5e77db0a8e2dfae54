@@ -1,0 +1,31 @@
+visual-quality/experiments/labeling-10000-2026-11-01/api_runner.py
+  s_a985f77760d967::t_1c42fd1ecff8fc 420-423,438,448,451
+visual-quality/labeling/runs/expansion-20000-2026-11-16/score.py
+  s_a985f77760d967::t_937370163d82c1 36-38,51
+visual-quality/labeling/runs/expansion-20000-2026-11-16/selection.py
+  s_7e6c07495f9181::t_38d5a8f4ae044d 10,135-143
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "56f07f83d6a37b83bc8859d5e77db0a8e2dfae54",
+  "prompts": {},
+  "sessions": {
+    "s_7e6c07495f9181": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e475-bd90-7fd1-9f51-8df3f4174e38",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
