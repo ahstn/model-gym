@@ -14,6 +14,7 @@ from statistics import mean, median
 from corpus import DATA, OLD, digest, read_lines, write_json, write_lines
 
 import publish_run as publication
+import api_runner
 
 from visual_quality.ensemble import MODEL
 
@@ -94,20 +95,31 @@ def main():
         numeric = [
             r for r in selected if all(r.get(d + "_score") is not None for d in ("technical", "aesthetic"))
         ]
-        times = [r["latency_seconds"] for r in selected if r.get("latency_seconds") is not None]
+        times = [r["latency_seconds"] for r in numeric if r.get("latency_seconds") is not None]
+        all_times = [r["latency_seconds"] for r in selected if r.get("latency_seconds") is not None]
         table.append(
             {
                 "model": model,
                 "new_images": len(selected),
                 "valid_score_pairs": len(numeric),
                 "statuses": dict(Counter(r["status"] for r in selected)),
+                "content_denials": sum(
+                    api_runner.image_content_rejection(api_runner.read(r["raw_response_path"]))
+                    for r in selected
+                    if r["status"] == "failed" and r.get("raw_response_path")
+                ),
                 "mean_technical": mean(r["technical_score"] for r in numeric) if numeric else None,
                 "mean_aesthetic": mean(r["aesthetic_score"] for r in numeric) if numeric else None,
                 "median_latency_seconds": median(times) if times else None,
+                "median_latency_scope": "final HTTP attempts with both outcome scores available",
+                "median_all_final_attempt_latency_seconds": median(all_times) if all_times else None,
                 "accounting": accounting.get(model),
             }
         )
     initial_summary = json.loads((OLD / "exports/summary.json").read_text())
+    content = json.loads((DATA / "content-coverage.json").read_text())
+    duplicates = json.loads((DATA / "possible-duplicates.json").read_text())
+    embedding_billing = json.loads((DATA / "embedding-operations/billing-receipt.json").read_text())
     historical_cost = initial_summary["cost_per_model"]
     incremental_coverage = summary["coverage"]
     combined_coverage = {}
@@ -148,6 +160,9 @@ def main():
         combined_cost_per_model=combined_cost,
         initial_images_unchanged=True,
         qrealign_new_inferences=0,
+        corpus_coverage=content,
+        possible_duplicate_pairs=len(duplicates["pairs"]),
+        embedding_billing=embedding_billing,
         initial_exports={
             n: digest(OLD / "exports" / n) for n in ["labelled-images.jsonl", "scores-long.jsonl"]
         },
@@ -169,9 +184,19 @@ def main():
         "",
         "All new per-image data is local and ignored by Git. Image statistics are metadata only. Training masks remain disabled.",
         "",
+        "## Corpus and review",
+        "",
+        "The added set contains 7,500 Megalith images, 1,500 VizWiz images, 250 non-photographic controls and 750 controlled variants from 250 included parents. Exact delivered-image hashes are unique across all 20,000 records; new source families are disjoint from the original set and protected evaluation families were excluded before selection.",
+        "",
+        f"EmbeddingGemma 2 revision `{content['revision']}` assigns new candidates to the original 64 content prototypes. Square-root sampling quotas account for existing cluster coverage without reading quality labels. Of the new records, {content['embedding_modes']['exact_view']:,} use exact-view embeddings and {content['embedding_modes']['family_representative']:,} explicitly reuse a source-family embedding for a resized or distorted view. Graders and image-stats always receive the actual delivered view.",
+        "",
+        f"Six cross-family content neighbors are surfaced per image where available. There are {len(duplicates['pairs']):,} high-similarity pair candidates across the combined corpus; they are unconfirmed review candidates, not automatic duplicate labels. The local `review/index.html` shows content counts and the highest-similarity pairs. All candidates remain in `possible-duplicates.json`.",
+        "",
+        "The original 1,500 assistant references remain the benchmark. No new reference judgments were requested, and no additional Q-ReAlign calls were made. The first 1,000 committed examples remain unchanged.",
+        "",
         "## Incremental model coverage",
         "",
-        "| Model | Valid score pairs | Mean tech | Mean aest | Median HTTP seconds |",
+        "| Model | Valid score pairs | Mean tech | Mean aest | Median valid HTTP seconds |",
         "|---|---:|---:|---:|---:|",
     ]
     for r in table:
@@ -183,7 +208,21 @@ def main():
         )
     lines += [
         "",
-        "These are score distributions, not accuracy measurements: no new independent reference scores were created. The original benchmark remains the comparison baseline. Missing or invalid outcomes remain missing; the ensemble never renormalizes its weights.",
+        "These are score distributions, not accuracy measurements: no new independent reference scores were created. Means use each model's available score pairs, so differing missing coverage also changes the evaluated population. The original benchmark remains the comparison baseline. Missing or invalid outcomes remain missing; the ensemble never renormalizes its weights.",
+        "",
+        "Latency is the final successful HTTP attempt through complete response receipt. It excludes payload preparation and earlier retries. Raw records retain every attempt's latency and costs. Concurrency and service conditions changed during this run, so these measurements are operational observations rather than a controlled speed comparison.",
+        "",
+        "## Operational limitations",
+        "",
+        "The initial teacher phase encountered connection errors and rate limits. A separately frozen continuation reduced concurrency to 16 and allowed bounded additional transient retries while preserving valid responses and all unknown-charge reserves. The rubric, image bytes, high reasoning and response validation were unchanged.",
+        "",
+        "OpenRouter returned per-image HTTP403 content-filter denials for some Liquid/Jev inline-image requests. These were retained as missing assessments and not retried or bypassed. Their counts are included in the aggregate JSON. Other credential, billing and service-failure stops remained active. A missing Liquid outcome also leaves its ensemble outcome missing.",
+        "",
+        "## Files and infrastructure",
+        "",
+        f"Full local data: `{DATA}`. The combined image records are `exports/labelled-images.jsonl`; `exports/new-labelled-images.jsonl` contains only the added 10K. `exports/scores-long.jsonl` and `.csv` contain assessor rows. `stats.jsonl` contains new image measurements, also joined separately into image-level exports. None of the added per-image labels is committed to Git.",
+        "",
+        f"The owned embedding GPU was stopped after vectors were saved. Runpod reported ${embedding_billing['receipt']['metadata']['totals']['totalAmount']:.6f} for that pod as of {embedding_billing['queried_at']}; billing may settle later. This infrastructure charge is separate from the API table below and does not change the historical Q-ReAlign/reference zero-price reporting rule.",
         "",
         "## Total API cost by model",
         "",
