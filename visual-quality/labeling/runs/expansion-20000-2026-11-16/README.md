@@ -6,7 +6,7 @@ Add 10,000 previously unlabeled images with EmbeddingGemma 2 content clustering,
 
 Store image-stats measurements separately from model responses; do not feed them to graders or use them to change labels. No training masks are enabled. All new per-image data stays under ignored `visual-quality/data/labeling-20000-2026-11-16/` in the primary checkout. Source code and aggregate reports are tracked here.
 
-Status: preparation in progress; this document does not claim completion.
+Status: all 10,000 new images, embeddings and statistics are prepared and the corpus audit passed. API scoring is in progress; this document does not claim complete labels. The owned embedding GPU has been stopped.
 
 ## Reproduction and data boundaries
 
@@ -27,6 +27,8 @@ Use `corpus.py acquire --source megalith --count 11000 --workers 64` and `--sour
 Selection assigns candidates to normalized mean prototypes of the original 64 content groups. Square-root quotas account for initial content counts as well as the candidate pool. It does not inspect quality scores, captions or reference labels. Conservative exact/perceptual exclusions happen before selection. Similarity pairs remain review candidates, not confirmed duplicate labels.
 
 After freezing selection, run `score.py freeze --model <luna|deepseek|liquid|jev>` and `score.py run --model <model>` with credentials sourced quietly. An initial `--limit 8` checks each frozen route; rerunning resumes without repeating completed calls. The unchanged `stats_run.py` accepts `--manifest`, `--output`, `--cache` and `--workers`, with this checkout's `image-stats/src` and `visual-quality/src` on `PYTHONPATH`. Finish with `export.py`, `related.py`, then `audit.py`.
+
+For this run's recovery phases below, `finalize.py --wait` holds off until all four workers release their locks and report complete traversal. It then exports and audits locally, without making API calls. `operations/finalization-status.json` records whether that step is waiting, audited or failed. An exhausted transport failure remains an explicitly missing assessment; a pending or unfinalized observation prevents export. The final report's means and latency medians use available outcome pairs, and unknown API charges remain unknown.
 
 ## Compatibility check
 
