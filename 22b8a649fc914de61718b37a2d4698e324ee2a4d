@@ -1,0 +1,30 @@
+visual-quality/docs/training/synthetic-label-prompts.md
+  s_327fe9b27426f4::t_db0b2f7290e0dd 3-4
+visual-quality/docs/README.md
+  s_327fe9b27426f4::t_db0b2f7290e0dd 9-10,35
+visual-quality/docs/training/label-specification-2026-10-16.md
+  s_327fe9b27426f4::t_30fb4964133335 191
+  s_327fe9b27426f4::t_10fb1f113d2cc9 1-2,4-10,12-24,26-28,30-32,34-51,53-77,80-88,90-92,96-128,130,132-154,156-158,160-179,181-182,184-186,188-189,192-198
+  s_327fe9b27426f4::t_db0b2f7290e0dd 78-79,89,94-95,183,187
+  s_327fe9b27426f4::t_2b310179f8acf0 3,11,25,29,33,52,93,129,131,155,159,180,190
+visual-quality/docs/training/exa-results/label-specification-2026-10-16.json
+  s_327fe9b27426f4::t_b75837b3f0f7d9 1-1947
+visual-quality/docs/evaluation/protocol.md
+  s_327fe9b27426f4::t_30fb4964133335 16,49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "22b8a649fc914de61718b37a2d4698e324ee2a4d",
+  "prompts": {},
+  "sessions": {
+    "s_327fe9b27426f4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14258-b3f9-7a50-9987-4a60f71f58c8",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}

@@ -1,0 +1,1092 @@
+visual-triage/tests/test_cost_reservations.py
+  s_01674f4e1b5bdc::t_f2ab49d5690027 201-202,214-218
+  s_01674f4e1b5bdc::t_1b7142bf231626 1-72,74-82,85-90,96-112,114-135,137-144,146-189,191-200
+  s_01674f4e1b5bdc::t_fb69c693af49b1 73,84,113,136,145,190
+  s_01674f4e1b5bdc::t_3833a7fd126d47 203-213,219-236
+  s_01674f4e1b5bdc::t_d4453068151851 83,91-95
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/18d4dd947f549b4f960595b9e1803436b16b659d7c74b6f38eb6118e5f82d4ac/train.jsonl
+  s_01674f4e1b5bdc::t_7ac328bf87fcdf 5
+  s_01674f4e1b5bdc::t_e9a09a2a2a48b7 1-4,6-16
+visual-triage/tracks/quality_v2/dataset.json
+  s_01674f4e1b5bdc::t_73e4480dc55b6a 5,13-19,6266-6269,6274,6278-6279,6285,6288-6289,6292-6295,6298-6301,6303
+  s_01674f4e1b5bdc::t_7bfc8704c3974d 1-4,6-12,20-6265,6270-6273,6275-6277,6280-6284,6286-6287,6290-6291,6296-6297,6302,6304-19162
+visual-triage/evidence/ai-expansion/synthclic-splits.txt
+  s_01674f4e1b5bdc::t_3ac38ccb68a3f4 1
+visual-triage/evidence/ai-expansion/drct-repo.txt
+  s_01674f4e1b5bdc::t_3ac38ccb68a3f4 1-133
+visual-triage/tracks/ai_detection_v2/report/metadata-per-image.md
+  s_01674f4e1b5bdc::t_ac0b63618f7099 1-326
+visual-triage/tracks/quality_v2/evidence/external-agiqa-scale.json
+  s_01674f4e1b5bdc::t_d31bfb60f45075 1-10
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/94a5c732af379de6f605d20819f578399f8d3ab8a5bc22c59c15fe64357ccd3b/dev.jsonl
+  s_01674f4e1b5bdc::t_6a8f08c3b33a98 25
+  s_01674f4e1b5bdc::t_ae0fa0a2af9467 79
+  s_01674f4e1b5bdc::t_9b4aaf0a1be194 22-24
+  s_01674f4e1b5bdc::t_d2ba4e57e44f75 26-28,76-78
+  s_01674f4e1b5bdc::t_82c969e79c9efd 80
+  s_01674f4e1b5bdc::t_c6bc12d4c32d68 1-21,29-75
+visual-triage/tracks/quality_v2/prompts/baseline.json
+  s_01674f4e1b5bdc::t_d13dbd0010131d 1-30
+visual-triage/bench_protocol.py
+  s_01674f4e1b5bdc::t_79ab1b655a6fbf 1,103,105-109,112-118,122,139
+  s_01674f4e1b5bdc::t_7a958efa0f632e 110-111
+visual-triage/tracks/settings.py
+  s_01674f4e1b5bdc::t_e81a6dac1ad812 1-12
+visual-triage/tracks/quality_v2/cost-reservations.json
+  s_01674f4e1b5bdc::t_66ba9fb4abfb25 1-23
+visual-triage/evidence/ai-expansion/chameleon-repo.txt
+  s_01674f4e1b5bdc::t_3ac38ccb68a3f4 1-168
+visual-triage/research/expansion-2026-10-11/evidence/quality-hf-readme.md
+  s_01674f4e1b5bdc::t_bda3c67585c45f 1-24
+visual-triage/tests/test_image_context.py
+  s_01674f4e1b5bdc::t_1f6347c91e4007 37-40,66-75,84-87,91-93,101-103,116-117,148-154
+  s_01674f4e1b5bdc::t_48629904dd3167 3-36,41-65,76-83,88-90,94-100,104-115,118-147,155-164
+  s_01674f4e1b5bdc::t_dc7db313213c53 2
+  s_01674f4e1b5bdc::t_ecc10e8387c068 1,165-169,177-198,200-208
+  s_01674f4e1b5bdc::t_90e124ca8b102e 170-176
+  s_01674f4e1b5bdc::t_04ee29505e7b71 199
+visual-triage/tracks/ai_detection_v2/final-metadata/external.jsonl
+  s_01674f4e1b5bdc::t_5e12d09c84c731 20
+  s_01674f4e1b5bdc::t_72c4fa5b360bd0 1-19,21-80
+visual-triage/tracks/quality_v2/evidence/author-splits.csv
+  s_01674f4e1b5bdc::t_391d1e091ae616 1-10074
+visual-triage/tracks/quality_v2/optimisation/candidates/835e3e73285ac5830ec9315f51bc3fe5e1dcdae99971ed878abdea3c5e07c257/dev.jsonl
+  s_01674f4e1b5bdc::t_c80c1342ab3663 65-72
+  s_01674f4e1b5bdc::t_66fa8c4dd9936b 14-16
+  s_01674f4e1b5bdc::t_eeda40f189f62c 88
+  s_01674f4e1b5bdc::t_0308cf883d1539 11-13
+  s_01674f4e1b5bdc::t_bc25cf47686e15 17-19,62-64
+  s_01674f4e1b5bdc::t_5000972097e31d 73-75,85-87
+  s_01674f4e1b5bdc::t_4b21790a1732e3 89-91
+  s_01674f4e1b5bdc::t_307ef0cda55f56 1-10,20-61,76-84,92-100
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/925ff3f7b5d845d5703fa05e9c3a9eb5c90e261da1794cdb91f603bb25dcadbd/train.jsonl
+  s_01674f4e1b5bdc::t_1b7142bf231626 6
+  s_01674f4e1b5bdc::t_fe9ccdc5f7bbfa 3-5
+  s_01674f4e1b5bdc::t_ebc3a4659566fc 7-9
+  s_9f6b4159c52b07::t_9bbfb8cbc19520 1-2,10-16
+visual-triage/tracks/quality/dataset.json
+  s_01674f4e1b5bdc::t_2647863db30f4a 1-7397
+visual-triage/research/expansion-2026-10-11/quality-sources.md
+  s_01674f4e1b5bdc::t_f9531c87eda6db 37
+  s_01674f4e1b5bdc::t_d54762703c9ef2 25
+  s_01674f4e1b5bdc::t_ad36ae91d27e36 1-12,14-24,26-28,30-32,34-36,38-39
+  s_01674f4e1b5bdc::t_9aa7f0234da957 13,29,33
+visual-triage/tracks/quality_v2/optimisation/candidates/835e3e73285ac5830ec9315f51bc3fe5e1dcdae99971ed878abdea3c5e07c257/train.jsonl
+  s_01674f4e1b5bdc::t_5b9335b47f1222 3-6
+  s_01674f4e1b5bdc::t_796718fb127b87 32
+  s_01674f4e1b5bdc::t_6f6ca6af477a4e 40
+  s_01674f4e1b5bdc::t_6078375bce9fd5 1-2,7-31,33-39
+visual-triage/tracks/quality_v2/optimisation/candidates/4c51511024401bd9e93a68e8f8d33f42361c5a8e076bf530c01100d069d2786b/train.jsonl
+  s_01674f4e1b5bdc::t_cb23a54b0288d4 18
+  s_01674f4e1b5bdc::t_965ae9a6bf69c4 1-17,19-32
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e9afecd7005781926f6e4717d89808f79b13fa81319771b70c67d43ff62f2095/dev.jsonl
+  s_01674f4e1b5bdc::t_c0df530e714d7a 8
+  s_01674f4e1b5bdc::t_0cd124af89a0d1 1-7,9-80
+visual-triage/evidence/ai-expansion/clic-organiser-statement.txt
+  s_01674f4e1b5bdc::t_194c88536116a2 1-323
+visual-triage/tracks/quality/optimisation/reflection.jsonl
+  s_01674f4e1b5bdc::t_444618d4b2f39e 1-2
+  s_01674f4e1b5bdc::t_03070d0424c462 3
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e6ab07c1921d65cf06a30c1a32a70890e0515e5372acf8171e0055988f1a3ca5/train.jsonl
+  s_01674f4e1b5bdc::t_fb69c693af49b1 58-59
+  s_01674f4e1b5bdc::t_42e926865d2c8f 60-62
+  s_01674f4e1b5bdc::t_36d1d511ebe3b9 1-57,63-74
+visual-triage/tracks/quality/evidence/research-index.json
+  s_01674f4e1b5bdc::t_d6da93fba619e7 1-62
+visual-triage/README.md
+  s_01674f4e1b5bdc::t_b08c00581e098f 3,5,7-8,10,12-13,15
+  s_01674f4e1b5bdc::t_f0aff9a5b5b87a 9,11,17
+visual-triage/research/expansion-2026-10-11/evidence/metadata-search-log.json
+  s_01674f4e1b5bdc::t_f7b21db76b7612 1-29
+visual-triage/tracks/ai_detection_v2/prompts/baseline.json
+  s_01674f4e1b5bdc::t_d13dbd0010131d 1-31
+visual-triage/tracks/quality_v2/ablation-plan.json
+  s_01674f4e1b5bdc::t_d640f13fa9fccc 1-124
+visual-triage/tracks/ai_detection/prompt-selection.json
+  s_01674f4e1b5bdc::t_d2d2f4ead4072a 1-29
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/fd4a1e6d7ced09ddfaa8cf89d2d597b1471f9d7bd7c1755046135f64e175115d/dev.jsonl
+  s_01674f4e1b5bdc::t_9eaa43161c37fc 16-17
+  s_01674f4e1b5bdc::t_c366a2eb402a35 28
+  s_01674f4e1b5bdc::t_108ecf9d88679d 33
+  s_01674f4e1b5bdc::t_96438c1dfcdc90 1-15,18-27,29-32,34-80
+visual-triage/research/expansion-2026-10-11/evidence/catalog-exa-followup.json
+  s_01674f4e1b5bdc::t_ff18f528fc1302 1-12
+visual-triage/tracks/ai_detection_v2/final/external-baseline.jsonl
+  s_01674f4e1b5bdc::t_310b51a89721ed 52
+  s_01674f4e1b5bdc::t_a3182cf9022355 1-51,53-80
+visual-triage/tracks/quality/evidence/selection-statistics.json
+  s_01674f4e1b5bdc::t_e8320d36bafd68 1-103
+visual-triage/research/expansion-2026-10-11/iqa-catalog.md
+  s_01674f4e1b5bdc::t_51d1c31bb888b3 53-55
+  s_01674f4e1b5bdc::t_9561671c20ac6c 41,56
+  s_01674f4e1b5bdc::t_331acb0a7192ab 1-40,42-52
+visual-triage/evidence/ai-expansion/commfor-eval-card.txt
+  s_01674f4e1b5bdc::t_12440af1bab08a 1-248
+visual-triage/tests/test_metadata_ablation.py
+  s_01674f4e1b5bdc::t_2cbce2e490e074 1-4,6-27,39-40,54-60,75-77,81-86,114-136,138-175,180,188-231
+  s_01674f4e1b5bdc::t_3d05bba8f4a36d 5,176-179,181,183-185,187
+  s_01674f4e1b5bdc::t_3f8eef223b3469 285-297,308,323-327,339-340,344-345,350-357
+  s_01674f4e1b5bdc::t_994876ecae0afb 232-284
+  s_01674f4e1b5bdc::t_7a66d1886d91ed 358-363,374-376,381,389-402
+  s_01674f4e1b5bdc::t_b08c00581e098f 364-373,377-380,382-388
+  s_01674f4e1b5bdc::t_575a6ce5283546 29-38,41-53,61-74,78-80,87-113,137,182,186,298-307,309-322,328-338,341-343,346-349
+  s_01674f4e1b5bdc::t_ba99c6eb80175f 28
+visual-triage/tracks/ai_detection/README.md
+  s_01674f4e1b5bdc::t_f0aff9a5b5b87a 1-32
+visual-triage/.gitattributes
+  s_01674f4e1b5bdc::t_e7dfc1b680014f 1-12
+visual-triage/tracks/quality_v2/optimisation/candidates/4c51511024401bd9e93a68e8f8d33f42361c5a8e076bf530c01100d069d2786b/dev.jsonl
+  s_01674f4e1b5bdc::t_2cff9be916da98 32-42
+  s_01674f4e1b5bdc::t_6447923f020a8e 2-5
+  s_01674f4e1b5bdc::t_0f1a93606a4af5 14-20
+  s_01674f4e1b5bdc::t_e76ce4127f981b 1,6-13,21-31,43-100
+visual-triage/evidence/ai-expansion/commfor-eval-hub.txt
+  s_01674f4e1b5bdc::t_60305319da04a3 1
+visual-triage/tracks/quality_v2/optimisation/candidates/aa1c656c246a3100026c226904b71c9793dca7f75bfd71f021ed2aea95667bec/train.jsonl
+  s_01674f4e1b5bdc::t_29aea935936281 2
+  s_01674f4e1b5bdc::t_be9561f61eaf87 1,3-8
+visual-triage/tracks/quality_v2/evidence/selection-statistics.json
+  s_01674f4e1b5bdc::t_1ec3f70fbae7e9 1-39
+visual-triage/research/expansion-2026-10-11/metadata-methods.md
+  s_01674f4e1b5bdc::t_f9531c87eda6db 72
+  s_01674f4e1b5bdc::t_661105fad9274d 1-71,73-76
+visual-triage/tracks/metrics.py
+  s_01674f4e1b5bdc::t_4fa48479687b0e 12-20
+  s_01674f4e1b5bdc::t_769e0eb4169258 1-11,21-48,55-61,63-74,77-108,111-112,114,116-125,127-177,183-199,203-211,213-236,254,259-264,279-280,312-327,331-340,348-351,353
+  s_01674f4e1b5bdc::t_708b49f695a457 52-53,212
+  s_01674f4e1b5bdc::t_e81a6dac1ad812 49-51,62,76,109-110,113,115,126,242-243,249,344,347
+  s_01674f4e1b5bdc::t_9a120c74a8d3e2 54,244-248
+  s_01674f4e1b5bdc::t_b1186f2abb1625 281-311
+  s_01674f4e1b5bdc::t_fae3a3939a4a7f 178-182,200-202,237-241,250-253,255-258,265-278,328-330,341-343,345-346
+  s_01674f4e1b5bdc::t_f52ef6181ce970 75
+  s_01674f4e1b5bdc::t_d5cf29a71b7e7d 352,354-356
+visual-triage/research/expansion-2026-10-11/evidence/quality-hf-metadata.json
+  s_01674f4e1b5bdc::t_bda3c67585c45f 1
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/fd4a1e6d7ced09ddfaa8cf89d2d597b1471f9d7bd7c1755046135f64e175115d/train.jsonl
+  s_01674f4e1b5bdc::t_e331d0209151fa 32
+  s_01674f4e1b5bdc::t_3a454ec2451b98 1-31
+visual-triage/research/expansion-2026-10-11/experiment-plan.md
+  s_01674f4e1b5bdc::t_8b4cdd423f6199 1-38
+visual-triage/tracks/ai_detection_v2/SOURCES.md
+  s_01674f4e1b5bdc::t_76e3d3d48fe478 1-6,8-21,23-25,27,29,32,34,37
+  s_01674f4e1b5bdc::t_20134747d3daea 26
+  s_01674f4e1b5bdc::t_9c73ae7ab933a0 28,30-31,33,35-36
+  s_01674f4e1b5bdc::t_44381cc8ae0402 22
+  s_01674f4e1b5bdc::t_f14cb759a58683 7
+visual-triage/tracks/metadata_ablation.py
+  s_01674f4e1b5bdc::t_3f8eef223b3469 144-145
+  s_01674f4e1b5bdc::t_2cbce2e490e074 13,175-176,252,373
+  s_01674f4e1b5bdc::t_f32b216dd4bd1d 262,272-275
+  s_01674f4e1b5bdc::t_b08c00581e098f 291-293
+  s_01674f4e1b5bdc::t_994876ecae0afb 185,195-196,202,323-325
+  s_01674f4e1b5bdc::t_7a66d1886d91ed 17,226,264-269,280,282-285,287,290,296,309
+  s_01674f4e1b5bdc::t_3d05bba8f4a36d 8
+  s_01674f4e1b5bdc::t_575a6ce5283546 19-29,31,45,74-83,85-89,92-93,104-114,167-174,177-181,186-194,229-245,256-261,276-279,281,286,288,294-295,297-308,310-313,326-339,351-354,357-365,369-372,375-386,398-402
+  s_01674f4e1b5bdc::t_393414db06196c 1-7,9-12,14-16,18,30,32-44,46-73,84,90-91,94-103,115-143,146-166,182-184,197-201,203-225,227-228,246-251,253-255,263,270-271,289,314-322,340-350,355-356,366-368,374,387-397,403-407
+visual-triage/tracks/ai_detection/report/README.md
+  s_01674f4e1b5bdc::t_5d96d0326bdca9 1-9,11-18
+  s_01674f4e1b5bdc::t_a8136d6867f0a6 10
+visual-triage/research/expansion-2026-10-11/evidence/metadata-primary-fetch.txt
+  s_01674f4e1b5bdc::t_6657dc2c5873e9 1-81
+visual-triage/tracks/quality/test_dataset.py
+  s_01674f4e1b5bdc::t_245adc74c5a9d1 1-17,25-48
+  s_01674f4e1b5bdc::t_6925b9d95b2eaf 18-24
+visual-triage/research/expansion-2026-10-11/ai-sources.md
+  s_01674f4e1b5bdc::t_bf40e65a73bd7e 1-7,9-16,18,20-21
+  s_01674f4e1b5bdc::t_f14cb759a58683 8,17,19
+visual-triage/tracks/ai_detection/test_build_dataset.py
+  s_01674f4e1b5bdc::t_8a4b8650feba50 1-43
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/259863bb1f451d3ab7abb5fcc61f49811bf7e1aacb8ace1359fb56e9023c5145/dev.jsonl
+  s_01674f4e1b5bdc::t_4abbaa1fe6d7ae 56
+  s_01674f4e1b5bdc::t_baac89e9246250 1-55,57-80
+visual-triage/research/expansion-2026-10-11/evidence/final-audit.py
+  s_01674f4e1b5bdc::t_7f44be6774a349 1,3-12,14-17,19-21,23-24,26-27,29,31-33,41,43-44,49,51,53-54,71-74,76-77,79,81,100-101,104,108-110,123,147,155,178,180,182,184-185,190,206-207,231,234-235,238-239,241
+  s_01674f4e1b5bdc::t_abddad4b57507c 28,34
+  s_01674f4e1b5bdc::t_8087b6231259cd 2,13,18,22,25,30,35-40,42,45-48,50,52,55-70,75,78,80,82-99,102-103,105-107,111-122,124-146,148-154,156-177,179,181,183,186-189,191-205,208-230,232-233,236-237,240
+visual-triage/tracks/quality/report/per-image.md
+  s_01674f4e1b5bdc::t_078564aebb05a6 1-4
+  s_01674f4e1b5bdc::t_edb981c72f7241 5-86
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e6ab07c1921d65cf06a30c1a32a70890e0515e5372acf8171e0055988f1a3ca5/dev.jsonl
+  s_01674f4e1b5bdc::t_4aebcd99934484 33-38
+  s_01674f4e1b5bdc::t_ca8bb24d13bb12 30-32
+  s_01674f4e1b5bdc::t_14fa7259773e04 39-41
+  s_01674f4e1b5bdc::t_d5b9358a3e4ec7 1-29,42-80
+visual-triage/research/expansion-2026-10-11/evidence/metadata-search-0.txt
+  s_01674f4e1b5bdc::t_ab2d976575de50 1-120
+visual-triage/tracks/ai_detection/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/train.jsonl
+  s_01674f4e1b5bdc::t_4b415025bdff56 21
+  s_01674f4e1b5bdc::t_ce2595960e593a 1-20,22-24
+visual-triage/tracks/quality/optimisation/candidates/835e3e73285ac5830ec9315f51bc3fe5e1dcdae99971ed878abdea3c5e07c257/train.jsonl
+  s_01674f4e1b5bdc::t_444618d4b2f39e 9-21
+  s_01674f4e1b5bdc::t_6c93dd69928d47 1-8,22-24
+visual-triage/tracks/quality_v2/final/selected.jsonl
+  s_01674f4e1b5bdc::t_2ac31e8895a853 5
+  s_01674f4e1b5bdc::t_8217b647ae8f58 85-86
+  s_01674f4e1b5bdc::t_5750fe3fae3a25 75-78
+  s_01674f4e1b5bdc::t_ac0b63618f7099 79-83
+  s_01674f4e1b5bdc::t_1d55a2d46a1f11 1-4,6-74,84,87-100
+visual-triage/tracks/ai_detection_v2/report/report.json
+  s_01674f4e1b5bdc::t_ac0b63618f7099 1-35178
+visual-triage/research/expansion-2026-10-11/evidence/metadata-search-1.txt
+  s_01674f4e1b5bdc::t_32683c66c62758 1-198
+visual-triage/tracks/quality_v2/evidence/licence-lookups.json
+  s_01674f4e1b5bdc::t_a150cae53e47e1 1-8910
+visual-triage/tracks/quality_v2/protocol.json
+  s_01674f4e1b5bdc::t_d640f13fa9fccc 1-33
+visual-triage/tracks/quality/optimisation/candidates/4b2dd7c9ae747fe0a8c77e15b7331d302a32cd594aca347cf0da796a7394a296/train.jsonl
+  s_01674f4e1b5bdc::t_444618d4b2f39e 1-8
+visual-triage/tracks/quality/report/report.json
+  s_01674f4e1b5bdc::t_078564aebb05a6 1-70,72-82,84-131,146-8332,8335,8338-8348,8350
+  s_01674f4e1b5bdc::t_cafc39ab03036a 8333-8334,8336-8337
+  s_01674f4e1b5bdc::t_0d01a839dc2062 71,83,132-145,8349
+visual-triage/tracks/quality/evidence/osf-node.json
+  s_01674f4e1b5bdc::t_917a000c0907c4 1
+visual-triage/tracks/ai_detection_v2/report/README.md
+  s_01674f4e1b5bdc::t_ac0b63618f7099 1-17,19-20
+  s_01674f4e1b5bdc::t_4be15ba858d735 18
+visual-triage/research/expansion-2026-10-11/evidence/final-audit-summary.json
+  s_01674f4e1b5bdc::t_2c59856dba9779 89-90,96-116
+  s_01674f4e1b5bdc::t_7f44be6774a349 1-44,46-62,64-88,91-94,119
+  s_01674f4e1b5bdc::t_f2c3df02d54770 45,63,95
+  s_01674f4e1b5bdc::t_5be628559bd190 117-118
+visual-triage/tracks/ai_detection/build_dataset.py
+  s_01674f4e1b5bdc::t_66eb3ac40ea851 113-120,135-137,142,154-155
+  s_01674f4e1b5bdc::t_a5733fb7d6c4da 168-169,173-195,220-231,244,294,299-302
+  s_01674f4e1b5bdc::t_0379d248c53bb5 170-172,201-205
+  s_01674f4e1b5bdc::t_bf1ac76609ab54 138-141
+  s_01674f4e1b5bdc::t_1cc2ddb15091b2 1-6,8-31,41-65,73-87,89-112,121-134,143-153,156-157,163-167,196-197,206-219,235-243,245,289,292-293,304-309,311-324
+  s_01674f4e1b5bdc::t_5358df74e3a150 7,32-40,88,303,310
+  s_01674f4e1b5bdc::t_fd78739557a757 66-72,158-162,198-200,232-234,246-288,290-291,295-298
+visual-triage/tracks/ai_detection_v2/report/metadata-report.json
+  s_01674f4e1b5bdc::t_ac0b63618f7099 1-35176
+visual-triage/tracks/quality_v2/report/metadata-per-image.md
+  s_01674f4e1b5bdc::t_f506483a1caf69 1-206
+visual-triage/tracks/image_context.py
+  s_01674f4e1b5bdc::t_17769312ca3361 15,250,252-262,265-269,272-277,279-298,302-305,307-308,311-317,324-334
+  s_01674f4e1b5bdc::t_04ee29505e7b71 263,271,278,306
+  s_01674f4e1b5bdc::t_ecc10e8387c068 270,309-310
+  s_01674f4e1b5bdc::t_88a0c081759ab3 97-98
+  s_01674f4e1b5bdc::t_4542d0a8bf932b 1-7,9-14,16-96,99-110,117-121,125-148,154-163,172-178,181-190,194,221
+  s_01674f4e1b5bdc::t_872c52e5f127c6 264
+  s_01674f4e1b5bdc::t_aa059c98ed9b31 111-116,122-124,149-153,164-171,191-192,207-216,218-219,223-228,233-234,238-244
+  s_01674f4e1b5bdc::t_9a8f8afe436aee 299-301,318-323
+  s_01674f4e1b5bdc::t_1c4466cf1bc502 8,179-180,193,195-206,217,220,222,229-232,235-237,245-249,251
+visual-triage/tests/test_bench_runner.py
+  s_01674f4e1b5bdc::t_27daae2dd6d22e 178-217,235-259
+  s_01674f4e1b5bdc::t_7a958efa0f632e 218-220,222-234
+  s_01674f4e1b5bdc::t_69f42364ddc8e0 221
+visual-triage/tracks/quality_v2/optimisation/candidates/0eadbc722a1ff031b612771db0079a2e880852ad68dc5919d3610c12c039e198/dev.jsonl
+  s_01674f4e1b5bdc::t_1c34640de9e60d 81
+  s_01674f4e1b5bdc::t_5946b0f7309e8d 59
+  s_01674f4e1b5bdc::t_b69a577effe73c 39
+  s_01674f4e1b5bdc::t_bc3afb2e7b3e0b 87
+  s_01674f4e1b5bdc::t_8586a9c9466ef5 36-38
+  s_01674f4e1b5bdc::t_25b3a02148b02b 40-42,56-58
+  s_01674f4e1b5bdc::t_b56d41dff240af 60-62,78-80
+  s_01674f4e1b5bdc::t_650e62df29bdf1 82-86
+  s_01674f4e1b5bdc::t_901baaaea1a71a 88-90
+  s_77a387e49bf400::t_779dfba9ce0918 1-35,43-55,63-77,91-100
+visual-triage/tracks/quality/optimisation/candidates/4b2dd7c9ae747fe0a8c77e15b7331d302a32cd594aca347cf0da796a7394a296/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_444618d4b2f39e 1-7
+visual-triage/tracks/ai_detection/final/selected.jsonl.meta.json
+  s_01674f4e1b5bdc::t_c73a754dc80048 1-7
+visual-triage/tracks/quality_v2/selection.json
+  s_01674f4e1b5bdc::t_f476e0a62cbba5 33,69,92,102,114,242,265,291,340,392,414,460,510,544,558-559,585,611,634,712,722,734,839,888,911,934,945,956,1043,1077-1078,1150,1245,1268,1313-1314,1370,1382,1393,1405-1406,1455,1465,1478,1553,1575-1576,1598,1621,1644,1679,1717,1739,1766,1964,1988,2022,2067,2082,2094,2106,2128,2139,2151,2175,2197,2221,2243,2267,2428,2439-2440,2463,2509,2519,2606-2607,2653,2676,2728,2736,2751,2773-2774,2796-2797,2849,2895,2917,2952,2955,2966,3000-3001,3012,3036,3058,3085,3090-9527
+  s_01674f4e1b5bdc::t_bfc7421fb31998 1-32,34-68,70-91,93-101,103-113,115-241,243-264,266-290,292-339,341-391,393-413,415-459,461-509,511-543,545-557,560-584,586-610,612-633,635-711,713-721,723-733,735-838,840-887,889-910,912-933,935-944,946-955,957-1042,1044-1076,1079-1149,1151-1244,1246-1267,1269-1312,1315-1369,1371-1381,1383-1392,1394-1404,1407-1454,1456-1464,1466-1477,1479-1552,1554-1574,1577-1597,1599-1620,1622-1643,1645-1678,1680-1716,1718-1738,1740-1765,1767-1963,1965-1987,1989-2021,2023-2066,2068-2081,2083-2093,2095-2105,2107-2127,2129-2138,2140-2150,2152-2174,2176-2196,2198-2220,2222-2242,2244-2266,2268-2427,2429-2438,2441-2462,2464-2508,2510-2518,2520-2605,2608-2652,2654-2675,2677-2727,2729-2735,2737-2750,2752-2772,2775-2795,2798-2848,2850-2894,2896-2916,2918-2951,2953-2954,2956-2965,2967-2999,3002-3011,3013-3035,3037-3057,3059-3084,3086-3089,9528
+visual-triage/tests/test_optimise.py
+  s_01674f4e1b5bdc::t_9a2e61e050a551 1-26,33-51,66-68,72-81,90-96,126-129,133-151,157-159,171-184
+  s_01674f4e1b5bdc::t_e06f8776cca4fc 185-211
+  s_01674f4e1b5bdc::t_655237cfc85ac5 212-276
+  s_01674f4e1b5bdc::t_0be8e83d838c4a 281,284-299,335-347,351-367,370-372,375-382,384-386,394-397,400-477
+  s_01674f4e1b5bdc::t_d4f43c92123785 27-32,52-65,69-71,82-89,130-132,152-156,160-170
+  s_01674f4e1b5bdc::t_96b236750be68a 97,99-125
+  s_01674f4e1b5bdc::t_2eaef7a6e352a4 277-280,282-283,300-310
+  s_01674f4e1b5bdc::t_f476e0a62cbba5 388
+  s_01674f4e1b5bdc::t_d8b82cb4df3ec8 311-334,348-350,368-369,373-374,383,387,389-393,398-399
+  s_01674f4e1b5bdc::t_b08c00581e098f 98
+visual-triage/tracks/quality_v2/final-metadata/test.jsonl
+  s_01674f4e1b5bdc::t_acf2b225f9d14d 29
+  s_01674f4e1b5bdc::t_e0ac37d389ec5d 37
+  s_01674f4e1b5bdc::t_5b5c6291e1c44e 98-100
+  s_01674f4e1b5bdc::t_90f351e5c925aa 71
+  s_01674f4e1b5bdc::t_e2a81ce43d9b54 1-28,30-36,38-70,72-97
+visual-triage/tracks/ai_detection/SOURCES.md
+  s_01674f4e1b5bdc::t_84eb6e87d710c3 13-17
+  s_01674f4e1b5bdc::t_3d83c732ecd107 1-12,18-44
+visual-triage/tracks/ai_detection_v2/build_dataset.py
+  s_01674f4e1b5bdc::t_260958d92c7190 288
+  s_01674f4e1b5bdc::t_082263ea343e0a 2,15-18,20-21,23,31-37,39,45-50,53-54,60,73-76,78,102,104-105,111,113-121,124,165-170,172,193,195-201,203-216,221-222,225-226,228-230,232,237-240,242-244,247-287,292-296,298,300-311,313-332,335-345
+  s_01674f4e1b5bdc::t_f14cb759a58683 6,67,80-97,234,312,333-334
+  s_01674f4e1b5bdc::t_cd9683a1a987e2 1,3-5,7,9-14,19,22,24-28,43-44,51-52,55-59,61-65,69-72,100-101,106-110,112,122-123,155-158,164,171,194,202,217-220,223-224,227,231,236,241,245-246,346
+  s_01674f4e1b5bdc::t_28a9750729c672 8,29,126-154,159-163,173-192
+  s_01674f4e1b5bdc::t_5253cf7848558c 30,38,40-42
+  s_01674f4e1b5bdc::t_7b9dc69d24f8a0 66,68,77,79,98-99,103,125,233,235,289-291,297,299
+visual-triage/tracks/quality_v2/optimisation/candidates/fa05ed2f71926fad612a30f31c4a412e494147a01b9907ff9329b884c6220119/dev.jsonl
+  s_01674f4e1b5bdc::t_29582214ce2120 45
+  s_01674f4e1b5bdc::t_25c743808a6643 8
+  s_01674f4e1b5bdc::t_d90ab5351e0474 49
+  s_01674f4e1b5bdc::t_b5cdb38eb297dc 85
+  s_01674f4e1b5bdc::t_7d1d132cdadd59 1-7,9-44,46-48,50-84,86-100
+visual-triage/tracks/quality_v2/optimisation/candidates/b42008d7d4ee29c6c84d6e43ec93585a6629006e97f5bf5686f4c4d13e1c653b/train.jsonl
+  s_01674f4e1b5bdc::t_943bda3e9ea5d9 6
+  s_01674f4e1b5bdc::t_1825a1afa175f1 1-5,7-24
+visual-triage/research/expansion-2026-10-11/evidence/metadata-search-2.txt
+  s_01674f4e1b5bdc::t_32683c66c62758 1-93
+visual-triage/tracks/quality/optimisation/candidates/2a5b26720022cb0c0f372e0c68c01db4bd420a14d73c88eba5fc3db41ddc4203/train.jsonl
+  s_01674f4e1b5bdc::t_2c98a90af264f9 4-6
+  s_01674f4e1b5bdc::t_81e75098a992f3 1-3,7-8
+visual-triage/tracks/quality/optimisation/candidates/4b2dd7c9ae747fe0a8c77e15b7331d302a32cd594aca347cf0da796a7394a296/prompt.json
+  s_01674f4e1b5bdc::t_444618d4b2f39e 1-30
+visual-triage/tracks/ai_detection_v2/native.py
+  s_01674f4e1b5bdc::t_a3d997b586d4c8 1,3-18,20,26,29,31-35,40,43-44,52,55-56,95-98,104,107,110-113,132,135,146,152
+  s_01674f4e1b5bdc::t_260958d92c7190 21-25,27-28,118-128
+  s_01674f4e1b5bdc::t_f14cb759a58683 2,19,30,36-39,41-42,45-51,53-54,57-94,99-103,105-106,108-109,114-117,129-131,133-134,136-145,147-151,153-159
+visual-triage/tracks/ai_detection_v2/context-dataset.json
+  s_01674f4e1b5bdc::t_eabf666bb9fd61 1-25613
+visual-triage/tracks/run.py
+  s_01674f4e1b5bdc::t_ea66e3b01f4b11 183,185-189,192,208
+  s_01674f4e1b5bdc::t_939dd83c22ecda 93-94,543
+  s_01674f4e1b5bdc::t_841a3e524ee93b 120
+  s_01674f4e1b5bdc::t_1b7142bf231626 16,382-392,394-397,408-420,422-427,429,434-439,441,447-458,471,476-479,514-516
+  s_01674f4e1b5bdc::t_8b0998ab5febc7 262-263,276-277
+  s_01674f4e1b5bdc::t_4ab9dc5736355d 20,52,73,267,338,495,497-498,520
+  s_01674f4e1b5bdc::t_f52ef6181ce970 14-15,509
+  s_01674f4e1b5bdc::t_51814add54524f 1-6,8-13,17,21-51,53-66,68-72,74-77,95-100,102-110,112-118,121,130-136,167-168,170-182,205,211-220,226-249,253-255,260-261,264-265,271-274,282-283,298-303,308-317,330-333,335-337,349-358,376-381,480,536-541,545-557,560-561,569-570,573,583-587
+  s_01674f4e1b5bdc::t_ba39c08e6b41de 19,78-87,123-128,142-145,147-151,155,184,198-200,204,206-207,210,501-507,562-568
+  s_01674f4e1b5bdc::t_862d5b233da7b2 7,393,398-407,421,428,430-433,467-470,474,481-492,494,496,499-500,508,510-513,517-519,521-525,527-535,558-559,571-572
+  s_01674f4e1b5bdc::t_c3a4c95d861b27 193-195,209
+  s_01674f4e1b5bdc::t_2eaef7a6e352a4 88-92,111,137-141,146,152-153,169,202,373,542,544
+  s_01674f4e1b5bdc::t_3e3674f4d102a5 460-465,472
+  s_01674f4e1b5bdc::t_3833a7fd126d47 440,442-446
+  s_01674f4e1b5bdc::t_e81a6dac1ad812 18,67,101,119,122,129,165,190-191,196-197,201,203,334,459,473,493,526
+  s_01674f4e1b5bdc::t_fae3a3939a4a7f 154,156-164,166,221-225,250-252,256-259,266,268-270,275,278-281,284-297,304-307,318-329,339-348,359-372,374-375,574-582
+  s_01674f4e1b5bdc::t_33f3d4a59d3a95 466
+  s_01674f4e1b5bdc::t_03a991ad40e27d 475
+visual-triage/tracks/ai_detection_v2/report/external-per-image.md
+  s_01674f4e1b5bdc::t_ac0b63618f7099 1-166
+visual-triage/tracks/quality/evidence/osf-image-checksums.json
+  s_01674f4e1b5bdc::t_8241d65aabba49 1-1122
+visual-triage/tracks/quality/README.md
+  s_01674f4e1b5bdc::t_f9ae104c874009 3,14-27
+  s_01674f4e1b5bdc::t_6c51018daf431f 1-2,4-13,28-35
+visual-triage/tracks/quality_v2/optimisation/candidates/0eadbc722a1ff031b612771db0079a2e880852ad68dc5919d3610c12c039e198/train.jsonl
+  s_01674f4e1b5bdc::t_68defbdb3c06ed 15
+  s_01674f4e1b5bdc::t_17ee51596e1823 12-14
+  s_01674f4e1b5bdc::t_c0eee01d4fdd9d 16-18
+  s_01674f4e1b5bdc::t_a067208cccb03e 1-11,19-46
+visual-triage/tracks/ai_detection/evidence/acquisition-v1-not-used.json
+  s_01674f4e1b5bdc::t_72fc7b710f63c7 1-5300
+visual-triage/evidence/ai-expansion/clic-2021-tasks.txt
+  s_01674f4e1b5bdc::t_f414692203893e 1-273
+visual-triage/tracks/ai_detection_v2/eligibility-external-review.json
+  s_01674f4e1b5bdc::t_b69a577effe73c 1-37,47,49,57
+  s_01674f4e1b5bdc::t_d90ab5351e0474 42-46,51,53-56
+  s_01674f4e1b5bdc::t_24259e4007d3a8 38-41,48,50,52
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e6ab07c1921d65cf06a30c1a32a70890e0515e5372acf8171e0055988f1a3ca5/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_a1e53f743bddb4 1-7
+visual-triage/evidence/ai-expansion/synthclic-card.txt
+  s_01674f4e1b5bdc::t_3ac38ccb68a3f4 1-40
+visual-triage/tracks/quality/report/README.md
+  s_01674f4e1b5bdc::t_4b415025bdff56 6
+  s_01674f4e1b5bdc::t_078564aebb05a6 1-4,8,10-15
+  s_01674f4e1b5bdc::t_0d01a839dc2062 5,7,9
+visual-triage/tracks/quality_v2/optimisation/candidates/fa05ed2f71926fad612a30f31c4a412e494147a01b9907ff9329b884c6220119/train.jsonl
+  s_01674f4e1b5bdc::t_eabf666bb9fd61 16
+  s_01674f4e1b5bdc::t_e78a522e97a48b 13-15
+  s_01674f4e1b5bdc::t_b4b3ec62ca0a96 17-19
+  s_01674f4e1b5bdc::t_58ea59f71e171c 1-12,20-40
+visual-triage/evidence/ai-expansion/genimage-license.txt
+  s_01674f4e1b5bdc::t_791305f75e1605 1
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/74694b8f8425af93fa6dd71b853180c704c21e464a006d6a03496c9928530515/dev.jsonl
+  s_01674f4e1b5bdc::t_935e29c8f4846c 41
+  s_01674f4e1b5bdc::t_2d165df08905b9 1-40,42-80
+visual-triage/tracks/quality_v2/report/metadata-report.md
+  s_01674f4e1b5bdc::t_f506483a1caf69 1-20
+visual-triage/tracks/ai_detection_v2/final/external-selected.jsonl
+  s_01674f4e1b5bdc::t_a6cdf233fa48f9 47
+  s_01674f4e1b5bdc::t_9b385c5ff949a5 1-46,48-80
+visual-triage/tracks/ai_detection/report/per-image.md
+  s_01674f4e1b5bdc::t_5d96d0326bdca9 1-126
+visual-triage/tracks/quality_v2/context-dataset.json
+  s_01674f4e1b5bdc::t_d640f13fa9fccc 1-23162
+visual-triage/VALIDATION.md
+  s_01674f4e1b5bdc::t_976392a91331d3 49-50
+  s_01674f4e1b5bdc::t_f0aff9a5b5b87a 5,14-15,51
+  s_01674f4e1b5bdc::t_fd1eb78c29c29d 1-2,6-8,10-13,16,18,20,22-24,26-27,29,31,33-40,42,44-46,48
+  s_01674f4e1b5bdc::t_bcc0cbbcb3bda2 9,17,19,21,25,28,30,32,41,43,47
+  s_01674f4e1b5bdc::t_b08c00581e098f 3-4
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/9755901c8f7a941df056a29a15fa62516cbc467b13d58f4066dd7ee72394c8b8/train.jsonl
+  s_01674f4e1b5bdc::t_210567d51b4ac2 43
+  s_01674f4e1b5bdc::t_5f39455cccf239 15
+  s_01674f4e1b5bdc::t_586eca0f569897 1-14,16-42,44-76
+visual-triage/research/expansion-2026-10-11/README.md
+  s_01674f4e1b5bdc::t_b08c00581e098f 20-21
+  s_01674f4e1b5bdc::t_6dfd44f3a99744 10
+  s_01674f4e1b5bdc::t_4ea6eefd56ae66 3,19
+  s_01674f4e1b5bdc::t_4159725629fe01 1-2,4-9,11-18
+visual-triage/research/expansion-2026-10-11/evidence/metadata-search-3.txt
+  s_01674f4e1b5bdc::t_32683c66c62758 1-93
+visual-triage/tracks/quality/protocol.json
+  s_01674f4e1b5bdc::t_573ba69912b384 1-29
+visual-triage/tracks/README.md
+  s_01674f4e1b5bdc::t_122090a03781a7 1-2,4,11,13,15,17,22,24,26,28,30,32
+  s_01674f4e1b5bdc::t_18d440d4ecea97 5-7,9-10
+  s_01674f4e1b5bdc::t_90047deb075dd6 12,14,18-21,25,27,31
+  s_01674f4e1b5bdc::t_acd6f8428ac78e 33-36
+  s_01674f4e1b5bdc::t_943bda3e9ea5d9 8,23
+  s_01674f4e1b5bdc::t_b08c00581e098f 3,16,29
+visual-triage/tracks/quality_v2/optimisation/candidates/aa1c656c246a3100026c226904b71c9793dca7f75bfd71f021ed2aea95667bec/dev.jsonl
+  s_01674f4e1b5bdc::t_0a5e7068eaa22d 17
+  s_01674f4e1b5bdc::t_c0df530e714d7a 67
+  s_01674f4e1b5bdc::t_01e053230a3823 1-16,18-66,68-100
+visual-triage/tracks/ai_detection_v2/eligibility.json
+  s_01674f4e1b5bdc::t_9d7f68bf9be23e 167-206,217-218
+  s_01674f4e1b5bdc::t_bf676029ada735 3-166,212,216
+  s_01674f4e1b5bdc::t_44463020101fce 1-2,207-211,213-215,219
+visual-triage/tracks/quality_v2/report/report.json
+  s_01674f4e1b5bdc::t_f506483a1caf69 1-20905
+visual-triage/tracks/ai_detection_v2/ablation-plan.json
+  s_01674f4e1b5bdc::t_eabf666bb9fd61 1-185
+visual-triage/tracks/quality_v2/report/README.md
+  s_01674f4e1b5bdc::t_f506483a1caf69 1-18
+visual-triage/tracks/quality_v2/evidence/native-scores.csv
+  s_01674f4e1b5bdc::t_bda3c67585c45f 1-10074
+visual-triage/tracks/quality_v2/evidence/duplicate-check.json
+  s_01674f4e1b5bdc::t_7bfc8704c3974d 1-7
+visual-triage/evidence/ai-expansion/synthclic-first.txt
+  s_01674f4e1b5bdc::t_12440af1bab08a 1
+visual-triage/tracks/quality/SOURCES.md
+  s_01674f4e1b5bdc::t_3fb8d2ea715a68 1-18,20-26,28-34,36-37
+  s_01674f4e1b5bdc::t_ed5bf96b7229df 19,27,35
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/74694b8f8425af93fa6dd71b853180c704c21e464a006d6a03496c9928530515/train.jsonl
+  s_01674f4e1b5bdc::t_c806729aed652f 3
+  s_01674f4e1b5bdc::t_29aea935936281 13
+  s_01674f4e1b5bdc::t_d5a5b2034614ff 1-2,4-12,14-32
+visual-triage/tracks/quality_v2/prompts/selected.json
+  s_01674f4e1b5bdc::t_310b51a89721ed 1-30
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/9755901c8f7a941df056a29a15fa62516cbc467b13d58f4066dd7ee72394c8b8/dev.jsonl
+  s_01674f4e1b5bdc::t_c395ca35860a5f 74
+  s_01674f4e1b5bdc::t_95b09df97e3798 71-73
+  s_01674f4e1b5bdc::t_02f0fdfab6ca9f 75-77
+  s_01674f4e1b5bdc::t_65be9c766858ef 1-70,78-80
+visual-triage/tracks/quality_v2/evidence/darus-dataset.json
+  s_01674f4e1b5bdc::t_bda3c67585c45f 1
+visual-triage/tracks/quality_v2/SOURCES.md
+  s_01674f4e1b5bdc::t_55cafc98455328 1-12,14-37
+  s_01674f4e1b5bdc::t_d54762703c9ef2 13
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/fc92dcbd5c64c98de036f2d63f4629c50509afe543303c80b55b172cbfc3fbbc/dev.jsonl
+  s_01674f4e1b5bdc::t_111ef3d7a4047b 1
+  s_01674f4e1b5bdc::t_943bda3e9ea5d9 18
+  s_01674f4e1b5bdc::t_76520d7a2d56c2 2-17,19-80
+visual-triage/tracks/quality_v2/final/baseline.jsonl
+  s_01674f4e1b5bdc::t_ac0b63618f7099 78-83
+  s_01674f4e1b5bdc::t_2d3e96fef5ed5d 94
+  s_01674f4e1b5bdc::t_8217b647ae8f58 85-86
+  s_01674f4e1b5bdc::t_5750fe3fae3a25 76-77
+  s_01674f4e1b5bdc::t_6d7ea9efc5a291 1-75,84,87-93,95-100
+visual-triage/tracks/ai_detection/eligibility.json
+  s_01674f4e1b5bdc::t_3b2a576e8f6f70 1-2,4-485,533,540,568,617,631,694,708,771,897,918,1011-1013
+  s_01674f4e1b5bdc::t_420da33e149201 3
+  s_01674f4e1b5bdc::t_7d3603967b4ad8 486-487,489-490,493-494,496-498,500-501,503-505,507-508,510-512,514-515,517-518,521-522,524-525,528-529,531-532,535-536,538-539,542-543,545-547,549-550,552-554,556-557,559-561,563-564,566-567,570-571,573-575,577-578,580-581,584-585,587-589,591-592,594-596,598-599,601-603,605-606,608-610,612-613,615-616,619-620,622-624,626-627,629-630,633-634,636-638,640-641,643-644,647-648,650-652,654-655,657-659,661-662,664-666,668-669,671-672,675-676,678-680,682-683,685-686,689-690,692-693,696-697,699-701,703-704,706-707,710-711,713-714,717-718,720-722,724-725,727-729,731-732,734-736,738-739,741-743,745-746,748-750,752-753,755-757,759-764,766-767,769-770,773-778,780-785,885-886,888-890,892-893,895-896,899-900,902-904,906-911,913-914,916-917,920-921,923-925,927-928,930-931,934-935,937-939,941-942,944-946,948-949,951-953,955-1005,1007-1009
+  s_01674f4e1b5bdc::t_50959b3fb618d2 491,519,526,582,642,645,649,656,663,673,687,715,719,726,733,740,747,787-884,887,894
+  s_01674f4e1b5bdc::t_a0575c9b006d2a 488,492,495,499,502,506,509,513,516,520,523,527,530,534,537,541,544,548,551,555,558,562,565,569,572,576,579,583,586,590,593,597,600,604,607,611,614,618,621,625,628,632,635,639,646,653,660,667,670,674,677,681,684,688,691,695,698,702,705,709,712,716,723,730,737,744,751,754,758,765,768,772,779,786,891,898,901,905,912,915,919,922,926,929,932-933,936,940,943,947,950,954,1006,1010
+visual-triage/tracks/ai_detection/prompts/baseline.json
+  s_01674f4e1b5bdc::t_c2e842cdb2065d 1-31
+visual-triage/EXTENDED-VALIDATION.md
+  s_01674f4e1b5bdc::t_db953212ba094c 48-49
+  s_01674f4e1b5bdc::t_0ce88acdc29eec 1-36,38-47
+  s_01674f4e1b5bdc::t_81ffe2fa7d4cce 37
+visual-triage/research/expansion-2026-10-11/evidence/catalog-links.json
+  s_01674f4e1b5bdc::t_88d434b36376b8 1-1814
+visual-triage/tracks/optimise.py
+  s_01674f4e1b5bdc::t_2eaef7a6e352a4 489,491
+  s_01674f4e1b5bdc::t_0be8e83d838c4a 370-374
+  s_01674f4e1b5bdc::t_ecad1a0713caf3 325-326
+  s_01674f4e1b5bdc::t_c3a4c95d861b27 294
+  s_01674f4e1b5bdc::t_ba39c08e6b41de 15,143-150,189-195,212-216,242-244,267-277,280-282,291-293,295-299,304-308,338-340,386,413,440-442,472-474,477-484,492-493,508-515
+  s_01674f4e1b5bdc::t_a77df926669c5a 50-52,58-61,67-69,175,177
+  s_01674f4e1b5bdc::t_d4f43c92123785 168-173,176,260,287-289,302,309-313,315,331-336,341,381,387,408-412,416-421,427-432,434-435,438-439,443
+  s_01674f4e1b5bdc::t_cf60124cc08c89 187-188,196,205-211,217-219,225,231,263-264,278-279,283,303,314
+  s_01674f4e1b5bdc::t_96b236750be68a 161-162
+  s_01674f4e1b5bdc::t_4ab9dc5736355d 129-130,300-301,404-405,463,469-470
+  s_01674f4e1b5bdc::t_4e737fcc005581 320
+  s_01674f4e1b5bdc::t_ef1f82abcf1ab3 1-14,16,20-44,57,70-74,79-103,105-110,112,114,121,123-127,139-142,152-160,163-167,174,178-186,197-199,201-204,220-224,226-230,234-239,254-258,261-262,284-286,316-319,321-324,327-330,345-350,352,378-379,388-403,406,414,422-426,433,436-437,444,452-457,459-462,464,467,486-488,490,499-502,506,522-527
+  s_01674f4e1b5bdc::t_1b7142bf231626 17-18,45-49,53-56,62-66,75-78
+  s_01674f4e1b5bdc::t_194c88536116a2 19,113,115-120,122,128,131,136-138,151,200,232-233,240-241,245-251,253,259,290,337,351,376-377,380,384-385,407,415,458,465-466,468,471,485,507,516-521
+  s_01674f4e1b5bdc::t_ca3f54519f7733 104,111,494-498,503-505
+  s_01674f4e1b5bdc::t_efe1ca9e8a5d71 265-266
+  s_01674f4e1b5bdc::t_f476e0a62cbba5 445-451
+  s_01674f4e1b5bdc::t_019d490a3a243e 475-476
+  s_01674f4e1b5bdc::t_ea66e3b01f4b11 132-135,252,342-344,353-369,375,382-383
+visual-triage/research/expansion-2026-10-11/evidence/catalog-exa.json
+  s_01674f4e1b5bdc::t_fa09b5cf543090 1-99
+visual-triage/research/expansion-2026-10-11/evidence/catalog-terms.json
+  s_01674f4e1b5bdc::t_32683c66c62758 1-193
+visual-triage/tracks/ai_detection/protocol.json
+  s_01674f4e1b5bdc::t_c2e842cdb2065d 1-29
+visual-triage/research/expansion-2026-10-11/evidence/catalog-awesome-pin.json
+  s_01674f4e1b5bdc::t_920b2b034c54c8 1-6
+visual-triage/evidence/ai-expansion/genimage-readme.txt
+  s_01674f4e1b5bdc::t_12440af1bab08a 1
+visual-triage/tracks/quality/optimisation/candidates/4ee7068b384e61625c841482f5784419d26c80b08b0c495c160996289049a3e2/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_4159360a8337bf 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/dev.jsonl
+  s_01674f4e1b5bdc::t_a6ecff88e0759b 16-18
+  s_01674f4e1b5bdc::t_575a6ce5283546 12
+  s_01674f4e1b5bdc::t_18d440d4ecea97 15
+  s_01674f4e1b5bdc::t_1b3c20cd54b243 9-11
+  s_01674f4e1b5bdc::t_aa572cd43bae42 13-14
+  s_01674f4e1b5bdc::t_98fa2b1e416e98 19-21
+  s_01674f4e1b5bdc::t_e3586aaa7ed3b3 1-8,22-80
+visual-triage/BENCHMARKS.md
+  s_01674f4e1b5bdc::t_f0aff9a5b5b87a 1-3,66,68
+visual-triage/tracks/report.py
+  s_01674f4e1b5bdc::t_7ea4df16c8cf40 96,108
+  s_01674f4e1b5bdc::t_e81a6dac1ad812 92,279
+  s_01674f4e1b5bdc::t_00941964ac8700 22,51-53,149-153,162-165,250-259,268-272
+  s_01674f4e1b5bdc::t_b3084695790146 218-220,232
+  s_01674f4e1b5bdc::t_b1186f2abb1625 1-11,23-33,38,47-50,76-79,91,93,110-113,131,147,156,188-208,216-217,261-265,274-278,280-289
+  s_01674f4e1b5bdc::t_4fa48479687b0e 12-21,39-43,46,56-66,68-71,73-75,102-104,106,109,120-123,126-127,129-130,142-143,145-146,148,154-155,157-160,181,184-187,209-215,224-231,233-234,236
+  s_01674f4e1b5bdc::t_e24ac325dcd855 80-90,170-179,182-183
+  s_01674f4e1b5bdc::t_939dd83c22ecda 161,237-249,260,266-267,273
+  s_01674f4e1b5bdc::t_cafc39ab03036a 221-223
+  s_01674f4e1b5bdc::t_4bd8090e06ce5b 34-37,72,94-95,97-101,105,124,128,132-133,138-139,141
+  s_01674f4e1b5bdc::t_f0aff9a5b5b87a 134-137,140
+  s_01674f4e1b5bdc::t_9a120c74a8d3e2 107,117-119,125,144
+  s_01674f4e1b5bdc::t_2a4e01afc61577 114-116,235
+  s_01674f4e1b5bdc::t_819cf85b544a09 44-45,54-55,67
+  s_01674f4e1b5bdc::t_078564aebb05a6 166-169,180
+visual-triage/pyproject.toml
+  s_01674f4e1b5bdc::t_85dd042dfff709 13
+visual-triage/research/expansion-2026-10-11/evidence/metadata-spaq-fetch.txt
+  s_01674f4e1b5bdc::t_07da965ad2ca76 1-41
+visual-triage/cost_reservations.py
+  s_01674f4e1b5bdc::t_a77df926669c5a 1-135
+  s_01674f4e1b5bdc::t_22fdd1a8325603 136-163
+visual-triage/tracks/quality_v2/optimisation/candidates/14e93188935c44088737d7ce93b47e5c4dde58ff7eb58e2d157e73c2581d29aa/dev.jsonl
+  s_01674f4e1b5bdc::t_b557f908c004f1 76
+  s_01674f4e1b5bdc::t_9eaa43161c37fc 99
+  s_01674f4e1b5bdc::t_f542fad9cb946c 1-75,77-98,100
+visual-triage/research/expansion-2026-10-11/evidence/metadata-spaq-code-fetch.txt
+  s_01674f4e1b5bdc::t_6e93a204512125 1-24
+visual-triage/tracks/ai_detection_v2/optimisation/reflection.jsonl
+  s_01674f4e1b5bdc::t_a1e53f743bddb4 2
+  s_01674f4e1b5bdc::t_4455f70a2b086f 1,3-20
+visual-triage/tracks/ai_detection_v2/prompts/selected.json
+  s_01674f4e1b5bdc::t_a63e1c37090fe6 1-31
+visual-triage/tracks/ai_detection/prompts/selected.json
+  s_01674f4e1b5bdc::t_d2d2f4ead4072a 1-31
+visual-triage/tracks/ai_detection_v2/report/external.md
+  s_01674f4e1b5bdc::t_4be15ba858d735 16
+  s_01674f4e1b5bdc::t_ac0b63618f7099 1-15,17-18
+visual-triage/tracks/quality_v2/report/per-image.md
+  s_01674f4e1b5bdc::t_f506483a1caf69 1-206
+visual-triage/evidence/ai-expansion/synthclic-hub.txt
+  s_01674f4e1b5bdc::t_3ac38ccb68a3f4 1
+visual-triage/tracks/quality/optimisation/candidates/4ee7068b384e61625c841482f5784419d26c80b08b0c495c160996289049a3e2/prompt.json
+  s_01674f4e1b5bdc::t_4159360a8337bf 1-30
+visual-triage/tracks/ai_detection/final/baseline.jsonl
+  s_01674f4e1b5bdc::t_c73a754dc80048 2
+  s_01674f4e1b5bdc::t_7cc59c0f3c05f7 1,3-60
+visual-triage/evidence/ai-expansion/clic-2020-tasks.txt
+  s_01674f4e1b5bdc::t_f414692203893e 1-89
+visual-triage/evidence/ai-expansion/clic-license.txt
+  s_01674f4e1b5bdc::t_3ac38ccb68a3f4 1-89
+visual-triage/tracks/quality/optimisation/candidates/835e3e73285ac5830ec9315f51bc3fe5e1dcdae99971ed878abdea3c5e07c257/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_4159360a8337bf 1-7
+visual-triage/evidence/ai-expansion/native-audit.json
+  s_01674f4e1b5bdc::t_a6ecff88e0759b 1-4023
+visual-triage/evidence/ai-expansion/synthclic-validation-first.txt
+  s_01674f4e1b5bdc::t_37af9d86cd0cfa 1
+visual-triage/tests/test_tracks.py
+  s_01674f4e1b5bdc::t_72fc7b710f63c7 25-35,38-50,58-77,122-124,130,133-136,150-152,157-162,167-169,172-174,204-227,576
+  s_01674f4e1b5bdc::t_c3a4c95d861b27 411-416,436,438-440,444-454,460,467-471,473,475-477,484,543
+  s_01674f4e1b5bdc::t_f52ef6181ce970 248-259,274-279,281-287,289-322,325-327,339-347,539,546
+  s_01674f4e1b5bdc::t_9a120c74a8d3e2 323-324,368-374,387-390
+  s_01674f4e1b5bdc::t_2eaef7a6e352a4 375-386,391-410,417-426
+  s_01674f4e1b5bdc::t_819cf85b544a09 12,348-367
+  s_01674f4e1b5bdc::t_0e832368c09d8e 431-435,437,441-443,455-459,461-466,472,474,478-483,485
+  s_01674f4e1b5bdc::t_88dec8ef98342b 260-273,280,288,328-338
+  s_01674f4e1b5bdc::t_3e3674f4d102a5 545,563-564,577-588
+  s_01674f4e1b5bdc::t_a594766bea4753 486-528,548-559
+  s_01674f4e1b5bdc::t_cf60124cc08c89 427-430
+  s_01674f4e1b5bdc::t_8b0998ab5febc7 1-11,13-24,36-37,51-57,78-121,125-129,131-132,137-149,153-156,163-166,170-171,175-203,228-247
+  s_01674f4e1b5bdc::t_f238edb8d1a1aa 529-531,536-538
+  s_01674f4e1b5bdc::t_e3b566f90c104e 540-542
+  s_01674f4e1b5bdc::t_db7d14569b83c1 544
+  s_01674f4e1b5bdc::t_2ced7a91a35640 547
+  s_01674f4e1b5bdc::t_dc4ae905385657 560-562
+  s_01674f4e1b5bdc::t_3a7a4312c90d49 565-567,573-575
+  s_01674f4e1b5bdc::t_52e38df43e8cc4 532-535,568-572
+visual-triage/tracks/ai_detection_v2/report/metadata-report.md
+  s_01674f4e1b5bdc::t_4be15ba858d735 5,7-10,12,14-21
+  s_01674f4e1b5bdc::t_ac0b63618f7099 1-4,6,11,13,22-29
+visual-triage/tracks/quality/prompt-selection.json
+  s_01674f4e1b5bdc::t_577dfa5f2d011e 1-29
+visual-triage/tracks/ai_detection_v2/final/baseline.jsonl
+  s_01674f4e1b5bdc::t_e96292ca3b7868 22
+  s_01674f4e1b5bdc::t_7789dcb660cc41 19-21
+  s_01674f4e1b5bdc::t_86592985329088 23-25
+  s_01674f4e1b5bdc::t_a6a81e849fa101 1-18,26-80
+visual-triage/evidence/ai-expansion/dda-card.txt
+  s_01674f4e1b5bdc::t_12440af1bab08a 1-31
+visual-triage/research/expansion-2026-10-11/evidence/quality-acquisition-audit.json
+  s_01674f4e1b5bdc::t_9aa7f0234da957 1-28
+visual-triage/tracks/ai_detection/dataset.json
+  s_01674f4e1b5bdc::t_ed01180d5081a2 1,3-6,11-22,25-66,113-154,157-198,201-242,245-286,289-330,338,340-345,347-351,358-374,378,382,384-389,391-395,400,402-405,409-412,415-418,421-462,465-506,509-550,558-565,567-571,574-575,578-638,641-682,690,692-697,699-703,708,710-713,717-720,723-726,729-770,773-814,818,822,824-829,831-835,838-840,842-858,866,868-873,875-879,886-889,893-896,899-902,906,910,912-917,919-923,926-927,930-946,954,956-961,963-967,972,974-977,981-984,987-990,998,1000-1005,1007-1011,1016,1018-1021,1025-1028,1031-1034,1042,1045-1049,1051-1055,1062-1065,1069-1072,1075-1078,1082,1086,1088-1093,1095-1099,1102-1103,1106-1122,1130-1137,1139-1143,1146-1148,1150-1166,1174,1176-1181,1183-1187,1194-1210,1213-1254,1257-1298,1306,1308-1313,1315-1319,1322-1323,1326-1342,1350,1353-1357,1359-1363,1370-1373,1377-1380,1383-1386,1394,1397-1401,1403-1407,1410-1412,1414-1430,1438-1445,1447-1451,1454-1456,1458-1474,1482,1484-1489,1491-1495,1498-1500,1502-1518,1521-1562,1565-1606,1609-1650,1653-1694,1697-1738,1741-1826,1829-1870,1878,1880-1885,1887-1891,1894-1896,1898-1914,1918,1922,1924-1929,1931-1935,1983,1986-2002,2010,2012-2017,2019-2023,2028,2030-2033,2037-2040,2043-2046,2054-2061,2063-2067,2070-2071,2074-2090,2094,2142-2149,2151-2155,2158-2160,2162-2178,2181-2222,2225-2266,2269-2310,2318,2321-2325,2327-2331,2338-2354,2358,2362,2364-2369,2371-2375,2382-2398,2406-2413,2415-2419,2422-2424,2426-2442,2446,2450-2457,2459-2463,2466-2468,2470-2486,2490,2494,2496-2501,2503-2507,2512,2514-2517,2521-2524,2527-2530,2538-2545,2547-2551,2554-2556,2558-2574,2582-2589,2591-2595,2602-2605,2609-2612,2615-2618,2622,2628-2633,2635-2639,2642-2644,2646-2662,2666,2670-2677,2679-2683,2686-2688,2690-2706,2714-2721,2723-2727,2730-2732,2734-2750,2758-2765,2767-2771,2774-2776,2778-2794,2802-2809,2811-2815,2818-2820,2822-2838,2846-2853,2855-2859,2862-2864,2866-2882,2886,2890-2897,2899-2903,2906-2908,2910-2926,2930,2934,2937-2941,2943-2947,2954-2970,2974,2978-2985,2987-2991,2994-2996,2998-3014,3017-3058,3061-3102,3105-3146,3149-3190,3194-3234,3238,3242,3244-3249,3251-3255,3262-3265,3269-3272,3275-3278,3286-3293,3295-3299,3304,3306-3309,3313-3316,3319-3322,3330,3332-3337,3339-3343,3346-3347,3350-3366,3370,3374,3376-3381,3383-3387,3394-3410,3418,3420-3425,3427-3431,3438-3454,3457-3498,3501-3542,3545-3586,3594,3596-3601,3603-3607,3610-3612,3614-3630,3638-3645,3647-3651,3656,3658-3661,3665-3668,3671-3674,3682,3684-3689,3691-3695,3698-3699,3702-3718,3721-3762,3765-3806,3810,3814-3821,3823-3827,3834-3837,3841-3844,3847-3850,3858-3865,3867-3871,3874-3875,3878-3894,3898,3902,3904-3909,3911-3915,3918-3920,3922-3938,3946,3948-3953,3955-3959,3966-3982,3986,3990,3992-3997,3999-4003,4010-4026,4029-4070,4074,4078-4085,4087-4091,4094-4096,4098-4114,4254-4261,4263-4267,4270-4272,4274-4290,4293-4334,4342-4349,4351-4355,4362-4365,4369-4372,4375-4378,4386,4388-4393,4395-4399,4404,4406-4409,4413-4416,4419-4422,4426,4430-4437,4439-4443,4446-4448,4450-4466,4474-4481,4483-4487,4492,4494-4497,4501-4504,4507-4510,4513-4554,4557-4598,4601-4686,4689-4730,4733-4774,4777-4862,4865-4906,4909-4994,4997-5038,5042,5046,5048-5053,5055-5059,5062-5063,5066-5082,5090,5092-5097,5099-5103,5110-5126,5130,5134-5135,5137-5141,5143-5147,5150-5152,5154-5170,5178,5180-5185,5187-5191,5196,5198-5201,5205-5208,5211-5214,5218,5222,5224-5229,5231-5235,5238-5239,5242-5258,5266,5268-5273,5275-5279,5282-5283,5286-5303
+  s_01674f4e1b5bdc::t_106ea8490cfa1c 2,7-10,23-24,67-112,155-156,199-200,243-244,287-288,331-337,339,346,352-357,375-377,379-381,383,390,396-399,401,406-408,413-414,419-420,463-464,507-508,551-557,566,572-573,576-577,639-640,683-689,691,698,704-707,709,714-716,721-722,727-728,771-772,815-817,819-821,823,830,836-837,841,859-865,867,874,880-885,890-892,897-898,903-905,907-909,911,918,924-925,928-929,947-953,955,962,968-971,973,978-980,985-986,991-997,999,1006,1012-1015,1017,1022-1024,1029-1030,1035-1041,1043-1044,1050,1056-1061,1066-1068,1073-1074,1079-1081,1083-1085,1087,1094,1100-1101,1104-1105,1123-1129,1138,1144-1145,1149,1167-1173,1175,1182,1188-1193,1211-1212,1255-1256,1299-1305,1307,1314,1320-1321,1324-1325,1343-1349,1351-1352,1358,1364-1369,1374-1376,1381-1382,1387-1393,1395-1396,1402,1408-1409,1413,1431-1437,1446,1452-1453,1457,1475-1481,1483,1490,1496-1497,1501,1519-1520,1563-1564,1607-1608,1651-1652,1695-1696,1739-1740,1827-1828,1871-1877,1879,1886,1892-1893,1897,1915-1917,1919-1921,1923,1930,1936-1982,1984-1985,2003-2009,2011,2018,2024-2027,2029,2034-2036,2041-2042,2047-2053,2062,2068-2069,2072-2073,2091-2093,2095-2141,2150,2156-2157,2161,2179-2180,2223-2224,2267-2268,2311-2317,2319-2320,2326,2332-2337,2355-2357,2359-2361,2363,2370,2376-2381,2399-2405,2414,2420-2421,2425,2443-2445,2447-2449,2458,2464-2465,2469,2487-2489,2491-2493,2495,2502,2508-2511,2513,2518-2520,2525-2526,2531-2537,2546,2552-2553,2557,2575-2581,2590,2596-2601,2606-2608,2613-2614,2619-2621,2623-2627,2634,2640-2641,2645,2663-2665,2667-2669,2678,2684-2685,2689,2707-2713,2722,2728-2729,2733,2751-2757,2766,2772-2773,2777,2795-2801,2810,2816-2817,2821,2839-2845,2854,2860-2861,2865,2883-2885,2887-2889,2898,2904-2905,2909,2927-2929,2931-2933,2935-2936,2942,2948-2953,2971-2973,2975-2977,2986,2992-2993,2997,3015-3016,3059-3060,3103-3104,3147-3148,3191-3193,3235-3237,3239-3241,3243,3250,3256-3261,3266-3268,3273-3274,3279-3285,3294,3300-3303,3305,3310-3312,3317-3318,3323-3329,3331,3338,3344-3345,3348-3349,3367-3369,3371-3373,3375,3382,3388-3393,3411-3417,3419,3426,3432-3437,3455-3456,3499-3500,3543-3544,3587-3593,3595,3602,3608-3609,3613,3631-3637,3646,3652-3655,3657,3662-3664,3669-3670,3675-3681,3683,3690,3696-3697,3700-3701,3719-3720,3763-3764,3807-3809,3811-3813,3822,3828-3833,3838-3840,3845-3846,3851-3857,3866,3872-3873,3876-3877,3895-3897,3899-3901,3903,3910,3916-3917,3921,3939-3945,3947,3954,3960-3965,3983-3985,3987-3989,3991,3998,4004-4009,4027-4028,4071-4073,4075-4077,4086,4092-4093,4097,4115-4253,4262,4268-4269,4273,4291-4292,4335-4341,4350,4356-4361,4366-4368,4373-4374,4379-4385,4387,4394,4400-4403,4405,4410-4412,4417-4418,4423-4425,4427-4429,4438,4444-4445,4449,4467-4473,4482,4488-4491,4493,4498-4500,4505-4506,4511-4512,4555-4556,4599-4600,4687-4688,4731-4732,4775-4776,4863-4864,4907-4908,4995-4996,5039-5041,5043-5045,5047,5054,5060-5061,5064-5065,5083-5089,5091,5098,5104-5109,5127-5129,5131-5133,5136,5142,5148-5149,5153,5171-5177,5179,5186,5192-5195,5197,5202-5204,5209-5210,5215-5217,5219-5221,5223,5230,5236-5237,5240-5241,5259-5265,5267,5274,5280-5281,5284-5285
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e6ab07c1921d65cf06a30c1a32a70890e0515e5372acf8171e0055988f1a3ca5/prompt.json
+  s_01674f4e1b5bdc::t_a1e53f743bddb4 1-31
+visual-triage/research/expansion-2026-10-11/evidence/gepa-search.json
+  s_01674f4e1b5bdc::t_62bde0eca62e3b 1-41
+visual-triage/bench_runner.py
+  s_01674f4e1b5bdc::t_79ab1b655a6fbf 152-160,163-167,176-177,183-190,214-218,259
+  s_01674f4e1b5bdc::t_d4453068151851 127-131,237-247
+  s_01674f4e1b5bdc::t_a77df926669c5a 126
+  s_01674f4e1b5bdc::t_7a958efa0f632e 161-162
+visual-triage/research/expansion-2026-10-11/cost-recovery.md
+  s_01674f4e1b5bdc::t_ec4efdf0d0ca70 1-11
+visual-triage/tracks/quality_v2/report/metadata-report.json
+  s_01674f4e1b5bdc::t_f506483a1caf69 1-20904
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e244c9dcb71de0481d0faaa3683219804df5828941449c94be023cc24a1a4c21/train.jsonl
+  s_01674f4e1b5bdc::t_9dd2da12096059 1
+  s_01674f4e1b5bdc::t_9dc187184be92d 2-4
+  s_01674f4e1b5bdc::t_191fe7194591b5 5-16
+visual-triage/tracks/ai_detection_v2/report/per-image.md
+  s_01674f4e1b5bdc::t_ac0b63618f7099 1-166
+visual-triage/tracks/ai_detection_v2/prompt-selection.json
+  s_01674f4e1b5bdc::t_a63e1c37090fe6 1-29
+visual-triage/tracks/quality/optimisation/candidates/835e3e73285ac5830ec9315f51bc3fe5e1dcdae99971ed878abdea3c5e07c257/dev.jsonl
+  s_01674f4e1b5bdc::t_655237cfc85ac5 13
+  s_01674f4e1b5bdc::t_4159360a8337bf 39-40
+  s_01674f4e1b5bdc::t_40b095ad3bb2e9 1-12,14-38
+visual-triage/tracks/ai_detection_v2/protocol.json
+  s_01674f4e1b5bdc::t_eabf666bb9fd61 1-34
+visual-triage/tracks/quality_v2/prompt-selection.json
+  s_01674f4e1b5bdc::t_310b51a89721ed 1-29
+visual-triage/tracks/OPTIMISATION.md
+  s_01674f4e1b5bdc::t_b08c00581e098f 3
+  s_01674f4e1b5bdc::t_728fb03cd165dc 13,15,29
+  s_01674f4e1b5bdc::t_943bda3e9ea5d9 5-8,23
+  s_01674f4e1b5bdc::t_81ffe2fa7d4cce 19
+  s_01674f4e1b5bdc::t_18d440d4ecea97 1,9,11,17,21,25,27,31-51
+  s_01674f4e1b5bdc::t_6a44e12c98f0bd 2,4,10,12,14,16,18,20,22,24,26,28,30
+visual-triage/tracks/quality/prompts/baseline.json
+  s_01674f4e1b5bdc::t_573ba69912b384 1-30
+visual-triage/research/expansion-2026-10-11/evidence/catalog-awesome-readme.md
+  s_01674f4e1b5bdc::t_920b2b034c54c8 1-262
+visual-triage/tracks/quality/build_dataset.py
+  s_01674f4e1b5bdc::t_1bc3b0c1a002ad 120,122,146-148
+  s_01674f4e1b5bdc::t_80153762ee1e65 1-104,106-119,123-145,149-184,186-197,199-215,217-223,225-233,235-241
+  s_01674f4e1b5bdc::t_bac786565ae5df 121
+  s_01674f4e1b5bdc::t_ec297e50ced8f5 105,185,198,216,224,234
+visual-triage/tracks/quality_v2/build_dataset.py
+  s_01674f4e1b5bdc::t_3eac6be761f536 1-9,11-22,24,26-32,34-44,99-110,114-117,128-138,141-147,149-168,174,224,235-236,264-271
+  s_01674f4e1b5bdc::t_ed5c35124a7041 25,45-48,50-52,56-83,86-98,192-200
+  s_01674f4e1b5bdc::t_6811f002a2f52c 23,139-140,148,169-173,250-255
+  s_01674f4e1b5bdc::t_a150cae53e47e1 49,53-55
+  s_01674f4e1b5bdc::t_b89c0056717447 84-85,111-113,118-127,175-191,201-223,225-234,237-249,256-263
+  s_01674f4e1b5bdc::t_d54762703c9ef2 10,33
+visual-triage/tracks/ai_detection/report/report.json
+  s_01674f4e1b5bdc::t_5d96d0326bdca9 1-8237
+visual-triage/evidence/ai-expansion/commfor-eval-splits.txt
+  s_01674f4e1b5bdc::t_60305319da04a3 1
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/4cefc2b777aab1c84d481d92ca6fbe53d02da8ecd4f49a08c7cb1132d9741d50/train.jsonl
+  s_01674f4e1b5bdc::t_a1e53f743bddb4 18-32
+  s_01674f4e1b5bdc::t_016a2a0fbd5cff 1-17,33-70
+visual-triage/research/expansion-2026-10-11/evidence/final-audit-baseline.json
+  s_01674f4e1b5bdc::t_7f44be6774a349 1-14
+visual-triage/tracks/quality/final/baseline.jsonl
+  s_01674f4e1b5bdc::t_d1128c04ba9dc8 60
+  s_01674f4e1b5bdc::t_2a9d08b7e3dbcf 28-51
+  s_01674f4e1b5bdc::t_88dec8ef98342b 27
+  s_01674f4e1b5bdc::t_8995723d4aa5fe 1-26,52-59,61-80
+visual-triage/research/expansion-2026-10-11/evidence/metadata-evidence-sha256.json
+  s_01674f4e1b5bdc::t_f7b21db76b7612 1-18
+visual-triage/tracks/quality_v2/evidence/cost-recovery.json
+  s_01674f4e1b5bdc::t_4aebcd99934484 1-53
+visual-triage/evidence/ai-expansion/clic-mobile-license.txt
+  s_01674f4e1b5bdc::t_ff1e24d2d1f139 1-122
+visual-triage/evidence/ai-expansion/clic-native-filelists.json
+  s_01674f4e1b5bdc::t_716f3d15142484 1-2195
+visual-triage/evidence/ai-expansion/clic-professional-license.txt
+  s_01674f4e1b5bdc::t_82b3ca58732855 1-6
+visual-triage/tracks/ai_detection/final/baseline.jsonl.meta.json
+  s_01674f4e1b5bdc::t_84dd7e1a471217 1-7
+visual-triage/tracks/ai_detection/final/selected.jsonl
+  s_01674f4e1b5bdc::t_741879f2477ffa 1-60
+visual-triage/tracks/ai_detection/optimisation/candidates/054e8c6ce64fb2a620e34c6ddf19446594e2a3edfa2feb562f2e711b090809d9/dev.jsonl
+  s_01674f4e1b5bdc::t_3a1c6d3b3367de 1-30
+visual-triage/tracks/ai_detection/optimisation/candidates/054e8c6ce64fb2a620e34c6ddf19446594e2a3edfa2feb562f2e711b090809d9/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_495393cd1a1de7 1-7
+visual-triage/tracks/ai_detection/optimisation/candidates/054e8c6ce64fb2a620e34c6ddf19446594e2a3edfa2feb562f2e711b090809d9/prompt.json
+  s_01674f4e1b5bdc::t_d8ac12dd44a325 1-31
+visual-triage/tracks/ai_detection/optimisation/candidates/054e8c6ce64fb2a620e34c6ddf19446594e2a3edfa2feb562f2e711b090809d9/train.jsonl
+  s_01674f4e1b5bdc::t_c2f7e2e1c44e23 1-8
+visual-triage/tracks/ai_detection/optimisation/candidates/054e8c6ce64fb2a620e34c6ddf19446594e2a3edfa2feb562f2e711b090809d9/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_2c45e76ff7e1d0 1-7
+visual-triage/tracks/ai_detection/optimisation/candidates/6917a61b8bfd8dc9d3f881d98b2673f134846582b7f4e25e4d520fa0dfb30ca8/prompt.json
+  s_01674f4e1b5bdc::t_740544cc55b004 1-31
+visual-triage/tracks/ai_detection/optimisation/candidates/6917a61b8bfd8dc9d3f881d98b2673f134846582b7f4e25e4d520fa0dfb30ca8/train.jsonl
+  s_01674f4e1b5bdc::t_0fb8e6f13388d1 1-8
+visual-triage/tracks/ai_detection/optimisation/candidates/6917a61b8bfd8dc9d3f881d98b2673f134846582b7f4e25e4d520fa0dfb30ca8/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_eff8fe58eeb9a1 1-7
+visual-triage/tracks/ai_detection/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/dev.jsonl
+  s_01674f4e1b5bdc::t_7f1ce7f2201696 1-30
+visual-triage/tracks/ai_detection/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_f147cb0847dd58 1-7
+visual-triage/tracks/ai_detection/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/prompt.json
+  s_01674f4e1b5bdc::t_dc599f9b95b8e5 1-31
+visual-triage/tracks/ai_detection/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_056a3cf36b9678 1-7
+visual-triage/tracks/ai_detection/optimisation/candidates/eb97e637df4716da5f96b9185a465a4bfa71a3457a631d8c9bd5bade0f41ed0c/prompt.json
+  s_01674f4e1b5bdc::t_2d1253cf44ce49 1-31
+visual-triage/tracks/ai_detection/optimisation/candidates/eb97e637df4716da5f96b9185a465a4bfa71a3457a631d8c9bd5bade0f41ed0c/train.jsonl
+  s_01674f4e1b5bdc::t_dbacb21286bbf5 1-8
+visual-triage/tracks/ai_detection/optimisation/candidates/eb97e637df4716da5f96b9185a465a4bfa71a3457a631d8c9bd5bade0f41ed0c/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_1f935fd00c6e7e 1-7
+visual-triage/tracks/ai_detection/optimisation/reflection.jsonl
+  s_01674f4e1b5bdc::t_55277c797eda7f 1-3
+visual-triage/tracks/ai_detection/optimisation/run.json
+  s_01674f4e1b5bdc::t_32d8dfbcab839a 1-9
+visual-triage/tracks/ai_detection/optimisation/summary.json
+  s_01674f4e1b5bdc::t_1d13a467cde6e0 1-321
+visual-triage/tracks/ai_detection_v2/ablation-run.json
+  s_01674f4e1b5bdc::t_0f889282172e72 1-174
+visual-triage/tracks/ai_detection_v2/dataset.json
+  s_01674f4e1b5bdc::t_d6c0a19271bec6 1-19213
+visual-triage/tracks/ai_detection_v2/final-metadata/test.jsonl
+  s_01674f4e1b5bdc::t_0d520ef841a1c3 1-80
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/18d4dd947f549b4f960595b9e1803436b16b659d7c74b6f38eb6118e5f82d4ac/prompt.json
+  s_01674f4e1b5bdc::t_05f8be19e9c577 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/18d4dd947f549b4f960595b9e1803436b16b659d7c74b6f38eb6118e5f82d4ac/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_e8a76cb1c51263 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/21fbf536ab471ee4b37080228e040bb18d4f914ce398b39860cb8f00f69bc45b/prompt.json
+  s_01674f4e1b5bdc::t_6a6b1d6a4f9af6 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/21fbf536ab471ee4b37080228e040bb18d4f914ce398b39860cb8f00f69bc45b/train.jsonl
+  s_01674f4e1b5bdc::t_72f1623cda2991 1-16
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/21fbf536ab471ee4b37080228e040bb18d4f914ce398b39860cb8f00f69bc45b/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_fcfbe6e2a53cdc 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/259863bb1f451d3ab7abb5fcc61f49811bf7e1aacb8ace1359fb56e9023c5145/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_e4a2c71b523dfe 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/259863bb1f451d3ab7abb5fcc61f49811bf7e1aacb8ace1359fb56e9023c5145/prompt.json
+  s_01674f4e1b5bdc::t_fc29bb928b9b38 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/259863bb1f451d3ab7abb5fcc61f49811bf7e1aacb8ace1359fb56e9023c5145/train.jsonl
+  s_01674f4e1b5bdc::t_7b830f800f84a4 1-32
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/259863bb1f451d3ab7abb5fcc61f49811bf7e1aacb8ace1359fb56e9023c5145/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_136a22f0b5323a 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/27d2d01c2eade52f1a268a787d537e09006a97ecf28ff040ab6000e0c37aafb6/prompt.json
+  s_01674f4e1b5bdc::t_d738f72cdfdb5c 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/27d2d01c2eade52f1a268a787d537e09006a97ecf28ff040ab6000e0c37aafb6/train.jsonl
+  s_01674f4e1b5bdc::t_737ab07a2e9cc5 1-16
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/27d2d01c2eade52f1a268a787d537e09006a97ecf28ff040ab6000e0c37aafb6/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_816f9eee0a064c 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/52a1f8a5b993a520444c6fafb41a4f625eee61f622e77d370ca1cae7a1f851c1/prompt.json
+  s_01674f4e1b5bdc::t_7b6aa65a84acde 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/52a1f8a5b993a520444c6fafb41a4f625eee61f622e77d370ca1cae7a1f851c1/train.jsonl
+  s_01674f4e1b5bdc::t_9efa7779b55bea 1-16
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/52a1f8a5b993a520444c6fafb41a4f625eee61f622e77d370ca1cae7a1f851c1/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_8fcfaa88f03603 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/74694b8f8425af93fa6dd71b853180c704c21e464a006d6a03496c9928530515/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_ac31f6b7b55d04 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/74694b8f8425af93fa6dd71b853180c704c21e464a006d6a03496c9928530515/prompt.json
+  s_01674f4e1b5bdc::t_e138c40e73d129 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/74694b8f8425af93fa6dd71b853180c704c21e464a006d6a03496c9928530515/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_9cb888b2cac927 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/94a5c732af379de6f605d20819f578399f8d3ab8a5bc22c59c15fe64357ccd3b/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_13490221284aff 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/94a5c732af379de6f605d20819f578399f8d3ab8a5bc22c59c15fe64357ccd3b/prompt.json
+  s_01674f4e1b5bdc::t_8e7100a89067dd 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/94a5c732af379de6f605d20819f578399f8d3ab8a5bc22c59c15fe64357ccd3b/train.jsonl
+  s_01674f4e1b5bdc::t_739ef42333e564 1-16
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/94a5c732af379de6f605d20819f578399f8d3ab8a5bc22c59c15fe64357ccd3b/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_50f7e32964b529 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/9755901c8f7a941df056a29a15fa62516cbc467b13d58f4066dd7ee72394c8b8/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_077cb2749d946b 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/d4c37392ce38daa2d29d782ea6108fd761948a4b8b428197c8afed0ff2d17a51/prompt.json
+  s_01674f4e1b5bdc::t_6bbd7911be961e 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/d4c37392ce38daa2d29d782ea6108fd761948a4b8b428197c8afed0ff2d17a51/train.jsonl
+  s_01674f4e1b5bdc::t_ea550d1f6b67a4 1-16
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/d4c37392ce38daa2d29d782ea6108fd761948a4b8b428197c8afed0ff2d17a51/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_a65247709fd0de 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e9afecd7005781926f6e4717d89808f79b13fa81319771b70c67d43ff62f2095/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_1ddb10fedc2f67 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e9afecd7005781926f6e4717d89808f79b13fa81319771b70c67d43ff62f2095/prompt.json
+  s_01674f4e1b5bdc::t_dc38a91b0f60e4 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e9afecd7005781926f6e4717d89808f79b13fa81319771b70c67d43ff62f2095/train.jsonl
+  s_01674f4e1b5bdc::t_10840224d28afa 1-32
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e9afecd7005781926f6e4717d89808f79b13fa81319771b70c67d43ff62f2095/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_d2d05134d0aaaf 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/f8093506fb144cd394bbeb23ebc31c272b9912134a11a55ed4d600d694b49552/dev.jsonl
+  s_01674f4e1b5bdc::t_96f315ef41bb76 1-80
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/f8093506fb144cd394bbeb23ebc31c272b9912134a11a55ed4d600d694b49552/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_1115792c954803 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/f8093506fb144cd394bbeb23ebc31c272b9912134a11a55ed4d600d694b49552/prompt.json
+  s_01674f4e1b5bdc::t_173d45df25e170 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/f8093506fb144cd394bbeb23ebc31c272b9912134a11a55ed4d600d694b49552/train.jsonl
+  s_01674f4e1b5bdc::t_fcddeb923d792d 1-16
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/f8093506fb144cd394bbeb23ebc31c272b9912134a11a55ed4d600d694b49552/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_08b688fa077c20 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/fc92dcbd5c64c98de036f2d63f4629c50509afe543303c80b55b172cbfc3fbbc/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_628c7851888ec1 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/fc92dcbd5c64c98de036f2d63f4629c50509afe543303c80b55b172cbfc3fbbc/train.jsonl
+  s_01674f4e1b5bdc::t_9ce93ad8652fb4 1-32
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/fd4a1e6d7ced09ddfaa8cf89d2d597b1471f9d7bd7c1755046135f64e175115d/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_4ea7592dcd6ee7 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/fd4a1e6d7ced09ddfaa8cf89d2d597b1471f9d7bd7c1755046135f64e175115d/prompt.json
+  s_01674f4e1b5bdc::t_f1aed74fb5e104 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/fd4a1e6d7ced09ddfaa8cf89d2d597b1471f9d7bd7c1755046135f64e175115d/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_3bb820634f5f04 1-7
+visual-triage/tracks/quality/evidence/acquisition-audit.json
+  s_01674f4e1b5bdc::t_0fc3ca3e499327 1-9
+visual-triage/tracks/quality/evidence/dmos.csv
+  s_01674f4e1b5bdc::t_9883587efa930f 1-10126
+visual-triage/tracks/quality/evidence/hf-dataset.json
+  s_01674f4e1b5bdc::t_3f9e14e2b4abc4 1
+visual-triage/tracks/quality/evidence/osf-dmos.json
+  s_01674f4e1b5bdc::t_b8b07cd9539337 1
+visual-triage/tracks/quality/evidence/osf-license.json
+  s_01674f4e1b5bdc::t_e21bee5c3c7d63 1
+visual-triage/tracks/quality/final/baseline.jsonl.meta.json
+  s_01674f4e1b5bdc::t_518ec431e732a5 1-7
+visual-triage/tracks/quality/optimisation/candidates/2a5b26720022cb0c0f372e0c68c01db4bd420a14d73c88eba5fc3db41ddc4203/prompt.json
+  s_01674f4e1b5bdc::t_c49aa36fb852cc 1-30
+visual-triage/tracks/quality/optimisation/candidates/2a5b26720022cb0c0f372e0c68c01db4bd420a14d73c88eba5fc3db41ddc4203/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_234a2af7bd932f 1-7
+visual-triage/tracks/quality/optimisation/candidates/4ee7068b384e61625c841482f5784419d26c80b08b0c495c160996289049a3e2/train.jsonl
+  s_01674f4e1b5bdc::t_8b61c81851b7de 1-8
+visual-triage/tracks/quality/optimisation/candidates/835e3e73285ac5830ec9315f51bc3fe5e1dcdae99971ed878abdea3c5e07c257/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_71033c363227ac 1-7
+visual-triage/tracks/quality/optimisation/candidates/835e3e73285ac5830ec9315f51bc3fe5e1dcdae99971ed878abdea3c5e07c257/prompt.json
+  s_01674f4e1b5bdc::t_3de17ed7b9d647 1-30
+visual-triage/tracks/quality/optimisation/run.json
+  s_01674f4e1b5bdc::t_e488f180ff6e8d 1-9
+visual-triage/tracks/quality/optimisation/summary.json
+  s_01674f4e1b5bdc::t_8b26eb9c2aa5e5 1-376
+visual-triage/tracks/quality/selection.json
+  s_01674f4e1b5bdc::t_235f03801717ce 1-1446
+visual-triage/tracks/quality_v2/ablation-run.json
+  s_01674f4e1b5bdc::t_9cf2062ccc0cfd 1-113
+visual-triage/tracks/quality_v2/final/baseline.jsonl.meta.json
+  s_01674f4e1b5bdc::t_0a2fc2c2e0fd43 1-7
+visual-triage/tracks/quality_v2/final/selected.jsonl.meta.json
+  s_01674f4e1b5bdc::t_2a3bee6ebfde88 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/14e93188935c44088737d7ce93b47e5c4dde58ff7eb58e2d157e73c2581d29aa/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_8dcf4364944a02 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/14e93188935c44088737d7ce93b47e5c4dde58ff7eb58e2d157e73c2581d29aa/prompt.json
+  s_01674f4e1b5bdc::t_cc2af920038a5b 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/14e93188935c44088737d7ce93b47e5c4dde58ff7eb58e2d157e73c2581d29aa/train.jsonl
+  s_01674f4e1b5bdc::t_68ba7bfa1eca40 1-8
+visual-triage/tracks/quality_v2/optimisation/candidates/14e93188935c44088737d7ce93b47e5c4dde58ff7eb58e2d157e73c2581d29aa/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_1f069e33096819 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/4c51511024401bd9e93a68e8f8d33f42361c5a8e076bf530c01100d069d2786b/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_0c138b27b66acc 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/4c51511024401bd9e93a68e8f8d33f42361c5a8e076bf530c01100d069d2786b/prompt.json
+  s_01674f4e1b5bdc::t_80bdef823a526b 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/4c51511024401bd9e93a68e8f8d33f42361c5a8e076bf530c01100d069d2786b/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_5906da3bbbfb6f 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/7a71a33e8a0dfc6a0cfc723bc35343e8e50e18edea860a66a4540f1daf02858f/dev.jsonl
+  s_01674f4e1b5bdc::t_eecdffd1abfee0 1-100
+visual-triage/tracks/quality_v2/optimisation/candidates/7a71a33e8a0dfc6a0cfc723bc35343e8e50e18edea860a66a4540f1daf02858f/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_adf41e4a2dd7ef 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/7a71a33e8a0dfc6a0cfc723bc35343e8e50e18edea860a66a4540f1daf02858f/prompt.json
+  s_01674f4e1b5bdc::t_f0b285cd576158 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/7a71a33e8a0dfc6a0cfc723bc35343e8e50e18edea860a66a4540f1daf02858f/train.jsonl
+  s_01674f4e1b5bdc::t_b1651a44079494 1-8
+visual-triage/tracks/quality_v2/optimisation/candidates/7a71a33e8a0dfc6a0cfc723bc35343e8e50e18edea860a66a4540f1daf02858f/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_25343a018ed942 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/7d7531b2c845bc2ae4cf01e66b81dd36fe7131113e87f1d62417230992bbd8a6/prompt.json
+  s_01674f4e1b5bdc::t_0b705ed9576206 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/7d7531b2c845bc2ae4cf01e66b81dd36fe7131113e87f1d62417230992bbd8a6/train.jsonl
+  s_01674f4e1b5bdc::t_bb4ccc14f1f298 1-8
+visual-triage/tracks/quality_v2/optimisation/candidates/7d7531b2c845bc2ae4cf01e66b81dd36fe7131113e87f1d62417230992bbd8a6/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_afbf78d45d8790 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/9a11176770d48d15fdf362b4bd540d932b64a41811e1e4e8d3868bdf84a29815/prompt.json
+  s_01674f4e1b5bdc::t_d9ff8a46e8f510 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/9a11176770d48d15fdf362b4bd540d932b64a41811e1e4e8d3868bdf84a29815/train.jsonl
+  s_01674f4e1b5bdc::t_0ebc430ff8cbef 1-8
+visual-triage/tracks/quality_v2/optimisation/candidates/9a11176770d48d15fdf362b4bd540d932b64a41811e1e4e8d3868bdf84a29815/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_564305f8a05597 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/aa1c656c246a3100026c226904b71c9793dca7f75bfd71f021ed2aea95667bec/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_4608adae8270ee 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/aa1c656c246a3100026c226904b71c9793dca7f75bfd71f021ed2aea95667bec/prompt.json
+  s_01674f4e1b5bdc::t_36a799825209a7 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/aa1c656c246a3100026c226904b71c9793dca7f75bfd71f021ed2aea95667bec/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_3e29f338882847 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/b42008d7d4ee29c6c84d6e43ec93585a6629006e97f5bf5686f4c4d13e1c653b/dev.jsonl
+  s_01674f4e1b5bdc::t_af153454627e09 1-100
+visual-triage/tracks/quality_v2/optimisation/candidates/b42008d7d4ee29c6c84d6e43ec93585a6629006e97f5bf5686f4c4d13e1c653b/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_ac6d08622e9b8f 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/b42008d7d4ee29c6c84d6e43ec93585a6629006e97f5bf5686f4c4d13e1c653b/prompt.json
+  s_01674f4e1b5bdc::t_be4ecfaa8e5380 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/b42008d7d4ee29c6c84d6e43ec93585a6629006e97f5bf5686f4c4d13e1c653b/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_2ff097962d71eb 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/fa05ed2f71926fad612a30f31c4a412e494147a01b9907ff9329b884c6220119/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_36174a08568b30 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/fa05ed2f71926fad612a30f31c4a412e494147a01b9907ff9329b884c6220119/prompt.json
+  s_01674f4e1b5bdc::t_afe74322951cba 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/fa05ed2f71926fad612a30f31c4a412e494147a01b9907ff9329b884c6220119/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_9bb0d14307639c 1-7
+visual-triage/uv.lock
+  s_01674f4e1b5bdc::t_0ed05df970e994 138-146,346-348,362
+visual-triage/tracks/ai_detection_v2/final/baseline.jsonl.meta.json
+  s_67c876e4411962::t_208ed2c7c21c96 1-7
+visual-triage/tracks/ai_detection_v2/final/external-baseline.jsonl.meta.json
+  s_01674f4e1b5bdc::t_5bfa41308ae824 1-7
+visual-triage/tracks/ai_detection_v2/final/selected.jsonl
+  s_01674f4e1b5bdc::t_3b05003404e832 1-80
+visual-triage/tracks/ai_detection_v2/final/selected.jsonl.meta.json
+  s_01674f4e1b5bdc::t_2c23e437c0ad45 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/09735e989f3fd9e9028ac24a49b08072e047a86196a75b4742e1d781b28aae26/prompt.json
+  s_01674f4e1b5bdc::t_ad3caa889c06e5 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/09735e989f3fd9e9028ac24a49b08072e047a86196a75b4742e1d781b28aae26/train.jsonl
+  s_01674f4e1b5bdc::t_cc546c5257e49a 1-16
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/09735e989f3fd9e9028ac24a49b08072e047a86196a75b4742e1d781b28aae26/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_1a6eb8bdeeeb99 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/4cefc2b777aab1c84d481d92ca6fbe53d02da8ecd4f49a08c7cb1132d9741d50/dev.jsonl
+  s_67c876e4411962::t_253b1e1bed837d 1-80
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/4cefc2b777aab1c84d481d92ca6fbe53d02da8ecd4f49a08c7cb1132d9741d50/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_016dee4336c1ac 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/4cefc2b777aab1c84d481d92ca6fbe53d02da8ecd4f49a08c7cb1132d9741d50/prompt.json
+  s_83a001e040a274::t_abe687038d566d 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/4cefc2b777aab1c84d481d92ca6fbe53d02da8ecd4f49a08c7cb1132d9741d50/train.jsonl.meta.json
+  s_83a001e040a274::t_133bd80f869d09 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/80e3378508b101201661d3b2fad4898693860d07e3d1db8e210be39d5e57e78c/prompt.json
+  s_2b20118d89e001::t_3e7ca0df322f3f 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/80e3378508b101201661d3b2fad4898693860d07e3d1db8e210be39d5e57e78c/train.jsonl.meta.json
+  s_2b20118d89e001::t_4d18183713bd7e 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/81003679c75730414cc9ca995bccf4151ea32f813f3c3cb7b3af2b26a37ecd10/prompt.json
+  s_2b20118d89e001::t_3b5f5a1de7f288 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/81003679c75730414cc9ca995bccf4151ea32f813f3c3cb7b3af2b26a37ecd10/train.jsonl
+  s_2b20118d89e001::t_b0615f26089aa2 1-16
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/81003679c75730414cc9ca995bccf4151ea32f813f3c3cb7b3af2b26a37ecd10/train.jsonl.meta.json
+  s_2b20118d89e001::t_fe3ec536086c79 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/dev.jsonl.meta.json
+  s_67c876e4411962::t_3f870c25fa1523 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/prompt.json
+  s_67c876e4411962::t_01de3f47e84a76 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/train.jsonl
+  s_01674f4e1b5bdc::t_ade55fb12a7900 1-48
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/96bd168c03c0ecbad5c2467939aa976dfbea7127b825e19e95f7ca687f301d0b/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_baf52a862523db 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e244c9dcb71de0481d0faaa3683219804df5828941449c94be023cc24a1a4c21/dev.jsonl
+  s_01674f4e1b5bdc::t_32cc75beb37c05 1-80
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e244c9dcb71de0481d0faaa3683219804df5828941449c94be023cc24a1a4c21/dev.jsonl.meta.json
+  s_01674f4e1b5bdc::t_52db6493459d2b 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e244c9dcb71de0481d0faaa3683219804df5828941449c94be023cc24a1a4c21/prompt.json
+  s_01674f4e1b5bdc::t_046572c2a1fd05 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e244c9dcb71de0481d0faaa3683219804df5828941449c94be023cc24a1a4c21/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_01c7e63234a480 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/e6ab07c1921d65cf06a30c1a32a70890e0515e5372acf8171e0055988f1a3ca5/dev.jsonl.meta.json
+  s_2b20118d89e001::t_41c17249a3f9b1 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/fc92dcbd5c64c98de036f2d63f4629c50509afe543303c80b55b172cbfc3fbbc/prompt.json
+  s_2b20118d89e001::t_c566f53585cf48 1-31
+visual-triage/tracks/ai_detection_v2/optimisation/candidates/fc92dcbd5c64c98de036f2d63f4629c50509afe543303c80b55b172cbfc3fbbc/train.jsonl.meta.json
+  s_2b20118d89e001::t_733bb4c5ca572d 1-7
+visual-triage/tracks/ai_detection_v2/optimisation/run.json
+  s_67c876e4411962::t_ce59c83705f32f 1-9
+visual-triage/tracks/ai_detection_v2/optimisation/summary.json
+  s_01674f4e1b5bdc::t_f3f550586ff60a 1-1251
+visual-triage/tracks/quality_v2/optimisation/candidates/0eadbc722a1ff031b612771db0079a2e880852ad68dc5919d3610c12c039e198/dev.jsonl.meta.json
+  s_83a001e040a274::t_9697924203296e 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/0eadbc722a1ff031b612771db0079a2e880852ad68dc5919d3610c12c039e198/prompt.json
+  s_83a001e040a274::t_dce75b3a85930e 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/0eadbc722a1ff031b612771db0079a2e880852ad68dc5919d3610c12c039e198/train.jsonl.meta.json
+  s_83a001e040a274::t_d24f6184b9a6cd 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/45343538ae6e364a86214d310ec30ace1929c88f7fa107e331eaef7adaa7e2e2/prompt.json
+  s_77a387e49bf400::t_b6fac8caae212e 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/45343538ae6e364a86214d310ec30ace1929c88f7fa107e331eaef7adaa7e2e2/train.jsonl
+  s_83a001e040a274::t_a0694e8a95d502 1-8
+visual-triage/tracks/quality_v2/optimisation/candidates/45343538ae6e364a86214d310ec30ace1929c88f7fa107e331eaef7adaa7e2e2/train.jsonl.meta.json
+  s_77a387e49bf400::t_a8d000c8454ed7 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/65348069a697c562d833d6e526d92fc227b7ec3254080254ab7e2579e8988513/prompt.json
+  s_01674f4e1b5bdc::t_f3cff2226e4989 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/65348069a697c562d833d6e526d92fc227b7ec3254080254ab7e2579e8988513/train.jsonl
+  s_01674f4e1b5bdc::t_1c5997f6c77443 1-8
+visual-triage/tracks/quality_v2/optimisation/candidates/65348069a697c562d833d6e526d92fc227b7ec3254080254ab7e2579e8988513/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_ef4dc5be1ac0e5 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/739800b314f638a7eafda61492d9457cf2fafc4063a875c25e2a31198b449fdf/train.jsonl
+  s_01674f4e1b5bdc::t_ea368e1a863e2f 1-14
+visual-triage/tracks/quality_v2/optimisation/candidates/835e3e73285ac5830ec9315f51bc3fe5e1dcdae99971ed878abdea3c5e07c257/dev.jsonl.meta.json
+  s_487e7f64cd5bd6::t_9edb92fda9facc 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/835e3e73285ac5830ec9315f51bc3fe5e1dcdae99971ed878abdea3c5e07c257/prompt.json
+  s_487e7f64cd5bd6::t_47fdf349ce6164 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/835e3e73285ac5830ec9315f51bc3fe5e1dcdae99971ed878abdea3c5e07c257/train.jsonl.meta.json
+  s_01674f4e1b5bdc::t_eef9247fc41331 1-7
+visual-triage/tracks/quality_v2/optimisation/candidates/dcca9305b7d7843c40a735abc939c647bbe66a64970d4ba1f79e50dbdcbaef47/prompt.json
+  s_83a001e040a274::t_767cca770c96ad 1-30
+visual-triage/tracks/quality_v2/optimisation/candidates/dcca9305b7d7843c40a735abc939c647bbe66a64970d4ba1f79e50dbdcbaef47/train.jsonl
+  s_83a001e040a274::t_e11f25b731965e 1-8
+visual-triage/tracks/quality_v2/optimisation/candidates/dcca9305b7d7843c40a735abc939c647bbe66a64970d4ba1f79e50dbdcbaef47/train.jsonl.meta.json
+  s_83a001e040a274::t_236e11545778d3 1-7
+visual-triage/tracks/quality_v2/optimisation/reflection.jsonl
+  s_01674f4e1b5bdc::t_742dd09911d87a 1-20
+visual-triage/tracks/quality_v2/optimisation/run.json
+  s_487e7f64cd5bd6::t_374e0b8629babe 1-9
+visual-triage/tracks/quality_v2/optimisation/summary.json
+  s_01674f4e1b5bdc::t_3fca0b6e797f97 1-2454
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b70ecfdfa5f09d2de92e214d910ad2696b2f7834",
+  "prompts": {},
+  "sessions": {
+    "s_01674f4e1b5bdc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12b47-bf04-76f3-8675-5d67766468fd",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_2b20118d89e001": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12c84-6257-7c72-82ca-11bd30574ee4",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_487e7f64cd5bd6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12c90-c44c-7d82-b57e-f50084c28fa0",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_67c876e4411962": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12c9a-9461-7212-ab67-d96095f47ace",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_77a387e49bf400": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12c84-277e-7331-b251-66d90d0fb7c0",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_83a001e040a274": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12c83-ec18-7583-b570-ce17696da27d",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_9f6b4159c52b07": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12c83-79fa-76b0-b5f0-1a313a5e6803",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}

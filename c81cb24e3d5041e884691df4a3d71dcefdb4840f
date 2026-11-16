@@ -1,0 +1,41 @@
+visual-quality/docs/training/exa-results/visual-teachers-2026-09-27.json
+  s_1c39eca6a8bf5f::t_6a2ed954105e89 1-2082
+visual-quality/docs/training/synthetic-label-prompts.md
+  s_1c39eca6a8bf5f::t_5a7a7e69869190 1-125
+visual-quality/prompts/visual-rating-v1/system.txt
+  s_1c39eca6a8bf5f::t_5a7a7e69869190 1-9
+visual-quality/prompts/visual-rating-v1/joint.txt
+  s_1c39eca6a8bf5f::t_ac835532f796c2 1-45
+visual-quality/prompts/visual-rating-v1/technical-quality.txt
+  s_1c39eca6a8bf5f::t_5a7a7e69869190 1-21
+visual-quality/docs/README.md
+  s_1c39eca6a8bf5f::t_7f9119fb8cb961 21
+  s_1c39eca6a8bf5f::t_780bd4747cf527 20
+visual-quality/docs/training/synthetic-label-teachers.md
+  s_1c39eca6a8bf5f::t_6a2ed954105e89 106
+  s_1c39eca6a8bf5f::t_7f9119fb8cb961 64-65
+  s_1c39eca6a8bf5f::t_780bd4747cf527 1-63,66-105,107-126
+visual-quality/prompts/visual-rating-v1/response.schema.json
+  s_1c39eca6a8bf5f::t_ac835532f796c2 1-171
+visual-quality/prompts/visual-rating-v1/aesthetics.txt
+  s_1c39eca6a8bf5f::t_5a7a7e69869190 1-21
+visual-quality/docs/training/data-mixture-evidence.md
+  s_1c39eca6a8bf5f::t_7f9119fb8cb961 194-195
+  s_1c39eca6a8bf5f::t_780bd4747cf527 192-193,196-199
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c81cb24e3d5041e884691df4a3d71dcefdb4840f",
+  "prompts": {},
+  "sessions": {
+    "s_1c39eca6a8bf5f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0e39a-93c5-7f21-b398-3a83ab99f84f",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}

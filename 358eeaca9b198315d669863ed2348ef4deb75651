@@ -1,0 +1,45 @@
+visual-quality/src/visual_quality/cli.py
+  s_327fe9b27426f4::t_a0807fdf2d93a4 15,25,34-36,46-47,89-100
+  s_327fe9b27426f4::t_93ee24401558b2 16-24
+  s_327fe9b27426f4::t_5017f7e40add9a 101-102
+visual-quality/docs/training/label-pilot-corrections-2026-10-18.md
+  s_327fe9b27426f4::t_da7bc1d982f5d7 1-53
+visual-quality/tests/test_reviews.py
+  s_327fe9b27426f4::t_f19291c82ac352 173-182
+  s_327fe9b27426f4::t_5fa411f7217777 5,299-308,316-325
+  s_327fe9b27426f4::t_eb6c81e4fac5be 24
+  s_327fe9b27426f4::t_019c2210e639d2 183-194,215-216,263-276
+  s_327fe9b27426f4::t_f9067dc4341618 1-4,6-23,25,45-48,58,64-65,68-69,80-83,86,93-95,114-138,143-149,155-172,222-229,233-262,277-283,290-298,326-328,332-334,341-350
+  s_327fe9b27426f4::t_c2ed3129ec4666 26-44,49-57,59-63,66-67,70-79,84-85,87-92,96-113,139-142,150-154,195-214,217-221,230-232,284-289,309-315,329-331,335-340
+visual-quality/src/visual_quality/reviews.py
+  s_327fe9b27426f4::t_c2ed3129ec4666 25-32,35-41,153-156,171-180,204-205,213-217,226-229,232-235,237-238,260-263,274-277
+  s_327fe9b27426f4::t_eb6c81e4fac5be 20,99
+  s_327fe9b27426f4::t_019c2210e639d2 69-77,79-81,254
+  s_327fe9b27426f4::t_3f9364d1df0d90 1-19,21-24,33-34,42-68,78,82-98,100-112,114-152,157-170,183-203,206-212,218-225,230-231,236,239-253,255-259,264-273,278-297
+  s_327fe9b27426f4::t_5fa411f7217777 113,181-182
+visual-quality/docs/training/label-pilot-validation-2026-10-18.md
+  s_327fe9b27426f4::t_ed0518087e02ef 5-6,32
+visual-quality/docs/training/evidence/label-pilot-correction-report-2026-10-18.json
+  s_327fe9b27426f4::t_e9868cf09f0374 1-19
+visual-quality/docs/training/evidence/label-pilot-corrections-2026-10-18.json
+  s_327fe9b27426f4::t_73c312803a91a8 1-330
+visual-quality/docs/training/label-pilot.md
+  s_327fe9b27426f4::t_d50c504dc50fc4 85-112
+  s_327fe9b27426f4::t_1d91b9eb5bdcca 9-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "358eeaca9b198315d669863ed2348ef4deb75651",
+  "prompts": {},
+  "sessions": {
+    "s_327fe9b27426f4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14258-b3f9-7a50-9987-4a60f71f58c8",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}

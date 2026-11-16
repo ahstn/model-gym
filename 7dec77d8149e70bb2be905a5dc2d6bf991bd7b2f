@@ -1,0 +1,64 @@
+visual-quality/docs/training/exa-results/pilot-preflight-2026-09-29.json
+  s_1c39eca6a8bf5f::t_491d26b8bddbec 1-1302
+visual-quality/docs/README.md
+  s_1c39eca6a8bf5f::t_6ac486f2ffcde0 9-10,22,36
+  s_1c39eca6a8bf5f::t_4233448f133d8e 23
+  s_1c39eca6a8bf5f::t_ba550460b0e4f4 7-8,29
+visual-quality/docs/datasets/evidence/candidate-review-2026-10-15.json
+  s_1c39eca6a8bf5f::t_6cde417f476675 1-177,233-234
+  s_1c39eca6a8bf5f::t_988685bd13e234 178-232
+visual-quality/docs/datasets/candidate-review-2026-10-15.md
+  s_1c39eca6a8bf5f::t_dd91c051f1666a 1-123
+visual-quality/docs/training/synthetic-label-teachers.md
+  s_1c39eca6a8bf5f::t_079753a18eba61 110-111,114
+visual-quality/README.md
+  s_1c39eca6a8bf5f::t_ba550460b0e4f4 7-8
+visual-quality/docs/evaluation/benchmarks.md
+  s_1c39eca6a8bf5f::t_d26b268a37a923 117,131,134-135,143,147-149,152-160
+visual-quality/docs/evaluation/protocol.md
+  s_1c39eca6a8bf5f::t_d26b268a37a923 103
+visual-quality/docs/datasets/iqa.md
+  s_1c39eca6a8bf5f::t_6ac486f2ffcde0 7-8
+  s_1c39eca6a8bf5f::t_b283d251749819 33-34,49-51
+  s_1c39eca6a8bf5f::t_f93e2df1d3ec01 163
+visual-quality/docs/papers.md
+  s_1c39eca6a8bf5f::t_cee83c716f48b3 1-38
+visual-quality/docs/datasets/low-quality-and-controls.md
+  s_1c39eca6a8bf5f::t_6ac486f2ffcde0 7-8
+  s_1c39eca6a8bf5f::t_ba550460b0e4f4 5-6
+visual-quality/docs/training/data-mixture-evidence.md
+  s_1c39eca6a8bf5f::t_079753a18eba61 186-189,208
+  s_1c39eca6a8bf5f::t_3f51cbd0638110 209
+visual-quality/docs/training/methods.md
+  s_1c39eca6a8bf5f::t_ba550460b0e4f4 113-114
+visual-quality/docs/training/pilot-preflight-2026-09-29.md
+  s_1c39eca6a8bf5f::t_115321677b3442 20,24,100
+  s_1c39eca6a8bf5f::t_9bc38f62fac1e0 1-19,21-23,25-99,101-102
+visual-quality/docs/training/experiment-plan.md
+  s_1c39eca6a8bf5f::t_d26b268a37a923 7-8,12,34,49
+  s_1c39eca6a8bf5f::t_1b665012b383be 50
+visual-quality/docs/datasets/iqa-collection-coverage-2026-10-15.md
+  s_1c39eca6a8bf5f::t_82cad13e8d675e 18
+  s_1c39eca6a8bf5f::t_1eb73f5a2722ad 1-17,19-84
+visual-quality/docs/training/synthetic-label-prompts.md
+  s_1c39eca6a8bf5f::t_079753a18eba61 80,84-88,92
+  s_1c39eca6a8bf5f::t_4a2a72f52eb464 93
+visual-quality/docs/datasets/pilot-10k-assembly.md
+  s_1c39eca6a8bf5f::t_ba550460b0e4f4 54-55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7dec77d8149e70bb2be905a5dc2d6bf991bd7b2f",
+  "prompts": {},
+  "sessions": {
+    "s_1c39eca6a8bf5f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0e39a-93c5-7f21-b398-3a83ab99f84f",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}

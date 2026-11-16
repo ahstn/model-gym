@@ -1,0 +1,210 @@
+visual-triage/tracks/jev14/shared-results-2026-10-15/summary.json
+  s_01674f4e1b5bdc::t_dc8cd345c69f21 1-1492
+visual-triage/tests/test_jev14_latest.py
+  s_01674f4e1b5bdc::t_63ffe25569a4f1 12,34-41,48-64,66-73,77-86,89-94,137-138,155,159,174,180
+  s_01674f4e1b5bdc::t_c0214efc57400e 1-11,13-33,42-47,65,74-76,87-88,95-136,139-154,156-158,160-173,175-179,181-188
+visual-triage/tests/test_jev14_resume.py
+  s_01674f4e1b5bdc::t_ee97880f489715 1-11,15-31,42-61,64-97,99-101,103-129
+  s_01674f4e1b5bdc::t_015382c86874ec 13
+  s_01674f4e1b5bdc::t_fb0fa512a059ff 12,14,32-41,62-63,98,102
+visual-triage/tracks/openai_provenance/resume.py
+  s_01674f4e1b5bdc::t_4b7eb897e57ea0 1-23,26-27,31,34-46,50-65,73-74,76-84,87-91,95-101,111-112,120-127,141-143,149-162
+  s_01674f4e1b5bdc::t_93d68b490189c8 68,75,85-86
+  s_01674f4e1b5bdc::t_f9c20901ff3981 24-25,28-30,32-33,47-49,66-67,69-72,92-94,102-104,110,113-119,128-140,144-148
+  s_01674f4e1b5bdc::t_fdfa764cbe0ce6 105-109
+visual-triage/tracks/jev14/client.py
+  s_01674f4e1b5bdc::t_a0e435f5d8af22 28-42,52-56,100-113,116-127,144-148
+  s_01674f4e1b5bdc::t_6dadb095ce11be 1-24,26-27,43-51,57-99,114-115,128,131-143,149-168
+  s_01674f4e1b5bdc::t_ac30e93159e90d 25,129-130
+visual-triage/tracks/openai_provenance/client.py
+  s_01674f4e1b5bdc::t_aad065e8ecea28 1-15,17-25,31,41-73,78-84,86-87,89-90,95-97,99-101,106-138,145-148,150-168,170-200,203-211
+  s_01674f4e1b5bdc::t_fef4657293ae7d 74,76-77,85,88,98,102-105
+  s_01674f4e1b5bdc::t_fe6789f710959a 26-30,32-40,91-94,141-142,201-202
+  s_01674f4e1b5bdc::t_2d932b27e4e6a4 16,75,139-140,143-144,149,169
+visual-triage/tracks/openai_provenance/partial-2026-10-12/results/cases.csv
+  s_01674f4e1b5bdc::t_55a300b516a2f9 1-161
+visual-triage/tests/test_openai_provenance_resume.py
+  s_01674f4e1b5bdc::t_b9c2a672d5c43c 1-37,44-49,61-80,88-89,101-175,186-260
+  s_01674f4e1b5bdc::t_4d04238f04f2ba 38-43,50-60,81-87,90-100,176-185
+  s_01674f4e1b5bdc::t_b519574e1aa110 261-268
+visual-triage/tracks/jev14/run.py
+  s_01674f4e1b5bdc::t_ac30e93159e90d 1-15,28-49,61-119,126,130-136,163-180,190,200,223-229,233-236,238-246,255-259,274-276,282-293
+  s_01674f4e1b5bdc::t_3f1143442c6bb8 18-27,191-199,205-211,214-218
+  s_01674f4e1b5bdc::t_68aa617a1b50d5 16-17,181,186-188,201-204,212-213,219-222
+  s_01674f4e1b5bdc::t_a0e435f5d8af22 50-60,120-125,127-129,137-162,182-185,189,230-232,237,247-254,260-273,277-281
+visual-triage/tests/test_openai_provenance_client.py
+  s_01674f4e1b5bdc::t_fe6789f710959a 21-28,63-65,104-106,117-119,127-144,193-195
+  s_01674f4e1b5bdc::t_2d932b27e4e6a4 204
+  s_01674f4e1b5bdc::t_fef4657293ae7d 1-20,29-62,66-103,107-116,120-126,145-192,196-203,205-234
+visual-triage/tracks/jev14/report.py
+  s_01674f4e1b5bdc::t_b061489796d4ab 426-430,437-441,484-491,497-503,524-527,532-533,550-557,584-588,658-685
+  s_01674f4e1b5bdc::t_e9784208ce42d1 227,239,372-376,381,388
+  s_01674f4e1b5bdc::t_a82fade338208c 451,508,538,640-642
+  s_01674f4e1b5bdc::t_c5d50b44ae38ca 650-655
+  s_01674f4e1b5bdc::t_eeea4e5927735b 207-213,219-224
+  s_01674f4e1b5bdc::t_c897f5a76f2e58 188-189,196-199,205,225-226,228-238,247-253,260
+  s_01674f4e1b5bdc::t_f58c9a63dcd2df 279-282,332-334,399-403,633-634
+  s_01674f4e1b5bdc::t_ebd4d3df2ec0f7 443-449,455-465,643-644,656-657
+  s_01674f4e1b5bdc::t_c6dfdd6a9325dd 1-20,23-45,49-64,69-72,80,87-108,116-124,128-130,135-136,141-143,148,152-156,165,405-421,425,442,450,474-483
+  s_01674f4e1b5bdc::t_7c7f03c5df00cc 149-151,184-187,190-195,200-204,206,214-218
+  s_01674f4e1b5bdc::t_d5445f51d72c29 46-48,65-68,73-79,81-86,109-115,125-127,131-134,137-140,144-147,157-164,181-183,268-272,293-305,308-313,317-322,329-331,336-341,383-387,389-391,393-398,422-424,431-436,452-454,466-473,492-496,504-507,509-523,528-531,534-537,539-549,558-583,589-632,635-639
+  s_01674f4e1b5bdc::t_61108274ec9c79 240-246,254-259
+  s_01674f4e1b5bdc::t_796b3675eb7259 382,392,645-649
+  s_01674f4e1b5bdc::t_eda86e7daf79d9 21-22,166-180,261-267,273-278,283-292,306-307,314-316,323-328,335,342-371,377-380,404
+visual-triage/tracks/jev14/latest.py
+  s_01674f4e1b5bdc::t_fe01a36163b998 1-22,28,33-45,55-57,63-70,74-77,85-96,134-143,149-170,185,189-203,205-212,221-225,240-242,248-259
+  s_01674f4e1b5bdc::t_d35f4aeeb8e6b6 23-27,29-32,46-54,58-62,71-73,78-84,97-133,144-148,171-184,186-188,204,213-220,226-239,243-247
+visual-triage/tests/test_openai_provenance_study.py
+  s_01674f4e1b5bdc::t_8254aeb36e3aab 1-231
+visual-triage/tracks/jev14/README.md
+  s_01674f4e1b5bdc::t_8f6727bb86048e 1-2,4-25
+  s_01674f4e1b5bdc::t_eca18223796eb1 3
+visual-triage/tracks/openai_provenance/README.md
+  s_01674f4e1b5bdc::t_b31a83e5c72e51 1-2,4,7-18,20-21,24,26-27,29-32
+  s_01674f4e1b5bdc::t_51de962abfd6ce 3,5-6,19,22-23,25,28
+visual-triage/tracks/jev14/shared-results-2026-10-15/cases.csv
+  s_01674f4e1b5bdc::t_dc8cd345c69f21 1-127
+visual-triage/tracks/openai_provenance/partial-2026-10-12/report.md
+  s_01674f4e1b5bdc::t_55a300b516a2f9 1-53
+visual-triage/tracks/jev14/latest-results-2026-10-15/README.md
+  s_01674f4e1b5bdc::t_1f0eb0a4ed63a4 3-4,24-33,46
+  s_01674f4e1b5bdc::t_05f9fce7b9b592 1-2,5-23,34-45,47-50
+visual-triage/tests/test_openai_provenance_report.py
+  s_01674f4e1b5bdc::t_c9f82de1902ce8 1-73,75-208,289
+  s_01674f4e1b5bdc::t_05f44fb4763640 290-330
+  s_01674f4e1b5bdc::t_9410bd11ed90fc 74,209-288
+visual-triage/tracks/jev14/shared-results-2026-10-15/README.md
+  s_01674f4e1b5bdc::t_dc8cd345c69f21 1-56
+visual-triage/tracks/jev14/latest-results-2026-10-15/cases.csv
+  s_01674f4e1b5bdc::t_05f9fce7b9b592 1
+  s_01674f4e1b5bdc::t_1f0eb0a4ed63a4 2-261
+visual-triage/tracks/openai_provenance/partial-2026-10-12/results/summary.json
+  s_01674f4e1b5bdc::t_55a300b516a2f9 1-539
+visual-triage/tests/test_jev14_report.py
+  s_01674f4e1b5bdc::t_baae1267ceebb9 432-440,446,450,459-460,465-486,491-518
+  s_01674f4e1b5bdc::t_d14956f7f931e4 138-147
+  s_01674f4e1b5bdc::t_eeea4e5927735b 401-406
+  s_01674f4e1b5bdc::t_2523631199f06f 4,9,13,187-205,214-220,241,247,252-253,258-261,275-280,287-288,306-328,332-358,370-383
+  s_01674f4e1b5bdc::t_47c7e3adbb1a1f 441-445,447-449,451-458,461-464,487-490
+  s_01674f4e1b5bdc::t_61108274ec9c79 388-390,407-409
+  s_01674f4e1b5bdc::t_375f7f38ee3a5a 1-3,5-8,10-12,14-16,22-31,39,56-57,68-115,122-137,148-180,184-186
+  s_01674f4e1b5bdc::t_d5445f51d72c29 17-21,32-38,40-55,58-67,116-121,181-183,206-213,221-240,242-246,248-251,254-257,262-274,281-286,289-305,329-331,359-369
+  s_01674f4e1b5bdc::t_52813127f8fd67 384-387,391-400,410-431
+visual-triage/tracks/jev14/protocol.json
+  s_01674f4e1b5bdc::t_c051df45789b53 1-121
+visual-triage/tests/test_jev14_client.py
+  s_01674f4e1b5bdc::t_b812aa88c49ea4 1-162,164-221,228-236,241-372
+  s_01674f4e1b5bdc::t_0a9adfc42e87bb 222-227,237-240
+  s_01674f4e1b5bdc::t_7efcd2014a877b 163
+visual-triage/tests/test_jev14_rounding.py
+  s_01674f4e1b5bdc::t_e4cd36326118ca 14-17,22-37,63-67,80-88,90-92,100-108,111-113,120-124,140-152
+  s_01674f4e1b5bdc::t_2ccdba27762d27 1-13,18-21,38-62,68-79,89,93-99,109-110,114-119,125-139,153-157
+visual-triage/tracks/jev14/rounding.py
+  s_01674f4e1b5bdc::t_077f605e4d41fb 26
+  s_01674f4e1b5bdc::t_2ccdba27762d27 1-25,27-58
+visual-triage/tests/test_jev14_latest_report.py
+  s_01674f4e1b5bdc::t_406061cab815df 26-33,35-45,47-61,97-102,104-112
+  s_01674f4e1b5bdc::t_f587967e3a879b 354-360,366,372-380
+  s_01674f4e1b5bdc::t_24003e17aeb708 361-365,367-371,381-392
+  s_01674f4e1b5bdc::t_946f02fdee2089 153-172,192-197,210-217,223-227,233-240,246-259,265-281,326-337
+  s_01674f4e1b5bdc::t_57ac9387680acf 1-3,6-9,11-12,17-25,34,46,62-96,103,113-139
+  s_01674f4e1b5bdc::t_a063ad593bbbbe 14
+  s_01674f4e1b5bdc::t_7b14b0fb3b269d 4-5,10,13,15-16,140-152,173-191,198-209,218-222,228-232,241-245,260-264,282-325,338-353
+visual-triage/README.md
+  s_01674f4e1b5bdc::t_21919ae5041632 3-5,18
+  s_01674f4e1b5bdc::t_51de962abfd6ce 20
+visual-triage/tracks/openai_provenance/resume-amendment.json
+  s_01674f4e1b5bdc::t_e2ef44ae2d52d1 1-22
+visual-triage/tracks/jev14/parser-amendment.json
+  s_01674f4e1b5bdc::t_455e81de1712ec 1-14
+visual-triage/tracks/jev14/resume.py
+  s_01674f4e1b5bdc::t_c1a5b066cb502f 20-24,59-60,138-139
+  s_01674f4e1b5bdc::t_0c1da22c34beb8 17,45-55,62-66,82-95,103-109,111,127,144-152,158-170,174-178
+  s_01674f4e1b5bdc::t_9aaa4c5de910e4 1-16,18-19,25-44,56-58,61,67-81,96-102,110,112-126,128-137,140-143,153-157,171-173,179-190
+visual-triage/tracks/openai_provenance/study.py
+  s_01674f4e1b5bdc::t_3c9dd922d0066b 1-101,103-150,152-166,168-169,171-186
+  s_01674f4e1b5bdc::t_b0fe3a42d574c5 102,151,167,170
+visual-triage/tests/test_jev14_run.py
+  s_01674f4e1b5bdc::t_fae862d61e728e 1-26,32-36,42-43,50-107,120-126,135-247,249-256,258-278,282,292-319
+  s_01674f4e1b5bdc::t_0a9adfc42e87bb 27-31,37-41,44-49,108-119,127-134,248,257,279-281,283-291
+visual-triage/tracks/jev14/latest_report.py
+  s_01674f4e1b5bdc::t_1727605e36c3c5 281-284,289-292,326-330,351-356,416-417,422,466-491
+  s_01674f4e1b5bdc::t_ad2fb3f1e1546f 293-300,313-314,374,394,400-401,445
+  s_01674f4e1b5bdc::t_f962c9d640f883 1-14,16-43,50,56,60-72,76,84-85,120-132,139-142,157,167-169,180
+  s_01674f4e1b5bdc::t_406061cab815df 44-49,51-55,57-59,73-75,77-83,133-135,158-166,170-179,181-191,196,223-229,231-233,250-252,254-279,285-288,310-312,315-325,331-350,357-373,418-421,423-444,446-465
+  s_01674f4e1b5bdc::t_6ba06250001c6e 15,197-222,230,234-249,253,280
+  s_01674f4e1b5bdc::t_cf45162ef8e8e2 100-104,111-116,145-154,192-195,301-309,375-393,395-399,402-415
+  s_01674f4e1b5bdc::t_20576e600dec36 86-99,105-110,117-119,136-138,143-144,155-156
+visual-triage/tracks/jev14/latest-results-2026-10-15/summary.json
+  s_01674f4e1b5bdc::t_05f9fce7b9b592 1-1077,1162-1171,1176-1229
+  s_01674f4e1b5bdc::t_1f0eb0a4ed63a4 1078-1161,1172-1175
+visual-triage/tracks/jev14/latest/protocol.json
+  s_01674f4e1b5bdc::t_0504cc3ef0bd9d 1-88
+visual-triage/tracks/openai_provenance/report.py
+  s_01674f4e1b5bdc::t_5dbc4dff3e3815 15,72-86,89-118,152-157,172,177,182,195,199,223-224,226-229,239,241-242,245,274,276-280,283,299-300
+  s_01674f4e1b5bdc::t_83bc453e2b3790 1-8,10-14,16-48,119-135,138-147,151,158-171,173-176,178-181,183-194,196-198,200-222,230-232,234-238,240,246-253,255-264,267-273,284,286-288,290-291,293-298,301-310,320-322,330-331,333,335,337-338,349-352,364,367-369,372-373,375,379-411
+  s_01674f4e1b5bdc::t_c9f82de1902ce8 136-137
+  s_01674f4e1b5bdc::t_f0a4b9534df31d 315,318,328-329,332,334,336,365-366,374,376-378
+  s_01674f4e1b5bdc::t_05f44fb4763640 348
+  s_01674f4e1b5bdc::t_873dd352b9be78 311
+  s_01674f4e1b5bdc::t_6a32d8df4781c7 353-354
+  s_01674f4e1b5bdc::t_9410bd11ed90fc 87-88,233,243-244,285,312-314,355,359-363
+  s_01674f4e1b5bdc::t_a38dca35dafc6e 356-357
+  s_01674f4e1b5bdc::t_d2c4bbb3bc0045 9,49-71,225,254,265-266,281-282,289,292,316-317,319,323-327,339-347,358
+  s_01674f4e1b5bdc::t_cbc711df7b351d 275,370-371
+  s_01674f4e1b5bdc::t_32978d8cdf6386 148-150
+visual-triage/tracks/openai_provenance/protocol.json
+  s_01674f4e1b5bdc::t_16f7b91b784cb8 1-36
+visual-quality/README.md
+  s_aa6fcf2bec4437::t_76b5e0467ac3e8 7-8
+visual-quality/docs/README.md
+  s_aa6fcf2bec4437::t_3bc4165e6996cb 7-8,25
+visual-quality/docs/datasets/iqa.md
+  s_aa6fcf2bec4437::t_53413a8c94d35f 31
+visual-quality/docs/datasets/low-quality-and-controls.md
+  s_aa6fcf2bec4437::t_88e5c0ed8603b4 5-6
+visual-quality/docs/datasets/pilot-10k-assembly.md
+  s_aa6fcf2bec4437::t_548df0755cc2d0 54-55
+visual-quality/docs/evaluation/benchmarks.md
+  s_aa6fcf2bec4437::t_b16dcb3cbb413f 117,131,134-135,143,147-149,152-160
+visual-quality/docs/evaluation/protocol.md
+  s_aa6fcf2bec4437::t_4dd830dab05ee4 103
+visual-quality/docs/training/data-mixture-evidence.md
+  s_aa6fcf2bec4437::t_0c2e68b5758d8f 186-189,208-209
+visual-quality/docs/training/exa-results/pilot-preflight-2026-09-29.json
+  s_aa6fcf2bec4437::t_76038bbd7231f1 1-1302
+visual-quality/docs/training/experiment-plan.md
+  s_aa6fcf2bec4437::t_3030c308027eb6 7-8,12,34,49-50
+visual-quality/docs/training/methods.md
+  s_aa6fcf2bec4437::t_9a0efe7bfecbf1 113-114
+visual-quality/docs/training/pilot-preflight-2026-09-29.md
+  s_aa6fcf2bec4437::t_94d4b3bd604c3c 1-102
+visual-quality/docs/training/synthetic-label-prompts.md
+  s_aa6fcf2bec4437::t_7f6679050cd857 80,84-88,92-93
+visual-quality/docs/training/synthetic-label-teachers.md
+  s_aa6fcf2bec4437::t_d7f0ce8a2abbc2 110-111,114
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dcc1d5c7262e1351f8ccb69fc62da181a39a74c5",
+  "prompts": {},
+  "sessions": {
+    "s_01674f4e1b5bdc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12b47-bf04-76f3-8675-5d67766468fd",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_aa6fcf2bec4437": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12b47-bf79-7142-bca0-53d83d2fd15e",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}

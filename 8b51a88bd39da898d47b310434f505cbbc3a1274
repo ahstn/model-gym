@@ -1,0 +1,150 @@
+visual-triage/summaries/quality.json
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-583
+visual-triage/summaries/ai_detection_v2.csv
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-641
+visual-triage/summaries/candidate-prompts-index.json
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-179
+visual-triage/.gitattributes
+  s_01674f4e1b5bdc::t_d7602d1ba9d80e 8-9
+visual-triage/research/expansion-2026-10-11/cost-recovery.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 7,12-13
+visual-triage/research/expansion-2026-10-11/metadata-methods.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 23,77-78
+visual-triage/research/expansion-2026-10-11/iqa-catalog.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 56-58
+visual-triage/tracks/ai_detection_v2/report/README.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 12,16,20-22
+visual-triage/tracks/quality/README.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 8,11,36-37
+visual-triage/tracks/quality/test_dataset.py
+  s_01674f4e1b5bdc::t_1ae92ec33f1626 30-39,50-57,64-68
+visual-triage/summaries/quality.csv
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-81
+visual-triage/tests/test_tracks.py
+  s_01674f4e1b5bdc::t_ab33d51fbc3fd1 589-604
+visual-triage/VALIDATION.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 19,21,52-53
+visual-triage/evidence_archive.py
+  s_01674f4e1b5bdc::t_b6076914866666 3-4
+  s_01674f4e1b5bdc::t_6cbb555160a6d5 13,16,54-55,58-66,76-85,145-151,168-169,177-179,182-188,192-195,208,216,219,232,269-274,288-292
+  s_01674f4e1b5bdc::t_c1cf0b536788c9 1-2,5-12,14-15,17-53,56-57,67-75,86-144,152-167,170-176,180-181,189-191,196-207,209-215,217-218,220-231,233-268,275-287,293-299
+visual-triage/REPORT.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 34,42-44
+visual-triage/summaries/ai_detection_v2.json
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-2512
+visual-triage/summaries/ai_detection.json
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-657
+visual-triage/scripts/build_evidence_archive.py
+  s_01674f4e1b5bdc::t_4791b457f0e204 1-16,18-29,49-86
+  s_01674f4e1b5bdc::t_0618788b638d5e 17
+  s_01674f4e1b5bdc::t_b6076914866666 30-48
+visual-triage/EXTENDED-VALIDATION.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 47,49-51
+visual-triage/tracks/README.md
+  s_01674f4e1b5bdc::t_231c632b5f16f3 31,34
+visual-triage/.gitignore
+  s_01674f4e1b5bdc::t_9a1212171c4e79 4-36
+visual-triage/tracks/run.py
+  s_01674f4e1b5bdc::t_1ae92ec33f1626 17,136,404
+visual-triage/tests/test_evidence_archive.py
+  s_01674f4e1b5bdc::t_6cbb555160a6d5 182-183,201-219
+  s_01674f4e1b5bdc::t_9d3aab8aec1e9e 15-172,176,181,188,230-253
+  s_01674f4e1b5bdc::t_8ec0ecc6a569bc 12-14
+  s_01674f4e1b5bdc::t_b417a350bfc902 173-175
+  s_01674f4e1b5bdc::t_c2e06bebf5ca19 177-180
+  s_01674f4e1b5bdc::t_a77780a7c13b2a 184-187
+  s_01674f4e1b5bdc::t_f0eb2f134fec42 189-191,198-200
+  s_01674f4e1b5bdc::t_1bf3f5e5b257fc 220-222,227-229
+  s_4a60964c7e3f41::t_68486dfd3161c5 1-11,192-197,223-226
+visual-triage/BENCHMARKS.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 85,88-91
+visual-triage/tracks/ai_detection_v2/SOURCES.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 26,38-39
+visual-triage/tests/test_bench_runner.py
+  s_01674f4e1b5bdc::t_ab33d51fbc3fd1 496-528
+visual-triage/tracks/ai_detection_v2/report/external.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 12,18-20
+visual-triage/tracks/ai_detection/README.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 21,24,33-34
+visual-triage/tracks/ai_detection/SOURCES.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 17,45-46
+visual-triage/summaries/quality_v2.csv
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-401
+visual-triage/archive-index.json
+  s_01674f4e1b5bdc::t_53345469cff05f 1-2750
+visual-triage/README.md
+  s_01674f4e1b5bdc::t_9a1212171c4e79 12,14,20-25
+visual-triage/tests/test_optimise.py
+  s_01674f4e1b5bdc::t_ab33d51fbc3fd1 478-499
+visual-triage/tests/test_inference.py
+  s_01674f4e1b5bdc::t_ab33d51fbc3fd1 172-189
+visual-triage/summaries/quality_v2.json
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-3186
+visual-triage/tracks/quality/report/README.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 9,15-17
+visual-triage/tests/test_export_results.py
+  s_01674f4e1b5bdc::t_c691b5940d0449 16,27-34,39-57
+  s_01674f4e1b5bdc::t_a7752e08d9f033 10-11,85-110
+  s_01674f4e1b5bdc::t_371b7de15cfe14 1-9,12-15,17-26,35-38,58-71,73-84
+  s_01674f4e1b5bdc::t_d7602d1ba9d80e 72
+visual-triage/summaries/initial_benchmark.csv
+  s_01674f4e1b5bdc::t_b54f6e27779609 1
+  s_01674f4e1b5bdc::t_4c440496c0e53e 2-361
+visual-triage/summaries/initial_benchmark.json
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-1813
+visual-triage/tracks/ai_detection_v2/report/metadata-report.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 29-31
+visual-triage/tracks/quality_v2/report/metadata-report.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 20-22
+visual-triage/scripts/export_results.py
+  s_01674f4e1b5bdc::t_a7752e08d9f033 7,10-12,184
+  s_01674f4e1b5bdc::t_582ac28a8677e4 1-6,8-9,13-15,55-114,127,131-133,159-183,185-190,194-196,200-204,218-227,243-246,248-264
+  s_01674f4e1b5bdc::t_c691b5940d0449 16-54,115-126,128-130,134-143,145-158,191-193,197-199,205-217,228-242
+  s_01674f4e1b5bdc::t_d7602d1ba9d80e 247
+  s_01674f4e1b5bdc::t_e67c12e9987feb 144
+visual-triage/summaries/ai_detection.csv
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-121
+visual-triage/ARCHIVE.md
+  s_01674f4e1b5bdc::t_9a1212171c4e79 1-4,7-47
+  s_01674f4e1b5bdc::t_64842253474491 5-6
+visual-triage/bench_runner.py
+  s_01674f4e1b5bdc::t_6952d2624899f1 24
+  s_01674f4e1b5bdc::t_1ae92ec33f1626 116-121,176
+  s_01674f4e1b5bdc::t_ab33d51fbc3fd1 177-178
+visual-triage/tracks/quality/SOURCES.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 19,38-39
+visual-triage/tracks/ai_detection/report/README.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 12,18-20
+visual-triage/summaries/candidate-prompts.jsonl
+  s_01674f4e1b5bdc::t_b54f6e27779609 1-43
+visual-triage/tracks/quality_v2/report/README.md
+  s_01674f4e1b5bdc::t_dee58eb0270c42 12,18-20
+visual-triage/run.py
+  s_01674f4e1b5bdc::t_1ae92ec33f1626 10,48
+visual-triage/tracks/optimise.py
+  s_01674f4e1b5bdc::t_1ae92ec33f1626 15,19,46-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8b51a88bd39da898d47b310434f505cbbc3a1274",
+  "prompts": {},
+  "sessions": {
+    "s_01674f4e1b5bdc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12b47-bf04-76f3-8675-5d67766468fd",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_4a60964c7e3f41": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12cb8-5635-7a91-be54-4d90832a7fac",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}

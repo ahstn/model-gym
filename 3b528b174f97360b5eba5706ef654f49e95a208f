@@ -1,0 +1,43 @@
+image-stats/README.md
+  s_b36b85173fb5b0::t_d57afd969e7990 21,38-39,43-44,71,75-82,88,94-95
+image-stats/mise.toml
+  s_b36b85173fb5b0::t_8bf1c7619a88c3 20-23
+image-stats/src/image_stats/cli.py
+  s_b36b85173fb5b0::t_274e5994b56763 12,14,17,67-75,97-98,102-104,106-119,123-126,144-145,147,170,178,181,215-220,223-228
+image-stats/src/image_stats/evidence.py
+  s_b36b85173fb5b0::t_13cad10eef4dd4 14-15,30,33
+image-stats/src/image_stats/flags.py
+  s_b36b85173fb5b0::t_64c426cf0051df 5-6,27,29-30,48,61-66
+image-stats/src/image_stats/loading.py
+  s_b36b85173fb5b0::t_ca82b84a8a8bda 61-62,64
+image-stats/src/image_stats/metadata.py
+  s_b36b85173fb5b0::t_e27a06f02dba86 48-49
+image-stats/src/image_stats/metrics.py
+  s_b36b85173fb5b0::t_313c2b98ee5d04 15,23,82,93,95,97,101-106,119,123,125,139,147,152,165,180-181,202,217,223,230,233-234,239,241-245
+image-stats/tests/test_analysis.py
+  s_b36b85173fb5b0::t_c82c6414c35707 7-26,31-40
+image-stats/tests/test_cli.py
+  s_b36b85173fb5b0::t_9c990820c98345 3-5,10,62-124,136-138
+image-stats/tests/test_metadata.py
+  s_b36b85173fb5b0::t_650c45478550c8 1-2,19-27
+image-stats/tests/test_metrics.py
+  s_b36b85173fb5b0::t_7eb8efbf50a589 86-97
+image-stats/tests/test_view_parity.py
+  s_b36b85173fb5b0::t_d47bb97d11a4bf 1-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3b528b174f97360b5eba5706ef654f49e95a208f",
+  "prompts": {},
+  "sessions": {
+    "s_b36b85173fb5b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6f00aac9-5f72-495d-9879-b6dbc40c4a70",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}

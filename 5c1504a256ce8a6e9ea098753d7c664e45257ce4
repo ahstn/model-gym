@@ -1,0 +1,23 @@
+visual-triage/BENCHMARKS.md
+  s_01674f4e1b5bdc::t_e3e8e1b6e012a3 1,3,5,7,9,11,13-15,17,19,21,23,25-29,31,33,35,37,39,41-46,48,50,52,54,56-60,62,64,66,70-74,77-79,81,83,85
+visual-triage/README.md
+  s_01674f4e1b5bdc::t_15bbbfafaff08c 1,3,5,7-11,13,15,17,19,28,30-34,47,57,59
+visual-triage/REPORT.md
+  s_01674f4e1b5bdc::t_62b39654aceea3 1,3,5,7,9,11,13-14,18,20,22,24,26,28,30,32,34,36,38,40,42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5c1504a256ce8a6e9ea098753d7c664e45257ce4",
+  "prompts": {},
+  "sessions": {
+    "s_01674f4e1b5bdc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12b47-bf04-76f3-8675-5d67766468fd",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
