@@ -5,13 +5,43 @@ import base64
 import hashlib
 import json
 import threading
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import UTC, datetime
 from pathlib import Path
 
 import boto3
 from botocore.config import Config
-from botocore.exceptions import ClientError
+from botocore.exceptions import (
+    ClientError,
+    ConnectionClosedError,
+    IncompleteReadError,
+    ReadTimeoutError,
+    ResponseStreamingError,
+)
+
+
+def verify_readback(client, bucket, key, expected_sha, expected_bytes):
+    """Retry interrupted streams; never retry a completed checksum mismatch."""
+    for attempt in range(5):
+        response = None
+        try:
+            response = client.get_object(Bucket=bucket, Key=key)
+            remote_sha, remote_bytes = hashlib.sha256(), 0
+            for chunk in response["Body"].iter_chunks(chunk_size=8 * 1024**2):
+                remote_sha.update(chunk)
+                remote_bytes += len(chunk)
+            if remote_sha.hexdigest() != expected_sha or remote_bytes != expected_bytes:
+                raise ValueError(f"Remote readback failed: {key}")
+            return remote_bytes
+        except (ConnectionClosedError, IncompleteReadError, ReadTimeoutError, ResponseStreamingError):
+            if attempt == 4:
+                raise
+            time.sleep(2**attempt)
+        finally:
+            if response is not None:
+                response["Body"].close()
+    raise RuntimeError("Unreachable readback state")
 
 
 def transfer(plan, credentials, account, bucket, prefix, workers):
@@ -77,16 +107,7 @@ def transfer(plan, credentials, account, bucket, prefix, workers):
                 raise ValueError(f"Upload ETag mismatch: {key}")
         # Full GET verification, including objects found during resume. Neither
         # caller-supplied metadata nor HEAD alone proves remote byte identity.
-        response = client.get_object(Bucket=bucket, Key=key)
-        remote_sha, remote_bytes = hashlib.sha256(), 0
-        try:
-            for chunk in response["Body"].iter_chunks(chunk_size=8 * 1024**2):
-                remote_sha.update(chunk)
-                remote_bytes += len(chunk)
-        finally:
-            response["Body"].close()
-        if remote_sha.hexdigest() != entry["sha256"] or remote_bytes != entry["bytes"]:
-            raise ValueError(f"Remote readback failed: {key}")
+        remote_bytes = verify_readback(client, bucket, key, entry["sha256"], entry["bytes"])
         row = {
             "key": key,
             "sha256": entry["sha256"],
