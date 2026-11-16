@@ -33,6 +33,7 @@ def append_export(old_path, new_rows, target):
 def main():
     manifest = json.loads((DATA / "manifest.json").read_text())
     observations, accounting = publication.load_api(DATA / "results/api")
+    _, probe_accounting = publication.load_api(DATA / "compatibility-probe/results/api")
     publication.MODELS = MODELS
     rows, images, summary = publication.build_exports(
         manifest,
@@ -42,7 +43,9 @@ def main():
         expected_images=10000,
         expected_references=0,
     )
-    if any(r["status"] not in ("valid", "partial", "invalid") for r in rows):
+    if any(
+        r["status"] not in ("valid", "partial", "invalid", "failed") for r in rows if r["model"] in MODELS
+    ):
         raise ValueError("Unfinished or missing model observations; do not publish a final export")
     if summary["statistics_images"] != 10000:
         raise ValueError("Statistics incomplete")
@@ -98,6 +101,7 @@ def main():
         publication_images=1000,
         new_model_metrics=table,
         accounting=accounting,
+        compatibility_probe_accounting=probe_accounting,
         initial_images_unchanged=True,
         qrealign_new_inferences=0,
         initial_exports={

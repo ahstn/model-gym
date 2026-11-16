@@ -370,6 +370,21 @@ def observation(plan, case, root, request_sha):
     return row
 
 
+def image_content_rejection(result):
+    """A denied image stays failed; it is not a shared credential/billing failure."""
+    if result.get("http_status") != 403:
+        return False
+    try:
+        error = contract.load_json(result.get("body", "")).get("error", {})
+    except (ValueError, TypeError, AttributeError):
+        return False
+    return (
+        isinstance(error, dict)
+        and isinstance(error.get("message"), str)
+        and error["message"].startswith("Request blocked by content filter:")
+    )
+
+
 def job(plan, case, root, secret, ledger, stop):
     body, request_sha = prepare(plan, case)
     previous = attempts_for(root, case["case_id"])
@@ -385,7 +400,7 @@ def job(plan, case, root, secret, ledger, stop):
             return None
         result = request_once(plan, case, root, number, body, request_sha, secret, ledger)
         parsed = result["parsed"]
-        if result["http_status"] in {401, 403, 402}:
+        if result["http_status"] in {401, 403, 402} and not image_content_rejection(result):
             stop.set()
         if not parsed["retryable"]:
             break

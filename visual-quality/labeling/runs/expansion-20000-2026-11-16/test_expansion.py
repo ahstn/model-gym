@@ -51,3 +51,24 @@ def test_expansion_has_no_lite_route():
 
     assert set(score.POLICY) == {"luna", "deepseek", "liquid", "jev"}
     assert export.MODELS == ("luna", "deepseek", "liquid", "jev")
+
+
+def test_content_rejection_is_per_image_and_not_retried():
+    import api_runner
+
+    assert api_runner.image_content_rejection(
+        {
+            "http_status": 403,
+            "body": json.dumps({"error": {"message": "Request blocked by content filter: test"}}),
+        }
+    )
+    assert not api_runner.image_content_rejection(
+        {"http_status": 403, "body": json.dumps({"error": {"message": "Invalid API key"}})}
+    )
+    assert not api_runner.image_content_rejection(
+        {
+            "http_status": 401,
+            "body": json.dumps({"error": {"message": "Request blocked by content filter: test"}}),
+        }
+    )
+    assert not api_runner.image_content_rejection({"http_status": 403, "body": "not json"})

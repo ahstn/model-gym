@@ -7,3 +7,29 @@ Add 10,000 previously unlabeled images with EmbeddingGemma 2 content clustering,
 Store image-stats measurements separately from model responses; do not feed them to graders or use them to change labels. No training masks are enabled. All new per-image data stays under ignored `visual-quality/data/labeling-20000-2026-11-16/` in the primary checkout. Source code and aggregate reports are tracked here.
 
 Status: preparation in progress; this document does not claim completion.
+
+## Reproduction and data boundaries
+
+The run scripts bootstrap the frozen acquisition/rendering adapters with an explicit new output root. Existing 10K records are never edited. Full artifacts live at `/home/ahstn/git/model-gym/visual-quality/data/labeling-20000-2026-11-16/`:
+
+- `exports/labelled-images.jsonl`: combined 20K image-level records, once complete.
+- `exports/new-labelled-images.jsonl`: only the added 10K records.
+- `exports/scores-long.jsonl` and `.csv`: combined assessor rows.
+- `manifest.json`: new images; `combined-manifest.json`: original plus new images.
+- `stats.jsonl`: new exact-view statistics, separately from inference responses.
+- `related-images.json`, `possible-duplicates.json`, and `review/index.html`: cross-family content retrieval and review candidates.
+- `results/api/`: frozen plans, attempt receipts and observations for the four graders.
+
+The committed first-1,000 records remain in `labeling/records/`. Do not copy expanded per-image outputs into Git.
+
+Use `corpus.py acquire --source megalith --count 11000 --workers 64` and `--source vizwiz --count 3000 --workers 16` to overdraw candidates; then `corpus.py prepare --workers 12`. `embed.py --endpoint <authenticated-local-tunnel>` uses the pinned worker and a 64-image numerical-overlap check. Run `selection.py` after all selected candidates have vectors. Source targets are 7,500 Megalith photos, 1,500 VizWiz photos, 250 controls and 750 controlled variants from 250 included parents. If fewer controls survive exclusions, the predeclared fallback fills their quota with Megalith photos. Controlled variants share their parent's content embedding, explicitly identified as family representatives; each grader and the statistics package receives the actual variant view.
+
+Selection assigns candidates to normalized mean prototypes of the original 64 content groups. Square-root quotas account for initial content counts as well as the candidate pool. It does not inspect quality scores, captions or reference labels. Conservative exact/perceptual exclusions happen before selection. Similarity pairs remain review candidates, not confirmed duplicate labels.
+
+After freezing selection, run `score.py freeze --model <luna|deepseek|liquid|jev>` and `score.py run --model <model>` with credentials sourced quietly. An initial `--limit 8` checks each frozen route; rerunning resumes without repeating completed calls. The unchanged `stats_run.py` accepts `--manifest`, `--output`, `--cache` and `--workers`, with this checkout's `image-stats/src` and `visual-quality/src` on `PYTHONPATH`. Finish with `export.py`, `related.py`, then `audit.py`.
+
+## Compatibility check
+
+Sixteen preliminary requests reused four initial-run views without changing their stored labels. Luna and DeepSeek returned four valid results each. Liquid and Jev returned three each and denied one inline public-photo payload with HTTP 403 (`Request blocked by content filter`). These rejected attempts are retained with unknown cost, not assigned zero. [OpenRouter's documented image format](https://openrouter.ai/docs/guides/community/multimodal-decisions) requires inline data for these two models; external image URLs are not supported for them.
+
+A content-filter denial is terminal for that image and is not retried or bypassed. It no longer masquerades as a shared credential failure that stops unrelated images. Credential/billing errors still stop the runner; the aggregate failure circuit breaker remains enabled. Missing components always leave the corresponding ensemble outcome missing. Session accounting includes the compatibility check separately from dataset labeling.
