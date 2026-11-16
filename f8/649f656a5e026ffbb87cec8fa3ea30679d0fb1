@@ -1,0 +1,43 @@
+.gitignore
+  s_a985f77760d967::t_ee5319e462e9a6 44-46
+visual-quality/AGENTS.md
+  s_a985f77760d967::t_9fdf59aea88609 3,13-14,23,29,48,56
+visual-quality/labeling/README.md
+  s_a985f77760d967::t_e59982503f2681 57-60
+visual-quality/labeling/runs/expansion-20000-2026-11-16/README.md
+  s_a985f77760d967::t_ad1657294704e9 1-9
+visual-quality/labeling/trials/decision-comparison-500-2026-11-13/README.md
+  s_a985f77760d967::t_4ec52350e7e74e 1-54
+visual-quality/labeling/trials/decision-comparison-500-2026-11-13/audit.json
+  s_a985f77760d967::t_973c4fbf0aefb6 1-17
+visual-quality/labeling/trials/decision-comparison-500-2026-11-13/audit.py
+  s_a985f77760d967::t_6955f2118a21e5 1-90
+visual-quality/labeling/trials/decision-comparison-500-2026-11-13/prepare.py
+  s_a985f77760d967::t_7881c7c5baa949 1-146
+visual-quality/labeling/trials/decision-comparison-500-2026-11-13/report.md
+  s_a985f77760d967::t_04dd7ee8b85bfa 1-90
+visual-quality/labeling/trials/decision-comparison-500-2026-11-13/report.py
+  s_a985f77760d967::t_6aafecf17dba65 1-337
+visual-quality/labeling/trials/decision-comparison-500-2026-11-13/run.py
+  s_a985f77760d967::t_b281dff51bb735 1-237
+visual-quality/labeling/trials/decision-comparison-500-2026-11-13/summary.json
+  s_a985f77760d967::t_6413aea2068214 1-1048
+visual-quality/labeling/trials/decision-comparison-500-2026-11-13/test_trial.py
+  s_a985f77760d967::t_abaf23bf96e7c0 1-102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "f8649f656a5e026ffbb87cec8fa3ea30679d0fb1",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
