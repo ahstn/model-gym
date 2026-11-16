@@ -1,0 +1,31 @@
+visual-quality/AGENTS.md
+  s_a985f77760d967::t_214321df82e453 58
+visual-quality/experiments/labeling-10000-2026-11-01/api_runner.py
+  s_a985f77760d967::t_8396a0ad6bb820 373-387,403
+visual-quality/labeling/runs/expansion-20000-2026-11-16/README.md
+  s_a985f77760d967::t_60410e51a97a85 10-35
+visual-quality/labeling/runs/expansion-20000-2026-11-16/audit.py
+  s_a985f77760d967::t_c1a0ca63854ce3 1-104
+visual-quality/labeling/runs/expansion-20000-2026-11-16/export.py
+  s_a985f77760d967::t_80ac10e05ddf5a 36,46-48,104
+visual-quality/labeling/runs/expansion-20000-2026-11-16/related.py
+  s_a985f77760d967::t_89af76e1e0bf6a 1-106
+visual-quality/labeling/runs/expansion-20000-2026-11-16/test_expansion.py
+  s_a985f77760d967::t_3ee91fb5b946b4 54-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "736d57dcd45284377b42f072e2c3dad4b1c73499",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
