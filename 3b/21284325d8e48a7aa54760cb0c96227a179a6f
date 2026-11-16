@@ -1,0 +1,21 @@
+visual-quality/labeling/runs/expansion-20000-2026-11-16/export.py
+  s_a985f77760d967::t_2c7a2044c51899 97-107,116,154,156,158-159,162-171
+visual-quality/labeling/runs/expansion-20000-2026-11-16/score.py
+  s_a985f77760d967::t_4dc84f216385f7 16,18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "3b21284325d8e48a7aa54760cb0c96227a179a6f",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
