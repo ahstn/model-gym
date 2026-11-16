@@ -54,6 +54,9 @@ def test_export_distinguishes_exhausted_failures_from_pending_work():
     assert not export.finalized_observation({**row, "source_request_plan_id": "unknown"}, plans)
     assert not export.finalized_observation({**row, "status": "observation_not_finalized"}, plans)
     assert export.finalized_observation({"status": "failed"}, plans)
+    plans["p"]["policy"].update(authorized_denials={"R1": {"attempt_count": 1}}, additional_attempts=3)
+    assert export.finalized_observation({**row, "case_id": "R1", "attempt_count": 4}, plans)
+    assert not export.finalized_observation({**row, "case_id": "R1", "attempt_count": 3}, plans)
 
 
 def test_expansion_has_no_lite_route():

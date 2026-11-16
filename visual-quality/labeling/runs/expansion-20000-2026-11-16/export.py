@@ -28,7 +28,12 @@ def finalized_observation(row, plans):
     if row["status"] != "retryable_failure":
         return False
     plan = plans.get(row.get("source_request_plan_id"))
-    return bool(plan and row.get("attempt_count", 0) >= plan["policy"]["max_attempts"])
+    if not plan:
+        return False
+    policy = plan["policy"]
+    baseline = policy.get("authorized_denials", {}).get(row.get("case_id"))
+    maximum = baseline["attempt_count"] + policy["additional_attempts"] if baseline else policy["max_attempts"]
+    return row.get("attempt_count", 0) >= maximum
 
 
 def append_export(old_path, new_rows, target):

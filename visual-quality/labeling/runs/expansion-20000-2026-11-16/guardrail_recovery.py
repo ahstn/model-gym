@@ -10,13 +10,16 @@ import api_runner as runner
 PHASE = "secret-guardrail-disabled"
 AUTHORIZATION = DATA / "operations/guardrail-change-authorization.json"
 ORIGINAL_PINS = runner.code_pins
+SECRET_FLAGS = (
+    "bitcoin-wif-compressed", "bitcoin-wif-uncompressed", "google-api-key",
+)
 
 
 def secret_scanner_denial(result):
     if not runner.image_content_rejection(result):
         return False
     message = json.loads(result["body"])["error"]["message"]
-    return message == "Request blocked by content filter: [SECRET:bitcoin-wif-compressed]"
+    return message in {f"Request blocked by content filter: [SECRET:{flag}]" for flag in SECRET_FLAGS}
 
 
 def pins():
@@ -81,6 +84,8 @@ def main():
         limit=args.limit, worker_limit=16,
     )
     if args.command == "freeze":
+        if runner.read(AUTHORIZATION).get("resubmission_approved") is not True:
+            raise ValueError("Explicit approval to resend secret-flagged payloads is pending")
         denied = {}
         for path in sorted((root / "observations").glob("*.json")):
             row = runner.read(path)

@@ -690,12 +690,11 @@
     }
   },
   "embedding_cleanup": {
-    "disk_retained": true,
+    "disk_retained": false,
     "gpu_compute_released": true,
     "pod_id": "46dyqrae0is684",
-    "reason": "Permanent disk deletion requires explicit authorization. Stopped state is the safer cleanup alternative.",
-    "status": "stopped",
-    "termination": "automatic_approval_review_rejected; not retried"
+    "status": "deleted",
+    "termination": "explicitly approved by user; HTTP 204 confirmed"
   },
   "ensemble": {
     "latency_policy": "no independent request latency; retain component request measurements",

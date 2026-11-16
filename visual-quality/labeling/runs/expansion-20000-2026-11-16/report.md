@@ -43,7 +43,7 @@ The completed Decisions failure audit found 2,855 identical image denials in eac
 Full local data: `/home/ahstn/git/model-gym/visual-quality/data/labeling-20000-2026-11-16`. The combined image records are `exports/labelled-images.jsonl`; `exports/new-labelled-images.jsonl` contains only the added 10K. `exports/scores-long.jsonl` and `.csv` contain assessor rows. `stats.jsonl` contains new image measurements, also joined separately into image-level exports. None of the added per-image labels is committed to Git.
 
 The owned embedding GPU was stopped after vectors were saved. Runpod reported $0.627130 for that pod as of 2026-11-16 16:52:12 UTC; billing may settle later. This infrastructure charge is separate from the API table below and does not change the historical Q-ReAlign/reference zero-price reporting rule.
-The pod's disk remains retained while permission for permanent deletion is pending; storage charges may continue. Automatic approval review rejected irreversible disk deletion without explicit authorization.
+The temporary embedding pod and retained disk were deleted after explicit user approval; Runpod confirmed HTTP 204. All required outputs remain local.
 
 ## Total API cost by model
 

@@ -9,6 +9,8 @@ def test_only_the_confirmed_secret_scanner_is_eligible():
         return {"http_status": 403, "body": json.dumps({"error": {"message": message}})}
 
     assert recovery.secret_scanner_denial(response("Request blocked by content filter: [SECRET:bitcoin-wif-compressed]"))
+    assert recovery.secret_scanner_denial(response("Request blocked by content filter: [SECRET:bitcoin-wif-uncompressed]"))
+    assert recovery.secret_scanner_denial(response("Request blocked by content filter: [SECRET:google-api-key]"))
     assert not recovery.secret_scanner_denial(response("Request blocked by content filter: other restriction"))
     assert not recovery.secret_scanner_denial(response("Invalid API key"))
 
