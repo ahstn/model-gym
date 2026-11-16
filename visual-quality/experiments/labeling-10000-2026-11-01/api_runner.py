@@ -417,6 +417,10 @@ def run(args):
     root = args.data / "results/api" / args.model
     plan = read(root / "plans" / (args.phase + ".json"))
     validate_plan(plan)
+    worker_limit = getattr(args, "worker_limit", None)
+    if worker_limit is not None and (type(worker_limit) is not int or worker_limit < 1):
+        raise ValueError("Worker limit must be a positive integer")
+    workers = min(plan["policy"]["workers"], worker_limit or plan["policy"]["workers"])
     route = plan["profile"]["routes"]["routes"][args.model]
     secret = os.environ[route["key_env"]]
     with (root / ".lock").open("a") as lock:
@@ -431,6 +435,7 @@ def run(args):
             "plan_id": plan["plan_id"],
             "started_at": now(),
             "planned_cases": len(cases),
+            "active_worker_limit": workers,
         }
         path = root / (args.phase + "-status.json")
 
@@ -440,10 +445,10 @@ def run(args):
 
         save("running")
         pending, active = iter(cases), {}
-        with concurrent.futures.ThreadPoolExecutor(max_workers=plan["policy"]["workers"]) as pool:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
             try:
                 while True:
-                    while not stop.is_set() and len(active) < plan["policy"]["workers"]:
+                    while not stop.is_set() and len(active) < workers:
                         case = next(pending, None)
                         if case is None:
                             break

@@ -7,6 +7,7 @@ import json
 from collections import Counter, defaultdict
 from datetime import datetime, UTC
 import numpy as np
+from PIL import Image
 import corpus
 from corpus import DATA, OLD, SEED, digest, stable_key, write_json
 import corpus_finalize as legacy
@@ -131,6 +132,15 @@ def main():
             content_cluster=clusters[row.get("parent_candidate_id") or row["candidate_id"]],
             expansion_run="2026-11-16",
         )
+        if row["category"] == "distortions":
+            row["source_format"] = "PNG"
+            with Image.open(row["source_path"]) as image:
+                row["source_metadata"] = {
+                    "format": image.format,
+                    "frames": getattr(image, "n_frames", 1),
+                    "icc": bool(image.info.get("icc_profile")),
+                    "alpha": "A" in image.getbands() or "transparency" in image.info,
+                }
         row["embedding_view_sha256"] = row.get("embedding_view_sha256", row["view_sha256"])
         row["embedding_mode"] = (
             "exact_view" if row["embedding_view_sha256"] == row["view_sha256"] else "family_representative"

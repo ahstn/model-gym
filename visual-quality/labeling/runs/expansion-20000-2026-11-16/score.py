@@ -33,6 +33,9 @@ def main():
     parser.add_argument("command", choices=["freeze", "run"])
     parser.add_argument("--model", choices=list(POLICY), required=True)
     parser.add_argument("--limit", type=int)
+    parser.add_argument(
+        "--workers", type=int, help="Lower concurrency without changing the frozen request plan"
+    )
     args = parser.parse_args()
     runner.code_pins = code_pins
     runner.POLICY[args.model].update(POLICY[args.model])
@@ -45,6 +48,7 @@ def main():
         references=None,
         case_ids=None,
         limit=args.limit,
+        worker_limit=args.workers,
     )
     print(runner.freeze(options) if args.command == "freeze" else runner.run(options), flush=True)
 
