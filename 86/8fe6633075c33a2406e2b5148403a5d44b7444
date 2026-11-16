@@ -1,0 +1,21 @@
+visual-quality/labeling/backups/test_transfer.py
+  s_a985f77760d967::t_172e893b1fbc28 1-49
+visual-quality/labeling/backups/transfer.py
+  s_a985f77760d967::t_fb3517025f18b7 8,15-44,110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "868fe6633075c33a2406e2b5148403a5d44b7444",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
