@@ -13,9 +13,9 @@ import api_runner as runner
 # remain owned by the existing runner. Limits are maximum reservations, not fees.
 POLICY = {
     "luna": {"workers": 64, "budget_usd": "40.00"},
-    "deepseek": {"workers": 64, "budget_usd": "35.00"},
+    "deepseek": {"workers": 64, "budget_usd": "50.00"},
     "liquid": {"workers": 16, "budget_usd": "5.00"},
-    "jev": {"workers": 16, "budget_usd": "12.00"},
+    "jev": {"workers": 16, "budget_usd": "35.00"},
 }
 ORIGINAL_PINS = runner.code_pins
 

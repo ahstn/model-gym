@@ -94,6 +94,17 @@ def main():
                 "accounting": accounting.get(model),
             }
         )
+    historical_cost = json.loads((OLD / "exports/summary.json").read_text())["cost_per_model"]
+    combined_cost = {}
+    for model in MODELS:
+        parts = [historical_cost[model], accounting[model], probe_accounting[model]]
+        known = sum((Decimal(p["known_price_usd"]) for p in parts), Decimal(0))
+        missing = sum(p["unpriced_attempts"] for p in parts)
+        combined_cost[model] = {
+            "known_price_usd": str(known),
+            "unpriced_attempts": missing,
+            "total_price_usd": None if missing else str(known),
+        }
     summary.update(
         total_images=20000,
         new_images=10000,
@@ -102,6 +113,7 @@ def main():
         new_model_metrics=table,
         accounting=accounting,
         compatibility_probe_accounting=probe_accounting,
+        combined_cost_per_model=combined_cost,
         initial_images_unchanged=True,
         qrealign_new_inferences=0,
         initial_exports={
@@ -139,19 +151,24 @@ def main():
         "",
         "These are score distributions, not accuracy measurements: no new independent reference scores were created. The original benchmark remains the comparison baseline. Missing or invalid outcomes remain missing; the ensemble never renormalizes its weights.",
         "",
-        "## Incremental API cost",
+        "## Total API cost by model",
         "",
-        "Costs below include every recorded attempt, including retries. Unknown charges remain unknown. The ensemble has no independent charge. Embedding infrastructure is reported separately.",
+        "Known subtotals include all recorded attempts and retries: initial 10K, added 10K and the 16-call compatibility probe. Unpriced attempts are excluded from these subtotals, so a total with unpriced calls is a lower bound. The ensemble has no independent charge. Embedding infrastructure is reported separately.",
         "",
-        "| Model | Attempts | Known subtotal USD | Unpriced attempts | Total USD |",
-        "|---|---:|---:|---:|---:|",
+        "| Model | Initial 10K known USD | Added 10K known USD | Probe known USD | Combined known USD | Unpriced attempts |",
+        "|---|---:|---:|---:|---:|---:|",
     ]
     for model in MODELS:
-        a = accounting[model]
-        total = "unknown" if a["total_price_usd"] is None else f"${Decimal(a['total_price_usd']):.6f}"
-        lines.append(
-            f"| {model} | {a['attempts']:,} | ${Decimal(a['known_price_usd']):.6f} | {a['unpriced_attempts']} | {total} |"
-        )
+        values = [
+            historical_cost[model]["known_price_usd"],
+            accounting[model]["known_price_usd"],
+            probe_accounting[model]["known_price_usd"],
+            combined_cost[model]["known_price_usd"],
+        ]
+        money = " | ".join(f"${Decimal(v):.6f}" for v in values)
+        lines.append(f"| {model} | {money} | {combined_cost[model]['unpriced_attempts']} |")
+    lines.append("| Q-ReAlign Lite (historical only) | $0.00 | — | — | $0.00 | 0 |")
+    lines.append("| Reference (existing 1,500) | $0.00 | — | — | $0.00 | 0 |")
     (DATA / "report.md").write_text("\n".join(lines) + "\n")
     print(
         json.dumps(
