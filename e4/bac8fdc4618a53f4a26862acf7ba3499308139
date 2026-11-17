@@ -1,0 +1,25 @@
+visual-quality/labeling/runs/expansion-40000-2026-11-17/REPORT.md
+  s_ecbafe986334f4::t_e9591a0cb5941a 1-41
+visual-quality/labeling/runs/expansion-40000-2026-11-17/publish_aggregate.py
+  s_ecbafe986334f4::t_84b459419f7fc8 34
+visual-quality/labeling/runs/expansion-40000-2026-11-17/summary.json
+  s_ecbafe986334f4::t_3573be23db76a2 1-792
+visual-quality/labeling/runs/expansion-40000-2026-11-17/test_publish_aggregate.py
+  s_ecbafe986334f4::t_dadab4156056ff 166-187
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "e4bac8fdc4618a53f4a26862acf7ba3499308139",
+  "prompts": {},
+  "sessions": {
+    "s_ecbafe986334f4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1eb9b-2baf-7033-9225-a3f25bc7e0b4",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
