@@ -56,3 +56,23 @@ Keep 16 for this run and update the completion estimate from production throughp
 Four historical rehearsal views, chosen by source category without consulting their scores, were assessed independently by all four current routes. All 16 observations were valid, with 16 HTTP attempts, no content denials and no unknown charges. Total known cost was **$0.007057011**. Luna and DeepSeek requested high reasoning and returned nonzero reasoning-token usage; providers did not separately echo the effort setting. Existing labels were not modified. This small operational check establishes route/schema compatibility, not accuracy or a guarantee of later request success.
 
 After finalization, `publish_aggregate.py --data <full-local-run> --output-directory <tracked-run-directory>` creates the Git-safe report and summary. It binds publication to the matching export audit and explicitly projects aggregate fields. Never copy the full local summary directly: it includes per-image duplicate-review evidence.
+
+## One retry for an empty token-limit completion
+
+`recover_empty.py` is a separate recovery phase for Luna or DeepSeek after that model's baseline finishes completely. Eligibility requires HTTP 200, the expected model/provider, `finish_reason=length`, no visible answer or refusal, and all 16,384 completion tokens reported as reasoning. It excludes content denials, invalid numeric assessments, unscorable answers, truncated visible answers and any case with a prior valid score. Ordinary baseline retry policy remains unchanged.
+
+The `empty-length-once` plan freezes the eligible subset, original request and response hashes, baseline observation copies, and an exact total-attempt limit per image. Every noneligible observation is hash-pinned. The recovery sends the identical request bytes with the same image, profile, high reasoning and token budget. It appends one attempt and retains every earlier charge and measured latency. Even a recorded transport failure consumes that one attempt; restarting cannot send a second recovery request. An admitted request without a response receipt stops for manual reconciliation and retains an unknown charge.
+
+From this run directory, after reviewing the completed baseline's missing outcomes:
+
+```sh
+python recover_empty.py freeze --model deepseek
+python recover_empty.py check --model deepseek
+# With the already-authorized route credentials sourced privately:
+python recover_empty.py run --model deepseek
+python finalize.py --phase deepseek=empty-length-once
+```
+
+Freezing and checking do not make provider requests. A model with no eligible cases gets no recovery plan and keeps its normal finalization phase. Recovery runs sequentially under the model lock and the existing liability guard; the four ordinary graders keep their frozen 16-worker limits. A repeated cutoff remains a missing assessment, rather than a substituted score. The final report must separate recovery outcomes from baseline outcomes and count all attempts once.
+
+This runner expects the original `expansion` baseline without an intervening recovery phase. If exhausted transport failures also need recovery, review phase ordering and evidence pins before freezing either recovery plan; do not retrofit a frozen plan.
