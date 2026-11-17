@@ -139,6 +139,248 @@ def test_retryable_failures_require_exhaustion_and_known_plan():
     assert not export.finalized_observation({**row, "status": "observation_not_finalized"}, plans)
 
 
+def test_one_empty_completion_retry_uses_exact_per_case_limit():
+    plans = {
+        "recovery": {
+            "policy": {"max_attempts": 5},
+            "recovery": {"kind": "empty_length_once_v1", "attempt_limits": {"N1": 2, "N2": 5}},
+        }
+    }
+    row = {
+        "case_id": "N1",
+        "source_request_plan_id": "recovery",
+        "attempt_count": 2,
+        "status": "retryable_failure",
+    }
+    assert export.finalized_observation(row, plans)
+    assert export.finalized_observation({**row, "status": "invalid"}, plans)
+    assert not export.finalized_observation({**row, "attempt_count": 1}, plans)
+    assert not export.finalized_observation({**row, "attempt_count": 3, "status": "valid"}, plans)
+    assert not export.finalized_observation({**row, "case_id": "unlisted", "status": "valid"}, plans)
+    assert not export.finalized_observation({**row, "status": "observation_not_finalized"}, plans)
+
+
+def completed_subset_recovery(tmp_path):
+    manifest, phases = completed_run(tmp_path)
+    root = tmp_path / "results/api/deepseek"
+    baseline = json.loads((root / "plans/expansion.json").read_text())
+    original_request = root / "attempts/N1/01/request.json"
+    original_result = original_request.with_name("result.json")
+    request = {
+        "plan_id": baseline["plan_id"],
+        "model": "deepseek",
+        "case_id": "N1",
+        "attempt": 1,
+        "view_sha256": "hash1",
+        "profile_sha256": baseline["profile"]["sha256"],
+        "request_sha256": hashlib.sha256(b"unchanged payload").hexdigest(),
+    }
+    write(original_request, request)
+    write(original_result, {"http_status": 200, "body": "empty token-limit completion"})
+    archive = root / "recovery-evidence/empty-length-once/N1.json"
+    write(
+        archive,
+        {
+            **manifest["cases"][0],
+            "model": "deepseek",
+            "plan_id": baseline["plan_id"],
+            "attempt_count": 1,
+            "status": "failed",
+            "reason": "Incomplete completion",
+            "technical_score": None,
+            "aesthetic_score": None,
+            "task_valid": {"technical_quality": False, "aesthetics": False},
+            "raw_response_path": str(original_result),
+            "raw_response_sha256": hashlib.sha256(original_result.read_bytes()).hexdigest(),
+        },
+    )
+    source_pins = {
+        str(path): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in (original_request, original_result)
+    }
+    pinned_paths = [
+        root / "plans/expansion.json",
+        root / "expansion-status.json",
+        root / "observations/N2.json",
+        archive,
+    ]
+    recovery = {
+        **baseline,
+        "phase": "empty-length-once",
+        "plan_id": "deepseek-recovery",
+        "created_at": "2026-11-17T13:00:00Z",
+        "cases": baseline["cases"][:1],
+        "reference_pins": {
+            **source_pins,
+            **{str(path): hashlib.sha256(path.read_bytes()).hexdigest() for path in pinned_paths},
+        },
+        "recovery": {
+            "kind": "empty_length_once_v1",
+            "attempt_limits": {"N1": 2},
+            "baseline_phase": "expansion",
+            "baseline_plan_id": baseline["plan_id"],
+            "eligibility": {
+                "N1": {
+                    "previous_attempt_count": 1,
+                    "request_sha256": request["request_sha256"],
+                    "source_pins": source_pins,
+                    "baseline_observation_path": str(archive),
+                }
+            },
+        },
+    }
+    write(root / "attempts/N1/02/request.json", {**request, "plan_id": recovery["plan_id"], "attempt": 2})
+    write(
+        root / "attempts/N1/02/result.json",
+        {"transport_error": "ConnectionError", "price_usd": None, "latency_seconds": 1.0},
+    )
+    write(root / "plans/empty-length-once.json", recovery)
+    write(
+        root / "empty-length-once-status.json",
+        {
+            "status": "complete",
+            "plan_id": recovery["plan_id"],
+            "planned_cases": 1,
+            "selected_cases": 1,
+            "completed_cases": 1,
+            "outcomes": {"retryable_failure": 1},
+        },
+    )
+    write(
+        root / "observations/N1.json",
+        {**manifest["cases"][0], "plan_id": recovery["plan_id"], "attempt_count": 2},
+    )
+    phases["deepseek"] = "empty-length-once"
+    return manifest, phases, root
+
+
+def test_latest_subset_recovery_keeps_full_manifest_coverage_and_prior_plan(tmp_path):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    unchanged = (root / "observations/N2.json").read_bytes()
+    plans, selected = export.validate_completed_runs(tmp_path, manifest, phases, lambda plan: None)
+    assert len(plans) == 5 and "deepseek-plan" in plans and "deepseek-recovery" in plans
+    assert selected["deepseek"] == {"phase": "empty-length-once", "plan_id": "deepseek-recovery", "cases": 1}
+    assert (root / "observations/N2.json").read_bytes() == unchanged
+
+
+@pytest.mark.parametrize(
+    "field,value", [("plan_id", "deepseek-plan"), ("attempt_count", 1), ("attempt_count", 3)]
+)
+def test_recovery_complete_status_cannot_hide_stale_or_extra_attempt_observations(tmp_path, field, value):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    path = root / "observations/N1.json"
+    write(path, {**json.loads(path.read_text()), field: value})
+    with pytest.raises(ValueError, match="recovery observations"):
+        export.validate_completed_runs(tmp_path, manifest, phases, lambda plan: None)
+
+
+def test_recovery_reference_pins_are_validated_before_export(tmp_path):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    path = root / "plans/empty-length-once.json"
+    plan = json.loads(path.read_text())
+    observation = root / "observations/N2.json"
+    plan["reference_pins"][str(observation)] = hashlib.sha256(observation.read_bytes()).hexdigest()
+    write(path, plan)
+
+    def validate_pins(frozen):
+        for filename, expected in frozen.get("reference_pins", {}).items():
+            if hashlib.sha256(Path(filename).read_bytes()).hexdigest() != expected:
+                raise ValueError("Pinned original observation changed")
+
+    export.validate_completed_runs(tmp_path, manifest, phases, validate_pins)
+    write(observation, {**manifest["cases"][1], "unexpected_score": 4.0})
+    with pytest.raises(ValueError, match="Pinned original observation"):
+        export.validate_completed_runs(tmp_path, manifest, phases, validate_pins)
+
+
+@pytest.mark.parametrize(
+    "relative",
+    [
+        "observations/N2.json",
+        "attempts/N1/01/request.json",
+        "attempts/N1/01/result.json",
+        "recovery-evidence/empty-length-once/N1.json",
+    ],
+)
+def test_independent_recovery_audit_requires_every_original_reference_pin(tmp_path, relative):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    path = root / "plans/empty-length-once.json"
+    plan = json.loads(path.read_text())
+    plan["reference_pins"].pop(str(root / relative))
+    write(path, plan)
+    with pytest.raises(ValueError, match="recovery evidence pin"):
+        export.validate_completed_runs(tmp_path, manifest, phases, lambda plan: None)
+
+
+@pytest.mark.parametrize(
+    "relative", ["observations/N2.json", "attempts/N1/01/request.json", "attempts/N1/01/result.json"]
+)
+def test_independent_recovery_audit_rehashes_original_evidence(tmp_path, relative):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    path = root / relative
+    write(path, {**json.loads(path.read_text()), "unexpected_change": True})
+    with pytest.raises(ValueError, match="recovery evidence pin"):
+        export.validate_completed_runs(tmp_path, manifest, phases, lambda plan: None)
+
+
+def test_recovery_source_allowlist_must_cover_every_prior_request_and_response(tmp_path):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    path = root / "plans/empty-length-once.json"
+    plan = json.loads(path.read_text())
+    plan["recovery"]["eligibility"]["N1"]["source_pins"].pop(str(root / "attempts/N1/01/result.json"))
+    write(path, plan)
+    with pytest.raises(ValueError, match="source receipt pins"):
+        export.validate_completed_runs(tmp_path, manifest, phases, lambda plan: None)
+
+
+def test_frozen_source_allowlist_digest_must_match_both_file_and_reference_pin(tmp_path):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    path = root / "plans/empty-length-once.json"
+    plan = json.loads(path.read_text())
+    plan["recovery"]["eligibility"]["N1"]["source_pins"][str(root / "attempts/N1/01/result.json")] = "0" * 64
+    write(path, plan)
+    with pytest.raises(ValueError, match="recovery evidence pin"):
+        export.validate_completed_runs(tmp_path, manifest, phases, lambda plan: None)
+
+
+def test_recovery_cap_cannot_silently_allow_two_additional_attempts(tmp_path):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    path = root / "plans/empty-length-once.json"
+    plan = json.loads(path.read_text())
+    plan["recovery"]["attempt_limits"]["N1"] = 3
+    write(path, plan)
+    observation = root / "observations/N1.json"
+    write(observation, {**json.loads(observation.read_text()), "attempt_count": 3})
+    with pytest.raises(ValueError, match="exactly one additional"):
+        export.validate_completed_runs(tmp_path, manifest, phases, lambda plan: None)
+
+
+def test_recovery_appended_payload_hash_must_match_the_frozen_original(tmp_path):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    path = root / "attempts/N1/02/request.json"
+    write(path, {**json.loads(path.read_text()), "request_sha256": "0" * 64})
+    with pytest.raises(ValueError, match="original payload"):
+        export.validate_completed_runs(tmp_path, manifest, phases, lambda plan: None)
+
+
+def test_unreceipted_recovery_request_blocks_export_even_if_status_claims_complete(tmp_path):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    (root / "attempts/N1/02/result.json").unlink()
+    with pytest.raises(ValueError, match="no response receipt"):
+        export.validate_completed_runs(tmp_path, manifest, phases, lambda plan: None)
+
+
+@pytest.mark.parametrize("limits", [{"unknown": 2}, {"N1": 4}, {"N1": 0}])
+def test_recovery_limits_match_the_frozen_subset_and_global_ceiling(tmp_path, limits):
+    manifest, phases, root = completed_subset_recovery(tmp_path)
+    path = root / "plans/empty-length-once.json"
+    plan = json.loads(path.read_text())
+    plan["recovery"]["attempt_limits"] = limits
+    write(path, plan)
+    with pytest.raises(ValueError, match="recovery attempt limits"):
+        export.validate_completed_runs(tmp_path, manifest, phases, lambda plan: None)
+
+
 def test_current_completed_plans_are_admitted(tmp_path):
     manifest, phases = completed_run(tmp_path)
     validated = []

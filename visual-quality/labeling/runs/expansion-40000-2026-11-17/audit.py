@@ -106,6 +106,13 @@ def audit_run(data, old, phases):
             "jev": "typesafe/jev-1.14",
         }.items():
             require(routes[model]["requested_model"] == expected, "Requested grader changed")
+        if plan.get("recovery", {}).get("kind") == "empty_length_once_v1":
+            for case in plan["cases"]:
+                _, request_sha256 = runner.prepare(plan, case)
+                require(
+                    request_sha256 == plan["recovery"]["eligibility"][case["case_id"]]["request_sha256"],
+                    "Recovery payload reconstructed from the exact view/profile differs from the original",
+                )
     parsed, statuses = 0, Counter()
     for case, label in zip(cases, labels, strict=True):
         identity = case["case_id"]

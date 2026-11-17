@@ -262,6 +262,13 @@ def report(summary):
     lines += [
         "",
         (
+            "Latency is measured from HTTP invocation through complete response receipt. Baseline grading "
+            "ran four concurrent routes with up to 16 workers per route, so these are observed timings "
+            "under shared load, not isolated provider benchmarks. Payload preparation and scheduler wait "
+            "are excluded; retries retain separate timings and receipts."
+        ),
+        "",
+        (
             f"EmbeddingGemma 2 grouped content into {len(summary['corpus_coverage']['clusters'])} clusters. "
             f"There are {summary['corpus_coverage']['possible_duplicate_pairs']:,} potential duplicate pairs "
             "for review; similarity does not establish duplicate identity or quality."

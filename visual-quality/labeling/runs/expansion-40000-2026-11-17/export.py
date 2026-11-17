@@ -9,6 +9,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import re
 import shutil
 from collections import Counter
 from decimal import Decimal
@@ -102,11 +103,127 @@ def finalized_observation(row, plans):
     plan = plans.get(row.get("source_request_plan_id"))
     if plan is None:
         return False
+    recovery = plan.get("recovery", {})
+    if recovery.get("kind") == "empty_length_once_v1":
+        limit = recovery.get("attempt_limits", {}).get(row.get("case_id"))
+        return (
+            type(limit) is int
+            and limit > 0
+            and row.get("attempt_count") == limit
+            and row["status"] in ("valid", "partial", "invalid", "failed", "retryable_failure")
+        )
     if row["status"] in ("valid", "partial", "invalid", "failed"):
         return True
     return (
         row["status"] == "retryable_failure" and row.get("attempt_count", 0) >= plan["policy"]["max_attempts"]
     )
+
+
+def verify_recovery_evidence(root, plan, baseline, expected):
+    """Independently verify the complete frozen recovery allowlist and its evidence."""
+    recovery = plan["recovery"]
+    eligible = recovery.get("eligibility", {})
+    limits = recovery["attempt_limits"]
+    if set(eligible) != set(limits):
+        raise ValueError("Recovery eligibility and attempt limits differ")
+    if (
+        recovery.get("baseline_phase") != baseline["phase"]
+        or recovery.get("baseline_plan_id") != baseline["plan_id"]
+        or plan["profile"] != baseline["profile"]
+        or {case["case_id"]: case["view_sha256"] for case in baseline["cases"]} != expected
+    ):
+        raise ValueError("Recovery baseline/profile/full-manifest evidence differs")
+    pins = plan.get("reference_pins", {})
+
+    def pinned(path, required=None):
+        with path.open("rb") as stream:
+            actual = hashlib.file_digest(stream, "sha256").hexdigest()
+        if pins.get(str(path)) != actual or (required is not None and actual != required):
+            raise ValueError(f"Missing or changed recovery evidence pin: {path}")
+        return json.loads(path.read_text())
+
+    baseline_path = root / "plans" / f"{baseline['phase']}.json"
+    if pinned(baseline_path) != baseline:
+        raise ValueError("Recovery baseline plan differs from its pinned file")
+    state = pinned(root / f"{baseline['phase']}-status.json")
+    if (
+        state.get("status") != "complete"
+        or state.get("plan_id") != baseline["plan_id"]
+        or any(
+            state.get(key) != len(expected) for key in ("planned_cases", "selected_cases", "completed_cases")
+        )
+        or sum(state.get("outcomes", {}).values()) != len(expected)
+    ):
+        raise ValueError("Recovery baseline was not fully complete")
+    for identity in set(expected) - set(eligible):
+        pinned(root / "observations" / f"{identity}.json")
+    for identity, item in eligible.items():
+        previous = item.get("previous_attempt_count")
+        if type(previous) is not int or previous < 1 or limits[identity] != previous + 1:
+            raise ValueError("Recovery must permit exactly one additional attempt")
+        if not isinstance(item.get("request_sha256"), str) or not re.fullmatch(
+            r"[0-9a-f]{64}", item["request_sha256"]
+        ):
+            raise ValueError("Recovery requires a frozen original request-body hash")
+        archive = root / "recovery-evidence" / plan["phase"] / f"{identity}.json"
+        if item.get("baseline_observation_path") != str(archive):
+            raise ValueError("Recovery baseline observation archive path differs")
+        row = pinned(archive)
+        if (
+            row.get("case_id") != identity
+            or row.get("view_sha256") != expected[identity]
+            or row.get("model") != plan["model"]
+            or row.get("plan_id") != baseline["plan_id"]
+            or row.get("attempt_count") != previous
+            or row.get("status") != "failed"
+            or row.get("reason") != "Incomplete completion"
+            or any(row.get(d + "_score") is not None for d in ("technical", "aesthetic"))
+            or any(row.get("task_valid", {}).values())
+        ):
+            raise ValueError("Archived observation does not prove a missing baseline assessment")
+        attempts = sorted((root / "attempts" / identity).glob("*/request.json"))
+        if len(attempts) != previous + 1:
+            raise ValueError("Recovery receipt count is not exactly one additional attempt")
+        expected_paths = {
+            str(path)
+            for request in attempts[:previous]
+            for path in (request, request.with_name("result.json"))
+        }
+        if set(item.get("source_pins", {})) != expected_paths:
+            raise ValueError("Recovery source receipt pins are incomplete or unexpected")
+        for number, request_path in enumerate(attempts, 1):
+            if request_path.parent.name != f"{number:02d}":
+                raise ValueError("Recovery attempt numbering changed")
+            prior = number <= previous
+            request = (
+                pinned(request_path, item["source_pins"][str(request_path)])
+                if prior
+                else json.loads(request_path.read_text())
+            )
+            if any(
+                request.get(key) != value
+                for key, value in {
+                    "plan_id": baseline["plan_id"] if prior else plan["plan_id"],
+                    "model": plan["model"],
+                    "case_id": identity,
+                    "attempt": number,
+                    "view_sha256": expected[identity],
+                    "profile_sha256": plan["profile"]["sha256"],
+                    "request_sha256": item.get("request_sha256"),
+                }.items()
+            ):
+                raise ValueError("Recovery request differs from its frozen original payload/identity")
+            result_path = request_path.with_name("result.json")
+            if not result_path.exists():
+                raise ValueError("Recovery request has no response receipt; reconciliation required")
+            if prior:
+                pinned(result_path, item["source_pins"][str(result_path)])
+        original_result = attempts[previous - 1].with_name("result.json")
+        if (
+            row.get("raw_response_path") != str(original_result)
+            or row.get("raw_response_sha256") != item["source_pins"][str(original_result)]
+        ):
+            raise ValueError("Archived observation points to different original response evidence")
 
 
 def validate_completed_runs(data, manifest, phases, validate_plan):
@@ -142,6 +259,18 @@ def validate_completed_runs(data, manifest, phases, validate_plan):
                 or any(expected.get(identity) != view for identity, view in case_views.items())
             ):
                 raise ValueError(f"{model}: plan cases do not match the delivered manifest")
+            recovery = entry.get("recovery")
+            if recovery is not None:
+                limits = recovery.get("attempt_limits", {})
+                if (
+                    recovery.get("kind") != "empty_length_once_v1"
+                    or set(limits) != set(case_views)
+                    or any(
+                        type(limit) is not int or not 0 < limit <= entry["policy"]["max_attempts"]
+                        for limit in limits.values()
+                    )
+                ):
+                    raise ValueError(f"{model}: unsupported or inconsistent recovery attempt limits")
             if entry["plan_id"] in all_plans:
                 raise ValueError("Duplicate frozen plan ID")
             all_plans[entry["plan_id"]] = entry
@@ -160,6 +289,20 @@ def validate_completed_runs(data, manifest, phases, validate_plan):
         observed_views = {row["case_id"]: row["view_sha256"] for row in observed}
         if len(observed) != len(expected) or observed_views != expected:
             raise ValueError(f"{model}: observations do not exactly cover the delivered manifest")
+        if plan.get("recovery", {}).get("kind") == "empty_length_once_v1":
+            by_id = {row["case_id"]: row for row in observed}
+            if any(
+                by_id[identity].get("plan_id") != plan["plan_id"]
+                or by_id[identity].get("attempt_count") != limit
+                for identity, limit in plan["recovery"]["attempt_limits"].items()
+            ):
+                raise ValueError(f"{model}: recovery observations are stale or exceed their frozen limits")
+            baseline = next(
+                (item for item in plans if item["plan_id"] == plan["recovery"].get("baseline_plan_id")), None
+            )
+            if baseline is None:
+                raise ValueError(f"{model}: recovery baseline plan is missing")
+            verify_recovery_evidence(root, plan, baseline, expected)
         selected[model] = {"phase": phase, "plan_id": plan["plan_id"], "cases": count}
     return all_plans, selected
 
@@ -226,6 +369,13 @@ def write_report(data, old, summary):
             f"{formatted(row['median_final_attempt_seconds'])} |"
         )
     lines += [
+        "",
+        (
+            "Latency is measured from HTTP invocation through complete response receipt. Baseline grading "
+            "ran four concurrent routes with up to 16 workers per route, so these are observed timings "
+            "under shared load, not isolated provider benchmarks. Payload preparation and scheduler wait "
+            "are excluded; retries retain separate timings and receipts."
+        ),
         "",
         (
             "Means describe available numeric pairs, not accuracy. There are no independent "
