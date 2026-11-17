@@ -1,0 +1,77 @@
+visual-quality/labeling/README.md
+  s_a985f77760d967::t_608e7a9893acea 60
+visual-quality/labeling/runs/expansion-40000-2026-11-17/README.md
+  s_a985f77760d967::t_69281d940b903c 1-35
+visual-quality/labeling/runs/expansion-40000-2026-11-17/acquire_pool.py
+  s_2363ed04668cf7::t_28596ea64f71d1 1-220
+visual-quality/labeling/runs/expansion-40000-2026-11-17/audit.py
+  s_2363ed04668cf7::t_f8f52445b1d4ce 1-232
+visual-quality/labeling/runs/expansion-40000-2026-11-17/corpus.py
+  s_2363ed04668cf7::t_57ba46e67c9d82 1-216
+visual-quality/labeling/runs/expansion-40000-2026-11-17/embed.py
+  s_649d549c60cb79::t_badb3078fab235 1-166
+visual-quality/labeling/runs/expansion-40000-2026-11-17/embed_cpu.py
+  s_649d549c60cb79::t_43da3e370aa9a6 1-253
+visual-quality/labeling/runs/expansion-40000-2026-11-17/export.py
+  s_2363ed04668cf7::t_2e08a0a67900c4 1-404
+visual-quality/labeling/runs/expansion-40000-2026-11-17/finalize.py
+  s_2363ed04668cf7::t_f13610fabe9e59 1-79
+visual-quality/labeling/runs/expansion-40000-2026-11-17/related.py
+  s_2363ed04668cf7::t_c469d02e773b50 1-114
+visual-quality/labeling/runs/expansion-40000-2026-11-17/score.py
+  s_8dcf5f82e439ca::t_9bbefc2241ae30 1-136
+visual-quality/labeling/runs/expansion-40000-2026-11-17/selection.py
+  s_2363ed04668cf7::t_1245c02122e3e8 1-321
+visual-quality/labeling/runs/expansion-40000-2026-11-17/test_acquire_pool.py
+  s_2363ed04668cf7::t_1407f317ecc5a9 1-107
+visual-quality/labeling/runs/expansion-40000-2026-11-17/test_corpus.py
+  s_649d549c60cb79::t_8c6ae800829a03 1-206
+visual-quality/labeling/runs/expansion-40000-2026-11-17/test_export.py
+  s_2363ed04668cf7::t_12fa2e4552182e 1-251
+visual-quality/labeling/runs/expansion-40000-2026-11-17/test_scoring.py
+  s_8dcf5f82e439ca::t_92a058121c61e1 1-186
+visual-quality/src/visual_quality/scoring/README.md
+  s_2363ed04668cf7::t_7573386cd6e21e 8
+visual-quality/src/visual_quality/scoring/batch.py
+  s_2363ed04668cf7::t_5f3ec6841fe078 1-198
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "6e97b7484948992e66e679b527f33cc59c8603f3",
+  "prompts": {},
+  "sessions": {
+    "s_2363ed04668cf7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e9e0-18b0-75a2-9020-8982e79e33f2",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_649d549c60cb79": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e9df-d83c-7652-acdb-cad569a02728",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_8dcf5f82e439ca": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e9df-fa22-7663-83b4-a5bdc58f49d5",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    },
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
