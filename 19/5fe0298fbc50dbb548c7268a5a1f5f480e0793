@@ -1,0 +1,21 @@
+visual-quality/labeling/runs/expansion-40000-2026-11-17/embed.py
+  s_649d549c60cb79::t_620feb24294cee 17-42,93-110,112-113
+visual-quality/labeling/runs/expansion-40000-2026-11-17/test_corpus.py
+  s_649d549c60cb79::t_a8893e805ba13c 230-284
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "195fe0298fbc50dbb548c7268a5a1f5f480e0793",
+  "prompts": {},
+  "sessions": {
+    "s_649d549c60cb79": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e9df-d83c-7652-acdb-cad569a02728",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
