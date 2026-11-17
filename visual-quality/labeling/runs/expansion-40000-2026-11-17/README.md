@@ -34,6 +34,21 @@ Run the existing `stats_run.py` with this checkout's `image-stats/src` and `visu
 
 Projected API fees are about **$33.87**, based on the previous added 10K, before unknown charges or changed provider prices. This is an estimate, not the internal conservative liability guard. Actual model fees, unknown attempt charges, HTTP latencies and embedding infrastructure costs must be reported separately. Never count derived ensemble component costs twice.
 
+## Why full runs use 16 workers per route
+
+Sixteen workers is an empirically safer default from the prior 20K expansion, not a published provider limit or a measured CPU/RAM ceiling. Its request receipts show:
+
+| Model | Workers | Attempts | Retryable failures | HTTP 429 responses | Valid-response latency, mean / p95 |
+|---|---:|---:|---:|---:|---:|
+| Luna, initial phase | 64 | 635 | 162 (25.5%) | 0 | 26.63s / 36.86s |
+| Luna, recovery | 16 | 9,530 | 3 (0.031%) | 0 | 13.96s / 22.20s |
+| DeepSeek, initial phase | 64 | 715 | 245 (34.3%) | 79 | 32.47s / 48.46s |
+| DeepSeek, recovery | 16 | 9,533 | 3 (0.031%) | 0 | 15.24s / 28.15s |
+
+The 429 responses are included in the retryable-failure totals; the remaining failures were transport errors. Observed peak concurrency matched the configured limits. The initial teacher phases left 407 unpriced attempts, versus six across the much larger recovery phases. Liquid and Jev's later 16-worker runs each completed 2,855 attempts without transport errors or 429s; there is no comparable 32-worker measurement for those routes.
+
+Keep 16 for this run and update the completion estimate from production throughput. These initial/recovery periods were not randomized, so they do not establish a hard provider limit or isolate shared client/network pressure. A future bounded 32-worker test could use still-unscored cases under a separately frozen policy, preserving the planned unique assessments, but retries could increase actual attempts and cost. Do not change an active frozen plan to run that experiment. Full aggregate evidence is retained locally at `operations/prior-concurrency-evidence.json`.
+
 ## Live compatibility check
 
 Four historical rehearsal views, chosen by source category without consulting their scores, were assessed independently by all four current routes. All 16 observations were valid, with 16 HTTP attempts, no content denials and no unknown charges. Total known cost was **$0.007057011**. Luna and DeepSeek requested high reasoning and returned nonzero reasoning-token usage; providers did not separately echo the effort setting. Existing labels were not modified. This small operational check establishes route/schema compatibility, not accuracy or a guarantee of later request success.
