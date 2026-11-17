@@ -57,4 +57,4 @@ The held-out eligibility check contained 60 eligible and 60 excluded views, incl
 
 ## Current expansion
 
-The [20K expansion decision and run](runs/expansion-20000-2026-11-16/README.md) retains the existing ensemble after the [500-image Decisions comparison](trials/decision-comparison-500-2026-11-13/report.md). Full labels remain local; the first-1,000 publication allowlist is unchanged.
+The [40K expansion](runs/expansion-40000-2026-11-17/README.md) adds 20,000 images to the completed [20K run](runs/expansion-20000-2026-11-16/README.md), retaining the existing ensemble after the [500-image Decisions comparison](trials/decision-comparison-500-2026-11-13/report.md). Full labels remain local; the first-1,000 publication allowlist and 1,500 reference benchmark are unchanged.
