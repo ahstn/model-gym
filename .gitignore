@@ -41,3 +41,6 @@ visual-quality/experiments/qrealign-lite-72-2026-10-31/
 visual-quality/experiments/rehearsal-4000-2026-11-01/
 visual-quality/experiments/runinfra-comparison-2026-10-25/
 visual-quality/experiments/runinfra-string-trial-2026-10-26/
+
+# Tracked labeling run orchestration; full run output remains under visual-quality/data/.
+!visual-quality/labeling/runs/

@@ -1,6 +1,6 @@
 # Visual quality docs
 
-The [photo-labeling workspace](../labeling/README.md) is the current source for model routes, two-score prompts, eligibility decisions, corpus records and review rules. GPT-6 Luna and DeepSeek form the working teacher mean. Liquid and Jev remain comparison and eligibility-review models. All recorded labels are pending review before training.
+The [photo-labeling workspace](../labeling/README.md) is the current source for model routes, two-score prompts, eligibility decisions, corpus records and review rules. The canonical ensemble is 37.5% GPT-6 Luna + 37.5% DeepSeek + 25% Liquid for each outcome. Jev remains a comparison and eligibility-review model. All recorded labels are pending review before training.
 
 The [prompt and labeling summary](training/synthetic-label-prompts.md) records the current decisions and their evidence. Model, dataset and evaluation research below provides background for the next dataset and training work; historical experiments are not alternative active labeling setups.
 
@@ -26,6 +26,7 @@ The [prompt and labeling summary](training/synthetic-label-prompts.md) records t
 | Training | [training/data-mixture-evidence.md](training/data-mixture-evidence.md) | Controlled evidence that adding or choosing data helps or hurts. |
 | Training | [../labeling/README.md](../labeling/README.md) | Current photo-labeling configuration, records and review policy. |
 | Training | [training/synthetic-label-prompts.md](training/synthetic-label-prompts.md) | Current two-score prompts, eligibility rules and the reasons for their selection. |
+| Training | [training/runpod-200k-budget-2026-11-17.md](training/runpod-200k-budget-2026-11-17.md) | Current RunPod quotes, two-epoch 200K LoRA cost sensitivities and timing-pilot requirements. |
 | Training | [training/experiment-plan.md](training/experiment-plan.md) | Staged experiment plan and compute assumptions. |
 | Training | [training/corpus-size-estimate-2026-10-31.md](training/corpus-size-estimate-2026-10-31.md) | Proposed 50K source-family corpus, fixed holdouts, learning curves, human evaluation and teacher-label cost estimate. |
 | Evaluation | [evaluation/protocol.md](evaluation/protocol.md) | Metrics, split rules, calibration, and the Q-ReAlign code audit. |

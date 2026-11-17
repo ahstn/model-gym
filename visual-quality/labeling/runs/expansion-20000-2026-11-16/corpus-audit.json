@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "new_images_verified": 10000,
+  "combined_unique_image_hashes": 20000,
+  "statistics_exact_view_joins": 10000,
+  "original_evidence_unchanged": true,
+  "created_unix": 1794839318.4193656,
+  "note": "Corpus-only audit; inference is ongoing and is audited separately after export."
+}

@@ -1,0 +1,1048 @@
+{
+  "selection": {
+    "images": 500,
+    "clusters": 64,
+    "sources": {
+      "megalith": 384,
+      "vizwiz": 97,
+      "controls": 19
+    },
+    "arms": {
+      "diversity_sample": 125,
+      "high_disagreement": 375
+    },
+    "mean_variance_pool": 0.07135420014614528,
+    "mean_variance_selected": 0.10385266093087123,
+    "cluster_counts": {
+      "0": 9,
+      "1": 3,
+      "2": 7,
+      "3": 11,
+      "4": 8,
+      "5": 7,
+      "6": 3,
+      "7": 11,
+      "8": 9,
+      "9": 8,
+      "10": 11,
+      "11": 7,
+      "12": 7,
+      "13": 8,
+      "14": 8,
+      "15": 7,
+      "16": 8,
+      "17": 8,
+      "18": 8,
+      "19": 8,
+      "20": 7,
+      "21": 7,
+      "22": 9,
+      "23": 7,
+      "24": 6,
+      "25": 7,
+      "26": 9,
+      "27": 6,
+      "28": 9,
+      "29": 7,
+      "30": 8,
+      "31": 8,
+      "32": 9,
+      "33": 9,
+      "34": 7,
+      "35": 5,
+      "36": 6,
+      "37": 6,
+      "38": 10,
+      "39": 8,
+      "40": 8,
+      "41": 8,
+      "42": 10,
+      "43": 8,
+      "44": 9,
+      "45": 9,
+      "46": 5,
+      "47": 9,
+      "48": 6,
+      "49": 8,
+      "50": 9,
+      "51": 8,
+      "52": 6,
+      "53": 9,
+      "54": 7,
+      "55": 3,
+      "56": 8,
+      "57": 10,
+      "58": 10,
+      "59": 11,
+      "60": 8,
+      "61": 9,
+      "62": 11,
+      "63": 5
+    },
+    "plan_sha256": "b49a51ee49529c08a155ef07ac54d7365d4ed532d09e75496784979214b79714",
+    "warning": "Disagreement-enriched diagnostic sample, not an unbiased accuracy benchmark. References were not used in selection."
+  },
+  "all": {
+    "reference": {
+      "technical": {
+        "n": 500,
+        "mean": 3.2592,
+        "mae": 0.0,
+        "bias": 0.0,
+        "rho": 0.9999999999999998
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 3.049,
+        "mae": 0.0,
+        "bias": 0.0,
+        "rho": 1.0
+      },
+      "latency_n": 0,
+      "latency_median_seconds": null,
+      "latency_mean_seconds": null,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 0,
+        "excluded_n": 34,
+        "missed_exclusion": 0
+      }
+    },
+    "luna": {
+      "technical": {
+        "n": 500,
+        "mean": 3.4436,
+        "mae": 0.3568,
+        "bias": 0.18439999999999998,
+        "rho": 0.9112913213984942
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 3.3282,
+        "mae": 0.3628,
+        "bias": 0.2792,
+        "rho": 0.8708467945893595
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 11.475059148157015,
+      "latency_mean_seconds": 11.624533731540666,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 1,
+        "excluded_n": 34,
+        "missed_exclusion": 4
+      }
+    },
+    "deepseek": {
+      "technical": {
+        "n": 500,
+        "mean": 3.5798,
+        "mae": 0.4822,
+        "bias": 0.3206,
+        "rho": 0.8168519506671909
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 3.275,
+        "mae": 0.3596,
+        "bias": 0.226,
+        "rho": 0.8355236841598642
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 17.81583585496992,
+      "latency_mean_seconds": 19.077968033767306,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 1,
+        "excluded_n": 34,
+        "missed_exclusion": 2
+      }
+    },
+    "liquid": {
+      "technical": {
+        "n": 500,
+        "mean": 3.1721503066418735,
+        "mae": 0.37458240323204184,
+        "bias": -0.08704969335812635,
+        "rho": 0.8727426129721915
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 2.903583338780613,
+        "mae": 0.29915250908038005,
+        "bias": -0.14541666121938684,
+        "rho": 0.8803184662908318
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 5.738322347402573,
+      "latency_mean_seconds": 5.617074908160604,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 2,
+        "excluded_n": 34,
+        "missed_exclusion": 4
+      }
+    },
+    "jev": {
+      "technical": {
+        "n": 500,
+        "mean": 3.31896,
+        "mae": 0.36484,
+        "bias": 0.05976000000000001,
+        "rho": 0.8636853120251715
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 2.89048,
+        "mae": 0.31776,
+        "bias": -0.15852,
+        "rho": 0.8745894225329474
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 4.968292866833508,
+      "latency_mean_seconds": 5.173190792920068,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 0,
+        "excluded_n": 34,
+        "missed_exclusion": 11
+      }
+    },
+    "qrealign_lite": {
+      "technical": {
+        "n": 500,
+        "mean": 3.73446611791756,
+        "mae": 0.5925346980532631,
+        "bias": 0.47526611791756007,
+        "rho": 0.8214888554069695
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 2.1734801566854585,
+        "mae": 1.0482106474816333,
+        "bias": -0.8755198433145415,
+        "rho": 0.6763455899850334
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 5.065597731154412,
+      "latency_mean_seconds": 5.5071084542926405,
+      "numeric_pairs": 500,
+      "scope": {}
+    },
+    "photo_ensemble": {
+      "technical": {
+        "n": 500,
+        "mean": 3.4268125766604682,
+        "mae": 0.3635535699703946,
+        "bias": 0.16761257666046842,
+        "rho": 0.9251908243657166
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 3.2020958346951534,
+        "mae": 0.2694705918670748,
+        "bias": 0.15309583469515328,
+        "rho": 0.9200408605643318
+      },
+      "latency_n": 0,
+      "latency_median_seconds": null,
+      "latency_mean_seconds": null,
+      "numeric_pairs": 500,
+      "scope": {}
+    },
+    "perplexity": {
+      "technical": {
+        "n": 500,
+        "mean": 3.5886806047427013,
+        "mae": 0.4195104548921806,
+        "bias": 0.32948060474270136,
+        "rho": 0.8737781229340382
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 3.258247400895569,
+        "mae": 0.31903337126430653,
+        "bias": 0.20924740089556898,
+        "rho": 0.8692620636788734
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 1.6915615254547447,
+      "latency_mean_seconds": 1.7544496530015021,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 0,
+        "excluded_n": 34,
+        "missed_exclusion": 10
+      }
+    },
+    "gemini": {
+      "technical": {
+        "n": 500,
+        "mean": 3.366932141110366,
+        "mae": 0.36010258398584627,
+        "bias": 0.1077321411103658,
+        "rho": 0.8790257596001838
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 2.668399604588678,
+        "mae": 0.4848166760102959,
+        "bias": -0.3806003954113219,
+        "rho": 0.8710415350237304
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 2.0176981016993523,
+      "latency_mean_seconds": 2.0673690379569307,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 0,
+        "excluded_n": 34,
+        "missed_exclusion": 7
+      }
+    }
+  },
+  "costs": {
+    "reference": {
+      "known_usd": "0.00",
+      "unpriced_attempts": 0,
+      "new_requests": 0,
+      "basis": "retained historical receipts; no new spend"
+    },
+    "luna": {
+      "known_usd": "0.403838000",
+      "unpriced_attempts": 0,
+      "new_requests": 0,
+      "basis": "retained historical receipts; no new spend"
+    },
+    "deepseek": {
+      "known_usd": "0.34183600",
+      "unpriced_attempts": 4,
+      "new_requests": 0,
+      "basis": "retained historical receipts; no new spend"
+    },
+    "liquid": {
+      "known_usd": "0.02492190",
+      "unpriced_attempts": 0,
+      "new_requests": 0,
+      "basis": "retained historical receipts; no new spend"
+    },
+    "jev": {
+      "known_usd": "0.090034728",
+      "unpriced_attempts": 84,
+      "new_requests": 0,
+      "basis": "retained historical receipts; no new spend"
+    },
+    "qrealign_lite": {
+      "known_usd": "0.00",
+      "unpriced_attempts": 0,
+      "new_requests": 0,
+      "basis": "retained historical receipts; no new spend"
+    },
+    "photo_ensemble": {
+      "known_usd": null,
+      "unpriced_attempts": 0,
+      "new_requests": 0,
+      "basis": "derived; no independent charge"
+    },
+    "perplexity": {
+      "known_usd": "0",
+      "unpriced_attempts": 0,
+      "new_requests": 500,
+      "basis": "new run; every attempt"
+    },
+    "gemini": {
+      "known_usd": "0.0791060",
+      "unpriced_attempts": 0,
+      "new_requests": 500,
+      "basis": "new run; every attempt"
+    }
+  },
+  "arms": {
+    "high_disagreement": {
+      "reference": {
+        "technical": {
+          "n": 375,
+          "mean": 3.196,
+          "mae": 0.0,
+          "bias": 0.0,
+          "rho": 1.0
+        },
+        "aesthetic": {
+          "n": 375,
+          "mean": 3.0288,
+          "mae": 0.0,
+          "bias": 0.0,
+          "rho": 1.0
+        },
+        "latency_n": 0,
+        "latency_median_seconds": null,
+        "latency_mean_seconds": null,
+        "numeric_pairs": 375,
+        "scope": {
+          "eligible_n": 347,
+          "false_floor": 0,
+          "excluded_n": 24,
+          "missed_exclusion": 0
+        }
+      },
+      "luna": {
+        "technical": {
+          "n": 375,
+          "mean": 3.4197333333333333,
+          "mae": 0.37306666666666666,
+          "bias": 0.22373333333333334,
+          "rho": 0.9171135351388555
+        },
+        "aesthetic": {
+          "n": 375,
+          "mean": 3.3487999999999998,
+          "mae": 0.392,
+          "bias": 0.32,
+          "rho": 0.8689717534703671
+        },
+        "latency_n": 375,
+        "latency_median_seconds": 11.611714146099985,
+        "latency_mean_seconds": 11.656533109797786,
+        "numeric_pairs": 375,
+        "scope": {
+          "eligible_n": 347,
+          "false_floor": 1,
+          "excluded_n": 24,
+          "missed_exclusion": 3
+        }
+      },
+      "deepseek": {
+        "technical": {
+          "n": 375,
+          "mean": 3.5805333333333333,
+          "mae": 0.5269333333333334,
+          "bias": 0.38453333333333334,
+          "rho": 0.8138653709491954
+        },
+        "aesthetic": {
+          "n": 375,
+          "mean": 3.308533333333333,
+          "mae": 0.3976,
+          "bias": 0.27973333333333333,
+          "rho": 0.8144296987754176
+        },
+        "latency_n": 375,
+        "latency_median_seconds": 18.071523203980178,
+        "latency_mean_seconds": 19.31655277942245,
+        "numeric_pairs": 375,
+        "scope": {
+          "eligible_n": 347,
+          "false_floor": 0,
+          "excluded_n": 24,
+          "missed_exclusion": 1
+        }
+      },
+      "liquid": {
+        "technical": {
+          "n": 375,
+          "mean": 3.1135577828165086,
+          "mae": 0.3902327443692412,
+          "bias": -0.0824422171834914,
+          "rho": 0.8545493412948179
+        },
+        "aesthetic": {
+          "n": 375,
+          "mean": 2.87282303260751,
+          "mae": 0.30915421060604237,
+          "bias": -0.15597696739249015,
+          "rho": 0.8788531738685978
+        },
+        "latency_n": 375,
+        "latency_median_seconds": 5.736847125925124,
+        "latency_mean_seconds": 5.627547679606825,
+        "numeric_pairs": 375,
+        "scope": {
+          "eligible_n": 347,
+          "false_floor": 2,
+          "excluded_n": 24,
+          "missed_exclusion": 3
+        }
+      },
+      "jev": {
+        "technical": {
+          "n": 375,
+          "mean": 3.2604533333333334,
+          "mae": 0.38882666666666665,
+          "bias": 0.06445333333333333,
+          "rho": 0.8453689130936806
+        },
+        "aesthetic": {
+          "n": 375,
+          "mean": 2.866346666666667,
+          "mae": 0.3366933333333333,
+          "bias": -0.1624533333333333,
+          "rho": 0.8605713420681455
+        },
+        "latency_n": 375,
+        "latency_median_seconds": 4.790939876809716,
+        "latency_mean_seconds": 5.070373774692416,
+        "numeric_pairs": 375,
+        "scope": {
+          "eligible_n": 347,
+          "false_floor": 0,
+          "excluded_n": 24,
+          "missed_exclusion": 10
+        }
+      },
+      "qrealign_lite": {
+        "technical": {
+          "n": 375,
+          "mean": 3.655518262653301,
+          "mae": 0.5922186822262904,
+          "bias": 0.45951826265330115,
+          "rho": 0.8055415408211571
+        },
+        "aesthetic": {
+          "n": 375,
+          "mean": 2.1389231604461867,
+          "mae": 1.0554752228036524,
+          "bias": -0.8898768395538131,
+          "rho": 0.6727795028822605
+        },
+        "latency_n": 375,
+        "latency_median_seconds": 5.472032274119556,
+        "latency_mean_seconds": 5.631023574142406,
+        "numeric_pairs": 375,
+        "scope": {}
+      },
+      "photo_ensemble": {
+        "technical": {
+          "n": 375,
+          "mean": 3.4034894457041274,
+          "mae": 0.38601375955904527,
+          "bias": 0.20748944570412717,
+          "rho": 0.9281195432920114
+        },
+        "aesthetic": {
+          "n": 375,
+          "mean": 3.2147057581518776,
+          "mae": 0.28291630773908555,
+          "bias": 0.1859057581518775,
+          "rho": 0.9202555357859439
+        },
+        "latency_n": 0,
+        "latency_median_seconds": null,
+        "latency_mean_seconds": null,
+        "numeric_pairs": 375,
+        "scope": {}
+      },
+      "perplexity": {
+        "technical": {
+          "n": 375,
+          "mean": 3.538734858711199,
+          "mae": 0.44402636564890585,
+          "bias": 0.3427348587111988,
+          "rho": 0.8674688385094305
+        },
+        "aesthetic": {
+          "n": 375,
+          "mean": 3.233087149699534,
+          "mae": 0.32069848824790476,
+          "bias": 0.20428714969953393,
+          "rho": 0.8655016984769013
+        },
+        "latency_n": 375,
+        "latency_median_seconds": 1.6584682003594935,
+        "latency_mean_seconds": 1.7216399861052631,
+        "numeric_pairs": 375,
+        "scope": {
+          "eligible_n": 347,
+          "false_floor": 0,
+          "excluded_n": 24,
+          "missed_exclusion": 8
+        }
+      },
+      "gemini": {
+        "technical": {
+          "n": 375,
+          "mean": 3.3328909297048623,
+          "mae": 0.37792379791615616,
+          "bias": 0.13689092970486233,
+          "rho": 0.8695778078526049
+        },
+        "aesthetic": {
+          "n": 375,
+          "mean": 2.654212457480908,
+          "mae": 0.48554953815850427,
+          "bias": -0.3745875425190919,
+          "rho": 0.8578232724025856
+        },
+        "latency_n": 375,
+        "latency_median_seconds": 2.0192656689323485,
+        "latency_mean_seconds": 2.0841302405980726,
+        "numeric_pairs": 375,
+        "scope": {
+          "eligible_n": 347,
+          "false_floor": 0,
+          "excluded_n": 24,
+          "missed_exclusion": 5
+        }
+      }
+    },
+    "diversity_sample": {
+      "reference": {
+        "technical": {
+          "n": 125,
+          "mean": 3.4488,
+          "mae": 0.0,
+          "bias": 0.0,
+          "rho": 1.0
+        },
+        "aesthetic": {
+          "n": 125,
+          "mean": 3.1096,
+          "mae": 0.0,
+          "bias": 0.0,
+          "rho": 0.9999999999999998
+        },
+        "latency_n": 0,
+        "latency_median_seconds": null,
+        "latency_mean_seconds": null,
+        "numeric_pairs": 125,
+        "scope": {
+          "eligible_n": 114,
+          "false_floor": 0,
+          "excluded_n": 10,
+          "missed_exclusion": 0
+        }
+      },
+      "luna": {
+        "technical": {
+          "n": 125,
+          "mean": 3.5152,
+          "mae": 0.308,
+          "bias": 0.06639999999999999,
+          "rho": 0.8538833529920593
+        },
+        "aesthetic": {
+          "n": 125,
+          "mean": 3.2664,
+          "mae": 0.2752,
+          "bias": 0.15679999999999997,
+          "rho": 0.8900271106947071
+        },
+        "latency_n": 125,
+        "latency_median_seconds": 11.306147283874452,
+        "latency_mean_seconds": 11.528535596769304,
+        "numeric_pairs": 125,
+        "scope": {
+          "eligible_n": 114,
+          "false_floor": 0,
+          "excluded_n": 10,
+          "missed_exclusion": 1
+        }
+      },
+      "deepseek": {
+        "technical": {
+          "n": 125,
+          "mean": 3.5776,
+          "mae": 0.34800000000000003,
+          "bias": 0.1288,
+          "rho": 0.7914932221613922
+        },
+        "aesthetic": {
+          "n": 125,
+          "mean": 3.1744,
+          "mae": 0.24559999999999998,
+          "bias": 0.06480000000000002,
+          "rho": 0.9220448290777241
+        },
+        "latency_n": 125,
+        "latency_median_seconds": 17.006254483014345,
+        "latency_mean_seconds": 18.362213796801864,
+        "numeric_pairs": 125,
+        "scope": {
+          "eligible_n": 114,
+          "false_floor": 1,
+          "excluded_n": 10,
+          "missed_exclusion": 1
+        }
+      },
+      "liquid": {
+        "technical": {
+          "n": 125,
+          "mean": 3.347927878117969,
+          "mae": 0.32763137982044377,
+          "bias": -0.1008721218820312,
+          "rho": 0.8863326924561937
+        },
+        "aesthetic": {
+          "n": 125,
+          "mean": 2.9958642572999232,
+          "mae": 0.26914740450339314,
+          "bias": -0.11373574270007698,
+          "rho": 0.8867950851442816
+        },
+        "latency_n": 125,
+        "latency_median_seconds": 5.739797568880022,
+        "latency_mean_seconds": 5.585656593821943,
+        "numeric_pairs": 125,
+        "scope": {
+          "eligible_n": 114,
+          "false_floor": 0,
+          "excluded_n": 10,
+          "missed_exclusion": 1
+        }
+      },
+      "jev": {
+        "technical": {
+          "n": 125,
+          "mean": 3.49448,
+          "mae": 0.29288000000000003,
+          "bias": 0.04568000000000001,
+          "rho": 0.8585027248677086
+        },
+        "aesthetic": {
+          "n": 125,
+          "mean": 2.96288,
+          "mae": 0.26096,
+          "bias": -0.14672000000000004,
+          "rho": 0.9076563249916808
+        },
+        "latency_n": 125,
+        "latency_median_seconds": 5.694780874997377,
+        "latency_mean_seconds": 5.481641847603023,
+        "numeric_pairs": 125,
+        "scope": {
+          "eligible_n": 114,
+          "false_floor": 0,
+          "excluded_n": 10,
+          "missed_exclusion": 1
+        }
+      },
+      "qrealign_lite": {
+        "technical": {
+          "n": 125,
+          "mean": 3.9713096837103365,
+          "mae": 0.5934827455341816,
+          "bias": 0.5225096837103367,
+          "rho": 0.8176391267287924
+        },
+        "aesthetic": {
+          "n": 125,
+          "mean": 2.2771511454032733,
+          "mae": 1.0264169215155765,
+          "bias": -0.8324488545967266,
+          "rho": 0.6620028765704304
+        },
+        "latency_n": 125,
+        "latency_median_seconds": 4.3102455721236765,
+        "latency_mean_seconds": 5.135363094743341,
+        "numeric_pairs": 125,
+        "scope": {}
+      },
+      "photo_ensemble": {
+        "technical": {
+          "n": 125,
+          "mean": 3.496781969529492,
+          "mae": 0.2961730012044428,
+          "bias": 0.04798196952949221,
+          "rho": 0.8691916052278611
+        },
+        "aesthetic": {
+          "n": 125,
+          "mean": 3.164266064324981,
+          "mae": 0.2291334442510426,
+          "bias": 0.05466606432498075,
+          "rho": 0.9251574572733037
+        },
+        "latency_n": 0,
+        "latency_median_seconds": null,
+        "latency_mean_seconds": null,
+        "numeric_pairs": 125,
+        "scope": {}
+      },
+      "perplexity": {
+        "technical": {
+          "n": 125,
+          "mean": 3.738517842837209,
+          "mae": 0.34596272262200467,
+          "bias": 0.28971784283720886,
+          "rho": 0.8361741449989498
+        },
+        "aesthetic": {
+          "n": 125,
+          "mean": 3.333728154483674,
+          "mae": 0.31403802031351186,
+          "bias": 0.2241281544836742,
+          "rho": 0.8719276844746865
+        },
+        "latency_n": 125,
+        "latency_median_seconds": 1.8194751041010022,
+        "latency_mean_seconds": 1.8528786536902189,
+        "numeric_pairs": 125,
+        "scope": {
+          "eligible_n": 114,
+          "false_floor": 0,
+          "excluded_n": 10,
+          "missed_exclusion": 2
+        }
+      },
+      "gemini": {
+        "technical": {
+          "n": 125,
+          "mean": 3.469055775326876,
+          "mae": 0.30663894219491666,
+          "bias": 0.020255775326876172,
+          "rho": 0.8545359420887401
+        },
+        "aesthetic": {
+          "n": 125,
+          "mean": 2.710961045911988,
+          "mae": 0.48261808956567076,
+          "bias": -0.398638954088012,
+          "rho": 0.9017121315922814
+        },
+        "latency_n": 125,
+        "latency_median_seconds": 1.9943643300794065,
+        "latency_mean_seconds": 2.017085430033505,
+        "numeric_pairs": 125,
+        "scope": {
+          "eligible_n": 114,
+          "false_floor": 0,
+          "excluded_n": 10,
+          "missed_exclusion": 2
+        }
+      }
+    }
+  },
+  "common_images": 500,
+  "common": {
+    "reference": {
+      "technical": {
+        "n": 500,
+        "mean": 3.2592,
+        "mae": 0.0,
+        "bias": 0.0,
+        "rho": 0.9999999999999998
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 3.049,
+        "mae": 0.0,
+        "bias": 0.0,
+        "rho": 1.0
+      },
+      "latency_n": 0,
+      "latency_median_seconds": null,
+      "latency_mean_seconds": null,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 0,
+        "excluded_n": 34,
+        "missed_exclusion": 0
+      }
+    },
+    "luna": {
+      "technical": {
+        "n": 500,
+        "mean": 3.4436,
+        "mae": 0.3568,
+        "bias": 0.18439999999999998,
+        "rho": 0.9112913213984942
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 3.3282,
+        "mae": 0.3628,
+        "bias": 0.2792,
+        "rho": 0.8708467945893595
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 11.475059148157015,
+      "latency_mean_seconds": 11.624533731540666,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 1,
+        "excluded_n": 34,
+        "missed_exclusion": 4
+      }
+    },
+    "deepseek": {
+      "technical": {
+        "n": 500,
+        "mean": 3.5798,
+        "mae": 0.4822,
+        "bias": 0.3206,
+        "rho": 0.8168519506671909
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 3.275,
+        "mae": 0.3596,
+        "bias": 0.226,
+        "rho": 0.8355236841598642
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 17.81583585496992,
+      "latency_mean_seconds": 19.077968033767306,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 1,
+        "excluded_n": 34,
+        "missed_exclusion": 2
+      }
+    },
+    "liquid": {
+      "technical": {
+        "n": 500,
+        "mean": 3.1721503066418735,
+        "mae": 0.37458240323204184,
+        "bias": -0.08704969335812635,
+        "rho": 0.8727426129721915
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 2.903583338780613,
+        "mae": 0.29915250908038005,
+        "bias": -0.14541666121938684,
+        "rho": 0.8803184662908318
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 5.738322347402573,
+      "latency_mean_seconds": 5.617074908160604,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 2,
+        "excluded_n": 34,
+        "missed_exclusion": 4
+      }
+    },
+    "jev": {
+      "technical": {
+        "n": 500,
+        "mean": 3.31896,
+        "mae": 0.36484,
+        "bias": 0.05976000000000001,
+        "rho": 0.8636853120251715
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 2.89048,
+        "mae": 0.31776,
+        "bias": -0.15852,
+        "rho": 0.8745894225329474
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 4.968292866833508,
+      "latency_mean_seconds": 5.173190792920068,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 0,
+        "excluded_n": 34,
+        "missed_exclusion": 11
+      }
+    },
+    "qrealign_lite": {
+      "technical": {
+        "n": 500,
+        "mean": 3.73446611791756,
+        "mae": 0.5925346980532631,
+        "bias": 0.47526611791756007,
+        "rho": 0.8214888554069695
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 2.1734801566854585,
+        "mae": 1.0482106474816333,
+        "bias": -0.8755198433145415,
+        "rho": 0.6763455899850334
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 5.065597731154412,
+      "latency_mean_seconds": 5.5071084542926405,
+      "numeric_pairs": 500,
+      "scope": {}
+    },
+    "photo_ensemble": {
+      "technical": {
+        "n": 500,
+        "mean": 3.4268125766604682,
+        "mae": 0.3635535699703946,
+        "bias": 0.16761257666046842,
+        "rho": 0.9251908243657166
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 3.2020958346951534,
+        "mae": 0.2694705918670748,
+        "bias": 0.15309583469515328,
+        "rho": 0.9200408605643318
+      },
+      "latency_n": 0,
+      "latency_median_seconds": null,
+      "latency_mean_seconds": null,
+      "numeric_pairs": 500,
+      "scope": {}
+    },
+    "perplexity": {
+      "technical": {
+        "n": 500,
+        "mean": 3.5886806047427013,
+        "mae": 0.4195104548921806,
+        "bias": 0.32948060474270136,
+        "rho": 0.8737781229340382
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 3.258247400895569,
+        "mae": 0.31903337126430653,
+        "bias": 0.20924740089556898,
+        "rho": 0.8692620636788734
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 1.6915615254547447,
+      "latency_mean_seconds": 1.7544496530015021,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 0,
+        "excluded_n": 34,
+        "missed_exclusion": 10
+      }
+    },
+    "gemini": {
+      "technical": {
+        "n": 500,
+        "mean": 3.366932141110366,
+        "mae": 0.36010258398584627,
+        "bias": 0.1077321411103658,
+        "rho": 0.8790257596001838
+      },
+      "aesthetic": {
+        "n": 500,
+        "mean": 2.668399604588678,
+        "mae": 0.4848166760102959,
+        "bias": -0.3806003954113219,
+        "rho": 0.8710415350237304
+      },
+      "latency_n": 500,
+      "latency_median_seconds": 2.0176981016993523,
+      "latency_mean_seconds": 2.0673690379569307,
+      "numeric_pairs": 500,
+      "scope": {
+        "eligible_n": 461,
+        "false_floor": 0,
+        "excluded_n": 34,
+        "missed_exclusion": 7
+      }
+    }
+  }
+}

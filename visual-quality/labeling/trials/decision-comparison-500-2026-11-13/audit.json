@@ -1,0 +1,17 @@
+{
+  "images_verified": 500,
+  "new_observations_reparsed": 1000,
+  "historical_observations_unchanged": 3500,
+  "gallery_cards": 500,
+  "gallery_assessor_rows": 4500,
+  "plan_sha256": "b49a51ee49529c08a155ef07ac54d7365d4ed532d09e75496784979214b79714",
+  "report_sha256": "bc6fb32112643ff6adb98e4c63692da24844518c758690c165fe62f6254664bb",
+  "export_sha256": "5d2593d5207167c49ecac48cf7c9c928f692d38e267d892f1bd90e6d24fb4538",
+  "source_code_sha256": {
+    "report.py": "93b1357d9cbc206dc82cfcfd788542bbe002e9323fcdfe94e29dd5fa78e00350",
+    "audit.py": "76c3345b553ae0d7ea8863ff79224939283ae558fa94e414e8b105e0db4fad5b",
+    "prepare.py": "a0c72678ab06f414e78f0843b3027c355f60dd1bdbaa8a7c9d516c809ffb1354",
+    "test_trial.py": "ee015f5080ca8429a2b52805f771efea5551a513c5324fa049d59967d5533e76",
+    "run.py": "d38cba5b88dcb91d1da8e8488bff50c2cf4f5afdc0c7e2e68985d70cb0f255f3"
+  }
+}
