@@ -1,0 +1,31 @@
+visual-quality/AGENTS.md
+  s_a985f77760d967::t_7bca9c6aba79a4 3,29,56,69-76
+visual-quality/docs/README.md
+  s_a985f77760d967::t_99cbed3a43e919 7-8
+visual-quality/docs/training/qwen-adaptation-review-2026-11-17/README.md
+  s_a985f77760d967::t_8c5aece0821c43 1-171
+visual-quality/docs/training/qwen-adaptation-review-2026-11-17/implementation-evidence.md
+  s_a985f77760d967::t_dc20740b2ea553 1-53
+visual-quality/docs/training/qwen-adaptation-review-2026-11-17/quality-scoring-evidence.md
+  s_a985f77760d967::t_b1ba9f016cf9d6 1-43
+visual-quality/docs/training/qwen-adaptation-review-2026-11-17/rl-and-preferences.md
+  s_a985f77760d967::t_723de8295c6de6 1-77
+visual-quality/docs/training/synthetic-label-prompts.md
+  s_a985f77760d967::t_36df16b4af849d 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "3830fa741691822914b5427c9c759590808603e6",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
