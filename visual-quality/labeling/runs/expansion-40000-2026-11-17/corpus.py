@@ -124,6 +124,39 @@ def acquire(source, count, workers, megalith_pool=None):
         setattr(acquisition, factory_name, original)
 
 
+def prepare_input(row):
+    """Resolve migrated source copies only when their historical byte hash agrees."""
+    old_root = "/Users/ahstn/git/model-gym/visual-quality/data/"
+    original = row["image_path"]
+    relocation = None
+    if original.startswith(old_root):
+        local = (DATA_ROOT / original.removeprefix(old_root)).resolve()
+        expected = row.get("sha256") or row.get("source_sha256")
+        if (
+            local.is_relative_to(DATA_ROOT.resolve())
+            and local.is_file()
+            and expected
+            and digest(local) == expected
+        ):
+            row = {**row, "image_path": str(local)}
+            relocation = {
+                "original_path": original,
+                "local_path": str(local),
+                "verified_source_sha256": expected,
+            }
+            cache = DATA / "prepared" / (hashlib.sha256(row["id"].encode()).hexdigest() + ".json")
+            if cache.exists():
+                saved = json.loads(cache.read_text())
+                if saved.get("error", "").startswith("ValueError: Image is outside the dataset root:"):
+                    cache.unlink()
+    result = preparation.prepare(row)
+    if relocation and not result.get("error"):
+        result["source_path_relocation"] = relocation
+        cache = DATA / "prepared" / (hashlib.sha256(row["id"].encode()).hexdigest() + ".json")
+        write_json(cache, result)
+    return result
+
+
 def prepare(workers):
     if (DATA / "manifest.json").exists():
         raise ValueError("Selection already frozen; preparation must not change")
@@ -151,7 +184,7 @@ def prepare(workers):
     inputs.sort(key=lambda r: stable_key("prepare", r["id"]))
     rows, rejects = [], []
     with ThreadPoolExecutor(workers) as pool:
-        for i, row in enumerate(pool.map(preparation.prepare, inputs), 1):
+        for i, row in enumerate(pool.map(prepare_input, inputs), 1):
             reason = row.get("error")
             if not reason:
                 reason = (

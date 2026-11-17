@@ -26,6 +26,7 @@ def modules(monkeypatch):
 def record(identity, dhash="0123456789abcdef", **changes):
     return {
         "image_id": identity,
+        "image_path": identity,
         "candidate_id": identity,
         "case_id": identity,
         "family_id": identity,
@@ -204,3 +205,25 @@ def test_embedding_receipt_pins_snapshot_when_prepare_advances(modules, monkeypa
     assert provenance["candidate_manifest_sha256"] == initial_sha
     assert corpus.digest(Path(provenance["candidate_snapshot"])) == initial_sha
     assert corpus.digest(frame) != initial_sha
+
+
+def test_relocated_source_requires_matching_historical_bytes(modules, monkeypatch, tmp_path):
+    corpus = modules["corpus"]
+    monkeypatch.setattr(corpus, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(corpus, "DATA", tmp_path / "run")
+    source = tmp_path / "sources/photo.png"
+    source.parent.mkdir()
+    source.write_bytes(b"exact historical image")
+    row = {
+        "id": "migrated",
+        "image_path": "/Users/ahstn/git/model-gym/visual-quality/data/sources/photo.png",
+        "sha256": corpus.digest(source),
+    }
+    monkeypatch.setattr(corpus.preparation, "prepare", lambda item: dict(item))
+    result = corpus.prepare_input(row)
+    assert result["image_path"] == str(source)
+    assert result["source_path_relocation"]["original_path"] == row["image_path"]
+    source.write_bytes(b"different bytes")
+    result = corpus.prepare_input(row)
+    assert result["image_path"] == row["image_path"]
+    assert "source_path_relocation" not in result
