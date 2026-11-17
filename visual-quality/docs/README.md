@@ -4,6 +4,8 @@ The [photo-labeling workspace](../labeling/README.md) is the current source for 
 
 The [prompt and labeling summary](training/synthetic-label-prompts.md) records the current decisions and their evidence. Model, dataset and evaluation research below provides background for the next dataset and training work; historical experiments are not alternative active labeling setups.
 
+The [Qwen adaptation review](training/qwen-adaptation-review-2026-11-17/README.md) records the accepted supervised-LoRA-first training direction, alternatives and a bounded $50 pilot proposal. Training has not started.
+
 ## Index
 
 | Area | File | Contents |

@@ -1,6 +1,6 @@
 # Visual-quality labeling rules
 
-These are the user's accepted project decisions, updated 2026-11-16. Apply them to the active labeling workspace and future runs. Historical raw observations retain their provenance; they are not evidence that an old configuration is still current.
+These are the user's accepted project decisions, updated 2026-11-17. Apply them to the active labeling workspace and future runs. Historical raw observations retain their provenance; they are not evidence that an old configuration is still current.
 
 ## Canonical ensemble
 
@@ -26,7 +26,7 @@ The 2026-11-13 500-image diagnostic comparison did not justify replacing this en
 
 ## Corpus, references and publication
 
-- The current expansion adds **10,000 new images**, bringing the dataset to **20,000 total images**. Preserve the initial 10K and its **1,500-image reference benchmark** unchanged; do not automatically expand assistant references. New images receive Luna, DeepSeek, Liquid and Jev observations plus the canonical ensemble. Exclude already labeled source identities, exact duplicates and protected evaluation families before selection.
+- The current expansion adds **20,000 new images**, bringing the dataset from **20,000 to 40,000 total images**. Preserve the completed 20K exports byte-for-byte and the initial **1,500-image reference benchmark** unchanged; do not automatically expand assistant references. New images receive Luna, DeepSeek, Liquid and Jev observations plus the canonical ensemble. Exclude already labeled source identities, exact duplicates and protected evaluation families before selection.
 - Use actual EmbeddingGemma 2 image embeddings for content clustering, overrepresentation checks, varied sampling, related-image retrieval and duplicate candidates. Record checkpoint, processor, inference configuration and any reuse. Similar content does not establish equal image quality.
 - Preserve source licenses, byte hashes, exact delivered views, transformations, source families and split identity. Review likely duplicates and keep a family within one evaluation partition.
 - References are independent assistant visual assessments, not human opinion scores. Reuse the original 500 with provenance and assess the additional benchmark images without viewing model scores. Freeze reference records before admitting those images to inference.
@@ -53,7 +53,7 @@ The 2026-11-13 500-image diagnostic comparison did not justify replacing this en
 - For inference, measure end-to-end time immediately around HTTP invocation through complete response receipt. Keep payload preparation and server-only timing separate. Reused rows retain their original measured latency and reuse provenance.
 - References have no HTTP request latency: record null with an explicit latency kind and separately measured visual-review duration. Never fabricate a timing measurement.
 - Q-ReAlign Lite and Reference rows have `price_usd=0.00` as the user's accounting rule. Track actual Runpod infrastructure cost separately. Unknown API charges are null, never zero. Retain retries and failed-call cost accounting.
-- The user approved Runpod and OpenRouter spend for all models and necessary requests for the 20,000-image expansion and necessary requests in this session; RunInfra credential use was previously authorized. Do not ask again for routine authorized calls. Credentials may be sourced quietly from `~/.config/zsh/.zsh-private`; never print or commit them.
+- The user approved the 40,000-image expansion on 2026-11-17 and OpenRouter spend for all required grading requests, continuing the existing EmbeddingGemma 2 pipeline and prior Runpod authorization for necessary embedding compute; RunInfra credential use was previously authorized. Do not ask again for routine authorized calls. Credentials may be sourced quietly from `~/.config/zsh/.zsh-private`; never print or commit them.
 - Prefer the Runpod plugin for provisioning and lifecycle operations. Prepare workloads before starting paid compute, retain receipts, and stop owned trial pods when work completes or fails. Do not modify unrelated pods.
 - A provider content-filter denial is a terminal missing assessment for that image. Do not retry or bypass it; continue independent allowed images while retaining the failure and unknown charges. Distinguish it from credential/billing errors, which stop the run. Keep the aggregate failure circuit breaker enabled.
 - Session recovery (2026-11-16): the user confirmed that they temporarily disabled their secret-redaction guardrail. The 2,855 denials per Liquid/Jev model comprise 2,757 `SECRET:bitcoin-wif-compressed`, 85 `SECRET:bitcoin-wif-uncompressed`, and 13 `SECRET:google-api-key` flags. The user explicitly approved resending these flagged payloads after the automatic-review clarification. The approval is recorded locally; do not request it again for this batch. Preserve prior receipts and observations in the pre-recovery snapshot; keep image bytes, prompts and scores unchanged for all other completed cases. Stop if a new 403 recurs. This does not authorize changing provider safety controls or retrying other denials.
@@ -66,3 +66,11 @@ The 2026-11-13 500-image diagnostic comparison did not justify replacing this en
 - Follow the combined manifest across historical view directories. Preserve byte hashes, canonical labels, raw evidence, image statistics, clustering and source/configuration provenance. Do not re-encode images or silently fill missing scores.
 - Keep public bucket access disabled. Exclude credentials, temporary operations, unselected candidates and caches. Private backup authorization does not expand the first-1,000 Git publication allowlist.
 - Use an explicit upload inventory, resumable verification and full remote readback checksums. Publish a completion receipt only after all planned objects pass. Revoke temporary transfer credentials after use. Document that exact scored views are included, while unscored original source files are not.
+
+## Training decision recorded 2026-11-17
+
+- The user accepted storing the research decision in `docs/training/qwen-adaptation-review-2026-11-17/`: supervised BF16 LoRA on Qwen3.5-9B is the first proposed training route, with a frozen-feature control and one score-aware/detail/parameter adaptation ablation. Full supervised tuning remains a challenger; defer RL until supervised baselines and rewards justify it. This is a research decision, not an instruction to launch training during labeling.
+- The user reported $50 Runpod credit for experimentation. Keep necessary embedding infrastructure costs separate from future training costs and preserve budget headroom; do not launch a training run as part of this expansion.
+- Current acquisition `split=train` is not a training authorization or safe evaluation split. Build future family-disjoint training manifests that respect `benchmark_partition`, reviewed duplicate groups and exposure history. Preserve all-false training masks until explicit review/approval.
+- Do not reuse the November 16 batch-specific secret-scanner resend authorization for new denials. New provider content denials remain terminal; retain evidence and report missing coverage.
+- The 40K expansion keeps all new per-image observations, manifests, vectors, statistics and review artifacts under ignored `data/labeling-40000-2026-11-17/`. Commit code, aggregate reports and the accepted research decision only. Use no new Q-ReAlign calls or assistant references.

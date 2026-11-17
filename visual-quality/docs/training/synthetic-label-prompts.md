@@ -1,6 +1,6 @@
 # Current photo-labeling prompts
 
-The active request definitions, model routes, output formats and retained observations are in the [photo-labeling workspace](../../labeling/README.md). GPT-6 Luna and DeepSeek independently score technical quality and aesthetics; their 50/50 mean is the working teacher judgment. Liquid and Jev provide comparison and eligibility-review decisions. The scores are not human MOS and are not yet approved for training.
+The active request definitions, model routes, output formats and retained observations are in the [photo-labeling workspace](../../labeling/README.md). The accepted teacher ensemble is 37.5% GPT-6 Luna + 37.5% DeepSeek + 25% Liquid, computed independently for technical quality and aesthetics. Jev remains a comparison and eligibility-review model. The scores are not human MOS and are not yet approved for training.
 
 The shared teacher prompt applies the photography eligibility rule before both quality rubrics. Clearly non-photographic content receives 1.00 for both dimensions; an actual photographed object or scene with meaningful physical context remains eligible. Missing or unreadable input remains unscorable. Technical quality and aesthetics are judged independently, and raw teacher responses and native decision scores are retained.
 
