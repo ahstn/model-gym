@@ -97,6 +97,26 @@ def coverage(rows):
     return result
 
 
+def infrastructure(billing, cleanup):
+    """A posted billing checkpoint is not a reconciled final infrastructure cost."""
+    billing = billing or {}
+    metadata = billing.get("receipt", {}).get("metadata", {})
+    record_count = count(metadata.get("recordCount", 0))
+    posted = money(metadata.get("totals", {}).get("totalAmount")) if record_count else None
+    status = billing.get("accounting_status", "posted_checkpoint")
+    if status not in {"posted_checkpoint", "reconciled_final"}:
+        raise ValueError("Unknown infrastructure accounting status")
+    if status == "reconciled_final" and posted is None:
+        raise ValueError("Reconciled infrastructure billing requires a nonempty provider receipt")
+    return {
+        "accounting_status": status if posted is not None else "unavailable",
+        "posted_charge_usd": posted,
+        "runtime_estimate_usd": money(billing.get("runtime_estimate_usd")),
+        "billing_records": record_count,
+        "cleanup_evidence_available": cleanup is not None,
+    }
+
+
 def project(summary, audit):
     """Construct a new object; never recursively copy arbitrary source content."""
     if audit.get("passed") is not True or audit.get("total_images") != summary["total_images"]:
@@ -184,17 +204,36 @@ def project(summary, audit):
             )
         },
     }
-    billing = summary.get("embedding_billing") or {}
-    result["embedding_known_charge_usd"] = money(
-        billing.get("receipt", {}).get("metadata", {}).get("totals", {}).get("totalAmount")
+    result["embedding_infrastructure"] = infrastructure(
+        summary.get("embedding_billing"), summary.get("embedding_cleanup")
     )
-    result["embedding_cleanup_evidence_available"] = summary.get("embedding_cleanup") is not None
     return result
 
 
 def report(summary):
     def display(value):
         return "—" if value is None else f"{value:.2f}"
+
+    infrastructure_cost = summary["embedding_infrastructure"]
+    status = infrastructure_cost["accounting_status"]
+    posted = infrastructure_cost["posted_charge_usd"]
+    estimate = infrastructure_cost["runtime_estimate_usd"]
+    if status == "reconciled_final":
+        infrastructure_text = f"Embedding infrastructure: reconciled provider total ${posted}."
+    elif status == "posted_checkpoint":
+        infrastructure_text = (
+            f"Embedding infrastructure: provider-posted billing checkpoint ${posted}; "
+            "this is not a reconciled final total."
+        )
+    else:
+        infrastructure_text = "Embedding infrastructure: provider billing is not yet available."
+    if estimate is not None:
+        infrastructure_text += f" The elapsed-runtime cost estimate is ${estimate}."
+    infrastructure_text += (
+        " Cleanup evidence is recorded."
+        if infrastructure_cost["cleanup_evidence_available"]
+        else " Cleanup evidence is not yet recorded."
+    )
 
     lines = [
         "# 40K labeling aggregate report",
@@ -238,6 +277,8 @@ def report(summary):
             "Unknown charges remain unknown; retries and probes are included. Reference and historical Lite "
             "prices are $0.00 by the user's reporting rule. Infrastructure is separate."
         ),
+        "",
+        infrastructure_text,
         "",
         "| Model | New known API USD, including probes | Combined known API USD | Combined unpriced attempts | Exact combined API USD |",
         "|---|---:|---:|---:|---:|",

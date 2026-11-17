@@ -174,3 +174,48 @@ def test_model_and_cluster_arrays_cannot_disguise_per_image_rows():
     summary["corpus_coverage"]["clusters"][0]["cluster"] = 19999
     with pytest.raises(ValueError, match="cluster numbers"):
         publication.project(summary, audit)
+
+
+def test_posted_infrastructure_checkpoint_is_separate_from_runtime_estimate():
+    summary, audit = fixture()
+    summary["embedding_billing"] = {
+        "receipt": {
+            "metadata": {"recordCount": 1, "totals": {"totalAmount": "0.2345329"}},
+            "records": [{"case_id": "R19999"}],
+        },
+        "runtime_estimate_usd": "1.4693",
+        "private_note": "R19999",
+    }
+    result = publication.project(summary, audit)
+    assert result["embedding_infrastructure"] == {
+        "accounting_status": "posted_checkpoint",
+        "posted_charge_usd": "0.2345329",
+        "runtime_estimate_usd": "1.4693",
+        "billing_records": 1,
+        "cleanup_evidence_available": True,
+    }
+    rendered = publication.report(result)
+    assert "$0.2345329" in rendered and "$1.4693" in rendered
+    assert "not a reconciled final total" in rendered and "R19999" not in rendered
+
+
+def test_empty_billing_query_never_becomes_known_zero():
+    receipt = {
+        "receipt": {"metadata": {"recordCount": 0, "totals": {"totalAmount": 0}}},
+        "runtime_estimate_usd": "1.4693",
+    }
+    result = publication.infrastructure(receipt, None)
+    assert result["posted_charge_usd"] is None and result["accounting_status"] == "unavailable"
+    assert result["runtime_estimate_usd"] == "1.4693"
+    with pytest.raises(ValueError, match="nonempty provider receipt"):
+        publication.infrastructure({**receipt, "accounting_status": "reconciled_final"}, None)
+
+
+def test_only_explicit_reconciled_status_marks_final_infrastructure_cost():
+    receipt = {
+        "receipt": {"metadata": {"recordCount": 2, "totals": {"totalAmount": "2.34"}}},
+        "accounting_status": "reconciled_final",
+    }
+    assert publication.infrastructure(receipt, None)["accounting_status"] == "reconciled_final"
+    with pytest.raises(ValueError, match="accounting status"):
+        publication.infrastructure({**receipt, "accounting_status": "R19999"}, None)
