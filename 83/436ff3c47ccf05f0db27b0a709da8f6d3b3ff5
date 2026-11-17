@@ -1,0 +1,19 @@
+visual-quality/labeling/runs/expansion-40000-2026-11-17/README.md
+  s_a985f77760d967::t_a8f030a41a1010 36-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "83436ff3c47ccf05f0db27b0a709da8f6d3b3ff5",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
