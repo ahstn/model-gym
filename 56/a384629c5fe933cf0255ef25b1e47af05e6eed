@@ -1,0 +1,29 @@
+visual-quality/docs/README.md
+  s_a985f77760d967::t_825ef1376429c0 3,29
+visual-quality/docs/training/runpod-200k-budget-2026-11-17.md
+  s_a985f77760d967::t_365e2200d0f122 1-91
+visual-quality/labeling/backups/README.md
+  s_a985f77760d967::t_2e0c424357a6d8 87,99-131
+visual-quality/labeling/backups/prepare.py
+  s_a985f77760d967::t_ac3e474d75f4da 6,22-55,230-231
+visual-quality/labeling/backups/test_snapshot.py
+  s_a985f77760d967::t_17fb5ddc41f0f7 1-163
+visual-quality/labeling/backups/transfer.py
+  s_a985f77760d967::t_86f2617d99e025 47-73,129,140,164-166,168,170-171,179-180,182-212,224-228,232-240
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "56a384629c5fe933cf0255ef25b1e47af05e6eed",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
