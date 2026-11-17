@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "bucket": "model-gym-backups",
+  "prefix": "visual-quality/labeling-20000-2026-11-16/",
+  "image_count": 20000,
+  "label_records": 20000,
+  "complete_ensemble_pairs": 19997,
+  "payload_objects": 20010,
+  "payload_bytes": 38360237384,
+  "verification": "Every payload object passed full GET SHA-256; final complete key/size/ETag inventory matched",
+  "restore_test": {
+    "status": "passed",
+    "labels": 20000,
+    "images": 20000,
+    "method": "Local snapshot fully verified, safe archive extraction, all metadata hashes checked, portable labels joined and image hashes verified",
+    "snapshot_sha256": "72601c758b7c275cdbfdecfa5403aad4bd281974f04649c6969b9d86eed04272"
+  },
+  "snapshot_sha256": "72601c758b7c275cdbfdecfa5403aad4bd281974f04649c6969b9d86eed04272",
+  "extra_objects": [
+    {
+      "key": "transfer-resume.py",
+      "sha256": "3af968edec6c7fab23217abdd07e09cf4fb29bcde8a34c178c7098c153f09872",
+      "md5": "9e3a070b84e038039418f88ff2122c87",
+      "bytes": 6911
+    }
+  ],
+  "labeling_source_commit": "003d6a87b323090918e1a79c79e532caa3ab8b37",
+  "backup_helper_commit": "868fe66",
+  "completed_at": "2026-11-17T00:16:38.417602+00:00",
+  "stored_objects": 20011,
+  "stored_bytes": 38360238571,
+  "verification_receipt_sha256": "f216d713f7efd5f0be43c9ce5676f750611484f86d4463f333761b05f7409d40",
+  "temporary_token_revoked": true,
+  "token_revocation_confirmed_at": "2026-11-17T00:17:21.239078+00:00",
+  "privacy": {
+    "public_access_enabled": false,
+    "custom_domains": [],
+    "checked_at": "2026-11-17T00:16:39.236Z"
+  },
+  "image_bytes": 37815880968,
+  "compressed_labels_bytes": 45326195
+}

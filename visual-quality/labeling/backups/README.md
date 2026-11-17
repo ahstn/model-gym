@@ -7,6 +7,12 @@ under `visual-quality/labeling-20000-2026-11-16/`. Account:
 domain is attached. The location hint is Western Europe; this is not an EU
 jurisdiction guarantee.
 
+Completed and verified on 2026-11-17: **20,011 objects, 38,360,238,571 bytes
+(35.73 GiB)**, including all 20,000 scored images. Every object was downloaded and
+hashed; the complete remote inventory matched, and the full local restore test
+passed. The temporary upload token was revoked. See the
+[completion receipt](receipt-20000-2026-11-16.json) for snapshot checksums and evidence.
+
 ## Contents
 
 - `labelled-images.jsonl.zst`: convenient compressed canonical 20K image-level
@@ -75,6 +81,15 @@ Content-MD5, checks the returned ETag, and performs a full GET/SHA-256 verificat
 for **every** object. Existing matching objects can be resumed; differing objects
 are refused rather than overwritten. Use a new dated prefix for a changed snapshot.
 Files must be smaller than 5 GiB for this single-part uploader.
+
+The uploader uses `boto3` (validated with 1.44.4); the preparation and restore
+helpers use the Python standard library plus the `zstd` executable. Run the
+readback retry tests from the repository root with:
+
+```sh
+uv run --no-project --with boto3==1.44.4 python -m unittest discover \
+  -s visual-quality/labeling/backups -p 'test_*.py'
+```
 
 Use a temporary bucket-scoped Object Read & Write token, then revoke it after
 verification. Never include its credential file in the upload plan. Keep plans,
