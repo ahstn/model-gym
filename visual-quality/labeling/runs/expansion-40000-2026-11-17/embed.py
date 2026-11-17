@@ -14,6 +14,32 @@ import corpus
 from corpus import DATA, OLD, INITIAL, digest, read_lines, write_json
 import corpus_embed as legacy
 
+MAX_REQUEST_BYTES = 20_000_000
+
+
+def local_payloads(items):
+    """Check every payload before HTTP, splitting at the worker's byte ceiling."""
+    groups, current = [], []
+    for item in items:
+        proposed = current + [item]
+        body = json.dumps({"images": proposed}, allow_nan=False).encode()
+        if len(body) > MAX_REQUEST_BYTES or len(proposed) > 8:
+            if current:
+                groups.append(current)
+            current = [item]
+            if len(json.dumps({"images": current}, allow_nan=False).encode()) > MAX_REQUEST_BYTES:
+                raise ValueError("Single embedding image exceeds worker request byte ceiling")
+        else:
+            current = proposed
+    if current:
+        groups.append(current)
+    if not groups:
+        raise ValueError("At least one embedding image is required")
+    return [
+        ([item["sha256"] for item in group], json.dumps({"images": group}, allow_nan=False).encode())
+        for group in groups
+    ]
+
 
 def validate_vector(value):
     if value.shape != (768,) or not np.isfinite(value).all():
@@ -64,19 +90,27 @@ def encode_local(batch, endpoint):
         items.append(
             {"sha256": row["view_sha256"], "data": base64.b64encode(path.read_bytes()).decode("ascii")}
         )
-    response = requests.post(endpoint, json={"images": items}, timeout=(15, 180))
-    response.raise_for_status()
-    result = response.json()
-    if result["sha256"] != [row["view_sha256"] for row in batch]:
-        raise ValueError("Embedding response view identities differ")
-    values = np.asarray(result["embeddings"], dtype=np.float32)
-    if values.shape != (len(batch), 768):
-        raise ValueError("Invalid embedding response dimensions")
-    for value in values:
-        validate_vector(value)
-    return values, {
+    payloads = local_payloads(items)
+    vectors, server_seconds = [], 0.0
+    for expected, body in payloads:
+        response = requests.post(
+            endpoint, data=body, headers={"Content-Type": "application/json"}, timeout=(15, 180)
+        )
+        response.raise_for_status()
+        result = response.json()
+        if result["sha256"] != expected:
+            raise ValueError("Embedding response view identities differ")
+        values = np.asarray(result["embeddings"], dtype=np.float32)
+        if values.shape != (len(expected), 768):
+            raise ValueError("Invalid embedding response dimensions")
+        for value in values:
+            validate_vector(value)
+        vectors.append(values)
+        server_seconds += result["seconds"]
+    return np.concatenate(vectors), {
         "wall_seconds": time.monotonic() - started,
-        "server_seconds": result["seconds"],
+        "server_seconds": server_seconds,
+        "transport_requests": len(payloads),
         "verified_local_bytes": True,
     }
 

@@ -227,3 +227,58 @@ def test_relocated_source_requires_matching_historical_bytes(modules, monkeypatc
     result = corpus.prepare_input(row)
     assert result["image_path"] == row["image_path"]
     assert "source_path_relocation" not in result
+
+
+def test_local_embedding_splits_actual_bytes_and_preserves_order(modules, monkeypatch, tmp_path):
+    from types import SimpleNamespace
+
+    embed, corpus = modules["embed"], modules["corpus"]
+    monkeypatch.setattr(embed, "MAX_REQUEST_BYTES", 450)
+    rows, expected, calls = [], [], []
+    for index in range(4):
+        path = tmp_path / f"{index}.png"
+        path.write_bytes(bytes([index]) * 80)
+        row = {"image_path": str(path), "view_sha256": corpus.digest(path)}
+        rows.append(row)
+        vector = np.zeros(768, dtype=np.float32)
+        vector[index] = 1
+        expected.append(vector)
+    by_sha = {row["view_sha256"]: vector.tolist() for row, vector in zip(rows, expected, strict=True)}
+
+    def post(endpoint, *, data, headers, timeout):
+        assert len(data) <= embed.MAX_REQUEST_BYTES
+        assert headers == {"Content-Type": "application/json"}
+        items = json.loads(data)["images"]
+        calls.append(items)
+        result = {
+            "sha256": [item["sha256"] for item in items],
+            "embeddings": [by_sha[item["sha256"]] for item in items],
+            "seconds": 0.25,
+        }
+        return SimpleNamespace(raise_for_status=lambda: None, json=lambda: result)
+
+    monkeypatch.setattr(embed.requests, "post", post)
+    actual, timing = embed.encode_local(rows, "unused")
+    np.testing.assert_array_equal(actual, np.asarray(expected))
+    assert [len(items) for items in calls] == [2, 2]
+    assert timing["server_seconds"] == 0.5
+    assert timing["transport_requests"] == 2
+    assert timing["wall_seconds"] >= 0
+    assert timing["verified_local_bytes"]
+
+
+def test_local_embedding_rejects_oversized_single_before_any_http(modules, monkeypatch, tmp_path):
+    embed, corpus = modules["embed"], modules["corpus"]
+    monkeypatch.setattr(embed, "MAX_REQUEST_BYTES", 450)
+    rows = []
+    for name, size in (("small", 40), ("large", 1000)):
+        path = tmp_path / f"{name}.png"
+        path.write_bytes(b"a" * size)
+        rows.append({"image_path": str(path), "view_sha256": corpus.digest(path)})
+
+    def forbidden(*args, **kwargs):
+        pytest.fail("Oversized single image must be rejected before any HTTP")
+
+    monkeypatch.setattr(embed.requests, "post", forbidden)
+    with pytest.raises(ValueError, match="Single embedding image"):
+        embed.encode_local(rows, "unused")
