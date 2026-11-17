@@ -1,0 +1,19 @@
+visual-quality/AGENTS.md
+  s_13ef53eadb073e::t_3630906190da72 61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "a4a19ac4c1a8852765fd767b46782ecd830340a5",
+  "prompts": {},
+  "sessions": {
+    "s_13ef53eadb073e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1ea48-cd34-7c80-84e4-9a94e1594a3b",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
