@@ -17,6 +17,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "src"))
 from visual_quality.ensemble import configuration
+from visual_quality.scoring.phase_reporting import (
+    phase_report_lines,
+    phase_summary_digest,
+    project_phase_summary,
+)
 
 MODELS = ("luna", "deepseek", "liquid", "jev")
 ASSESSORS = (*MODELS, "photo_ensemble", "qrealign_lite", "reference")
@@ -132,6 +137,8 @@ def project(summary, audit):
         raise ValueError("Audit export hash or current plans do not match this summary")
     if summary.get("training_ready") is not False or summary.get("stats_in_inference") is not False:
         raise ValueError("Training/stats policy differs from the accepted run")
+    if audit.get("phase_summary_sha256") != phase_summary_digest(summary["phase_summary"]):
+        raise ValueError("Audit does not match the baseline/recovery phase summary")
     result = {
         "schema_version": "visual-quality-40k-aggregate-v1",
         **{key: count(summary[key]) for key in COUNTS},
@@ -144,6 +151,13 @@ def project(summary, audit):
         "combined_cost_per_model": costs(summary["combined_cost_per_model"]),
         "accounting": costs(summary["accounting"]),
         "compatibility_probe_accounting": costs(summary["compatibility_probe_accounting"]),
+        "phase_summary": project_phase_summary(
+            summary["phase_summary"],
+            summary["accounting"],
+            summary["incremental_coverage"],
+            models=MODELS,
+            baseline_cases=summary["new_images"],
+        ),
     }
     expected_weights = configuration()["weights"]
     if summary["ensemble"]["weights"] != expected_weights:
@@ -259,6 +273,7 @@ def report(summary):
             f"{display(row['mean_technical'])} | {display(row['mean_aesthetic'])} | "
             f"{display(row['median_final_attempt_seconds'])} |"
         )
+    lines += phase_report_lines(summary["phase_summary"])
     lines += [
         "",
         (

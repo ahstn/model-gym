@@ -62,6 +62,7 @@ def audit_run(data, old, phases):
 
     from visual_quality.ensemble import MODEL, score_ensemble
     from visual_quality.publication import verify_publication
+    from visual_quality.scoring.phase_reporting import build_phase_summary, phase_summary_digest
 
     pins = json.loads((data / "initial-evidence-pins.json").read_text())
     for path, expected in pins.items():
@@ -189,6 +190,11 @@ def audit_run(data, old, phases):
         actual["qrealign_lite"]["expected"] == export.HISTORICAL_LITE_IMAGES, "Historical Lite count changed"
     )
     require(summary["current_plans"] == selected, "Final summary uses stale plans")
+    observations = {model: [label["assessments"][model] for label in labels] for model in export.MODELS}
+    phase_summary = build_phase_summary(
+        data / "results/api", plans, observations, summary["accounting"], models=export.MODELS
+    )
+    require(phase_summary == summary["phase_summary"], "Baseline/recovery summary differs from receipts")
     previous_summary = json.loads((old / "exports/summary.json").read_text())
     require(
         summary["historical_cost_per_model"] == previous_summary["combined_cost_per_model"],
@@ -226,6 +232,7 @@ def audit_run(data, old, phases):
         "training_ready": False,
         "current_plans": selected,
         "exports_sha256": digest(data / "exports/labelled-images.jsonl"),
+        "phase_summary_sha256": phase_summary_digest(phase_summary),
     }
     write_json(data / "audit.json", result)
     print(json.dumps(result), flush=True)

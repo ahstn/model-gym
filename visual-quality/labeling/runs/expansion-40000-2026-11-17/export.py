@@ -338,6 +338,8 @@ def optional_json(path):
 
 
 def write_report(data, old, summary):
+    from visual_quality.scoring.phase_reporting import phase_report_lines
+
     def formatted(value):
         return "—" if value is None else f"{value:.2f}"
 
@@ -389,6 +391,7 @@ def write_report(data, old, summary):
     for model, row in summary["coverage"].items():
         statuses = ", ".join(f"{key}: {value:,}" for key, value in sorted(row["status_counts"].items()))
         lines.append(f"| {model} | {row['numeric_pairs']:,}/{row['expected']:,} | {statuses} |")
+    lines += phase_report_lines(summary["phase_summary"])
     lines += [
         "",
         "## Corpus and review metadata",
@@ -456,6 +459,7 @@ def export_run(data, old, phases):
     from corpus import digest, read_lines, write_json, write_lines
 
     from visual_quality.ensemble import MODEL
+    from visual_quality.scoring.phase_reporting import build_phase_summary
 
     for path, expected in json.loads((data / "initial-evidence-pins.json").read_text()).items():
         if digest(path) != expected:
@@ -488,6 +492,7 @@ def export_run(data, old, phases):
         raise ValueError("Statistics incomplete")
     if any(set(image["assessments"]) != {*MODELS, MODEL} for image in images):
         raise ValueError("Exactly four graders and the canonical ensemble are required")
+    phase_summary = build_phase_summary(data / "results/api", plans, observations, accounting, models=MODELS)
     exports = data / "exports"
     exports.mkdir(exist_ok=True)
     write_lines(exports / "new-labelled-images.jsonl", images)
@@ -527,6 +532,7 @@ def export_run(data, old, phases):
         incremental_coverage=summary["coverage"],
         coverage=combined_coverage,
         new_model_metrics=model_metrics(rows, accounting, MODEL),
+        phase_summary=phase_summary,
         accounting=accounting,
         compatibility_probe_accounting=probes,
         historical_cost_per_model=previous["combined_cost_per_model"],

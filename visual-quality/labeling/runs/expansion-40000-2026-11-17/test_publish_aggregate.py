@@ -18,12 +18,14 @@ def fixture():
             "known_price_usd": "1.20",
             "unpriced_attempts": 1,
             "total_price_usd": None,
-            "attempts": [{"case_id": "R19999", "price_usd": "0.01"}],
+            "attempts": 20001,
+            "attempt_records": [{"case_id": "R19999", "price_usd": "0.01"}],
         }
         for model in publication.MODELS
     }
     summary = {key: 40000 if key in ("images", "total_images") else 0 for key in publication.COUNTS}
     summary.update(
+        new_images=20000,
         training_ready=False,
         stats_in_inference=False,
         exports={"labelled-images.jsonl": "a" * 64},
@@ -39,7 +41,34 @@ def fixture():
                 "missing_case_ids": ["R19999"],
             }
         },
-        incremental_coverage={},
+        incremental_coverage={
+            model: {"expected": 20000, "numeric_pairs": 20000, "status_counts": {"valid": 20000}}
+            for model in publication.MODELS
+        },
+        phase_summary={
+            model: {
+                "baseline": {
+                    "cases": 20000,
+                    "attempts": 20001,
+                    "outcomes": {"valid": 20000},
+                    "known_price_usd": "1.20",
+                    "unpriced_attempts": 1,
+                    "total_price_usd": None,
+                    "case_ids": ["R19999"],
+                },
+                "recovery": {
+                    "phases": 0,
+                    "cases": 0,
+                    "attempts": 0,
+                    "outcomes": {},
+                    "known_price_usd": "0",
+                    "unpriced_attempts": 0,
+                    "total_price_usd": "0",
+                },
+                "final_outcomes": {"valid": 20000},
+            }
+            for model in publication.MODELS
+        },
         historical_cost_per_model=ledger,
         combined_cost_per_model=ledger,
         accounting=ledger,
@@ -100,6 +129,7 @@ def fixture():
         review_ids=["R19999"],
         exports_sha256="a" * 64,
         current_plans=json.loads(json.dumps(summary["current_plans"])),
+        phase_summary_sha256=publication.phase_summary_digest(summary["phase_summary"]),
     )
     return summary, audit
 
@@ -162,6 +192,13 @@ def test_matching_40k_count_does_not_admit_a_stale_audit(mismatch):
         audit["current_plans"]["luna"]["plan_id"] = "previous-plan"
     assert audit["total_images"] == summary["total_images"] == 40000
     with pytest.raises(ValueError, match="hash or current plans"):
+        publication.project(summary, audit)
+
+
+def test_audit_binds_baseline_recovery_summary_even_when_export_hash_matches():
+    summary, audit = fixture()
+    summary["phase_summary"]["deepseek"]["baseline"]["outcomes"] = {"valid": 19999, "failed": 1}
+    with pytest.raises(ValueError, match="phase summary"):
         publication.project(summary, audit)
 
 
