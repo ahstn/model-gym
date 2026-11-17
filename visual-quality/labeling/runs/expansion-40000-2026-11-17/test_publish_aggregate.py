@@ -163,3 +163,14 @@ def test_matching_40k_count_does_not_admit_a_stale_audit(mismatch):
     assert audit["total_images"] == summary["total_images"] == 40000
     with pytest.raises(ValueError, match="hash or current plans"):
         publication.project(summary, audit)
+
+
+def test_model_and_cluster_arrays_cannot_disguise_per_image_rows():
+    summary, audit = fixture()
+    summary["new_model_metrics"].append(dict(summary["new_model_metrics"][0]))
+    with pytest.raises(ValueError, match="duplicate new grader"):
+        publication.project(summary, audit)
+    summary, audit = fixture()
+    summary["corpus_coverage"]["clusters"][0]["cluster"] = 19999
+    with pytest.raises(ValueError, match="cluster numbers"):
+        publication.project(summary, audit)

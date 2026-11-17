@@ -139,9 +139,11 @@ def project(summary, audit):
             "total_price_usd": str(known) if not missing else None,
         }
     result["new_model_metrics"] = []
+    seen_models = set()
     for row in summary["new_model_metrics"]:
-        if row["model"] not in (*MODELS, "photo_ensemble"):
-            raise ValueError("Unknown new grader")
+        if row["model"] not in (*MODELS, "photo_ensemble") or row["model"] in seen_models:
+            raise ValueError("Unknown or duplicate new grader")
+        seen_models.add(row["model"])
         result["new_model_metrics"].append(
             {
                 "model": row["model"],
@@ -155,6 +157,9 @@ def project(summary, audit):
             }
         )
     corpus = summary["corpus_coverage"]
+    cluster_ids = [count(row["cluster"]) for row in corpus["clusters"]]
+    if len(set(cluster_ids)) != len(cluster_ids) or any(identity >= 64 for identity in cluster_ids):
+        raise ValueError("Expected unique content cluster numbers from 0 through 63")
     result["corpus_coverage"] = {
         "categories": {key: count(corpus["categories"].get(key, 0)) for key in CATEGORIES},
         "clusters": [
