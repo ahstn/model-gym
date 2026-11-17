@@ -180,7 +180,11 @@ def test_failed_variant_parent_is_replaced_without_losing_base_image(modules, mo
     assert rejects == [{"image_id": "bad", "reason": "protected overlap"}]
 
 
-def test_embedding_receipt_pins_snapshot_when_prepare_advances(modules, monkeypatch, tmp_path):
+@pytest.mark.parametrize("workers", [4, 8])
+@pytest.mark.parametrize("change_source", [False, True])
+def test_embedding_receipt_pins_snapshot_when_prepare_advances(
+    modules, monkeypatch, tmp_path, workers, change_source
+):
     embed, corpus = modules["embed"], modules["corpus"]
     frame = tmp_path / "candidate-manifest.json"
     frame.write_text('{"cases": []}')
@@ -189,6 +193,16 @@ def test_embedding_receipt_pins_snapshot_when_prepare_advances(modules, monkeypa
     monkeypatch.setattr(corpus, "pin_initial_evidence", dict)
     monkeypatch.setattr(embed, "previous_vectors", lambda: ({}, []))
     monkeypatch.setattr(embed, "read_lines", lambda path: [])
+    source_sha = embed.digest(embed.__file__)
+    original_digest = embed.digest
+    observed_workers = []
+    original_pool = embed.ThreadPoolExecutor
+
+    def pool(count):
+        observed_workers.append(count)
+        return original_pool(count)
+
+    monkeypatch.setattr(embed, "ThreadPoolExecutor", pool)
     for field in ("INITIAL", "OLD"):
         directory = tmp_path / field
         (directory / "embedding-operations").mkdir(parents=True)
@@ -198,14 +212,39 @@ def test_embedding_receipt_pins_snapshot_when_prepare_advances(modules, monkeypa
     def overlap(endpoint, prior, previous):
         frame.write_text('{"cases": [], "newer": true}')
         (tmp_path / "embedding-operations/cpu-gpu-overlap.json").write_text("{}")
+        if change_source:
+            monkeypatch.setattr(
+                embed, "digest", lambda path: "changed" if path == embed.__file__ else original_digest(path)
+            )
         return {"worker_identity": {"pinned": True}}
 
     monkeypatch.setattr(embed.legacy, "check_overlap", overlap)
-    embed.main("unused")
+    if change_source:
+        with pytest.raises(ValueError, match="source changed during execution"):
+            embed.main("unused", workers=workers)
+        assert not (tmp_path / "embedding-operations/provenance.json").exists()
+        return
+    frozen_frame = tmp_path / "immutable-frame.json"
+    frozen_frame.write_bytes(frame.read_bytes())
+    embed.main("unused", workers=workers, frame=frozen_frame)
     provenance = json.loads((tmp_path / "embedding-operations/provenance.json").read_text())
+    assert observed_workers == [workers]
+    assert provenance["workers"] == workers
+    assert provenance["script_sha256"] == source_sha
+    assert provenance["input_frame"] == str(frozen_frame)
     assert provenance["candidate_manifest_sha256"] == initial_sha
     assert corpus.digest(Path(provenance["candidate_snapshot"])) == initial_sha
     assert corpus.digest(frame) != initial_sha
+
+
+@pytest.mark.parametrize("workers", [0, 9, True, 2.5])
+def test_embedding_workers_rejected_before_run_effects(modules, monkeypatch, workers):
+    def forbidden():
+        pytest.fail("Invalid concurrency must fail before pinning evidence or HTTP")
+
+    monkeypatch.setattr(modules["corpus"], "pin_initial_evidence", forbidden)
+    with pytest.raises(ValueError, match="integer from 1 to 8"):
+        modules["embed"].main("unused", workers=workers)
 
 
 def test_relocated_source_requires_matching_historical_bytes(modules, monkeypatch, tmp_path):

@@ -115,9 +115,13 @@ def encode_local(batch, endpoint):
     }
 
 
-def main(endpoint):
+def main(endpoint, workers=4, frame=None):
+    if type(workers) is not int or not 1 <= workers <= 8:
+        raise ValueError("Embedding workers must be an integer from 1 to 8")
+    source_sha = digest(__file__)
     corpus.pin_initial_evidence()
-    frame_bytes = (DATA / "candidate-manifest.json").read_bytes()
+    frame_path = corpus.Path(frame) if frame else DATA / "candidate-manifest.json"
+    frame_bytes = frame_path.read_bytes()
     frame_sha = hashlib.sha256(frame_bytes).hexdigest()
     rows = json.loads(frame_bytes)["cases"]
     snapshot = DATA / "embedding-operations/frames" / (frame_sha + ".json")
@@ -161,7 +165,7 @@ def main(endpoint):
         except (requests.RequestException, ValueError, AssertionError, OSError):
             return encode_local(batch, endpoint)
 
-    with ThreadPoolExecutor(4) as pool:
+    with ThreadPoolExecutor(workers) as pool:
         for i, (batch, (values, timing)) in enumerate(
             zip(batches, pool.map(encode, batches), strict=True), 1
         ):
@@ -174,6 +178,8 @@ def main(endpoint):
                 stream.write(json.dumps({"views": [r["view_sha256"] for r in batch], **timing}) + "\n")
             if i % 10 == 0:
                 print(f"Embedded {i * 4}/{len(missing)}", flush=True)
+    if digest(__file__) != source_sha:
+        raise ValueError("Embedding source changed during execution; retain cache without completion receipt")
     write_json(
         DATA / "embedding-operations/provenance.json",
         {
@@ -181,14 +187,16 @@ def main(endpoint):
             "overlap_sha256": digest(DATA / "embedding-operations/cpu-gpu-overlap.json"),
             "candidate_manifest_sha256": frame_sha,
             "candidate_snapshot": str(snapshot),
+            "input_frame": str(frame_path),
             "candidate_count": len(rows),
+            "workers": workers,
             "previous_provenance_sha256": {
                 str(root): digest(root / "embedding-operations/provenance.json") for root in (INITIAL, OLD)
             },
             "exact_view_reused_this_execution": reused,
             "prior_exact_view_cache_count": len(prior),
             "cache_count": len(list(cache.glob("*.npy"))),
-            "script_sha256": digest(__file__),
+            "script_sha256": source_sha,
         },
     )
 
@@ -196,5 +204,7 @@ def main(endpoint):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--endpoint", default="http://127.0.0.1:18766")
+    parser.add_argument("--workers", type=int, choices=range(1, 9), default=4)
+    parser.add_argument("--frame", help="Optional immutable candidate snapshot")
     args = parser.parse_args()
-    main(args.endpoint)
+    main(args.endpoint, args.workers, args.frame)
