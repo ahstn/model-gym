@@ -282,3 +282,80 @@ def test_local_embedding_rejects_oversized_single_before_any_http(modules, monke
     monkeypatch.setattr(embed.requests, "post", forbidden)
     with pytest.raises(ValueError, match="Single embedding image"):
         embed.encode_local(rows, "unused")
+
+
+def test_license_path_relocation_requires_independent_revision_and_hash_pin(modules, monkeypatch, tmp_path):
+    corpus = modules["corpus"]
+    monkeypatch.setattr(corpus, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(corpus, "DATA", tmp_path / "run")
+    evidence = tmp_path / "sources/megalith/metadata/README.md"
+    evidence.parent.mkdir(parents=True)
+    evidence.write_text("pinned source card")
+    policy = {"revision": "known-revision", "metadata_pins": {str(evidence): corpus.digest(evidence)}}
+    corpus.write_json(corpus.DATA / "acquisition/megalith-candidates.provenance.json", policy)
+    record = {
+        "id": "CC0-1.0",
+        "evidence_path": "/Users/ahstn/git/model-gym/visual-quality/data/sources/megalith/metadata/README.md",
+    }
+    result = corpus.resolve_license_evidence(record, "known-revision")
+    assert result["evidence_path"] == str(evidence)
+    assert result["evidence_original_path"] == record["evidence_path"]
+    assert result["evidence_sha256"] == corpus.digest(evidence)
+    assert result["evidence_path_status"] == "verified_local_copy"
+    evidence.write_text("different source card")
+    assert (
+        corpus.resolve_license_evidence(record, "known-revision")["evidence_path_status"]
+        == "historical_path_not_resolved"
+    )
+
+
+def test_unpinned_historical_license_path_is_explicitly_unresolved(modules, monkeypatch, tmp_path):
+    corpus = modules["corpus"]
+    monkeypatch.setattr(corpus, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(corpus, "DATA", tmp_path / "run")
+    evidence = tmp_path / "sources/vizwiz/evidence/provenance.json"
+    evidence.parent.mkdir(parents=True)
+    evidence.write_text("{}")
+    original = "/Users/ahstn/git/model-gym/visual-quality/data/sources/vizwiz/evidence/provenance.json"
+    result = corpus.resolve_license_evidence({"evidence_path": original}, "vizwiz-revision")
+    assert result["evidence_path"] == result["evidence_original_path"] == original
+    assert result["evidence_path_status"] == "historical_path_not_resolved"
+    assert "evidence_sha256" not in result
+
+
+def test_current_vizwiz_evidence_is_verified_without_claiming_old_byte_equivalence(
+    modules, monkeypatch, tmp_path
+):
+    corpus = modules["corpus"]
+    monkeypatch.setattr(corpus, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(corpus, "DATA", tmp_path / "run")
+    config = corpus.acquisition.vizwiz
+    source = tmp_path / "sources/vizwiz"
+    (source / "evidence").mkdir(parents=True)
+    (source / "train.json").write_text("[]")
+    monkeypatch.setattr(config, "ANNOTATION_SHA256", corpus.digest(source / "train.json"))
+    current = {
+        "annotation_revision": config.REPO_REVISION,
+        "annotation_sha256": config.ANNOTATION_SHA256,
+        "archive_url": config.ARCHIVE_URL,
+        "archive_etag": config.ARCHIVE_ETAG,
+        "archive_size": config.ARCHIVE_SIZE,
+        "media_license": "CC-BY-4.0",
+        "media_license_url": "https://creativecommons.org/licenses/by/4.0/",
+    }
+    corpus.write_json(source / "evidence/provenance.json", current)
+    (source / "evidence/caption-media-license.html").write_text(
+        "creativecommons.org/licenses/by/4.0 " + config.ARCHIVE_URL
+    )
+    record = {
+        "id": "CC-BY-4.0",
+        "url": current["media_license_url"],
+        "evidence_path": "/Users/ahstn/git/model-gym/visual-quality/data/sources/vizwiz/evidence/provenance.json",
+    }
+    revision = f"annotations:{config.REPO_REVISION};media-etag:{config.ARCHIVE_ETAG}"
+    result = corpus.resolve_license_evidence(record, revision)
+    evidence = result["current_source_evidence"]
+    assert result["evidence_path_status"] == "historical_path_not_resolved"
+    assert evidence["relation"] == "current source evidence; historical byte equivalence unknown"
+    assert evidence["sha256"] == corpus.digest(source / "evidence/provenance.json")
+    assert "current_source_evidence" not in corpus.resolve_license_evidence(record, "wrong revision")

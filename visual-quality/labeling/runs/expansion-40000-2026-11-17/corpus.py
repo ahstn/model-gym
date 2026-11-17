@@ -11,6 +11,7 @@ import os
 import sys
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
+from functools import lru_cache
 from pathlib import Path
 
 PACKAGE = Path(__file__).resolve().parents[3]
@@ -124,6 +125,91 @@ def acquire(source, count, workers, megalith_pool=None):
         setattr(acquisition, factory_name, original)
 
 
+@lru_cache(maxsize=1)
+def current_vizwiz_evidence(source_root):
+    """Verify today's local evidence against the existing pinned source contract."""
+    config = acquisition.vizwiz
+    provenance = source_root / "evidence/provenance.json"
+    license_page = source_root / "evidence/caption-media-license.html"
+    try:
+        value = json.loads(provenance.read_text())
+        expected = {
+            "annotation_revision": config.REPO_REVISION,
+            "annotation_sha256": config.ANNOTATION_SHA256,
+            "archive_url": config.ARCHIVE_URL,
+            "archive_etag": config.ARCHIVE_ETAG,
+            "archive_size": config.ARCHIVE_SIZE,
+            "media_license": "CC-BY-4.0",
+            "media_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        }
+        if any(value.get(key) != expected_value for key, expected_value in expected.items()):
+            return None
+        if digest(source_root / "train.json") != config.ANNOTATION_SHA256:
+            return None
+        html = license_page.read_text()
+        if "creativecommons.org/licenses/by/4.0" not in html or config.ARCHIVE_URL not in html:
+            return None
+        return {
+            "path": str(provenance),
+            "sha256": digest(provenance),
+            "media_license_page_path": str(license_page),
+            "media_license_page_sha256": digest(license_page),
+            "relation": "current source evidence; historical byte equivalence unknown",
+            "source_revision": f"annotations:{config.REPO_REVISION};media-etag:{config.ARCHIVE_ETAG}",
+            "annotation_sha256": config.ANNOTATION_SHA256,
+            "archive_url": config.ARCHIVE_URL,
+            "archive_etag": config.ARCHIVE_ETAG,
+        }
+    except (OSError, ValueError):
+        return None
+
+
+def resolve_license_evidence(license_record, source_revision):
+    """Retain historical evidence paths; relocate only against independent pins."""
+    original = license_record.get("evidence_path", "")
+    old_root = "/Users/ahstn/git/model-gym/visual-quality/data/"
+    if not original.startswith(old_root):
+        return license_record
+    updated = {
+        **license_record,
+        "evidence_original_path": original,
+        "evidence_path_status": "historical_path_not_resolved",
+        "evidence_resolution_note": "Original host path retained; no independently pinned matching local evidence is asserted.",
+    }
+    local = (DATA_ROOT / original.removeprefix(old_root)).resolve()
+    if local == (DATA_ROOT / "sources/vizwiz/evidence/provenance.json").resolve():
+        current = current_vizwiz_evidence(DATA_ROOT / "sources/vizwiz")
+        if (
+            current
+            and source_revision == current["source_revision"]
+            and license_record.get("id") == "CC-BY-4.0"
+            and license_record.get("url") == "https://creativecommons.org/licenses/by/4.0/"
+        ):
+            updated["current_source_evidence"] = current
+        return updated
+    authority = DATA / "acquisition/megalith-candidates.provenance.json"
+    if not local.is_relative_to(DATA_ROOT.resolve()) or not local.is_file() or not authority.is_file():
+        return updated
+    policy = json.loads(authority.read_text())
+    expected = policy.get("metadata_pins", {}).get(str(local))
+    if expected and source_revision == policy["revision"] and digest(local) == expected:
+        updated.update(
+            evidence_path=str(local),
+            evidence_sha256=expected,
+            evidence_path_status="verified_local_copy",
+            evidence_resolution_note="Local bytes match the independently frozen source-metadata pin for the same source revision.",
+            evidence_relocation={
+                "original_path": original,
+                "local_path": str(local),
+                "verified_sha256": expected,
+                "authority_path": str(authority),
+                "authority_sha256": digest(authority),
+                "source_revision": source_revision,
+            },
+        )
+    return updated
+
+
 def prepare_input(row):
     """Resolve migrated source copies only when their historical byte hash agrees."""
     old_root = "/Users/ahstn/git/model-gym/visual-quality/data/"
@@ -150,8 +236,11 @@ def prepare_input(row):
                 if saved.get("error", "").startswith("ValueError: Image is outside the dataset root:"):
                     cache.unlink()
     result = preparation.prepare(row)
-    if relocation and not result.get("error"):
-        result["source_path_relocation"] = relocation
+    if not result.get("error"):
+        if relocation:
+            result["source_path_relocation"] = relocation
+        if "license" in result:
+            result["license"] = resolve_license_evidence(result["license"], result.get("source_revision"))
         cache = DATA / "prepared" / (hashlib.sha256(row["id"].encode()).hexdigest() + ".json")
         write_json(cache, result)
     return result
