@@ -2,7 +2,7 @@
 
 Decision accepted 2026-11-17: add 20,000 images to the completed 20K corpus, retaining **37.5% Luna + 37.5% DeepSeek + 25% Liquid** independently for technical quality and aesthetics. The [training research and decision](../../../docs/training/qwen-adaptation-review-2026-11-17/README.md) is saved separately. This run labels data; it does not start training or enable training masks.
 
-Status: acquisition and embedding preparation are in progress. Do not interpret this document as a completed 40K dataset. The final aggregate report and audit will record actual coverage and costs.
+Status: corpus acquisition, embedding, selection, image statistics and retrieval validation are complete. All four graders are running. Do not interpret this document as a completed 40K labeled dataset. The final aggregate report and audit will record actual coverage and costs. [Content coverage](CONTENT-COVERAGE.md) records the prepared source mix, theme balance and duplicate-review limitations.
 
 Use the unchanged versioned v2 profile with Luna high, DeepSeek high, Liquid d1.1 and Jev 1.14. All four receive the same exact delivered view; image statistics and existing reference scores are not prompt inputs. No new Q-ReAlign Lite calls or assistant reference assessments are made. Preserve the original 1,500 references, historical Lite comparisons, and first-1,000 Git publication examples unchanged.
 
