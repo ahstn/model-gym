@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import shutil
 import subprocess
 import tarfile
 from concurrent.futures import ThreadPoolExecutor
@@ -16,6 +17,40 @@ def digest(path):
 
 def write_json(path, value):
     path.write_text(json.dumps(value, indent=2) + "\n")
+
+
+def finish_snapshot(output, objects, summary, labels):
+    """Produce every root object required by restore, then seal the upload plan."""
+    compressed = output / "labelled-images.jsonl.zst"
+    with compressed.open("wb") as destination:
+        subprocess.run(["zstd", "-T4", "-6", "-q", "-c", str(labels)], stdout=destination, check=True)
+    shutil.copyfile(Path(__file__).with_name("restore.py"), output / "restore.py")
+    write_json(
+        output / "snapshot-summary.json",
+        {k: v for k, v in summary.items() if k not in ("object_count", "total_object_bytes")},
+    )
+    payload = list(objects)
+    for name in ("labelled-images.jsonl.zst", "restore.py", "snapshot-summary.json"):
+        path = output / name
+        payload.append(
+            {"local_path": str(path), "key": name, "bytes": path.stat().st_size, "sha256": digest(path)}
+        )
+    snapshot = {
+        **summary,
+        "schema_version": "r2-snapshot-v2",
+        "objects": [{k: row[k] for k in ("key", "bytes", "sha256")} for row in payload],
+    }
+    # Counts include the payload, excluding the self-referential manifest and
+    # the completion receipt that can only be written after remote verification.
+    snapshot["object_count"] = len(payload)
+    snapshot["total_object_bytes"] = sum(row["bytes"] for row in payload)
+    path = output / "snapshot.json"
+    write_json(path, snapshot)
+    payload.append(
+        {"local_path": str(path), "key": path.name, "bytes": path.stat().st_size, "sha256": digest(path)}
+    )
+    write_json(output / "upload-plan.json", payload)
+    return snapshot
 
 
 def prepare(data, repo, output):
@@ -176,7 +211,6 @@ def prepare(data, repo, output):
         objects.append(
             {"local_path": str(path), "key": name, "bytes": path.stat().st_size, "sha256": digest(path)}
         )
-    write_json(output / "upload-plan.json", objects)
     summary = {
         "image_count": len(images),
         "image_bytes": sum(x["bytes"] for x in images),
@@ -193,8 +227,8 @@ def prepare(data, repo, output):
         "excluded": "Unscored originals/candidates, caches, credentials, temporary operations, redundant exports",
         "complete_ensemble_pairs": 19997,
     }
-    write_json(output / "snapshot-summary.json", summary)
-    print(json.dumps(summary, indent=2), flush=True)
+    snapshot = finish_snapshot(output, objects, summary, current / "exports/labelled-images.jsonl")
+    print(json.dumps({k: v for k, v in snapshot.items() if k != "objects"}, indent=2), flush=True)
 
 
 if __name__ == "__main__":

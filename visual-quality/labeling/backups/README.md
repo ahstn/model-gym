@@ -84,7 +84,7 @@ Files must be smaller than 5 GiB for this single-part uploader.
 
 The uploader uses `boto3` (validated with 1.44.4); the preparation and restore
 helpers use the Python standard library plus the `zstd` executable. Run the
-readback retry tests from the repository root with:
+backup contract and readback retry tests from the repository root with:
 
 ```sh
 uv run --no-project --with boto3==1.44.4 python -m unittest discover \
@@ -95,6 +95,39 @@ Use a temporary bucket-scoped Object Read & Write token, then revoke it after
 verification. Never include its credential file in the upload plan. Keep plans,
 receipts and per-image inventories in ignored `visual-quality/data/`. Publish a
 completion receipt only after every planned object has passed verification.
+
+For a **new snapshot in a new private prefix**, the committed workflow is:
+
+```sh
+python3 visual-quality/labeling/backups/prepare.py \
+  --data /home/ahstn/git/model-gym/visual-quality/data \
+  --repo "$PWD" --output /tmp/new-20k-snapshot
+uv run --no-project --with boto3==1.44.4 python \
+  visual-quality/labeling/backups/transfer.py \
+  --plan /tmp/new-20k-snapshot/upload-plan.json \
+  --credentials /path/to/private-r2-credential.json \
+  --account 2b0d43c32a6f1fb83147092522f3c1bb --bucket model-gym-backups \
+  --prefix visual-quality/NEW-UNUSED-SNAPSHOT/ --complete-snapshot
+```
+
+Preparation now writes the compressed labels, restore helper, snapshot manifest
+and complete upload plan together. `snapshot.json` counts payload objects excluding
+itself and the later verification receipt. Its source-file hashes cover the exact
+helper revisions, including any changes not represented by `source_commit`.
+
+Without `--complete-snapshot`, transfer writes only a local
+`<plan-stem>.verification.json` with `scope=transfer_plan_only`. It cannot publish
+or replace `verification.json`. With the flag, the plan must exactly cover the
+manifest plus the manifest itself; every object receives full readback verification,
+and the final remote key/size/ETag inventory must match before publishing the
+completion receipt. The receipt's `objects_verified` count includes the manifest
+but excludes the receipt itself. Conditional writes refuse concurrent overwrites;
+a concurrent writer can require rerunning the same plan after inspecting the failure.
+
+These review fixes do not rewrite the completed November 16 snapshot or its
+historical receipt. That snapshot was completed with additional recorded local
+finalization steps and independently restored in full; use its existing receipt
+and restore instructions above. A new snapshot has its own manifest and receipt.
 
 R2 Standard storage is $0.015/GB-month before the account's shared free allowance;
 request charges are separate. See [R2 pricing](https://developers.cloudflare.com/r2/pricing/).
