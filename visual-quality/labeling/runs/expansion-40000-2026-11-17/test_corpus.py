@@ -36,6 +36,7 @@ def record(identity, dhash="0123456789abcdef", **changes):
         "view_sha256": "view-" + identity,
         "category": "megalith",
         "dhash": dhash,
+        "source_metadata": {"icc": False, "alpha": False},
         **changes,
     }
 

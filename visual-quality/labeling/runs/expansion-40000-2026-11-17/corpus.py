@@ -5,12 +5,14 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
 import hashlib
 import json
 import os
 import sys
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import contextmanager
 from functools import lru_cache
 from pathlib import Path
 
@@ -246,6 +248,32 @@ def prepare_input(row):
     return result
 
 
+@contextmanager
+def publication_lock():
+    """Serialize candidate publication against the final selection commit."""
+    DATA.mkdir(parents=True, exist_ok=True)
+    with (DATA / "corpus-publication.lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        yield
+
+
+def publish_candidates(rows, rejects):
+    with publication_lock():
+        if (DATA / "manifest.json").exists():
+            raise ValueError("Selection froze while preparation was running; candidates remain unchanged")
+        write_json(
+            DATA / "candidate-manifest.json",
+            {
+                "schema_version": "expansion-40000-candidates-v1",
+                "seed": SEED,
+                "old_manifest_sha256": digest(OLD / "combined-manifest.json"),
+                "counts": dict(Counter(r["category"] for r in rows)),
+                "cases": rows,
+            },
+        )
+        write_lines(DATA / "candidate-rejections.jsonl", rejects)
+
+
 def prepare(workers):
     if (DATA / "manifest.json").exists():
         raise ValueError("Selection already frozen; preparation must not change")
@@ -310,17 +338,7 @@ def prepare(workers):
                 index.add(int(row["dhash"], 16), row["image_id"])
             if i % 100 == 0:
                 print(f"Prepared {i}/{len(inputs)}; accepted={len(rows)} rejected={len(rejects)}", flush=True)
-    write_json(
-        DATA / "candidate-manifest.json",
-        {
-            "schema_version": "expansion-40000-candidates-v1",
-            "seed": SEED,
-            "old_manifest_sha256": digest(OLD / "combined-manifest.json"),
-            "counts": dict(Counter(r["category"] for r in rows)),
-            "cases": rows,
-        },
-    )
-    write_lines(DATA / "candidate-rejections.jsonl", rejects)
+    publish_candidates(rows, rejects)
     print(dict(Counter(r["category"] for r in rows)), flush=True)
 
 

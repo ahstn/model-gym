@@ -4,7 +4,9 @@
 
 from __future__ import annotations
 import json
+import hashlib
 import shutil
+import tempfile
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, UTC
@@ -130,7 +132,15 @@ def historical_matcher(old):
 
 def generate_families(chosen, clusters, old, count=500):
     """Replace failed/overlapping variants with deterministic alternative parents."""
-    available = [r for r in chosen if r["category"] == "megalith"]
+    # The legacy generator strips metadata before RGB conversion. ICC/alpha
+    # sources remain eligible base images, but cannot be controlled parents.
+    available = [
+        r
+        for r in chosen
+        if r["category"] == "megalith"
+        and r.get("source_metadata", {}).get("icc") is False
+        and r.get("source_metadata", {}).get("alpha") is False
+    ]
     accepted, rejects = {}, []
     matches = historical_matcher(old)
     view_families = {r["view_sha256"]: r["family_id"] for r in chosen}
@@ -177,14 +187,64 @@ def validate_final(rows, old):
         raise ValueError(f"Final corpus has {len(collisions)} historical/protected matches")
 
 
+def publish_selection(manifest, old, coverage, review, old_vectors, old_embedding_views):
+    """Stage every dependent artifact, then publish the frozen manifest last."""
+    with tempfile.TemporaryDirectory(prefix=".selection-", dir=DATA) as temporary:
+        stage = corpus.Path(temporary)
+        write_json(stage / "manifest.json", manifest)
+        write_json(
+            stage / "combined-manifest.json",
+            {
+                "schema_version": "labeling-40000-combined-v1",
+                "initial_manifest_sha256": manifest["old_manifest_sha256"],
+                "previous_combined_manifest_sha256": manifest["old_manifest_sha256"],
+                "increment_manifest_sha256": digest(stage / "manifest.json"),
+                "cases": old + manifest["cases"],
+            },
+        )
+        write_json(stage / "content-coverage.json", coverage)
+        write_json(stage / "candidate-related-review.json", review)
+        shutil.copyfile(OLD / "cluster-prototypes.npz", stage / "cluster-prototypes.npz")
+        vectors = np.stack(
+            [
+                np.load(
+                    DATA / "embedding-cache" / (row["embedding_view_sha256"] + ".npy"), allow_pickle=False
+                )
+                for row in manifest["cases"]
+            ]
+        )
+        np.savez_compressed(
+            stage / "corpus-embeddings.npz",
+            case_ids=np.asarray([row["case_id"] for row in old + manifest["cases"]]),
+            embeddings=np.concatenate([old_vectors, vectors]),
+            embedding_view_sha256=np.concatenate(
+                [old_embedding_views, np.asarray([row["embedding_view_sha256"] for row in manifest["cases"]])]
+            ),
+        )
+        with corpus.publication_lock():
+            if (DATA / "manifest.json").exists():
+                raise ValueError("Selection was frozen by another process; staged outputs discarded")
+            if digest(DATA / "candidate-manifest.json") != manifest["candidate_manifest_sha256"]:
+                raise ValueError("Candidate frame changed during selection; staged outputs discarded")
+            corpus.pin_initial_evidence()
+            for path in sorted(stage.iterdir()):
+                if path.name != "manifest.json":
+                    path.replace(DATA / path.name)
+            # This is the completion marker. A failure before this rename leaves
+            # the run unpublished and safely rerunnable, even after partial moves.
+            (stage / "manifest.json").replace(DATA / "manifest.json")
+
+
 def main():
     if (DATA / "manifest.json").exists():
         raise ValueError("Selection already frozen; do not replace a scored manifest")
     corpus.pin_initial_evidence()
     old = corpus.old_cases()
-    pool = json.loads((DATA / "candidate-manifest.json").read_text())["cases"]
+    candidate_bytes = (DATA / "candidate-manifest.json").read_bytes()
+    candidate_sha = hashlib.sha256(candidate_bytes).hexdigest()
+    pool = json.loads(candidate_bytes)["cases"]
     embedding_receipt = json.loads((DATA / "embedding-operations/provenance.json").read_text())
-    if embedding_receipt["candidate_manifest_sha256"] != digest(DATA / "candidate-manifest.json"):
+    if embedding_receipt["candidate_manifest_sha256"] != candidate_sha:
         raise ValueError("Run embedding pass on final candidate manifest before selection")
     z = np.load(OLD / "corpus-embeddings.npz", allow_pickle=False)
     assert z["case_ids"].tolist() == [r["case_id"] for r in old]
@@ -244,7 +304,7 @@ def main():
         "frozen_utc": datetime.now(UTC).isoformat(),
         "seed": SEED,
         "old_manifest_sha256": digest(OLD / "combined-manifest.json"),
-        "candidate_manifest_sha256": digest(DATA / "candidate-manifest.json"),
+        "candidate_manifest_sha256": candidate_sha,
         "prototype_source_sha256": digest(OLD / "cluster-prototypes.npz"),
         "requested_counts": {"megalith": 15000, "vizwiz": 3000, "controls": 500, "distortions": 1500},
         "control_shortfall_replaced_by_megalith": 500 - control_count,
@@ -253,26 +313,12 @@ def main():
         "cases": final,
         "training_ready": False,
     }
-    write_json(DATA / "manifest.json", manifest)
-    write_json(
-        DATA / "combined-manifest.json",
-        {
-            "schema_version": "labeling-40000-combined-v1",
-            "initial_manifest_sha256": digest(OLD / "combined-manifest.json"),
-            "previous_combined_manifest_sha256": digest(OLD / "combined-manifest.json"),
-            "increment_manifest_sha256": digest(DATA / "manifest.json"),
-            "cases": old + final,
-        },
-    )
-    write_json(
-        DATA / "candidate-related-review.json",
-        {
-            "threshold": 0.97,
-            "automatic_exclusion": "cosine >= .985 and dhash <= 6; conservative sample exclusion, not a duplicate assertion",
-            "excluded_candidates": excluded,
-            "pairs": related,
-        },
-    )
+    review = {
+        "threshold": 0.97,
+        "automatic_exclusion": "cosine >= .985 and dhash <= 6; conservative sample exclusion, not a duplicate assertion",
+        "excluded_candidates": excluded,
+        "pairs": related,
+    }
     themes = {
         r["cluster"]: r["theme"] for r in json.loads((OLD / "content-coverage.json").read_text())["clusters"]
     }
@@ -289,8 +335,9 @@ def main():
                 "combined_share": sum(r["content_cluster"] == k for r in old + final) / 40000,
             }
         )
-    write_json(
-        DATA / "content-coverage.json",
+    publish_selection(
+        manifest,
+        old,
         {
             "clusters": coverage,
             "categories": manifest["counts"],
@@ -298,21 +345,9 @@ def main():
             "revision": "f9972ac22e696a105c482202646979e33e4b5a1e",
             "embedding_modes": dict(Counter(r["embedding_mode"] for r in final)),
         },
-    )
-    shutil.copyfile(OLD / "cluster-prototypes.npz", DATA / "cluster-prototypes.npz")
-    vectors = np.stack(
-        [
-            np.load(DATA / "embedding-cache" / (r["embedding_view_sha256"] + ".npy"), allow_pickle=False)
-            for r in final
-        ]
-    )
-    np.savez_compressed(
-        DATA / "corpus-embeddings.npz",
-        case_ids=np.asarray([r["case_id"] for r in old + final]),
-        embeddings=np.concatenate([ov, vectors]),
-        embedding_view_sha256=np.concatenate(
-            [z["embedding_view_sha256"], np.asarray([r["embedding_view_sha256"] for r in final])]
-        ),
+        review,
+        ov,
+        z["embedding_view_sha256"],
     )
     print(manifest["counts"], flush=True)
 
