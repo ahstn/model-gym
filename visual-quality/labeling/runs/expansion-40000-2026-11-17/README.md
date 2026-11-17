@@ -33,3 +33,9 @@ After final acquisition, run preparation, embeddings and selection sequentially;
 Run the existing `stats_run.py` with this checkout's `image-stats/src` and `visual-quality/src` on `PYTHONPATH`. Use `related.py` for cross-family retrieval, then `finalize.py` after scoring. Finalization locks all routes, validates current plan IDs and complete traversal, exports, and audits raw responses and historical invariance. Traversal completion is distinct from complete numerical labels.
 
 Projected API fees are about **$33.87**, based on the previous added 10K, before unknown charges or changed provider prices. This is an estimate, not the internal conservative liability guard. Actual model fees, unknown attempt charges, HTTP latencies and embedding infrastructure costs must be reported separately. Never count derived ensemble component costs twice.
+
+## Live compatibility check
+
+Four historical rehearsal views, chosen by source category without consulting their scores, were assessed independently by all four current routes. All 16 observations were valid, with 16 HTTP attempts, no content denials and no unknown charges. Total known cost was **$0.007057011**. Luna and DeepSeek requested high reasoning and returned nonzero reasoning-token usage; providers did not separately echo the effort setting. Existing labels were not modified. This small operational check establishes route/schema compatibility, not accuracy or a guarantee of later request success.
+
+After finalization, `publish_aggregate.py --data <full-local-run> --output-directory <tracked-run-directory>` creates the Git-safe report and summary. It binds publication to the matching export audit and explicitly projects aggregate fields. Never copy the full local summary directly: it includes per-image duplicate-review evidence.
