@@ -163,6 +163,28 @@ def test_unrecognized_model_or_status_cannot_hide_an_image_id():
         publication.project(summary, audit)
 
 
+def test_historical_missing_ensembles_preserve_coverage_without_private_evidence():
+    from visual_quality.ensemble import score_ensemble
+
+    summary, audit = fixture()
+    missing = score_ensemble({}, case_id="R19999")
+    assert missing["technical_score"] is None and missing["aesthetic_score"] is None
+    summary["coverage"]["photo_ensemble"] = {
+        "expected": 40000,
+        "numeric_pairs": 39997,
+        "status_counts": {"valid": 39997, missing["status"]: 3},
+        "missing_observations": [missing],
+    }
+    result = publication.project(summary, audit)
+    assert result["coverage"]["photo_ensemble"] == {
+        "expected": 40000,
+        "numeric_pairs": 39997,
+        "status_counts": {"valid": 39997, "missing_or_invalid_components": 3},
+    }
+    output = json.dumps(result) + publication.report(result)
+    assert "R19999" not in output and "missing_observations" not in output
+
+
 def test_numeric_fields_cannot_carry_arbitrary_text():
     summary, audit = fixture()
     summary["corpus_coverage"]["clusters"][0]["new_count"] = "R19999"

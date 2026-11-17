@@ -1,6 +1,6 @@
 # 40K corpus content coverage
 
-**Status at 2026-11-17 17:49 UTC:** corpus preparation, selection, clustering and retrieval validation are complete; model scoring is still running. These are aggregate corpus facts, not completed labeling or accuracy results. Training masks remain disabled.
+**Status at 2026-11-17 22:25 UTC:** corpus preparation, scoring, export and audit are complete. The [labeling report](REPORT.md) records numerical coverage and costs. This document describes corpus coverage; these counts do not establish labeling accuracy. Training masks remain disabled.
 
 The expansion adds 20,000 views to the preserved 20,000, giving **40,000 views from 37,000 explicit source families**. There are 36,000 standalone families and 1,000 controlled families containing a parent and three derivatives. Known families remain together; unknown photographer, session and event relationships are not resolved by these counts.
 

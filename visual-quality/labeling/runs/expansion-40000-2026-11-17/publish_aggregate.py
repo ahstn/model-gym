@@ -31,6 +31,7 @@ STATUSES = {
     "invalid",
     "failed",
     "missing",
+    "missing_or_invalid_components",
     "retryable_failure",
     "observation_not_finalized",
 }

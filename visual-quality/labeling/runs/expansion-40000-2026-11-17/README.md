@@ -2,13 +2,13 @@
 
 Decision accepted 2026-11-17: add 20,000 images to the completed 20K corpus, retaining **37.5% Luna + 37.5% DeepSeek + 25% Liquid** independently for technical quality and aesthetics. The [training research and decision](../../../docs/training/qwen-adaptation-review-2026-11-17/README.md) is saved separately. This run labels data; it does not start training or enable training masks.
 
-Status: corpus acquisition, embedding, selection, image statistics and retrieval validation are complete. All four graders are running. Do not interpret this document as a completed 40K labeled dataset. The final aggregate report and audit will record actual coverage and costs. [Content coverage](CONTENT-COVERAGE.md) records the prepared source mix, theme balance and duplicate-review limitations.
+Completed and audited on 2026-11-17: all 20,000 new images have numerical Luna, DeepSeek, Liquid and ensemble score pairs; Jev has 19,998 pairs and two retained dimension errors. The combined dataset has **39,997 complete ensemble pairs across 40,000 images**, preserving three earlier gaps. The [aggregate report](REPORT.md) records coverage, latency, costs and validation. [Content coverage](CONTENT-COVERAGE.md) records the source mix, theme balance and duplicate-review limitations. Labels remain unapproved for training.
 
 Use the unchanged versioned v2 profile with Luna high, DeepSeek high, Liquid d1.1 and Jev 1.14. All four receive the same exact delivered view; image statistics and existing reference scores are not prompt inputs. No new Q-ReAlign Lite calls or assistant reference assessments are made. Preserve the original 1,500 references, historical Lite comparisons, and first-1,000 Git publication examples unchanged.
 
 ## Data locations
 
-Full artifacts live outside Git at `/home/ahstn/git/model-gym/visual-quality/data/labeling-40000-2026-11-17/`. Once finalization succeeds:
+Full artifacts live outside Git at `/home/ahstn/git/model-gym/visual-quality/data/labeling-40000-2026-11-17/`:
 
 - `exports/labelled-images.jsonl` contains the combined 40K image-level dataset, preserving the prior 20K canonical records byte-for-byte as its prefix.
 - `exports/new-labelled-images.jsonl` contains the added 20K records.
@@ -34,7 +34,7 @@ Embedding clients accept `--workers 1..8` (default 4) and an optional immutable 
 
 Run the existing `stats_run.py` with this checkout's `image-stats/src` and `visual-quality/src` on `PYTHONPATH`. Use `related.py` for cross-family retrieval, then `finalize.py` after scoring. Finalization locks all routes, validates current plan IDs and complete traversal, exports, and audits raw responses and historical invariance. Traversal completion is distinct from complete numerical labels.
 
-Projected API fees are about **$33.87**, based on the previous added 10K, before unknown charges or changed provider prices. This is an estimate, not the internal conservative liability guard. Actual model fees, unknown attempt charges, HTTP latencies and embedding infrastructure costs must be reported separately. Never count derived ensemble component costs twice.
+Known grading fees are **$33.902338754**, including all baseline attempts and the five bounded DeepSeek recovery calls. The separate compatibility check cost **$0.007057011**, bringing known API fees to **$33.909395765**; 14 failed attempts have unknown charges. The 16 new-image smoke calls were reused in the baseline and are already included. Runpod's latest posted checkpoint is **$6.1674128406448287** for embedding compute and storage; this is not an independently reconciled final account invoice. Both owned temporary pods and their retained disks were deleted with explicit user approval and verified absent. Never count derived ensemble component costs twice.
 
 ## Why full runs use 16 workers per route
 
@@ -76,3 +76,13 @@ python finalize.py --phase deepseek=empty-length-once
 Freezing and checking do not make provider requests. A model with no eligible cases gets no recovery plan and keeps its normal finalization phase. Recovery runs sequentially under the model lock and the existing liability guard; the four ordinary graders keep their frozen 16-worker limits. A repeated cutoff remains a missing assessment, rather than a substituted score. The final report must separate recovery outcomes from baseline outcomes and count all attempts once.
 
 This runner expects the original `expansion` baseline without an intervening recovery phase. If exhausted transport failures also need recovery, review phase ordering and evidence pins before freezing either recovery plan; do not retrofit a frozen plan.
+
+## Observed exceptions
+
+Five DeepSeek baseline responses exhausted the 16,384-token budget entirely on reasoning and returned no visible answer. All five returned valid scores on their single permitted, identical recovery request. The final export keeps both attempts, their charges and their measured HTTP latencies. No successful score was resampled.
+
+Two Jev requests ended with HTTP 400 `Invalid image dimensions`. Both delivered PNGs decode locally and match their frozen hashes. Successful requests include smaller pixel areas and wider aspect ratios, so the available evidence does not establish a reliable size threshold. These two assessments remain missing; images were not resized or resubmitted to work around the rejection. The three ensemble components succeeded for both images.
+
+The code verification at commit `ec233cd890ce35afb42effd6463c01100efb06d1` passed 600 tests and 20 subtests, Ruff lint and formatting, and publication checks. The receipt in `operations/final-code-checks.json` pins the tested sources. The final publisher additionally accepts the existing historical `missing_or_invalid_components` status without altering it; all 12 publisher tests and lint/format checks passed after that change.
+
+Final dataset validation reparsed all 80,000 new raw observations, checked all 20,000 new image/statistics joins, and verified the prior 20K export prefix and original reference/publication files unchanged. The local `audit.json` records the passing checks. The combined `exports/labelled-images.jsonl` SHA256 is `8bae5443fe57a0adc4268a30f0c296108df1cd9b3071d4f31abac0ee9818ee95`. This validates provenance and consistency, not accuracy against new human ratings; no new reference assessments were made.
