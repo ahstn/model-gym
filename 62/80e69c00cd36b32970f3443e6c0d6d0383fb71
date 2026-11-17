@@ -1,0 +1,21 @@
+visual-quality/labeling/backups/README.md
+  s_a985f77760d967::t_479272b42c47de 10-15,85-93
+visual-quality/labeling/backups/receipt-20000-2026-11-16.json
+  s_a985f77760d967::t_6c0c9686f4cbb2 1-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "6280e69c00cd36b32970f3443e6c0d6d0383fb71",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
