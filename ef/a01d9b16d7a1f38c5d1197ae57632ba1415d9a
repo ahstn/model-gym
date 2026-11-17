@@ -1,0 +1,21 @@
+visual-quality/labeling/runs/expansion-40000-2026-11-17/recover_empty.py
+  s_8dcf5f82e439ca::t_9dacaf9cc9d338 1-409
+visual-quality/labeling/runs/expansion-40000-2026-11-17/test_recover_empty.py
+  s_8dcf5f82e439ca::t_bb604d7cb768e8 1-394
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "efa01d9b16d7a1f38c5d1197ae57632ba1415d9a",
+  "prompts": {},
+  "sessions": {
+    "s_8dcf5f82e439ca": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e9df-fa22-7663-83b4-a5bdc58f49d5",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
