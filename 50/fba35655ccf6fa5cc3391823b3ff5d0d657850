@@ -1,0 +1,23 @@
+visual-quality/labeling/backups/test_snapshot.py
+  s_e5b8170c3fb86f::t_4e46854030c1d6 125-163
+visual-quality/labeling/backups/test_transfer.py
+  s_e5b8170c3fb86f::t_f2dc249ded2e4e 4-5,7-8,12,52-156
+visual-quality/labeling/backups/transfer.py
+  s_e5b8170c3fb86f::t_1901941b50c739 68-132,137-144,190-198,259,261-263,289,307-316,333-334
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "50fba35655ccf6fa5cc3391823b3ff5d0d657850",
+  "prompts": {},
+  "sessions": {
+    "s_e5b8170c3fb86f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1ec21-c95a-7e03-9eca-a01af56de665",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
