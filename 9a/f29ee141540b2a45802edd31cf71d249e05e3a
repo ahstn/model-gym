@@ -1,0 +1,27 @@
+visual-quality/AGENTS.md
+  s_a985f77760d967::t_8f7f794ad15ff1 66-67
+visual-quality/labeling/README.md
+  s_a985f77760d967::t_c36595f71bbcc2 60
+visual-quality/labeling/backups/README.md
+  s_a985f77760d967::t_90891108e852a2 3-51
+visual-quality/labeling/backups/receipt-40000-2026-11-18.json
+  s_a985f77760d967::t_75413d23a4769e 1-40
+visual-quality/labeling/runs/expansion-40000-2026-11-17/README.md
+  s_a985f77760d967::t_7539465d701120 21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "9af29ee141540b2a45802edd31cf71d249e05e3a",
+  "prompts": {},
+  "sessions": {
+    "s_a985f77760d967": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1608d-7d22-73e3-a501-bdb8e2463b33",
+        "model": "unknown"
+      },
+      "human_author": "Adam Houston <phazyy9@gmail.com>"
+    }
+  }
+}
