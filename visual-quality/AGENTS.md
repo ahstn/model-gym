@@ -63,6 +63,8 @@ The 2026-11-13 500-image diagnostic comparison did not justify replacing this en
 
 ## Dataset backup
 
+- The 40K snapshot was verified on 2026-11-18 at `s3://model-gym-backups/visual-quality/labeling-40000-2026-11-17/`. It contains all 40,000 exact scored views and the canonical labels. Full object readback and an independent restore passed. Use the [restore guide](labeling/backups/README.md#restore-the-40k-dataset) and [aggregate completion receipt](labeling/backups/receipt-40000-2026-11-18.json). The 20K snapshot has its own prefix and receipt.
+
 - On 2026-11-16 the user approved a private Cloudflare R2 backup of the complete 20K labeled dataset, including all exact scored images. The destination is `model-gym-backups/visual-quality/labeling-20000-2026-11-16/`; procedures and restore instructions live in `labeling/backups/`.
 - Follow the combined manifest across historical view directories. Preserve byte hashes, canonical labels, raw evidence, image statistics, clustering and source/configuration provenance. Do not re-encode images or silently fill missing scores.
 - Keep public bucket access disabled. Exclude credentials, temporary operations, unselected candidates and caches. Private backup authorization does not expand the first-1,000 Git publication allowlist.

@@ -18,7 +18,7 @@ Full artifacts live outside Git at `/home/ahstn/git/model-gym/visual-quality/dat
 - `related-images.json`, `possible-duplicates.json`, `content-coverage.json` and `review/index.html` support content and duplicate review.
 - `results/api/` retains immutable plans, request/response attempts, latency, cost and observations.
 
-The Git publication set remains `labeling/records/`. Do not copy new per-image artifacts into tracked reports, galleries or archives. The completed 20K private R2 snapshot remains unchanged; this new directory is not implicitly a completed remote backup.
+The Git publication set is `labeling/records/`. The private R2 snapshot includes all 40,000 exact scored images and the full dataset. Remote checksum verification and an independent restore passed on 2026-11-18. See the [restore instructions](../../backups/README.md#restore-the-40k-dataset) and [completion receipt](../../backups/receipt-40000-2026-11-18.json).
 
 ## Corpus and execution
 

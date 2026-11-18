@@ -1,0 +1,40 @@
+{
+  "status": "complete",
+  "bucket": "model-gym-backups",
+  "prefix": "visual-quality/labeling-40000-2026-11-17/",
+  "verified_at": "2026-11-18T03:02:44.798621+00:00",
+  "completed_at": "2026-11-18T03:03:45.824142+00:00",
+  "stored_objects": 40008,
+  "stored_bytes": 77567890790,
+  "image_count": 40000,
+  "image_bytes": 76220213259,
+  "label_records": 40000,
+  "complete_ensemble_pairs": 39997,
+  "assessor_slots": 211500,
+  "metadata_files": 514919,
+  "snapshot_sha256": "d77ebeca2e2037e295f52192ee6029a05134f163ebb22b914e2ca8bf36d9b0cd",
+  "canonical_labels_sha256": "8bae5443fe57a0adc4268a30f0c296108df1cd9b3071d4f31abac0ee9818ee95",
+  "verification_receipt_sha256": "7f35fe609fdb0c4664f5aa2029a06fdd4c3fe8173844281ac49853c2628bdb0d",
+  "historical_20k_receipt_sha256": "f216d713f7efd5f0be43c9ce5676f750611484f86d4463f333761b05f7409d40",
+  "verification": "All objects including verification.json passed full R2 GET and local SHA-256. Final list of keys, sizes and ETags matched.",
+  "restore_test": {
+    "status": "passed",
+    "method": "Independent local file copies of all planned payloads. Snapshot-owned helper verified every object, extracted the archive and verified its internal inventory. Separate cross-check compared decompressed canonical convenience export, all portable JSON values and image identities.",
+    "receipt_sha256": "850adc738bec4e67b07a72e5bb3b47447fc49fabf0750c9da19b34ec54cc8c59",
+    "labels": 40000,
+    "images": 40000,
+    "assessor_slots": 211500,
+    "original_reference_rows": 1500,
+    "historical_lite_rows": 10000,
+    "all_score_values_match": true
+  },
+  "labeling_source_commit": "e4bac8fdc4618a53f4a26862acf7ba3499308139",
+  "backup_helper_commit": "50fba35655ccf6fa5cc3391823b3ff5d0d657850",
+  "temporary_token_revoked": true,
+  "token_revocation_confirmed_at": "2026-11-18T03:03:38.120Z",
+  "privacy": {
+    "public_access_enabled": false,
+    "custom_domains": [],
+    "checked_at": "2026-11-18T03:02:10.765Z"
+  }
+}
