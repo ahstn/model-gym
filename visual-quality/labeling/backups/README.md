@@ -1,5 +1,54 @@
 # Private R2 dataset backup
 
+## Restore the 40K dataset
+
+Verified on **18 November 2026**. The snapshot occupies **72.24 GiB**
+(77,567,890,790 bytes in 40,008 objects, including the R2 verification receipt).
+Every object passed a full download and SHA-256 comparison. An independent local
+restore recovered every score, all 40,000 exact images and 514,919 metadata files.
+The bucket is private and the temporary transfer token was revoked.
+[Completion receipt](receipt-40000-2026-11-18.json).
+
+The full 40K snapshot uses the private `model-gym-backups` bucket and the prefix
+`visual-quality/labeling-40000-2026-11-17/`. It includes 40,000 exact delivered
+images, the canonical 40K labels, all 211,500 assessor rows and their evidence.
+The metadata archive contains the original references, grading receipts, image
+statistics, embeddings, manifests, code and audit results. The three historical
+missing ensemble pairs are recorded in the canonical labels.
+
+Use an empty directory with at least 100 GiB free and room for more than 550,000
+files plus their directories.
+Configure the `model-gym-r2` AWS profile with Object Read access to this bucket.
+Run the following commands in the restore directory with Python 3.12+ and `zstd`.
+
+```sh
+aws --profile model-gym-r2 \
+  --endpoint-url https://2b0d43c32a6f1fb83147092522f3c1bb.r2.cloudflarestorage.com \
+  s3 sync s3://model-gym-backups/visual-quality/labeling-40000-2026-11-17/ .
+printf '%s  %s\n' d77ebeca2e2037e295f52192ee6029a05134f163ebb22b914e2ca8bf36d9b0cd snapshot.json | sha256sum -c -
+printf '%s  %s\n' f77d049ee8728e52f5982a04abe8316783e811ac108ded8c3bd626af944cda79 restore.py | sha256sum -c -
+python3 restore.py .
+```
+
+The original JSONL is restored to
+`data/labeling-40000-2026-11-17/exports/labelled-images.jsonl`. Its SHA-256 is
+`8bae5443fe57a0adc4268a30f0c296108df1cd9b3071d4f31abac0ee9818ee95`.
+Use `labelled-images.portable.jsonl` to open images and backed-up evidence by
+path on the restore machine. To retrieve just the original label export, download
+`labelled-images.jsonl.zst` from the same prefix and decompress it with `zstd -d`.
+
+For a new 40K snapshot, use the preparation command below with
+`--run labeling-40000-2026-11-17`, a fresh output directory and an unused R2
+prefix. A single `--complete-snapshot` transfer verifies the whole plan. This run
+started an image-only transfer while preparing the metadata. To reuse its readbacks,
+pass both `--verified-stage-plan image-index.json` and
+`--stage-session image-stage-session.json` to the final transfer. It checks the
+current R2 object identities and the entire destination inventory. The session file pins the account,
+bucket, prefix, image-plan hash and start time. The image stage uses its own fresh
+receipt ledger and the same snapshot directory as the final stage.
+
+## Historical 20K snapshot
+
 The user approved backing up all 20,000 exact scored views alongside the labels on
 2026-11-16. Use Cloudflare R2 Standard in the private `model-gym-backups` bucket,
 under `visual-quality/labeling-20000-2026-11-16/`. Account:

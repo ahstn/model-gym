@@ -65,12 +65,83 @@ def validate_complete_plan(objects):
         raise ValueError("Upload plan does not cover the complete snapshot")
 
 
-def transfer(plan, credentials, account, bucket, prefix, workers, complete_snapshot=False):
-    objects = json.loads(plan.read_text())
+def verified_stage(stage_plan, session_file, objects, account, bucket, prefix):
+    """Load full-GET evidence from a completed stage in this backup session."""
+    data = stage_plan.read_bytes()
+    rows = json.loads(data)
+    stage_digest = hashlib.sha256(data).hexdigest()
+    session_data = session_file.read_bytes()
+    session = json.loads(session_data)
+    evidence_data = stage_plan.with_suffix(".verification.json").read_bytes()
+    evidence = json.loads(evidence_data)
+    scope = {"bucket": bucket, "prefix": prefix, "plan_sha256": stage_digest}
+    if session.get("account") != account or any(session.get(k) != v for k, v in scope.items()):
+        raise ValueError("Stage session is for a different plan or destination")
+    expected = {
+        **scope,
+        "scope": "transfer_plan_only",
+        "objects_verified": len(rows),
+        "bytes_verified": sum(row["bytes"] for row in rows),
+        "verification": "SHA-256 of full GET for every uploaded object",
+    }
+    if any(evidence.get(k) != v for k, v in expected.items()):
+        raise ValueError("Stage verification does not cover its plan and destination")
+
+    current = {prefix + row["key"]: (row["bytes"], row["sha256"]) for row in objects}
+    stage = {prefix + row["key"]: (row["bytes"], row["sha256"]) for row in rows}
+    if len(rows) != len(stage) or any(current.get(k) != v for k, v in stage.items()):
+        raise ValueError("Stage is not a unique subset of the complete snapshot")
+
+    started = datetime.fromisoformat(session["started_at"])
+    ended = datetime.fromisoformat(evidence["completed_at"])
+    if not started <= ended <= datetime.now(UTC):
+        raise ValueError("Invalid stage session time window")
+    verified = {}
+    with (stage_plan.parent / "transfer-receipts.jsonl").open() as receipts:
+        for line in receipts:
+            item = json.loads(line)
+            key = item["key"]
+            if key not in stage or not started <= datetime.fromisoformat(item["verified_at"]) <= ended:
+                continue
+            if stage[key] != (item["bytes"], item["sha256"]):
+                raise ValueError(f"Stage readback does not match the plan: {key}")
+            if key in verified and verified[key]["etag"] != item["etag"]:
+                raise ValueError(f"Stage readback ETags disagree: {key}")
+            verified[key] = item
+    if verified.keys() != stage.keys():
+        raise ValueError("Missing full GET receipts for the completed stage")
+    return verified, {
+        "stage_plan_sha256": stage_digest,
+        "stage_session_sha256": hashlib.sha256(session_data).hexdigest(),
+        "stage_verification_sha256": hashlib.sha256(evidence_data).hexdigest(),
+    }
+
+
+def transfer(
+    plan,
+    credentials,
+    account,
+    bucket,
+    prefix,
+    workers,
+    complete_snapshot=False,
+    stage_plan=None,
+    stage_session=None,
+):
+    plan_data = plan.read_bytes()
+    objects = json.loads(plan_data)
     if len({entry["key"] for entry in objects}) != len(objects):
         raise ValueError("Duplicate upload keys")
     if complete_snapshot:
         validate_complete_plan(objects)
+    prefix = prefix.rstrip("/") + "/"
+    if (stage_plan is None) != (stage_session is None) or (stage_plan and not complete_snapshot):
+        raise ValueError("Stage reuse requires a complete snapshot, stage plan and stage session")
+    staged, stage_provenance = (
+        verified_stage(stage_plan, stage_session, objects, account, bucket, prefix)
+        if stage_plan
+        else ({}, {})
+    )
     credentials = json.loads(credentials.read_text())
     client = boto3.client(
         "s3",
@@ -86,7 +157,6 @@ def transfer(plan, credentials, account, bucket, prefix, workers, complete_snaps
             request_checksum_calculation="when_required",
         ),
     )
-    prefix = prefix.rstrip("/") + "/"
     lock = threading.Lock()
     receipt = plan.parent / "transfer-receipts.jsonl"
 
@@ -117,6 +187,15 @@ def transfer(plan, credentials, account, bucket, prefix, workers, complete_snaps
                 or head["ETag"].strip('"') != md5.hexdigest()
             ):
                 raise ValueError(f"Refusing to overwrite a different remote object: {key}")
+            prior = staged.get(key)
+            if prior and prior["etag"] != md5.hexdigest():
+                raise ValueError(f"Stage readback ETag differs from local bytes: {key}")
+            if (
+                prior
+                and head.get("LastModified")
+                and head["LastModified"] <= datetime.fromisoformat(prior["verified_at"])
+            ):
+                return {**prior, "stage_readback": True}
         else:
             with path.open("rb") as source:
                 uploaded = client.put_object(
@@ -177,8 +256,11 @@ def transfer(plan, credentials, account, bucket, prefix, workers, complete_snaps
         "verification": "SHA-256 of full GET for every uploaded object",
         "completed_at": datetime.now(UTC).isoformat(),
         "scope": "complete_snapshot" if complete_snapshot else "transfer_plan_only",
-        "plan_sha256": hashlib.sha256(plan.read_bytes()).hexdigest(),
+        "plan_sha256": hashlib.sha256(plan_data).hexdigest(),
     }
+    if stage_plan:
+        summary["stage_readbacks_reused"] = sum(bool(row.get("stage_readback")) for row in completed)
+        summary.update(stage_provenance)
     # Partial transfers have their own receipts and cannot overwrite completion.
     receipt_path = plan.with_suffix(".verification.json")
     receipt_path.write_text(json.dumps(summary, indent=2) + "\n")
@@ -204,6 +286,7 @@ def transfer(plan, credentials, account, bucket, prefix, workers, complete_snaps
                 "objects_verified",
                 "bytes_verified",
                 "scope",
+                "verification",
             ):
                 if saved.get(field) != summary[field]:
                     raise ValueError("Existing completion receipt describes a different snapshot") from error
@@ -222,6 +305,16 @@ if __name__ == "__main__":
     parser.add_argument("--prefix", required=True)
     parser.add_argument("--workers", type=int, default=12)
     parser.add_argument(
+        "--verified-stage-plan",
+        type=Path,
+        help="Earlier full-GET stage plan with its completed verification and attempt ledger",
+    )
+    parser.add_argument(
+        "--stage-session",
+        type=Path,
+        help="Local stage-start record binding account, bucket, prefix, started_at and plan_sha256",
+    )
+    parser.add_argument(
         "--complete-snapshot",
         action="store_true",
         help="Require the full manifest and publish its completion receipt",
@@ -237,4 +330,6 @@ if __name__ == "__main__":
         args.prefix,
         args.workers,
         args.complete_snapshot,
+        args.verified_stage_plan,
+        args.stage_session,
     )

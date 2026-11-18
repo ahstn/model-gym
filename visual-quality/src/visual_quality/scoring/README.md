@@ -5,6 +5,7 @@ The current labeling workflow imports these modules directly. They were extracte
 | Module | Responsibility |
 |---|---|
 | `api_contract.py`, `wire.py` | Response parsing, two-task validation, score transport and billing validation |
+| `batch.py` | Immutable expansion plans and bounded scheduling through a pinned HTTP/accounting adapter |
 | `lite_runner.py` | Measured Lite requests, score validation, concurrency and durable attempts |
 | `reference_review.py` | Review validation, timing and frozen-reference checks |
 | `gallery.py`, `gallery_png.py`, `validate_gallery.py` | HTML/PNG presentation and output/browser checks |
